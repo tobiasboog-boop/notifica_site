@@ -1,4 +1,10 @@
 module.exports = function(eleventyConfig) {
+  // Dev server configuration for VPN access
+  eleventyConfig.setServerOptions({
+    // Bind to all interfaces so VPN IP is accessible
+    host: "0.0.0.0",
+    port: 8080
+  });
   // Passthrough copy for static assets
   eleventyConfig.addPassthroughCopy("src/assets/css");
   eleventyConfig.addPassthroughCopy("src/assets/js");

@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy",
-    "clean": "rimraf _site"
+    "clean": "rimraf _site",
+    "host": "eleventy && http-server _site -a 10.3.152.3 -p 8080",
+    "service:install": "node install-service.js",
+    "service:uninstall": "node uninstall-service.js"
   },
   "keywords": [
     "eleventy",
@@ -18,6 +21,11 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "rimraf": "^5.0.5"
+    "http-server": "^14.1.1",
+    "rimraf": "^5.0.5",
+    "serve": "^14.2.5"
+  },
+  "dependencies": {
+    "node-windows": "^1.0.0-beta.8"
   }
 }
