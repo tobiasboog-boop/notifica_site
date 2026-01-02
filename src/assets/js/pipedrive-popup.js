@@ -11,19 +11,19 @@
   const PIPEDRIVE_FORMS = {
     demo: {
       title: 'Plan een demo',
-      url: 'YOUR_PIPEDRIVE_DEMO_FORM_URL'
+      url: 'https://webforms.pipedrive.com/f/czAN5Djwx6GKDvEFyOO9B3HhfpFEeQ8NX7pcdOLeHJ5LSIQEP8IzJRQE6kjvn2LncD'
     },
     contact: {
       title: 'Neem contact op',
-      url: 'YOUR_PIPEDRIVE_CONTACT_FORM_URL'
+      url: 'https://webforms.pipedrive.com/f/czAN5Djwx6GKDvEFyOO9B3HhfpFEeQ8NX7pcdOLeHJ5LSIQEP8IzJRQE6kjvn2LncD'
     },
     whitepaper: {
       title: 'Download whitepaper',
-      url: 'YOUR_PIPEDRIVE_WHITEPAPER_FORM_URL'
+      url: 'https://webforms.pipedrive.com/f/czAN5Djwx6GKDvEFyOO9B3HhfpFEeQ8NX7pcdOLeHJ5LSIQEP8IzJRQE6kjvn2LncD'
     },
     support: {
       title: 'Remote support',
-      url: 'YOUR_PIPEDRIVE_SUPPORT_FORM_URL'
+      url: 'https://webforms.pipedrive.com/f/czAN5Djwx6GKDvEFyOO9B3HhfpFEeQ8NX7pcdOLeHJ5LSIQEP8IzJRQE6kjvn2LncD'
     }
   };
 
@@ -63,17 +63,20 @@
 
     const container = document.getElementById('pipedrive-form-container');
 
-    // Load Pipedrive form iframe
+    // Load Pipedrive form using their embed method
     container.innerHTML = `
-      <iframe
-        src="${form.url}"
-        width="100%"
-        height="500"
-        frameborder="0"
-        title="${form.title}"
-        loading="lazy">
-      </iframe>
+      <div class="pipedriveWebForms" data-pd-webforms="${form.url}"></div>
     `;
+
+    // Load Pipedrive script
+    const existingScript = document.querySelector('script[src="https://webforms.pipedrive.com/f/loader"]');
+    if (existingScript) {
+      existingScript.remove();
+    }
+
+    const script = document.createElement('script');
+    script.src = 'https://webforms.pipedrive.com/f/loader';
+    container.appendChild(script);
 
     // Show overlay
     overlay.classList.add('active');

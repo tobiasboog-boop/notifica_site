@@ -6,11 +6,14 @@
    CSS Custom Properties (Design Tokens)
    -------------------------------------------------------------------------- */
 :root {
-  /* Colors */
-  --color-primary: #16136f;
-  --color-primary-dark: #0f0d4a;
-  --color-secondary: #fbba00;
-  --color-secondary-dark: #e0a600;
+  /* Colors - Notifica brand colors */
+  --color-primary: #16136f;        /* Notifica purple */
+  --color-primary-dark: #0f0d4a;   /* Darker purple */
+  --color-primary-light: #3636A2;  /* Lighter purple */
+  --color-accent: #16136f;         /* Purple accent for buttons */
+  --color-accent-dark: #0f0d4a;    /* Darker accent */
+  --color-secondary: #fbba00;      /* Notifica orange/yellow */
+  --color-secondary-dark: #e0a600; /* Darker orange */
 
   --color-white: #ffffff;
   --color-gray-50: #f9fafb;
@@ -25,18 +28,18 @@
   --color-gray-900: #111827;
   --color-black: #000000;
 
-  /* Typography */
+  /* Typography - Modern, refined sizing */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
-  --font-size-5xl: 3rem;
-  --font-size-6xl: 3.75rem;
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.8125rem;   /* 13px */
+  --font-size-base: 0.9375rem; /* 15px - refined for modern look */
+  --font-size-lg: 1rem;        /* 16px */
+  --font-size-xl: 1.0625rem;   /* 17px */
+  --font-size-2xl: 1.25rem;    /* 20px */
+  --font-size-3xl: 1.5rem;     /* 24px */
+  --font-size-4xl: 1.75rem;    /* 28px */
+  --font-size-5xl: 2.25rem;    /* 36px */
+  --font-size-6xl: 2.75rem;    /* 44px */
 
   --font-weight-regular: 400;
   --font-weight-medium: 500;
@@ -44,9 +47,14 @@
   --font-weight-bold: 700;
   --font-weight-extrabold: 800;
 
-  --line-height-tight: 1.25;
-  --line-height-normal: 1.5;
-  --line-height-relaxed: 1.625;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.75;
+
+  /* Letter spacing for modern typography */
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
 
   /* Spacing */
   --spacing-1: 0.25rem;
@@ -104,7 +112,7 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size-base);
   line-height: var(--line-height-normal);
-  color: var(--color-gray-800);
+  color: var(--color-gray-900);
   background-color: var(--color-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -138,36 +146,38 @@ address {
 }
 
 /* --------------------------------------------------------------------------
-   Typography
+   Typography - Modern, refined headings
    -------------------------------------------------------------------------- */
 h1, .h1 {
   font-size: var(--font-size-5xl);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
 }
 
 h2, .h2 {
   font-size: var(--font-size-4xl);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
 }
 
 h3, .h3 {
   font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-tight);
-}
-
-h4, .h4 {
-  font-size: var(--font-size-xl);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
 }
 
+h4, .h4 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+}
+
 .lead {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   line-height: var(--line-height-relaxed);
-  color: var(--color-gray-600);
+  color: var(--color-gray-700);
 }
 
 .label {
@@ -250,72 +260,74 @@ h4, .h4 {
   align-items: center;
   justify-content: center;
   gap: var(--spacing-2);
-  padding: var(--spacing-3) var(--spacing-6);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-semibold);
+  padding: 0.75rem 1.5rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
   text-align: center;
   border: none;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   cursor: pointer;
   transition: all var(--transition-base);
+  letter-spacing: 0.01em;
 }
 
 .btn-primary {
   background-color: var(--color-secondary);
   color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
 }
 
 .btn-primary:hover {
   background-color: var(--color-secondary-dark);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
-  background-color: var(--color-white);
-  color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  background-color: transparent;
+  color: var(--color-gray-700);
+  border: 1px solid var(--color-gray-300);
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: var(--color-gray-50);
+  border-color: var(--color-gray-400);
 }
 
 .btn-white {
   background-color: var(--color-white);
-  color: var(--color-primary);
+  color: var(--color-gray-800);
 }
 
 .btn-white:hover {
-  background-color: var(--color-gray-100);
+  background-color: var(--color-gray-50);
 }
 
 .btn-lg {
-  padding: var(--spacing-4) var(--spacing-8);
-  font-size: var(--font-size-lg);
+  padding: 1rem 2rem;
+  font-size: var(--font-size-base);
 }
 
 /* --------------------------------------------------------------------------
-   Header
+   Header - Clean, minimal design
    -------------------------------------------------------------------------- */
 .header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--color-white);
-  box-shadow: var(--shadow-sm);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-gray-200);
 }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 72px;
 }
 
 .logo img {
-  height: 40px;
+  height: 36px;
   width: auto;
 }
 
@@ -334,8 +346,9 @@ h4, .h4 {
   align-items: center;
   gap: var(--spacing-1);
   padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
-  color: var(--color-gray-700);
+  color: var(--color-gray-800);
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
 }
@@ -343,7 +356,6 @@ h4, .h4 {
 .nav-link:hover,
 .nav-link.active {
   color: var(--color-primary);
-  background-color: var(--color-gray-100);
 }
 
 .dropdown-icon {
@@ -390,6 +402,11 @@ h4, .h4 {
 
 .nav-cta {
   margin-left: var(--spacing-4);
+  align-self: center;
+}
+
+.nav-cta .btn {
+  margin-top: 2px;
 }
 
 /* Mobile Navigation */
@@ -422,6 +439,27 @@ h4, .h4 {
 .hamburger::before { top: -8px; }
 .hamburger::after { bottom: -8px; }
 
+/* Hamburger animation */
+.nav-toggle.active .hamburger {
+  background-color: transparent;
+}
+
+.nav-toggle.active .hamburger::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.nav-toggle.active .hamburger::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  transition: all var(--transition-base);
+}
+
 @media (max-width: 1024px) {
   .nav-toggle {
     display: block;
@@ -435,6 +473,7 @@ h4, .h4 {
     width: 100%;
     max-width: 320px;
     height: 100vh;
+    height: 100dvh;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
@@ -443,10 +482,26 @@ h4, .h4 {
     box-shadow: var(--shadow-xl);
     transform: translateX(100%);
     transition: transform var(--transition-slow);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    z-index: 100;
   }
 
   .nav-menu.active {
     transform: translateX(0);
+  }
+
+  /* Overlay behind mobile menu */
+  .header.menu-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
   }
 
   .nav-link {
@@ -458,9 +513,25 @@ h4, .h4 {
     position: static;
     box-shadow: none;
     opacity: 1;
-    visibility: visible;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
     transform: none;
     padding-left: var(--spacing-4);
+    transition: max-height var(--transition-base), visibility var(--transition-base);
+  }
+
+  .nav-item.dropdown-open .dropdown-menu {
+    visibility: visible;
+    max-height: 500px;
+  }
+
+  .nav-item.has-dropdown > .nav-link .dropdown-icon {
+    transition: transform var(--transition-base);
+  }
+
+  .nav-item.dropdown-open > .nav-link .dropdown-icon {
+    transform: rotate(180deg);
   }
 
   .nav-cta {
@@ -572,6 +643,14 @@ h4, .h4 {
   background-color: var(--color-secondary);
   border-radius: var(--radius-full);
   color: var(--color-primary);
+}
+
+@media (max-width: 640px) {
+  .usp-bar__list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-3);
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -768,11 +847,11 @@ h4, .h4 {
 }
 
 /* --------------------------------------------------------------------------
-   Footer
+   Footer - Modern, clean design
    -------------------------------------------------------------------------- */
 .footer {
   padding: var(--spacing-16) 0 var(--spacing-8);
-  background-color: var(--color-primary);
+  background-color: var(--color-gray-900);
   color: var(--color-white);
 }
 
@@ -790,16 +869,22 @@ h4, .h4 {
 }
 
 .footer-tagline {
-  opacity: 0.8;
+  opacity: 0.9;
+  font-size: var(--font-size-sm);
 }
 
 .footer-col h4 {
   margin-bottom: var(--spacing-4);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .footer-col a {
-  opacity: 0.8;
+  opacity: 0.9;
+  font-size: var(--font-size-sm);
   transition: opacity var(--transition-fast);
 }
 
@@ -818,22 +903,22 @@ h4, .h4 {
   align-items: center;
   gap: var(--spacing-4);
   padding-top: var(--spacing-8);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .footer-legal {
-  font-size: var(--font-size-sm);
-  opacity: 0.7;
+  font-size: var(--font-size-xs);
+  opacity: 0.85;
 }
 
 .footer-legal-links {
   display: flex;
   gap: var(--spacing-6);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
 }
 
 .footer-legal-links a {
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 .footer-legal-links a:hover {
@@ -854,6 +939,11 @@ h4, .h4 {
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+  }
+
+  .footer-legal-links {
+    flex-direction: column;
+    gap: var(--spacing-2);
   }
 }
 
@@ -918,6 +1008,50 @@ h4, .h4 {
 
 .popup-body {
   padding: var(--spacing-10);
+}
+
+/* --------------------------------------------------------------------------
+   Legal Content Pages
+   -------------------------------------------------------------------------- */
+.legal-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.legal-content h1 {
+  margin-bottom: var(--spacing-4);
+}
+
+.legal-content h2 {
+  margin-top: var(--spacing-10);
+  margin-bottom: var(--spacing-4);
+  padding-bottom: var(--spacing-2);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.legal-content h3 {
+  margin-top: var(--spacing-6);
+  margin-bottom: var(--spacing-3);
+}
+
+.legal-content p {
+  margin-bottom: var(--spacing-4);
+  line-height: var(--line-height-relaxed);
+}
+
+.legal-content ul {
+  margin-bottom: var(--spacing-4);
+  padding-left: var(--spacing-6);
+  list-style: disc;
+}
+
+.legal-content ul li {
+  margin-bottom: var(--spacing-2);
+  line-height: var(--line-height-relaxed);
+}
+
+.legal-content .lead {
+  margin-bottom: var(--spacing-8);
 }
 
 /* --------------------------------------------------------------------------
