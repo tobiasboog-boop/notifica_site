@@ -1,0 +1,19 @@
+{
+  "name": "Notifica",
+  "tagline": "Power BI dashboards voor installatiebedrijven",
+  "description": "Sturen op feiten in plaats van onderbuikgevoel. Power BI dashboards speciaal ontwikkeld voor installatiebedrijven.",
+  "url": "https://www.notifica.nl",
+  "email": "info@notifica.nl",
+  "phone": "+31 (0)85 130 55 44",
+  "address": {
+    "street": "Laan van Westenenk 12",
+    "postal": "7336 AZ",
+    "city": "Apeldoorn",
+    "country": "Nederland"
+  },
+  "kvk": "82618267",
+  "btw": "NL862468545B01",
+  "social": {
+    "linkedin": "https://www.linkedin.com/company/notifica-nl"
+  }
+}

@@ -1,0 +1,55 @@
+---
+layout: base.njk
+title: Jouw bedrijfssoftware
+description: Notifica koppelt met de meest gebruikte ERP-systemen in de installatiebranche. Bekijk de beschikbare koppelingen.
+permalink: /bedrijfssoftware/
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="hero__content">
+      <span class="hero__label">ERP Koppelingen</span>
+      <h1 class="hero__title">Jouw bedrijfssoftware</h1>
+      <p class="hero__description">
+        Wij hebben standaard koppelingen met de meest gebruikte ERP-systemen in de installatiebranche.
+        Binnen één dag live met actuele data in je dashboards.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid--3">
+      {% for item in collections.erp %}
+      <a href="{{ item.url }}" class="card">
+        <div class="card__content text-center">
+          <h3 class="card__title">{{ item.data.erp_name }}</h3>
+          <p class="card__description">
+            Power BI dashboards gekoppeld aan {{ item.data.erp_name }}.
+          </p>
+          <span class="card__link">
+            Meer informatie
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M6 3l5 5-5 5V3z"/>
+            </svg>
+          </span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--gray">
+  <div class="container text-center">
+    <h2 class="mb-4">Jouw ERP-systeem niet gevonden?</h2>
+    <p class="lead mb-8">
+      Wij zijn continu bezig met het uitbreiden van onze koppelingen.
+      Neem contact met ons op om de mogelijkheden te bespreken.
+    </p>
+    <button class="btn btn-primary btn-lg" data-pipedrive-form="contact">
+      Neem contact op
+    </button>
+  </div>
+</section>

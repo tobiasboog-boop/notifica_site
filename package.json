@@ -1,0 +1,23 @@
+{
+  "name": "notifica-site",
+  "version": "1.0.0",
+  "description": "Notifica.nl website - Eleventy migration",
+  "main": ".eleventy.js",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rimraf _site"
+  },
+  "keywords": [
+    "eleventy",
+    "notifica",
+    "power-bi",
+    "dashboards"
+  ],
+  "author": "Notifica",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "rimraf": "^5.0.5"
+  }
+}

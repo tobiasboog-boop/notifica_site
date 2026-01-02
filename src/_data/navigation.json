@@ -1,0 +1,60 @@
+{
+  "main": [
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "Klanten & Ervaringen",
+      "url": "/klanten-ervaringen/"
+    },
+    {
+      "label": "Inspiratie",
+      "url": "/inspiratie/",
+      "children": [
+        { "label": "Video's", "url": "/inspiratie/videos/" },
+        { "label": "Blogs", "url": "/inspiratie/blogs/" },
+        { "label": "Whitepapers", "url": "/inspiratie/whitepapers/" }
+      ]
+    },
+    {
+      "label": "Jouw bedrijfssoftware",
+      "url": "/bedrijfssoftware/",
+      "children": [
+        { "label": "Syntess Atrium", "url": "/bedrijfssoftware/syntess-atrium/" },
+        { "label": "ENK Software", "url": "/bedrijfssoftware/enk-software/" },
+        { "label": "BouwInfosys", "url": "/bedrijfssoftware/bouwinfosys/" },
+        { "label": "4PS", "url": "/bedrijfssoftware/4ps/" },
+        { "label": "ACTO", "url": "/bedrijfssoftware/acto/" },
+        { "label": "Admicom", "url": "/bedrijfssoftware/admicom/" }
+      ]
+    },
+    {
+      "label": "Veelgestelde vragen",
+      "url": "/veelgestelde-vragen/"
+    },
+    {
+      "label": "Over ons",
+      "url": "/over-ons/"
+    }
+  ],
+  "cta": {
+    "label": "Plan een demo",
+    "url": "#",
+    "pipedrive_form": "demo"
+  },
+  "footer": [
+    {
+      "label": "Verwerkersovereenkomst",
+      "url": "/verwerkersovereenkomst/"
+    },
+    {
+      "label": "Algemene voorwaarden",
+      "url": "/algemene-voorwaarden/"
+    },
+    {
+      "label": "Privacy",
+      "url": "/privacy/"
+    }
+  ]
+}

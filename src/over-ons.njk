@@ -1,0 +1,122 @@
+---
+layout: base.njk
+title: Over ons
+description: Leer meer over Notifica en ons team. Wij helpen installatiebedrijven met Power BI dashboards voor beter inzicht.
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="hero__content">
+      <span class="hero__label">Over Notifica</span>
+      <h1 class="hero__title">Wij zijn Notifica</h1>
+      <p class="hero__description">
+        Notifica helpt installatiebedrijven om betere beslissingen te nemen op basis
+        van actuele data. Geen onderbuikgevoel, maar feiten.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid--2">
+      <div>
+        <span class="label">Onze missie</span>
+        <h2 class="mt-4">Data-gedreven beslissingen voor iedereen</h2>
+        <p class="lead mt-4">
+          Wij geloven dat elk installatiebedrijf toegang moet hebben tot goede
+          managementinformatie. Zonder maandenlange implementaties, zonder dure
+          consultants, zonder technische kennis.
+        </p>
+        <p class="mt-4">
+          Daarom hebben wij kant-en-klare Power BI dashboards ontwikkeld die je binnen
+          één dag kunt gebruiken. Speciaal afgestemd op de installatiebranche, met de
+          KPI's die er echt toe doen.
+        </p>
+      </div>
+      <div>
+        <!-- Placeholder for image -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--gray">
+  <div class="container">
+    <div class="text-center mb-12">
+      <span class="label">Waarom Notifica</span>
+      <h2 class="mt-4">Wat ons anders maakt</h2>
+    </div>
+    <div class="grid grid--3">
+      <div class="card">
+        <div class="card__content">
+          <h3 class="card__title">Branche expertise</h3>
+          <p class="card__description">
+            Wij kennen de installatiebranche. Onze dashboards zijn ontwikkeld op basis
+            van jarenlange ervaring en input van tientallen installatiebedrijven.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__content">
+          <h3 class="card__title">Snelle implementatie</h3>
+          <p class="card__description">
+            Geen maandenlange projecten. Wij koppelen je ERP-systeem en leveren werkende
+            dashboards binnen één dag. Zo kun je direct aan de slag.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__content">
+          <h3 class="card__title">Persoonlijke aanpak</h3>
+          <p class="card__description">
+            Wij zijn geen grote onpersoonlijke organisatie. Je hebt direct contact met
+            onze specialisten die je bedrijf en wensen kennen.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid--2">
+      <div>
+        <span class="label">Contact</span>
+        <h2 class="mt-4">Neem contact op</h2>
+        <p class="mt-4">
+          Heb je vragen of wil je meer weten over wat Notifica voor jouw bedrijf
+          kan betekenen? Neem gerust contact met ons op.
+        </p>
+        <address class="mt-8">
+          <p><strong>{{ site.name }}</strong></p>
+          <p>{{ site.address.street }}</p>
+          <p>{{ site.address.postal }} {{ site.address.city }}</p>
+          <p class="mt-4">
+            <a href="tel:{{ site.phone | replace(' ', '') | replace('(', '') | replace(')', '') }}">{{ site.phone }}</a>
+          </p>
+          <p>
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+          </p>
+        </address>
+        <p class="mt-8">
+          <small>KVK: {{ site.kvk }} | BTW: {{ site.btw }}</small>
+        </p>
+      </div>
+      <div>
+        <div class="card" style="height: 100%;">
+          <div class="card__content text-center" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <h3 class="card__title">Plan een demo</h3>
+            <p class="card__description">
+              Ontdek binnen 30 minuten wat Notifica voor jouw bedrijf kan betekenen.
+            </p>
+            <button class="btn btn-primary btn-lg" data-pipedrive-form="demo">
+              Plan een demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

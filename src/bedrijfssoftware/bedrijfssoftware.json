@@ -1,0 +1,5 @@
+{
+  "layout": "base.njk",
+  "tags": "erp",
+  "permalink": "/bedrijfssoftware/{{ page.fileSlug }}/"
+}

@@ -1,0 +1,98 @@
+---
+layout: base.njk
+title: Inspiratie
+description: Video's, blogs en whitepapers over Power BI dashboards voor installatiebedrijven. Leer hoe je meer uit je data haalt.
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="hero__content">
+      <span class="hero__label">Inspiratie</span>
+      <h1 class="hero__title">Kennis & inspiratie</h1>
+      <p class="hero__description">
+        Ontdek hoe je meer uit je bedrijfsdata haalt met onze video's, blogs en whitepapers.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="text-center mb-12">
+      <span class="label">Video's</span>
+      <h2 class="mt-4">Bekijk onze video's</h2>
+    </div>
+    <div class="grid grid--3">
+      {% for video in collections.videos %}
+      <a href="{{ video.url }}" class="card">
+        <div class="card__content">
+          <span class="label">Video</span>
+          <h3 class="card__title">{{ video.data.title }}</h3>
+          <p class="card__description">{{ video.data.description }}</p>
+          <span class="card__link">
+            Bekijk video
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M6 3l5 5-5 5V3z"/>
+            </svg>
+          </span>
+        </div>
+      </a>
+      {% else %}
+      <p>Nog geen video's beschikbaar.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--gray">
+  <div class="container">
+    <div class="text-center mb-12">
+      <span class="label">Blogs</span>
+      <h2 class="mt-4">Laatste blogs</h2>
+    </div>
+    <div class="grid grid--3">
+      {% for blog in collections.blogs %}
+      <a href="{{ blog.url }}" class="card">
+        <div class="card__content">
+          <span class="label">Blog</span>
+          <h3 class="card__title">{{ blog.data.title }}</h3>
+          <p class="card__description">{{ blog.data.description }}</p>
+          <span class="card__link">
+            Lees meer
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M6 3l5 5-5 5V3z"/>
+            </svg>
+          </span>
+        </div>
+      </a>
+      {% else %}
+      <p>Nog geen blogs beschikbaar.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="text-center mb-12">
+      <span class="label">Whitepapers</span>
+      <h2 class="mt-4">Download onze whitepapers</h2>
+    </div>
+    <div class="grid grid--3">
+      {% for whitepaper in collections.whitepapers %}
+      <div class="card">
+        <div class="card__content">
+          <span class="label">Whitepaper</span>
+          <h3 class="card__title">{{ whitepaper.data.title }}</h3>
+          <p class="card__description">{{ whitepaper.data.description }}</p>
+          <button class="btn btn-secondary" data-pipedrive-form="whitepaper">
+            Download
+          </button>
+        </div>
+      </div>
+      {% else %}
+      <p>Nog geen whitepapers beschikbaar.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
