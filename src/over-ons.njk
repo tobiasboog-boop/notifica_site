@@ -61,6 +61,46 @@ description: Leer meer over Notifica en ons team. Wij helpen installatiebedrijve
 
 <section class="section section--gray">
   <div class="container">
+    <div class="grid grid--2 grid--align-center">
+      <div>
+        <span class="label">Achter de schermen</span>
+        <h2 class="mt-4">Specialisten die het verschil maken</h2>
+        <p class="lead mt-4">
+          Naast onze directie werkt een gedreven groep van specialisten, data-analisten
+          en BI-developers dagelijks aan onze dienstverlening.
+        </p>
+      </div>
+      <div>
+        <div class="feature-list">
+          <div class="feature-list__item">
+            <svg class="feature-list__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <div>
+              <h4 class="feature-list__title">Combinatie van techniek en praktijk</h4>
+              <p class="feature-list__description">Onze professionals begrijpen zowel de data als de installatiesector.</p>
+            </div>
+          </div>
+          <div class="feature-list__item">
+            <svg class="feature-list__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <div>
+              <h4 class="feature-list__title">Kennis van relevante KPI's</h4>
+              <p class="feature-list__description">We weten welke cijfers ertoe doen voor installatiebedrijven.</p>
+            </div>
+          </div>
+          <div class="feature-list__item">
+            <svg class="feature-list__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <div>
+              <h4 class="feature-list__title">Best-practice rapportages</h4>
+              <p class="feature-list__description">Oplossingen die zich in de praktijk hebben bewezen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
     <div class="text-center mb-12">
       <span class="label">Onze waarden</span>
       <h2 class="mt-4">Waar wij voor staan</h2>
@@ -141,20 +181,16 @@ description: Leer meer over Notifica en ons team. Wij helpen installatiebedrijve
           Heb je vragen of wil je meer weten over wat Notifica voor jouw bedrijf
           kan betekenen? Neem gerust contact met ons op.
         </p>
-        <address class="mt-8">
-          <p><strong>{{ site.name }}</strong></p>
-          <p>{{ site.address.street }}</p>
-          <p>{{ site.address.postal }} {{ site.address.city }}</p>
-          <p class="mt-4">
-            <a href="tel:{{ site.phone | replace(' ', '') | replace('(', '') | replace(')', '') }}">{{ site.phone }}</a>
-          </p>
-          <p>
-            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-          </p>
-        </address>
-        <p class="mt-8">
-          <small>KVK: {{ site.kvk }} | BTW: {{ site.btw }}</small>
-        </p>
+        <div class="contact-info mt-8">
+          <a href="tel:{{ site.phone | replace(' ', '') | replace('(', '') | replace(')', '') }}" class="contact-info__item">
+            <svg class="contact-info__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>{{ site.phone }}</span>
+          </a>
+          <a href="mailto:{{ site.email }}" class="contact-info__item">
+            <svg class="contact-info__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>{{ site.email }}</span>
+          </a>
+        </div>
       </div>
       <div>
         <div class="card" style="height: 100%;">
