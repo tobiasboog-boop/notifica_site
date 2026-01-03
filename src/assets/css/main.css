@@ -1466,6 +1466,20 @@ h4, .h4 {
 /* --------------------------------------------------------------------------
    FAQ Accordion
    -------------------------------------------------------------------------- */
+.faq__category {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-top: var(--spacing-12);
+  margin-bottom: var(--spacing-6);
+  padding-bottom: var(--spacing-3);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.faq__category:first-of-type {
+  margin-top: 0;
+}
+
 .faq__item {
   border-bottom: 1px solid var(--color-gray-200);
 }
