@@ -1,6 +1,7 @@
 /**
  * Mobile Navigation Handler
  * Handles the hamburger menu toggle for mobile devices
+ * and header scroll behavior
  */
 
 (function() {
@@ -9,6 +10,17 @@
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
   const header = document.querySelector('.header');
+
+  // Header scroll behavior - shrink logo on scroll
+  if (header) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }, { passive: true });
+  }
 
   if (!navToggle || !navMenu) return;
 

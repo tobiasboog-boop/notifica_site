@@ -1,14 +1,14 @@
 ---
 layout: base.njk
-title: Klanten & Ervaringen
+title: Klantervaringen
 description: Ontdek hoe installatiebedrijven met Notifica hun bedrijfsvoering verbeteren. Lees de ervaringen van onze klanten.
 ---
 
+{# Hero Section #}
 <section class="hero">
   <div class="container">
     <div class="hero__content">
-      <span class="hero__label">Klantervaringen</span>
-      <h1 class="hero__title">Wat onze klanten zeggen</h1>
+      <h1 class="hero__title">Klantervaringen met Notifica</h1>
       <p class="hero__description">
         Ontdek hoe installatiebedrijven door heel Nederland met Notifica meer grip
         krijgen op hun cijfers en betere beslissingen nemen.
@@ -17,90 +17,159 @@ description: Ontdek hoe installatiebedrijven met Notifica hun bedrijfsvoering ve
   </div>
 </section>
 
+{# Reviews Section #}
 <section class="section">
   <div class="container">
-    <div class="grid grid--2">
-      <div class="testimonial">
-        <blockquote class="testimonial__quote">
-          "Eindelijk heb ik in één oogopslag inzicht in de belangrijkste cijfers.
-          Geen Excel-gedoe meer, gewoon actuele data wanneer ik het nodig heb.
-          De implementatie was supersnel geregeld."
+    <div class="reviews-grid">
+
+      {# Review 1 - Nikkelen Elektrotechniek #}
+      <div class="review-card">
+        <div class="review-card__header">
+          <div class="review-card__rating">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <span class="review-card__source">Google Review</span>
+        </div>
+        <blockquote class="review-card__quote">
+          "Dankzij Notifica hebben we veel beter grip gekregen op onze data. Ze hebben een oplossing neergezet die we zelf niet op dit niveau hadden kunnen bouwen."
         </blockquote>
-        <div class="testimonial__author">
+        <div class="review-card__solution">
+          <strong>Oplossing:</strong> Realtime financieel inzicht per periode voor snellere maandafsluiting
+        </div>
+        <div class="review-card__author">
+          <img src="/assets/images/Nikkelen_Logo_converted.png" alt="Nikkelen Elektrotechniek" class="review-card__logo">
           <div>
-            <p class="testimonial__name">Directeur</p>
-            <p class="testimonial__role">Installatiebedrijf - Gelderland</p>
+            <p class="review-card__name">Jon Wijers</p>
+            <p class="review-card__role">Elektrotechnisch Engineer, Nikkelen Elektrotechniek</p>
           </div>
         </div>
       </div>
 
-      <div class="testimonial">
-        <blockquote class="testimonial__quote">
-          "De koppeling met ons ERP-systeem was binnen een dag geregeld.
-          Ik had niet verwacht dat het zo snel en makkelijk zou gaan.
-          Echt een aanrader voor ieder installatiebedrijf."
+      {# Review 2 - ALWAKO Installaties #}
+      <div class="review-card">
+        <div class="review-card__header">
+          <div class="review-card__rating">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <span class="review-card__source">Google Review</span>
+        </div>
+        <blockquote class="review-card__quote">
+          "Notifica levert een compleet dashboard voor ons als middelgrote installateur. De snelle reactietijden en flexibiliteit van inrichting ervaren wij als bijzonder prettig."
         </blockquote>
-        <div class="testimonial__author">
+        <div class="review-card__solution">
+          <strong>Oplossing:</strong> Realtime projectrendement en liquiditeitsinzicht
+        </div>
+        <div class="review-card__author">
+          <img src="/assets/images/alwako.png" alt="ALWAKO Installaties" class="review-card__logo">
           <div>
-            <p class="testimonial__name">Financieel directeur</p>
-            <p class="testimonial__role">Technisch installatiebedrijf - Noord-Brabant</p>
+            <p class="review-card__name">Jan-Paul van Houtum</p>
+            <p class="review-card__role">Directeur, ALWAKO Installaties</p>
           </div>
         </div>
       </div>
 
-      <div class="testimonial">
-        <blockquote class="testimonial__quote">
-          "We hebben nu dagelijks inzicht in onze productiviteit en marges.
-          Hierdoor kunnen we veel sneller bijsturen als dat nodig is.
-          Een echte gamechanger voor ons bedrijf."
+      {# Review 3 - Denned Installatietechniek #}
+      <div class="review-card">
+        <div class="review-card__header">
+          <div class="review-card__rating">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <span class="review-card__source">Google Review</span>
+        </div>
+        <blockquote class="review-card__quote">
+          "Door de naadloze aansluiting van de Power BI rapporten van Notifica op onze Syntess software krijgen we eindelijk dingen duidelijk te zien."
         </blockquote>
-        <div class="testimonial__author">
+        <div class="review-card__solution">
+          <strong>Oplossing:</strong> Marge en prestatiesturen in plaats van alleen op uren
+        </div>
+        <div class="review-card__author">
+          <img src="/assets/images/denned_logo_converted.png" alt="Denned Installatietechniek" class="review-card__logo">
           <div>
-            <p class="testimonial__name">Operationeel manager</p>
-            <p class="testimonial__role">Elektrotechnisch bedrijf - Zuid-Holland</p>
+            <p class="review-card__name">Rob de Kort</p>
+            <p class="review-card__role">Controller, Denned Installatietechniek</p>
           </div>
         </div>
       </div>
 
-      <div class="testimonial">
-        <blockquote class="testimonial__quote">
-          "Voorheen was ik elke maand dagen bezig met rapportages maken.
-          Nu heb ik continue inzicht en kan ik me focussen op de dingen
-          die er echt toe doen."
+      {# Review 4 - Sandee Groen #}
+      <div class="review-card">
+        <div class="review-card__header">
+          <div class="review-card__rating">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <span class="review-card__source">Google Review</span>
+        </div>
+        <blockquote class="review-card__quote">
+          "Notifica is een bedrijf dat je echt goed helpt om alle data binnen jouw organisatie inzichtelijk te krijgen. Ze denken actief mee."
         </blockquote>
-        <div class="testimonial__author">
+        <div class="review-card__solution">
+          <strong>Oplossing:</strong> Zelfstandig dashboards aanpassen zonder afhankelijkheid van maatwerk
+        </div>
+        <div class="review-card__author">
+          <img src="/assets/images/sandee_converted.png" alt="Sandee Groen" class="review-card__logo">
           <div>
-            <p class="testimonial__name">Controller</p>
-            <p class="testimonial__role">Installatiebedrijf - Utrecht</p>
+            <p class="review-card__name">Stefan Heeg</p>
+            <p class="review-card__role">Projectmanager, Sandee Groen</p>
           </div>
         </div>
       </div>
 
-      <div class="testimonial">
-        <blockquote class="testimonial__quote">
-          "De Power BI dashboards zijn heel overzichtelijk en gebruiksvriendelijk.
-          Onze monteurs kunnen nu zelf hun productiviteit zien, wat heeft
-          geleid tot meer betrokkenheid."
+      {# Review 5 - Verkade Klimaat #}
+      <div class="review-card">
+        <div class="review-card__header">
+          <div class="review-card__rating">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <span class="review-card__source">Google Review</span>
+        </div>
+        <blockquote class="review-card__quote">
+          "Dankzij de Power BI oplossing van Notifica hebben wij snel en makkelijk inzicht in de data die in ons Syntess Atrium ERP pakket aanwezig is."
         </blockquote>
-        <div class="testimonial__author">
+        <div class="review-card__solution">
+          <strong>Oplossing:</strong> Geautomatiseerd OHW-proces voor snellere tussentijdse projectresultaten
+        </div>
+        <div class="review-card__author">
+          <img src="/assets/images/verkade_converted.png" alt="Verkade Klimaat" class="review-card__logo">
           <div>
-            <p class="testimonial__name">Directeur</p>
-            <p class="testimonial__role">W-installaties - Overijssel</p>
+            <p class="review-card__name">Vincent Kouer</p>
+            <p class="review-card__role">ERP Implementation, Verkade Klimaat</p>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
+{# CTA Section #}
 <section class="section section--primary">
   <div class="container text-center">
     <h2 class="text-white mb-4">Ook meer grip op je cijfers?</h2>
     <p class="lead text-white mb-8" style="opacity: 0.9;">
-      Plan een vrijblijvende demo en ontdek wat Notifica voor jouw bedrijf kan betekenen.
+      Neem contact met ons op en ontdek wat Notifica voor jouw bedrijf kan betekenen.
     </p>
-    <button class="btn btn-primary btn-lg" data-pipedrive-form="demo">
-      Plan een demo
+    <button class="btn btn-secondary btn-lg" data-pipedrive-form="contact">
+      Neem vrijblijvend contact op
     </button>
   </div>
 </section>

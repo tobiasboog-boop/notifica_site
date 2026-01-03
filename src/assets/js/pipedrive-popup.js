@@ -15,7 +15,7 @@
     },
     contact: {
       title: 'Neem contact op',
-      url: 'https://webforms.pipedrive.com/f/czAN5Djwx6GKDvEFyOO9B3HhfpFEeQ8NX7pcdOLeHJ5LSIQEP8IzJRQE6kjvn2LncD'
+      url: 'https://webforms.pipedrive.com/f/6zmGQ2X1XW91oGi0OQQ0vma5UHXZGOy6qV6Z5KEIv8DppStJUhO0CP4sMxRkcUl0LV'
     },
     whitepaper: {
       title: 'Download whitepaper',
