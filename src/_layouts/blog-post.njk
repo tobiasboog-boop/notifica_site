@@ -1,0 +1,39 @@
+---
+layout: base.njk
+---
+
+<section class="section">
+  <div class="container">
+    <article class="blog-post">
+      <header class="blog-post__header">
+        <h1 class="blog-post__title">{{ title }}</h1>
+      </header>
+      <div class="blog-post__content">
+        {{ content | safe }}
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section section--gray">
+  <div class="container text-center">
+    <a href="/inspiratie/blogs/" class="link-arrow" style="justify-content: center;">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="transform: rotate(180deg);">
+        <path d="M6 3l5 5-5 5V3z"/>
+      </svg>
+      Terug naar alle blogs
+    </a>
+  </div>
+</section>
+
+<section class="section section--primary">
+  <div class="container text-center">
+    <h2 class="text-white mb-4">Meer weten?</h2>
+    <p class="lead text-white mb-8" style="opacity: 0.9;">
+      Neem contact met ons op en ontdek wat Notifica voor jouw bedrijf kan betekenen.
+    </p>
+    <button class="btn btn-secondary btn-lg" data-pipedrive-form="contact">
+      Neem vrijblijvend contact op
+    </button>
+  </div>
+</section>

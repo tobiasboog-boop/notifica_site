@@ -1,0 +1,26 @@
+# URL Redirects - Oude notifica.nl URLs naar nieuwe structuur
+# Formaat: /oude-url /nieuwe-url 301
+# Dit bestand werkt direct op Netlify en Cloudflare Pages
+# Voor andere hosting (Apache/Nginx) moet dit geconverteerd worden
+
+# Hoofdpagina's
+/klanten-ervaringen-met-notifica-waardevolle-inzichten/  /klanten-ervaringen/  301
+/over-ons-ontmoet-het-team-van-notifica/  /over-ons/  301
+/faq-antwoord-op-de-30-meest-veelgestelde-vragen/  /veelgestelde-vragen/  301
+/privacy-verklaring/  /privacy/  301
+
+# Inspiratie sectie
+/videohub/  /inspiratie/videos/  301
+/krachtige-dashboards-artikelen-en-trends-op-de-blog/  /inspiratie/blogs/  301
+/whitepapers-leergidsen-voor-installatiebedragen/  /inspiratie/whitepapers/  301
+
+# Bedrijfssoftware pagina's
+/syntess-dashboards-en-rapportages-live-in-1-dag/  /bedrijfssoftware/syntess-atrium/  301
+/enk-software-razendsnel-ontsloten-met-dashboards/  /bedrijfssoftware/enk-software/  301
+/bouwinfosys-inzicht-met-krachtige-dashboards-notifica/  /bedrijfssoftware/bouwinfosys/  301
+/4ps-inzicht-met-krachtige-dashboards-notifica/  /bedrijfssoftware/4ps/  301
+/acto-inzicht-met-krachtige-dashboards-notifica/  /bedrijfssoftware/acto/  301
+/admicom-inzicht-met-krachtige-dashboards-notifica/  /bedrijfssoftware/admicom/  301
+
+# Oude homepage variant
+/home-power-bi-voor-installatiebedrijven/  /  301

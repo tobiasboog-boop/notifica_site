@@ -1,0 +1,5 @@
+{
+  "layout": "base.njk",
+  "tags": "whitepapers",
+  "permalink": "/inspiratie/whitepapers/{{ page.fileSlug }}/"
+}
