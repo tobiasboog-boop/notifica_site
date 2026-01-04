@@ -358,13 +358,13 @@ h4, .h4 {
 }
 
 .logo img {
-  height: 44px;
+  height: 56px;
   width: auto;
   transition: height var(--transition-base);
 }
 
 .header.scrolled .logo img {
-  height: 32px;
+  height: 44px;
 }
 
 .nav-menu {
