@@ -1,4 +1,4 @@
----
+﻿---
 layout: base-notion.njk
 title: Blogs
 description: Artikelen over Power BI, dashboards en data-analyse voor installatiebedrijven.
@@ -18,15 +18,29 @@ showContactPopup: true
     </div>
 </section>
 
+<!-- Filter Section -->
+<section class="section" style="padding-top: 40px; padding-bottom: 20px;">
+    <div class="container">
+        <h2 style="text-align: center; color:#16136f; font-size: 24px; margin-bottom: 20px;">Filter op onderwerp</h2>
+        <div class="blog-filters" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-bottom: 30px;">
+            <a href="#" onclick="filterBlogs('all', this); return false;" class="filter-btn active">Alles</a>
+            <a href="#" onclick="filterBlogs('cat-ai', this); return false;" class="filter-btn">AI & Innovatie</a>
+            <a href="#" onclick="filterBlogs('cat-projecten', this); return false;" class="filter-btn">Projecten & Financiën</a>
+            <a href="#" onclick="filterBlogs('cat-management', this); return false;" class="filter-btn">Management & Strategie</a>
+            <a href="#" onclick="filterBlogs('cat-powerbi', this); return false;" class="filter-btn">Power BI Praktijk</a>
+        </div>
+    </div>
+</section>
+
 <!-- Blog Grid -->
-<section class="section section-alt">
+<section class="section section-alt" style="padding-top: 0;">
     <div class="container">
         <div class="blog-grid">
             {% for post in collections.blogs | reverse %}
-            <article class="blog-card">
+            <article class="blog-card blog-item {% if post.fileSlug == 'ai-dashboards-voordelen' or post.fileSlug == 'ai-servicedesk-werkbondata-installateurs' or post.fileSlug == 'chatgpt-vs-copilot' or post.fileSlug == 'predictive-maintenance-innovaties' %}cat-ai{% endif %} {% if post.fileSlug == 'betere-besluiten-voorspellen' or post.fileSlug == 'onderhanden-werk-projectsturing' or post.fileSlug == 'grip-on-ohw-5-stappen' or post.fileSlug == 'case-study-storm-overwinnen' %}cat-projecten{% endif %} {% if post.fileSlug == 'winstoptimalisatie-installatiebedrijven' or post.fileSlug == '60-tevreden-klanten' or post.fileSlug == '24-essentiele-kpis-installateurs' or post.fileSlug == 'stuurinformatie-bespaar-12-uur' or post.fileSlug == 'uitbesteden-rapportage-mkb' or post.fileSlug == 'versnel-maandrapportage' %}cat-management{% endif %} {% if post.fileSlug == '4-power-bi-stappen-installateurs' or post.fileSlug == 'razendsnel-rapporten-live' or post.fileSlug == 'power-bi-vs-excel' or post.fileSlug == 'controle-realtime-power-bi' or post.fileSlug == 'direct-inzicht-betere-cijfers' or post.fileSlug == 'mkb-implementatiegids' or post.fileSlug == 'flexibele-abonnementsvorm' or post.fileSlug == 'verbeter-datakwaliteit-erp' %}cat-powerbi{% endif %}">
                 <a href="{{ post.url }}" class="blog-card-link">
                     <div class="blog-card-image">
-                        <img src="/assets/images/visuals-bij-blogs.jpg" alt="{{ post.data.title }}">
+                        <img src="{{ post.data.featuredImage or '/assets/images/visuals-bij-blogs.jpg' }}" alt="{{ post.data.title }}">
                     </div>
                     <div class="blog-card-content">
                         <h3>{{ post.data.title }}</h3>
@@ -55,3 +69,59 @@ showContactPopup: true
         <a href="#contact" class="btn btn-large">Neem vrijblijvend contact op</a>
     </div>
 </section>
+
+<style>
+.filter-btn {
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    color: #555;
+}
+.filter-btn:hover {
+    background-color: #f5f5f5;
+    border-color: #16136F;
+    color: #16136F;
+}
+.filter-btn.active {
+    background-color: #16136F !important;
+    color: #ffffff !important;
+    border-color: #16136F !important;
+}
+.blog-item.hidden {
+    display: none !important;
+}
+</style>
+
+<script>
+function filterBlogs(category, btn) {
+    // 1. Reset buttons
+    var buttons = document.querySelectorAll('.filter-btn');
+    buttons.forEach(function(b) {
+        b.classList.remove('active');
+    });
+
+    // 2. Set active button
+    btn.classList.add('active');
+
+    // 3. Filter items
+    var items = document.querySelectorAll('.blog-item');
+    items.forEach(function(item) {
+        if (category === 'all') {
+            item.classList.remove('hidden');
+        } else {
+            if (item.classList.contains(category)) {
+                item.classList.remove('hidden');
+            } else {
+                item.classList.add('hidden');
+            }
+        }
+    });
+}
+</script>

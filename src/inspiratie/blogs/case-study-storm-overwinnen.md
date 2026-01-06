@@ -1,33 +1,77 @@
 ---
-title: "Case study: 5 strategieën om de storm te overwinnen"
-description: "Hoe installatiebedrijven hogere winst en efficiëntie behalen tijdens uitdagende weersperiodes met realtime financieel inzicht."
+title: "Storm overwinnen: financieel inzicht als reddingsboei voor installateurs"
+description: "In deze case study laten we zien hoe Notifica installatiebedrijven helpt met diepgaand financieel inzicht, resulterend in hogere winst en efficiëntie."
+featuredImage: "/assets/images/2025/06/9.-Accountmanagement-Cashflow.png"
 ---
 
-Deze case study demonstreert hoe installatiebedrijven hogere winst en efficiëntie kunnen behalen tijdens uitdagende weersperiodes door realtime financieel inzicht.
+## Case study: 5 onmisbare inzichten voor financieel inzicht, hogere winst en efficiëntie tijdens zwaar weer
 
-## De uitdaging
+Deze case study laat zien hoe installatiebedrijven ook in periodes van zwaar weer dankzij real-time **financieel inzicht** kunnen zorgen voor hogere winst en efficiëntie. Door geavanceerde Power BI-rapportages en naadloze ERP-integratie realiseren zij duurzame groei, zelfs bij onvoorspelbare omstandigheden.
 
-Installatiebedrijven worden geconfronteerd met aanzienlijke obstakels wanneer onverwacht weer projectvertragingen en onvoorziene kosten veroorzaakt. Zonder direct financieel inzicht in kosten versus opbrengsten wordt het bijna onmogelijk om tijdens zwaar weer de juiste beslissingen te nemen.
+**Direct naar:**
+- [De uitdaging](#uitdaging)
+- [De oplossing](#oplossing)
+- [5 Inzichten](#inzichten)
+- [Resultaten](#resultaten)
+- [Conclusie](#conclusie)
 
-## De oplossing
+## De uitdaging bij zwaar weer
 
-Notifica ontwikkelde een Power BI-oplossing die het volgende mogelijk maakt:
+Veel installatiebedrijven staan voor dezelfde uitdaging: zoals een recente case study van een middelgroot installatiebedrijf bleek, kunnen onverwachte weersomstandigheden leiden tot projectvertragingen en onvoorziene kosten. Zonder direct financieel inzicht in kosten versus opbrengsten, wordt het bijna onmogelijk om tijdens zwaar weer de juiste beslissingen te nemen. Dit gebrek aan inzicht remt de efficiency en leidt tot lagere marges, waardoor winstpotentieel onbenut blijft.
 
-- Realtime monitoring van projecten onder weergerelateerde druk
-- Directe kosten-opbrengstvergelijking
-- Scenariosimulatie om marge-impact te voorspellen
+![Case study financieel inzicht voor hogere winst en efficiëntie](/assets/images/2025/06/9.-Accountmanagement-Cashflow.png)
 
-## Vijf kritieke inzichten
+*Voorbeeld van een dashboard waarin financieel inzicht zorgt voor betere beslissingen tijdens zwaar weer.*
 
-1. **Realtime materiaalkosteninzicht** voorkomt tekorten en optimaliseert inkoop
-2. **Koppeling urenregistratie aan weerdata** verbetert teamefficiëntie
-3. **Prioriteren van winstgevende projecten** tijdens stormen beschermt marges
-4. **Scenario-analysetools** maken betere financiële forecasting mogelijk
-5. **Capaciteitsplanningoptimalisatie** door realtime projectstatusmonitoring
+## Oplossing met financieel inzicht
 
-## Resultaten
+Notifica ontwikkelde een specifieke Power BI-oplossing voor dit installatiebedrijf, gericht op het bieden van direct financieel inzicht, zelfs bij zwaar weer. Dankzij de integratie met Syntess en andere systemen kan het management nu:
 
-- Onvoorziene extra kosten daalden 15% binnen drie maanden
-- Gemiddelde projectmarge steeg 12% door resource-optimalisatie
-- Teamherdistributie-efficiëntie verbeterde significant
-- Snellere besluitvorming door one-click rapportdeling
+- In real time monitoren welke projecten onder druk staan vanwege weersinvloeden.
+- Direct kosten versus opbrengsten vergelijken, inclusief materiaalkosten en urenregistratie.
+- Scenario's simuleren om te voorspellen hoe zwaar weer de marges beïnvloedt.
+
+## 5 onmisbare inzichten
+
+In deze case study bespreken we vijf inzichten die tijdens zwaar weer het verschil maken tussen verlies en winst. Elk inzicht is gebaseerd op data en best practices uit de installatiebranche:
+
+### 1. Direct inzicht in materiaalkosten en voorraad
+
+Tijdens zwaar weer veranderen materiaalkosten snel door prijsfluctuaties en leveringsproblemen. Het dashboard toont realtime de actuele kosten per project. Hierdoor kan de inkoper alternatieve leveranciers zoeken en de inkoop optimaliseren. Dit inzicht voorkomt onverwachte tekorten en spaart kosten uit.
+
+### 2. Urenregistratie koppelen aan weersinvloeden
+
+Een slim onderdeel van de Power BI-rapportage is het koppelen van urenregistratie aan weersdata. Zo ziet een manager direct welke teams langer stilstaan door regen of storm en kan hij proactief bijsturen. Dit draagt bij aan een hogere efficiëntie.
+
+### 3. Prioriteren van winstgevende projecten
+
+Financieel inzicht stelt managers in staat om installatiecontracten te rangschikken op marge. In onze case study bleek dat sommige projecten tijdens zwaar weer onrendabel werden. Door deze projecten tijdelijk te pauzeren, kon het bedrijf de focus leggen op klussen met een hogere winst.
+
+### 4. Scenario-analyse voor betere besluitvorming
+
+Het dashboard bevat scenario-tools waarmee je kunt voorspellen hoe zwaar weer de kosten zal beïnvloeden. Door 'wat als'-scenario's te draaien, kreeg het management een beter beeld van de financiële impact bij uitstel of versnelde uitvoering. Dit zorgt voor meer grip op de uiteindelijke marge.
+
+### 5. Capaciteitsplanning en efficiency optimalisatie
+
+Dankzij realtime inzicht in projectstatussen kon het installatiebedrijf tijdens de stormperiode teams herverdelen naar projecten die wél doorgang vonden. Dit zorgde voor een betere capaciteitstoewijzing en een significant hogere efficiëntie.
+
+Lees ook dit artikel over [business intelligence in de installatiebranche](https://nl.wikipedia.org/wiki/Business_Intelligence) voor meer achtergrond. Wil je meer weten over onze oplossingen, bekijk dan onze [Power BI-oplossingen voor installatiebedrijven](/diensten/power-bi-dashboards-voor-installateurs/).
+
+![Financieel inzicht in projectwaardering en efficiëntie](/assets/images/2025/06/2.-Pojectwaardering.png)
+
+*Detail van projectwaardering: hoe zwaar weer de marge beïnvloedt.*
+
+## Resultaten: hogere winst en efficiëntie
+
+- In de eerste drie maanden na livegang daalde onvoorziene extra kosten met 15 %.
+- De gemiddelde projectmarge steeg met 12 % door optimalisatie van middelen.
+- De efficiency nam toe doordat teams snel herverdeeld konden worden.
+- Snellere besluitvorming door rapportages met één klik te delen.
+
+## Conclusie
+
+Deze case study toont aan dat installatiebedrijven, zelfs in zwaar weer, hun marge kunnen verbeteren door direct financieel inzicht. Wil jij ook zekerheid over je rendement?
+
+**Neem vrijblijvend [contact met ons op](/contact)** voor meer informatie.
+
+Bekijk ook onze [veelgestelde vragen](/faq-antwoord-op-de-30-meest-veelgestelde-vragen/) voor meer informatie.

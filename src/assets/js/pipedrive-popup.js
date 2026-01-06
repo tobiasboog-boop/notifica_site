@@ -1,37 +1,38 @@
-/**
+﻿/**
  * Pipedrive Web Forms Popup Handler
  * Handles opening/closing of Pipedrive forms in popup modals
  */
 
 (function() {
-  'use strict';
+  "use strict";
 
   // Pipedrive form configurations
   // Replace these URLs with your actual Pipedrive Web Form URLs
   const PIPEDRIVE_FORMS = {
     demo: {
-      title: 'Plan een demo',
-      url: 'https://webforms.pipedrive.com/f/czAN5Djwx6GKDvEFyOO9B3HhfpFEeQ8NX7pcdOLeHJ5LSIQEP8IzJRQE6kjvn2LncD'
+      title: "Plan een demo",
+      url: "https://webforms.pipedrive.com/f/czAN5Djwx6GKDvEFyOO9B3HhfpFEeQ8NX7pcdOLeHJ5LSIQEP8IzJRQE6kjvn2LncD"
     },
     contact: {
-      title: 'Neem contact op',
-      url: 'https://webforms.pipedrive.com/f/6zmGQ2X1XW91oGi0OQQ0vma5UHXZGOy6qV6Z5KEIv8DppStJUhO0CP4sMxRkcUl0LV'
+      title: "Neem contact op",
+      url: "https://webforms.pipedrive.com/f/6zmGQ2X1XW91oGi0OQQ0vma5UHXZGOy6qV6Z5KEIv8DppStJUhO0CP4sMxRkcUl0LV"
     },
     whitepaper: {
-      title: 'Download whitepaper',
-      url: 'https://webforms.pipedrive.com/f/czAN5Djwx6GKDvEFyOO9B3HhfpFEeQ8NX7pcdOLeHJ5LSIQEP8IzJRQE6kjvn2LncD'
+      title: "Download whitepaper",
+      subtitle: "Geef aan welke whitepapers je wenst te ontvangen in onderstaand bericht.",
+      url: "https://webforms.pipedrive.com/f/czAN5Djwx6GKDvEFyOO9B3HhfpFEeQ8NX7pcdOLeHJ5LSIQEP8IzJRQE6kjvn2LncD"
     },
     support: {
-      title: 'Remote support',
-      url: 'https://webforms.pipedrive.com/f/czAN5Djwx6GKDvEFyOO9B3HhfpFEeQ8NX7pcdOLeHJ5LSIQEP8IzJRQE6kjvn2LncD'
+      title: "Remote support",
+      url: "https://webforms.pipedrive.com/f/czAN5Djwx6GKDvEFyOO9B3HhfpFEeQ8NX7pcdOLeHJ5LSIQEP8IzJRQE6kjvn2LncD"
     }
   };
 
   // Create popup overlay element
   function createPopupOverlay() {
-    const overlay = document.createElement('div');
-    overlay.className = 'popup-overlay';
-    overlay.id = 'pipedrive-popup';
+    const overlay = document.createElement("div");
+    overlay.className = "popup-overlay";
+    overlay.id = "pipedrive-popup";
     overlay.innerHTML = `
       <div class="popup-content">
         <button class="popup-close" aria-label="Sluiten">
@@ -56,31 +57,33 @@
       return;
     }
 
-    let overlay = document.getElementById('pipedrive-popup');
+    let overlay = document.getElementById("pipedrive-popup");
     if (!overlay) {
       overlay = createPopupOverlay();
     }
 
-    const container = document.getElementById('pipedrive-form-container');
+    const container = document.getElementById("pipedrive-form-container");
 
     // Load Pipedrive form using their embed method
     container.innerHTML = `
+      ${form.title ? `<h2 style="margin-bottom: ${form.subtitle ? "12px" : "24px"}; color: #16136F;">${form.title}</h2>` : ""}
+      ${form.subtitle ? `<p style="margin-bottom: 24px; color: #6B7280; font-size: 15px;">${form.subtitle}</p>` : ""}
       <div class="pipedriveWebForms" data-pd-webforms="${form.url}"></div>
     `;
 
     // Load Pipedrive script
-    const existingScript = document.querySelector('script[src="https://webforms.pipedrive.com/f/loader"]');
+    const existingScript = document.querySelector("script[src='https://webforms.pipedrive.com/f/loader']");
     if (existingScript) {
       existingScript.remove();
     }
 
-    const script = document.createElement('script');
-    script.src = 'https://webforms.pipedrive.com/f/loader';
+    const script = document.createElement("script");
+    script.src = "https://webforms.pipedrive.com/f/loader";
     container.appendChild(script);
 
     // Show overlay
-    overlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    overlay.classList.add("active");
+    document.body.style.overflow = "hidden";
 
     // Focus trap
     overlay.focus();
@@ -88,15 +91,15 @@
 
   // Close popup
   function closePopup() {
-    const overlay = document.getElementById('pipedrive-popup');
+    const overlay = document.getElementById("pipedrive-popup");
     if (overlay) {
-      overlay.classList.remove('active');
-      document.body.style.overflow = '';
+      overlay.classList.remove("active");
+      document.body.style.overflow = "";
 
       // Clear form container
-      const container = document.getElementById('pipedrive-form-container');
+      const container = document.getElementById("pipedrive-form-container");
       if (container) {
-        container.innerHTML = '';
+        container.innerHTML = "";
       }
     }
   }
@@ -104,36 +107,36 @@
   // Initialize event listeners
   function init() {
     // Handle button clicks
-    document.addEventListener('click', function(e) {
-      const button = e.target.closest('[data-pipedrive-form]');
+    document.addEventListener("click", function(e) {
+      const button = e.target.closest("[data-pipedrive-form]");
       if (button) {
         e.preventDefault();
-        const formId = button.getAttribute('data-pipedrive-form');
+        const formId = button.getAttribute("data-pipedrive-form");
         openPopup(formId);
       }
 
       // Close button
-      if (e.target.closest('.popup-close')) {
+      if (e.target.closest(".popup-close")) {
         closePopup();
       }
 
       // Click outside popup content
-      if (e.target.classList.contains('popup-overlay')) {
+      if (e.target.classList.contains("popup-overlay")) {
         closePopup();
       }
     });
 
     // Escape key to close
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape") {
         closePopup();
       }
     });
   }
 
   // Initialize when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
   } else {
     init();
   }

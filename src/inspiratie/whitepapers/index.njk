@@ -152,7 +152,7 @@ showContactPopup: true
                     <span class="whitepaper-type">{{ paper.data.type }}</span>
                     <h3>{{ paper.data.title }}</h3>
                     <p>{{ paper.data.description }}</p>
-                    <a href="#contact" class="btn">Download gratis</a>
+                    <a href="#" class="btn whitepaper-download" data-pipedrive-form="whitepaper" data-title="{{ paper.data.title }}">Download gratis</a>
                 </div>
             </article>
             {% endfor %}
@@ -167,6 +167,20 @@ showContactPopup: true
         <p class="section-subtitle" style="max-width: 560px; margin: 16px auto 32px;">
             Neem contact met ons op en we bespreken welke inzichten het meest waardevol zijn voor jouw situatie.
         </p>
-        <a href="#contact" class="btn btn-large">Neem vrijblijvend contact op</a>
+        <a href="#" class="btn btn-large" data-pipedrive-form="contact">Neem vrijblijvend contact op</a>
     </div>
 </section>
+
+<script>
+// Handle whitepaper download buttons
+document.addEventListener('DOMContentLoaded', function() {
+    const whitepaperDownloadLinks = document.querySelectorAll('.whitepaper-download');
+    whitepaperDownloadLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const title = this.getAttribute('data-title');
+            openContactPopup(title);
+        });
+    });
+});
+</script>

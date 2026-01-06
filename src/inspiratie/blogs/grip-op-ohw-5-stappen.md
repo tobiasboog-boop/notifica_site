@@ -1,38 +1,76 @@
 ---
-title: "Onderhanden Werk revolutionair voor installateurs: in 5 stappen volledig geautomatiseerd!"
-description: "Ontdek hoe je met 5 stappen realtime inzicht krijgt in onderhanden werk en je maandafsluiting automatiseert."
+title: "Eenvoudig grip op OHW: Ontdek Notifica's 5 krachtige stappen"
+description: "Ontdek hoe je met Notifica's stappenplan realtime inzicht in de stand van het OHW en hoe dit zorgt voor betere winstneming en gezonde groei."
+featuredImage: "/assets/images/2025/06/2.-Pojectwaardering-1024x449.png"
 ---
 
-Installatiebedrijven kunnen realtime inzicht krijgen in onderhanden werk (OHW) door geautomatiseerde processen. Realtime inzicht in de stand van het OHW maakt beter winstbeheer mogelijk, reduceert fouten en elimineert handmatige controles.
+## Onderhanden werk met realtime inzicht: ultieme automatisering in 5 stappen
 
-## Het 5-stappenplan
+OHW en Onderhanden werk zijn cruciaal voor elk installatiebedrijf. Door te sturen op **onderhanden werk met realtime inzicht** minimaliseer je fouten, bespaar je tijd en schakel je handmatige controles uit. Notifica maakt OWH-automatisering mogelijk, zodat je sneller bijstuurt, betere rapportages hebt en je financiële gezondheid voortdurend bewaakt.
 
-### 1. Budget Updates
+**Onderhanden Werk** (OWH) vormt de kern van iedere winstgevende installatie. Door realtime inzicht te combineren met strakke automatisering, transformeer je handmatige processen naar slimme workflows. Met Notifica's oplossing bespaar je niet alleen tijd, maar vergroot je ook de nauwkeurigheid van je cijfers. Door OWH-maandcycli automatisch te laten verlopen, ontstaan heldere rapportages en voorkom je verrassingen op de balans.
 
-Projectmanagers vergelijken maandelijks originele calculaties met daadwerkelijke voortgang via een Budget Request app. Automatische notificaties voor overschrijdingen of besparingen naar alle stakeholders.
+> Onderhanden werk met realtime inzicht geautomatiseerd in 5 stappen maakt een einde aan tijdrovende handmatige processen en brengt je financiële rapportages op een geheel nieuw niveau.
 
-### 2. Geautomatiseerde POC Berekening
+**Direct naar:**
+- [5-Stappenplan](#stappenplan)
+- [Geen Excel meer](#excelvrij)
+- [Waarom het werkt](#waarom)
+- [Voordelen & ROI](#voordelen)
+- [Casestudy](#casestudy)
 
-Percentage of Completion vertaalt realtime voortgang en werkelijke kosten naar objectieve voltooiingspercentages binnen seconden, wat rekenfouten elimineert.
+Voor installatiebedrijven die willen groeien, is een overstap naar geautomatiseerde processen noodzakelijk. Onze [Power BI dashboards voor installateurs](/diensten/power-bi-dashboards-voor-installateurs/) bieden hierin de perfecte ondersteuning door data uit diverse bronnen realtime te visualiseren.
 
-### 3. Projectwaardering
+## Het 5-stappenplan voor onderhanden werk met realtime inzicht
 
-Het systeem combineert voortgangsdata met kosteninformatie om huidige projectwaarde te berekenen op een audit-proof, traceerbare manier met volledige logging.
+### 1. Budget actualiseren
 
-### 4. OHW Correctieboeking
+Elke maand vergelijken projectleiders de oorspronkelijke calculatie met de actuele voortgang via de Budgetverzoek-app. Bij een overschrijding of meevaller meldt één druk op de knop alle betrokkenen—van finance tot directie—automatisch. Zo blijft het budget altijd actueel zonder overbodige e-mails en Excel-sheets.
 
-Eén klik synchroniseert berekende posities met ERP-systemen zoals Syntess of Exact Online zonder dubbele invoer.
+### 2. Automatische POC-berekening
 
-### 5. Maandelijkse Trendanalyse
+Het Percentage of Completion (POC) vertaalt realtime voortgang en werkelijke kosten binnen enkele seconden naar een objectief voltooiingspercentage. Geen rekenfouten meer en direct helderheid over de voortgang en omzet.
 
-Power BI graphics en voorspellende modellen identificeren risicovolle projecten en kansen voor vroegtijdige koerscorrectie.
+### 3. Projectwaardering vastleggen
 
-## Belangrijkste voordelen
+Notifica combineert voortgangsdata met kostengegevens en berekent direct de actuele projectwaarde—volledig audit-proof en traceerbaar. Alle stappen worden gelogd, zodat de accountant op elk gewenst moment kan controleren hoe cijfers zijn opgebouwd.
 
-- **60% tijdsbesparing** op maandafsluitingen
-- Betere financiële risicobeheersing via vroegtijdige cashflow monitoring
-- Betrouwbare forecasts met scenarioanalyse en historische data
-- **10-15% margeverbetering** binnen zes maanden
-- Verbeterde teamsamenwerking door gedeelde, actuele dashboarddata
+### 4. OHW-correctie boeken
 
-Geautomatiseerde realtime OHW versnelt de besluitvorming met gemiddeld 25%.
+Met één klik synchroniseer je de berekende positie met Syntess, Exact Online of een ander ERP-systeem. Zo sluiten projectrapportage en boekhouding naadloos op elkaar aan zonder dubbele invoer of handmatige correcties.
+
+### 5. Maandelijkse trendanalyse
+
+Power BI-grafieken and voorspellende modellen laten zien welke projecten risico lopen en waar kansen liggen. Hiermee signaleer je afwijkingen vroegtijdig en stuur je bij voordat onvoorziene kosten ontstaan.
+
+![Onderhanden werk met realtime inzicht dashboards](/assets/images/2025/06/2.-Pojectwaardering.png)
+
+*Alle projecten keurig onder elkaar met realisatie en voortgang (en automatisch OHW)*
+
+## Onderhanden werk met realtime inzicht zonder Excel-marathons
+
+Dankzij visuele dashboards van Notifica hoef je niet langer 's avonds stapels spreadsheets samen te voegen. Je opent een Power BI-portaal waarin alle projecten overzichtelijk naast elkaar staan, met kostenontwikkelingen, margepercentages en voortgangscurves. Zo zie je in één oogopslag wie op schema ligt en waar extra aandacht nodig is—zonder uren te besteden aan handmatig werk.
+
+## Waarom het werkt
+
+Traditioneel verliep de boekhouding achter de schermen: materiaalboekingen werden vooruitgeboekt, terwijl facturen vaak pas weken later binnenkwamen. Dat leidde tot grillige balansrekeningen en onvoorspelbare maandresultaten. Volgens [Accountancy van Morgen](https://accountancyvanmorgen.nl/) versnelt **onderhanden werk met realtime inzicht** de besluitvorming met gemiddeld 25%. Door data te centraliseren en direct te koppelen aan het ERP, krijg je betrouwbare, audit-proof cijfers.
+
+## Voordelen en ROI
+
+- **60% tijdsbesparing** op maandafsluitingen door één gebruiksvriendelijke app voor projectleiders en automatische boekingen voor finance.
+- **Lagere financiële risico's** dankzij vroegtijdig cashflow- en risicobeheer; voorkom kostbare tekorten.
+- **Betrouwbare forecasts** met scenario-analyse en historische data; beslis op feiten, niet op onderbuikgevoel.
+- **Hogere rendabiliteit** door betere margecontrole: installatiebedrijven zien hun gemiddelde projectmarge binnen zes maanden met 10–15% stijgen.
+- **Betere samenwerking** tussen teams door dashboards en automatische notificaties; iedereen werkt met dezelfde, actuele cijfers.
+
+## Casestudy van een klant
+
+Begin 2024 implementeerde een klant Notifica. Voorheen werd OWH slechts elk kwartaal uitgevoerd en vooral voor grote projecten. Door automatisering in Power BI daalde de maandafsluitingstijd van vijf naar twee werkdagen, waardoor ze nu voor elk project maandelijks en automatisch OHW uitvoeren. Dankzij het onderhanden werk met realtime inzicht kon het management tijdig bijsturen en werden financiële doelstellingen sneller gehaald.
+
+Met ultieme automatisering in 5 stappen, een robuuste POC-methode, naadloze ERP-integratie, krachtige dashboards en diepgaande trendanalyse transformeer je je installatiebedrijf tot een proactieve, datagedreven organisatie—met meer rust, betere marges en vertrouwen van iedereen binnen en buiten je bedrijf.
+
+> Ontdek hoe dichtbij echte grip op Onderhanden Werk is.
+
+**Neem vrijblijvend [contact op](#contact) voor meer informatie** en ervaar zelf hoe Notifica jouw OHW-proces naar een hoger niveau tilt.
+
+Meer weten? Lees onze andere blogs of bekijk de [Veelgestelde vragen](/faq-antwoord-op-de-30-meest-veelgestelde-vragen/).
