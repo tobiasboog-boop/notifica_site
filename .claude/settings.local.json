@@ -2,7 +2,20 @@
   "permissions": {
     "allow": [
       "Bash(where gh:*)",
-      "Bash(npx @11ty/eleventy)"
+      "Bash(npx @11ty/eleventy)",
+      "Bash(ls:*)",
+      "Bash(findstr:*)",
+      "Bash(dir:*)",
+      "Bash(grep:*)",
+      "Bash(unzip:*)",
+      "Bash(test -f:*)",
+      "Bash(find:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd redesigned Notifica homepage with Notion-inspired minimalist design\n\n- Implemented modern, clean design using exact Notifica logo colors \\(#16136F navy, #3636A2 blue\\)\n- Added Inter font family for contemporary typography\n- Created compact hero section \\(reduced from 140px to 80px padding\\)\n- Organized all 103 images from WordPress site into single images/ folder\n- Applied Notion-inspired design: minimalist, subtle borders, 6-12px rounded corners\n- Maintained brand identity throughout with consistent color system\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(git commit:*)",
+      "Bash(npm start)",
+      "Bash(npm run dev:*)"
     ]
   }
 }

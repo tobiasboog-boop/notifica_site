@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title or "Notifica | Power BI Dashboards voor Installatiebedrijven" }}</title>
+  <meta name="description" content="{{ description or "Professionele Power BI dashboards voor installatiebedrijven. Direct inzicht in projectresultaten, marges en efficiency. Live binnen 1 dag." }}">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/notifica-notion.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/Notifica_Favicon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ title or 'Notifica | Power BI Dashboards voor Installatiebedrijven' }}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  {% if og_image %}
+  <meta property="og:image" content="{{ site.url }}{{ og_image }}">
+  {% endif %}
+
+  {% block head %}{% endblock %}
+</head>
+<body class="{{ bodyClass or '' }}">
+  {% include "header-notion.njk" %}
+
+  <main>
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}
+  </main>
+
+  {% include "footer-notion.njk" %}
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>
