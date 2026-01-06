@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veelgestelde Vragen - Notifica</title>
+    <meta name="description" content="Antwoorden op de meest gestelde vragen over Notifica dashboards voor installatiebedrijven. Van werkwijze tot koppelingen en kosten.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#16136f',
+                        accent: '#fbba00',
+                        text: '#555555',
+                        light: '#f7f7f7'
+                    },
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+
+        .btn-primary {
+            background-color: #fbba00;
+            color: #16136f;
+            padding: 16px 32px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: 2px solid #fbba00;
+        }
+        .btn-primary:hover {
+            background-color: transparent;
+            color: #fbba00;
+        }
+
+        .faq-category {
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .faq-category:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        .faq-category-label {
+            background-color: #fbba00;
+            color: #16136f;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 4px 12px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .faq-question {
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+        }
+
+        .faq-question:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question-button {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 0;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f2937;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question-button:hover {
+            color: #16136f;
+        }
+
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+            color: #fbba00;
+        }
+
+        .faq-icon.rotated {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 0 0 0;
+        }
+
+        .faq-answer.open {
+            max-height: 1000px;
+            padding: 16px 40px 0 0;
+        }
+
+        .faq-answer p {
+            color: #6b7280;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="/wp-content/uploads/2021/03/Notifica_blauw.png" alt="Notifica" class="h-12">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="homepage.html" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="over-ons.html" class="text-gray-700 hover:text-primary transition-colors">Over ons</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-primary transition-colors font-semibold">FAQ</a>
+                    <a href="homepage.html#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-primary">
+                    Veelgestelde vragen
+                </h1>
+                <p class="text-lg mb-8 text-gray-600">
+                    Antwoorden op de meest gestelde vragen over Notifica dashboards voor installatiebedrijven. Van werkwijze tot koppelingen en kosten.
+                </p>
+                <a href="homepage.html#contact" class="btn-primary">Stel direct je vraag</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories Grid -->
+    <section class="py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Category 1 -->
+                <div class="faq-category" onclick="scrollToCategory('cat1')">
+                    <span class="faq-category-label">Over Notifica</span>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Werkwijze & Starten</h3>
+                    <p class="text-gray-600 mb-4">Wat maakt ons anders? Hoe ziet het implementatietraject eruit en hoe snel kan ik live zijn?</p>
+                    <p class="text-sm text-gray-500">Bekijk 5 vragen & antwoorden</p>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="faq-category" onclick="scrollToCategory('cat2')">
+                    <span class="faq-category-label">Techniek</span>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">ERP & Koppelingen</h3>
+                    <p class="text-gray-600 mb-4">Werkt het met Syntess, Exact of 4PS? En wat gebeurt er met data als ik wissel?</p>
+                    <p class="text-sm text-gray-500">Bekijk 3 vragen & antwoorden</p>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="faq-category" onclick="scrollToCategory('cat3')">
+                    <span class="faq-category-label">Inzicht</span>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Dashboards & Data</h3>
+                    <p class="text-gray-600 mb-4">Welke dashboards krijg ik? Kan ik zelf rapporten aanpassen en werkt het op mobiel?</p>
+                    <p class="text-sm text-gray-500">Bekijk 7 vragen & antwoorden</p>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="faq-category" onclick="scrollToCategory('cat4')">
+                    <span class="faq-category-label">Veiligheid</span>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Data & Veiligheid</h3>
+                    <p class="text-gray-600 mb-4">Is mijn bedrijfsdata veilig? Wie heeft toegang en wat gebeurt er bij opzegging?</p>
+                    <p class="text-sm text-gray-500">Bekijk 3 vragen & antwoorden</p>
+                </div>
+
+                <!-- Category 5 -->
+                <div class="faq-category" onclick="scrollToCategory('cat5')">
+                    <span class="faq-category-label">Service</span>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Abonnement & Support</h3>
+                    <p class="text-gray-600 mb-4">Wat zijn de kosten? Kan ik maandelijks opzeggen en krijg ik ondersteuning?</p>
+                    <p class="text-sm text-gray-500">Bekijk 5 vragen & antwoorden</p>
+                </div>
+
+                <!-- Category 6 -->
+                <div class="faq-category" onclick="scrollToCategory('cat6')">
+                    <span class="faq-category-label">Organisatie</span>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Samenwerking & Toekomst</h3>
+                    <p class="text-gray-600 mb-4">Geschikt voor meerdere BV's? En blijft mijn historie behouden bij groei?</p>
+                    <p class="text-sm text-gray-500">Bekijk 3 vragen & antwoorden</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordions -->
+    <section class="py-20 px-6 bg-light">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- Category 1: Werkwijze & Starten -->
+            <div id="cat1" class="mb-16">
+                <h2 class="text-3xl font-extrabold mb-8 text-primary">Werkwijze & Starten</h2>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Wat maakt jullie anders dan concurrenten?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Notifica biedt geen maatwerk, maar werkt met bewezen standaard dashboards en datamodellen voor de installatiebranche. Daardoor zijn we snel live (vaak binnen 2 weken) en omdat we voor meer dan 60 klanten ontwikkelen blijft het betaalbaar.</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Voor wat voor type installateurs werkt Notifica?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Wij ondersteunen zowel kleine als grote installatiebedrijven, van 20 tot honderden medewerkers. Onze oplossingen zijn schaalbaar, praktisch en gericht op de dagelijkse praktijk van de installatiebranche.</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Wat heb ik nodig om te starten?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Je hebt alleen toegang tot je eigen ERP-systeem nodig. Wij regelen de koppeling, inrichting en het volledige onboardingproces. Je hebt geen specifieke IT-kennis nodig.</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Hoe ziet het implementatietraject eruit?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Na een korte intake koppelen we je bedrijfssoftware en richten we de dashboards in. Daarna kunnen we in 1 tot 3 dagen onze standaard rapporten verder op wens maken. Gemiddeld ben je binnen twee weken live.</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Biedt Notifica trainingen aan?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, we verzorgen trainingen voor management en uitvoerders. Dit kan online, op locatie of via instructievideo's. We zorgen dat iedereen direct aan de slag kan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2: ERP & Koppelingen -->
+            <div id="cat2" class="mb-16">
+                <h2 class="text-3xl font-extrabold mb-8 text-primary">ERP & Koppelingen</h2>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Met welke ERP-systemen koppelt Notifica?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Wij koppelen direct met o.a. Syntess Atrium, Exact Online, ACTO, Admicom, 4PS Construct, BouwInfosys en ENK. Staat je ERP er niet bij? Neem contact op.</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Kan ik koppelen met meerdere systemen tegelijk?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, wij hebben ervaring met het koppelen van meerdere vestigingen of zelfs verschillende ERP-systemen binnen één groep. Je krijgt één centraal overzicht.</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Wat als ik overstap naar een ander ERP?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Geen probleem. Wij regelen de nieuwe koppeling en migreren je historie, zodat je trends en cijfers gewoon doorlopen zonder dataverlies.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3: Dashboards & Data -->
+            <div id="cat3" class="mb-16">
+                <h2 class="text-3xl font-extrabold mb-8 text-primary">Dashboards & Data</h2>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Welke dashboards krijg ik?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Een complete set inclusief: Projectresultaten, Uren & Productiviteit, Nacalculatie, Openstaande posten, Verkoop, Werkvoorraad en HR (verzuim/instroom).</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Kan ik rapportages aanpassen?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, je kunt standaardrapportages aanpassen. Ook kunnen wij maatwerk toevoegen als je specifieke wensen hebt (bijv. extra KPI's).</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Hoe actueel zijn de gegevens?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Data wordt standaard dagelijks bijgewerkt. Sneller (bijv. elk uur) is mogelijk in overleg.</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Kan ik cijfers delen met collega's?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, je bepaalt per gebruiker of afdeling wie welke dashboards mag zien via een rechtensysteem.</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Werkt het op mobiel?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Zeker. Alle dashboards zijn responsive en werken goed op tablets en smartphones. Handig voor onderweg of op de bouwplaats.</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Kan ik exporteren naar Excel?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, data kan eenvoudig worden geëxporteerd naar Excel of PDF voor verdere analyse.</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Kunnen dashboards automatisch gemaild worden?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, periodiek mailen kan. Maar beter is het om collega's toegang te geven zodat ze zelf actueel inzicht hebben.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 4: Data & Veiligheid -->
+            <div id="cat4" class="mb-16">
+                <h2 class="text-3xl font-extrabold mb-8 text-primary">Data & Veiligheid</h2>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Is mijn data veilig?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, wij werken volgens strenge beveiligingsnormen. Data wordt versleuteld opgeslagen binnen de EU en is alleen voor jou toegankelijk.</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Wat gebeurt er bij opzegging?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Je data blijft tot 30 dagen na afloop beschikbaar voor export. Daarna wordt alles veilig en onherroepelijk verwijderd.</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Helpt dit bij certificeringen?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, met Notifica kun je eenvoudig rapportages delen voor audits of kwaliteitsborging, wat helpt bij het voldoen aan de informatieplicht.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 5: Abonnement & Support -->
+            <div id="cat5" class="mb-16">
+                <h2 class="text-3xl font-extrabold mb-8 text-primary">Abonnement & Support</h2>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Wat kost Notifica?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>De kosten hangen af van je bedrijfsgrootte en aantal gebruikers. Neem contact op voor een prijsopgave die past bij jouw situatie.</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Kan ik maandelijks opzeggen?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, je kunt maandelijks opzeggen. Wij binden klanten liever door kwaliteit dan door contracten.</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Hoe snel reageren jullie bij storingen?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Tijdens kantooruren reageren we meestal binnen enkele uren. Hoge prioriteit storingen pakken we direct op.</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Komen jullie ook op locatie?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, indien gewenst komen we langs voor training, uitleg of MT-sessies.</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Kan ik input geven voor nieuwe functies?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Graag zelfs! Wij ontwikkelen onze standaard dashboards door op basis van feedback van onze klanten.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 6: Samenwerking & Toekomst -->
+            <div id="cat6" class="mb-16">
+                <h2 class="text-3xl font-extrabold mb-8 text-primary">Samenwerking & Toekomst</h2>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Geschikt voor meerdere BV's?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, we bieden oplossingen voor groepen. Je krijgt een totaaloverzicht (geconsolideerd) én inzicht per los label.</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Wat als mijn organisatie groeit?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Onze oplossing groeit mee. Nieuwe gebruikers of administraties kunnen eenvoudig worden toegevoegd zonder complexe trajecten.</p>
+                    </div>
+                </div>
+
+                <div class="faq-question">
+                    <button class="faq-question-button" onclick="toggleFaq(this)">
+                        <span>Blijft historie behouden bij groei?</span>
+                        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, alle historische data blijft behouden, ook als je organisatie verandert of fuseert.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-6 bg-primary text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-6">
+                Staat jouw vraag er niet tussen?
+            </h2>
+            <p class="text-xl mb-8 opacity-90">
+                Onze specialisten helpen je graag verder.
+            </p>
+            <a href="homepage.html#contact" class="btn-secondary">Neem contact op</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Notifica</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Kerkhofstraat 21<br>
+                        5554 HG Valkenswaard<br>
+                        The Netherlands<br><br>
+                        KVK 81772645<br>
+                        BTW NL862214841B01
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contact</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Tel: +31 30 799 02 15<br>
+                        E-mail: info@notifica.nl<br>
+                        Support: support@notifica.nl
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Legaal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Verwerkersovereenkomst</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Algemene voorwaarden</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy verklaring</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                © Notifica - All Rights Reserved
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Function
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+            const isOpen = answer.classList.contains('open');
+
+            if (isOpen) {
+                answer.classList.remove('open');
+                icon.classList.remove('rotated');
+            } else {
+                answer.classList.add('open');
+                icon.classList.add('rotated');
+            }
+        }
+
+        // Scroll to Category Function
+        function scrollToCategory(categoryId) {
+            const element = document.getElementById(categoryId);
+            if (element) {
+                const offset = 100;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>
