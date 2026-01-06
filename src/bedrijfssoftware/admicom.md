@@ -10,10 +10,9 @@ showContactPopup: true
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
-                <img src="{{ '/assets/images/2024/10/admicom-logo-black.svg' | url }}" alt="Admicom Logo" style="max-width: 180px; max-height: 80px; object-fit: contain; filter: brightness(0) invert(1);">
+            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 32px;">
+                <img src="{{ '/assets/images/2024/10/admicom-logo-black.svg' | url }}" alt="Admicom Logo" style="max-width: 220px; max-height: 100px; object-fit: contain; filter: brightness(0) invert(1);">
             </div>
-            <div class="badge">Admicom koppeling</div>
             <h1>Power BI Dashboards voor Admicom</h1>
             <p class="subtitle">
                 Perfecte projectbeheersing met Admicom en Power BI. Volg planning, budget en voortgang van al je projecten in realtime dashboards.

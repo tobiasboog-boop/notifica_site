@@ -10,10 +10,9 @@ showContactPopup: true
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
-                <img src="{{ '/assets/images/2024/04/atrium-productlogo-srgb.png' | url }}" alt="Syntess Atrium Logo" style="max-width: 180px; max-height: 80px; object-fit: contain; filter: brightness(0) invert(1);">
+            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 32px;">
+                <img src="{{ '/assets/images/2024/04/atrium-productlogo-srgb.png' | url }}" alt="Syntess Atrium Logo" style="max-width: 220px; max-height: 100px; object-fit: contain; filter: brightness(0) invert(1);">
             </div>
-            <div class="badge">Syntess Atrium koppeling</div>
             <h1>Power BI Dashboards voor Syntess Atrium</h1>
             <p class="subtitle">
                 Haal meer uit je Syntess Atrium data met professionele Power BI dashboards. Binnen één dag inzicht in al je belangrijke KPI's.

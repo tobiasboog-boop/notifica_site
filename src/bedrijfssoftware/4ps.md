@@ -10,10 +10,9 @@ showContactPopup: true
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
-                <img src="{{ '/assets/images/2024/10/4ps.webp' | url }}" alt="4PS Logo" style="max-width: 180px; max-height: 80px; object-fit: contain; filter: brightness(0) invert(1);">
+            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 32px;">
+                <img src="{{ '/assets/images/2024/10/4ps.webp' | url }}" alt="4PS Logo" style="max-width: 220px; max-height: 100px; object-fit: contain; filter: brightness(0) invert(1);">
             </div>
-            <div class="badge">4PS koppeling</div>
             <h1>Power BI Dashboards voor 4PS</h1>
             <p class="subtitle">
                 Krijg controle over grote bouwprojecten met real-time dashboards gekoppeld aan 4PS. Van projectsturing tot onderhanden werk: alles op één scherm.

@@ -10,10 +10,9 @@ showContactPopup: true
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
-                <img src="{{ '/assets/images/2025/04/Acto-logo-22x.png' | url }}" alt="ACTO Logo" style="max-width: 180px; max-height: 80px; object-fit: contain; filter: brightness(0) invert(1);">
+            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 32px;">
+                <img src="{{ '/assets/images/2025/04/Acto-logo-22x.png' | url }}" alt="ACTO Logo" style="max-width: 220px; max-height: 100px; object-fit: contain; filter: brightness(0) invert(1);">
             </div>
-            <div class="badge">ACTO koppeling</div>
             <h1>Power BI Dashboards voor ACTO</h1>
             <p class="subtitle">
                 Maximale efficiency voor installatiebedrijven. Koppel ACTO aan Power BI en optimaliseer urenregistratie, materiaalverbruik en monteurplanning.

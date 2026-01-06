@@ -10,10 +10,9 @@ showContactPopup: true
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
-                <img src="{{ '/assets/images/2025/04/enk_logo_groen-1.png' | url }}" alt="ENK Software Logo" style="max-width: 180px; max-height: 80px; object-fit: contain; filter: brightness(0) invert(1);">
+            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 32px;">
+                <img src="{{ '/assets/images/2025/04/enk_logo_groen-1.png' | url }}" alt="ENK Software Logo" style="max-width: 220px; max-height: 100px; object-fit: contain; filter: brightness(0) invert(1);">
             </div>
-            <div class="badge">ENK Software koppeling</div>
             <h1>Power BI Dashboards voor ENK Software</h1>
             <p class="subtitle">
                 Verbeter je service & onderhoud operatie met ENK Software en Power BI. Van storingsmeldingen tot preventief onderhoud: alles in één overzicht.
