@@ -1722,6 +1722,64 @@ details.faq-accordion[open] summary.faq-question:after {
   border-top: 1px solid #f0f0f0;
 }
 
+/* FAQ Popup Container */
+#faq-popup.popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#faq-popup.popup-overlay.active {
+  display: flex;
+}
+
+#faq-popup .popup-container {
+  position: relative;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* FAQ Popup Close Button */
+.faq-popup-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #666;
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1;
+  transition: color 0.2s ease;
+  z-index: 10;
+}
+
+.faq-popup-close:hover {
+  color: #16136f;
+}
+
+/* Hidden SEO Content - Screen reader only */
+.hidden-seo-content {
+  position: absolute !important;
+  left: -10000px !important;
+  top: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  white-space: nowrap !important;
+  clip-path: inset(50%) !important;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .faq-header-section {

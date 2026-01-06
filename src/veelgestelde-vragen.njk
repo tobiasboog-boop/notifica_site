@@ -226,9 +226,9 @@ bodyClass: faq-page
 </section>
 
 {# Lightbox Modals #}
-<div class="popup-overlay" id="faq-popup">
+<div class="popup-overlay" id="faq-popup" style="display: none;">
   <div class="popup-container" style="max-width: 900px; max-height: 85vh; overflow-y: auto;">
-    <button class="popup-close" aria-label="Sluiten">&times;</button>
+    <button class="faq-popup-close" aria-label="Sluiten">&times;</button>
     <div class="lightbox-faq-container" id="faq-content"></div>
   </div>
 </div>
@@ -423,59 +423,98 @@ const faqData = {
   }
 };
 
-// Popup functionaliteit
-const popup = document.getElementById('faq-popup');
-const faqContent = document.getElementById('faq-content');
+// FAQ Popup functionaliteit - wacht tot DOM klaar is
+document.addEventListener('DOMContentLoaded', function() {
+  const faqPopup = document.getElementById('faq-popup');
+  const faqContent = document.getElementById('faq-content');
 
-// Open popup bij klik op tegel
-document.querySelectorAll('.faq-overlay-link').forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const category = link.dataset.faqCategory;
-    openFaqPopup(category);
-  });
-});
-
-// Sluit popup
-document.querySelector('.popup-close').addEventListener('click', () => {
-  popup.classList.remove('active');
-});
-
-popup.addEventListener('click', (e) => {
-  if (e.target === popup) {
-    popup.classList.remove('active');
+  if (!faqPopup || !faqContent) {
+    console.error('FAQ popup elements not found');
+    return;
   }
-});
 
-// Open popup functie
-function openFaqPopup(category) {
-  const data = faqData[category];
-  if (!data) return;
+  console.log('FAQ popup initialized');
 
-  let html = `<h2 class="lightbox-faq-title">${data.title}</h2>`;
-
-  data.questions.forEach((item, index) => {
-    const isFirstSupport = category === 'support' && index === 0;
-    html += `
-      <details class="faq-accordion"${isFirstSupport ? ' open' : ''}>
-        <summary class="faq-question">${item.q}</summary>
-        <div class="faq-answer">
-          ${item.a}
-        </div>
-      </details>
-    `;
+  // Open FAQ popup bij klik op tegel
+  document.querySelectorAll('.faq-overlay-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      console.log('FAQ tile clicked:', link.dataset.faqCategory);
+      const category = link.dataset.faqCategory;
+      openFaqPopup(category);
+    });
   });
 
-  faqContent.innerHTML = html;
-  popup.classList.add('active');
-
-  // Laad Pipedrive script als nodig
-  if (category === 'support') {
-    setTimeout(() => {
-      const script = document.createElement('script');
-      script.src = 'https://webforms.pipedrive.com/f/loader';
-      document.body.appendChild(script);
-    }, 100);
+  // Sluit FAQ popup
+  const faqCloseBtn = document.querySelector('.faq-popup-close');
+  if (faqCloseBtn) {
+    faqCloseBtn.addEventListener('click', () => {
+      console.log('Close button clicked');
+      closeFaqPopup();
+    });
   }
-}
+
+  // Klik buiten popup om te sluiten
+  faqPopup.addEventListener('click', (e) => {
+    if (e.target === faqPopup) {
+      console.log('Clicked outside popup');
+      closeFaqPopup();
+    }
+  });
+
+  // Escape key om te sluiten
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && faqPopup.style.display === 'flex') {
+      console.log('Escape key pressed');
+      closeFaqPopup();
+    }
+  });
+
+  // Open FAQ popup functie
+  function openFaqPopup(category) {
+    console.log('Opening FAQ popup for category:', category);
+    const data = faqData[category];
+    if (!data) {
+      console.error('No data found for category:', category);
+      return;
+    }
+
+    let html = `<h2 class="lightbox-faq-title">${data.title}</h2>`;
+
+    data.questions.forEach((item, index) => {
+      const isFirstSupport = category === 'support' && index === 0;
+      html += `
+        <details class="faq-accordion"${isFirstSupport ? ' open' : ''}>
+          <summary class="faq-question">${item.q}</summary>
+          <div class="faq-answer">
+            ${item.a}
+          </div>
+        </details>
+      `;
+    });
+
+    faqContent.innerHTML = html;
+    faqPopup.style.display = 'flex';
+    faqPopup.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    console.log('Popup should now be visible');
+
+    // Laad Pipedrive script als nodig
+    if (category === 'support') {
+      setTimeout(() => {
+        const script = document.createElement('script');
+        script.src = 'https://webforms.pipedrive.com/f/loader';
+        document.body.appendChild(script);
+      }, 100);
+    }
+  }
+
+  // Sluit FAQ popup functie
+  function closeFaqPopup() {
+    console.log('Closing FAQ popup');
+    faqPopup.style.display = 'none';
+    faqPopup.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+});
 </script>
