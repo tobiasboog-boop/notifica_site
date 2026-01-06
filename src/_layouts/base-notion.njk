@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="/assets/css/notifica-notion.css">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/assets/images/Notifica_Favicon.png">
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
 
   <!-- Open Graph -->
   <meta property="og:title" content="{{ title or 'Notifica | Power BI Dashboards voor Installatiebedrijven' }}">
@@ -38,6 +38,10 @@
   </main>
 
   {% include "footer-notion.njk" %}
+
+  {% if showContactPopup %}
+  {% include "contact-popup.njk" %}
+  {% endif %}
 
   {% block scripts %}{% endblock %}
 </body>

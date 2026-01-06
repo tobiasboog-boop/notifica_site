@@ -4,17 +4,11 @@ description: "Ontdek hoe je binnen twee weken live gaat met Power BI dashboards,
 featuredImage: "/assets/images/dashboard-productiviteit-300x130.png"
 ---
 
-{% video url="https://player.vimeo.com/video/1077512459" %}
 
-{% video url="https://player.vimeo.com/video/1077512459" %}
 
-{% video url="https://player.vimeo.com/video/1077512459" %}
 
-{% video url="https://player.vimeo.com/video/1077512459" %}
 
-{% video url="https://player.vimeo.com/video/1077512459" %}
 
-{% video url="https://player.vimeo.com/video/1077512459" %}
 
 # Razendsnel live met Power BI: binnen 2 weken, eenvoudig, snel, flexibel & betaalbaar
 
@@ -62,9 +56,7 @@ We moedigen je aan om eigen dashboards te bouwen. Daarom bieden we gerichte trai
 - Training op maat – sessies gericht op specifieke systemen zoals Syntess ERP en Exact.
 - Documentatie en support – toegang tot handleidingen, videolessen en onze support-community.
 
-{% video url="https://player.vimeo.com/video/1077512459" %}
 
-{% video url="https://player.vimeo.com/video/1077512459" %}
 
 Bekijk in deze video hoe onze Power BI-oplossing werkt en ontdek de kracht van zelf rapportages maken.
 

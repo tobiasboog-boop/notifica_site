@@ -4,17 +4,11 @@ description: "Ontdek hoe je de datakwaliteit in je ERP-systeem verbetert voor be
 featuredImage: "/assets/images/generieke-behoefte-dashboard-300x147.png"
 ---
 
-{% video url="https://player.vimeo.com/video/1077512399" %}
 
-{% video url="https://player.vimeo.com/video/1077512399" %}
 
-{% video url="https://player.vimeo.com/video/1077512399" %}
 
-{% video url="https://player.vimeo.com/video/1077512399" %}
 
-{% video url="https://player.vimeo.com/video/1077512399" %}
 
-{% video url="https://player.vimeo.com/video/1077512399" %}
 
 # Vastlegging: 5 onmisbare tips voor verbeteren van de datakwaliteit van je bedrijfssoftware
 
@@ -50,9 +44,7 @@ Bij migratie van een oud systeem naar een modern ERP zoals Acto, 4PS, BouwInfosy
 
 Gebruik Power BI-queries om lege of onjuiste velden in je nieuwe ERP te identificeren. Dit biedt helder inzicht in welke gegevens nog ontbeert en welke processen je moet aanpassen. Na de analyse kun je je migratiescript zo inrichten dat lege records eerst worden aangevuld.
 
-{% video url="https://player.vimeo.com/video/1077512399" %}
 
-{% video url="https://player.vimeo.com/video/1077512399" %}
 
 Bekijk deze uitlegvideo over migratie en datakwaliteit in moderne ERP-pakketten en Power BI.
 

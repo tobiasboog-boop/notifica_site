@@ -21,7 +21,7 @@ Ontdek hoe de combinatie van Power BI en jouw ERP-oplossing (zoals Syntess, AFAS
 
 *Planning & onderhoud visualisatie voor de installatiesector*
 
-## Waarom datagedreven dashboards? {#waarom}
+## Waarom datagedreven dashboards? {% raw %}{#{% endraw %}waarom}
 
 Projectsturing in de installatiebranche draait om inzicht: uren, materiaal, voortgang en budget. Toch wordt nog te vaak gestuurd op gevoel of losse rapportages. Met **datagedreven dashboards** wordt stuurinformatie uit jouw ERP vertaald naar visuele inzichten. Eén klik, en je ziet realtime waar je staat.
 
@@ -29,7 +29,7 @@ In de praktijk betekent dit dat je direct ziet welke projecten risico lopen of j
 
 > Sturen op feiten, niet op aannames. Dat levert sneller resultaat en minder fouten op.
 
-## Wat bieden Power BI & jouw ERP samen? {#powerbi-erp}
+## Wat bieden Power BI & jouw ERP samen? {% raw %}{#{% endraw %}powerbi-erp}
 
 Of je nu werkt met Syntess, AFAS, of een andere ERP-oplossing: de echte kracht zit in de combinatie met [Power BI](https://powerbi.microsoft.com/nl-nl/).
 
@@ -42,7 +42,7 @@ Denk aan snelle antwoorden op vragen als: Lopen projecten uit? Waar laten we mar
 
 *Uitvoering van projecten in de installatiesector duidelijk in beeld*
 
-## Wat levert het concreet op? {#resultaten}
+## Wat levert het concreet op? {% raw %}{#{% endraw %}resultaten}
 
 - **Snel signaleren** van afwijkingen en risico's
 - **Snellere rapportage** – nooit meer zoeken in Excels
@@ -52,7 +52,7 @@ Denk aan snelle antwoorden op vragen als: Lopen projecten uit? Waar laten we mar
 
 Bedrijven die Notifica inzetten, zien **tot 20% minder projectoverschrijdingen** en sneller inzicht in marges. Dat vertaalt zich in lagere kosten, hogere winst en een betere klantrelatie.
 
-## Projectsturing: stappen naar succes {#stappenplan}
+## Projectsturing: stappen naar succes {% raw %}{#{% endraw %}stappenplan}
 
 ### 1. Begin bij het einddoel
 
@@ -72,7 +72,7 @@ Zet klein op, betrek je team en blijf verbeteren op basis van feedback. Begin me
 
 Kies grafieken en kleuren die passen bij je bedrijf. Hou het helder – geen datamoeras. Denk ook aan de leesbaarheid op tablets en smartphones.
 
-## Video: Van Data naar Sturing {#video}
+## Video: Van Data naar Sturing {% raw %}{#{% endraw %}video}
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 30px 0;">
   <iframe src="https://player.vimeo.com/video/1077512426" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
@@ -80,7 +80,7 @@ Kies grafieken en kleuren die passen bij je bedrijf. Hou het helder – geen dat
 
 *Bekijk: Van Data naar Sturing… op de Notifica Videohub*
 
-## Toekomst & afsluiting {#toekomst}
+## Toekomst & afsluiting {% raw %}{#{% endraw %}toekomst}
 
 Datagedreven werken wordt de standaard. Met Power BI en een slim ERP geef je je installatiebedrijf een voorsprong. Niet alleen grote spelers, maar juist mkb'ers kunnen zo slimmer sturen, verbeteren en groeien.
 

@@ -4,17 +4,11 @@ description: "Leer hoe onderhanden werk (OHW) direct inzicht geeft in verborgen 
 featuredImage: "/assets/images/OHW.png"
 ---
 
-{% video url="https://player.vimeo.com/video/1076643182" %}
 
-{% video url="https://player.vimeo.com/video/1076643182" %}
 
-{% video url="https://player.vimeo.com/video/1076643182" %}
 
-{% video url="https://player.vimeo.com/video/1076643182" %}
 
-{% video url="https://player.vimeo.com/video/1076643182" %}
 
-{% video url="https://player.vimeo.com/video/1076643182" %}
 
 # 5 Tips voor Onderhanden Werk: Efficiënt je cashflow en projecten besturen
 
@@ -92,9 +86,7 @@ Te factureren omzet minus gefactureerde termijnen = saldo onderhanden werk. Met 
 
 Door OWH-maatregelen volgt de winstneming de voortgang, niet de factuurdatum. Dit houdt marges stabiel en geeft betrouwbare projectsturing.
 
-{% video url="https://player.vimeo.com/video/1076643182" %}
 
-{% video url="https://player.vimeo.com/video/1076643182" %}
 
 Bekijk hoe je met realtime data ervoor zorgt dat je prognoses altijd actueel en betrouwbaar zijn.
 

@@ -4,17 +4,11 @@ description: "Ontdek hoe uitbesteden van rapportage kleine bedrijven helpt koste
 featuredImage: "/assets/images/visuals-bij-blogs.jpg"
 ---
 
-{% video url="https://player.vimeo.com/video/1077512459" %}
 
-{% video url="https://player.vimeo.com/video/1077512459" %}
 
-{% video url="https://player.vimeo.com/video/1077512459" %}
 
-{% video url="https://player.vimeo.com/video/1077512459" %}
 
-{% video url="https://player.vimeo.com/video/1077512459" %}
 
-{% video url="https://player.vimeo.com/video/1077512459" %}
 
 # Uitbesteden rapportages mkb: goedkoper, sneller en beter
 
@@ -35,9 +29,7 @@ Initiële aanschaf van hardware en licenties is slechts het begin. Er komen teru
 
 Een toegewijd team van data-specialisten kent de valkuilen en best practices binnen diverse sectoren. Ze helpen bij het bepalen van relevante KPI’s en vertalen ruwe data naar inzichtelijke dashboards. Zo vermijd je duur leergeld en profiteer je meteen van bewezen methoden. Door gebruik te maken van betrouwbare bronnen zoals Microsoft Power BI, heb je altijd de beste tools binnen handbereik.
 
-{% video url="https://player.vimeo.com/video/1077512459" %}
 
-{% video url="https://player.vimeo.com/video/1077512459" %}
 
 Bekijk hoe een externe oplossing voor uitbesteden rapportages mkb jouw organisatie vooruit kan helpen.
 

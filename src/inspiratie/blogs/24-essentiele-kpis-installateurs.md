@@ -27,7 +27,7 @@ Hieronder vind je de 24 KPI's die wij adviseren voor installatiebedrijven, verde
 - [6. Sales](#sales)
 - [Aan de slag](#aan-de-slag)
 
-## 1. KPI's dashboard service & onderhoud – uitvoering {#service-uitvoering}
+## 1. KPI's dashboard service & onderhoud – uitvoering {% raw %}{#{% endraw %}service-uitvoering}
 
 Efficiëntie en kwaliteit in het veld liggen hier centraal. Deze KPI's meten hoe soepel storingen worden opgepakt en opgelost, cruciaal voor klanttevredenheid én kostenbeheersing. Zorg dat deze KPI's prominent in je dashboard zichtbaar zijn, zodat monteurs en planners direct weten welke storingen prioriteit hebben.
 
@@ -36,7 +36,7 @@ Efficiëntie en kwaliteit in het veld liggen hier centraal. Deze KPI's meten hoe
 - **Storingsgraad:** Aantal storingen per installatie of per 1.000 draaiuren. Helpt betrouwbaarheid te monitoren en voorraden te optimaliseren.
 - **Hersteltijd (MTTR):** Gemiddelde tijd om een storing definitief op te lossen. Een kortere MTTR beperkt stilstand en planningsafwijkingen.
 
-## 2. KPI's dashboard service & onderhoud – planning & rendement {#planning-rendement}
+## 2. KPI's dashboard service & onderhoud – planning & rendement {% raw %}{#{% endraw %}planning-rendement}
 
 Richt zich op werkvoorraad en marge. Deze KPI's helpen je voorkomen dat werkbonnen zich opstapelen en kosten onnodig oplopen. Zorg dat je real-time inzicht hebt in de financiële status per werkorder.
 
@@ -44,7 +44,7 @@ Richt zich op werkvoorraad en marge. Deze KPI's helpen je voorkomen dat werkbonn
 - **Rendement onderhoudscontracten:** Opbrengst per contractcategorie versus gemaakte kosten. Brengt verliesgevende contracten snel aan het licht.
 - **Gepland onderhoud (werkbonnen per dag):** Dagelijkse werkdruk: signaleert over- of onderbezetting, met risico op burn-out of omzetderving.
 
-## 3. KPI's dashboard finance & onderhanden werk (OHW) {#finance-ohw}
+## 3. KPI's dashboard finance & onderhanden werk (OHW) {% raw %}{#{% endraw %}finance-ohw}
 
 Financiële stuurinformatie gecombineerd met real-time projectstatus. Dit onderdeel van je dashboard is onmisbaar om kasstromen, marges en projectvoortgang nauwlettend te bewaken.
 
@@ -53,7 +53,7 @@ Financiële stuurinformatie gecombineerd met real-time projectstatus. Dit onderd
 - **Onderhanden werk (OHW):** Waarde van nog lopende projecten op voortgangsfacturatie. Cruciaal voor marge- en cashflow-prognoses én projectbewaking.
 - **Kostprijs per uur:** Totale (directe + indirecte) kosten gedeeld door gemaakte uren; basis voor realistische uurtarieven.
 
-## 4. KPI's dashboard HR & operations {#hr-operations}
+## 4. KPI's dashboard HR & operations {% raw %}{#{% endraw %}hr-operations}
 
 Het geweten van je organisatie, met focus op capaciteit, skills en kosten. Door deze KPI's in je dashboard op te nemen, houd je de menskant scherp en voorkom je onvoorziene kosten door personeelsproblemen.
 
@@ -62,7 +62,7 @@ Het geweten van je organisatie, met focus op capaciteit, skills en kosten. Door 
 - **Opleidingsuren %:** Aandeel uren besteed aan training en certificering; investering in kennisbehoud.
 - **Verloop (FTE):** Jaarlijks vertrek in verhouding tot totaal; drukt wervingskosten en kennisverlies uit.
 
-## 5. KPI's dashboard projecten {#projecten}
+## 5. KPI's dashboard projecten {% raw %}{#{% endraw %}projecten}
 
 Voor bedrijven met grote, langlopende projecten zijn deze KPI's onmisbaar om tijdig bij te sturen en budgetoverschrijdingen tijdig te signaleren. Je dashboard geeft direct zicht op de voortgang van elk project.
 
@@ -70,7 +70,7 @@ Voor bedrijven met grote, langlopende projecten zijn deze KPI's onmisbaar om tij
 - **Toegevoegde waarde per uur:** Gemiddelde marge per besteed uur; benchmark vaak € 30–€ 50.
 - **Portefeuille- & resource-management:** Matcht projectpijplijn met personeelsbeschikbaarheid om toekomstige capaciteit te plannen.
 
-## 6. KPI's dashboard sales {#sales}
+## 6. KPI's dashboard sales {% raw %}{#{% endraw %}sales}
 
 Richtinggevende KPI's om de commerciële funnel optimaal te benutten en groeikansen snel te identificeren. Met deze KPI's ziet het salesteam direct welke leads en offertes de meeste aandacht vragen.
 
@@ -78,7 +78,7 @@ Richtinggevende KPI's om de commerciële funnel optimaal te benutten en groeikan
 - **Orderintake (€):** Totaal binnengehaalde opdrachten in een periode; toetsing aan omzetforecast.
 - **Aantal leads:** Nieuwe potentiële klanten; vroeg-waarschuwingssysteem voor aanstaande omzet.
 
-## Aan de slag: focus, diepgang en automatisering {#aan-de-slag}
+## Aan de slag: focus, diepgang en automatisering {% raw %}{#{% endraw %}aan-de-slag}
 
 1. **Beperk tot drie kern-KPI's per thema:** Houd je dashboard overzichtelijk en relevant. Een te vol dashboard leidt tot informatie-overload.
 2. **Diepgang met drill-through:** Koppel elke KPI-kaart in je dashboard aan detailrapportages en onderliggende dataflows in Power BI.

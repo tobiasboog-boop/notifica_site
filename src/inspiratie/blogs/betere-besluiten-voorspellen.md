@@ -15,7 +15,7 @@ Met **voorspellen** maak je vandaag nog het verschil: verhoog je winst, verlaag 
 - [Resultaten](#resultaten)
 - [Start Vandaag](#start)
 
-## Waarom voorspellen in Power BI jouw spel verandert {#waarom}
+## Waarom voorspellen in Power BI jouw spel verandert {% raw %}{#{% endraw %}waarom}
 
 In een wereld waar elke seconde telt, is vooruitkijken de sleutel. **Forecasting** transformeert je data tot een krachtig stuurinstrument waarmee je elke dag de koers bijstelt in plaats van achter je wagen te hollen. Door een proactieve blik combineer je historische inzichten met nieuwe kansen en neem je sneller beslissingen voor een betere toekomst.
 
@@ -32,7 +32,7 @@ Dankzij deze slimme combinatie van data en AI creëer je een vliegwiel van verbe
 
 *Portefeuille-management: overzicht van toekomstige projecten in de komende maanden*
 
-## De kracht van meervoudige toekomsten {#kracht}
+## De kracht van meervoudige toekomsten {% raw %}{#{% endraw %}kracht}
 
 Traditionele dashboards laten je alleen achterom kijken. Met meervoudige perspectieven in Microsofts software ontwijk je verrassingen én benut je kansen optimaal. Gebruik "wat-als"-scenario's om alle wendbare paden te schetsen en sneller keuzes te maken voor morgen.
 
@@ -45,7 +45,7 @@ Deze flexibiliteit stelt je in staat om snel te schakelen wanneer de markt veran
 
 > "Dankzij deze manier van werken hebben we piekmomenten niet alleen overleefd, maar actief uitgebuit." – *Projectmanager bij onze klant*
 
-## Praktijkcase: Notifica's geïntegreerde scenario-model {#praktijk}
+## Praktijkcase: Notifica's geïntegreerde scenario-model {% raw %}{#{% endraw %}praktijk}
 
 Onze techniek voor **voorspellen** integreert probleemloos met elk ERP-systeem. Binnen enkele minuten zie je realtime inzichten en kun je moeiteloos vooruitblikken:
 
@@ -56,7 +56,7 @@ Onze techniek voor **voorspellen** integreert probleemloos met elk ERP-systeem. 
 
 **De implementatie is zo gestroomlijnd dat je binnen een week concrete resultaten ziet en tastbare verbeteringen doorvoert in je dagelijkse operatie.**
 
-## Resultaten die je direct voelt {#resultaten}
+## Resultaten die je direct voelt {% raw %}{#{% endraw %}resultaten}
 
 Klanten die statische rapporten achter zich lieten en overstapten op onze geavanceerde methodiek rapporteren:
 
@@ -65,7 +65,7 @@ Klanten die statische rapporten achter zich lieten en overstapten op onze geavan
 - **100% realtime inzicht** – één betrouwbare bron van waarheid, altijd up-to-date, voor een betere toekomst
 - **Snellere besluitvorming:** duidelijke data geeft direct vertrouwen bij stakeholders, met kortere cyclus van analyse tot actie
 
-## Start vandaag nog met onstuitbaar proactief sturen {#start}
+## Start vandaag nog met onstuitbaar proactief sturen {% raw %}{#{% endraw %}start}
 
 Klaar om definitief afscheid te nemen van brandjes blussen? Bekijk onze videoguides en ontdek hoe eenvoudig dit proces in Power BI is:
 

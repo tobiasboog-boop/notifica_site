@@ -4,17 +4,11 @@ description: "Hoe IoT-integratie, realtime data-analyse en asset management stra
 featuredImage: "/assets/images/dashboard-kengetallen-300x115.png"
 ---
 
-{% video url="https://player.vimeo.com/video/1078314890" %}
 
-{% video url="https://player.vimeo.com/video/1078314890" %}
 
-{% video url="https://player.vimeo.com/video/1078314890" %}
 
-{% video url="https://player.vimeo.com/video/1078314890" %}
 
-{% video url="https://player.vimeo.com/video/1078314890" %}
 
-{% video url="https://player.vimeo.com/video/1078314890" %}
 
 # Predictive maintenance: 5 krachtige toepassingen van data als strategisch middel
 
@@ -42,9 +36,7 @@ Digitale transformatie, ook wel digitalisering genoemd, betreft het omzetten van
 
 Met realtime data kunnen managers direct zien wanneer apparatuur dreigt uit te vallen. Een toonaangevend installatiebedrijf implementeerde een platform waarin data van meerdere projecten wordt verzameld en gevisualiseerd. Hierdoor konden technici storingen voorspellen en tijdig ingrijpen, wat resulteerde in 25% minder uitvaluren en betere planning van onderhoudsteams.
 
-{% video url="https://player.vimeo.com/video/1078314890" %}
 
-{% video url="https://player.vimeo.com/video/1078314890" %}
 
 Uitleg over de rol van realtime data in digitale transformatie (Vimeo).
 

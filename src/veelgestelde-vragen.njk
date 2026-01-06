@@ -2,6 +2,7 @@
 layout: base-notion.njk
 title: Veelgestelde vragen
 description: Antwoorden op de meest gestelde vragen over Notifica Power BI dashboards voor installatiebedrijven. Van werkwijze tot koppelingen en kosten.
+showContactPopup: true
 ---
 
 <!-- Hero -->
@@ -23,7 +24,7 @@ description: Antwoorden op de meest gestelde vragen over Notifica Power BI dashb
 <section class="section section-alt">
     <div class="container">
         <div class="features-grid">
-            <div class="feature-card">
+            <div class="feature-card faq-tile" data-faq-category="werkwijze">
                 <div class="feature-icon">
                     <svg fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
@@ -31,9 +32,10 @@ description: Antwoorden op de meest gestelde vragen over Notifica Power BI dashb
                 </div>
                 <h3>Werkwijze & Starten</h3>
                 <p>Wat maakt ons anders? Hoe ziet het implementatietraject eruit en hoe snel kan ik live zijn?</p>
+                <span class="faq-link">Bekijk 5 vragen & antwoorden ›</span>
             </div>
 
-            <div class="feature-card">
+            <div class="feature-card faq-tile" data-faq-category="erp">
                 <div class="feature-icon">
                     <svg fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
@@ -41,9 +43,10 @@ description: Antwoorden op de meest gestelde vragen over Notifica Power BI dashb
                 </div>
                 <h3>ERP & Koppelingen</h3>
                 <p>Werkt het met Syntess, Exact of 4PS? En wat gebeurt er met data als ik wissel?</p>
+                <span class="faq-link">Bekijk 3 vragen & antwoorden ›</span>
             </div>
 
-            <div class="feature-card">
+            <div class="feature-card faq-tile" data-faq-category="dashboards">
                 <div class="feature-icon">
                     <svg fill="currentColor" viewBox="0 0 20 20">
                         <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
@@ -51,29 +54,10 @@ description: Antwoorden op de meest gestelde vragen over Notifica Power BI dashb
                 </div>
                 <h3>Dashboards & Data</h3>
                 <p>Krijg ik realtime data? Kan ik de dashboards aanpassen?</p>
+                <span class="faq-link">Bekijk 7 vragen & antwoorden ›</span>
             </div>
 
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-                    </svg>
-                </div>
-                <h3>Kosten & Abonnementen</h3>
-                <p>Wat kost een abonnement? Zitten er verborgen kosten in?</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
-                    </svg>
-                </div>
-                <h3>Support & Training</h3>
-                <p>Wat gebeurt er bij vragen? Krijg ik training?</p>
-            </div>
-
-            <div class="feature-card">
+            <div class="feature-card faq-tile" data-faq-category="veiligheid">
                 <div class="feature-icon">
                     <svg fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
@@ -81,79 +65,30 @@ description: Antwoorden op de meest gestelde vragen over Notifica Power BI dashb
                 </div>
                 <h3>Veiligheid & Privacy</h3>
                 <p>Hoe veilig is mijn data? Is het AVG-compliant?</p>
+                <span class="faq-link">Bekijk 3 vragen & antwoorden ›</span>
             </div>
-        </div>
-    </div>
-</section>
 
-<!-- FAQ Werkwijze -->
-<section class="section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Werkwijze & Starten</h2>
-        </div>
+            <div class="feature-card faq-tile" data-faq-category="support">
+                <div class="feature-icon">
+                    <svg fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <h3>Support & Training</h3>
+                <p>Wat gebeurt er bij vragen? Krijg ik training?</p>
+                <span class="faq-link">Bekijk 5 vragen & antwoorden ›</span>
+            </div>
 
-        <div style="max-width: 800px; margin: 0 auto;">
-            <details class="feature-card" style="margin-bottom: 16px; cursor: pointer;">
-                <summary style="font-weight: 600; font-size: 18px; padding: 8px 0; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    <span>Hoe snel kan ik live zijn?</span>
-                    <span>+</span>
-                </summary>
-                <p style="color: var(--text-secondary); margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
-                    In de meeste gevallen ben je binnen 1 dag live. We koppelen je ERP-systeem, importeren de data en je dashboards staan direct klaar. De doorlooptijd hangt af van de beschikbaarheid van je IT-afdeling voor de koppeling.
-                </p>
-            </details>
-
-            <details class="feature-card" style="margin-bottom: 16px; cursor: pointer;">
-                <summary style="font-weight: 600; font-size: 18px; padding: 8px 0; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    <span>Wat maakt Notifica anders dan andere BI-partijen?</span>
-                    <span>+</span>
-                </summary>
-                <p style="color: var(--text-secondary); margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
-                    Wij zijn gespecialiseerd in installatiebedrijven. Onze dashboards zijn afgestemd op de specifieke KPI's die belangrijk zijn voor jouw sector, van OHW tot serviceprestaties. Je krijgt geen generieke oplossing, maar best-practices uit de installatiebranche.
-                </p>
-            </details>
-
-            <details class="feature-card" style="margin-bottom: 16px; cursor: pointer;">
-                <summary style="font-weight: 600; font-size: 18px; padding: 8px 0; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    <span>Moet ik zelf iets installeren?</span>
-                    <span>+</span>
-                </summary>
-                <p style="color: var(--text-secondary); margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
-                    Nee, wij regelen alles. Van de datakoppeling tot het configureren van de dashboards. Jij hoeft alleen toegang te geven tot je ERP-systeem en daarna kun je direct aan de slag.
-                </p>
-            </details>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ ERP -->
-<section class="section section-alt">
-    <div class="container">
-        <div class="section-header">
-            <h2>ERP & Koppelingen</h2>
-        </div>
-
-        <div style="max-width: 800px; margin: 0 auto;">
-            <details class="feature-card" style="margin-bottom: 16px; cursor: pointer;">
-                <summary style="font-weight: 600; font-size: 18px; padding: 8px 0; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    <span>Met welke ERP-systemen werkt Notifica?</span>
-                    <span>+</span>
-                </summary>
-                <p style="color: var(--text-secondary); margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
-                    We hebben standaard koppelingen met Syntess, Admicom, Acto, ENK, 4PS en BouwInfosys. Andere systemen zijn vaak ook mogelijk via API of databasekoppeling.
-                </p>
-            </details>
-
-            <details class="feature-card" style="margin-bottom: 16px; cursor: pointer;">
-                <summary style="font-weight: 600; font-size: 18px; padding: 8px 0; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    <span>Wat gebeurt er als ik van ERP-systeem wissel?</span>
-                    <span>+</span>
-                </summary>
-                <p style="color: var(--text-secondary); margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
-                    Geen probleem. We koppelen het nieuwe systeem en migreren je historische data zodat je geen breuk in je rapportages krijgt.
-                </p>
-            </details>
+            <div class="feature-card faq-tile" data-faq-category="toekomst">
+                <div class="feature-icon">
+                    <svg fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <h3>Kosten & Abonnementen</h3>
+                <p>Wat kost een abonnement? Zitten er verborgen kosten in?</p>
+                <span class="faq-link">Bekijk 3 vragen & antwoorden ›</span>
+            </div>
         </div>
     </div>
 </section>
@@ -169,33 +104,214 @@ description: Antwoorden op de meest gestelde vragen over Notifica Power BI dashb
     </div>
 </section>
 
-<!-- Contact -->
-<section id="contact" class="section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Neem contact met ons op</h2>
-            <p class="section-subtitle">Vul onderstaand formulier in en we nemen binnen 24 uur contact met je op.</p>
-        </div>
-        <div class="form-container">
-            <form>
-                <div class="form-group">
-                    <label for="name">Naam</label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">E-mailadres</label>
-                    <input type="email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Telefoonnummer</label>
-                    <input type="tel" id="phone">
-                </div>
-                <div class="form-group">
-                    <label for="message">Bericht</label>
-                    <textarea id="message" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-large" style="width: 100%;">Verstuur bericht</button>
-            </form>
-        </div>
+<!-- FAQ Popup -->
+<div id="faqPopup" class="contact-popup">
+    <div class="contact-popup-content" style="max-width: 800px;">
+        <button class="contact-popup-close" onclick="closeFaqPopup()">&times;</button>
+        <div id="faqContent"></div>
     </div>
-</section>
+</div>
+
+<script>
+// FAQ Data
+const faqData = {
+  werkwijze: {
+    title: "Werkwijze & Starten",
+    questions: [
+      {
+        q: "Wat maakt jullie anders dan concurrenten?",
+        a: "Notifica biedt geen maatwerk, maar werkt met bewezen standaard dashboards en datamodellen voor de installatiebranche. Daardoor zijn we snel live (vaak binnen 2 weken) en omdat we voor meer dan 60 klanten ontwikkelen blijft het betaalbaar."
+      },
+      {
+        q: "Voor wat voor type installateurs werkt Notifica?",
+        a: "Wij ondersteunen zowel kleine als grote installatiebedrijven, van 20 tot honderden medewerkers. Onze oplossingen zijn schaalbaar, praktisch en gericht op de dagelijkse praktijk van de installatiebranche."
+      },
+      {
+        q: "Wat heb ik nodig om te starten?",
+        a: "Je hebt alleen toegang tot je eigen ERP-systeem nodig. Wij regelen de koppeling, inrichting en het volledige onboardingproces. Je hebt geen specifieke IT-kennis nodig."
+      },
+      {
+        q: "Hoe ziet het implementatietraject eruit?",
+        a: "Na een korte intake koppelen we je bedrijfssoftware en richten we de dashboards in. Daarna kunnen we in 1 tot 3 dagen onze standaard rapporten verder op wens maken. Gemiddeld ben je binnen twee weken live."
+      },
+      {
+        q: "Biedt Notifica trainingen aan?",
+        a: "Ja, we verzorgen trainingen voor management en uitvoerders. Dit kan online, op locatie of via instructievideo's. We zorgen dat iedereen direct aan de slag kan."
+      }
+    ]
+  },
+  erp: {
+    title: "ERP & Koppelingen",
+    questions: [
+      {
+        q: "Met welke ERP-systemen koppelt Notifica?",
+        a: "Wij koppelen direct met o.a. Syntess Atrium, Exact Online, ACTO, Admicom, 4PS Construct, BouwInfosys en ENK. Staat je ERP er niet bij? Neem contact op."
+      },
+      {
+        q: "Kan ik koppelen met meerdere systemen tegelijk?",
+        a: "Ja, wij hebben ervaring met het koppelen van meerdere vestigingen of zelfs verschillende ERP-systemen binnen één groep. Je krijgt één centraal overzicht."
+      },
+      {
+        q: "Wat als ik overstap naar een ander ERP?",
+        a: "Geen probleem. Wij regelen de nieuwe koppeling en migreren je historie, zodat je trends en cijfers gewoon doorlopen zonder dataverlies."
+      }
+    ]
+  },
+  dashboards: {
+    title: "Dashboards & Data",
+    questions: [
+      {
+        q: "Welke dashboards krijg ik?",
+        a: "Een complete set inclusief: Projectresultaten, Uren & Productiviteit, Nacalculatie, Openstaande posten, Verkoop, Werkvoorraad en HR (verzuim/instroom)."
+      },
+      {
+        q: "Kan ik rapportages aanpassen?",
+        a: "Ja, je kunt standaardrapportages aanpassen. Ook kunnen wij maatwerk toevoegen als je specifieke wensen hebt (bijv. extra KPI's)."
+      },
+      {
+        q: "Hoe actueel zijn de gegevens?",
+        a: "Data wordt standaard dagelijks bijgewerkt. Sneller (bijv. elk uur) is mogelijk in overleg."
+      },
+      {
+        q: "Kan ik cijfers delen met collega's?",
+        a: "Ja, je bepaalt per gebruiker of afdeling wie welke dashboards mag zien via een rechtensysteem."
+      },
+      {
+        q: "Werkt het op mobiel?",
+        a: "Zeker. Alle dashboards zijn responsive en werken goed op tablets en smartphones. Handig voor onderweg of op de bouwplaats."
+      },
+      {
+        q: "Kan ik exporteren naar Excel?",
+        a: "Ja, data kan eenvoudig worden geëxporteerd naar Excel of PDF voor verdere analyse."
+      },
+      {
+        q: "Kunnen dashboards automatisch gemaild worden?",
+        a: "Ja, periodiek mailen kan. Maar beter is het om collega's toegang te geven zodat ze zelf actueel inzicht hebben."
+      }
+    ]
+  },
+  veiligheid: {
+    title: "Veiligheid & Privacy",
+    questions: [
+      {
+        q: "Is mijn data veilig?",
+        a: "Ja, wij werken volgens strenge beveiligingsnormen. Data wordt versleuteld opgeslagen binnen de EU en is alleen voor jou toegankelijk."
+      },
+      {
+        q: "Wat gebeurt er bij opzegging?",
+        a: "Je data blijft tot 30 dagen na afloop beschikbaar voor export. Daarna wordt alles veilig en onherroepelijk verwijderd."
+      },
+      {
+        q: "Helpt dit bij certificeringen?",
+        a: "Ja, met Notifica kun je eenvoudig rapportages delen voor audits of kwaliteitsborging, wat helpt bij het voldoen aan de informatieplicht."
+      }
+    ]
+  },
+  support: {
+    title: "Support & Training",
+    questions: [
+      {
+        q: "Hoe snel reageren jullie bij storingen?",
+        a: "Tijdens kantooruren reageren we meestal binnen enkele uren. Hoge prioriteit storingen pakken we direct op."
+      },
+      {
+        q: "Komen jullie ook op locatie?",
+        a: "Ja, indien gewenst komen we langs voor training, uitleg of MT-sessies."
+      },
+      {
+        q: "Kan ik input geven voor nieuwe functies?",
+        a: "Graag zelfs! Wij ontwikkelen onze standaard dashboards door op basis van feedback van onze klanten."
+      },
+      {
+        q: "Bieden jullie trainingen aan?",
+        a: "Ja, we verzorgen trainingen voor management en uitvoerders. Dit kan online, op locatie of via instructievideo's."
+      },
+      {
+        q: "Is er documentatie beschikbaar?",
+        a: "Ja, we bieden uitgebreide documentatie en instructievideo's voor alle functionaliteiten."
+      }
+    ]
+  },
+  toekomst: {
+    title: "Kosten & Abonnementen",
+    questions: [
+      {
+        q: "Wat kost Notifica?",
+        a: "De kosten hangen af van je bedrijfsgrootte en aantal gebruikers. Neem contact op voor een vrijblijvende prijsopgave."
+      },
+      {
+        q: "Kan ik maandelijks opzeggen?",
+        a: "Ja, je kunt maandelijks opzeggen. Wij binden klanten liever door kwaliteit dan door contracten."
+      },
+      {
+        q: "Geschikt voor meerdere BV's?",
+        a: "Ja, we bieden oplossingen voor groepen. Je krijgt een totaaloverzicht (geconsolideerd) én inzicht per los label."
+      }
+    ]
+  }
+};
+
+// Open FAQ popup
+function openFaqPopup(category) {
+    const data = faqData[category];
+    if (!data) return;
+
+    let html = `<h2 style="margin-bottom: 24px;">${data.title}</h2>`;
+
+    data.questions.forEach((item, index) => {
+        html += `
+            <details class="faq-accordion" style="margin-bottom: 12px; border: 1px solid var(--border); border-radius: 8px; padding: 20px; background: white;">
+                <summary style="font-weight: 600; font-size: 16px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    <span>${item.q}</span>
+                    <span class="faq-toggle" style="color: var(--blue); font-size: 20px;">+</span>
+                </summary>
+                <div style="color: var(--text-secondary); margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); line-height: 1.6;">
+                    ${item.a}
+                </div>
+            </details>
+        `;
+    });
+
+    document.getElementById('faqContent').innerHTML = html;
+    document.getElementById('faqPopup').classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    // Update toggle icons
+    document.querySelectorAll('.faq-accordion').forEach(accordion => {
+        accordion.addEventListener('toggle', function() {
+            const toggle = this.querySelector('.faq-toggle');
+            toggle.textContent = this.open ? '−' : '+';
+        });
+    });
+}
+
+// Close FAQ popup
+function closeFaqPopup() {
+    document.getElementById('faqPopup').classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Initialize FAQ tiles
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.faq-tile').forEach(tile => {
+        tile.addEventListener('click', function() {
+            const category = this.dataset.faqCategory;
+            openFaqPopup(category);
+        });
+    });
+
+    // Close on outside click
+    document.getElementById('faqPopup').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeFaqPopup();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeFaqPopup();
+        }
+    });
+});
+</script>

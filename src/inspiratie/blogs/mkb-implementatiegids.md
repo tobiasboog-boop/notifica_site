@@ -4,17 +4,11 @@ description: "Een complete gids voor het MKB om Business Intelligence succesvol 
 featuredImage: "/assets/images/dashboard-productiviteit-300x130.png"
 ---
 
-{% video url="https://player.vimeo.com/video/1077513423" %}
 
-{% video url="https://player.vimeo.com/video/1077513423" %}
 
-{% video url="https://player.vimeo.com/video/1077513423" %}
 
-{% video url="https://player.vimeo.com/video/1077513423" %}
 
-{% video url="https://player.vimeo.com/video/1077513423" %}
 
-{% video url="https://player.vimeo.com/video/1077513423" %}
 
 # MKB-implementatiegids 2026: ontdek 6 essentiële stappen
 
@@ -65,9 +59,7 @@ Beoordeel de kwaliteit van alle databronnen. Slechte data leidt tot onbetrouwbar
 
 Power BI is vaak de logische keuze, dankzij de integratie met Microsoft-systemen, flexibele licentiemogelijkheden en gebruiksgemak. Het biedt een compleet ecosysteem voor datamodellering, visualisatie en self-service analytics.
 
-{% video url="https://player.vimeo.com/video/1077513423" %}
 
-{% video url="https://player.vimeo.com/video/1077513423" %}
 
 Video: praktische uitleg over BI-implementatie met Power BI
 

@@ -4,17 +4,11 @@ description: "Leer hoe je maandrapportages automatiseert en uren tijd bespaart m
 featuredImage: "/assets/images/dashboard-productiviteit-300x130.png"
 ---
 
-{% video url="https://player.vimeo.com/video/1077533394" %}
 
-{% video url="https://player.vimeo.com/video/1077533394" %}
 
-{% video url="https://player.vimeo.com/video/1077533394" %}
 
-{% video url="https://player.vimeo.com/video/1077533394" %}
 
-{% video url="https://player.vimeo.com/video/1077533394" %}
 
-{% video url="https://player.vimeo.com/video/1077533394" %}
 
 # Maandrapportage: 5 onmisbare tips voor tijdbesparing en automatisering
 
@@ -50,9 +44,7 @@ Figuur: voorbeeld van een geautomatiseerde dashboardweergave voor maandrapportag
 
 Figuur: inzichten in financiële resultaten per project met realtime data.
 
-{% video url="https://player.vimeo.com/video/1077533394" %}
 
-{% video url="https://player.vimeo.com/video/1077533394" %}
 
 Bekijk hoe onze tool de maandrapportage voor installatiebedrijven automatiseert en optimaliseert.
 

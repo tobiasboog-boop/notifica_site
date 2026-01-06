@@ -14,7 +14,7 @@ Bij Notifica hebben meer dan 60 **tevreden klanten** dankzij onze datagedreven P
 - [Dashboard Overzicht](#standaarddashboards)
 - [Aan de slag](#conclusie)
 
-## Klantreacties en succesverhalen uit de praktijk {#klantreacties}
+## Klantreacties en succesverhalen uit de praktijk {% raw %}{#{% endraw %}klantreacties}
 
 De feedback van onze **tevreden klanten** uit de bouw- en installatiesector laat zien hoe datagedreven sturing in de praktijk werkt. Hieronder delen vijf organisaties hun ervaringen:
 
@@ -38,7 +38,7 @@ De feedback van onze **tevreden klanten** uit de bouw- en installatiesector laat
 >
 > **— Vincent Kouer, Verkade Klimaat**
 
-## Demo en proefperiode: ervaar het zelf! {#demo-proefperiode}
+## Demo en proefperiode: ervaar het zelf! {% raw %}{#{% endraw %}demo-proefperiode}
 
 Wil jij ook tot de **tevreden klanten** behoren? We nodigen je graag uit voor een live demonstratie van onze Power BI-dashboards, gevuld met representatieve demodata. Zo krijg je direct een scherp beeld van alle functionaliteiten en de gebruiksvriendelijkheid van het systeem.
 
@@ -52,7 +52,7 @@ Met één korte afspraak en 30 minuten van de IT-afdeling zorgen wij voor de vol
 
 *Bekijk in deze video hoe onze oplossingen werken bij één van onze tevreden klanten*
 
-## Onze standaarddashboards voor de installatiesector {#standaarddashboards}
+## Onze standaarddashboards voor de installatiesector {% raw %}{#{% endraw %}standaarddashboards}
 
 Onze kant-en-klare dashboards bieden heldere inzichten in je belangrijkste processen. Sluit je aan bij andere **tevreden klanten** en profiteer van:
 
@@ -70,7 +70,7 @@ Onze kant-en-klare dashboards bieden heldere inzichten in je belangrijkste proce
 
 *Dashboard voor projectwaardering, favoriet onder onze tevreden klanten*
 
-## Conclusie {#conclusie}
+## Conclusie {% raw %}{#{% endraw %}conclusie}
 
 Onze oplossingen helpen **tevreden klanten** groeien door data centraal te stellen. Met meer dan 60 tevreden klanten en een persoonlijke aanpak, staan we klaar om voor jouw bedrijf een tastbaar verschil te maken.
 

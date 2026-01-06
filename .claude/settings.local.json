@@ -15,7 +15,18 @@
       "Bash(git push:*)",
       "Bash(git commit:*)",
       "Bash(npm start)",
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "Bash(magick convert:*)",
+      "Bash(done)",
+      "Bash(for:*)",
+      "Bash(do if ! grep -q \"featuredImage:\" \"$file\")",
+      "Bash(fi)",
+      "Bash(cat:*)",
+      "Bash(sort:*)",
+      "Bash(powershell -Command \"\\(Get-Content ''c:\\\\projects\\\\notifica_site\\\\src\\\\inspiratie\\\\whitepapers\\\\index.njk''\\) -replace ''<a href=\"\"#contact\"\" class=\"\"btn whitepaper-download\"\" data-title=\"\"\\\\{\\\\{ paper.data.title \\\\}\\\\}\"\">Download gratis</a>'', ''<a href=\"\"#\"\" class=\"\"btn whitepaper-download\"\" data-pipedrive-form=\"\"whitepaper\"\" data-title=\"\"{{ paper.data.title }}\"\">Download gratis</a>'' | Set-Content ''c:\\\\projects\\\\notifica_site\\\\src\\\\inspiratie\\\\whitepapers\\\\index.njk''\")",
+      "Bash(powershell -Command:*)",
+      "Bash(npm run build:*)",
+      "Bash(do)"
     ]
   }
 }

@@ -4,17 +4,11 @@ description: "Ontdek hoe effectieve stuurinformatie KPI's optimaliseert, sneller
 featuredImage: "/assets/images/generieke-behoefte-dashboard-300x147.png"
 ---
 
-{% video url="https://player.vimeo.com/video/1084937427" %}
 
-{% video url="https://player.vimeo.com/video/1084937427" %}
 
-{% video url="https://player.vimeo.com/video/1084937427" %}
 
-{% video url="https://player.vimeo.com/video/1084937427" %}
 
-{% video url="https://player.vimeo.com/video/1084937427" %}
 
-{% video url="https://player.vimeo.com/video/1084937427" %}
 
 # Stuurinformatie: bespaar 12 uur per week met Power BI
 
@@ -61,9 +55,7 @@ Zonder borging blijft stuurinformatie een papieren tijger. Je hebt een cultuur n
 - Training: Organiseer praktijkgerichte workshops waarin medewerkers leren hoe ze zelf analyses maken. Dit verhoogt de adoptie van het platform.
 - Continue optimalisatie: Vraag maandelijks feedback over de bruikbaarheid van de visuals en pas ze aan waar nodig.
 
-{% video url="https://player.vimeo.com/video/1084937427" %}
 
-{% video url="https://player.vimeo.com/video/1084937427" %}
 
 Bekijk hoe Power BI complexe sturingscijfers eenvoudig maakt voor je team.
 
