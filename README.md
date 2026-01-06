@@ -46,6 +46,10 @@ notifica_site/
 └── package.json
 ```
 
+## Deployment
+
+The site is automatically deployed to GitHub Pages when changes are pushed to the main branch.
+
 ## License
 
 All rights reserved - Notifica
