@@ -12,10 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/assets/css/notifica-notion.css">
+  <link rel="stylesheet" href="{{ '/assets/css/notifica-notion.css' | url }}">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | url }}">
 
   <!-- Open Graph -->
   <meta property="og:title" content="{{ title or 'Notifica | Power BI Dashboards voor Installatiebedrijven' }}">
@@ -44,7 +44,7 @@
   {% endif %}
 
   <!-- Pipedrive Popup Script -->
-  <script src="/assets/js/pipedrive-popup.js"></script>
+  <script src="{{ '/assets/js/pipedrive-popup.js' | url }}"></script>
 
   {% block scripts %}{% endblock %}
 </body>

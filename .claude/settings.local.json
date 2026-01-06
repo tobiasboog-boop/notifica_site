@@ -26,7 +26,12 @@
       "Bash(powershell -Command \"\\(Get-Content ''c:\\\\projects\\\\notifica_site\\\\src\\\\inspiratie\\\\whitepapers\\\\index.njk''\\) -replace ''<a href=\"\"#contact\"\" class=\"\"btn whitepaper-download\"\" data-title=\"\"\\\\{\\\\{ paper.data.title \\\\}\\\\}\"\">Download gratis</a>'', ''<a href=\"\"#\"\" class=\"\"btn whitepaper-download\"\" data-pipedrive-form=\"\"whitepaper\"\" data-title=\"\"{{ paper.data.title }}\"\">Download gratis</a>'' | Set-Content ''c:\\\\projects\\\\notifica_site\\\\src\\\\inspiratie\\\\whitepapers\\\\index.njk''\")",
       "Bash(powershell -Command:*)",
       "Bash(npm run build:*)",
-      "Bash(do)"
+      "Bash(do)",
+      "Bash(git checkout:*)",
+      "Bash(git merge:*)",
+      "Bash(gh api:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(timeout 10 curl:*)"
     ]
   }
 }
