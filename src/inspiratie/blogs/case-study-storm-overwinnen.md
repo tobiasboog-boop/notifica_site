@@ -74,4 +74,4 @@ Deze case study toont aan dat installatiebedrijven, zelfs in zwaar weer, hun mar
 
 **Neem vrijblijvend [contact met ons op](/contact)** voor meer informatie.
 
-Bekijk ook onze [veelgestelde vragen](/faq-antwoord-op-de-30-meest-veelgestelde-vragen/) voor meer informatie.
+Bekijk ook onze [veelgestelde vragen](/veelgestelde-vragen/) voor meer informatie.

@@ -81,3 +81,5 @@ In 2026 zijn slimme dashboards niet langer een toekomstmuziek maar een must-have
 Begin vandaag met het verkennen van de mogelijkheden binnen je huidige BI-omgeving. Elk kwartaal dat je wacht, loop je het risico dat concurrenten je voorbijstreven met betere, snellere inzichten.
 
 **Neem vrijblijvend [contact op](#contact) voor meer informatie** en ervaar zelf hoe slimme dashboards jouw bedrijf klaarstomen voor de toekomst.
+
+Meer weten over AI-dashboards en Business Intelligence? Bekijk onze [veelgestelde vragen](/veelgestelde-vragen/) of lees [onze andere blogs](/inspiratie/blogs/) voor meer praktische inzichten.

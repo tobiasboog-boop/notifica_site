@@ -11,20 +11,26 @@
   const PIPEDRIVE_FORMS = {
     demo: {
       title: "Plan een demo",
-      url: "https://webforms.pipedrive.com/f/czAN5Djwx6GKDvEFyOO9B3HhfpFEeQ8NX7pcdOLeHJ5LSIQEP8IzJRQE6kjvn2LncD"
+      subtitle: "Ik wil graag een demo sessie plannen",
+      url: "https://webforms.pipedrive.com/f/czAN5Djwx6GKDvEFyOO9B3HhfpFEeQ8NX7pcdOLeHJ5LSIQEP8IzJRQE6kjvn2LncD",
+      defaultMessage: "Ik wil graag een demo sessie plannen."
     },
     contact: {
       title: "Neem contact op",
+      subtitle: "Vul onderstaand formulier in en we nemen binnen 24 uur contact met je op.",
       url: "https://webforms.pipedrive.com/f/6zmGQ2X1XW91oGi0OQQ0vma5UHXZGOy6qV6Z5KEIv8DppStJUhO0CP4sMxRkcUl0LV"
     },
     whitepaper: {
       title: "Download whitepaper",
       subtitle: "Geef aan welke whitepapers je wenst te ontvangen in onderstaand bericht.",
-      url: "https://webforms.pipedrive.com/f/czAN5Djwx6GKDvEFyOO9B3HhfpFEeQ8NX7pcdOLeHJ5LSIQEP8IzJRQE6kjvn2LncD"
+      url: "https://webforms.pipedrive.com/f/czAN5Djwx6GKDvEFyOO9B3HhfpFEeQ8NX7pcdOLeHJ5LSIQEP8IzJRQE6kjvn2LncD",
+      defaultMessage: "Stuur mij whitepaper: {title}"
     },
     support: {
       title: "Remote support",
-      url: "https://webforms.pipedrive.com/f/czAN5Djwx6GKDvEFyOO9B3HhfpFEeQ8NX7pcdOLeHJ5LSIQEP8IzJRQE6kjvn2LncD"
+      subtitle: "Ik heb hulp nodig met een technisch probleem",
+      url: "https://webforms.pipedrive.com/f/czAN5Djwx6GKDvEFyOO9B3HhfpFEeQ8NX7pcdOLeHJ5LSIQEP8IzJRQE6kjvn2LncD",
+      defaultMessage: "Ik heb hulp nodig met een technisch probleem."
     }
   };
 
@@ -50,7 +56,7 @@
   }
 
   // Open popup with specific form
-  function openPopup(formId) {
+  function openPopup(formId, context = {}) {
     const form = PIPEDRIVE_FORMS[formId];
     if (!form) {
       console.warn(`Pipedrive form "${formId}" not found`);
@@ -112,7 +118,13 @@
       if (button) {
         e.preventDefault();
         const formId = button.getAttribute("data-pipedrive-form");
-        openPopup(formId);
+
+        // Get context data from button attributes
+        const context = {
+          title: button.getAttribute("data-title") || ""
+        };
+
+        openPopup(formId, context);
       }
 
       // Close button

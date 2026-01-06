@@ -60,6 +60,6 @@ Dit succesverhaal benadrukt hoe installatiebedrijven met een datagedreven aanpak
 
 Wil je zelf ontdekken hoe datagedreven werken jouw organisatie kan versterken? Bekijk dan de officiële documentatie van [Microsoft Power BI](https://powerbi.microsoft.com/) en leer hoe je realtime dashboards inzet om **direct inzicht** in je prestaties te krijgen.
 
-Meer weten? [Bekijk onze veelgestelde vragen](/faq-antwoord-op-de-30-meest-veelgestelde-vragen/).
+Meer weten? [Bekijk onze veelgestelde vragen](/veelgestelde-vragen/).
 
 **Plan direct een [gratis demo](/contact)** en ervaar zelf de kracht van datagedreven werken.

@@ -1,7 +1,7 @@
 ---
 title: "5 Tips voor Onderhanden Werk: Efficiënt je cashflow en projecten besturen"
 description: "Leer hoe onderhanden werk (OHW) direct inzicht geeft in verborgen waarde binnen projecten voor betere cashflow en projectsturing."
-featuredImage: "/assets/images/OHW.png"
+featuredImage: "/assets/images/2025/06/2.-Pojectwaardering.png"
 ---
 
 
@@ -102,4 +102,4 @@ Een geautomatiseerd OWH-dashboard biedt dagelijks inzicht in iedere fase van je 
 
 Nieuwsgierig naar de impact op jouw organisatie? Plan een vrijblijvende demo via ons contactformulier en ontdek in 30 minuten hoe eenvoudig je OWH naar een hoger niveau tilt.
 
-Bekijk voor meer tips ook onze veelgestelde vragen.
+Bekijk voor meer tips ook onze [veelgestelde vragen](/veelgestelde-vragen/). Lees ook [onze andere blogs](/inspiratie/blogs/) over projectsturing en cashflowbeheer.

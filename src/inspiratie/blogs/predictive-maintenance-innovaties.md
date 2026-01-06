@@ -1,7 +1,7 @@
 ---
 title: "Predictive maintenance: 5 krachtige toepassingen van data als strategisch middel"
 description: "Hoe IoT-integratie, realtime data-analyse en asset management strategieën storingen voorkomen en operationele kosten verlagen."
-featuredImage: "/assets/images/dashboard-kengetallen-300x115.png"
+featuredImage: "/assets/images/2025/06/3.-HR-Urenrapportage.png"
 ---
 
 
@@ -66,4 +66,4 @@ Concrete aanbevelingen:
 - Integreren van asset management-software voor volledig inzicht in levenscycli en onderhoudsbudgetten.
 - Medewerkers trainen in het interpreteren van data en data-gebaseerde besluitvorming stimuleren.
 
-Meer weten? Lees onze andere blogs of bekijk de Veelgestelde vragen.
+Meer weten? Lees [onze andere blogs](/inspiratie/blogs/) of bekijk de [veelgestelde vragen](/veelgestelde-vragen/). Voor diepgaande kennis over data-analyse kun je ook [onze whitepapers](/inspiratie/whitepapers/) raadplegen.

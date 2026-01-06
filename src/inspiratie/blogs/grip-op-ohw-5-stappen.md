@@ -73,4 +73,4 @@ Met ultieme automatisering in 5 stappen, een robuuste POC-methode, naadloze ERP-
 
 **Neem vrijblijvend [contact op](#contact) voor meer informatie** en ervaar zelf hoe Notifica jouw OHW-proces naar een hoger niveau tilt.
 
-Meer weten? Lees onze andere blogs of bekijk de [Veelgestelde vragen](/faq-antwoord-op-de-30-meest-veelgestelde-vragen/).
+Meer weten? Lees onze [andere blogs](/inspiratie/blogs/) of bekijk de [Veelgestelde vragen](/veelgestelde-vragen/).

@@ -59,4 +59,4 @@ Met ons **alles-in-één abonnement** beschik je direct over professionele Power
 
 **Neem vrijblijvend [contact met ons op](/contact)** voor meer informatie.
 
-Bekijk ook onze [veelgestelde vragen](/faq-antwoord-op-de-30-meest-veelgestelde-vragen/) voor meer antwoorden.
+Bekijk ook onze [veelgestelde vragen](/veelgestelde-vragen/) voor meer antwoorden.

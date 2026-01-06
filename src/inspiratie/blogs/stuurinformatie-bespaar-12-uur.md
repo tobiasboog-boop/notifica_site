@@ -1,7 +1,7 @@
 ---
 title: "Stuurinformatie: bespaar 12 uur per week met Power BI"
 description: "Ontdek hoe effectieve stuurinformatie KPI's optimaliseert, snellere koerscorrecties mogelijk maakt en kosten structureel verlaagt."
-featuredImage: "/assets/images/generieke-behoefte-dashboard-300x147.png"
+featuredImage: "/assets/images/2025/06/9.-Accountmanagement-Cashflow.png"
 ---
 
 
@@ -75,6 +75,6 @@ Managers kregen realtime inzicht, waardoor keuzes twee keer zo snel gemaakt werd
 
 ## Conclusie & call to action
 
-Sta niet langer stil bij data-chaos: met nauwkeurige inzichten optimaliseer je KPI’s, kun je direct bijsturen en structureel kosten besparen. Word abonnee bij Notifica en krijg direct toegang tot kant-en-klare sets voor de installatiebranche. Ontvang nu een gratis analyse van jouw huidige omgeving en ontdek welke data jou morgen al verder brengt!
+Sta niet langer stil bij data-chaos: met nauwkeurige inzichten optimaliseer je KPI's, kun je direct bijsturen en structureel kosten besparen. Word abonnee bij Notifica en krijg direct toegang tot kant-en-klare sets voor de installatiebranche. Ontvang nu een gratis analyse van jouw huidige omgeving en ontdek welke data jou morgen al verder brengt!
 
-Meer weten? Lees onze andere blogs of bekijk de veelgestelde vragen.
+Meer weten? Lees [onze andere blogs](/inspiratie/blogs/) of bekijk de [veelgestelde vragen](/veelgestelde-vragen/). Voor diepgaande kennis kun je ook [onze whitepapers](/inspiratie/whitepapers/) raadplegen.

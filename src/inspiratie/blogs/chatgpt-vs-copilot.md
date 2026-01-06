@@ -91,4 +91,4 @@ De toekomst van data-analyse in de installatietechniek is AI-gestuurd. Door nu t
 
 **Neem vrijblijvend [contact op](/contact)** voor meer informatie.
 
-Meer weten? Bekijk onze [Veelgestelde vragen](/faq-antwoord-op-de-30-meest-veelgestelde-vragen/).
+Meer weten? Bekijk onze [Veelgestelde vragen](/veelgestelde-vragen/).

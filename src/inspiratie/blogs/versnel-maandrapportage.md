@@ -1,7 +1,7 @@
 ---
 title: "Maandrapportage: 5 onmisbare tips voor tijdbesparing en automatisering"
 description: "Leer hoe je maandrapportages automatiseert en uren tijd bespaart met Power BI dashboards."
-featuredImage: "/assets/images/dashboard-productiviteit-300x130.png"
+featuredImage: "/assets/images/2025/06/2.-Pojectwaardering.png"
 ---
 
 
@@ -73,4 +73,4 @@ Een gerenommeerde installateur kampte met een maandelijkse rapportagecyclus van 
 
 Automatisering en real-time data bepalen de toekomst van maandrapportages in de installatiebranche. Wilt u uw maandrapportage transformeren en uw installatiebedrijf naar een hoger niveau tillen?
 
-We verwijzen je verder naar onze veelgestelde vragen of andere blogs.
+We verwijzen je verder naar onze [veelgestelde vragen](/veelgestelde-vragen/) of [andere blogs](/inspiratie/blogs/). Voor meer diepgaande informatie over automatisering kun je ook [onze whitepapers](/inspiratie/whitepapers/) bekijken.

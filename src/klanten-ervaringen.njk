@@ -1,175 +1,261 @@
 ---
-layout: base.njk
-title: Klantervaringen
+layout: base-notion.njk
+title: Klantervaringen | Notifica Power BI Dashboards
 description: Ontdek hoe installatiebedrijven met Notifica hun bedrijfsvoering verbeteren. Lees de ervaringen van onze klanten.
+permalink: /klanten-ervaringen/
+showContactPopup: true
 ---
 
-{# Hero Section #}
+<!-- Hero -->
 <section class="hero">
-  <div class="container">
-    <div class="hero__content">
-      <h1 class="hero__title">Klantervaringen met Notifica</h1>
-      <p class="hero__description">
-        Ontdek hoe installatiebedrijven door heel Nederland met Notifica meer grip
-        krijgen op hun cijfers en betere beslissingen nemen.
-      </p>
+    <div class="container">
+        <div class="hero-content">
+            <div class="badge">Klantervaringen</div>
+            <h1>Wat onze klanten zeggen</h1>
+            <p class="subtitle">
+                Ontdek hoe installatiebedrijven door heel Nederland met Notifica meer grip krijgen op hun cijfers en betere beslissingen nemen.
+            </p>
+        </div>
     </div>
-  </div>
 </section>
 
-{# Reviews Section #}
+<!-- Stats -->
+<section class="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">60+</div>
+                <div class="stat-label">Tevreden klanten</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">4.8</div>
+                <div class="stat-label">Google beoordeling</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1</div>
+                <div class="stat-label">Dag implementatie</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Support & Service</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Reviews Grid -->
 <section class="section">
-  <div class="container">
-    <div class="reviews-grid">
+    <div class="container">
+        <div class="testimonials-grid">
+            <!-- Review 1 - Nikkelen Elektrotechniek -->
+            <div class="testimonial-card">
+                <div class="testimonial-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <div class="testimonial-rating" style="display: flex; gap: 4px; color: #FCD34D; font-size: 18px;">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                    </div>
+                    <span style="font-size: 14px; color: var(--text-secondary);">Google Review</span>
+                </div>
+                <div class="testimonial-text">
+                    "Dankzij Notifica hebben we veel beter grip gekregen op onze data. Ze hebben een oplossing neergezet die we zelf niet op dit niveau hadden kunnen bouwen."
+                </div>
+                <div style="margin-top: 16px; padding: 12px; background-color: #F3F4F6; border-radius: 8px; font-size: 14px;">
+                    <strong style="color: var(--navy);">Oplossing:</strong> <span style="color: var(--text-secondary);">Realtime financieel inzicht per periode voor snellere maandafsluiting</span>
+                </div>
+                <div class="testimonial-author" style="margin-top: 16px; display: flex; align-items: center; gap: 16px;">
+                    <a href="https://www.nikkelen.nl" target="_blank" rel="noopener noreferrer" style="flex-shrink: 0;">
+                        <img src="/assets/images/Nikkelen_Logo_converted.png" alt="Nikkelen Elektrotechniek" style="width: 60px; height: 60px; object-fit: contain;">
+                    </a>
+                    <div>
+                        <div class="author-name">Jon Wijers</div>
+                        <div class="author-title">Elektrotechnisch Engineer – Nikkelen Elektrotechniek</div>
+                    </div>
+                </div>
+            </div>
 
-      {# Review 1 - Nikkelen Elektrotechniek #}
-      <div class="review-card">
-        <div class="review-card__header">
-          <div class="review-card__rating">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-          </div>
-          <span class="review-card__source">Google Review</span>
-        </div>
-        <blockquote class="review-card__quote">
-          "Dankzij Notifica hebben we veel beter grip gekregen op onze data. Ze hebben een oplossing neergezet die we zelf niet op dit niveau hadden kunnen bouwen."
-        </blockquote>
-        <div class="review-card__solution">
-          <strong>Oplossing:</strong> Realtime financieel inzicht per periode voor snellere maandafsluiting
-        </div>
-        <div class="review-card__author">
-          <img src="/assets/images/Nikkelen_Logo_converted.png" alt="Nikkelen Elektrotechniek" class="review-card__logo">
-          <div>
-            <p class="review-card__name">Jon Wijers</p>
-            <p class="review-card__role">Elektrotechnisch Engineer, Nikkelen Elektrotechniek</p>
-          </div>
-        </div>
-      </div>
+            <!-- Review 2 - ALWAKO Installaties -->
+            <div class="testimonial-card">
+                <div class="testimonial-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <div class="testimonial-rating" style="display: flex; gap: 4px; color: #FCD34D; font-size: 18px;">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                    </div>
+                    <span style="font-size: 14px; color: var(--text-secondary);">Google Review</span>
+                </div>
+                <div class="testimonial-text">
+                    "Notifica levert een compleet dashboard voor ons als middelgrote installateur. De snelle reactietijden en flexibiliteit van inrichting ervaren wij als bijzonder prettig."
+                </div>
+                <div style="margin-top: 16px; padding: 12px; background-color: #F3F4F6; border-radius: 8px; font-size: 14px;">
+                    <strong style="color: var(--navy);">Oplossing:</strong> <span style="color: var(--text-secondary);">Realtime projectrendement en liquiditeitsinzicht</span>
+                </div>
+                <div class="testimonial-author" style="margin-top: 16px; display: flex; align-items: center; gap: 16px;">
+                    <a href="https://www.alwako.nl" target="_blank" rel="noopener noreferrer" style="flex-shrink: 0;">
+                        <img src="/assets/images/alwako.png" alt="ALWAKO Installaties" style="width: 60px; height: 60px; object-fit: contain;">
+                    </a>
+                    <div>
+                        <div class="author-name">Jan-Paul van Houtum</div>
+                        <div class="author-title">Directeur – ALWAKO Installaties</div>
+                    </div>
+                </div>
+            </div>
 
-      {# Review 2 - ALWAKO Installaties #}
-      <div class="review-card">
-        <div class="review-card__header">
-          <div class="review-card__rating">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-          </div>
-          <span class="review-card__source">Google Review</span>
-        </div>
-        <blockquote class="review-card__quote">
-          "Notifica levert een compleet dashboard voor ons als middelgrote installateur. De snelle reactietijden en flexibiliteit van inrichting ervaren wij als bijzonder prettig."
-        </blockquote>
-        <div class="review-card__solution">
-          <strong>Oplossing:</strong> Realtime projectrendement en liquiditeitsinzicht
-        </div>
-        <div class="review-card__author">
-          <img src="/assets/images/alwako.png" alt="ALWAKO Installaties" class="review-card__logo">
-          <div>
-            <p class="review-card__name">Jan-Paul van Houtum</p>
-            <p class="review-card__role">Directeur, ALWAKO Installaties</p>
-          </div>
-        </div>
-      </div>
+            <!-- Review 3 - Denned Installatietechniek -->
+            <div class="testimonial-card">
+                <div class="testimonial-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <div class="testimonial-rating" style="display: flex; gap: 4px; color: #FCD34D; font-size: 18px;">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span style="color: #E5E7EB;">★</span>
+                    </div>
+                    <span style="font-size: 14px; color: var(--text-secondary);">Google Review</span>
+                </div>
+                <div class="testimonial-text">
+                    "Door de naadloze aansluiting van de Power BI rapporten van Notifica op onze Syntess software krijgen we eindelijk dingen duidelijk te zien."
+                </div>
+                <div style="margin-top: 16px; padding: 12px; background-color: #F3F4F6; border-radius: 8px; font-size: 14px;">
+                    <strong style="color: var(--navy);">Oplossing:</strong> <span style="color: var(--text-secondary);">Marge en prestatiesturen in plaats van alleen op uren</span>
+                </div>
+                <div class="testimonial-author" style="margin-top: 16px; display: flex; align-items: center; gap: 16px;">
+                    <a href="https://www.denned.nl" target="_blank" rel="noopener noreferrer" style="flex-shrink: 0;">
+                        <img src="/assets/images/denned_logo_converted.png" alt="Denned Installatietechniek" style="width: 60px; height: 60px; object-fit: contain;">
+                    </a>
+                    <div>
+                        <div class="author-name">Rob de Kort</div>
+                        <div class="author-title">Controller – Denned Installatietechniek</div>
+                    </div>
+                </div>
+            </div>
 
-      {# Review 3 - Denned Installatietechniek #}
-      <div class="review-card">
-        <div class="review-card__header">
-          <div class="review-card__rating">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-          </div>
-          <span class="review-card__source">Google Review</span>
-        </div>
-        <blockquote class="review-card__quote">
-          "Door de naadloze aansluiting van de Power BI rapporten van Notifica op onze Syntess software krijgen we eindelijk dingen duidelijk te zien."
-        </blockquote>
-        <div class="review-card__solution">
-          <strong>Oplossing:</strong> Marge en prestatiesturen in plaats van alleen op uren
-        </div>
-        <div class="review-card__author">
-          <img src="/assets/images/denned_logo_converted.png" alt="Denned Installatietechniek" class="review-card__logo">
-          <div>
-            <p class="review-card__name">Rob de Kort</p>
-            <p class="review-card__role">Controller, Denned Installatietechniek</p>
-          </div>
-        </div>
-      </div>
+            <!-- Review 4 - Sandee Groen -->
+            <div class="testimonial-card">
+                <div class="testimonial-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <div class="testimonial-rating" style="display: flex; gap: 4px; color: #FCD34D; font-size: 18px;">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                    </div>
+                    <span style="font-size: 14px; color: var(--text-secondary);">Google Review</span>
+                </div>
+                <div class="testimonial-text">
+                    "Notifica is een bedrijf dat je echt goed helpt om alle data binnen jouw organisatie inzichtelijk te krijgen. Ze denken actief mee."
+                </div>
+                <div style="margin-top: 16px; padding: 12px; background-color: #F3F4F6; border-radius: 8px; font-size: 14px;">
+                    <strong style="color: var(--navy);">Oplossing:</strong> <span style="color: var(--text-secondary);">Zelfstandig dashboards aanpassen zonder afhankelijkheid van maatwerk</span>
+                </div>
+                <div class="testimonial-author" style="margin-top: 16px; display: flex; align-items: center; gap: 16px;">
+                    <a href="https://www.sandeegroen.nl" target="_blank" rel="noopener noreferrer" style="flex-shrink: 0;">
+                        <img src="/assets/images/sandee_converted.png" alt="Sandee Groen" style="width: 60px; height: 60px; object-fit: contain;">
+                    </a>
+                    <div>
+                        <div class="author-name">Stefan Heeg</div>
+                        <div class="author-title">Projectmanager – Sandee Groen</div>
+                    </div>
+                </div>
+            </div>
 
-      {# Review 4 - Sandee Groen #}
-      <div class="review-card">
-        <div class="review-card__header">
-          <div class="review-card__rating">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-          </div>
-          <span class="review-card__source">Google Review</span>
+            <!-- Review 5 - Verkade Klimaat -->
+            <div class="testimonial-card">
+                <div class="testimonial-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <div class="testimonial-rating" style="display: flex; gap: 4px; color: #FCD34D; font-size: 18px;">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                    </div>
+                    <span style="font-size: 14px; color: var(--text-secondary);">Google Review</span>
+                </div>
+                <div class="testimonial-text">
+                    "Dankzij de Power BI oplossing van Notifica hebben wij snel en makkelijk inzicht in de data die in ons Syntess Atrium ERP pakket aanwezig is."
+                </div>
+                <div style="margin-top: 16px; padding: 12px; background-color: #F3F4F6; border-radius: 8px; font-size: 14px;">
+                    <strong style="color: var(--navy);">Oplossing:</strong> <span style="color: var(--text-secondary);">Geautomatiseerd OHW-proces voor snellere tussentijdse projectresultaten</span>
+                </div>
+                <div class="testimonial-author" style="margin-top: 16px; display: flex; align-items: center; gap: 16px;">
+                    <a href="https://www.verkadeklimaattechniek.nl" target="_blank" rel="noopener noreferrer" style="flex-shrink: 0;">
+                        <img src="/assets/images/verkade_converted.png" alt="Verkade Klimaat" style="width: 60px; height: 60px; object-fit: contain;">
+                    </a>
+                    <div>
+                        <div class="author-name">Vincent Kouer</div>
+                        <div class="author-title">ERP Implementation – Verkade Klimaat</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <blockquote class="review-card__quote">
-          "Notifica is een bedrijf dat je echt goed helpt om alle data binnen jouw organisatie inzichtelijk te krijgen. Ze denken actief mee."
-        </blockquote>
-        <div class="review-card__solution">
-          <strong>Oplossing:</strong> Zelfstandig dashboards aanpassen zonder afhankelijkheid van maatwerk
-        </div>
-        <div class="review-card__author">
-          <img src="/assets/images/sandee_converted.png" alt="Sandee Groen" class="review-card__logo">
-          <div>
-            <p class="review-card__name">Stefan Heeg</p>
-            <p class="review-card__role">Projectmanager, Sandee Groen</p>
-          </div>
-        </div>
-      </div>
-
-      {# Review 5 - Verkade Klimaat #}
-      <div class="review-card">
-        <div class="review-card__header">
-          <div class="review-card__rating">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-          </div>
-          <span class="review-card__source">Google Review</span>
-        </div>
-        <blockquote class="review-card__quote">
-          "Dankzij de Power BI oplossing van Notifica hebben wij snel en makkelijk inzicht in de data die in ons Syntess Atrium ERP pakket aanwezig is."
-        </blockquote>
-        <div class="review-card__solution">
-          <strong>Oplossing:</strong> Geautomatiseerd OHW-proces voor snellere tussentijdse projectresultaten
-        </div>
-        <div class="review-card__author">
-          <img src="/assets/images/verkade_converted.png" alt="Verkade Klimaat" class="review-card__logo">
-          <div>
-            <p class="review-card__name">Vincent Kouer</p>
-            <p class="review-card__role">ERP Implementation, Verkade Klimaat</p>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
 </section>
 
-{# CTA Section #}
-<section class="section section--primary">
-  <div class="container text-center">
-    <h2 class="text-white mb-4">Ook meer grip op je cijfers?</h2>
-    <p class="lead text-white mb-8" style="opacity: 0.9;">
-      Neem contact met ons op en ontdek wat Notifica voor jouw bedrijf kan betekenen.
-    </p>
-    <button class="btn btn-secondary btn-lg" data-pipedrive-form="contact">
-      Neem vrijblijvend contact op
-    </button>
-  </div>
+<!-- Benefits Section -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <h2>Waarom klanten voor Notifica kiezen</h2>
+            <p class="section-subtitle">
+                Meer dan 60 installatiebedrijven vertrouwen op onze oplossing voor real-time inzicht.
+            </p>
+        </div>
+        <div class="features-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 900px; margin-left: auto; margin-right: auto;">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                    </svg>
+                </div>
+                <h3>Snelle implementatie</h3>
+                <p>Binnen 24 uur live met je eerste dashboards. Geen weken wachten, direct resultaat.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h3>ERP koppelingen</h3>
+                <p>Standaard koppelingen met alle grote ERP-systemen in de installatiebranche.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <h3>Persoonlijke begeleiding</h3>
+                <p>Direct contact met specialisten die de installatiebranche door en door kennen.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <polyline points="23 4 23 10 17 10"/>
+                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+                    </svg>
+                </div>
+                <h3>Continu updates</h3>
+                <p>Automatische updates en verbeteringen zonder extra kosten of inspanning.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <div class="container">
+        <h2>Ook meer grip op je cijfers?</h2>
+        <p class="section-subtitle" style="max-width: 560px; margin: 16px auto 32px;">
+            Neem contact met ons op en ontdek wat Notifica voor jouw bedrijf kan betekenen.
+        </p>
+        <a href="#" class="btn btn-large" data-pipedrive-form="contact">Neem vrijblijvend contact op</a>
+    </div>
 </section>

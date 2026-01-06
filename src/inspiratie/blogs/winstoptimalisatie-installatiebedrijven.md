@@ -1,7 +1,7 @@
 ---
 title: "Winstoptimalisatie voor Installatiebedrijven: 5 Kengetallen die het Verschil Maken"
 description: "Ontdek hoe je met vijf essentiële kengetallen de winstgevendheid van je installatiebedrijf kunt voorspellen en verbeteren."
-featuredImage: "/assets/images/generieke-behoefte-dashboard-300x147.png"
+featuredImage: "/assets/images/2025/12/dashboard-kengetallen.png"
 ---
 
 # Winstoptimalisatie voor Installatiebedrijven: 5 Kengetallen die het Verschil Maken
@@ -74,7 +74,7 @@ Wil je weten welk resultaat haalbaar is voor jouw installatiebedrijf? Vraag een 
 
 Bereken mijn winstpotentieel →
 
-Meer weten? Bekijk onze veelgestelde vragen of bekijk direct de presentatie van ons Syntess Webinar.
+Meer weten? Bekijk onze [veelgestelde vragen](/veelgestelde-vragen/) of bekijk direct de presentatie van ons Syntess Webinar. Lees ook [onze andere blogs](/inspiratie/blogs/) voor meer praktische tips over winstoptimalisatie en KPI-management.
 
 ### Vraag de bedrijfsanalyse aan
 

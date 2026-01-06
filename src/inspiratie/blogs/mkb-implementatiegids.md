@@ -1,7 +1,7 @@
 ---
 title: "MKB-implementatiegids: ontdek 6 essentiële stappen"
 description: "Een complete gids voor het MKB om Business Intelligence succesvol te implementeren met Power BI."
-featuredImage: "/assets/images/dashboard-productiviteit-300x130.png"
+featuredImage: "/assets/images/2025/06/Schermafbeelding-2025-06-03-061935.png"
 ---
 
 
@@ -144,4 +144,4 @@ Business Intelligence is niet langer een optie, maar een must voor een concurrer
 
 Met Power BI leg je een solide fundament voor een datagedreven toekomst. Je investeert niet alleen in rapportage, maar in een cultuur waarin cijfers elke beslissing ondersteunen.
 
-Meer weten? Bekijk onze Veelgestelde vragen of lees onze andere blogs.
+Meer weten? Bekijk onze [veelgestelde vragen](/veelgestelde-vragen/) of lees [onze andere blogs](/inspiratie/blogs/). Voor diepgaande kennis kun je ook [onze whitepapers](/inspiratie/whitepapers/) raadplegen.

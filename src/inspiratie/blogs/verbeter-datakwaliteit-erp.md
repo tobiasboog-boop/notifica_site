@@ -1,7 +1,7 @@
 ---
 title: "Vastlegging: 5 onmisbare tips voor verbeteren van de datakwaliteit van je bedrijfssoftware"
 description: "Ontdek hoe je de datakwaliteit in je ERP-systeem verbetert voor betrouwbare rapportages en betere beslissingen."
-featuredImage: "/assets/images/generieke-behoefte-dashboard-300x147.png"
+featuredImage: "/assets/images/2025/06/3aa.-HR-Urenrapportage.png"
 ---
 
 
@@ -64,4 +64,4 @@ Organiseer iedere maand een kort trainingsmoment waarin gebruikers leren waarom 
 
 Een goede vastlegging vormt de basis voor een foutloze inrichting bedrijfssoftware en draagt bij aan hoge datakwaliteit. Vooral tijdens migratie zie je hoe belangrijk het is om processen vooraf te standaardiseren en validatieregels in te stellen. Door periodiek te evalueren en data continu te verbeteren, kun je betrouwbare rapportages maken met Power BI en neem je beslissingen op basis van feiten. Dit leidt tot een efficiënter facturatieproces, snellere debiteurenadministratie en meer groei voor je installatiebedrijf.
 
-Ontdek ook onze andere blogs of bekijk de veelgestelde vragen over ERP en Power BI.
+Ontdek ook [onze andere blogs](/inspiratie/blogs/) of bekijk de [veelgestelde vragen](/veelgestelde-vragen/) over ERP en Power BI. Voor meer inzichten kun je ook [onze whitepapers](/inspiratie/whitepapers/) raadplegen.

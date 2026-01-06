@@ -811,3 +811,83 @@ footer {
         width: 95%;
     }
 }
+
+/* --------------------------------------------------------------------------
+   Pipedrive Popup Styles
+   -------------------------------------------------------------------------- */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-content {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.popup-overlay.active .popup-content {
+  transform: scale(1);
+}
+
+.popup-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  z-index: 10;
+}
+
+.popup-close:hover {
+  background-color: #e5e7eb;
+}
+
+.popup-close svg {
+  width: 20px;
+  height: 20px;
+  color: #6b7280;
+}
+
+.popup-body {
+  padding: 40px;
+}
+
+@media (max-width: 768px) {
+  .popup-body {
+    padding: 24px;
+  }
+  
+  .popup-overlay {
+    padding: 16px;
+  }
+}

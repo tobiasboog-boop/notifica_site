@@ -172,14 +172,17 @@ showContactPopup: true
 </section>
 
 <script>
-// Handle whitepaper download buttons
+// Handle whitepaper download buttons - uses Pipedrive popup system
 document.addEventListener('DOMContentLoaded', function() {
     const whitepaperDownloadLinks = document.querySelectorAll('.whitepaper-download');
     whitepaperDownloadLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const title = this.getAttribute('data-title');
-            openContactPopup(title);
+            // Use the global NotificaPopup.open function with context
+            if (window.NotificaPopup) {
+                window.NotificaPopup.open('whitepaper', { title: title });
+            }
         });
     });
 });

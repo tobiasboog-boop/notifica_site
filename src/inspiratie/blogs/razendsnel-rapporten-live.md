@@ -1,7 +1,7 @@
 ---
 title: "Razendsnel live: binnen 2 weken met Power BI – eenvoudig, snel, flexibel & betaalbaar"
 description: "Ontdek hoe je binnen twee weken live gaat met Power BI dashboards, zonder opstartkosten en met minimale IT-betrokkenheid."
-featuredImage: "/assets/images/dashboard-productiviteit-300x130.png"
+featuredImage: "/assets/images/2025/06/4.-Projectbeheer.png"
 ---
 
 

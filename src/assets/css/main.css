@@ -2148,6 +2148,130 @@ details.faq-accordion[open] summary.faq-question:after {
 }
 
 /* --------------------------------------------------------------------------
+   Content Lists (Blogs, Pages, etc.) - Notifica Purple Accent Style
+   -------------------------------------------------------------------------- */
+/* Lists in main content areas with branded bullets */
+main ul,
+article ul,
+.section ul,
+.container ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: var(--spacing-4);
+}
+
+main ul li,
+article ul li,
+.section ul li,
+.container ul li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: var(--spacing-3);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Notifica purple bullet with subtle glow */
+main ul li::before,
+article ul li::before,
+.section ul li::before,
+.container ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 7px;
+  height: 7px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(22, 19, 111, 0.1);
+  transition: all 0.2s ease;
+}
+
+/* Subtle hover effect on list items */
+main ul li:hover::before,
+article ul li:hover::before,
+.section ul li:hover::before,
+.container ul li:hover::before {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 3px rgba(22, 19, 111, 0.15);
+}
+
+/* Ordered lists with Notifica branding */
+main ol,
+article ol,
+.section ol,
+.container ol {
+  list-style: none;
+  counter-reset: notifica-counter;
+  padding-left: 0;
+  margin-bottom: var(--spacing-4);
+}
+
+main ol li,
+article ol li,
+.section ol li,
+.container ol li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: var(--spacing-3);
+  line-height: var(--line-height-relaxed);
+  counter-increment: notifica-counter;
+}
+
+main ol li::before,
+article ol li::before,
+.section ol li::before,
+.container ol li::before {
+  content: counter(notifica-counter) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: 0.9em;
+}
+
+/* Nested lists */
+main ul ul,
+article ul ul,
+.section ul ul,
+.container ul ul {
+  margin-top: var(--spacing-2);
+  margin-bottom: var(--spacing-2);
+  padding-left: 0;
+}
+
+main ul ul li::before,
+article ul ul li::before,
+.section ul ul li::before,
+.container ul ul li::before {
+  width: 5px;
+  height: 5px;
+  background-color: var(--color-primary-light);
+  box-shadow: 0 0 0 1px rgba(54, 54, 162, 0.1);
+}
+
+/* Exceptions: navigation and specific components should remain without bullets */
+nav ul,
+nav ol,
+.blog-grid ul,
+.blog-filters ul,
+.whitepaper-grid ul,
+.team-grid ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+nav ul li::before,
+nav ol li::before,
+.blog-grid ul li::before,
+.blog-filters ul li::before,
+.whitepaper-grid ul li::before,
+.team-grid ul li::before {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
    Utilities
    -------------------------------------------------------------------------- */
 .text-center { text-align: center; }

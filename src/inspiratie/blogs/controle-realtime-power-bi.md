@@ -79,4 +79,4 @@ Wil jij net als dit installatiebedrijf profiteren van realtime inzichten, volled
 
 **Neem vrijblijvend [contact met ons op](/contact)** voor meer informatie.
 
-Bezoek ook onze [veelgestelde vragen](/faq-antwoord-op-de-30-meest-veelgestelde-vragen/) voor extra antwoorden over onze oplossingen.
+Bezoek ook onze [veelgestelde vragen](/veelgestelde-vragen/) voor extra antwoorden over onze oplossingen.
