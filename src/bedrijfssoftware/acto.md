@@ -11,7 +11,7 @@ showContactPopup: true
     <div class="container">
         <div class="hero-content">
             <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
-                <img src="/assets/images/2025/04/Acto-logo-22x.png" alt="ACTO Logo" style="max-width: 180px; max-height: 80px; object-fit: contain; filter: brightness(0) invert(1);">
+                <img src="{{ '/assets/images/2025/04/Acto-logo-22x.png' | url }}" alt="ACTO Logo" style="max-width: 180px; max-height: 80px; object-fit: contain; filter: brightness(0) invert(1);">
             </div>
             <div class="badge">ACTO koppeling</div>
             <h1>Power BI Dashboards voor ACTO</h1>

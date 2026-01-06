@@ -12,11 +12,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32x32.png' | url }}">
+  <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | url }}">
 
   <!-- Open Graph -->
   <meta property="og:title" content="{{ title }} | {{ site.name }}">
@@ -41,8 +41,8 @@
   {% include "footer.njk" %}
 
   <!-- Scripts -->
-  <script src="/assets/js/mobile-nav.js"></script>
-  <script src="/assets/js/pipedrive-popup.js"></script>
+  <script src="{{ '/assets/js/mobile-nav.js' | url }}"></script>
+  <script src="{{ '/assets/js/pipedrive-popup.js' | url }}"></script>
 
   {% block scripts %}{% endblock %}
 </body>

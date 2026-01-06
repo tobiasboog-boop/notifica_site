@@ -11,7 +11,7 @@ showContactPopup: true
     <div class="container">
         <div class="hero-content">
             <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
-                <img src="/assets/images/2024/10/bouwinfosys-logo.svg" alt="BouwInfosys Logo" style="max-width: 180px; max-height: 80px; object-fit: contain; filter: brightness(0) invert(1);">
+                <img src="{{ '/assets/images/2024/10/bouwinfosys-logo.svg' | url }}" alt="BouwInfosys Logo" style="max-width: 180px; max-height: 80px; object-fit: contain; filter: brightness(0) invert(1);">
             </div>
             <div class="badge">BouwInfosys koppeling</div>
             <h1>Power BI Dashboards voor BouwInfosys</h1>

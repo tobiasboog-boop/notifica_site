@@ -11,7 +11,7 @@ showContactPopup: true
     <div class="container">
         <div class="hero-content">
             <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
-                <img src="/assets/images/2025/04/enk_logo_groen-1.png" alt="ENK Software Logo" style="max-width: 180px; max-height: 80px; object-fit: contain; filter: brightness(0) invert(1);">
+                <img src="{{ '/assets/images/2025/04/enk_logo_groen-1.png' | url }}" alt="ENK Software Logo" style="max-width: 180px; max-height: 80px; object-fit: contain; filter: brightness(0) invert(1);">
             </div>
             <div class="badge">ENK Software koppeling</div>
             <h1>Power BI Dashboards voor ENK Software</h1>
