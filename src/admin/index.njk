@@ -1,0 +1,269 @@
+---
+layout: base-notion.njk
+title: Admin - Notifica
+description: Intern beheerpaneel voor de Notifica website.
+permalink: /admin/
+robots: noindex, nofollow
+---
+
+<style>
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+}
+.admin-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.2s ease;
+}
+.admin-card:hover {
+    border-color: var(--navy);
+    box-shadow: 0 4px 12px rgba(22,19,111,0.1);
+}
+.admin-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.admin-card-icon {
+    font-size: 28px;
+}
+.admin-card-title {
+    color: var(--navy);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+.admin-card-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.admin-card-links li {
+    margin-bottom: 8px;
+}
+.admin-card-links li:last-child {
+    margin-bottom: 0;
+}
+.admin-card-links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    background: #f8f9fc;
+    border-radius: 6px;
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+.admin-card-links a:hover {
+    background: #eef0ff;
+}
+.admin-card-links .status {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.admin-card-links .status.active {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+.admin-card-links .status.archived {
+    background: #f5f5f5;
+    color: #666;
+}
+.redirect-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+.redirect-table th {
+    text-align: left;
+    padding: 12px;
+    background: #f8f9fc;
+    color: var(--navy);
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.redirect-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    font-family: monospace;
+    color: #666;
+}
+.redirect-table td:last-child {
+    font-family: inherit;
+    text-align: center;
+}
+</style>
+
+<section class="hero" style="padding: 80px 0 40px;">
+    <div class="container">
+        <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <div class="badge">Intern Beheer</div>
+            <h1>Admin Dashboard</h1>
+            <p class="subtitle">
+                Centrale toegang tot alle interne pagina's, campagnes en redirects.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="padding: 40px 0 80px;">
+    <div class="container" style="max-width: 1000px;">
+
+        <div class="admin-grid">
+
+            <!-- Campaigns -->
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <span class="admin-card-icon">📣</span>
+                    <h2 class="admin-card-title">Campaigns</h2>
+                </div>
+                <ul class="admin-card-links">
+                    <li>
+                        <a href="{{ '/campaigns/januari-2026-goede-voornemens/' | url }}">
+                            Januari 2026: Goede Voornemens
+                            <span class="status active">Actief</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ '/campaigns/december-2025-webinar/' | url }}">
+                            December 2025: Webinar
+                            <span class="status archived">Verlopen</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Utilities -->
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <span class="admin-card-icon">🛠️</span>
+                    <h2 class="admin-card-title">Utilities</h2>
+                </div>
+                <ul class="admin-card-links">
+                    <li>
+                        <a href="{{ '/utilities/style-guide/' | url }}">
+                            Style Guide
+                            <span style="color: #999;">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ '/utilities/component-library/' | url }}">
+                            Component Library
+                            <span style="color: #999;">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Verdieping (niet in hoofdmenu submenu's) -->
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <span class="admin-card-icon">📚</span>
+                    <h2 class="admin-card-title">Verdieping</h2>
+                </div>
+                <ul class="admin-card-links">
+                    <li>
+                        <a href="{{ '/verdieping/' | url }}">
+                            Verdieping Overzicht
+                            <span style="color: #999;">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ '/verdieping/bedrijfsanalysetool/' | url }}">
+                            Bedrijfsanalysetool
+                            <span style="color: #999;">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ '/verdieping/webinars/optimalisatie-winstgevendheid-december-2025/' | url }}">
+                            Webinar Dec 2025
+                            <span style="color: #999;">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Juridisch -->
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <span class="admin-card-icon">📋</span>
+                    <h2 class="admin-card-title">Juridisch</h2>
+                </div>
+                <ul class="admin-card-links">
+                    <li>
+                        <a href="{{ '/privacy/' | url }}">
+                            Privacy Policy
+                            <span style="color: #999;">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ '/algemene-voorwaarden/' | url }}">
+                            Algemene Voorwaarden
+                            <span style="color: #999;">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ '/verwerkersovereenkomst/' | url }}">
+                            Verwerkersovereenkomst
+                            <span style="color: #999;">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Redirects Section -->
+        <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                <span style="font-size: 28px;">🔀</span>
+                <h2 style="color: var(--navy); font-size: 20px; font-weight: 600; margin: 0;">Actieve Redirects</h2>
+            </div>
+            <p style="color: #666; font-size: 14px; margin-bottom: 20px;">
+                Oude WordPress URLs die doorverwijzen naar nieuwe locaties (301 redirects voor SEO).
+            </p>
+            <div style="overflow-x: auto;">
+                <table class="redirect-table">
+                    <thead>
+                        <tr>
+                            <th>Oude URL</th>
+                            <th>Nieuwe URL</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>/december-actie/</td>
+                            <td>/campaigns/december-2025-webinar/</td>
+                            <td><span class="status active">301</span></td>
+                        </tr>
+                        <tr>
+                            <td>/webinar-winstoptimalisatie/</td>
+                            <td>/verdieping/webinars/optimalisatie-winstgevendheid-december-2025/</td>
+                            <td><span class="status active">301</span></td>
+                        </tr>
+                        <tr>
+                            <td>/bedrijfsanalyse-tool/</td>
+                            <td>/verdieping/bedrijfsanalysetool/</td>
+                            <td><span class="status active">301</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</section>
