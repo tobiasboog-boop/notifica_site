@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/uitbesteden-rapportage-mkb/
 showContactPopup: true
 title: "7 Overtuigende Redenen Waarom Uitbesteden van Rapportages voor het MKB Slim Is"

@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/stuurinformatie-bespaar-12-uur/
 showContactPopup: true
 title: "Stuurinformatie: bespaar 12 uur per week met Power BI"

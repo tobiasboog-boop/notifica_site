@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/predictive-maintenance-innovaties/
 showContactPopup: true
 title: "Predictive maintenance: 5 krachtige toepassingen van data als strategisch middel"

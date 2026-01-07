@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/verbeter-datakwaliteit-erp/
 showContactPopup: true
 title: "Vastlegging: 5 onmisbare tips voor verbeteren van de datakwaliteit van je bedrijfssoftware"

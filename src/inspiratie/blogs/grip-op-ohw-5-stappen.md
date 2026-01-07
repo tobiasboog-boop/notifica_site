@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/grip-op-ohw-5-stappen/
 showContactPopup: true
 title: "Eenvoudig grip op OHW: Ontdek Notifica's 5 krachtige stappen"

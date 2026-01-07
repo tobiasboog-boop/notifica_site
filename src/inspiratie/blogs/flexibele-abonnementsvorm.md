@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/flexibele-abonnementsvorm/
 showContactPopup: true
 title: "5 onmiskenbare voordelen van ons alles-in-één abonnement"

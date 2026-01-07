@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/controle-realtime-power-bi/
 showContactPopup: true
 title: "Ontketen onmiddellijke controle: real-time Power BI-inzichten voor de installatiebranche"

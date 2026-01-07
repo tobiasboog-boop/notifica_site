@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/power-bi-vs-excel/
 showContactPopup: true
 title: "Power BI versus Excel: 5 onmisbare voordelen van Power BI voor de installatiesector"

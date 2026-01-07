@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/4-power-bi-stappen-installateurs/
 showContactPopup: true
 title: "Datagedreven dashboards installatiesector: meer grip met Power BI"

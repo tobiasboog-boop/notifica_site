@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/24-essentiele-kpis-installateurs/
 showContactPopup: true
 title: "Dashboards voor installateurs: 24 essentiële KPI's in één overzicht"

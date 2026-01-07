@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/chatgpt-vs-copilot/
 showContactPopup: true
 title: "Copilot vs ChatGPT: de ultieme Power BI AI keuzewijzer voor installateurs"

@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/60-tevreden-klanten/
 showContactPopup: true
 title: "Meer dan 60 tevreden klanten sturen hun succes met datagedreven Power BI dashboards"

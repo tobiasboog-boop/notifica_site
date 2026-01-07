@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/mkb-implementatiegids/
 showContactPopup: true
 title: "MKB-implementatiegids: ontdek 6 essentiële stappen"

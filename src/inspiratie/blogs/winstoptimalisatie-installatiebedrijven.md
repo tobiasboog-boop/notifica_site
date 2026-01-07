@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/winstoptimalisatie-installatiebedrijven/
 showContactPopup: true
 title: "Winstoptimalisatie voor Installatiebedrijven: 5 Kengetallen die het Verschil Maken"

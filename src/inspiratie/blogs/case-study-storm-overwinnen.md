@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/case-study-storm-overwinnen/
 showContactPopup: true
 title: "Storm overwinnen: financieel inzicht als reddingsboei voor installateurs"

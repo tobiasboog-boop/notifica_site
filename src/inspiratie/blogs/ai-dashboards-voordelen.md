@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/ai-dashboards-voordelen/
 showContactPopup: true
 title: "AI dashboards: Ontdek 7 gigantische voordelen voor 2026"

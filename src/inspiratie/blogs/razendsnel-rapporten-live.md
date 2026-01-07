@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/razendsnel-rapporten-live/
 showContactPopup: true
 title: "Razendsnel live: binnen 2 weken met Power BI – eenvoudig, snel, flexibel & betaalbaar"

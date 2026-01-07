@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/direct-inzicht-betere-cijfers/
 showContactPopup: true
 title: "Van rommelige cijfers naar helder inzicht: Notifica's aanpak voor installateurs"

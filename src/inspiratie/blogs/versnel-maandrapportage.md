@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/versnel-maandrapportage/
 showContactPopup: true
 title: "Maandrapportage: 5 onmisbare tips voor tijdbesparing en automatisering"

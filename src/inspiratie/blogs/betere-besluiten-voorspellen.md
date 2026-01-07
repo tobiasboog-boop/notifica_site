@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/betere-besluiten-voorspellen/
 showContactPopup: true
 title: "Stop met terugkijken, Begin met vooruitkijken! Betere besluiten met voorspellen"

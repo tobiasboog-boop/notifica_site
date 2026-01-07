@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/onderhanden-werk-projectsturing/
 showContactPopup: true
 title: "5 Tips voor Onderhanden Werk: Efficiënt je cashflow en projecten besturen"

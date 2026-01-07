@@ -1,5 +1,5 @@
 ---
-layout: base-notion.njk
+layout: blog-post.njk
 permalink: /inspiratie/blogs/ai-servicedesk-werkbondata-installateurs/
 showContactPopup: true
 title: "AI in de Servicedesk: Hoe Installatiebedrijven Slimmer Werken met hun Werkbondata"
