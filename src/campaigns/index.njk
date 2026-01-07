@@ -1,0 +1,79 @@
+---
+layout: base-notion.njk
+title: Campaigns - Notifica
+description: Overzicht van lopende en afgelopen campagnes.
+permalink: /campaigns/
+robots: noindex, nofollow
+---
+
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="container">
+        <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <div class="badge">Intern</div>
+            <h1>Campaigns</h1>
+            <p class="subtitle">
+                Overzicht van lopende en afgelopen marketingcampagnes.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="padding: 60px 0;">
+    <div class="container" style="max-width: 900px;">
+
+        <!-- Actieve Campaigns -->
+        <div style="margin-bottom: 48px;">
+            <h2 style="color: var(--navy); font-size: 24px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px;">
+                <span style="background: #e8f5e9; color: #2e7d32; padding: 4px 12px; border-radius: 6px; font-size: 13px;">Actief</span>
+                Lopende Campagnes
+            </h2>
+
+            <a href="{{ '/campaigns/januari-2026-goede-voornemens/' | url }}" style="display: block; text-decoration: none;">
+                <div style="background: white; border: 2px solid #4caf50; border-radius: 12px; padding: 24px; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                    <div style="display: flex; justify-content: space-between; align-items: start; gap: 16px; flex-wrap: wrap;">
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                                <span style="font-size: 24px;">🎯</span>
+                                <span style="background: #e8f5e9; color: #2e7d32; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 600;">ACTIEF</span>
+                            </div>
+                            <h3 style="color: var(--navy); margin: 0 0 8px; font-size: 20px;">Januari 2026: Goede Voornemens Actie</h3>
+                            <p style="color: #666; margin: 0; font-size: 15px;">Start het jaar goed met gratis KPI Dashboard Scan</p>
+                        </div>
+                        <div style="text-align: right;">
+                            <div style="color: #666; font-size: 13px;">Geldig t/m</div>
+                            <div style="color: var(--navy); font-weight: 600;">31 januari 2026</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Afgelopen Campaigns -->
+        <div>
+            <h2 style="color: var(--navy); font-size: 24px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px;">
+                <span style="background: #f5f5f5; color: #666; padding: 4px 12px; border-radius: 6px; font-size: 13px;">Archief</span>
+                Afgelopen Campagnes
+            </h2>
+
+            <a href="{{ '/campaigns/december-2025-webinar/' | url }}" style="display: block; text-decoration: none;">
+                <div style="background: #fafafa; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; transition: all 0.3s ease; opacity: 0.8;">
+                    <div style="display: flex; justify-content: space-between; align-items: start; gap: 16px; flex-wrap: wrap;">
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                                <span style="font-size: 24px;">🎓</span>
+                                <span style="background: #f5f5f5; color: #666; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 600;">VERLOPEN</span>
+                            </div>
+                            <h3 style="color: #666; margin: 0 0 8px; font-size: 20px;">December 2025: Webinar Winstoptimalisatie</h3>
+                            <p style="color: #999; margin: 0; font-size: 15px;">Gratis webinar over de 5 kengetallen</p>
+                        </div>
+                        <div style="text-align: right;">
+                            <div style="color: #999; font-size: 13px;">Verlopen op</div>
+                            <div style="color: #666; font-weight: 600;">31 december 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</section>

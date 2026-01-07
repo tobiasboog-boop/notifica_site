@@ -1,0 +1,200 @@
+---
+layout: base-notion.njk
+title: Style Guide - Notifica
+description: Notifica huisstijl gids met kleuren, typografie en componenten.
+permalink: /utilities/style-guide/
+robots: noindex, nofollow
+---
+
+<style>
+.sg-section { margin-bottom: 60px; }
+.sg-title { color: var(--navy); font-size: 28px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid var(--navy); }
+.sg-subtitle { color: var(--navy); font-size: 20px; margin: 32px 0 16px; }
+.sg-color-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
+.sg-color-card { border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.sg-color-swatch { height: 100px; }
+.sg-color-info { padding: 12px; background: white; }
+.sg-color-name { font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.sg-color-value { font-size: 13px; color: #666; font-family: monospace; }
+.sg-font-sample { padding: 20px; background: #f8f9fc; border-radius: 8px; margin-bottom: 16px; }
+.sg-component-box { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+</style>
+
+<section class="hero" style="padding: 80px 0 40px;">
+    <div class="container">
+        <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <div class="badge">Utilities</div>
+            <h1>Style Guide</h1>
+            <p class="subtitle">
+                Notifica huisstijl - kleuren, typografie en componenten.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="padding: 40px 0 80px;">
+    <div class="container" style="max-width: 1000px;">
+
+        <!-- Colors -->
+        <div class="sg-section">
+            <h2 class="sg-title">Kleuren</h2>
+
+            <h3 class="sg-subtitle">Primaire kleuren</h3>
+            <div class="sg-color-grid">
+                <div class="sg-color-card">
+                    <div class="sg-color-swatch" style="background: #16136F;"></div>
+                    <div class="sg-color-info">
+                        <div class="sg-color-name">Navy (Primary)</div>
+                        <div class="sg-color-value">#16136F</div>
+                    </div>
+                </div>
+                <div class="sg-color-card">
+                    <div class="sg-color-swatch" style="background: #3636A2;"></div>
+                    <div class="sg-color-info">
+                        <div class="sg-color-name">Blue (Secondary)</div>
+                        <div class="sg-color-value">#3636A2</div>
+                    </div>
+                </div>
+                <div class="sg-color-card">
+                    <div class="sg-color-swatch" style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%);"></div>
+                    <div class="sg-color-info">
+                        <div class="sg-color-name">Gradient</div>
+                        <div class="sg-color-value">Navy → Blue</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="sg-subtitle">Neutrale kleuren</h3>
+            <div class="sg-color-grid">
+                <div class="sg-color-card">
+                    <div class="sg-color-swatch" style="background: #FFFFFF; border: 1px solid #e5e7eb;"></div>
+                    <div class="sg-color-info">
+                        <div class="sg-color-name">White</div>
+                        <div class="sg-color-value">#FFFFFF</div>
+                    </div>
+                </div>
+                <div class="sg-color-card">
+                    <div class="sg-color-swatch" style="background: #F8F9FC;"></div>
+                    <div class="sg-color-info">
+                        <div class="sg-color-name">Background Alt</div>
+                        <div class="sg-color-value">#F8F9FC</div>
+                    </div>
+                </div>
+                <div class="sg-color-card">
+                    <div class="sg-color-swatch" style="background: #E5E7EB;"></div>
+                    <div class="sg-color-info">
+                        <div class="sg-color-name">Border</div>
+                        <div class="sg-color-value">#E5E7EB</div>
+                    </div>
+                </div>
+                <div class="sg-color-card">
+                    <div class="sg-color-swatch" style="background: #333333;"></div>
+                    <div class="sg-color-info">
+                        <div class="sg-color-name">Text Primary</div>
+                        <div class="sg-color-value">#333333</div>
+                    </div>
+                </div>
+                <div class="sg-color-card">
+                    <div class="sg-color-swatch" style="background: #666666;"></div>
+                    <div class="sg-color-info">
+                        <div class="sg-color-name">Text Secondary</div>
+                        <div class="sg-color-value">#666666</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="sg-subtitle">Feedback kleuren</h3>
+            <div class="sg-color-grid">
+                <div class="sg-color-card">
+                    <div class="sg-color-swatch" style="background: #2e7d32;"></div>
+                    <div class="sg-color-info">
+                        <div class="sg-color-name">Success</div>
+                        <div class="sg-color-value">#2e7d32</div>
+                    </div>
+                </div>
+                <div class="sg-color-card">
+                    <div class="sg-color-swatch" style="background: #d32f2f;"></div>
+                    <div class="sg-color-info">
+                        <div class="sg-color-name">Error</div>
+                        <div class="sg-color-value">#d32f2f</div>
+                    </div>
+                </div>
+                <div class="sg-color-card">
+                    <div class="sg-color-swatch" style="background: #ffc107;"></div>
+                    <div class="sg-color-info">
+                        <div class="sg-color-name">Warning</div>
+                        <div class="sg-color-value">#ffc107</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Typography -->
+        <div class="sg-section">
+            <h2 class="sg-title">Typografie</h2>
+
+            <div class="sg-font-sample">
+                <p style="margin: 0 0 8px; color: #666; font-size: 13px;">Font Family</p>
+                <p style="margin: 0; font-size: 24px; color: var(--navy);">Inter</p>
+            </div>
+
+            <h3 class="sg-subtitle">Headings</h3>
+            <div class="sg-component-box">
+                <h1 style="margin: 0 0 16px;">Heading 1 - 48px Bold</h1>
+                <h2 style="margin: 0 0 16px;">Heading 2 - 36px Bold</h2>
+                <h3 style="margin: 0 0 16px;">Heading 3 - 24px Semibold</h3>
+                <h4 style="margin: 0;">Heading 4 - 18px Semibold</h4>
+            </div>
+
+            <h3 class="sg-subtitle">Body Text</h3>
+            <div class="sg-component-box">
+                <p style="font-size: 18px; margin: 0 0 16px;">Large body text - 18px regular. Gebruikt voor introteksten en highlights.</p>
+                <p style="font-size: 16px; margin: 0 0 16px;">Regular body text - 16px regular. Standaard lopende tekst op de website.</p>
+                <p style="font-size: 14px; margin: 0; color: #666;">Small text - 14px regular. Gebruikt voor bijschriften en metadata.</p>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="sg-section">
+            <h2 class="sg-title">Buttons</h2>
+
+            <div class="sg-component-box">
+                <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+                    <a href="#" class="btn">Primary Button</a>
+                    <a href="#" class="btn btn-large">Large Button</a>
+                    <a href="#" class="btn" style="background: white; color: var(--navy);">Secondary Button</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Badges -->
+        <div class="sg-section">
+            <h2 class="sg-title">Badges</h2>
+
+            <div class="sg-component-box">
+                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                    <div class="badge">Default Badge</div>
+                    <span style="background: #e8f5e9; color: #2e7d32; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600;">Success Badge</span>
+                    <span style="background: #fff3cd; color: #856404; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600;">Warning Badge</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="sg-section">
+            <h2 class="sg-title">Cards</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
+                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                    <h3 style="margin: 0 0 12px; color: var(--navy);">Card Title</h3>
+                    <p style="margin: 0; color: #666;">Dit is een standaard card component met subtiele schaduw en afgeronde hoeken.</p>
+                </div>
+                <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); border-radius: 12px; padding: 24px; color: white;">
+                    <h3 style="margin: 0 0 12px; color: white;">Gradient Card</h3>
+                    <p style="margin: 0; opacity: 0.9;">Card met gradient achtergrond voor highlights en CTAs.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

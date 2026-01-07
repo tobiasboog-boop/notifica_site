@@ -1,0 +1,111 @@
+---
+layout: base-notion.njk
+title: Component Library - Notifica
+description: Herbruikbare UI componenten voor de Notifica website.
+permalink: /utilities/component-library/
+robots: noindex, nofollow
+---
+
+<section class="hero" style="padding: 80px 0 40px;">
+    <div class="container">
+        <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <div class="badge">Utilities</div>
+            <h1>Component Library</h1>
+            <p class="subtitle">
+                Herbruikbare UI componenten en voorbeelden.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="padding: 40px 0 80px;">
+    <div class="container" style="max-width: 1000px;">
+
+        <!-- Hero Sections -->
+        <div style="margin-bottom: 60px;">
+            <h2 style="color: var(--navy); font-size: 28px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid var(--navy);">Hero Sections</h2>
+
+            <div style="background: #f8f9fc; border-radius: 12px; padding: 24px; margin-bottom: 24px;">
+                <p style="margin: 0 0 16px; color: #666; font-size: 14px;">Standaard Hero</p>
+                <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); padding: 40px; text-align: center; color: white;">
+                        <span style="background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 13px;">Badge</span>
+                        <h1 style="color: white; margin: 16px 0 12px; font-size: 32px;">Hero Titel</h1>
+                        <p style="opacity: 0.9; margin: 0;">Subtitel met aanvullende informatie.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info Blocks -->
+        <div style="margin-bottom: 60px;">
+            <h2 style="color: var(--navy); font-size: 28px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid var(--navy);">Info Blocks</h2>
+
+            <div style="display: grid; gap: 24px;">
+                <!-- Highlight Box -->
+                <div style="background: white; border: 2px solid #3636A2; border-radius: 8px; padding: 16px; display: flex; align-items: center; gap: 12px;">
+                    <div style="font-size: 24px; flex-shrink: 0;">💡</div>
+                    <div>
+                        <div style="font-weight: 600; color: var(--navy); margin-bottom: 4px;">Highlight Box</div>
+                        <div style="font-size: 14px; color: var(--text-secondary);">Voor belangrijke informatie of tips.</div>
+                    </div>
+                </div>
+
+                <!-- Warning Box -->
+                <div style="background: #fff8e1; border: 2px solid #ffc107; border-radius: 8px; padding: 16px; display: flex; align-items: center; gap: 12px;">
+                    <div style="font-size: 24px; flex-shrink: 0;">⚠️</div>
+                    <div>
+                        <div style="font-weight: 600; color: #856404; margin-bottom: 4px;">Warning Box</div>
+                        <div style="font-size: 14px; color: #856404;">Voor waarschuwingen en aandachtspunten.</div>
+                    </div>
+                </div>
+
+                <!-- Success Box -->
+                <div style="background: #e8f5e9; border: 2px solid #4caf50; border-radius: 8px; padding: 16px; display: flex; align-items: center; gap: 12px;">
+                    <div style="font-size: 24px; flex-shrink: 0;">✅</div>
+                    <div>
+                        <div style="font-weight: 600; color: #2e7d32; margin-bottom: 4px;">Success Box</div>
+                        <div style="font-size: 14px; color: #2e7d32;">Voor bevestigingen en positieve feedback.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Accordions -->
+        <div style="margin-bottom: 60px;">
+            <h2 style="color: var(--navy); font-size: 28px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid var(--navy);">Accordions</h2>
+
+            <details style="background: white; border: 2px solid #e8e8e8; border-radius: 14px; margin-bottom: 12px; overflow: hidden;">
+                <summary style="padding: 20px 24px; cursor: pointer; display: flex; align-items: center; list-style: none; background: linear-gradient(135deg, #fafbff 0%, #ffffff 100%);">
+                    <div style="width: 36px; height: 36px; background: #16136f; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 16px;">1</div>
+                    <span style="color: var(--navy); font-size: 18px; font-weight: 600; flex: 1;">Accordion Item Titel</span>
+                </summary>
+                <div style="padding: 20px 24px; border-top: 1px solid #f0f0f0;">
+                    <p style="margin: 0; color: #444;">Dit is de inhoud van het accordion item. Hier kun je uitgebreide informatie plaatsen die standaard verborgen is.</p>
+                </div>
+            </details>
+
+            <details style="background: white; border: 2px solid #e8e8e8; border-radius: 14px; overflow: hidden;">
+                <summary style="padding: 20px 24px; cursor: pointer; display: flex; align-items: center; list-style: none; background: linear-gradient(135deg, #fafbff 0%, #ffffff 100%);">
+                    <div style="width: 36px; height: 36px; background: #16136f; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 16px;">2</div>
+                    <span style="color: var(--navy); font-size: 18px; font-weight: 600; flex: 1;">Nog een Accordion Item</span>
+                </summary>
+                <div style="padding: 20px 24px; border-top: 1px solid #f0f0f0;">
+                    <p style="margin: 0; color: #444;">Meer inhoud voor het tweede item.</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- CTA Sections -->
+        <div style="margin-bottom: 60px;">
+            <h2 style="color: var(--navy); font-size: 28px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid var(--navy);">CTA Sections</h2>
+
+            <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); border-radius: 16px; padding: 48px; text-align: center; color: white;">
+                <h2 style="color: white; margin: 0 0 16px;">Call to Action Titel</h2>
+                <p style="opacity: 0.9; margin: 0 auto 24px; max-width: 500px;">Korte beschrijving die de gebruiker overtuigt om actie te ondernemen.</p>
+                <a href="#" class="btn" style="background: white; color: var(--navy);">Actie Button</a>
+            </div>
+        </div>
+
+    </div>
+</section>

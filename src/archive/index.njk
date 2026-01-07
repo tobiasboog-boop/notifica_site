@@ -1,0 +1,112 @@
+---
+layout: base-notion.njk
+title: Archive - Notifica
+description: Archief van oude pagina's en redirects.
+permalink: /archive/
+robots: noindex, nofollow
+---
+
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="container">
+        <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <div class="badge">Intern</div>
+            <h1>Archive</h1>
+            <p class="subtitle">
+                Overzicht van gearchiveerde pagina's en redirects voor SEO-beheer.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="padding: 60px 0;">
+    <div class="container" style="max-width: 900px;">
+
+        <!-- Redirect Info -->
+        <div style="background: #fff8e1; border: 2px solid #ffc107; border-radius: 12px; padding: 24px; margin-bottom: 32px;">
+            <div style="display: flex; align-items: start; gap: 16px;">
+                <span style="font-size: 24px;">💡</span>
+                <div>
+                    <h3 style="color: #856404; margin: 0 0 8px;">Over Redirects</h3>
+                    <p style="color: #856404; margin: 0; font-size: 14px; line-height: 1.6;">
+                        Oude WordPress URLs worden via GitHub Pages of een redirect-service doorgestuurd naar de nieuwe pagina's.
+                        Dit voorkomt 404-fouten en behoudt SEO-waarde van inkomende links.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Archived Pages -->
+        <div style="margin-bottom: 48px;">
+            <h2 style="color: var(--navy); font-size: 24px; margin-bottom: 24px;">Gearchiveerde Pagina's</h2>
+
+            <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="background: #f8f9fc;">
+                            <th style="padding: 16px; text-align: left; color: var(--navy); font-size: 13px; text-transform: uppercase; border-bottom: 1px solid #e5e7eb;">Oude URL</th>
+                            <th style="padding: 16px; text-align: left; color: var(--navy); font-size: 13px; text-transform: uppercase; border-bottom: 1px solid #e5e7eb;">Nieuwe URL</th>
+                            <th style="padding: 16px; text-align: center; color: var(--navy); font-size: 13px; text-transform: uppercase; border-bottom: 1px solid #e5e7eb;">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #f0f0f0; font-family: monospace; font-size: 13px; color: #666;">/december-actie/</td>
+                            <td style="padding: 16px; border-bottom: 1px solid #f0f0f0; font-family: monospace; font-size: 13px; color: #666;">/campaigns/december-2025-webinar/</td>
+                            <td style="padding: 16px; border-bottom: 1px solid #f0f0f0; text-align: center;">
+                                <span style="background: #e8f5e9; color: #2e7d32; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600;">301</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #f0f0f0; font-family: monospace; font-size: 13px; color: #666;">/webinar-winstoptimalisatie/</td>
+                            <td style="padding: 16px; border-bottom: 1px solid #f0f0f0; font-family: monospace; font-size: 13px; color: #666;">/verdieping/webinars/optimalisatie-winstgevendheid-december-2025/</td>
+                            <td style="padding: 16px; border-bottom: 1px solid #f0f0f0; text-align: center;">
+                                <span style="background: #e8f5e9; color: #2e7d32; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600;">301</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #f0f0f0; font-family: monospace; font-size: 13px; color: #666;">/bedrijfsanalyse-tool/</td>
+                            <td style="padding: 16px; border-bottom: 1px solid #f0f0f0; font-family: monospace; font-size: 13px; color: #666;">/verdieping/bedrijfsanalysetool/</td>
+                            <td style="padding: 16px; border-bottom: 1px solid #f0f0f0; text-align: center;">
+                                <span style="background: #e8f5e9; color: #2e7d32; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600;">301</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; font-family: monospace; font-size: 13px; color: #666;">/blog/*</td>
+                            <td style="padding: 16px; font-family: monospace; font-size: 13px; color: #666;">/inspiratie/blogs/*</td>
+                            <td style="padding: 16px; text-align: center;">
+                                <span style="background: #fff3cd; color: #856404; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600;">Pattern</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Redirect Implementation -->
+        <div>
+            <h2 style="color: var(--navy); font-size: 24px; margin-bottom: 24px;">Redirect Implementatie</h2>
+
+            <div style="background: #f8f9fc; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px;">
+                <h3 style="color: var(--navy); font-size: 18px; margin: 0 0 16px;">GitHub Pages Redirects</h3>
+                <p style="color: #666; font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
+                    Voor GitHub Pages kunnen redirects worden geïmplementeerd via HTML meta refresh of JavaScript redirects in individuele HTML bestanden.
+                </p>
+                <div style="background: #1e1e1e; border-radius: 8px; padding: 16px; overflow-x: auto;">
+                    <pre style="margin: 0; color: #d4d4d4; font-size: 13px; line-height: 1.5;"><code>&lt;!-- Voorbeeld redirect pagina --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta http-equiv="refresh" content="0;url=/verdieping/bedrijfsanalysetool/"&gt;
+  &lt;link rel="canonical" href="/verdieping/bedrijfsanalysetool/"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Redirecting...&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

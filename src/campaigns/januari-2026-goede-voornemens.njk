@@ -1,0 +1,414 @@
+---
+layout: base-notion.njk
+title: Goede Voornemens Actie Januari 2026 - Notifica
+description: Start 2026 goed! Ontvang een gratis KPI Dashboard Scan ter waarde van €500 als je in januari klant wordt.
+permalink: /campaigns/januari-2026-goede-voornemens/
+showContactPopup: true
+---
+
+<style>
+.campaign-hero {
+    background: linear-gradient(135deg, #16136F 0%, #3636A2 100%);
+    padding: 100px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.campaign-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+}
+.campaign-hero .container {
+    position: relative;
+    z-index: 1;
+}
+.campaign-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    backdrop-filter: blur(10px);
+}
+.campaign-hero h1 {
+    color: white;
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    font-weight: 800;
+}
+.campaign-hero .subtitle {
+    color: rgba(255,255,255,0.9);
+    font-size: 22px;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.5;
+}
+.campaign-value {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.15);
+    padding: 16px 32px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+.campaign-value-label {
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+}
+.campaign-value-amount {
+    color: white;
+    font-size: 32px;
+    font-weight: 800;
+}
+.campaign-timer {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.timer-block {
+    background: rgba(255,255,255,0.1);
+    padding: 16px 24px;
+    border-radius: 12px;
+    min-width: 80px;
+}
+.timer-number {
+    color: white;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1;
+}
+.timer-label {
+    color: rgba(255,255,255,0.7);
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.offer-section {
+    padding: 80px 0;
+}
+.offer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.offer-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(22,19,111,0.1);
+    border: 2px solid #e5e7eb;
+}
+.offer-card.highlight {
+    border-color: #16136f;
+    position: relative;
+}
+.offer-card.highlight::before {
+    content: 'ACTIE';
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    background: linear-gradient(135deg, #16136F 0%, #3636A2 100%);
+    color: white;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+.offer-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.offer-title {
+    color: var(--navy);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.offer-description {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+.offer-includes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.offer-includes li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #444;
+}
+.offer-includes li:last-child {
+    border-bottom: none;
+}
+.offer-includes li::before {
+    content: '✓';
+    color: #2e7d32;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.how-it-works {
+    background: #f8f9fc;
+    padding: 80px 0;
+}
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.step-card {
+    text-align: center;
+    position: relative;
+}
+.step-card::after {
+    content: '→';
+    position: absolute;
+    right: -20px;
+    top: 40px;
+    font-size: 24px;
+    color: #ccc;
+}
+.step-card:last-child::after {
+    display: none;
+}
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #16136F 0%, #3636A2 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 auto 20px;
+}
+.step-title {
+    color: var(--navy);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.step-text {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.campaign-cta {
+    background: linear-gradient(135deg, #16136F 0%, #3636A2 100%);
+    padding: 80px 0;
+    text-align: center;
+}
+.campaign-cta h2 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+.campaign-cta p {
+    color: rgba(255,255,255,0.9);
+    font-size: 18px;
+    max-width: 500px;
+    margin: 0 auto 32px;
+}
+.campaign-cta .btn {
+    background: white;
+    color: var(--navy);
+    font-size: 18px;
+    padding: 16px 40px;
+}
+
+.fine-print {
+    padding: 40px 0;
+    text-align: center;
+}
+.fine-print p {
+    color: #999;
+    font-size: 13px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .campaign-hero h1 { font-size: 36px; }
+    .offer-grid { grid-template-columns: 1fr; }
+    .steps-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+    .step-card::after { display: none; }
+    .campaign-timer { flex-wrap: wrap; }
+}
+</style>
+
+<!-- Hero -->
+<section class="campaign-hero">
+    <div class="container">
+        <div class="campaign-badge">Januari 2026 Actie</div>
+        <h1>Start 2026 met<br>Goede Voornemens</h1>
+        <p class="subtitle">
+            Maak van "meer grip op mijn cijfers" geen voornemen, maar werkelijkheid. Word in januari klant en ontvang een gratis KPI Dashboard Scan.
+        </p>
+        <div class="campaign-value">
+            <span class="campaign-value-label">Gratis t.w.v.</span>
+            <span class="campaign-value-amount">€500</span>
+        </div>
+        <div class="campaign-timer" id="countdown">
+            <div class="timer-block">
+                <div class="timer-number" id="days">--</div>
+                <div class="timer-label">Dagen</div>
+            </div>
+            <div class="timer-block">
+                <div class="timer-number" id="hours">--</div>
+                <div class="timer-label">Uren</div>
+            </div>
+            <div class="timer-block">
+                <div class="timer-number" id="minutes">--</div>
+                <div class="timer-label">Minuten</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Offer Details -->
+<section class="offer-section">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2 style="color: var(--navy); font-size: 36px; margin-bottom: 16px;">Wat krijg je?</h2>
+            <p style="color: #666; font-size: 18px; max-width: 600px; margin: 0 auto;">
+                Als je in januari 2026 klant wordt, ontvang je naast je dashboard ook een uitgebreide KPI Scan.
+            </p>
+        </div>
+
+        <div class="offer-grid">
+            <div class="offer-card">
+                <div class="offer-icon">📊</div>
+                <div class="offer-title">Notifica Dashboard</div>
+                <div class="offer-description">
+                    Je standaard Notifica dashboard met real-time inzicht in je bedrijfsprestaties.
+                </div>
+                <ul class="offer-includes">
+                    <li>Koppeling met je ERP-systeem</li>
+                    <li>Real-time data synchronisatie</li>
+                    <li>Standaard KPI rapportages</li>
+                    <li>Maandelijkse ondersteuning</li>
+                </ul>
+            </div>
+
+            <div class="offer-card highlight">
+                <div class="offer-icon">🎯</div>
+                <div class="offer-title">Gratis KPI Dashboard Scan</div>
+                <div class="offer-description">
+                    Een persoonlijke analyse van je huidige KPI's en verbeterpotentieel door onze consultants.
+                </div>
+                <ul class="offer-includes">
+                    <li>1-op-1 sessie met een consultant</li>
+                    <li>Analyse van je huidige rapportages</li>
+                    <li>Identificatie van 5 quick wins</li>
+                    <li>Concreet actieplan op maat</li>
+                    <li>Benchmark met branchegenoten</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How it Works -->
+<section class="how-it-works">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2 style="color: var(--navy); font-size: 36px; margin-bottom: 16px;">Hoe werkt het?</h2>
+        </div>
+
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-title">Neem contact op</div>
+                <div class="step-text">Plan een vrijblijvend kennismakingsgesprek in januari</div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-title">Word klant</div>
+                <div class="step-text">Kies het dashboard pakket dat bij je past</div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-title">Ontvang je scan</div>
+                <div class="step-text">Plan je gratis KPI Dashboard Scan in</div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-title">Groei!</div>
+                <div class="step-text">Verbeter je resultaten met concrete inzichten</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="campaign-cta">
+    <div class="container">
+        <h2>Klaar om 2026 goed te beginnen?</h2>
+        <p>Neem contact op en maak je goede voornemen waar. Actie geldig t/m 31 januari 2026.</p>
+        <a href="#" class="btn btn-large" data-pipedrive-form="contact">Claim je gratis KPI Scan</a>
+    </div>
+</section>
+
+<!-- Fine Print -->
+<section class="fine-print">
+    <div class="container">
+        <p>
+            * Actie geldig voor nieuwe klanten die in januari 2026 een Notifica dashboard abonnement afsluiten. De KPI Dashboard Scan (t.w.v. €500) wordt ingepland binnen 3 maanden na start van het abonnement. Niet combineerbaar met andere acties.
+        </p>
+    </div>
+</section>
+
+<!-- Countdown Script -->
+<script>
+(function() {
+    const endDate = new Date('2026-01-31T23:59:59').getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = endDate - now;
+
+        if (distance < 0) {
+            document.getElementById('countdown').innerHTML = '<p style="color: rgba(255,255,255,0.8);">Deze actie is verlopen</p>';
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+        document.getElementById('days').textContent = days;
+        document.getElementById('hours').textContent = hours;
+        document.getElementById('minutes').textContent = minutes;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+})();
+</script>
