@@ -81,6 +81,24 @@ robots: noindex, nofollow
     background: #f5f5f5;
     color: #666;
 }
+.admin-card-links .status.menu {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+.section-title {
+    color: var(--navy);
+    font-size: 24px;
+    font-weight: 700;
+    margin: 48px 0 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.section-title:first-of-type {
+    margin-top: 0;
+}
 .redirect-table {
     width: 100%;
     border-collapse: collapse;
@@ -105,6 +123,68 @@ robots: noindex, nofollow
     font-family: inherit;
     text-align: center;
 }
+.collapsible-section {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+.collapsible-section summary {
+    padding: 16px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    list-style: none;
+    background: #f8f9fc;
+    font-weight: 600;
+    color: var(--navy);
+}
+.collapsible-section summary::-webkit-details-marker {
+    display: none;
+}
+.collapsible-section summary::after {
+    content: '▼';
+    margin-left: auto;
+    font-size: 12px;
+    transition: transform 0.2s;
+}
+.collapsible-section[open] summary::after {
+    transform: rotate(180deg);
+}
+.collapsible-section .content {
+    padding: 16px 20px;
+}
+.page-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 8px;
+}
+.page-list li a {
+    display: block;
+    padding: 10px 14px;
+    background: #f8f9fc;
+    border-radius: 6px;
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+.page-list li a:hover {
+    background: #eef0ff;
+}
+.page-count {
+    background: var(--navy);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
 </style>
 
 <section class="hero" style="padding: 80px 0 40px;">
@@ -113,22 +193,24 @@ robots: noindex, nofollow
             <div class="badge">Intern Beheer</div>
             <h1>Admin Dashboard</h1>
             <p class="subtitle">
-                Centrale toegang tot alle interne pagina's, campagnes en redirects.
+                Centrale toegang tot alle pagina's, campagnes en content.
             </p>
         </div>
     </div>
 </section>
 
 <section class="section" style="padding: 40px 0 80px;">
-    <div class="container" style="max-width: 1000px;">
+    <div class="container" style="max-width: 1100px;">
 
+        <!-- Quick Access -->
+        <h2 class="section-title">⚡ Quick Access</h2>
         <div class="admin-grid">
 
             <!-- Campaigns -->
             <div class="admin-card">
                 <div class="admin-card-header">
                     <span class="admin-card-icon">📣</span>
-                    <h2 class="admin-card-title">Campaigns</h2>
+                    <h3 class="admin-card-title">Campaigns</h3>
                 </div>
                 <ul class="admin-card-links">
                     <li>
@@ -150,7 +232,7 @@ robots: noindex, nofollow
             <div class="admin-card">
                 <div class="admin-card-header">
                     <span class="admin-card-icon">🛠️</span>
-                    <h2 class="admin-card-title">Utilities</h2>
+                    <h3 class="admin-card-title">Utilities</h3>
                 </div>
                 <ul class="admin-card-links">
                     <li>
@@ -168,44 +250,16 @@ robots: noindex, nofollow
                 </ul>
             </div>
 
-            <!-- Verdieping (niet in hoofdmenu submenu's) -->
-            <div class="admin-card">
-                <div class="admin-card-header">
-                    <span class="admin-card-icon">📚</span>
-                    <h2 class="admin-card-title">Verdieping</h2>
-                </div>
-                <ul class="admin-card-links">
-                    <li>
-                        <a href="{{ '/verdieping/' | url }}">
-                            Verdieping Overzicht
-                            <span style="color: #999;">→</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ '/verdieping/bedrijfsanalysetool/' | url }}">
-                            Bedrijfsanalysetool
-                            <span style="color: #999;">→</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ '/verdieping/webinars/optimalisatie-winstgevendheid-december-2025/' | url }}">
-                            Webinar Dec 2025
-                            <span style="color: #999;">→</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
             <!-- Juridisch -->
             <div class="admin-card">
                 <div class="admin-card-header">
                     <span class="admin-card-icon">📋</span>
-                    <h2 class="admin-card-title">Juridisch</h2>
+                    <h3 class="admin-card-title">Juridisch</h3>
                 </div>
                 <ul class="admin-card-links">
                     <li>
                         <a href="{{ '/privacy/' | url }}">
-                            Privacy Policy
+                            Privacybeleid
                             <span style="color: #999;">→</span>
                         </a>
                     </li>
@@ -226,14 +280,163 @@ robots: noindex, nofollow
 
         </div>
 
-        <!-- Redirects Section -->
-        <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px;">
-            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-                <span style="font-size: 28px;">🔀</span>
-                <h2 style="color: var(--navy); font-size: 20px; font-weight: 600; margin: 0;">Actieve Redirects</h2>
+        <!-- Volledige Sitemap -->
+        <h2 class="section-title">📄 Alle Pagina's (Sitemap)</h2>
+
+        <!-- Hoofdpagina's -->
+        <details class="collapsible-section" open>
+            <summary>
+                <span>🏠 Hoofdpagina's</span>
+                <span class="page-count">7</span>
+            </summary>
+            <div class="content">
+                <ul class="page-list">
+                    <li><a href="{{ '/' | url }}">Home</a></li>
+                    <li><a href="{{ '/over-ons/' | url }}">Over ons</a></li>
+                    <li><a href="{{ '/klanten-ervaringen/' | url }}">Klanten & Ervaringen</a></li>
+                    <li><a href="{{ '/veelgestelde-vragen/' | url }}">Veelgestelde Vragen (FAQ)</a></li>
+                    <li><a href="{{ '/privacy/' | url }}">Privacybeleid</a></li>
+                    <li><a href="{{ '/algemene-voorwaarden/' | url }}">Algemene Voorwaarden</a></li>
+                    <li><a href="{{ '/verwerkersovereenkomst/' | url }}">Verwerkersovereenkomst</a></li>
+                </ul>
             </div>
+        </details>
+
+        <!-- Bedrijfssoftware -->
+        <details class="collapsible-section">
+            <summary>
+                <span>💼 Bedrijfssoftware / ERP Koppelingen</span>
+                <span class="page-count">7</span>
+            </summary>
+            <div class="content">
+                <ul class="page-list">
+                    <li><a href="{{ '/bedrijfssoftware/' | url }}">Overzicht ERP Koppelingen</a></li>
+                    <li><a href="{{ '/bedrijfssoftware/syntess-atrium/' | url }}">Syntess Atrium</a></li>
+                    <li><a href="{{ '/bedrijfssoftware/4ps/' | url }}">4PS</a></li>
+                    <li><a href="{{ '/bedrijfssoftware/acto/' | url }}">ACTO</a></li>
+                    <li><a href="{{ '/bedrijfssoftware/admicom/' | url }}">Admicom</a></li>
+                    <li><a href="{{ '/bedrijfssoftware/enk-software/' | url }}">ENK Software</a></li>
+                    <li><a href="{{ '/bedrijfssoftware/bouwinfosys/' | url }}">BouwInfosys</a></li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- Inspiratie - Blogs -->
+        <details class="collapsible-section">
+            <summary>
+                <span>📝 Blogs</span>
+                <span class="page-count">22</span>
+            </summary>
+            <div class="content">
+                <ul class="page-list">
+                    <li><a href="{{ '/inspiratie/blogs/' | url }}">Blog Overzicht</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/24-essentiele-kpis-installateurs/' | url }}">24 Essentiële KPI's voor Installateurs</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/4-power-bi-stappen-installateurs/' | url }}">4 Power BI Stappen voor Installateurs</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/60-tevreden-klanten/' | url }}">60 Tevreden Klanten</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/ai-dashboards-voordelen/' | url }}">AI Dashboards Voordelen</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/ai-servicedesk-werkbondata-installateurs/' | url }}">AI Servicedesk Werkbondata</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/betere-besluiten-voorspellen/' | url }}">Betere Besluiten Voorspellen</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/case-study-storm-overwinnen/' | url }}">Case Study: Storm Overwinnen</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/chatgpt-vs-copilot/' | url }}">ChatGPT vs Copilot</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/controle-realtime-power-bi/' | url }}">Controle Realtime Power BI</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/direct-inzicht-betere-cijfers/' | url }}">Direct Inzicht Betere Cijfers</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/flexibele-abonnementsvorm/' | url }}">Flexibele Abonnementsvorm</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/grip-op-ohw-5-stappen/' | url }}">Grip op OHW: 5 Stappen</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/mkb-implementatiegids/' | url }}">MKB Implementatiegids</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/onderhanden-werk-projectsturing/' | url }}">Onderhanden Werk Projectsturing</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/power-bi-vs-excel/' | url }}">Power BI vs Excel</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/predictive-maintenance-innovaties/' | url }}">Predictive Maintenance Innovaties</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/razendsnel-rapporten-live/' | url }}">Razendsnel Rapporten Live</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/stuurinformatie-bespaar-12-uur/' | url }}">Stuurinformatie: Bespaar 12 Uur</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/uitbesteden-rapportage-mkb/' | url }}">Uitbesteden Rapportage MKB</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/verbeter-datakwaliteit-erp/' | url }}">Verbeter Datakwaliteit ERP</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/versnel-maandrapportage/' | url }}">Versnel Maandrapportage</a></li>
+                    <li><a href="{{ '/inspiratie/blogs/winstoptimalisatie-installatiebedrijven/' | url }}">Winstoptimalisatie Installatiebedrijven</a></li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- Inspiratie - Whitepapers -->
+        <details class="collapsible-section">
+            <summary>
+                <span>📚 Whitepapers</span>
+                <span class="page-count">8</span>
+            </summary>
+            <div class="content">
+                <ul class="page-list">
+                    <li><a href="{{ '/inspiratie/whitepapers/' | url }}">Whitepaper Overzicht</a></li>
+                    <li><a href="{{ '/inspiratie/whitepapers/24-kpis-installatiebedrijven/' | url }}">24 KPI's voor Installatiebedrijven</a></li>
+                    <li><a href="{{ '/inspiratie/whitepapers/datakwaliteit-stuurinformatie/' | url }}">Datakwaliteit & Stuurinformatie</a></li>
+                    <li><a href="{{ '/inspiratie/whitepapers/installatiebranche-benchmark/' | url }}">Installatiebranche Benchmark</a></li>
+                    <li><a href="{{ '/inspiratie/whitepapers/ohw-cashflow-management/' | url }}">OHW & Cashflow Management</a></li>
+                    <li><a href="{{ '/inspiratie/whitepapers/sneller-rapporteren-power-bi/' | url }}">Sneller Rapporteren met Power BI</a></li>
+                    <li><a href="{{ '/inspiratie/whitepapers/van-erp-naar-power-bi/' | url }}">Van ERP naar Power BI</a></li>
+                    <li><a href="{{ '/inspiratie/whitepapers/wat-dashboards-opleveren/' | url }}">Wat Dashboards Opleveren</a></li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- Inspiratie - Video's -->
+        <details class="collapsible-section">
+            <summary>
+                <span>🎬 Video's</span>
+                <span class="page-count">1</span>
+            </summary>
+            <div class="content">
+                <ul class="page-list">
+                    <li><a href="{{ '/inspiratie/videos/' | url }}">Video Overzicht</a></li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- Verdieping -->
+        <details class="collapsible-section">
+            <summary>
+                <span>🔍 Verdieping</span>
+                <span class="page-count">3</span>
+            </summary>
+            <div class="content">
+                <ul class="page-list">
+                    <li><a href="{{ '/verdieping/' | url }}">Verdieping Overzicht</a></li>
+                    <li><a href="{{ '/verdieping/bedrijfsanalysetool/' | url }}">Bedrijfsanalysetool</a></li>
+                    <li><a href="{{ '/verdieping/webinars/optimalisatie-winstgevendheid-december-2025/' | url }}">Webinar: Optimalisatie Winstgevendheid (Dec 2025)</a></li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- Campaigns -->
+        <details class="collapsible-section">
+            <summary>
+                <span>📣 Campaigns</span>
+                <span class="page-count">2</span>
+            </summary>
+            <div class="content">
+                <ul class="page-list">
+                    <li><a href="{{ '/campaigns/januari-2026-goede-voornemens/' | url }}">Januari 2026: Goede Voornemens Actie ✅</a></li>
+                    <li><a href="{{ '/campaigns/december-2025-webinar/' | url }}">December 2025: Webinar (Verlopen)</a></li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- Utilities -->
+        <details class="collapsible-section">
+            <summary>
+                <span>🛠️ Utilities (Intern)</span>
+                <span class="page-count">2</span>
+            </summary>
+            <div class="content">
+                <ul class="page-list">
+                    <li><a href="{{ '/utilities/style-guide/' | url }}">Style Guide</a></li>
+                    <li><a href="{{ '/utilities/component-library/' | url }}">Component Library</a></li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- Redirects -->
+        <h2 class="section-title">🔀 Actieve Redirects (SEO)</h2>
+        <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px;">
             <p style="color: #666; font-size: 14px; margin-bottom: 20px;">
-                Oude WordPress URLs die doorverwijzen naar nieuwe locaties (301 redirects voor SEO).
+                Oude WordPress URLs die automatisch doorverwijzen naar de nieuwe locaties.
             </p>
             <div style="overflow-x: auto;">
                 <table class="redirect-table">
@@ -241,22 +444,22 @@ robots: noindex, nofollow
                         <tr>
                             <th>Oude URL</th>
                             <th>Nieuwe URL</th>
-                            <th>Status</th>
+                            <th>Type</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>/december-actie/</td>
+                            <td><a href="{{ '/december-actie/' | url }}" style="color: var(--navy);">/december-actie/</a></td>
                             <td>/campaigns/december-2025-webinar/</td>
                             <td><span class="status active">301</span></td>
                         </tr>
                         <tr>
-                            <td>/webinar-winstoptimalisatie/</td>
+                            <td><a href="{{ '/webinar-winstoptimalisatie/' | url }}" style="color: var(--navy);">/webinar-winstoptimalisatie/</a></td>
                             <td>/verdieping/webinars/optimalisatie-winstgevendheid-december-2025/</td>
                             <td><span class="status active">301</span></td>
                         </tr>
                         <tr>
-                            <td>/bedrijfsanalyse-tool/</td>
+                            <td><a href="{{ '/bedrijfsanalyse-tool/' | url }}" style="color: var(--navy);">/bedrijfsanalyse-tool/</a></td>
                             <td>/verdieping/bedrijfsanalysetool/</td>
                             <td><span class="status active">301</span></td>
                         </tr>
