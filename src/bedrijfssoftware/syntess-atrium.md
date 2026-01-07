@@ -182,17 +182,97 @@ showContactPopup: true
     </div>
 </section>
 
-<!-- Testimonial -->
+<!-- Testimonials -->
 <section class="section section-alt">
     <div class="container">
+        <div class="section-header">
+            <h2>Wat onze Syntess klanten zeggen</h2>
+        </div>
         <div class="testimonials-grid">
+            <!-- Review 1 - Nikkelen Elektrotechniek -->
             <div class="testimonial-card">
-                <div class="testimonial-text">
-                    "Dankzij Notifica hebben we veel beter grip gekregen op onze data. Het platform is gebruiksvriendelijk, uniek en integreert naadloos met Syntess ERP."
+                <div class="testimonial-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <div class="testimonial-rating" style="display: flex; gap: 4px; color: #FCD34D; font-size: 18px;">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                    </div>
+                    <span style="font-size: 14px; color: var(--text-secondary);">Google Review</span>
                 </div>
-                <div class="testimonial-author">
-                    <div class="author-name">Jon Wijers</div>
-                    <div class="author-title">Elektrotechnisch Engineer – Nikkelen Elektrotechniek</div>
+                <div class="testimonial-text">
+                    "Dankzij Notifica hebben we veel beter grip gekregen op onze data. Ze hebben een oplossing neergezet die we zelf niet op dit niveau hadden kunnen bouwen."
+                </div>
+                <div style="margin-top: 16px; padding: 12px; background-color: #F3F4F6; border-radius: 8px; font-size: 14px;">
+                    <strong style="color: var(--navy);">Oplossing:</strong> <span style="color: var(--text-secondary);">Realtime financieel inzicht per periode voor snellere maandafsluiting</span>
+                </div>
+                <div class="testimonial-author" style="margin-top: 16px; display: flex; align-items: center; gap: 16px;">
+                    <a href="https://www.nikkelen.nl" target="_blank" rel="noopener noreferrer" style="flex-shrink: 0;">
+                        <img src="{{ '/assets/images/Nikkelen_Logo_converted.png' | url }}" alt="Nikkelen Elektrotechniek" style="width: 60px; height: 60px; object-fit: contain;">
+                    </a>
+                    <div>
+                        <div class="author-name">Jon Wijers</div>
+                        <div class="author-title">Elektrotechnisch Engineer – Nikkelen Elektrotechniek</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 - Denned Installatietechniek -->
+            <div class="testimonial-card">
+                <div class="testimonial-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <div class="testimonial-rating" style="display: flex; gap: 4px; color: #FCD34D; font-size: 18px;">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span style="color: #E5E7EB;">★</span>
+                    </div>
+                    <span style="font-size: 14px; color: var(--text-secondary);">Google Review</span>
+                </div>
+                <div class="testimonial-text">
+                    "Door de naadloze aansluiting van de Power BI rapporten van Notifica op onze Syntess software krijgen we eindelijk dingen duidelijk te zien."
+                </div>
+                <div style="margin-top: 16px; padding: 12px; background-color: #F3F4F6; border-radius: 8px; font-size: 14px;">
+                    <strong style="color: var(--navy);">Oplossing:</strong> <span style="color: var(--text-secondary);">Marge en prestatiesturen in plaats van alleen op uren</span>
+                </div>
+                <div class="testimonial-author" style="margin-top: 16px; display: flex; align-items: center; gap: 16px;">
+                    <a href="https://www.denned.nl" target="_blank" rel="noopener noreferrer" style="flex-shrink: 0;">
+                        <img src="{{ '/assets/images/denned_logo_converted.png' | url }}" alt="Denned Installatietechniek" style="width: 60px; height: 60px; object-fit: contain;">
+                    </a>
+                    <div>
+                        <div class="author-name">Rob de Kort</div>
+                        <div class="author-title">Controller – Denned Installatietechniek</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 - Verkade Klimaat -->
+            <div class="testimonial-card">
+                <div class="testimonial-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <div class="testimonial-rating" style="display: flex; gap: 4px; color: #FCD34D; font-size: 18px;">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                    </div>
+                    <span style="font-size: 14px; color: var(--text-secondary);">Google Review</span>
+                </div>
+                <div class="testimonial-text">
+                    "Dankzij de Power BI oplossing van Notifica hebben wij snel en makkelijk inzicht in de data die in ons Syntess Atrium ERP pakket aanwezig is."
+                </div>
+                <div style="margin-top: 16px; padding: 12px; background-color: #F3F4F6; border-radius: 8px; font-size: 14px;">
+                    <strong style="color: var(--navy);">Oplossing:</strong> <span style="color: var(--text-secondary);">Geautomatiseerd OHW-proces voor snellere tussentijdse projectresultaten</span>
+                </div>
+                <div class="testimonial-author" style="margin-top: 16px; display: flex; align-items: center; gap: 16px;">
+                    <a href="https://www.verkadeklimaattechniek.nl" target="_blank" rel="noopener noreferrer" style="flex-shrink: 0;">
+                        <img src="{{ '/assets/images/verkade_converted.png' | url }}" alt="Verkade Klimaat" style="width: 60px; height: 60px; object-fit: contain;">
+                    </a>
+                    <div>
+                        <div class="author-name">Vincent Kouer</div>
+                        <div class="author-title">ERP Implementation – Verkade Klimaat</div>
+                    </div>
                 </div>
             </div>
         </div>
