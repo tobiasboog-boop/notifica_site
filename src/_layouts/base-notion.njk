@@ -33,7 +33,11 @@
 
   <main>
     {% block content %}
-      {{ content | safe }}
+    <article class="blog-content">
+      <div class="container" style="max-width: 800px; padding: 100px 40px 80px;">
+        {{ content | safe }}
+      </div>
+    </article>
     {% endblock %}
   </main>
 
