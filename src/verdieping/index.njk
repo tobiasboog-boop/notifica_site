@@ -7,10 +7,11 @@ showContactPopup: true
 ---
 
 <!-- Hero -->
-<section class="hero">
+<section class="hero" style="padding: 80px 0 60px;">
     <div class="container">
-        <div class="hero-content">
-            <h1>Verdieping</h1>
+        <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <div class="badge">Verdieping</div>
+            <h1>Ga dieper in op onze oplossingen</h1>
             <p class="subtitle">
                 Verdiep je kennis over Power BI dashboards met praktische tools en webinars. Van interactieve analyses tot diepgaande kennissessies.
             </p>
@@ -18,36 +19,88 @@ showContactPopup: true
     </div>
 </section>
 
-<!-- Content Grid -->
-<section class="section section-alt">
-    <div class="container">
-        <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
-
-            <!-- Bedrijfsanalysetool Card -->
-            <div class="feature-card" style="background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 32px; transition: all 0.3s ease;">
-                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 28px;">
+<!-- Bedrijfsanalysetool Section -->
+<section class="section" style="padding: 60px 0;">
+    <div class="container" style="max-width: 900px;">
+        <!-- Info Card -->
+        <div style="background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%); border: 1px solid #E5E7EB; border-radius: 12px; padding: 32px; margin-bottom: 24px;">
+            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); color: white; width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; flex-shrink: 0;">
                     🔍
                 </div>
-                <h3 style="font-size: 22px; font-weight: 600; color: var(--navy); margin-bottom: 12px;">Bedrijfsanalysetool</h3>
-                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;">
-                    Analyseer direct de prestaties van jouw installatiebedrijf met onze interactieve tool. Krijg inzicht in winstgevendheid, efficiency en groeikansen.
-                </p>
-                <a href="{{ '/verdieping/bedrijfsanalysetool/' | url }}" class="btn" style="display: inline-block;">Analyseer nu</a>
+                <h2 style="margin: 0; font-size: 28px; color: var(--navy);">Bedrijfsanalysetool</h2>
             </div>
+            <p style="font-size: 16px; line-height: 1.6; color: var(--text); margin-bottom: 20px;">
+                Analyseer direct de prestaties van jouw installatiebedrijf met onze interactieve tool. Vul je kerncijfers in en krijg direct inzicht in winstgevendheid, efficiency en potentiële besparingen met Notifica dashboards.
+            </p>
+            <!-- Highlight Box -->
+            <div style="background: white; border: 2px solid #3636A2; border-radius: 8px; padding: 16px; display: flex; align-items: center; gap: 12px;">
+                <div style="font-size: 24px; flex-shrink: 0;">📊</div>
+                <div>
+                    <div style="font-weight: 600; color: var(--navy); margin-bottom: 4px;">Interactieve calculator</div>
+                    <div style="font-size: 14px; color: var(--text-secondary);">Bereken je potentiële tijdsbesparing en ROI met real-time dashboards</div>
+                </div>
+            </div>
+        </div>
 
-            <!-- Webinars Card -->
-            <div class="feature-card" style="background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 32px; transition: all 0.3s ease;">
-                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 28px;">
+        <!-- Preview Card -->
+        <a href="{{ '/verdieping/bedrijfsanalysetool/' | url }}" style="display: block; text-decoration: none;">
+            <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); border-radius: 12px; padding: 48px; text-align: center; color: white; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 8px 24px rgba(22, 19, 111, 0.3);">
+                <div style="font-size: 64px; margin-bottom: 20px;">🔍</div>
+                <h3 style="font-size: 24px; margin-bottom: 12px; color: white;">Start de analyse</h3>
+                <p style="opacity: 0.9; margin-bottom: 24px;">Ontdek wat Notifica voor jouw bedrijf kan betekenen</p>
+                <span class="btn" style="background: white; color: var(--navy);">Open analysetool →</span>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- Webinars Section -->
+<section class="section section-alt" style="padding: 60px 0; background: #FAFBFC;">
+    <div class="container" style="max-width: 900px;">
+        <!-- Info Card -->
+        <div style="background: linear-gradient(135deg, #FFFFFF 0%, #F9FAFB 100%); border: 1px solid #E5E7EB; border-radius: 12px; padding: 32px; margin-bottom: 24px;">
+            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); color: white; width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; flex-shrink: 0;">
                     🎓
                 </div>
-                <h3 style="font-size: 22px; font-weight: 600; color: var(--navy); margin-bottom: 12px;">Webinars & Presentaties</h3>
-                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;">
-                    Bekijk opnames van onze webinars over winstoptimalisatie, projectsturing en dashboard implementatie voor installatiebedrijven.
-                </p>
-                <a href="{{ '/verdieping/webinars/optimalisatie-winstgevendheid-december-2025/' | url }}" class="btn" style="display: inline-block;">Bekijk webinars</a>
+                <h2 style="margin: 0; font-size: 28px; color: var(--navy);">Webinars & Presentaties</h2>
             </div>
-
+            <p style="font-size: 16px; line-height: 1.6; color: var(--text); margin-bottom: 20px;">
+                Bekijk opnames van onze webinars over winstoptimalisatie, projectsturing en dashboard implementatie voor installatiebedrijven. Leer van praktijkvoorbeelden en ontdek hoe andere bedrijven hun data inzetten.
+            </p>
+            <!-- Highlight Box -->
+            <div style="background: white; border: 2px solid #3636A2; border-radius: 8px; padding: 16px; display: flex; align-items: center; gap: 12px;">
+                <div style="font-size: 24px; flex-shrink: 0;">📹</div>
+                <div>
+                    <div style="font-weight: 600; color: var(--navy); margin-bottom: 4px;">Beschikbare webinars</div>
+                    <div style="font-size: 14px; color: var(--text-secondary);">Kennissessies met praktische tips en live demonstraties</div>
+                </div>
+            </div>
         </div>
+
+        <!-- Webinar Card -->
+        <a href="{{ '/verdieping/webinars/optimalisatie-winstgevendheid-december-2025/' | url }}" style="display: block; text-decoration: none;">
+            <div style="background: white; border: 1px solid #E5E7EB; border-radius: 12px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+                <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); padding: 24px; color: white;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                        <span style="background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 13px;">December 2025</span>
+                    </div>
+                    <h3 style="font-size: 22px; margin: 0; color: white;">Optimalisatie Winstgevendheid Installatiebedrijven</h3>
+                </div>
+                <div style="padding: 24px;">
+                    <p style="color: var(--text-secondary); margin-bottom: 16px; line-height: 1.6;">
+                        Presentatie over hoe je met real-time dashboards meer grip krijgt op projectmarges, winstgevendheid en bedrijfsprestaties.
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--navy); font-weight: 600;">
+                        Bekijk presentatie
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M6 3l5 5-5 5V3z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </a>
     </div>
 </section>
 

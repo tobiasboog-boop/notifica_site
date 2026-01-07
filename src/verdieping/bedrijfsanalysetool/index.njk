@@ -7,59 +7,221 @@ showContactPopup: true
 ---
 
 <!-- Hero -->
-<section class="hero">
+<section class="hero" style="padding: 80px 0 60px;">
     <div class="container">
-        <div class="hero-content">
+        <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
             <div class="badge">Interactieve Tool</div>
             <h1>Bedrijfsanalysetool</h1>
             <p class="subtitle">
-                Analyseer direct de prestaties van jouw installatiebedrijf. Krijg inzicht in winstgevendheid, efficiency en groeikansen.
+                Bereken wat Notifica dashboards voor jouw installatiebedrijf kunnen opleveren. Vul je gegevens in en ontdek je potentiële tijdsbesparing en ROI.
             </p>
         </div>
     </div>
 </section>
 
-<!-- Tool Content Placeholder -->
-<section class="section">
-    <div class="container" style="max-width: 1000px;">
-        <div style="background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%); border: 1px solid #E5E7EB; border-radius: 12px; padding: 80px 40px; text-align: center;">
-            <div style="font-size: 72px; margin-bottom: 24px;">🔍</div>
-            <h2 style="font-size: 28px; color: var(--navy); margin-bottom: 16px;">De tool wordt binnenkort gelanceerd</h2>
-            <p style="color: var(--text-secondary); font-size: 16px; line-height: 1.6; max-width: 600px; margin: 0 auto 32px;">
-                We zijn bezig met het herbouwen van de bedrijfsanalysetool zonder iframe voor betere performance en gebruikerservaring. Binnenkort beschikbaar op deze pagina.
+<!-- Calculator Section -->
+<section class="section" style="padding: 60px 0;">
+    <div class="container" style="max-width: 900px;">
+        <!-- Info Card -->
+        <div style="background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%); border: 1px solid #E5E7EB; border-radius: 12px; padding: 32px; margin-bottom: 24px;">
+            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); color: white; width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; flex-shrink: 0;">
+                    🔍
+                </div>
+                <h2 style="margin: 0; font-size: 28px; color: var(--navy);">Analyseer jouw bedrijf</h2>
+            </div>
+            <p style="font-size: 16px; line-height: 1.6; color: var(--text); margin-bottom: 20px;">
+                Vul onderstaande gegevens in over je installatiebedrijf. De calculator berekent direct hoeveel tijd je kunt besparen en wat de potentiële ROI is van real-time dashboards.
             </p>
-            <a href="#" class="btn btn-large" data-pipedrive-form="contact">Neem contact op voor een demo</a>
+            <!-- Highlight Box -->
+            <div style="background: white; border: 2px solid #3636A2; border-radius: 8px; padding: 16px; display: flex; align-items: center; gap: 12px;">
+                <div style="font-size: 24px; flex-shrink: 0;">⏱️</div>
+                <div>
+                    <div style="font-weight: 600; color: var(--navy); margin-bottom: 4px;">Gemiddelde besparing</div>
+                    <div style="font-size: 14px; color: var(--text-secondary);">Onze klanten besparen gemiddeld 12 uur per maand op rapportages</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calculator Form -->
+        <div id="calculator" style="background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 32px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+            <form id="analysisForm">
+                <!-- Input Section -->
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 32px;">
+
+                    <!-- Medewerkers -->
+                    <div>
+                        <label style="display: block; font-weight: 600; color: var(--navy); margin-bottom: 8px; font-size: 14px;">
+                            Aantal medewerkers
+                        </label>
+                        <input type="number" id="employees" value="25" min="1" max="500"
+                            style="width: 100%; padding: 12px 16px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px; transition: border-color 0.2s;"
+                            onfocus="this.style.borderColor='#3636A2'" onblur="this.style.borderColor='#E5E7EB'">
+                        <span style="font-size: 12px; color: var(--text-secondary); margin-top: 4px; display: block;">Totaal aantal FTE in je bedrijf</span>
+                    </div>
+
+                    <!-- Projecten per maand -->
+                    <div>
+                        <label style="display: block; font-weight: 600; color: var(--navy); margin-bottom: 8px; font-size: 14px;">
+                            Actieve projecten per maand
+                        </label>
+                        <input type="number" id="projects" value="30" min="1" max="500"
+                            style="width: 100%; padding: 12px 16px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px; transition: border-color 0.2s;"
+                            onfocus="this.style.borderColor='#3636A2'" onblur="this.style.borderColor='#E5E7EB'">
+                        <span style="font-size: 12px; color: var(--text-secondary); margin-top: 4px; display: block;">Gemiddeld aantal lopende projecten</span>
+                    </div>
+
+                    <!-- Uren per maand aan rapportages -->
+                    <div>
+                        <label style="display: block; font-weight: 600; color: var(--navy); margin-bottom: 8px; font-size: 14px;">
+                            Uren per maand aan rapportages
+                        </label>
+                        <input type="number" id="reportingHours" value="16" min="1" max="100"
+                            style="width: 100%; padding: 12px 16px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px; transition: border-color 0.2s;"
+                            onfocus="this.style.borderColor='#3636A2'" onblur="this.style.borderColor='#E5E7EB'">
+                        <span style="font-size: 12px; color: var(--text-secondary); margin-top: 4px; display: block;">Tijd besteed aan Excel/rapportages</span>
+                    </div>
+
+                    <!-- Uurtarief -->
+                    <div>
+                        <label style="display: block; font-weight: 600; color: var(--navy); margin-bottom: 8px; font-size: 14px;">
+                            Gemiddeld uurtarief (intern)
+                        </label>
+                        <div style="position: relative;">
+                            <span style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-secondary);">€</span>
+                            <input type="number" id="hourlyRate" value="50" min="20" max="200"
+                                style="width: 100%; padding: 12px 16px 12px 32px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px; transition: border-color 0.2s;"
+                                onfocus="this.style.borderColor='#3636A2'" onblur="this.style.borderColor='#E5E7EB'">
+                        </div>
+                        <span style="font-size: 12px; color: var(--text-secondary); margin-top: 4px; display: block;">Inclusief overhead kosten</span>
+                    </div>
+                </div>
+
+                <!-- Calculate Button -->
+                <button type="button" onclick="calculateResults()"
+                    style="width: 100%; padding: 16px 32px; background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;"
+                    onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(22, 19, 111, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    Bereken mijn resultaten
+                </button>
+            </form>
         </div>
     </div>
 </section>
 
-<!-- Why Notifica -->
-<section class="section section-alt">
-    <div class="container">
-        <div class="section-header">
-            <h2>Waarom Notifica?</h2>
-            <p class="section-subtitle">
-                Wij helpen installatiebedrijven om data-gedreven te werken met professionele Power BI dashboards.
+<!-- Results Section (Hidden by default) -->
+<section id="results" class="section section-alt" style="padding: 60px 0; background: #FAFBFC; display: none;">
+    <div class="container" style="max-width: 900px;">
+        <!-- Results Header -->
+        <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); border-radius: 12px; padding: 32px; margin-bottom: 24px; color: white; text-align: center;">
+            <h2 style="margin: 0 0 8px 0; font-size: 28px; color: white;">Jouw analyse resultaten</h2>
+            <p style="opacity: 0.9; margin: 0;">Op basis van jouw invoer</p>
+        </div>
+
+        <!-- Results Grid -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 24px;">
+
+            <!-- Tijdsbesparing -->
+            <div style="background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 24px; text-align: center;">
+                <div style="font-size: 36px; margin-bottom: 8px;">⏱️</div>
+                <div id="timeSaved" style="font-size: 42px; font-weight: 700; color: var(--navy); margin-bottom: 4px;">12</div>
+                <div style="font-size: 14px; color: var(--text-secondary);">uur per maand bespaard</div>
+            </div>
+
+            <!-- Kostenbesparing -->
+            <div style="background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 24px; text-align: center;">
+                <div style="font-size: 36px; margin-bottom: 8px;">💰</div>
+                <div id="costSaved" style="font-size: 42px; font-weight: 700; color: var(--navy); margin-bottom: 4px;">€600</div>
+                <div style="font-size: 14px; color: var(--text-secondary);">bespaard per maand</div>
+            </div>
+
+            <!-- Jaarlijkse besparing -->
+            <div style="background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 24px; text-align: center;">
+                <div style="font-size: 36px; margin-bottom: 8px;">📈</div>
+                <div id="yearSaved" style="font-size: 42px; font-weight: 700; color: #16136F; margin-bottom: 4px;">€7.200</div>
+                <div style="font-size: 14px; color: var(--text-secondary);">bespaard per jaar</div>
+            </div>
+
+            <!-- ROI -->
+            <div style="background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%); border: 2px solid #22C55E; border-radius: 12px; padding: 24px; text-align: center;">
+                <div style="font-size: 36px; margin-bottom: 8px;">🎯</div>
+                <div id="roi" style="font-size: 42px; font-weight: 700; color: #16A34A; margin-bottom: 4px;">240%</div>
+                <div style="font-size: 14px; color: #166534;">geschatte ROI eerste jaar</div>
+            </div>
+        </div>
+
+        <!-- Extra inzichten -->
+        <div style="background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 16px;">Extra voordelen voor jouw bedrijf</h3>
+            <div style="display: grid; gap: 12px;">
+                <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #F9FAFB; border-radius: 8px;">
+                    <span style="font-size: 20px;">📊</span>
+                    <span style="color: var(--text);">Real-time inzicht in <strong id="projectCount">30</strong> actieve projecten</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #F9FAFB; border-radius: 8px;">
+                    <span style="font-size: 20px;">👥</span>
+                    <span style="color: var(--text);">Dashboard toegang voor <strong id="employeeCount">25</strong> medewerkers</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #F9FAFB; border-radius: 8px;">
+                    <span style="font-size: 20px;">⚡</span>
+                    <span style="color: var(--text);">Binnen 24 uur operationeel na koppeling met je ERP</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #F9FAFB; border-radius: 8px;">
+                    <span style="font-size: 20px;">🔄</span>
+                    <span style="color: var(--text);">Automatische data-synchronisatie - geen handmatig werk</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); border-radius: 12px; padding: 32px; text-align: center; color: white;">
+            <h3 style="font-size: 24px; margin-bottom: 12px; color: white;">Klaar om te starten?</h3>
+            <p style="opacity: 0.9; margin-bottom: 24px;">Plan een gratis demo en ontdek hoe Notifica jouw bedrijf kan helpen</p>
+            <a href="#" class="btn btn-large" data-pipedrive-form="contact" style="background: white; color: var(--navy);">Neem vrijblijvend contact op</a>
+        </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<section class="section" style="padding: 60px 0;">
+    <div class="container" style="max-width: 900px;">
+        <!-- Info Card -->
+        <div style="background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%); border: 1px solid #E5E7EB; border-radius: 12px; padding: 32px; margin-bottom: 32px;">
+            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); color: white; width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; flex-shrink: 0;">
+                    ?
+                </div>
+                <h2 style="margin: 0; font-size: 28px; color: var(--navy);">Hoe werkt het?</h2>
+            </div>
+            <p style="font-size: 16px; line-height: 1.6; color: var(--text);">
+                Van eerste contact tot live dashboards in 3 eenvoudige stappen.
             </p>
         </div>
 
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">⚡</div>
-                <h3>Binnen 1 dag live</h3>
-                <p>Je dashboards zijn operationeel binnen 24 uur na koppeling met je ERP-systeem.</p>
+        <!-- Steps -->
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="background: white; border: 1px solid #E5E7EB; border-radius: 10px; padding: 24px; display: flex; align-items: flex-start; gap: 20px;">
+                <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); color: white; min-width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px;">1</div>
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Gratis demo</h3>
+                    <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5;">We plannen een vrijblijvend gesprek waarin we jouw situatie bespreken en de mogelijkheden tonen.</p>
+                </div>
             </div>
 
-            <div class="feature-card">
-                <div class="feature-icon">🎯</div>
-                <h3>Real-time inzicht</h3>
-                <p>Direct zicht op projectresultaten, marges en winstgevendheid. Geen wachten op rapportages meer.</p>
+            <div style="background: white; border: 1px solid #E5E7EB; border-radius: 10px; padding: 24px; display: flex; align-items: flex-start; gap: 20px;">
+                <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); color: white; min-width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px;">2</div>
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Koppeling maken</h3>
+                    <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5;">We maken een veilige koppeling met je ERP-systeem. Dit werkt voor Syntess, 4PS, Acto, Exact en meer.</p>
+                </div>
             </div>
 
-            <div class="feature-card">
-                <div class="feature-icon">🔄</div>
-                <h3>Automatisch bijgewerkt</h3>
-                <p>Data wordt automatisch gesynchroniseerd vanuit je ERP. Altijd actuele cijfers.</p>
+            <div style="background: white; border: 1px solid #E5E7EB; border-radius: 10px; padding: 24px; display: flex; align-items: flex-start; gap: 20px;">
+                <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); color: white; min-width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px;">3</div>
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Dashboards live</h3>
+                    <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5;">Binnen 24 uur zijn je dashboards live. We lopen ze samen door en maken aanpassingen waar nodig.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -75,3 +237,49 @@ showContactPopup: true
         <a href="#" class="btn btn-large" data-pipedrive-form="contact">Neem contact op</a>
     </div>
 </section>
+
+<!-- Calculator Script -->
+<script>
+function calculateResults() {
+    // Get input values
+    const employees = parseInt(document.getElementById('employees').value) || 25;
+    const projects = parseInt(document.getElementById('projects').value) || 30;
+    const reportingHours = parseInt(document.getElementById('reportingHours').value) || 16;
+    const hourlyRate = parseInt(document.getElementById('hourlyRate').value) || 50;
+
+    // Calculate savings
+    // Assumption: Notifica saves 70-80% of reporting time
+    const savingsPercentage = 0.75;
+    const timeSaved = Math.round(reportingHours * savingsPercentage);
+    const costSavedMonth = timeSaved * hourlyRate;
+    const costSavedYear = costSavedMonth * 12;
+
+    // Calculate ROI (assuming €250/month subscription)
+    const monthlySubscription = 250;
+    const yearlySubscription = monthlySubscription * 12;
+    const roi = Math.round(((costSavedYear - yearlySubscription) / yearlySubscription) * 100);
+
+    // Update results
+    document.getElementById('timeSaved').textContent = timeSaved;
+    document.getElementById('costSaved').textContent = '€' + costSavedMonth.toLocaleString('nl-NL');
+    document.getElementById('yearSaved').textContent = '€' + costSavedYear.toLocaleString('nl-NL');
+    document.getElementById('roi').textContent = roi + '%';
+    document.getElementById('projectCount').textContent = projects;
+    document.getElementById('employeeCount').textContent = employees;
+
+    // Show results section
+    const resultsSection = document.getElementById('results');
+    resultsSection.style.display = 'block';
+
+    // Scroll to results
+    resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Allow Enter key to trigger calculation
+document.getElementById('analysisForm').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        calculateResults();
+    }
+});
+</script>
