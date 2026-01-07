@@ -216,9 +216,7 @@ showContactPopup: true
                         <div class="author-title">Elektrotechnisch Engineer – Nikkelen Elektrotechniek</div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Review 2 - Denned Installatietechniek -->
+            </div><!-- Review 2 - Denned Installatietechniek -->
             <div class="testimonial-card">
                 <div class="testimonial-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
                     <div class="testimonial-rating" style="display: flex; gap: 4px; color: #FCD34D; font-size: 18px;">
@@ -245,9 +243,7 @@ showContactPopup: true
                         <div class="author-title">Controller – Denned Installatietechniek</div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Review 3 - Verkade Klimaat -->
+            </div><!-- Review 3 - Verkade Klimaat -->
             <div class="testimonial-card">
                 <div class="testimonial-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
                     <div class="testimonial-rating" style="display: flex; gap: 4px; color: #FCD34D; font-size: 18px;">

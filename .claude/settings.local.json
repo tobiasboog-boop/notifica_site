@@ -34,7 +34,8 @@
       "Bash(timeout 10 curl:*)",
       "Bash(gh run list:*)",
       "Bash(if ! grep -q \"^featuredImage:\" \"$file\")",
-      "Bash(then)"
+      "Bash(then)",
+      "Bash(curl:*)"
     ]
   }
 }
