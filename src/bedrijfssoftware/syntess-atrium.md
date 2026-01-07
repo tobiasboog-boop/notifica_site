@@ -10,8 +10,8 @@ showContactPopup: true
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 32px;">
-                <img src="{{ '/assets/images/2024/04/atrium-productlogo-srgb.png' | url }}" alt="Syntess Atrium Logo" style="max-width: 220px; max-height: 100px; object-fit: contain; filter: brightness(0) invert(1);">
+            <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); display: flex; align-items: center; justify-content: center; min-height: 140px; border-radius: 12px; margin-bottom: 32px;">
+                <img src="{{ '/assets/images/2024/04/atrium-productlogo-srgb.png' | url }}" alt="Syntess Atrium Logo" style="max-width: 200px; max-height: 120px; object-fit: contain; filter: brightness(0) invert(1);">
             </div>
             <h1>Power BI Dashboards voor Syntess Atrium</h1>
             <p class="subtitle">
