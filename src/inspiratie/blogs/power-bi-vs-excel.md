@@ -4,7 +4,7 @@ permalink: /inspiratie/blogs/power-bi-vs-excel/
 showContactPopup: true
 title: "Power BI versus Excel: 5 onmisbare voordelen van Power BI voor de installatiesector"
 description: "Waarom moderne tools zoals Power BI beter werken dan Excel voor het beheren van duizenden werkorders en uren."
-featuredImage: "/assets/images/2025/06/1.-Financiele-maandrapportage.png"
+featuredImage: "/assets/images/2025/06/1.-Finance.png"
 ---
 
 Excel is dertig jaar de standaard geweest, maar bij het beheren van duizenden werkorders en uren dagelijks bereikt het zijn grenzen. Moderne tools zoals Microsoft Power BI bieden realtime dashboards zonder handmatig werk.
