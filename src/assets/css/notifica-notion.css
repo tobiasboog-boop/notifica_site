@@ -390,18 +390,18 @@ h3 {
     font-size: 15px;
 }
 
-/* Testimonials */
+/* Testimonials - FORCE 3 columns on all desktops */
 .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 20px;
     margin-top: 56px;
 }
 
 /* Ensure 3 columns fit even on smaller desktop screens */
-@media (min-width: 1025px) and (max-width: 1400px) {
+@media (min-width: 901px) {
     .testimonials-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr) !important;
         gap: 16px;
     }
 
