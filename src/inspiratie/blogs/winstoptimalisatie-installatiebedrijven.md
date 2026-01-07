@@ -8,7 +8,7 @@ featuredImage: "/assets/images/2025/12/dashboard-kengetallen.png"
 
 Bij Notifica zien we dagelijks dat installateurs vastlopen in complexe begrotingen. Ze sturen op omzet, terwijl die door wisselende materiaalprijzen enorm fluctueert. Door terug te gaan naar de basis – capaciteit, productiviteit en toegevoegde waarde – kun je via doelgerichte sturing het resultaat niet alleen voorspellen, maar ook direct beïnvloeden.
 
-![Dashboard met 5 kengetallen voor winstoptimalisatie in installatiebedrijf](/assets/images/2025/12/dashboard-kengetallen.png)
+![Dashboard met 5 kengetallen voor winstoptimalisatie in installatiebedrijf]({{ "/assets/images/2025/12/dashboard-kengetallen.png" | url }})
 
 ## Grip op rendement: Waarom begroten vaak niet lukt
 

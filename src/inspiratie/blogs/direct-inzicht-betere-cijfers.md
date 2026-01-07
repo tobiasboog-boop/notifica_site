@@ -24,7 +24,7 @@ Bij de start van het project bleek dat data verspreid en verouderd was. Operatio
 
 Om deze uitdaging te tackelen, ontwikkelden we samen met het klantteam een strategie om alle relevante installatiegegevens te centraliseren en continu te actualiseren. We bouwden meerdere Power BI-omgevingen waarin data uit verschillende bronnen werd samengebracht. Zo konden projectleiders in één oogopslag de status van urenregistratie, materiaalkosten en voortgang per installatiefase zien. Dankzij deze heldere weergave werd het mogelijk om realtime bij te sturen en scherpere beslissingen te nemen.
 
-![direct inzicht in prestaties via realtime urenrapportage dashboards](/assets/images/2025/06/3.-HR-Urenrapportage.png)
+![direct inzicht in prestaties via realtime urenrapportage dashboards]({{ "/assets/images/2025/06/3.-HR-Urenrapportage.png" | url }})
 
 *Voorbeeld van een realtime dashboard voor actuele inzichten in urenregistratie*
 
@@ -42,7 +42,7 @@ Door de nadruk op menselijke adoptie en training ontstond een cultuur waarin ied
 
 Met onze geïntegreerde oplossing verschoof de focus binnen het projectteam van discussies over cijferaccuraatheid naar constructieve sessies over resultaatverbeteringen. Het management rapporteerde dat de tijdsbesteding aan administratieve controle met 30 % afnam. Dankzij dit **direct inzicht** en de realtime dashboards kwam er meer ruimte voor strategische planning en klantcommunicatie.
 
-![overzicht in KPI's voor realtime monitoren van prestaties](/assets/images/2025/06/3a.-HR-Urenrapportage.png)
+![overzicht in KPI's voor realtime monitoren van prestaties]({{ "/assets/images/2025/06/3a.-HR-Urenrapportage.png" | url }})
 
 *Dashboard met KPI's voor realtime monitoren van de operatie*
 

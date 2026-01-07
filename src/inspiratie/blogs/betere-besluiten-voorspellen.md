@@ -28,7 +28,7 @@ Dankzij deze slimme combinatie van data en AI creëer je een vliegwiel van verbe
 
 *Van Excel naar Power BI: transformeer je dagelijkse sturing tot een strategisch wapen.*
 
-![voorspellen en forecasting in Power BI voor betere besluiten](/assets/images/2025/06/8.-Portefeuille-management.png)
+![voorspellen en forecasting in Power BI voor betere besluiten]({{ "/assets/images/2025/06/8.-Portefeuille-management.png" | url }})
 
 *Portefeuille-management: overzicht van toekomstige projecten in de komende maanden*
 

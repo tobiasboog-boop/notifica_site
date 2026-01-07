@@ -45,7 +45,7 @@ Het opzetten en configureren van eigen analytics kost vaak weken. Externe provid
 
 Software wordt regelmatig bijgewerkt; ERP-systemen als Syntess veranderen continu. Externe partijen zorgen dat de dataflow automatisch meebeweegt met deze wijzigingen. Zo werk je altijd met betrouwbare en actuele gegevens, zonder dat je zelf constant de techniek hoeft bij te houden. Dit betekent dat je als ondernemer altijd effectiever kunt sturen met de laatste inzichten.
 
-![uitbesteden rapportages mkb dashboards voor offerte en sales](/assets/images/2025/06/10.-Offerte-en-sales-proces.png)
+![uitbesteden rapportages mkb dashboards voor offerte en sales]({{ "/assets/images/2025/06/10.-Offerte-en-sales-proces.png" | url }})
 
 Voorbeeld van geautomatiseerde processen binnen digitale verslaglegging.
 
@@ -53,7 +53,7 @@ Voorbeeld van geautomatiseerde processen binnen digitale verslaglegging.
 
 Externe teams bedienen organisaties uit verschillende branches en zien wat effectief is. Door gebruik te maken van deze opgedane kennis voorkom je veelvoorkomende fouten en implementeer je sneller bewezen oplossingen. Dat leidt tot kortere lijnen en betere resultaten op het gebied van productie, planning en onderhoud. Zo blijft je bedrijf continu naar een hoger niveau groeien.
 
-![uitbesteden rapportages mkb voor onderhoudsplanning](/assets/images/2025/06/5.-SO-Planning-onderhoud.png)
+![uitbesteden rapportages mkb voor onderhoudsplanning]({{ "/assets/images/2025/06/5.-SO-Planning-onderhoud.png" | url }})
 
 Voorbeeld van soepele onderhoudsplanning dankzij professionele data-inzichten.
 

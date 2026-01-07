@@ -8,7 +8,7 @@ featuredImage: "/assets/images/2025/06/5.-SO-Planning-onderhoud.png"
 
 In de installatiebranche zijn actuele inzichten cruciaal voor een efficiënte organisatie. Bij Notifica bieden we een **alles-in-één abonnement** aan dat alle technische zorgen uit handen neemt, zodat jij je kunt richten op je vakgebied. Dit abonnement omvat beheer, doorontwikkeling, updates en support in één pakket.
 
-![Voordelen van een alles-in-één abonnement voor Power BI dashboards](/assets/images/2025/06/5.-SO-Planning-onderhoud.png)
+![Voordelen van een alles-in-één abonnement voor Power BI dashboards]({{ "/assets/images/2025/06/5.-SO-Planning-onderhoud.png" | url }})
 
 *Visualisatie van ons alles-in-één abonnement voor geavanceerde Power BI-planning en onderhoud.*
 
@@ -49,7 +49,7 @@ Een middelgrote installateur worstelde met handmatig bijgewerkte maandelijkse ra
 
 Het resultaat? Meer dan 30% tijdwinst op rapportagewerkzaamheden, 20% betere nauwkeurigheid in financiële overzichten en een blijvend efficiëntere werkwijze binnen het hele team.
 
-![Alles-in-één abonnement voor Power BI data-analyse](/assets/images/2025/06/6.-SO-Uitvoering.png)
+![Alles-in-één abonnement voor Power BI data-analyse]({{ "/assets/images/2025/06/6.-SO-Uitvoering.png" | url }})
 
 *De uitvoeringstemplate geeft inzicht in voortgang en efficiency per project.*
 

@@ -21,7 +21,7 @@ Een AI-dashboard (of ML-dashboard) is veel meer dan een standaard rapportagetool
 
 Stel dat je omzet daalt: een traditioneel dashboard meldt simpelweg de procentuele daling. Een slim dashboard identificeert de onderliggende oorzaken—zoals veranderende klantbehoeften, voorraadtekorten of seizoenseffecten—en schetst een scenario voor de komende maanden. Zo kun je snel bijsturen en voorkomen dat problemen uitgroeien.
 
-![Voorbeeldweergave van een AI-dashboard dat realtime inzichten en voorspellingen toont](/assets/images/2025/06/fb5c57c9-e7fc-4b85-86ea-29ce610a4eed.png)
+![Voorbeeldweergave van een AI-dashboard dat realtime inzichten en voorspellingen toont]({{ "/assets/images/2025/06/fb5c57c9-e7fc-4b85-86ea-29ce610a4eed.png" | url }})
 
 ## 5 krachtige functies van deze technologie
 
@@ -37,7 +37,7 @@ Door historische data te combineren met statistische modellen voorspel je nauwke
 
 In de praktijk betekent dit dat je niet meer reageert op achterblijvende rapporten; je handelt proactief op basis van voorspellende dashboards. Hierdoor loopt je concurrentievermogen geen vertraging op door reactieve besluitvorming.
 
-![Visualisatie van een voorspellende grafiek die toekomstige trends weergeeft](/assets/images/2025/06/485a8738-0d18-4be6-b702-1b99a0d29678.png)
+![Visualisatie van een voorspellende grafiek die toekomstige trends weergeeft]({{ "/assets/images/2025/06/485a8738-0d18-4be6-b702-1b99a0d29678.png" | url }})
 
 ### 3. Natural Language Processing (NLP)
 

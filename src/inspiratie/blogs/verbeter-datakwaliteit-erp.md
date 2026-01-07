@@ -20,7 +20,7 @@ Vastlegging betekent dat alle relevante informatie over projecten, uren en mater
 
 Datakwaliteit is de mate waarin gegevens compleet, accuraat en up-to-date zijn. Slechte datakwaliteit leidt tot verkeerde beslissingen, zoals foutieve nacalculatie en onjuiste projectvoortgangsrapporten. Door te investeren in datakwaliteit voorkom je onnodige extra kosten en tijdverlies. Dit geldt vooral wanneer je van een verouderd ERP-pakket overstapt naar moderne oplossingen zoals Acto, 4PS, BouwInfosys of Admicom. Dan zie je direct welke data nog ontbreekt of onjuist is ingevoerd.
 
-![vastlegging en datakwaliteit in Power BI dashboards](/assets/images/2025/06/3aa.-HR-Urenrapportage.png)
+![vastlegging en datakwaliteit in Power BI dashboards]({{ "/assets/images/2025/06/3aa.-HR-Urenrapportage.png" | url }})
 
 Voorbeeld van een urenrapportage in Power BI na juiste vastlegging van uren – dit voorkomt fouten in nacalculatie.
 
@@ -32,7 +32,7 @@ Een goede inrichting bedrijfssoftware begint met een duidelijke inventarisatie v
 
 Gebruik een vaste prefix en nummering voor project- en materiaalcodes in je ERP. Zo weet het systeem automatisch welke materialen bij welk project horen en kun je eenvoudig filteren. Dit verbetert de datakwaliteit en versnelt rapportages.
 
-![datakwaliteit verbeteren via vastlegging in ERP bedrijfssoftware](/assets/images/2025/06/3aa.-HR-Urenrapportage.png)
+![datakwaliteit verbeteren via vastlegging in ERP bedrijfssoftware]({{ "/assets/images/2025/06/3aa.-HR-Urenrapportage.png" | url }})
 
 Door goede vastlegging van alle directe en indirecte uren, kun je goed sturen op productiviteit van je monteurs.
 

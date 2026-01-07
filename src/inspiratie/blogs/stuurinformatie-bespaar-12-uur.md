@@ -38,11 +38,11 @@ Een solide datamodel is cruciaal voor betrouwbare rapportages. Zorg voor uniform
 - Gestandaardiseerd datamodel: Met Notifica-templates hanteer je eenduidige definities van KPI’s zoals “marge” en “SLA”. Dit voorkomt dat verschillende teams verschillende interpretaties van de waarheid hanteren.
 - Automatische datarefresh: Stel een dagelijks schema in, zodat jouw cijfers elke nacht worden geüpdatet. Daardoor werk je altijd met de meest actuele stand van zaken.
 
-![Managementrapportages dashboards in Power BI voor cashflow beheer](/assets/images/2025/06/9.-Accountmanagement-Cashflow.png)
+![Managementrapportages dashboards in Power BI voor cashflow beheer]({{ "/assets/images/2025/06/9.-Accountmanagement-Cashflow.png" | url }})
 
 Voorbeeld van een dashboard waarin belangrijke data in één oogopslag inzicht geeft in cashflow.
 
-![Stuurinformatie voor het optimaliseren van KPI's in de installatiesector](/assets/images/2025/06/1.-Finance.png)
+![Stuurinformatie voor het optimaliseren van KPI's in de installatiesector]({{ "/assets/images/2025/06/1.-Finance.png" | url }})
 
 Visualisatie waarin financiële data gekoppeld is om bedrijfsprocessen te optimaliseren.
 

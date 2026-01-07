@@ -19,7 +19,7 @@ Power BI Copilot vs ChatGPT brengt twee krachtige AI-tools samen om jouw data-an
 
 Copilot is de logische keuze wanneer je al werkt met Power BI. Dankzij de naadloze integratie kun je direct vragen stellen aan je bestaande dashboards zonder tijdrovende data-extracties.
 
-![Power BI Copilot vs ChatGPT dashboard](/assets/images/2025/06/Schermafbeelding-2025-06-05-114828.png)
+![Power BI Copilot vs ChatGPT dashboard]({{ "/assets/images/2025/06/Schermafbeelding-2025-06-05-114828.png" | url }})
 
 *Dashboardvoorbeeld: vraag om een overzicht van projecten met hoge materiaalkosten.*
 
@@ -39,7 +39,7 @@ Copilot registreert automatisch welke vragen je stelt en welke resultaten je ont
 
 ChatGPT blinkt uit in strategische analyses en combineert externe data met jouw projectinformatie. Daardoor is het ideaal voor scenario-analyses en marktinzichten.
 
-![ChatGPT AI-analyse](/assets/images/2025/06/Schermafbeelding-2025-06-05-114848.png)
+![ChatGPT AI-analyse]({{ "/assets/images/2025/06/Schermafbeelding-2025-06-05-114848.png" | url }})
 
 *Voorbeeld: een complexe analyse die interne en externe data combineert.*
 

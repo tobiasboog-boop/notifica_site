@@ -24,7 +24,7 @@ Het internet of things (IoT) vormt de ruggengraat van predictive maintenance. Me
 
 Door IoT-oplossingen te integreren in gebouwen en installaties, krijgen engineers direct inzicht in de staat van machines. Dit versnelt de besluitvorming en verhoogt de betrouwbaarheid van systemen. Zo kan een cv-installatie constant rapporteren over warmtewisselaars, waardoor slijtage tijdig wordt gesignaleerd en onderhoud kan worden ingepland voordat er storingen optreden.
 
-![IoT sensoren predictive maintenance 2026](/assets/images/2025/06/3.-HR-Urenrapportage.png)
+![IoT sensoren predictive maintenance 2026]({{ "/assets/images/2025/06/3.-HR-Urenrapportage.png" | url }})
 
 Illustratie van IoT-sensoren die realtime data aanleveren voor predictive maintenance.
 
@@ -48,7 +48,7 @@ Asset management richt zich op het beheren en onderhouden van fysieke activa ged
 
 Gebruik van gespecialiseerde software, gekoppeld aan IoT-sensoren, maakt het mogelijk om onderhoudskosten te voorspellen en levensduuranalyses uit te voeren. Een praktijkvoorbeeld: een organisatie die daken en klimaatsystemen beheert, zag na implementatie van een nieuw asset management-systeem de onderhoudskosten met 18% dalen. Dit stelde hen in staat om budgetten beter te alloceren en investeringsplannen nauwkeuriger vorm te geven.
 
-![Dashboard voor asset management in de installatiebranche 2026](/assets/images/2025/06/8.-Portefeuille-management.png)
+![Dashboard voor asset management in de installatiebranche 2026]({{ "/assets/images/2025/06/8.-Portefeuille-management.png" | url }})
 
 Dashboard voor asset management waarin realtime data inzichtelijk wordt gemaakt.
 

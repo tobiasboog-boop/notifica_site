@@ -56,7 +56,7 @@ Met één korte afspraak en 30 minuten van de IT-afdeling zorgen wij voor de vol
 
 Onze kant-en-klare dashboards bieden heldere inzichten in je belangrijkste processen. Sluit je aan bij andere **tevreden klanten** en profiteer van:
 
-![tevreden klanten van Notifica gebruiken Power BI forecasting](/assets/images/2025/06/Forecast.png)
+![tevreden klanten van Notifica gebruiken Power BI forecasting]({{ "/assets/images/2025/06/Forecast.png" | url }})
 
 *Voorbeeld van een forecast-dashboard dat door onze tevreden klanten wordt gebruikt*
 
@@ -66,7 +66,7 @@ Onze kant-en-klare dashboards bieden heldere inzichten in je belangrijkste proce
 - **Sales & Sales:** Prestaties van het verkoopteam nauwkeurig volgen
 - **HR Analyse:** Grip op ziekteverzuim en de productiviteit van monteurs
 
-![tevreden klanten dashboards voor onderhanden werk](/assets/images/2025/06/OHW.png)
+![tevreden klanten dashboards voor onderhanden werk]({{ "/assets/images/2025/06/OHW.png" | url }})
 
 *Dashboard voor projectwaardering, favoriet onder onze tevreden klanten*
 

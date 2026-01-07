@@ -12,7 +12,7 @@ featuredImage: "/assets/images/2025/06/2.-Pojectwaardering.png"
 
 # 5 Tips voor Onderhanden Werk: Efficiënt je cashflow en projecten besturen
 
-![Onderhanden werk cashflow en projectsturing dashboards](/assets/images/2025/06/2.-Pojectwaardering.png)
+![Onderhanden werk cashflow en projectsturing dashboards]({{ "/assets/images/2025/06/2.-Pojectwaardering.png" | url }})
 
 ## Wat is OWH (onderhanden werk)?
 

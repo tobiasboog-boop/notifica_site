@@ -22,7 +22,7 @@ Door data op één plek te verzamelen, analyseren en visualiseren, kun je snelle
 
 Meer informatie over Power BI vind je op de officiële Microsoft Power BI-pagina.
 
-![mkb implementatie dashboard](/assets/images/2025/06/Schermafbeelding-2025-06-03-061935.png)
+![mkb implementatie dashboard]({{ "/assets/images/2025/06/Schermafbeelding-2025-06-03-061935.png" | url }})
 
 ## De 7 meest voorkomende data-uitdagingen in het MKB
 
@@ -85,7 +85,7 @@ Exacte cijfers verschillen per organisatie, maar in de praktijk merken bedrijven
 - Cost-avoidance: door inzicht vooraf kun je bijvoorbeeld voorraad en inkoop beter plannen, waardoor onnodige kosten verdwijnen.
 - Verbeterde klantrelaties: inzicht in klantgedrag leidt tot gerichte acties voor retentie en cross-sell.
 
-![mkb implementatie voordelen](/assets/images/2025/06/fb5c57c9-e7fc-4b85-86ea-29ce610a4eed.png)
+![mkb implementatie voordelen]({{ "/assets/images/2025/06/fb5c57c9-e7fc-4b85-86ea-29ce610a4eed.png" | url }})
 
 ## De 8 succesfactoren voor MKB-BI
 

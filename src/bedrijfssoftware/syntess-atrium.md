@@ -289,15 +289,3 @@ showContactPopup: true
         <a href="#" class="btn btn-large" data-pipedrive-form="contact">Plan een demo</a>
     </div>
 </section>
-
-<script>
-// Force testimonials grid to 3 columns
-document.addEventListener('DOMContentLoaded', function() {
-    const grid = document.querySelector('.testimonials-grid');
-    if (grid && window.innerWidth > 900) {
-        grid.style.display = 'grid';
-        grid.style.gridTemplateColumns = 'repeat(3, 1fr)';
-        grid.style.gap = '20px';
-    }
-});
-</script>

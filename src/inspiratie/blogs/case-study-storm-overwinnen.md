@@ -19,7 +19,7 @@ Deze case study laat zien hoe installatiebedrijven ook in periodes van zwaar wee
 
 Veel installatiebedrijven staan voor dezelfde uitdaging: zoals een recente case study van een middelgroot installatiebedrijf bleek, kunnen onverwachte weersomstandigheden leiden tot projectvertragingen en onvoorziene kosten. Zonder direct financieel inzicht in kosten versus opbrengsten, wordt het bijna onmogelijk om tijdens zwaar weer de juiste beslissingen te nemen. Dit gebrek aan inzicht remt de efficiency en leidt tot lagere marges, waardoor winstpotentieel onbenut blijft.
 
-![Case study financieel inzicht voor hogere winst en efficiëntie](/assets/images/2025/06/9.-Accountmanagement-Cashflow.png)
+![Case study financieel inzicht voor hogere winst en efficiëntie]({{ "/assets/images/2025/06/9.-Accountmanagement-Cashflow.png" | url }})
 
 *Voorbeeld van een dashboard waarin financieel inzicht zorgt voor betere beslissingen tijdens zwaar weer.*
 
@@ -57,7 +57,7 @@ Dankzij realtime inzicht in projectstatussen kon het installatiebedrijf tijdens 
 
 Lees ook dit artikel over [business intelligence in de installatiebranche](https://nl.wikipedia.org/wiki/Business_Intelligence) voor meer achtergrond. Wil je meer weten over onze oplossingen, bekijk dan onze [Power BI-oplossingen voor installatiebedrijven](/diensten/power-bi-dashboards-voor-installateurs/).
 
-![Financieel inzicht in projectwaardering en efficiëntie](/assets/images/2025/06/2.-Pojectwaardering.png)
+![Financieel inzicht in projectwaardering en efficiëntie]({{ "/assets/images/2025/06/2.-Pojectwaardering.png" | url }})
 
 *Detail van projectwaardering: hoe zwaar weer de marge beïnvloedt.*
 

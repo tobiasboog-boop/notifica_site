@@ -36,11 +36,11 @@ Notifica’s innovatieve Power BI-oplossing voor installatiebedrijven biedt een 
 - Gebruiksvriendelijke dashboards: Intuïtieve visualisaties die specifiek zijn afgestemd op installatiebedrijven.
 - Schaalbaarheid: Onze oplossing groeit moeiteloos mee met de groei van uw organisatie.
 
-![maandrapportage automatisering dashboards voor installatiebedrijven](/assets/images/2025/06/2.-Pojectwaardering.png)
+![maandrapportage automatisering dashboards voor installatiebedrijven]({{ "/assets/images/2025/06/2.-Pojectwaardering.png" | url }})
 
 Figuur: voorbeeld van een geautomatiseerde dashboardweergave voor maandrapportage.
 
-![procesoptimalisatie maandrapportage installateurs met Power BI](/assets/images/2025/06/1.-Finance.png)
+![procesoptimalisatie maandrapportage installateurs met Power BI]({{ "/assets/images/2025/06/1.-Finance.png" | url }})
 
 Figuur: inzichten in financiële resultaten per project met realtime data.
 

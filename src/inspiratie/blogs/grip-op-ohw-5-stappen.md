@@ -43,7 +43,7 @@ Met één klik synchroniseer je de berekende positie met Syntess, Exact Online o
 
 Power BI-grafieken and voorspellende modellen laten zien welke projecten risico lopen en waar kansen liggen. Hiermee signaleer je afwijkingen vroegtijdig en stuur je bij voordat onvoorziene kosten ontstaan.
 
-![Onderhanden werk met realtime inzicht dashboards](/assets/images/2025/06/2.-Pojectwaardering.png)
+![Onderhanden werk met realtime inzicht dashboards]({{ "/assets/images/2025/06/2.-Pojectwaardering.png" | url }})
 
 *Alle projecten keurig onder elkaar met realisatie en voortgang (en automatisch OHW)*
 

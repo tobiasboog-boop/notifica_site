@@ -25,7 +25,7 @@ Stel je voor: je staat midden in een complexe installatieklus en hebt geen recen
 
 Volgens een artikel van [McKinsey & Company](https://www.mckinsey.com/capabilities/operations/our-insights/the-digital-led-revival-of-construction) zorgt datagedreven werken in de bouwsector voor 6–8% kostenbesparing. Met de Power BI-oplossing van Notifica stop je al dat giswerk. Door data zoals gewerkte uren, materiaalkosten en meer- en minderwerk in één overzichtelijk dashboard samen te voegen, zie jij in één oogopslag of je nog binnen je marge blijft én of je het project op tijd oplevert.
 
-![Real-time inzichten en actuele informatie in installatieprojecten](/assets/images/2025/04/Schermafbeelding-2025-04-24-145309.png)
+![Real-time inzichten en actuele informatie in installatieprojecten]({{ "/assets/images/2025/04/Schermafbeelding-2025-04-24-145309.png" | url }})
 
 *Voorbeeld van een **real-time inzicht** in projectkosten via Power BI.*
 
@@ -59,7 +59,7 @@ Volgens een artikel van [McKinsey & Company](https://www.mckinsey.com/capabiliti
 5. **Strategische meerwaarde**  
    Met geavanceerde analyses herken je trends in rendement. Volgens een rapport van [Deloitte](https://www2.deloitte.com/nl/nl/pages/engineering-construction/articles/digitalisering-bouwsector.html) verbetert dit je ROI substantieel.
 
-![Dashboard met actuele informatie en controle in de installatiebranche](/assets/images/2025/06/4.-Projectbeheer.png)
+![Dashboard met actuele informatie en controle in de installatiebranche]({{ "/assets/images/2025/06/4.-Projectbeheer.png" | url }})
 
 *Projectdashboard dat zorgt voor optimale **controle** en actuele informatie.*
 

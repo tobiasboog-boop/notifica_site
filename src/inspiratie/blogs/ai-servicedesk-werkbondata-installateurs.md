@@ -10,7 +10,7 @@ De serviceafdeling is het kloppend hart van elk installatiebedrijf. Dagelijks st
 
 Bij Notifica werken we dagelijks met de **werkbondata** van installatiebedrijven. We zien wat er in **Syntess Atrium** staat: duizenden werkbonnen met storingsomschrijvingen, oplossingen, materiaallijsten en tijdsregistraties. En we zien hoe medewerkers nog steeds handmatig werk doen dat een slim systeem veel sneller en consistenter kan uitvoeren.
 
-![AI in de servicedesk voor analyse van werkbondata](/assets/images/2025/04/Schermafbeelding-2025-04-18-124550.png)
+![AI in de servicedesk voor analyse van werkbondata]({{ "/assets/images/2025/04/Schermafbeelding-2025-04-18-124550.png" | url }})
 
 **In dit artikel:**
 - [Relevantie van AI](#waarom-nu)

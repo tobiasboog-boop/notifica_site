@@ -16,11 +16,11 @@ featuredImage: "/assets/images/2025/06/4.-Projectbeheer.png"
 
 Zonder opstartkosten regelen we dat jouw data binnen één dag beschikbaar is. Eén halfuur van jouw IT-team is voldoende om de koppeling met Power BI te realiseren. Daarna kun je meteen aan de slag, zodat je binnen twee weken al eerste rapporten van je dashboards ziet. Dit helpt je om vanaf dag 1 de juiste inzichten te krijgen.
 
-![razendsnel live met Power BI dashboards voor projectbeheer](/assets/images/2025/06/4.-Projectbeheer.png)
+![razendsnel live met Power BI dashboards voor projectbeheer]({{ "/assets/images/2025/06/4.-Projectbeheer.png" | url }})
 
 Razendsnel controle over de prestaties van je projecten.
 
-![flexibel Power BI dashboard voor offerte en sales](/assets/images/2025/06/10.-Offerte-en-sales-proces.png)
+![flexibel Power BI dashboard voor offerte en sales]({{ "/assets/images/2025/06/10.-Offerte-en-sales-proces.png" | url }})
 
 Dashboard voor offerte- en salesproces, afgestemd op jouw workflow.
 

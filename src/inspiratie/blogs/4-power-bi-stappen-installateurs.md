@@ -17,7 +17,7 @@ Ontdek hoe de combinatie van Power BI en jouw ERP-oplossing (zoals Syntess, AFAS
 - [Stappenplan](#stappenplan)
 - [Toekomst](#toekomst)
 
-![Planning onderhoud - Installatiesector](/assets/images/2025/06/5.-SO-Planning-onderhoud.png)
+![Planning onderhoud - Installatiesector]({{ "/assets/images/2025/06/5.-SO-Planning-onderhoud.png" | url }})
 
 *Planning & onderhoud visualisatie voor de installatiesector*
 
@@ -38,7 +38,7 @@ Of je nu werkt met Syntess, AFAS, of een andere ERP-oplossing: de echte kracht z
 
 Denk aan snelle antwoorden op vragen als: Lopen projecten uit? Waar laten we marge liggen? Welke teams presteren boven verwachting? In Power BI kun je drill-down analysemogelijkheden toevoegen, zodat je niet alleen op het hoogste niveau kijkt, maar ook de diepte in kunt gaan per project, per klant of per monteur.
 
-![Uitvoering - Installatiesector](/assets/images/2025/06/6.-SO-Uitvoering.png)
+![Uitvoering - Installatiesector]({{ "/assets/images/2025/06/6.-SO-Uitvoering.png" | url }})
 
 *Uitvoering van projecten in de installatiesector duidelijk in beeld*
 

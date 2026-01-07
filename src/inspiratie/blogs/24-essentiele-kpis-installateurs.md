@@ -8,7 +8,7 @@ featuredImage: "/assets/images/2025/06/Schermafbeelding-2025-06-03-061935.png"
 
 Met een KPI's dashboard in Power BI krijgt jouw installatiebedrijf in één oogopslag realtime inzicht in alle cruciale KPI's. In deze gids vind je 24 essentiële KPI's, verdeeld over zes thema's, én praktische tips om jouw Power BI-dashboard optimaal in te richten.
 
-![Dashboards voor installateurs 24 essentiële KPI's Power BI](/assets/images/2025/06/Schermafbeelding-2025-06-03-061935.png)
+![Dashboards voor installateurs 24 essentiële KPI's Power BI]({{ "/assets/images/2025/06/Schermafbeelding-2025-06-03-061935.png" | url }})
 
 *Voorbeeld van een financieel overzicht binnen het KPI's dashboard in Power BI*
 
@@ -94,7 +94,7 @@ Richtinggevende KPI's om de commerciële funnel optimaal te benutten en groeikan
 
 *Voorbeeldvideo: uitleg over het ontwerpen van een effectief KPI's dashboard in Power BI*
 
-![KPI's dashboard realtime zicht op OHW en liquiditeit](/assets/images/2025/06/1.-Finance.png)
+![KPI's dashboard realtime zicht op OHW en liquiditeit]({{ "/assets/images/2025/06/1.-Finance.png" | url }})
 
 *Financiële KPI's binnen het dashboard voor realtime zicht op OHW en liquiditeit*
 
