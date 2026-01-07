@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/predictive-maintenance-innovaties/
+showContactPopup: true
 title: "Predictive maintenance: 5 krachtige toepassingen van data als strategisch middel"
 description: "Hoe IoT-integratie, realtime data-analyse en asset management strategieën storingen voorkomen en operationele kosten verlagen."
 featuredImage: "/assets/images/2025/06/3.-HR-Urenrapportage.png"

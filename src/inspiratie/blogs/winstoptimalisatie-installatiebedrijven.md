@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/winstoptimalisatie-installatiebedrijven/
+showContactPopup: true
 title: "Winstoptimalisatie voor Installatiebedrijven: 5 Kengetallen die het Verschil Maken"
 description: "Ontdek hoe je met vijf essentiële kengetallen de winstgevendheid van je installatiebedrijf kunt voorspellen en verbeteren."
 featuredImage: "/assets/images/2025/12/dashboard-kengetallen.png"

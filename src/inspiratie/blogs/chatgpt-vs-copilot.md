@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/chatgpt-vs-copilot/
+showContactPopup: true
 title: "Copilot vs ChatGPT: de ultieme Power BI AI keuzewijzer voor installateurs"
 description: "Power BI Copilot vs ChatGPT: ontdek welke AI-tool het beste past bij jouw data-analyse behoeften als installateur."
 featuredImage: "/assets/images/2025/06/Schermafbeelding-2025-06-05-114828.png"

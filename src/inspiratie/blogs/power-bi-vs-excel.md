@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/power-bi-vs-excel/
+showContactPopup: true
 title: "Power BI versus Excel: 5 onmisbare voordelen van Power BI voor de installatiesector"
 description: "Waarom moderne tools zoals Power BI beter werken dan Excel voor het beheren van duizenden werkorders en uren."
 featuredImage: "/assets/images/2025/06/1.-Financiele-maandrapportage.png"

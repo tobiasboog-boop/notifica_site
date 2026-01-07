@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/verbeter-datakwaliteit-erp/
+showContactPopup: true
 title: "Vastlegging: 5 onmisbare tips voor verbeteren van de datakwaliteit van je bedrijfssoftware"
 description: "Ontdek hoe je de datakwaliteit in je ERP-systeem verbetert voor betrouwbare rapportages en betere beslissingen."
 featuredImage: "/assets/images/2025/06/3aa.-HR-Urenrapportage.png"

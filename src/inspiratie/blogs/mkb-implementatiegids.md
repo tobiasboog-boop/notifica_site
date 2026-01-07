@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/mkb-implementatiegids/
+showContactPopup: true
 title: "MKB-implementatiegids: ontdek 6 essentiële stappen"
 description: "Een complete gids voor het MKB om Business Intelligence succesvol te implementeren met Power BI."
 featuredImage: "/assets/images/2025/06/Schermafbeelding-2025-06-03-061935.png"

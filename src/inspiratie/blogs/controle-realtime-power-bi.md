@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/controle-realtime-power-bi/
+showContactPopup: true
 title: "Ontketen onmiddellijke controle: real-time Power BI-inzichten voor de installatiebranche"
 description: "Real-time inzichten geven je de controle over elk aspect van je installatieprojecten. Minimaliseer budgetoverschrijdingen en verhoog klanttevredenheid."
 featuredImage: "/assets/images/2025/04/Schermafbeelding-2025-04-24-145309.png"

@@ -32,7 +32,9 @@
       "Bash(gh api:*)",
       "Bash(git remote set-url:*)",
       "Bash(timeout 10 curl:*)",
-      "Bash(gh run list:*)"
+      "Bash(gh run list:*)",
+      "Bash(if ! grep -q \"^featuredImage:\" \"$file\")",
+      "Bash(then)"
     ]
   }
 }

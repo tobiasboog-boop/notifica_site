@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/60-tevreden-klanten/
+showContactPopup: true
 title: "Meer dan 60 tevreden klanten sturen hun succes met datagedreven Power BI dashboards"
 description: "Bij Notifica hebben meer dan 60 tevreden klanten dankzij onze datagedreven Power BI dashboards razendsnel succes geboekt. Deze tevreden klanten ervaren dagelijks verbeterde inzichten en efficiëntere processen."
 featuredImage: "/assets/images/2025/06/Forecast.png"

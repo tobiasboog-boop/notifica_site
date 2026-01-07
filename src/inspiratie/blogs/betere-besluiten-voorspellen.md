@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/betere-besluiten-voorspellen/
+showContactPopup: true
 title: "Stop met terugkijken, Begin met vooruitkijken! Betere besluiten met voorspellen"
 description: "Met voorspellen maak je vandaag nog het verschil: verhoog je winst, verlaag risico's en optimaliseer je capaciteit door écht vooruitkijken in Power BI."
 featuredImage: "/assets/images/2025/06/8.-Portefeuille-management.png"

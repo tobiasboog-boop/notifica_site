@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/grip-op-ohw-5-stappen/
+showContactPopup: true
 title: "Eenvoudig grip op OHW: Ontdek Notifica's 5 krachtige stappen"
 description: "Ontdek hoe je met Notifica's stappenplan realtime inzicht in de stand van het OHW en hoe dit zorgt voor betere winstneming en gezonde groei."
 featuredImage: "/assets/images/2025/06/2.-Pojectwaardering-1024x449.png"

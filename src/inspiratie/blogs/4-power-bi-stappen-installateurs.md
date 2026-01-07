@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/4-power-bi-stappen-installateurs/
+showContactPopup: true
 title: "Datagedreven dashboards installatiesector: meer grip met Power BI"
 description: "Wil je als installatiebedrijf vooruit? Dan zijn datagedreven dashboards onmisbaar. Ontdek hoe de combinatie van Power BI en jouw ERP-oplossing (zoals Syntess, AFAS of elk ander ERP voor installateurs) zorgt voor helder inzicht, sturing en resultaat."
 featuredImage: "/assets/images/2025/06/5.-SO-Planning-onderhoud.png"

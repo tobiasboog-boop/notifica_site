@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/ai-dashboards-voordelen/
+showContactPopup: true
 title: "AI dashboards: Ontdek 7 gigantische voordelen voor 2026"
 description: "Hoe intelligente dashboards met machine learning diepere inzichten bieden en handmatig werk met 25-40% reduceren."
 featuredImage: "/assets/images/2025/06/fb5c57c9-e7fc-4b85-86ea-29ce610a4eed.png"

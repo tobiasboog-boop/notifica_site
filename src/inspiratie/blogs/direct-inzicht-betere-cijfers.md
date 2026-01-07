@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/direct-inzicht-betere-cijfers/
+showContactPopup: true
 title: "Van rommelige cijfers naar helder inzicht: Notifica's aanpak voor installateurs"
 description: "Direct inzicht verkrijgen en realtime sturen op prestaties is essentieel in de installatiebranche. Leer hoe je datagedreven beslissingen neemt."
 featuredImage: "/assets/images/2025/06/3.-HR-Urenrapportage.png"

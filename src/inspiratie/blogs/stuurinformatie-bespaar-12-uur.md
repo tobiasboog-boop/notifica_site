@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/stuurinformatie-bespaar-12-uur/
+showContactPopup: true
 title: "Stuurinformatie: bespaar 12 uur per week met Power BI"
 description: "Ontdek hoe effectieve stuurinformatie KPI's optimaliseert, snellere koerscorrecties mogelijk maakt en kosten structureel verlaagt."
 featuredImage: "/assets/images/2025/06/9.-Accountmanagement-Cashflow.png"

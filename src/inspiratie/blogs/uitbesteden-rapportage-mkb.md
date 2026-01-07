@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/uitbesteden-rapportage-mkb/
+showContactPopup: true
 title: "7 Overtuigende Redenen Waarom Uitbesteden van Rapportages voor het MKB Slim Is"
 description: "Ontdek hoe uitbesteden van rapportage kleine bedrijven helpt kosten te verlagen, sneller inzichten te krijgen en resultaten te verbeteren."
 featuredImage: "/assets/images/2025/06/10.-Offerte-en-sales-proces.png"

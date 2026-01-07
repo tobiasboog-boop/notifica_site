@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/razendsnel-rapporten-live/
+showContactPopup: true
 title: "Razendsnel live: binnen 2 weken met Power BI – eenvoudig, snel, flexibel & betaalbaar"
 description: "Ontdek hoe je binnen twee weken live gaat met Power BI dashboards, zonder opstartkosten en met minimale IT-betrokkenheid."
 featuredImage: "/assets/images/2025/06/4.-Projectbeheer.png"

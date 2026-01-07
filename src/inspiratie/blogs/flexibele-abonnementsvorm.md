@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/flexibele-abonnementsvorm/
+showContactPopup: true
 title: "5 onmiskenbare voordelen van ons alles-in-één abonnement"
 description: "In de installatiebranche zijn actuele inzichten cruciaal. Ontdek de voordelen van Notifica's alles-in-één Power BI abonnement: beheer, updates en support in één pakket."
 featuredImage: "/assets/images/2025/06/5.-SO-Planning-onderhoud.png"

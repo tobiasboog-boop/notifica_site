@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/ai-servicedesk-werkbondata-installateurs/
+showContactPopup: true
 title: "AI in de Servicedesk: Hoe Installatiebedrijven Slimmer Werken met hun Werkbondata"
 description: "De serviceafdeling is het kloppend hart van elk installatiebedrijf. Dagelijks stromen werkbonnen binnen voor storingen, onderhoud en reparaties. Achter elke werkbon schuilt een schat aan informatie: wat was het probleem, hoe is het opgelost, welke materialen waren nodig, hoeveel tijd kostte het?"
 featuredImage: "/assets/images/2025/04/Schermafbeelding-2025-04-18-124550.png"

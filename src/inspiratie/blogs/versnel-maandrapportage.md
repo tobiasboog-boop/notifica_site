@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/versnel-maandrapportage/
+showContactPopup: true
 title: "Maandrapportage: 5 onmisbare tips voor tijdbesparing en automatisering"
 description: "Leer hoe je maandrapportages automatiseert en uren tijd bespaart met Power BI dashboards."
 featuredImage: "/assets/images/2025/06/2.-Pojectwaardering.png"

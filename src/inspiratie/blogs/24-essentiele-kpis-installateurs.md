@@ -1,4 +1,7 @@
 ---
+layout: base-notion.njk
+permalink: /inspiratie/blogs/24-essentiele-kpis-installateurs/
+showContactPopup: true
 title: "Dashboards voor installateurs: 24 essentiële KPI's in één overzicht"
 description: "Met een KPI's dashboard in Power BI krijgt jouw installatiebedrijf in één oogopslag realtime inzicht in alle cruciale KPI's. In deze gids vind je 24 essentiële KPI's, verdeeld over zes thema's, én praktische tips om jouw Power BI-dashboard optimaal in te richten."
 featuredImage: "/assets/images/2025/06/Schermafbeelding-2025-06-03-061935.png"
