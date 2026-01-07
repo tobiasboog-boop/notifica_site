@@ -556,8 +556,8 @@ footer {
     color: var(--text-secondary);
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
+/* Responsive - Tablet and below */
+@media (max-width: 900px) {
     .container, nav .container { padding: 0 24px; }
     .features-grid { grid-template-columns: 1fr; }
     .steps-grid { grid-template-columns: 1fr; }
