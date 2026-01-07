@@ -393,16 +393,9 @@ h3 {
 /* Testimonials */
 .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     margin-top: 56px;
-}
-
-/* Force 3 columns for 3 items on desktop */
-@media (min-width: 1025px) {
-    .testimonials-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 .testimonial-card {
