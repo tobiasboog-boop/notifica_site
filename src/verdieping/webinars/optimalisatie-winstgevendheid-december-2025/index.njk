@@ -1,202 +1,1329 @@
 ---
 layout: base-notion.njk
-title: Webinar Optimalisatie Winstgevendheid - Notifica
-description: Bekijk de presentatie van ons webinar over winstoptimalisatie voor installatiebedrijven. Inclusief interactieve bedrijfsanalysetool.
+title: Webinar Optimalisatie Winstgevendheid December 2025 - Notifica
+description: Ontdek hoe je met 5 eenvoudige kengetallen je bedrijfsresultaat kunt voorspellen, bewaken en verbeteren.
 permalink: /verdieping/webinars/optimalisatie-winstgevendheid-december-2025/
 showContactPopup: true
 ---
 
-<!-- Hero -->
-<section class="hero" style="padding: 80px 0 60px;">
-    <div class="container">
-        <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <div class="badge">Webinar December 2025</div>
-            <h1>Optimalisatie Winstgevendheid Installatiebedrijven</h1>
-            <p class="subtitle">
-                In een handomdraai waardevolle inzichten uit je data. Bekijk de presentatie en ontdek hoe Notifica installatiebedrijven helpt om winstgevender te werken met real-time dashboards.
-            </p>
-        </div>
-    </div>
+<style>
+/* Webinar Page Styles */
+
+/* Hero Section */
+.webinar-hero {
+  background: #16136f;
+  padding: 100px 0;
+  text-align: center;
+}
+.webinar-hero h1 {
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: 56px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+.webinar-hero .subtitle {
+  color: rgba(255,255,255,0.85);
+  font-size: 20px;
+  margin: 0 auto;
+  line-height: 1.6;
+  max-width: 650px;
+}
+.webinar-hero .date {
+  color: rgba(255,255,255,0.6);
+  font-size: 16px;
+  margin-top: 50px;
+}
+
+/* Section Headers */
+.webinar-section {
+  padding: 100px 0;
+}
+.webinar-section.alt {
+  background: #f8f9fc;
+}
+.webinar-section.dark {
+  background: #16136f;
+}
+.webinar-section h2 {
+  color: #16136f;
+  margin-bottom: 25px;
+  font-size: 42px;
+  font-weight: 700;
+  text-align: center;
+}
+.webinar-section.dark h2 {
+  color: #ffffff;
+}
+.webinar-section .section-intro {
+  color: #666;
+  font-size: 18px;
+  margin: 0 auto 60px;
+  max-width: 750px;
+  line-height: 1.6;
+  text-align: center;
+}
+.webinar-section.dark .section-intro {
+  color: rgba(255,255,255,0.85);
+}
+
+/* Behoefte Container */
+.behoefte-container {
+  background: #fff;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 6px 30px rgba(22,19,111,0.1);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.behoefte-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 50px;
+}
+.behoefte-column {
+  text-align: left;
+}
+.behoefte-number {
+  color: #16136f;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1;
+}
+.behoefte-title {
+  color: #16136f;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.behoefte-questions {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+.behoefte-questions li {
+  color: #444;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+.behoefte-answer {
+  color: #d32f2f;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.behoefte-dashboard {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 2px solid #f0f0f0;
+  text-align: center;
+}
+.behoefte-dashboard-img {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(22,19,111,0.15);
+}
+.behoefte-conclusion {
+  background: linear-gradient(135deg, #fff8e1 0%, #fff 100%);
+  border: 3px solid #ffc107;
+  border-radius: 16px;
+  padding: 25px 35px;
+  text-align: center;
+  margin-top: 40px;
+}
+.behoefte-conclusion-text {
+  color: #16136f;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* Problem Cards */
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.problem-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 50px 35px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(22,19,111,0.08);
+  transition: all 0.3s ease;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.problem-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(22,19,111,0.15);
+}
+.problem-icon {
+  font-size: 64px;
+  margin-bottom: 25px;
+  line-height: 1;
+}
+.problem-title {
+  color: #16136f;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+.problem-text {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Breakthrough Box */
+.breakthrough-compact {
+  background: linear-gradient(135deg, #f8f9ff 0%, #fff 100%);
+  border: 2px solid #e8e8ff;
+  border-radius: 16px;
+  padding: 35px 40px;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.breakthrough-negative-compact {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 18px 25px;
+  margin-bottom: 25px;
+}
+.breakthrough-negative-title-compact {
+  color: #999;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.breakthrough-negative-text-compact {
+  color: #999;
+  font-size: 15px;
+}
+.breakthrough-arrow-compact {
+  font-size: 36px;
+  color: #16136f;
+  margin: 20px 0;
+  line-height: 1;
+}
+.breakthrough-positive-compact {
+  background: #16136f;
+  border-radius: 12px;
+  padding: 28px 35px;
+}
+.breakthrough-positive-title-compact {
+  color: #fff;
+  font-size: 23px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.breakthrough-positive-text-compact {
+  color: rgba(255,255,255,0.9);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* TW Demo Container */
+.tw-demo-container {
+  background: #fff;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 6px 30px rgba(22,19,111,0.1);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.tw-table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 40px;
+}
+.tw-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 30px;
+}
+.tw-table th {
+  background: #5a5a5a;
+  color: #fff;
+  padding: 18px 20px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  border-right: 1px solid #fff;
+}
+.tw-table th:first-child {
+  text-align: left;
+  background: #6a6a6a;
+  border-top-left-radius: 10px;
+}
+.tw-table th:last-child {
+  border-right: none;
+  border-top-right-radius: 10px;
+}
+.tw-table td {
+  padding: 16px 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid #e8e8e8;
+  background: #fff;
+}
+.tw-table td:first-child {
+  text-align: left;
+  background: #f5f5f5;
+  font-weight: 600;
+  color: #333;
+}
+.tw-omzet {
+  background: #f0f0f0 !important;
+  color: #333 !important;
+  font-weight: 700 !important;
+}
+.tw-highlight {
+  background: #e8f8f5 !important;
+  color: #00a878 !important;
+  font-weight: 700 !important;
+  font-size: 20px !important;
+}
+.tw-arrow-cell {
+  background: none !important;
+  border: none !important;
+  padding: 30px 20px !important;
+  text-align: center !important;
+}
+.tw-arrow {
+  font-size: 48px;
+  color: #888;
+}
+.tw-conclusion {
+  background: linear-gradient(135deg, #fff8e1 0%, #fff 100%);
+  border: 3px solid #ffc107;
+  border-radius: 16px;
+  padding: 30px 40px;
+  text-align: center;
+}
+.tw-conclusion-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.tw-conclusion-text {
+  color: #16136f;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+/* Kengetallen */
+.kengetallen-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-bottom: 70px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.kengetal-box {
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  padding: 40px 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.kengetal-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+.kengetal-num {
+  background: #16136f;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 28px;
+  margin: 0 auto 25px;
+}
+.kengetal-name {
+  color: #16136f;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.3;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.kengetal-unit {
+  color: #666;
+  font-size: 15px;
+}
+
+/* Formula */
+.formula-container {
+  background: rgba(255,255,255,0.1);
+  border: 3px solid rgba(255,255,255,0.25);
+  border-radius: 20px;
+  padding: 50px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.formula-label {
+  color: rgba(255,255,255,0.8);
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.formula-content {
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  padding: 45px 40px;
+  text-align: center;
+}
+.formula-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+.formula-parentheses {
+  background: #f8f9ff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+.formula-var {
+  color: #16136f;
+  font-weight: 700;
+  font-size: 28px;
+  padding: 0 8px;
+}
+.formula-operator {
+  color: #666;
+  font-size: 32px;
+  margin: 0 12px;
+  font-weight: 400;
+}
+.formula-bracket {
+  color: #16136f;
+  font-size: 40px;
+  font-weight: 300;
+  margin: 0 5px;
+}
+.formula-multiply {
+  text-align: center;
+  font-size: 36px;
+  color: #666;
+  margin: 20px 0;
+}
+.formula-example {
+  background: #16136f;
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 35px;
+}
+.formula-example-label {
+  color: rgba(255,255,255,0.7);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.formula-example-calc {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.formula-example-result {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  padding-top: 15px;
+  border-top: 2px solid rgba(255,255,255,0.3);
+}
+
+/* KPI Accordion */
+.kpi-accordion {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.kpi-accordion details {
+  background: #fff;
+  border: 2px solid #e8e8e8;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.kpi-accordion details:hover {
+  border-color: #16136f;
+  box-shadow: 0 6px 20px rgba(22,19,111,0.12);
+}
+.kpi-accordion details[open] {
+  border-color: #16136f;
+  box-shadow: 0 8px 25px rgba(22,19,111,0.18);
+}
+.kpi-accordion summary {
+  padding: 26px 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  background: linear-gradient(135deg, #fafbff 0%, #ffffff 100%);
+  transition: background 0.3s ease;
+  outline: none;
+}
+.kpi-accordion summary::-webkit-details-marker {
+  display: none;
+}
+.kpi-accordion details[open] summary {
+  background: linear-gradient(135deg, #eef0ff 0%, #f8f9ff 100%);
+}
+.kpi-num {
+  width: 44px;
+  height: 44px;
+  background: #16136f;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+.kpi-name {
+  color: #16136f;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+}
+.kpi-accordion summary:after {
+  content: "▼";
+  font-size: 16px;
+  color: #16136f;
+  transition: transform 0.3s ease;
+  margin-left: 20px;
+}
+.kpi-accordion details[open] summary:after {
+  transform: rotate(180deg);
+}
+.kpi-body {
+  padding: 28px 32px 32px 32px;
+  border-top: 1px solid #f0f0f0;
+}
+.kpi-block {
+  margin-bottom: 26px;
+}
+.kpi-block:last-child {
+  margin-bottom: 0;
+}
+.kpi-block-title {
+  color: #16136f;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 14px;
+}
+.kpi-explanation {
+  background: #f8f9ff;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 3px solid #16136f;
+}
+.kpi-explanation p {
+  margin: 0 0 10px 0;
+  color: #444;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.kpi-explanation p:last-child {
+  margin-bottom: 0;
+}
+.kpi-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.kpi-items li {
+  padding: 9px 0 9px 28px;
+  position: relative;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.kpi-items li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #16136f;
+  font-weight: 700;
+  font-size: 18px;
+}
+.kpi-report {
+  background: #fff5e6;
+  padding: 14px 18px;
+  border-radius: 8px;
+  border-left: 3px solid #f39c12;
+  margin-bottom: 16px;
+}
+.kpi-report p {
+  margin: 0;
+  color: #444;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.kpi-analyze {
+  background: #e8f5e9;
+  padding: 16px 20px;
+  border-radius: 10px;
+  border-left: 4px solid #4caf50;
+}
+.kpi-analyze p {
+  margin: 0;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Dashboard Frames */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.dashboard-frame {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 25px rgba(22,19,111,0.1);
+  transition: all 0.3s ease;
+}
+.dashboard-frame:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(22,19,111,0.18);
+}
+.dashboard-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+.dashboard-caption {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+/* CTA Cards */
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto 60px;
+}
+.cta-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  padding: 50px 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cta-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+.cta-emoji {
+  font-size: 56px;
+  margin-bottom: 25px;
+  line-height: 1;
+}
+.cta-heading {
+  color: #16136f;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  line-height: 1.2;
+}
+.cta-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cta-list li {
+  padding: 14px 0 14px 38px;
+  position: relative;
+  color: #444;
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+.cta-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #16136f;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+/* Final CTA */
+.final-cta {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 45px 50px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+.final-cta-badge {
+  display: inline-block;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.final-cta-title {
+  color: #16136f;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.final-cta .btn {
+  margin-top: 20px;
+}
+
+/* Video Section */
+.video-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Calculator Wrapper */
+.calc-wrapper {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(22,19,111,0.12);
+  overflow: hidden;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .kengetallen-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 968px) {
+  .behoefte-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .problem-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .webinar-hero h1 {
+    font-size: 36px;
+  }
+  .webinar-section h2 {
+    font-size: 32px;
+  }
+  .kengetallen-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .kengetal-box {
+    padding: 30px 20px;
+  }
+  .formula-var {
+    font-size: 18px;
+  }
+  .formula-operator {
+    font-size: 22px;
+  }
+  .behoefte-container,
+  .tw-demo-container {
+    padding: 30px 20px;
+  }
+}
+</style>
+
+<!-- Hero Section -->
+<section class="webinar-hero">
+  <div class="container" style="max-width: 900px;">
+    <h1>Optimalisatie<br>Winstgevendheid</h1>
+    <p class="subtitle">
+      Ontdek hoe je met 5 eenvoudige kengetallen je bedrijfsresultaat kunt voorspellen, bewaken en verbeteren.
+    </p>
+    <p class="date">Webinar December 2025</p>
+  </div>
 </section>
 
-<!-- Webinar Presentatie Section -->
-<section class="section" style="padding: 60px 0;">
-    <div class="container" style="max-width: 900px;">
-        <!-- Info Card -->
-        <div style="background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%); border: 1px solid #E5E7EB; border-radius: 12px; padding: 32px; margin-bottom: 24px;">
-            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
-                <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); color: white; width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; flex-shrink: 0;">
-                    1
-                </div>
-                <h2 style="margin: 0; font-size: 28px; color: var(--navy);">Webinar Presentatie</h2>
-            </div>
-            <p style="font-size: 16px; line-height: 1.6; color: var(--text); margin-bottom: 20px;">
-                Bekijk de complete presentatie over winstoptimalisatie en projectsturing voor installatiebedrijven. Leer hoe je met real-time dashboards direct grip krijgt op je projectmarges en bedrijfsprestaties.
-            </p>
-            <!-- Highlight Box -->
-            <div style="background: white; border: 2px solid #3636A2; border-radius: 8px; padding: 16px; display: flex; align-items: center; gap: 12px;">
-                <div style="font-size: 24px; flex-shrink: 0;">📊</div>
-                <div>
-                    <div style="font-weight: 600; color: var(--navy); margin-bottom: 4px;">Praktische inzichten</div>
-                    <div style="font-size: 14px; color: var(--text-secondary);">Concrete voorbeelden en live demonstraties van Power BI dashboards</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Vimeo Video Player -->
-        <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); position: relative; padding-bottom: 56.25%; height: 0;">
-            <iframe
-                src="https://player.vimeo.com/video/1145925458?h=6bf32dfc2a&badge=0&autopause=0&player_id=0&app_id=58479"
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                allowfullscreen
-                title="Webinar Optimalisatie Winstgevendheid December 2025">
-            </iframe>
-        </div>
+<!-- Video Section -->
+<section class="webinar-section">
+  <div class="container">
+    <h2>Bekijk het webinar</h2>
+    <p class="section-intro">
+      De complete presentatie over winstoptimalisatie voor installatiebedrijven.
+    </p>
+    <div class="video-container">
+      <iframe
+        src="https://player.vimeo.com/video/1145925458?h=6bf32dfc2a&badge=0&autopause=0&player_id=0&app_id=58479"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        allowfullscreen
+        title="Webinar Optimalisatie Winstgevendheid December 2025">
+      </iframe>
     </div>
+  </div>
 </section>
 
-<!-- Bedrijfsanalysetool Section -->
-<section class="section section-alt" style="padding: 60px 0; background: #FAFBFC;">
-    <div class="container" style="max-width: 900px;">
-        <!-- Info Card -->
-        <div style="background: linear-gradient(135deg, #FFFFFF 0%, #F9FAFB 100%); border: 1px solid #E5E7EB; border-radius: 12px; padding: 32px; margin-bottom: 24px;">
-            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
-                <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); color: white; width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; flex-shrink: 0;">
-                    2
-                </div>
-                <h2 style="margin: 0; font-size: 28px; color: var(--navy);">Probeer de Bedrijfsanalysetool</h2>
-            </div>
-            <p style="font-size: 16px; line-height: 1.6; color: var(--text); margin-bottom: 20px;">
-                Analyseer direct je eigen bedrijfsprestaties met onze interactieve tool. Vul je kerncijfers in en krijg inzicht in winstgevendheid, efficiency en potentiële besparingen.
-            </p>
-            <!-- Highlight Box -->
-            <div style="background: white; border: 2px solid #3636A2; border-radius: 8px; padding: 16px; display: flex; align-items: center; gap: 12px;">
-                <div style="font-size: 24px; flex-shrink: 0;">🔍</div>
-                <div>
-                    <div style="font-weight: 600; color: var(--navy); margin-bottom: 4px;">Direct aan de slag</div>
-                    <div style="font-size: 14px; color: var(--text-secondary);">Bereken je potentiële tijdsbesparing en ROI met real-time dashboards</div>
-                </div>
-            </div>
+<!-- Generieke Behoefte Section -->
+<section class="webinar-section">
+  <div class="container">
+    <h2>Generieke behoefte</h2>
+    <p class="section-intro">
+      Wat wil je eigenlijk bereiken met je bedrijfscijfers?
+    </p>
+
+    <div class="behoefte-container">
+      <div class="behoefte-grid">
+        <div class="behoefte-column">
+          <div class="behoefte-number">1.</div>
+          <div class="behoefte-title">Inzicht</div>
+          <ul class="behoefte-questions">
+            <li>Hoe staat het voor?</li>
+          </ul>
+          <div class="behoefte-answer">Ten opzichte van mijn doel</div>
         </div>
 
-        <!-- Tool Link Card -->
-        <a href="{{ '/verdieping/bedrijfsanalysetool/' | url }}" style="display: block; text-decoration: none;">
-            <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); border-radius: 12px; padding: 48px; text-align: center; color: white; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 8px 24px rgba(22, 19, 111, 0.3);">
-                <div style="font-size: 64px; margin-bottom: 20px;">🔍</div>
-                <h3 style="font-size: 24px; margin-bottom: 12px; color: white;">Open de Bedrijfsanalysetool</h3>
-                <p style="opacity: 0.9; margin-bottom: 24px;">Analyseer jouw bedrijfsprestaties in enkele minuten</p>
-                <span class="btn" style="background: white; color: var(--navy);">Start analyse →</span>
+        <div class="behoefte-column">
+          <div class="behoefte-number">2.</div>
+          <div class="behoefte-title">Voorspelbaarheid</div>
+          <ul class="behoefte-questions">
+            <li>Waar gaan we op uitkomen?</li>
+          </ul>
+          <div class="behoefte-answer">Halen we ons doel?</div>
+        </div>
+
+        <div class="behoefte-column">
+          <div class="behoefte-number">3.</div>
+          <div class="behoefte-title">Verbeterpotentieel</div>
+          <ul class="behoefte-questions">
+            <li>Hoe kan ik bijsturen?</li>
+          </ul>
+          <div class="behoefte-answer">Om ons doel te halen</div>
+        </div>
+      </div>
+
+      <div class="behoefte-dashboard">
+        <img src="https://notifica.nl/wp-content/uploads/2025/12/generieke-behoefte-dashboard.png" alt="Dashboard met doelen" class="behoefte-dashboard-img">
+      </div>
+
+      <div class="behoefte-conclusion">
+        <div class="behoefte-conclusion-text">
+          → Doelen geven letterlijk kleur aan rapportages (en zorgen voor actiegerichtheid)
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Waarom Begroten Niet Lukt Section -->
+<section class="webinar-section alt">
+  <div class="container">
+    <h2>Waarom begroten vaak niet lukt</h2>
+    <p class="section-intro">
+      Wat we in de praktijk zien bij installatiebedrijven
+    </p>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-icon">📋</div>
+        <div class="problem-title">Jaardoelen worden<br>niet gemaakt</div>
+        <div class="problem-text">Men vindt het lastig en tijdrovend om realistische doelen te stellen</div>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-icon">📊</div>
+        <div class="problem-title">Projectomzet is lastig<br>te voorspellen</div>
+        <div class="problem-text">De materiaalcomponent maakt omzetprognoses complex en onbetrouwbaar</div>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-icon">🔍</div>
+        <div class="problem-title">Geen inzicht in<br>verbeterpotentieel</div>
+        <div class="problem-text">Waar moet je beginnen? Welke KPI's hebben de grootste impact?</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Van Complexiteit naar Eenvoud Section -->
+<section class="webinar-section">
+  <div class="container" style="max-width: 800px;">
+    <h2>Van complexiteit naar eenvoud</h2>
+    <p class="section-intro">
+      Personeels- en bedrijfskosten zijn <strong>stabiel en voorspelbaar</strong>. Alleen omzet lijkt lastig door materiaal.
+    </p>
+
+    <div class="breakthrough-compact">
+      <div class="breakthrough-negative-compact">
+        <div class="breakthrough-negative-title-compact">❌ Omzet is niet te voorspellen</div>
+        <div class="breakthrough-negative-text-compact">Door wisselende materiaalcomponent</div>
+      </div>
+
+      <div class="breakthrough-arrow-compact">↓</div>
+
+      <div class="breakthrough-positive-compact">
+        <div class="breakthrough-positive-title-compact">✨ Toegevoegde waarde per uur<br>WÉL constant</div>
+        <div class="breakthrough-positive-text-compact">
+          Dit is de sleutel tot voorspelbaar budgetteren
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Introductie Toegevoegde Waarde Section -->
+<section class="webinar-section alt">
+  <div class="container">
+    <h2>Introductie van Toegevoegde Waarde</h2>
+    <p class="section-intro">
+      Waarom toegevoegde waarde per uur constant blijft, ongeacht de materiaalcomponent
+    </p>
+
+    <div class="tw-demo-container">
+      <div class="tw-table-wrapper">
+        <table class="tw-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th colspan="2">Project-1<br>(materiaal intensief)</th>
+              <th style="background: #888;">Materiaal eruit</th>
+              <th colspan="2">Project-2<br>(niet mat. intensief)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Omzet</td>
+              <td colspan="2" class="tw-omzet">1000</td>
+              <td>-700</td>
+              <td colspan="2" class="tw-omzet">300</td>
+            </tr>
+            <tr>
+              <td>Materiaalkosten</td>
+              <td colspan="2">800</td>
+              <td>-700</td>
+              <td colspan="2">100</td>
+            </tr>
+            <tr>
+              <td><strong>Toegevoegde waarde</strong></td>
+              <td colspan="2" class="tw-highlight">200</td>
+              <td class="tw-highlight">0</td>
+              <td colspan="2" class="tw-highlight">200</td>
+            </tr>
+            <tr>
+              <td colspan="6" class="tw-arrow-cell">
+                <div class="tw-arrow">↓</div>
+              </td>
+            </tr>
+            <tr>
+              <td>Arbeidsuren</td>
+              <td colspan="2">2</td>
+              <td></td>
+              <td colspan="2">2</td>
+            </tr>
+            <tr>
+              <td><strong>Toegevoegde waarde p/u</strong></td>
+              <td colspan="2" class="tw-highlight">100</td>
+              <td></td>
+              <td colspan="2" class="tw-highlight">100</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tw-conclusion">
+        <div class="tw-conclusion-icon">💡</div>
+        <div class="tw-conclusion-text">
+          Omzet is niet te voorspellen, maar de toegevoegde waarde per uur is <strong>WÉL constant (€100 p/u)</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- De 5 Kengetallen Section -->
+<section class="webinar-section dark">
+  <div class="container">
+    <h2>De 5 Kengetallen</h2>
+    <p class="section-intro">
+      Met deze 5 kengetallen bereken je eenvoudig je beoogd resultaat
+    </p>
+
+    <div class="kengetallen-container">
+      <div class="kengetal-box">
+        <div class="kengetal-num">1</div>
+        <div class="kengetal-name">Capaciteit</div>
+        <div class="kengetal-unit">Totaal uren</div>
+      </div>
+      <div class="kengetal-box">
+        <div class="kengetal-num">2</div>
+        <div class="kengetal-name">Productiviteit</div>
+        <div class="kengetal-unit">% directe uren</div>
+      </div>
+      <div class="kengetal-box">
+        <div class="kengetal-num">3</div>
+        <div class="kengetal-name">Toegevoegde waarde</div>
+        <div class="kengetal-unit">€ per uur</div>
+      </div>
+      <div class="kengetal-box">
+        <div class="kengetal-num">4</div>
+        <div class="kengetal-name">Personeelskosten</div>
+        <div class="kengetal-unit">€ per uur</div>
+      </div>
+      <div class="kengetal-box">
+        <div class="kengetal-num">5</div>
+        <div class="kengetal-name">Bedrijfskosten</div>
+        <div class="kengetal-unit">€ per uur</div>
+      </div>
+    </div>
+
+    <div class="formula-container">
+      <div class="formula-label">Bereken je Bedrijfsresultaat</div>
+      <div class="formula-content">
+        <div class="formula-equation">
+          <div class="formula-row">
+            <span class="formula-var">Capaciteit</span>
+            <span class="formula-operator">×</span>
+            <span class="formula-var">Productiviteit</span>
+          </div>
+          <div class="formula-multiply">×</div>
+          <div class="formula-row formula-parentheses">
+            <span class="formula-bracket">(</span>
+            <span class="formula-var">TW</span>
+            <span class="formula-operator">−</span>
+            <span class="formula-var">Personeelskosten</span>
+            <span class="formula-operator">−</span>
+            <span class="formula-var">Bedrijfskosten</span>
+            <span class="formula-bracket">)</span>
+          </div>
+        </div>
+        <div class="formula-example">
+          <div class="formula-example-label">Voorbeeld:</div>
+          <div class="formula-example-calc">
+            20.000 uur × 50% × (€100 − €50 − €30)
+          </div>
+          <div class="formula-example-result">
+            = €200.000
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bereken je Verbeterpotentieel Section -->
+<section class="webinar-section alt" style="padding: 80px 0 50px;">
+  <div class="container">
+    <h2>Bereken je verbeterpotentieel</h2>
+    <p class="section-intro">
+      Zie direct de impact van kleine verbeteringen op je bedrijfsresultaat
+    </p>
+
+    <div class="calc-wrapper">
+      <!-- Embedded Calculator - identical to bedrijfsanalysetool -->
+      <div style="padding: 20px;">
+        {% include "bedrijfsanalysetool-calculator.njk" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Op welke KPI's sturen Section -->
+<section class="webinar-section">
+  <div class="container">
+    <h2>Op welke KPI's moet je sturen?</h2>
+    <p class="section-intro">
+      De 5 belangrijkste verbeterdoelstellingen met onderliggende KPI's
+    </p>
+
+    <div class="kpi-accordion">
+
+      <details>
+        <summary>
+          <div class="kpi-num">1</div>
+          <div class="kpi-name">Verkoop en vraag</div>
+        </summary>
+        <div class="kpi-body">
+          <div class="kpi-explanation">
+            <p><strong>Wat betekent dit cijfer?</strong></p>
+            <p>Dit cijfer laat zien hoe effectief je commerciële proces is. Haal je voldoende werk binnen en – belangrijker nog – tegen de juiste prijs? Het is de motor van je omzet.</p>
+            <p style="margin-top:12px;"><strong>Waar bestaat het uit?</strong></p>
+            <p>De verhouding tussen uitgebrachte offertes en daadwerkelijke opdrachten (hitrate), de gemiddelde ordergrootte en de aansluiting van de verkoop op de beschikbare urenplanning.</p>
+          </div>
+          <div class="kpi-block">
+            <div class="kpi-block-title">Key Prestatie Indicatoren</div>
+            <ul class="kpi-items">
+              <li>Effectiviteit Salesproces</li>
+              <li>Hoge toegevoegde waarde per uur VC</li>
+              <li>Planning directe uren</li>
+            </ul>
+          </div>
+          <div class="kpi-report">
+            <p><span class="kpi-report-icon">📊</span> <strong>Eenvoudig te vinden in:</strong> Notifica Omzetrapportage & Sales Dashboard</p>
+          </div>
+          <div class="kpi-block">
+            <div class="kpi-analyze">
+              <p><strong>Analyseer per:</strong> Verkoper</p>
             </div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <div class="kpi-num">2</div>
+          <div class="kpi-name">Productiviteit</div>
+        </summary>
+        <div class="kpi-body">
+          <div class="kpi-explanation">
+            <p><strong>Wat betekent dit cijfer?</strong></p>
+            <p>Dit percentage toont hoeveel tijd van je monteurs daadwerkelijk gefactureerd kan worden. Tijd die niet declarabel is, kost geld in plaats van dat het geld oplevert.</p>
+            <p style="margin-top:12px;"><strong>Waar bestaat het uit?</strong></p>
+            <p>Het totaal aantal declarabele uren gedeeld door de totale contracturen. Dit wordt beinvloed door reisuren, ziekteverzuim, interne overleggen en de efficientie van de planning.</p>
+          </div>
+          <div class="kpi-block">
+            <div class="kpi-block-title">Key Prestatie Indicatoren</div>
+            <ul class="kpi-items">
+              <li>Verloop personeel</li>
+              <li>Productiviteit</li>
+              <li>Ziekteverzuim%</li>
+              <li>Opleidingsuitgaven</li>
+              <li>Verhouding monteurs – projectgebonden</li>
+              <li>Planning / bezetting</li>
+            </ul>
+          </div>
+          <div class="kpi-report">
+            <p><span class="kpi-report-icon">📊</span> <strong>Eenvoudig te vinden in:</strong> Notifica Urenrapportage & HR Dashboard</p>
+          </div>
+          <div class="kpi-block">
+            <div class="kpi-analyze">
+              <p><strong>Analyseer per:</strong> Afdeling, Functiegroep</p>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <div class="kpi-num">3</div>
+          <div class="kpi-name">Toegevoegde waarde projecten</div>
+        </summary>
+        <div class="kpi-body">
+          <div class="kpi-explanation">
+            <p><strong>Wat betekent dit cijfer?</strong></p>
+            <p>Toegevoegde waarde is je omzet minus de materiaalkosten en inhuur derden. Wat overblijft is de pure waarde van je eigen arbeid; het bedrag waaruit je jouw organisatie moet betalen en winst moet maken.</p>
+            <p style="margin-top:12px;"><strong>Waar bestaat het uit?</strong></p>
+            <p>De inkoopcondities (kortingen), de verkoopprijzen van materialen, het minimaliseren van faalkosten (verspilling) en de verhouding tussen materiaal en arbeid in je projecten.</p>
+          </div>
+          <div class="kpi-block">
+            <div class="kpi-block-title">Key Prestatie Indicatoren</div>
+            <ul class="kpi-items">
+              <li>Toegevoegde waarde per uur</li>
+              <li>Uitbesteden laagwaardig arbeid</li>
+              <li>Maximaliseren hoogwaardig arbeid</li>
+              <li>Inkoopkortingen</li>
+              <li>% Inkopen voorkeursleveranciers</li>
+            </ul>
+          </div>
+          <div class="kpi-report">
+            <p><span class="kpi-report-icon">📊</span> <strong>Eenvoudig te vinden in:</strong> Notifica Projectrapportage & Brutomarge Analyse</p>
+          </div>
+          <div class="kpi-block">
+            <div class="kpi-analyze">
+              <p><strong>Analyseer per:</strong> Product-/markt combinatie, Verkoper, Werkgroep</p>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <div class="kpi-num">4</div>
+          <div class="kpi-name">Vaste bedrijfskosten</div>
+        </summary>
+        <div class="kpi-body">
+          <div class="kpi-explanation">
+            <p><strong>Wat betekent dit cijfer?</strong></p>
+            <p>Dit zijn de kosten per productief uur om de 'lichten aan te houden'. Hoe meer productieve uren je draait, hoe lager deze kosten per uur worden en hoe meer winst er overblijft.</p>
+            <p style="margin-top:12px;"><strong>Waar bestaat het uit?</strong></p>
+            <p>Alle overheadkosten (huisvesting, auto's, verzekeringen, kantoorpersoneel) gedeeld door het totaal aantal productieve uren. Een lage bezetting laat dit cijfer direct stijgen.</p>
+          </div>
+          <div class="kpi-block">
+            <div class="kpi-block-title">Key Prestatie Indicatoren</div>
+            <ul class="kpi-items">
+              <li>Vaste bedrijfskosten per uur</li>
+              <li>Bezettingsverschil</li>
+            </ul>
+          </div>
+          <div class="kpi-report">
+            <p><span class="kpi-report-icon">📊</span> <strong>Eenvoudig te vinden in:</strong> Notifica Financieel Rapport & Kostenanalyse</p>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <div class="kpi-num">5</div>
+          <div class="kpi-name">Variabele personeelskosten (per uur)</div>
+        </summary>
+        <div class="kpi-body">
+          <div class="kpi-explanation">
+            <p><strong>Wat betekent dit cijfer?</strong></p>
+            <p>De directe kosten die je maakt om een uur arbeid op de werkvloer te leveren. Het doel is een gezonde balans tussen wat een uur kost en wat het oplevert.</p>
+            <p style="margin-top:12px;"><strong>Waar bestaat het uit?</strong></p>
+            <p>De loonkosten van uitvoerend personeel, inclusief sociale lasten, plus de kosten voor de flexibele schil (uitzendkrachten/zzp'ers). De verhouding vast/flex bepaalt hier sterk de kostprijs.</p>
+          </div>
+          <div class="kpi-block">
+            <div class="kpi-block-title">Key Prestatie Indicatoren</div>
+            <ul class="kpi-items">
+              <li>Verhouding staf – direct personeel</li>
+              <li>Verhouding inleners – eigen mensen</li>
+            </ul>
+          </div>
+          <div class="kpi-report">
+            <p><span class="kpi-report-icon">📊</span> <strong>Eenvoudig te vinden in:</strong> Notifica HR Dashboard & Loonkostenoverzicht</p>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- Zo ziet het eruit Section -->
+<section class="webinar-section alt">
+  <div class="container">
+    <h2>Zo ziet het eruit in de praktijk</h2>
+    <p class="section-intro">
+      KPI dashboards geven transparantie en inzicht in verbeterpotentieel
+    </p>
+
+    <div class="dashboard-grid">
+      <div class="dashboard-frame">
+        <a href="https://notifica.nl/wp-content/uploads/2025/12/dashboard-productiviteit.png" target="_blank">
+          <img src="https://notifica.nl/wp-content/uploads/2025/12/dashboard-productiviteit.png" alt="Dashboard Productiviteit">
         </a>
+        <div class="dashboard-caption">Trend Productiviteit & Directe uren (klik om te vergroten)</div>
+      </div>
+      <div class="dashboard-frame">
+        <a href="https://notifica.nl/wp-content/uploads/2025/12/dashboard-kengetallen.png" target="_blank">
+          <img src="https://notifica.nl/wp-content/uploads/2025/12/dashboard-kengetallen.png" alt="Dashboard Kengetallen">
+        </a>
+        <div class="dashboard-caption">Trend Kengetallen per uur (klik om te vergroten)</div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- Onze Dashboards Section -->
-<section class="section" style="padding: 60px 0;">
-    <div class="container" style="max-width: 900px;">
-        <!-- Info Card -->
-        <div style="background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%); border: 1px solid #E5E7EB; border-radius: 12px; padding: 32px; margin-bottom: 24px;">
-            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
-                <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); color: white; width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; flex-shrink: 0;">
-                    3
-                </div>
-                <h2 style="margin: 0; font-size: 28px; color: var(--navy);">Power BI Dashboards</h2>
-            </div>
-            <p style="font-size: 16px; line-height: 1.6; color: var(--text); margin-bottom: 20px;">
-                Notifica levert professionele Power BI dashboards die je direct inzicht geven in projectresultaten, marges en efficiency. Speciaal ontwikkeld voor installatiebedrijven.
-            </p>
-        </div>
+<!-- Volgende Stappen Section -->
+<section class="webinar-section dark">
+  <div class="container">
+    <h2>Wat zijn jouw volgende stappen?</h2>
+    <p class="section-intro">
+      Je hebt nu gezien hoe eenvoudig het kan zijn om je bedrijfsresultaat te voorspellen en te verbeteren. <strong style="color:#fff;">Pak het aan!</strong>
+    </p>
 
-        <!-- Features Grid -->
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
-            <!-- Feature 1 -->
-            <div style="background: white; border: 1px solid #E5E7EB; border-radius: 10px; padding: 24px;">
-                <div style="font-size: 32px; margin-bottom: 12px;">📊</div>
-                <h3 style="font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Real-time inzicht</h3>
-                <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5;">Direct zicht op projectresultaten, marges en winstgevendheid.</p>
-            </div>
+    <div class="cta-grid">
+      <div class="cta-card">
+        <div class="cta-emoji">📊</div>
+        <div class="cta-heading">Zelf aan de slag</div>
+        <ul class="cta-list">
+          <li>Bereken je eigen verbeterpotentieel met onze Bedrijfsanalyse tool</li>
+          <li>Bepaal op welke KPI's jij gaat focussen</li>
+          <li>Maak concrete doelen voor Q1 2026</li>
+        </ul>
+      </div>
 
-            <!-- Feature 2 -->
-            <div style="background: white; border: 1px solid #E5E7EB; border-radius: 10px; padding: 24px;">
-                <div style="font-size: 32px; margin-bottom: 12px;">⚡</div>
-                <h3 style="font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Binnen 1 dag live</h3>
-                <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5;">Plug & play koppeling met je bestaande ERP-systeem.</p>
-            </div>
-
-            <!-- Feature 3 -->
-            <div style="background: white; border: 1px solid #E5E7EB; border-radius: 10px; padding: 24px;">
-                <div style="font-size: 32px; margin-bottom: 12px;">🎯</div>
-                <h3 style="font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Marge per project</h3>
-                <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5;">Zie direct welke projecten winstgevend zijn en waar actie nodig is.</p>
-            </div>
-
-            <!-- Feature 4 -->
-            <div style="background: white; border: 1px solid #E5E7EB; border-radius: 10px; padding: 24px;">
-                <div style="font-size: 32px; margin-bottom: 12px;">🔄</div>
-                <h3 style="font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Automatisch bijgewerkt</h3>
-                <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5;">Data wordt automatisch gesynchroniseerd vanuit je ERP.</p>
-            </div>
-        </div>
+      <div class="cta-card">
+        <div class="cta-emoji">💡</div>
+        <div class="cta-heading">Met onze hulp</div>
+        <ul class="cta-list">
+          <li>Met geringe inzet van consultancy krijg je op verzoek het dashboard met historische kengetallen van de laatste 3-5 jaar</li>
+          <li>Speciaal voor deelnemers aan de webinar stellen we de budget & forecast tool beschikbaar</li>
+          <li>Persoonlijke ondersteuning in de implementatie van budgetten en forecast</li>
+        </ul>
+      </div>
     </div>
-</section>
 
-<!-- Hoe het werkt - 3 Stappen -->
-<section class="section section-alt" style="padding: 60px 0; background: #FAFBFC;">
-    <div class="container" style="max-width: 900px;">
-        <!-- Info Card -->
-        <div style="background: linear-gradient(135deg, #FFFFFF 0%, #F9FAFB 100%); border: 1px solid #E5E7EB; border-radius: 12px; padding: 32px; margin-bottom: 32px;">
-            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
-                <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); color: white; width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; flex-shrink: 0;">
-                    4
-                </div>
-                <h2 style="margin: 0; font-size: 28px; color: var(--navy);">Hoe het werkt</h2>
-            </div>
-            <p style="font-size: 16px; line-height: 1.6; color: var(--text);">
-                In 3 eenvoudige stappen naar real-time inzicht in je bedrijfscijfers.
-            </p>
-        </div>
-
-        <!-- Steps -->
-        <div style="display: flex; flex-direction: column; gap: 16px;">
-            <!-- Step 1 -->
-            <div style="background: white; border: 1px solid #E5E7EB; border-radius: 10px; padding: 24px; display: flex; align-items: flex-start; gap: 20px;">
-                <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); color: white; min-width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px;">1</div>
-                <div>
-                    <h3 style="font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Gratis demo</h3>
-                    <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5;">We plannen een vrijblijvend gesprek waarin we jouw situatie bespreken en de mogelijkheden tonen.</p>
-                </div>
-            </div>
-
-            <!-- Step 2 -->
-            <div style="background: white; border: 1px solid #E5E7EB; border-radius: 10px; padding: 24px; display: flex; align-items: flex-start; gap: 20px;">
-                <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); color: white; min-width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px;">2</div>
-                <div>
-                    <h3 style="font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Koppeling maken</h3>
-                    <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5;">We maken een veilige koppeling met je ERP-systeem. Dit werkt voor Syntess, 4PS, Acto, Exact en meer.</p>
-                </div>
-            </div>
-
-            <!-- Step 3 -->
-            <div style="background: white; border: 1px solid #E5E7EB; border-radius: 10px; padding: 24px; display: flex; align-items: flex-start; gap: 20px;">
-                <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); color: white; min-width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px;">3</div>
-                <div>
-                    <h3 style="font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Dashboards live</h3>
-                    <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5;">Binnen 24 uur zijn je dashboards live. We lopen ze samen door en maken aanpassingen waar nodig.</p>
-                </div>
-            </div>
-        </div>
+    <div class="final-cta">
+      <div class="final-cta-badge">Neem contact op</div>
+      <div class="final-cta-title">Wil je meer weten over onze dashboards?</div>
+      <a href="#" class="btn btn-large" data-pipedrive-form="contact">Neem vrijblijvend contact op</a>
     </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-    <div class="container">
-        <h2>Klaar voor real-time inzicht?</h2>
-        <p class="section-subtitle" style="max-width: 560px; margin: 16px auto 32px;">
-            Plan een vrijblijvende demo en ontdek wat Notifica voor jouw installatiebedrijf kan betekenen.
-        </p>
-        <a href="#" class="btn btn-large" data-pipedrive-form="contact">Neem vrijblijvend contact op</a>
-    </div>
+  </div>
 </section>
