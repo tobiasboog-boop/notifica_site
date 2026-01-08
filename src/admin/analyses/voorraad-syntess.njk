@@ -1026,48 +1026,62 @@ robots: noindex, nofollow
             <h2>DAX Measures: Tijdvergelijking</h2>
             <p>Folder: <code>Voorraad\5. Tijdvergelijking</code></p>
 
-            <h4>Voorraad Stand VM (Vorige Maand)</h4>
+            <div class="alert alert-warning">
+                <span>⚠️</span>
+                <div>
+                    <strong>LET OP - Geen Kalender relatie!</strong> De tabel <code>Voorraad mutaties</code> heeft een <code>Boekdatum</code> kolom maar <strong>GEEN actieve relatie naar Kalender</strong>.
+                    Voor tijdvergelijking moet je eerst een relatie aanmaken tussen <code>Voorraad mutaties[Boekdatum]</code> en <code>Kalender[Datum]</code>,
+                    of de measures aanpassen om direct op de Boekdatum kolom te filteren.
+                </div>
+            </div>
+
+            <h4>Voorraad Mutaties Per Periode (via Boekdatum filter)</h4>
             <div class="code-block">
                 <button class="copy-btn" onclick="copyCode(this)">Kopieer</button>
-<pre><span class="comment">// Voorraadstand vorige maand</span>
+<pre><span class="comment">// Ontvangsten gefilterd op datum (zonder Kalender relatie)</span>
+<span class="function">Voorraad Ontvangst Deze Maand</span> =
+<span class="keyword">CALCULATE</span>(
+    [Voorraad Ontvangst Aantal],
+    <span class="keyword">MONTH</span>(<span class="string">'Voorraad mutaties'</span>[Boekdatum]) = <span class="keyword">MONTH</span>(<span class="keyword">TODAY</span>()),
+    <span class="keyword">YEAR</span>(<span class="string">'Voorraad mutaties'</span>[Boekdatum]) = <span class="keyword">YEAR</span>(<span class="keyword">TODAY</span>())
+)</pre>
+            </div>
+
+            <h4>Voorraad Ontvangst YTD (via Boekdatum)</h4>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">Kopieer</button>
+<pre><span class="comment">// Year-to-date ontvangsten via directe datum filter</span>
+<span class="function">Voorraad Ontvangst YTD</span> =
+<span class="keyword">CALCULATE</span>(
+    [Voorraad Ontvangst Aantal],
+    <span class="keyword">YEAR</span>(<span class="string">'Voorraad mutaties'</span>[Boekdatum]) = <span class="keyword">YEAR</span>(<span class="keyword">TODAY</span>()),
+    <span class="string">'Voorraad mutaties'</span>[Boekdatum] <= <span class="keyword">TODAY</span>()
+)</pre>
+            </div>
+
+            <h4>Optie: Met Kalender relatie (na aanmaken relatie)</h4>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">Kopieer</button>
+<pre><span class="comment">// Als je een relatie aanmaakt: Voorraad mutaties[Boekdatum] -> Kalender[Datum]</span>
+<span class="comment">// Dan werken deze measures:</span>
+
 <span class="function">Voorraad Stand VM</span> =
 <span class="keyword">CALCULATE</span>(
     [Voorraad Stand Aantal],
     <span class="keyword">PREVIOUSMONTH</span>(Kalender[Datum])
-)</pre>
-            </div>
+)
 
-            <h4>Voorraad Stand VJ (Vorig Jaar)</h4>
-            <div class="code-block">
-                <button class="copy-btn" onclick="copyCode(this)">Kopieer</button>
-<pre><span class="comment">// Voorraadstand vorig jaar zelfde periode</span>
 <span class="function">Voorraad Stand VJ</span> =
 <span class="keyword">CALCULATE</span>(
     [Voorraad Stand Aantal],
     <span class="keyword">SAMEPERIODLASTYEAR</span>(Kalender[Datum])
-)</pre>
-            </div>
+)
 
-            <h4>Voorraad Mutatie MoM %</h4>
-            <div class="code-block">
-                <button class="copy-btn" onclick="copyCode(this)">Kopieer</button>
-<pre><span class="comment">// Percentage mutatie maand-over-maand</span>
 <span class="function">Voorraad Mutatie MoM %</span> =
 <span class="keyword">DIVIDE</span>(
     [Voorraad Stand Aantal] - [Voorraad Stand VM],
     [Voorraad Stand VM],
     <span class="number">0</span>
-)</pre>
-            </div>
-
-            <h4>Voorraad Ontvangst YTD</h4>
-            <div class="code-block">
-                <button class="copy-btn" onclick="copyCode(this)">Kopieer</button>
-<pre><span class="comment">// Year-to-date ontvangsten</span>
-<span class="function">Voorraad Ontvangst YTD</span> =
-<span class="keyword">CALCULATE</span>(
-    [Voorraad Ontvangst Aantal],
-    <span class="keyword">DATESYTD</span>(Kalender[Datum])
 )</pre>
             </div>
         </section>
