@@ -430,6 +430,11 @@ robots: noindex, nofollow
             <li><a href="#etl-grip">GRIP Queries</a></li>
         </ul>
 
+        <h3>SSM Advies</h3>
+        <ul>
+            <li><a href="#ssm-advies">Aanbevelingen</a></li>
+        </ul>
+
         <h3>Implementatie</h3>
         <ul>
             <li><a href="#roadmap">Roadmap</a></li>
@@ -1353,6 +1358,174 @@ robots: noindex, nofollow
                      - Datum formatting
                      - NULL handling
 </pre>
+            </div>
+        </section>
+
+        <!-- SSM Aanbevelingen -->
+        <section id="ssm-advies" class="section">
+            <h2>Aanbevelingen Semantisch Model</h2>
+            <p>Onderstaande aanpassingen aan het SSM worden aanbevolen voor optimale voorraadrapportages.</p>
+
+            <h3>Prioriteit 1: Kritieke aanpassingen</h3>
+
+            <div class="card" style="margin: 1rem 0; border-left-color: #c62828;">
+                <h4>1.1 Kalender relatie voor Voorraad mutaties</h4>
+                <p style="margin: 0.5rem 0;"><strong>Probleem:</strong> Er is geen relatie tussen <code>Voorraad mutaties[Boekdatum]</code> en <code>Kalender[Datum]</code>. Hierdoor werken time intelligence functies (YTD, PREVIOUSMONTH, SAMEPERIODLASTYEAR) niet.</p>
+                <p style="margin: 0.5rem 0;"><strong>Oplossing:</strong> Voeg een relatie toe in het model:</p>
+                <div class="code-block" style="margin: 0.5rem 0;">
+<pre><span class="comment">// In relationships.tmdl toevoegen:</span>
+relationship [nieuwe-guid]
+    fromColumn: 'Voorraad mutaties'.Boekdatum
+    toColumn: Kalender.Datum</pre>
+                </div>
+                <p style="margin: 0.5rem 0;"><strong>Impact:</strong> Hoog - Maakt alle tijdvergelijking measures mogelijk</p>
+            </div>
+
+            <div class="card" style="margin: 1rem 0; border-left-color: #c62828;">
+                <h4>1.2 MutatieDatumKey toevoegen aan Voorraad mutaties</h4>
+                <p style="margin: 0.5rem 0;"><strong>Probleem:</strong> De tabel gebruikt <code>Boekdatum</code> (datetime) i.p.v. een integer key voor datumkoppeling.</p>
+                <p style="margin: 0.5rem 0;"><strong>Oplossing:</strong> In GRIP prepare een <code>MutatieDatumKey</code> kolom toevoegen:</p>
+                <div class="code-block" style="margin: 0.5rem 0;">
+<pre><span class="comment">-- In prepare_voorraadmutaties.sql:</span>
+<span class="keyword">SELECT</span>
+    ...,
+    <span class="keyword">CONVERT</span>(<span class="keyword">INT</span>, <span class="keyword">CONVERT</span>(<span class="keyword">VARCHAR</span>(<span class="number">8</span>), boekdatum, <span class="number">112</span>)) <span class="keyword">AS</span> MutatieDatumKey
+<span class="keyword">FROM</span> AT_VRDMUT</pre>
+                </div>
+                <p style="margin: 0.5rem 0;"><strong>Impact:</strong> Hoog - Consistentie met andere tabellen, betere performance</p>
+            </div>
+
+            <h3>Prioriteit 2: Aanbevolen verbeteringen</h3>
+
+            <div class="card" style="margin: 1rem 0; border-left-color: #f57c00;">
+                <h4>2.1 Voorraadstand snapshot tabel</h4>
+                <p style="margin: 0.5rem 0;"><strong>Huidige situatie:</strong> Voorraadstand moet berekend worden uit alle historische mutaties (Ontvangsten - Uitgiftes). Bij grote volumes kan dit traag zijn.</p>
+                <p style="margin: 0.5rem 0;"><strong>Aanbeveling:</strong> Overweeg een <code>Voorraad snapshots</code> tabel met periodieke (dagelijkse/wekelijkse) voorraadstanden:</p>
+                <div class="code-block" style="margin: 0.5rem 0;">
+<pre><span class="comment">-- Nieuwe tabel: Voorraad snapshots</span>
+VoorraadsnapshotKey     <span class="keyword">INT</span>         <span class="comment">-- PK</span>
+VoorraadpositieKey      <span class="keyword">INT</span>         <span class="comment">-- FK</span>
+SnapshotDatumKey        <span class="keyword">INT</span>         <span class="comment">-- FK naar Kalender</span>
+AantalOpVoorraad        <span class="keyword">DECIMAL</span>
+WaardeKostprijs         <span class="keyword">DECIMAL</span>
+WaardeVerrekenprijs     <span class="keyword">DECIMAL</span></pre>
+                </div>
+                <p style="margin: 0.5rem 0;"><strong>Impact:</strong> Medium - Verbeterde performance voor historische analyses</p>
+            </div>
+
+            <div class="card" style="margin: 1rem 0; border-left-color: #f57c00;">
+                <h4>2.2 Artikelinformatie via Tarieven verrijken</h4>
+                <p style="margin: 0.5rem 0;"><strong>Huidige situatie:</strong> <code>Voorraad posities[TariefKey]</code> linkt naar Tarieven, maar Tarieven bevat mogelijk niet alle gewenste artikelattributen.</p>
+                <p style="margin: 0.5rem 0;"><strong>Aanbeveling:</strong> Controleer of de volgende velden beschikbaar zijn in Tarieven:</p>
+                <ul style="font-size: 0.9rem; margin: 0.5rem 0;">
+                    <li>Artikelcode / Artikelnummer</li>
+                    <li>Artikelomschrijving</li>
+                    <li>Artikelgroep / Categorie</li>
+                    <li>Eenheid (stuk, meter, kg, etc.)</li>
+                    <li>Leverancier (default)</li>
+                </ul>
+                <p style="margin: 0.5rem 0;"><strong>Impact:</strong> Medium - Betere artikelrapportages</p>
+            </div>
+
+            <div class="card" style="margin: 1rem 0; border-left-color: #f57c00;">
+                <h4>2.3 Locatie hiërarchie kolommen</h4>
+                <p style="margin: 0.5rem 0;"><strong>Huidige situatie:</strong> <code>Voorraad locaties</code> heeft <code>ParentVoorraadlocatieKey</code> voor hiërarchie, maar geen denormalized path kolommen.</p>
+                <p style="margin: 0.5rem 0;"><strong>Aanbeveling:</strong> Voeg toe in GRIP prepare:</p>
+                <div class="code-block" style="margin: 0.5rem 0;">
+<pre><span class="comment">-- Denormalized hiërarchie voor makkelijke filtering</span>
+LocatieLevel1       <span class="keyword">VARCHAR</span>(<span class="number">100</span>)    <span class="comment">-- Hal/Zone</span>
+LocatieLevel2       <span class="keyword">VARCHAR</span>(<span class="number">100</span>)    <span class="comment">-- Stelling</span>
+LocatieLevel3       <span class="keyword">VARCHAR</span>(<span class="number">100</span>)    <span class="comment">-- Vak</span>
+LocatieFullPath     <span class="keyword">VARCHAR</span>(<span class="number">500</span>)    <span class="comment">-- "Hal A > Stelling 1 > Vak 3"</span></pre>
+                </div>
+                <p style="margin: 0.5rem 0;"><strong>Impact:</strong> Medium - Betere drill-down in rapporten</p>
+            </div>
+
+            <h3>Prioriteit 3: Nice-to-have</h3>
+
+            <div class="card" style="margin: 1rem 0; border-left-color: #1976d2;">
+                <h4>3.1 Mutatiesoort kolom</h4>
+                <p style="margin: 0.5rem 0;"><strong>Aanbeveling:</strong> Voeg een <code>Mutatiesoort</code> kolom toe aan Voorraad mutaties:</p>
+                <div class="code-block" style="margin: 0.5rem 0;">
+<pre>Mutatiesoort = <span class="keyword">CASE</span>
+    <span class="keyword">WHEN</span> OntvangstVoorraadpositieKey <span class="keyword">IS NOT NULL</span>
+         <span class="keyword">AND</span> UitgifteVoorraadpositieKey <span class="keyword">IS NULL</span> <span class="keyword">THEN</span> <span class="string">'Ontvangst'</span>
+    <span class="keyword">WHEN</span> UitgifteVoorraadpositieKey <span class="keyword">IS NOT NULL</span>
+         <span class="keyword">AND</span> OntvangstVoorraadpositieKey <span class="keyword">IS NULL</span> <span class="keyword">THEN</span> <span class="string">'Uitgifte'</span>
+    <span class="keyword">WHEN</span> <span class="keyword">BOTH NOT NULL</span> <span class="keyword">THEN</span> <span class="string">'Transfer'</span>
+    <span class="keyword">ELSE</span> <span class="string">'Onbekend'</span>
+<span class="keyword">END</span></pre>
+                </div>
+                <p style="margin: 0.5rem 0;"><strong>Impact:</strong> Laag - Convenience voor filtering</p>
+            </div>
+
+            <div class="card" style="margin: 1rem 0; border-left-color: #1976d2;">
+                <h4>3.2 ABC-classificatie ondersteuning</h4>
+                <p style="margin: 0.5rem 0;"><strong>Aanbeveling:</strong> Voeg velden toe voor ABC-analyse:</p>
+                <ul style="font-size: 0.9rem; margin: 0.5rem 0;">
+                    <li><code>ABC_Classificatie</code> op Voorraad posities (A/B/C op basis van omloopsnelheid)</li>
+                    <li><code>LaatsteUitgifteDatum</code> voor dead stock detectie</li>
+                    <li><code>DagenZonderBeweging</code> calculated column</li>
+                </ul>
+                <p style="margin: 0.5rem 0;"><strong>Impact:</strong> Laag - Geavanceerde voorraadanalyse</p>
+            </div>
+
+            <h3>Samenvatting actiepunten</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Prioriteit</th>
+                            <th>Actie</th>
+                            <th>Waar</th>
+                            <th>Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #ffebee;">
+                            <td><span class="badge badge-danger">P1</span></td>
+                            <td>Kalender relatie toevoegen</td>
+                            <td>SSM relationships.tmdl</td>
+                            <td>Hoog</td>
+                        </tr>
+                        <tr style="background: #ffebee;">
+                            <td><span class="badge badge-danger">P1</span></td>
+                            <td>MutatieDatumKey kolom</td>
+                            <td>GRIP prepare</td>
+                            <td>Hoog</td>
+                        </tr>
+                        <tr style="background: #fff3e0;">
+                            <td><span class="badge badge-warning">P2</span></td>
+                            <td>Snapshot tabel overwegen</td>
+                            <td>GRIP + SSM</td>
+                            <td>Medium</td>
+                        </tr>
+                        <tr style="background: #fff3e0;">
+                            <td><span class="badge badge-warning">P2</span></td>
+                            <td>Tarieven verrijking controleren</td>
+                            <td>GRIP endview</td>
+                            <td>Medium</td>
+                        </tr>
+                        <tr style="background: #fff3e0;">
+                            <td><span class="badge badge-warning">P2</span></td>
+                            <td>Locatie hiërarchie denormalize</td>
+                            <td>GRIP prepare</td>
+                            <td>Medium</td>
+                        </tr>
+                        <tr style="background: #e3f2fd;">
+                            <td><span class="badge badge-primary">P3</span></td>
+                            <td>Mutatiesoort kolom</td>
+                            <td>GRIP prepare</td>
+                            <td>Laag</td>
+                        </tr>
+                        <tr style="background: #e3f2fd;">
+                            <td><span class="badge badge-primary">P3</span></td>
+                            <td>ABC-classificatie velden</td>
+                            <td>GRIP + SSM</td>
+                            <td>Laag</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
