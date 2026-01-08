@@ -121,6 +121,29 @@ robots: noindex, nofollow
     font-family: monospace;
     color: var(--navy);
 }
+.status.todo {
+    background: #ffebee;
+    color: #c62828;
+}
+.status.done {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+.page-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.page-list .page-link {
+    justify-content: flex-start;
+    gap: 12px;
+}
+.page-list .page-link .url {
+    font-family: monospace;
+    font-size: 12px;
+    color: #666;
+    margin-left: auto;
+}
 </style>
 
 <section class="hero" style="padding: 80px 0 40px;">
@@ -142,6 +165,22 @@ robots: noindex, nofollow
             <span class="info-box-icon">💡</span>
             <div class="info-box-text">
                 Dit overzicht toont alle pagina's die <strong>niet</strong> bereikbaar zijn via de hoofdnavigatie of footer. Bookmark deze pagina (<code>/admin/</code>) voor snelle toegang.
+            </div>
+        </div>
+
+        <!-- Analyses -->
+        <div class="admin-section">
+            <div class="admin-section-header">
+                <span class="admin-section-icon">📊</span>
+                <h2 class="admin-section-title">Analyses</h2>
+                <span class="admin-section-desc">Technische documentatie & analyses</span>
+            </div>
+            <div class="page-list">
+                <a href="{{ '/admin/analyses/voorraad-syntess/' | url }}" class="page-link">
+                    Voorraad Analyse Syntess
+                    <span class="url">/admin/analyses/voorraad-syntess/</span>
+                    <span class="status done">Klaar</span>
+                </a>
             </div>
         </div>
 
@@ -213,31 +252,195 @@ robots: noindex, nofollow
             </div>
         </div>
 
+        <!-- WordPress Pagina's - Landingspagina's -->
+        <div class="admin-section">
+            <div class="admin-section-header">
+                <span class="admin-section-icon">📄</span>
+                <h2 class="admin-section-title">Landingspagina's (WordPress)</h2>
+                <span class="admin-section-desc">Speciale pagina's uit oude site</span>
+            </div>
+            <div class="page-list">
+                <a href="{{ '/prijzen/' | url }}" class="page-link">
+                    Prijzenpagina
+                    <span class="url">/prijzen/</span>
+                    <span class="status todo">Te maken</span>
+                </a>
+                <a href="{{ '/proefperiode/' | url }}" class="page-link">
+                    Proefperiode aanvragen
+                    <span class="url">/proefperiode/</span>
+                    <span class="status todo">Te maken</span>
+                </a>
+                <a href="{{ '/verdieping/bedrijfsanalysetool/' | url }}" class="page-link">
+                    Bedrijfsanalysetool
+                    <span class="url">/verdieping/bedrijfsanalysetool/</span>
+                    <span class="status done">Klaar</span>
+                </a>
+                <a href="{{ '/referenties/' | url }}" class="page-link">
+                    Referenties / Cases
+                    <span class="url">/referenties/</span>
+                    <span class="status todo">Te maken</span>
+                </a>
+                <a href="{{ '/vacatures/' | url }}" class="page-link">
+                    Vacatures
+                    <span class="url">/vacatures/</span>
+                    <span class="status todo">Te maken</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- WordPress Pagina's - Diensten -->
+        <div class="admin-section">
+            <div class="admin-section-header">
+                <span class="admin-section-icon">💼</span>
+                <h2 class="admin-section-title">Diensten (WordPress)</h2>
+                <span class="admin-section-desc">Product & service pagina's</span>
+            </div>
+            <div class="page-list">
+                <a href="{{ '/diensten/datagedreven-werken/' | url }}" class="page-link">
+                    Datagedreven werken
+                    <span class="url">/diensten/datagedreven-werken/</span>
+                    <span class="status todo">Te maken</span>
+                </a>
+                <a href="{{ '/diensten/databeheer/' | url }}" class="page-link">
+                    Volledig ontzorgd databeheer
+                    <span class="url">/diensten/databeheer/</span>
+                    <span class="status todo">Te maken</span>
+                </a>
+                <a href="{{ '/diensten/semantisch-datamodel/' | url }}" class="page-link">
+                    Uniform semantisch datamodel
+                    <span class="url">/diensten/semantisch-datamodel/</span>
+                    <span class="status todo">Te maken</span>
+                </a>
+                <a href="{{ '/diensten/zelf-rapporten-bouwen/' | url }}" class="page-link">
+                    Bouw zelf rapporten in 1 dag
+                    <span class="url">/diensten/zelf-rapporten-bouwen/</span>
+                    <span class="status todo">Te maken</span>
+                </a>
+                <a href="{{ '/diensten/datamigratie/' | url }}" class="page-link">
+                    Datamigratie
+                    <span class="url">/diensten/datamigratie/</span>
+                    <span class="status todo">Te maken</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- WordPress Pagina's - Training & Webinars -->
+        <div class="admin-section">
+            <div class="admin-section-header">
+                <span class="admin-section-icon">🎓</span>
+                <h2 class="admin-section-title">Training & Webinars (WordPress)</h2>
+                <span class="admin-section-desc">Educatieve content</span>
+            </div>
+            <div class="page-list">
+                <a href="{{ '/training/power-bi/' | url }}" class="page-link">
+                    Power BI Training
+                    <span class="url">/training/power-bi/</span>
+                    <span class="status todo">Te maken</span>
+                </a>
+                <a href="{{ '/verdieping/webinars/' | url }}" class="page-link">
+                    Webinars overzicht
+                    <span class="url">/verdieping/webinars/</span>
+                    <span class="status todo">Te maken</span>
+                </a>
+                <a href="{{ '/verdieping/webinars/optimalisatie-winstgevendheid-december-2025/' | url }}" class="page-link">
+                    Webinar: Winstoptimalisatie Dec 2025
+                    <span class="url">/verdieping/webinars/optimalisatie-.../</span>
+                    <span class="status done">Klaar</span>
+                </a>
+                <a href="{{ '/notifica-talks/' | url }}" class="page-link">
+                    Notifica Talks
+                    <span class="url">/notifica-talks/</span>
+                    <span class="status todo">Te maken</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- WordPress Pagina's - Overig -->
+        <div class="admin-section">
+            <div class="admin-section-header">
+                <span class="admin-section-icon">📋</span>
+                <h2 class="admin-section-title">Overige pagina's (WordPress)</h2>
+                <span class="admin-section-desc">Diversen</span>
+            </div>
+            <div class="page-list">
+                <a href="{{ '/installatie-syntess/' | url }}" class="page-link">
+                    Installatie Syntess
+                    <span class="url">/installatie-syntess/</span>
+                    <span class="status todo">Te maken</span>
+                </a>
+                <a href="{{ '/disclaimer/' | url }}" class="page-link">
+                    Disclaimer
+                    <span class="url">/disclaimer/</span>
+                    <span class="status todo">Te maken</span>
+                </a>
+            </div>
+        </div>
+
         <!-- Redirects -->
         <div class="admin-section">
             <div class="admin-section-header">
                 <span class="admin-section-icon">🔀</span>
-                <h2 class="admin-section-title">Redirects</h2>
-                <span class="admin-section-desc">Oude URLs voor SEO</span>
+                <h2 class="admin-section-title">Redirects (SEO)</h2>
+                <span class="admin-section-desc">Oude WordPress URLs</span>
             </div>
             <p style="color: #666; font-size: 14px; margin-bottom: 16px;">
-                Deze oude WordPress URLs verwijzen automatisch door naar de nieuwe locaties:
+                Oude WordPress URLs die doorverwijzen naar nieuwe locaties:
             </p>
             <div class="redirect-list">
                 <div class="redirect-item">
-                    <a href="{{ '/december-actie/' | url }}" class="redirect-from">/december-actie/</a>
+                    <span class="redirect-from">/over-ons-ontmoet-het-team.../</span>
+                    <span class="redirect-arrow">→</span>
+                    <span class="redirect-to">/over-ons/</span>
+                </div>
+                <div class="redirect-item">
+                    <span class="redirect-from">/faq-antwoord-op-de-30.../</span>
+                    <span class="redirect-arrow">→</span>
+                    <span class="redirect-to">/veelgestelde-vragen/</span>
+                </div>
+                <div class="redirect-item">
+                    <span class="redirect-from">/klanten-ervaringen-met.../</span>
+                    <span class="redirect-arrow">→</span>
+                    <span class="redirect-to">/klanten-ervaringen/</span>
+                </div>
+                <div class="redirect-item">
+                    <span class="redirect-from">/whitepapers-leergidsen.../</span>
+                    <span class="redirect-arrow">→</span>
+                    <span class="redirect-to">/inspiratie/whitepapers/</span>
+                </div>
+                <div class="redirect-item">
+                    <span class="redirect-from">/krachtige-dashboards.../</span>
+                    <span class="redirect-arrow">→</span>
+                    <span class="redirect-to">/inspiratie/blogs/</span>
+                </div>
+                <div class="redirect-item">
+                    <span class="redirect-from">/videohub/</span>
+                    <span class="redirect-arrow">→</span>
+                    <span class="redirect-to">/inspiratie/videos/</span>
+                </div>
+                <div class="redirect-item">
+                    <span class="redirect-from">/home-power-bi.../</span>
+                    <span class="redirect-arrow">→</span>
+                    <span class="redirect-to">/</span>
+                </div>
+                <div class="redirect-item">
+                    <span class="redirect-from">/privacy-verklaring/</span>
+                    <span class="redirect-arrow">→</span>
+                    <span class="redirect-to">/privacy/</span>
+                </div>
+                <div class="redirect-item">
+                    <span class="redirect-from">/syntess-dashboards.../</span>
+                    <span class="redirect-arrow">→</span>
+                    <span class="redirect-to">/bedrijfssoftware/syntess-atrium/</span>
+                </div>
+                <div class="redirect-item">
+                    <span class="redirect-from">/december-actie/</span>
                     <span class="redirect-arrow">→</span>
                     <span class="redirect-to">/campaigns/december-2025-webinar/</span>
                 </div>
                 <div class="redirect-item">
-                    <a href="{{ '/bedrijfsanalyse-tool/' | url }}" class="redirect-from">/bedrijfsanalyse-tool/</a>
+                    <span class="redirect-from">/bedrijfsanalyse-tool/</span>
                     <span class="redirect-arrow">→</span>
                     <span class="redirect-to">/verdieping/bedrijfsanalysetool/</span>
-                </div>
-                <div class="redirect-item">
-                    <a href="{{ '/webinar-winstoptimalisatie/' | url }}" class="redirect-from">/webinar-winstoptimalisatie/</a>
-                    <span class="redirect-arrow">→</span>
-                    <span class="redirect-to">/verdieping/webinars/...</span>
                 </div>
             </div>
         </div>
