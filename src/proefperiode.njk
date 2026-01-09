@@ -1,0 +1,130 @@
+---
+layout: base-notion.njk
+title: Proefperiode aanvragen - Notifica
+description: Start met een gratis proefperiode van 30 dagen. Verwachte oplevertermijn 14 dagen.
+permalink: /proefperiode/
+---
+
+<style>
+.trial-content { max-width: 800px; margin: 0 auto; }
+.highlight-box { background: linear-gradient(135deg, var(--navy), var(--blue)); border-radius: 12px; padding: 32px; color: white; text-align: center; margin-bottom: 48px; }
+.highlight-box h2 { color: white; font-size: 28px; margin-bottom: 16px; }
+.highlight-box p { color: rgba(255,255,255,0.9); font-size: 16px; margin: 0; }
+.trial-info { display: flex; justify-content: center; gap: 48px; margin: 48px 0; flex-wrap: wrap; }
+.trial-stat { text-align: center; }
+.trial-stat .number { font-size: 48px; font-weight: 700; color: var(--navy); line-height: 1; }
+.trial-stat .label { color: #666; font-size: 14px; margin-top: 8px; }
+.expectation-section { margin: 48px 0; }
+.expectation-section h2 { color: var(--navy); text-align: center; margin-bottom: 32px; }
+.expectation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+.expectation-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; }
+.expectation-card h3 { color: var(--navy); font-size: 18px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+.expectation-card h3 svg { width: 24px; height: 24px; color: var(--blue); }
+.expectation-card p { color: #666; font-size: 15px; line-height: 1.6; margin: 0; }
+.trial-steps { display: flex; justify-content: center; gap: 32px; margin: 48px 0; flex-wrap: wrap; }
+.trial-step { text-align: center; max-width: 180px; position: relative; }
+.trial-step:not(:last-child)::after { content: ''; position: absolute; top: 24px; right: -20px; width: 8px; height: 8px; border-top: 2px solid #e5e7eb; border-right: 2px solid #e5e7eb; transform: rotate(45deg); }
+@media (max-width: 600px) { .trial-step:not(:last-child)::after { display: none; } }
+.trial-step .number { width: 48px; height: 48px; background: var(--navy); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 600; margin: 0 auto 16px; }
+.trial-step h4 { color: var(--navy); margin-bottom: 8px; }
+.trial-step p { color: #666; font-size: 14px; }
+.trial-form-section { background: #f8f9fc; border-radius: 12px; padding: 48px; text-align: center; margin-top: 48px; }
+.trial-form-section h2 { color: var(--navy); margin-bottom: 16px; }
+.trial-form-section p { color: #666; margin-bottom: 24px; }
+</style>
+
+<section class="hero" style="padding: 80px 0 40px;">
+    <div class="container">
+        <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <div class="badge">Gratis uitproberen</div>
+            <h1>Vraag nu jouw proefperiode aan</h1>
+            <p class="subtitle">Ontdek de kracht van datagedreven beslissingen met een vrijblijvende proefperiode</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="padding: 40px 0 80px;">
+    <div class="container">
+        <div class="trial-content">
+
+            <div class="highlight-box">
+                <h2>30 dagen gratis uitproberen</h2>
+                <p>De proefperiode start na de oplevering van de rapportages. Verwachte oplevertermijn 14 dagen.</p>
+            </div>
+
+            <div class="trial-info">
+                <div class="trial-stat">
+                    <div class="number">30</div>
+                    <div class="label">dagen proefperiode</div>
+                </div>
+                <div class="trial-stat">
+                    <div class="number">14</div>
+                    <div class="label">dagen oplevertermijn</div>
+                </div>
+                <div class="trial-stat">
+                    <div class="number">0</div>
+                    <div class="label">euro opstartkosten</div>
+                </div>
+            </div>
+
+            <div class="expectation-section">
+                <h2>Wat mag je verwachten?</h2>
+                <div class="expectation-grid">
+                    <div class="expectation-card">
+                        <h3>
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            Geen verplichtingen
+                        </h3>
+                        <p>Probeer vrijblijvend uit. Geen automatische verlenging of verborgen kosten.</p>
+                    </div>
+                    <div class="expectation-card">
+                        <h3>
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                            Jouw eigen data
+                        </h3>
+                        <p>Zie direct de kracht van de dashboards met jouw eigen bedrijfsgegevens.</p>
+                    </div>
+                    <div class="expectation-card">
+                        <h3>
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            Persoonlijke begeleiding
+                        </h3>
+                        <p>Onze experts helpen je om het maximale uit de proefperiode te halen.</p>
+                    </div>
+                    <div class="expectation-card">
+                        <h3>
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            Snelle start
+                        </h3>
+                        <p>Binnen 14 dagen ben je operationeel met jouw dashboards.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trial-steps">
+                <div class="trial-step">
+                    <div class="number">1</div>
+                    <h4>Aanvragen</h4>
+                    <p>Vul het formulier in en wij nemen contact op</p>
+                </div>
+                <div class="trial-step">
+                    <div class="number">2</div>
+                    <h4>Koppeling</h4>
+                    <p>Wij koppelen jouw bedrijfssoftware</p>
+                </div>
+                <div class="trial-step">
+                    <div class="number">3</div>
+                    <h4>Uitproberen</h4>
+                    <p>Test de dashboards 30 dagen gratis</p>
+                </div>
+            </div>
+
+            <div class="trial-form-section">
+                <h2>Start vandaag nog</h2>
+                <p>Vul je gegevens in en wij nemen binnen 24 uur contact met je op.</p>
+                <a href="#contact" class="btn" data-pipedrive-form="demo">Proefperiode aanvragen</a>
+            </div>
+
+        </div>
+    </div>
+</section>

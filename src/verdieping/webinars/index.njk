@@ -1,0 +1,79 @@
+---
+layout: base-notion.njk
+title: Webinars - Notifica
+description: Bekijk onze webinars over Power BI dashboards en datagedreven werken voor installatiebedrijven.
+permalink: /verdieping/webinars/
+---
+
+<style>
+.webinars-content { max-width: 900px; margin: 0 auto; }
+.webinars-intro { text-align: center; margin-bottom: 48px; }
+.webinars-intro p { color: #666; font-size: 18px; line-height: 1.7; }
+.webinar-grid { display: grid; gap: 24px; }
+.webinar-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; display: flex; }
+.webinar-card.upcoming { border-color: var(--blue); }
+.webinar-thumbnail { width: 280px; background: linear-gradient(135deg, var(--navy), var(--blue)); display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; }
+.webinar-thumbnail .play-icon { width: 64px; height: 64px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+.webinar-content { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+.webinar-content .status { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; margin-bottom: 12px; }
+.webinar-content .status.upcoming { background: #e3f2fd; color: #1565c0; }
+.webinar-content .status.recorded { background: #f5f5f5; color: #666; }
+.webinar-content h3 { color: var(--navy); font-size: 20px; margin-bottom: 8px; }
+.webinar-content .meta { color: #666; font-size: 14px; margin-bottom: 12px; }
+.webinar-content p { color: #444; line-height: 1.6; margin-bottom: 16px; flex: 1; }
+.webinar-content .btn { align-self: flex-start; }
+.subscribe-section { text-align: center; padding: 48px; background: #f8f9fc; border-radius: 12px; margin-top: 48px; }
+@media (max-width: 768px) {
+    .webinar-card { flex-direction: column; }
+    .webinar-thumbnail { width: 100%; height: 180px; }
+}
+</style>
+
+<section class="hero" style="padding: 80px 0 40px;">
+    <div class="container">
+        <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <div class="badge">Verdieping</div>
+            <h1>Webinars</h1>
+            <p class="subtitle">Leer van experts over datagedreven werken in de installatiebranche</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="padding: 40px 0 80px;">
+    <div class="container">
+        <div class="webinars-content">
+
+            <div class="webinars-intro">
+                <p>
+                    In onze webinars delen we praktische kennis over Power BI dashboards,
+                    KPI's en datagedreven besluitvorming. Bekijk de opnames of meld je aan voor komende sessies.
+                </p>
+            </div>
+
+            <div class="webinar-grid">
+                <div class="webinar-card">
+                    <div class="webinar-thumbnail">
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="webinar-content">
+                        <span class="status recorded">Opname beschikbaar</span>
+                        <h3>Optimalisatie winstgevendheid met Power BI</h3>
+                        <div class="meta">December 2025 • 45 minuten</div>
+                        <p>
+                            Ontdek hoe u met de juiste KPI's en dashboards de winstgevendheid
+                            van uw projecten kunt optimaliseren.
+                        </p>
+                        <a href="{{ '/verdieping/webinars/optimalisatie-winstgevendheid-december-2025/' | url }}" class="btn">Bekijk webinar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subscribe-section">
+                <h2>Blijf op de hoogte van nieuwe webinars</h2>
+                <p>Ontvang een melding wanneer we een nieuw webinar aankondigen.</p>
+                <a href="#contact" class="btn" data-pipedrive-form="demo">Aanmelden voor updates</a>
+            </div>
+
+        </div>
+    </div>
+</section>
