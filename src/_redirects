@@ -24,3 +24,22 @@
 
 # Oude homepage variant
 /home-power-bi-voor-installatiebedrijven/  /  301
+
+# Prijzen pagina
+/prijzen-syntess-powerbi/  /prijzen/  301
+
+# Diensten pagina's
+/datagedreven-werken-sneller-inzicht-meer-groei/  /diensten/datagedreven-werken/  301
+/volledig-ontzorgd-data-beheer-alles-in-1-oplossing/  /diensten/databeheer/  301
+/uniform-semantisch-datamodel/  /diensten/semantisch-datamodel/  301
+/bouw-zelf-rapporten-in-1-dag/  /diensten/zelf-rapporten-bouwen/  301
+/datamigratie/  /diensten/datamigratie/  301
+
+# Training & Webinars
+/optimaliseer-bedrijfsresultaten-met-power-bi-training/  /training/power-bi/  301
+/syntess-webinar/  /verdieping/webinars/  301
+/syntess-webinar/presentatie-webinar/  /verdieping/webinars/optimalisatie-winstgevendheid-december-2025/  301
+
+# Bedrijfsanalysetool varianten
+/bedrijfsanalyse-tool/  /verdieping/bedrijfsanalysetool/  301
+/bedrijfsanalysetool/  /verdieping/bedrijfsanalysetool/  301

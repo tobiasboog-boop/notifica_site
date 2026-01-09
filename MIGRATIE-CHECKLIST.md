@@ -103,9 +103,9 @@ Bij de migratie moeten redirects worden ingesteld voor URL's die veranderen. Dit
 - [x] Title tags per pagina (in frontmatter)
 - [x] Meta descriptions per pagina (in frontmatter)
 - [x] Open Graph tags voor social sharing (in base layouts)
-- [ ] Canonical URLs correct ingesteld
-- [ ] Robots.txt aanwezig en correct
-- [ ] Sitemap.xml automatisch gegenereerd
+- [x] Canonical URLs correct ingesteld (in beide base layouts)
+- [x] Robots.txt aanwezig en correct (`/robots.txt`)
+- [x] Sitemap.xml automatisch gegenereerd (`/sitemap.xml`)
 
 ### Huidige SEO status ophalen
 - [ ] Exporteer huidige rankings uit Search Console
@@ -178,6 +178,183 @@ Bij de migratie moeten redirects worden ingesteld voor URL's die veranderen. Dit
 - [x] Logo geüpdatet naar transparant SVG (4KB vs 838KB)
 - [x] Logo grootte aangepast van 28px naar 48px
 - [x] Mark Haring titel gewijzigd naar "Research and Development"
+
+---
+
+## 7. SEO-optimalisatie Aanpak
+
+Dit hoofdstuk beschrijft de methode om alle pagina's volledig te optimaliseren voor zoekmachines.
+
+### SEO Score Methodiek
+
+Elke pagina wordt beoordeeld op basis van de volgende criteria (0-100 punten):
+
+| Criterium | Punten | Beschrijving |
+|-----------|--------|--------------|
+| **Title tag** | 15 | Uniek, 50-60 karakters, primair zoekwoord vooraan |
+| **Meta description** | 15 | Uniek, 150-160 karakters, call-to-action, zoekwoord |
+| **H1 heading** | 10 | Eén H1 per pagina, bevat primair zoekwoord |
+| **Content kwaliteit** | 15 | Min. 300 woorden, relevante content, geen duplicate |
+| **Interne links** | 10 | Links naar relevante pagina's, anchor text geoptimaliseerd |
+| **Afbeeldingen** | 10 | Alt-tekst aanwezig, bestandsnaam beschrijvend, WebP formaat |
+| **URL structuur** | 10 | Kort, beschrijvend, zoekwoord, geen underscores |
+| **Schema markup** | 5 | Structured data (Organization, LocalBusiness, FAQ) |
+| **Mobile-friendly** | 5 | Responsive, touch-friendly, geen horizontal scroll |
+| **Laadsnelheid** | 5 | < 3 sec, afbeeldingen geoptimaliseerd |
+
+**Score interpretatie:**
+- 90-100: Uitstekend geoptimaliseerd
+- 75-89: Goed, kleine verbeteringen mogelijk
+- 50-74: Matig, optimalisatie nodig
+- < 50: Onvoldoende, prioriteit voor verbetering
+
+### Stap-voor-stap Aanpak
+
+#### Fase 1: Inventarisatie (Week 1)
+
+1. **Pagina-audit uitvoeren**
+   - [ ] Lijst maken van alle pagina's met huidige SEO score
+   - [ ] Exporteer Search Console data (impressies, clicks, CTR, positie)
+   - [ ] Identificeer top 20 pagina's op basis van traffic
+   - [ ] Noteer pagina's met hoge impressies maar lage CTR (quick wins)
+
+2. **Keyword research**
+   - [ ] Primair zoekwoord per pagina bepalen
+   - [ ] Secundaire zoekwoorden identificeren
+   - [ ] Zoekvolumes en concurrentie analyseren
+   - [ ] Keyword mapping: welk zoekwoord hoort bij welke pagina?
+
+3. **Concurrentie analyse**
+   - [ ] Top 3 concurrenten identificeren per zoekwoord
+   - [ ] Analyseer hun title tags en meta descriptions
+   - [ ] Noteer content gaps en kansen
+
+#### Fase 2: Technische SEO (Week 2)
+
+1. **Technische basis** (Afgerond)
+   - [x] Sitemap.xml automatisch gegenereerd
+   - [x] Robots.txt geconfigureerd
+   - [x] Canonical URLs ingesteld
+   - [x] HTTPS actief
+   - [ ] Core Web Vitals meten en optimaliseren
+
+2. **Structured Data toevoegen**
+   - [ ] Organization schema op homepage
+   - [ ] LocalBusiness schema met adres/telefoon
+   - [ ] BreadcrumbList voor navigatie
+   - [ ] FAQ schema op veelgestelde vragen pagina
+   - [ ] Article schema voor blog posts
+   - [ ] VideoObject schema voor video pagina's
+
+3. **Performance optimalisatie**
+   - [ ] Afbeeldingen converteren naar WebP
+   - [ ] Lazy loading voor afbeeldingen onder de fold
+   - [ ] CSS/JS minificeren
+   - [ ] Caching headers instellen
+
+#### Fase 3: On-Page SEO per Pagina (Week 3-4)
+
+Voor elke pagina de volgende checklist doorlopen:
+
+**Title tag optimalisatie**
+```
+Formaat: [Primair zoekwoord] - [Beschrijving] | Notifica
+Voorbeeld: Power BI Dashboards voor Installatiebedrijven | Notifica
+```
+
+- [ ] Max 60 karakters
+- [ ] Primair zoekwoord aan het begin
+- [ ] Uniek per pagina
+- [ ] Actiegericht/wervend
+
+**Meta description optimalisatie**
+```
+Formaat: [Wat bieden we] + [Voor wie] + [Uniek voordeel] + [CTA]
+Voorbeeld: Professionele Power BI dashboards speciaal voor installatiebedrijven.
+Direct inzicht in projectmarges en efficiency. Live binnen 1 dag. Vraag nu een demo aan.
+```
+
+- [ ] 150-160 karakters
+- [ ] Bevat primair zoekwoord
+- [ ] Duidelijke waardepropositie
+- [ ] Call-to-action
+
+**Content optimalisatie**
+- [ ] H1 bevat primair zoekwoord
+- [ ] H2/H3 structuur logisch
+- [ ] Minimaal 300 woorden voor belangrijke pagina's
+- [ ] Zoekwoorden natuurlijk verwerkt
+- [ ] Interne links naar relevante pagina's
+
+**Afbeeldingen**
+- [ ] Alle afbeeldingen hebben alt-tekst
+- [ ] Bestandsnamen beschrijvend (bijv. `power-bi-dashboard-syntess.webp`)
+- [ ] Gecomprimeerd en juiste formaat
+
+#### Fase 4: Content Strategie (Doorlopend)
+
+1. **Blog strategie**
+   - [ ] Content kalender opstellen
+   - [ ] Long-tail zoekwoorden identificeren
+   - [ ] Evergreen content prioriteren
+   - [ ] Interne linking strategie
+
+2. **FAQ uitbreiden**
+   - [ ] Veelgestelde vragen uit Search Console halen
+   - [ ] "People Also Ask" analyseren
+   - [ ] FAQ schema toevoegen
+
+3. **Case studies / Referenties**
+   - [ ] Klantverhalen uitbreiden met specifieke resultaten
+   - [ ] Screenshots/afbeeldingen toevoegen
+   - [ ] Specifieke zoekwoorden targeten (bijv. "Power BI Syntess")
+
+### Prioriteit Matrix
+
+| Pagina Type | Prioriteit | Reden |
+|-------------|------------|-------|
+| Homepage | Hoog | Meeste traffic, merkbekendheid |
+| ERP Koppelingen (Syntess, etc.) | Hoog | Specifieke zoekintentie, conversie |
+| Diensten pagina's | Hoog | Commercieel, converterend |
+| Blog posts | Medium | Long-tail traffic, autoriteit |
+| Over ons, Contact | Laag | Minder zoekvolume |
+
+### SEO Tools & Meetmethoden
+
+**Gratis tools:**
+- Google Search Console (rankings, indexering)
+- Google Analytics 4 (traffic, gedrag)
+- Google PageSpeed Insights (performance)
+- Schema Markup Validator (structured data)
+- Mobile-Friendly Test
+
+**Betaalde tools (optioneel):**
+- Screaming Frog (technische audit)
+- Ahrefs/SEMrush (keyword research, backlinks)
+- Surfer SEO (content optimalisatie)
+
+### KPI's & Doelen
+
+| Metric | Huidige waarde | Doel (3 maanden) | Doel (6 maanden) |
+|--------|----------------|------------------|------------------|
+| Organisch verkeer | [ ] meten | +20% | +50% |
+| Top 10 keywords | [ ] meten | +5 | +15 |
+| Gemiddelde positie | [ ] meten | -2 posities | -5 posities |
+| Click-through rate | [ ] meten | +1% | +2% |
+| Core Web Vitals | [ ] meten | Alle "Good" | Alle "Good" |
+
+### Pagina SEO Scores (In te vullen)
+
+| Pagina | Score | Title | Meta | Content | Links | Actie |
+|--------|-------|-------|------|---------|-------|-------|
+| `/` (Homepage) | [ ]/100 | [ ] | [ ] | [ ] | [ ] | - |
+| `/over-ons/` | [ ]/100 | [ ] | [ ] | [ ] | [ ] | - |
+| `/bedrijfssoftware/syntess-atrium/` | [ ]/100 | [ ] | [ ] | [ ] | [ ] | - |
+| `/bedrijfssoftware/4ps/` | [ ]/100 | [ ] | [ ] | [ ] | [ ] | - |
+| `/inspiratie/blogs/` | [ ]/100 | [ ] | [ ] | [ ] | [ ] | - |
+| `/klanten-ervaringen/` | [ ]/100 | [ ] | [ ] | [ ] | [ ] | - |
+| `/prijzen/` | [ ]/100 | [ ] | [ ] | [ ] | [ ] | - |
+| _etc._ | | | | | | |
 
 ---
 

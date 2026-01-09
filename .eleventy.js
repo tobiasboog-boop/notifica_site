@@ -12,6 +12,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
   eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" });
   eleventyConfig.addPassthroughCopy({ "src/.nojekyll": ".nojekyll" });
+  eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
 
   // Watch targets
   eleventyConfig.addWatchTarget("src/assets/css/");
@@ -39,6 +40,14 @@ module.exports = function(eleventyConfig) {
   });
 
   // Filters
+  eleventyConfig.addFilter("date", function(date, format) {
+    const d = new Date(date);
+    if (format === "%Y-%m-%d") {
+      return d.toISOString().split('T')[0];
+    }
+    return d.toISOString();
+  });
+
   eleventyConfig.addFilter("nl_date", function(date) {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(date).toLocaleDateString('nl-NL', options);

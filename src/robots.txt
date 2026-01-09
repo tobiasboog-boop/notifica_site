@@ -1,0 +1,9 @@
+# Robots.txt voor notifica.nl
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.notifica.nl/sitemap.xml
+
+# Admin pagina niet indexeren
+Disallow: /admin/
