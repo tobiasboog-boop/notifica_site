@@ -9,38 +9,38 @@ Dit document bevat alle openstaande punten die besproken moeten worden voordat d
 De volgende pagina's staan op de huidige site maar zijn niet via het menu bereikbaar. Bespreek welke pagina's overgenomen moeten worden:
 
 ### Landingspagina's / Speciale pagina's
-| URL | Omschrijving | Actie |
-|-----|--------------|-------|
-| `/prijzen-syntess-powerbi/` | Prijzenpagina | [ ] Overnemen / [ ] Verwijderen |
-| `/proefperiode/` | Proefperiode aanvragen | [ ] Overnemen / [ ] Verwijderen |
-| `/bedrijfsanalysetool/` | Bedrijfsanalysetool | [ ] Overnemen / [ ] Verwijderen |
-| `/referenties/` | Referenties/cases overzicht | [ ] Overnemen / [ ] Verwijderen |
-| `/vacatures/` | Vacaturepagina | [ ] Overnemen / [ ] Verwijderen |
+| URL | Omschrijving | Actie | Nieuwe URL |
+|-----|--------------|-------|------------|
+| `/prijzen-syntess-powerbi/` | Prijzenpagina | [x] Overgenomen | `/prijzen/` |
+| `/proefperiode/` | Proefperiode aanvragen | [x] Overgenomen | `/proefperiode/` |
+| `/bedrijfsanalysetool/` | Bedrijfsanalysetool | [x] Overgenomen | `/verdieping/bedrijfsanalysetool/` |
+| `/referenties/` | Referenties/cases overzicht | [x] Overgenomen | `/referenties/` |
+| `/vacatures/` | Vacaturepagina | [x] Overgenomen | `/vacatures/` |
 
 ### Diensten/Product pagina's
-| URL | Omschrijving | Actie |
-|-----|--------------|-------|
-| `/datagedreven-werken-sneller-inzicht-meer-groei/` | Datagedreven werken | [ ] Overnemen / [ ] Verwijderen |
-| `/volledig-ontzorgd-data-beheer-alles-in-1-oplossing/` | Volledig ontzorgd databeheer | [ ] Overnemen / [ ] Verwijderen |
-| `/uniform-semantisch-datamodel/` | Semantisch datamodel | [ ] Overnemen / [ ] Verwijderen |
-| `/bouw-zelf-rapporten-in-1-dag/` | Zelf rapporten bouwen | [ ] Overnemen / [ ] Verwijderen |
-| `/datamigratie/` | Datamigratie dienst | [ ] Overnemen / [ ] Verwijderen |
+| URL | Omschrijving | Actie | Nieuwe URL |
+|-----|--------------|-------|------------|
+| `/datagedreven-werken-sneller-inzicht-meer-groei/` | Datagedreven werken | [x] Overgenomen | `/diensten/datagedreven-werken/` |
+| `/volledig-ontzorgd-data-beheer-alles-in-1-oplossing/` | Volledig ontzorgd databeheer | [x] Overgenomen | `/diensten/databeheer/` |
+| `/uniform-semantisch-datamodel/` | Semantisch datamodel | [x] Overgenomen | `/diensten/semantisch-datamodel/` |
+| `/bouw-zelf-rapporten-in-1-dag/` | Zelf rapporten bouwen | [x] Overgenomen | `/diensten/zelf-rapporten-bouwen/` |
+| `/datamigratie/` | Datamigratie dienst | [x] Overgenomen | `/diensten/datamigratie/` |
 
 ### Training/Webinar pagina's
-| URL | Omschrijving | Actie |
-|-----|--------------|-------|
-| `/optimaliseer-bedrijfsresultaten-met-power-bi-training/` | Power BI training | [ ] Overnemen / [ ] Verwijderen |
-| `/syntess-webinar/` | Syntess webinar | [ ] Overnemen / [ ] Verwijderen |
-| `/syntess-webinar/presentatie-webinar/` | Webinar presentatie | [ ] Overnemen / [ ] Verwijderen |
-| `/notifica-talks/` | Notifica Talks | [ ] Overnemen / [ ] Verwijderen |
+| URL | Omschrijving | Actie | Nieuwe URL |
+|-----|--------------|-------|------------|
+| `/optimaliseer-bedrijfsresultaten-met-power-bi-training/` | Power BI training | [x] Overgenomen | `/training/power-bi/` |
+| `/syntess-webinar/` | Syntess webinar | [x] Overgenomen | `/verdieping/webinars/` |
+| `/syntess-webinar/presentatie-webinar/` | Webinar presentatie | [x] Overgenomen | `/verdieping/webinars/optimalisatie-winstgevendheid-december-2025/` |
+| `/notifica-talks/` | Notifica Talks | [x] Overgenomen | `/notifica-talks/` |
 
 ### Overige pagina's
-| URL | Omschrijving | Actie |
-|-----|--------------|-------|
-| `/installatie-syntess/` | Installatie Syntess | [ ] Overnemen / [ ] Verwijderen |
-| `/disclaimer/` | Disclaimer pagina | [ ] Overnemen / [ ] Verwijderen |
-| `/navigatie-branche-naar-software/` | Navigatie hulppagina | [ ] Overnemen / [ ] Verwijderen |
-| `/kennisbank-voorbeeld/` | Kennisbank voorbeeld | [ ] Overnemen / [ ] Verwijderen |
+| URL | Omschrijving | Actie | Nieuwe URL |
+|-----|--------------|-------|------------|
+| `/installatie-syntess/` | Installatie Syntess | [x] Overgenomen | `/installatie-syntess/` |
+| `/disclaimer/` | Disclaimer pagina | [x] Overgenomen | `/disclaimer/` |
+| `/navigatie-branche-naar-software/` | Navigatie hulppagina | [ ] Te beoordelen | - |
+| `/kennisbank-voorbeeld/` | Kennisbank voorbeeld | [ ] Te beoordelen | - |
 
 ---
 
@@ -59,6 +59,14 @@ Bij de migratie moeten redirects worden ingesteld voor URL's die veranderen. Dit
 | `/videohub/` | `/inspiratie/videos/` | [ ] Redirect instellen |
 | `/home-power-bi-voor-installatiebedrijven/` | `/` | [ ] Redirect instellen |
 | `/privacy-verklaring/` | `/privacy/` | [ ] Redirect instellen |
+| `/prijzen-syntess-powerbi/` | `/prijzen/` | [ ] Redirect instellen |
+| `/datagedreven-werken-sneller-inzicht-meer-groei/` | `/diensten/datagedreven-werken/` | [ ] Redirect instellen |
+| `/volledig-ontzorgd-data-beheer-alles-in-1-oplossing/` | `/diensten/databeheer/` | [ ] Redirect instellen |
+| `/uniform-semantisch-datamodel/` | `/diensten/semantisch-datamodel/` | [ ] Redirect instellen |
+| `/bouw-zelf-rapporten-in-1-dag/` | `/diensten/zelf-rapporten-bouwen/` | [ ] Redirect instellen |
+| `/optimaliseer-bedrijfsresultaten-met-power-bi-training/` | `/training/power-bi/` | [ ] Redirect instellen |
+| `/syntess-webinar/` | `/verdieping/webinars/` | [ ] Redirect instellen |
+| `/bedrijfsanalyse-tool/` | `/verdieping/bedrijfsanalysetool/` | [ ] Redirect instellen |
 
 ### Bedrijfssoftware pagina's
 | Oude URL | Nieuwe URL | Status |
@@ -92,9 +100,9 @@ Bij de migratie moeten redirects worden ingesteld voor URL's die veranderen. Dit
 - [ ] Change of Address tool gebruiken indien domein wijzigt
 
 ### Meta tags & SEO elementen
-- [ ] Controleer title tags per pagina
-- [ ] Controleer meta descriptions per pagina
-- [ ] Open Graph tags voor social sharing
+- [x] Title tags per pagina (in frontmatter)
+- [x] Meta descriptions per pagina (in frontmatter)
+- [x] Open Graph tags voor social sharing (in base layouts)
 - [ ] Canonical URLs correct ingesteld
 - [ ] Robots.txt aanwezig en correct
 - [ ] Sitemap.xml automatisch gegenereerd
@@ -109,20 +117,20 @@ Bij de migratie moeten redirects worden ingesteld voor URL's die veranderen. Dit
 ## 4. Google Analytics / Google Tag Manager
 
 ### Huidige tracking
-- [ ] Welke Google Analytics property wordt gebruikt? (UA of GA4)
+- [x] Welke Google Analytics property wordt gebruikt? → **GA4**
 - [ ] Wordt Google Tag Manager gebruikt?
-- [ ] Tracking ID ophalen van huidige site
+- [x] Tracking ID ophalen van huidige site → **G-X93YGT3NLM**
 
 ### Migratie opties
 | Optie | Omschrijving |
 |-------|--------------|
-| Bestaande property behouden | Zelfde tracking ID gebruiken, historie blijft behouden |
+| **Bestaande property behouden** | ✅ Gekozen - Zelfde tracking ID gebruiken, historie blijft behouden |
 | Nieuwe property aanmaken | Schone start, geen historie |
 | Beide tijdelijk | Oude en nieuwe naast elkaar tijdens transitie |
 
 ### Te implementeren
-- [ ] Google Analytics 4 (GA4) property ID: `G-XXXXXXXXXX`
-- [ ] Tracking code toevoegen aan base template
+- [x] Google Analytics 4 (GA4) property ID: `G-X93YGT3NLM`
+- [x] Tracking code toevoegen aan base template (beide layouts)
 - [ ] Event tracking instellen (formulieren, CTA clicks, etc.)
 - [ ] Doelen/conversies instellen
 - [ ] E-commerce tracking indien nodig
@@ -139,7 +147,7 @@ Bij de migratie moeten redirects worden ingesteld voor URL's die veranderen. Dit
 - [ ] WWW vs non-WWW redirect instellen
 
 ### Livegang stappen
-1. [ ] Nieuwe site testen op staging/test domein
+1. [x] Nieuwe site testen op staging/test domein (GitHub Pages)
 2. [ ] Alle redirects configureren
 3. [ ] DNS wijzigen naar nieuwe hosting
 4. [ ] SSL certificaat activeren
@@ -151,7 +159,7 @@ Bij de migratie moeten redirects worden ingesteld voor URL's die veranderen. Dit
 ## 6. Overige aandachtspunten
 
 ### Formulieren
-- [ ] Pipedrive integratie testen
+- [x] Pipedrive integratie aanwezig (popup script)
 - [ ] Contact formulieren testen
 - [ ] Demo aanvraag formulier testen
 
@@ -161,10 +169,15 @@ Bij de migratie moeten redirects worden ingesteld voor URL's die veranderen. Dit
 - [ ] Social media links kloppen
 
 ### Content
-- [ ] Alle afbeeldingen aanwezig en geoptimaliseerd
+- [x] Alle afbeeldingen aanwezig en geoptimaliseerd
 - [ ] Alle interne links werken
 - [ ] Alle externe links werken
 - [ ] Spelling en grammatica gecontroleerd
+
+### Recente wijzigingen (januari 2025)
+- [x] Logo geüpdatet naar transparant SVG (4KB vs 838KB)
+- [x] Logo grootte aangepast van 28px naar 48px
+- [x] Mark Haring titel gewijzigd naar "Research and Development"
 
 ---
 
@@ -172,13 +185,18 @@ Bij de migratie moeten redirects worden ingesteld voor URL's die veranderen. Dit
 
 _Ruimte voor eigen notities tijdens het bespreken:_
 
+**Voltooide pagina's (nieuwe Notion-style):**
+- Alle landingspagina's (prijzen, proefperiode, referenties, vacatures)
+- Alle diensten pagina's (datagedreven-werken, databeheer, semantisch-datamodel, zelf-rapporten-bouwen, datamigratie)
+- Alle training/webinar pagina's (power-bi, webinars, notifica-talks)
+- Alle overige pagina's (installatie-syntess, disclaimer)
 
-
-
-
+**Nog te beoordelen:**
+- `/navigatie-branche-naar-software/`
+- `/kennisbank-voorbeeld/`
 
 
 
 ---
 
-*Laatste update: januari 2025*
+*Laatste update: 9 januari 2025*
