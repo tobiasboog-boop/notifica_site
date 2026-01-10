@@ -35,9 +35,10 @@ OHW en Onderhanden werk zijn cruciaal voor elk installatiebedrijf. Door te sture
 - [Voordelen & ROI](#voordelen)
 - [Casestudy](#casestudy)
 
+
 Voor installatiebedrijven die willen groeien, is een overstap naar geautomatiseerde processen noodzakelijk. Onze [Power BI dashboards voor installateurs](/diensten/power-bi-dashboards-voor-installateurs/) bieden hierin de perfecte ondersteuning door data uit diverse bronnen realtime te visualiseren.
 
-## Het 5-stappenplan voor onderhanden werk met realtime inzicht
+<h2 id="stappenplan">Het 5-stappenplan voor onderhanden werk met realtime inzicht</h2>
 
 ### 1. Budget actualiseren
 
@@ -63,15 +64,15 @@ Power BI-grafieken and voorspellende modellen laten zien welke projecten risico 
 
 *Alle projecten keurig onder elkaar met realisatie en voortgang (en automatisch OHW)*
 
-## Onderhanden werk met realtime inzicht zonder Excel-marathons
+<h2 id="excelvrij">Onderhanden werk met realtime inzicht zonder Excel-marathons</h2>
 
 Dankzij visuele dashboards van Notifica hoef je niet langer 's avonds stapels spreadsheets samen te voegen. Je opent een Power BI-portaal waarin alle projecten overzichtelijk naast elkaar staan, met kostenontwikkelingen, margepercentages en voortgangscurves. Zo zie je in één oogopslag wie op schema ligt en waar extra aandacht nodig is—zonder uren te besteden aan handmatig werk.
 
-## Waarom het werkt
+<h2 id="waarom">Waarom het werkt</h2>
 
 Traditioneel verliep de boekhouding achter de schermen: materiaalboekingen werden vooruitgeboekt, terwijl facturen vaak pas weken later binnenkwamen. Dat leidde tot grillige balansrekeningen en onvoorspelbare maandresultaten. Volgens [Accountancy van Morgen](https://accountancyvanmorgen.nl/) versnelt **onderhanden werk met realtime inzicht** de besluitvorming met gemiddeld 25%. Door data te centraliseren en direct te koppelen aan het ERP, krijg je betrouwbare, audit-proof cijfers.
 
-## Voordelen en ROI
+<h2 id="voordelen">Voordelen en ROI</h2>
 
 - **60% tijdsbesparing** op maandafsluitingen door één gebruiksvriendelijke app voor projectleiders en automatische boekingen voor finance.
 - **Lagere financiële risico's** dankzij vroegtijdig cashflow- en risicobeheer; voorkom kostbare tekorten.
@@ -79,7 +80,7 @@ Traditioneel verliep de boekhouding achter de schermen: materiaalboekingen werde
 - **Hogere rendabiliteit** door betere margecontrole: installatiebedrijven zien hun gemiddelde projectmarge binnen zes maanden met 10–15% stijgen.
 - **Betere samenwerking** tussen teams door dashboards en automatische notificaties; iedereen werkt met dezelfde, actuele cijfers.
 
-## Casestudy van een klant
+<h2 id="casestudy">Casestudy van een klant</h2>
 
 Begin 2024 implementeerde een klant Notifica. Voorheen werd OWH slechts elk kwartaal uitgevoerd en vooral voor grote projecten. Door automatisering in Power BI daalde de maandafsluitingstijd van vijf naar twee werkdagen, waardoor ze nu voor elk project maandelijks en automatisch OHW uitvoeren. Dankzij het onderhanden werk met realtime inzicht kon het management tijdig bijsturen en werden financiële doelstellingen sneller gehaald.
 

@@ -31,7 +31,7 @@ Real-time inzichten geven je de controle over elk aspect van je installatieproje
 - [Succesverhaal](#succesverhaal-uit-de-praktijk)
 - [Conclusie](#conclusie)
 
-## Waarom real-time data onmisbaar is
+<h2 id="waarom-real-time-data-onmisbaar">Waarom real-time data onmisbaar is</h2>
 
 Stel je voor: je staat midden in een complexe installatieklus en hebt geen recent inzicht in de voortgang. Juist hier zijn **real-time inzichten** essentieel. Zonder **actuele informatie** loop je continu achter de feiten aan. Het gevolg?
 
@@ -45,7 +45,7 @@ Volgens een artikel van [McKinsey & Company](https://www.mckinsey.com/capabiliti
 
 *Voorbeeld van een **real-time inzicht** in projectkosten via Power BI.*
 
-## Hoe het werkt voor jou
+<h2 id="hoe-het-werkt-voor-jou">Hoe het werkt voor jou</h2>
 
 1. **Live calculatie-updates**  
    Jij past rechtstreeks in [Microsoft Power BI](https://powerbi.microsoft.com/nl-nl/) uurprijzen, materiaalkosten en werkuren aan. De prognose voor het totale projectbudget en de marge wordt meteen bijgewerkt, zodat je altijd op de hoogte blijft.
@@ -58,7 +58,7 @@ Volgens een artikel van [McKinsey & Company](https://www.mckinsey.com/capabiliti
 
 *Demo van Notifica's Power BI-integratie voor **real-time inzichten**.*
 
-## 5 voordelen voor jouw organisatie
+<h2 id="5-voordelen-voor-jouw-organisatie">5 voordelen voor jouw organisatie</h2>
 
 1. **Transparantie gedurende het hele traject**  
    Door **real-time inzichten** weet je altijd de status van elk project, zonder uren te besteden aan handmatige Excel-boekhoudingen.
@@ -79,7 +79,7 @@ Volgens een artikel van [McKinsey & Company](https://www.mckinsey.com/capabiliti
 
 *Projectdashboard dat zorgt voor optimale **controle** en actuele informatie.*
 
-## Een succesverhaal uit de praktijk
+<h2 id="succesverhaal-uit-de-praktijk">Een succesverhaal uit de praktijk</h2>
 
 Een middelgroot installatiebedrijf kampte maandelijks met vertragingen door handmatige rapportages. Projectleiders werkten met verouderde data, controllers draaiden extra spreadsheets en facturatie liep achter. Na implementatie van Notifica's Power BI-suite veranderde de situatie drastisch:
 
@@ -89,7 +89,7 @@ Een middelgroot installatiebedrijf kampte maandelijks met vertragingen door hand
 
 Het resultaat: projecten worden nu gemiddeld 20% sneller afgerond, marges stegen met 8% én de klanttevredenheid nam aanzienlijk toe. Dit succes illustreert hoe **real-time inzichten** en betrouwbare data je organisatie echt laten groeien.
 
-## Conclusie
+<h2 id="conclusie">Conclusie</h2>
 
 Wil jij net als dit installatiebedrijf profiteren van realtime inzichten, volledige **controle** en hogere **klanttevredenheid**? Bij Notifica zorgen wij voor een soepele integratie tussen Power BI en Syntess, zodat jij iedere dag beschikt over de meest actuele informatie en direct kunt bijsturen waar nodig.
 

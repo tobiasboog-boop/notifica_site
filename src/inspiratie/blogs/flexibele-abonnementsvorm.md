@@ -35,25 +35,25 @@ In de installatiebranche zijn actuele inzichten cruciaal voor een efficiënte or
 - [Flexibiliteit](#kostenefficiëntie)
 - [Conclusie](#conclusie)
 
-## Compleet pakket: alles in één abonnement
+<h2 id="compleet-pakket">Compleet pakket: alles in één abonnement</h2>
 
 Met ons **alles-in-één abonnement** hoef je je geen zorgen te maken over technische storingen of complexe datakoppelingen. Wij verzorgen het volledige beheer van je Power BI-omgeving, inclusief licentiebeheer, dagelijkse monitoring en regelmatige onderhoudsbeurten. Zo blijven je dashboards en rapportages altijd soepel werken en kun jij je richten op het analyseren van de gegevens in plaats van op de techniek erachter.
 
 Het voordeel van een alles-in-één abonnement is dat je niet met meerdere leveranciers of losse contracten werkt. Eén aanspreekpunt, één factuur en één planning – dat draagt bij aan duidelijke budgettering en betere samenwerking.
 
-## Doorontwikkeling en updates binnen het abonnement
+<h2 id="doorontwikkeling-en-updates">Doorontwikkeling en updates binnen het abonnement</h2>
 
 Elke nieuwe release van je ERP-systeem, zoals Syntess of Exact Online, verwerken wij direct in je rapportages. Dankzij onze doorlopende doorontwikkeling pas je dashboards automatisch aan zodra er in de datastructuur wijzigingen optreden. Tijdens geplande reviewmomenten bespreken we jouw feedback en werken we nieuwe functies in korte doorlooptijden uit.
 
 Bovendien maken we gebruik van geavanceerde datamodeltuning: we optimaliseren kolommen en relaties zodat queries supersonisch snel verlopen en laadtijden tot een minimum beperkt blijven. Voor technisch geïnteresseerden is er uitgebreide documentatie beschikbaar via [Microsoft Power BI documentatie](https://learn.microsoft.com/en-us/power-bi/), waar je leest hoe je zelf eenvoudige optimalisaties kunt doorvoeren.
 
-## Beveiligde data-integriteit in ons abonnement
+<h2 id="beveiligde-data">Beveiligde data-integriteit in ons abonnement</h2>
 
 Databeveiliging is een speerpunt binnen ons alles-in-één abonnement. Alle verbindingen tussen je ERP en Power BI zijn versleuteld via API's en VPN-tunnels. Daarnaast voeren we periodieke penetratietests uit om kwetsbaarheden op te sporen. Onze configuratie voldoet volledig aan de eisen uit de [ISO/IEC 27001 norm](https://www.iso.org/standard/27001) voor informatiebeveiliging.
 
 Om data-integriteit te waarborgen, implementeren we automatische validatiescripts. Die controleren continu op ontbrekende of inconsistente records, zodat rapportages altijd gebaseerd zijn op volledige en correcte gegevens. Mocht er iets afwijkends optreden, dan lossen wij dat proactief op voordat het invloed heeft op je bedrijfsvoering.
 
-## Kostenefficiëntie en flexibiliteit van het abonnement
+<h2 id="kostenefficiëntie">Kostenefficiëntie en flexibiliteit van het abonnement</h2>
 
 Onze licentiekosten zijn helder en modulair opgebouwd. Met ons maandelijks opzegbare alles-in-één abonnement zit je nergens aan vast. Wil je op- of afschalen? Dan passen we je plan op eenvoudige wijze aan zonder extra licentiekosten voor nieuwe gebruikers of extra databronnen. Dit maakt het abonnement vooral aantrekkelijk voor groeiende installateurs die flexibiliteit nodig hebben.
 
@@ -69,7 +69,7 @@ Het resultaat? Meer dan 30% tijdwinst op rapportagewerkzaamheden, 20% betere nau
 
 *De uitvoeringstemplate geeft inzicht in voortgang en efficiency per project.*
 
-## Conclusie: toekomstbestendig en zorgeloos met ons abonnement
+<h2 id="conclusie">Conclusie: toekomstbestendig en zorgeloos met ons abonnement</h2>
 
 Met ons **alles-in-één abonnement** beschik je direct over professionele Power BI-rapportages, zonder gedoe met beheer of onderhoud. Dankzij de transparante prijzen en continue doorontwikkeling ben je verzekerd van een toekomstbestendige oplossing die met je organisatie mee kan groeien.
 

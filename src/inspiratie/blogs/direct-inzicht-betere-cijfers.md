@@ -32,11 +32,11 @@ relatedBlogs:
 - [Toekomstvisie](#toekomstvisie)
 - [Impact](#conclusie)
 
-## De uitdaging: versnipperde data en verouderde rapportages
+<h2 id="uitdaging">De uitdaging: versnipperde data en verouderde rapportages</h2>
 
 Bij de start van het project bleek dat data verspreid en verouderd was. Operationeel managers en projectleiders besteedden dagelijks onnodig veel tijd aan het corrigeren van cijfers in plaats van te focussen op datagedreven doelen. Zonder onmiddellijk overzicht van KPI's en live gegevens konden ze geen gefundeerde beslissingen nemen, wat leidde tot inefficiënties en frustraties. In een sector waar resultaten en deadlines nauwkeurig worden bewaakt, resulteerde dit in vertragingen en hogere kosten.
 
-## Onze oplossing: centrale dashboards en datawarehousing
+<h2 id="oplossing">Onze oplossing: centrale dashboards en datawarehousing</h2>
 
 Om deze uitdaging te tackelen, ontwikkelden we samen met het klantteam een strategie om alle relevante installatiegegevens te centraliseren en continu te actualiseren. We bouwden meerdere Power BI-omgevingen waarin data uit verschillende bronnen werd samengebracht. Zo konden projectleiders in één oogopslag de status van urenregistratie, materiaalkosten en voortgang per installatiefase zien. Dankzij deze heldere weergave werd het mogelijk om realtime bij te sturen en scherpere beslissingen te nemen.
 
@@ -48,13 +48,13 @@ We implementeerden daarnaast een Power BI-app om budgetafwijkingen en resourceko
 
 Verder introduceerden we een data governance-framework waarin rollen en verantwoordelijkheden helder werden omschreven. Zo werd consistentie en security in dataverwerking gewaarborgd. Alle betrokkenen wisten onmiddellijk waar zij verantwoordelijk voor waren, wat leidde tot een snellere adoptie en minder fouten.
 
-## Training en adoptie: mensen staan centraal
+<h2 id="training">Training en adoptie: mensen staan centraal</h2>
 
 Een succesvol dataplatform vereist meer dan techniek. Daarom trainden we installatieprofessionals en teamleden intensief in het interpreteren en gebruiken van de visuele overzichten. In interactieve workshops leerden zij maatwerkfilters en drill-through-analyses toepassen, zodat zij zelf rapportages konden aanpassen en conclusies sneller konden delen met collega's en opdrachtgevers.
 
 Door de nadruk op menselijke adoptie en training ontstond een cultuur waarin iedereen voelde dat data de basis was voor slimmere acties en hogere prestaties. Teams raakten gewend aan realtime rapportages en namen deze mee in hun dagelijkse werkzaamheden.
 
-## Het resultaat: focus op groei en optimalisatie
+<h2 id="resultaat">Het resultaat: focus op groei en optimalisatie</h2>
 
 Met onze geïntegreerde oplossing verschoof de focus binnen het projectteam van discussies over cijferaccuraatheid naar constructieve sessies over resultaatverbeteringen. Het management rapporteerde dat de tijdsbesteding aan administratieve controle met 30 % afnam. Dankzij dit **direct inzicht** en de realtime dashboards kwam er meer ruimte voor strategische planning en klantcommunicatie.
 
@@ -64,13 +64,13 @@ Met onze geïntegreerde oplossing verschoof de focus binnen het projectteam van 
 
 De centrale overzichten boden niet alleen een heldere kijk op de huidige performance, maar onthulden ook waardevolle trends en patronen. Zo konden pieken in materiaal- en capaciteitsbehoefte vroegtijdig worden gesignaleerd, wat inkoop- en planningsbeslissingen optimaliseerde. ROI-analyses maakten zichtbaar hoe een datagedreven aanpak direct bijdroeg aan kostenbesparing en betere prestaties.
 
-## Toekomstvisie: blijvende groei en innovatie
+<h2 id="toekomstvisie">Toekomstvisie: blijvende groei en innovatie</h2>
 
 Op basis van deze solide basis breiden we de oplossing stapsgewijs uit met geavanceerde AI-modellen voor het voorspellen van opleverdata en onderhoudskosten. Daarnaast implementeren we geautomatiseerde notificaties bij afwijkingen, zodat verantwoordelijken direct actie kunnen ondernemen. Met deze innovaties blijft Notifica vooroplopen in datagedreven excellence voor de installatiebranche.
 
 Door in te zetten op een datagedreven toekomst kunnen installatiebedrijven hun prestaties continu monitoren en bijsturen. Actuele informatie en live gegevens vormen de kern van elke succesvolle strategie, waarbij beslissingen gebaseerd zijn op feiten in plaats van aannames.
 
-## Conclusie: de impact van datagedreven beslissingen
+<h2 id="conclusie">Conclusie: de impact van datagedreven beslissingen</h2>
 
 Dit succesverhaal benadrukt hoe installatiebedrijven met een datagedreven aanpak sneller grip krijgen op hun prestaties en betere beslissingen nemen. Bij Notifica transformeren we versnipperde data naar waardevolle, realtime inzichten en ondersteunen we organisaties bij het optimaliseren van hun processen en KPI's. Met Power BI, ERP-koppelingen zoals Syntess en een sterk data governance-framework realiseren we duurzame groei en kostenbesparing.
 

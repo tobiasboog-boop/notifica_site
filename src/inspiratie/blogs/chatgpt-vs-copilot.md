@@ -31,7 +31,7 @@ Power BI Copilot vs ChatGPT brengt twee krachtige AI-tools samen om jouw data-an
 - [Praktische overwegingen](#overwegingen)
 - [Conclusie](#conclusie)
 
-## Wanneer kies je voor Copilot?
+<h2 id="copilot">Wanneer kies je voor Copilot?</h2>
 
 Copilot is de logische keuze wanneer je al werkt met Power BI. Dankzij de naadloze integratie kun je direct vragen stellen aan je bestaande dashboards zonder tijdrovende data-extracties.
 
@@ -51,7 +51,7 @@ In de installatiesector moet je snel schakelen. Copilot koppelt live data uit je
 
 Copilot registreert automatisch welke vragen je stelt en welke resultaten je ontvangt. Dit biedt transparantie en is essentieel voor projecten met strenge compliance-eisen. Lees meer over Power BI-beveiliging op [Microsoft Power BI](https://powerbi.microsoft.com/).
 
-## Wanneer is ChatGPT beter?
+<h2 id="chatgpt">Wanneer is ChatGPT beter?</h2>
 
 ChatGPT blinkt uit in strategische analyses en combineert externe data met jouw projectinformatie. Daardoor is het ideaal voor scenario-analyses en marktinzichten.
 
@@ -71,7 +71,7 @@ Wil je Monte Carlo-simulaties uitvoeren of geavanceerde voorspellingen maken? Ch
 
 ChatGPT legt stap voor stap uit hoe berekeningen werken. Zo leer je niet alleen de uitkomst, maar begrijp je ook het proces achter de data-analyse. Handig als je je vaardigheden verder wilt ontwikkelen.
 
-## De hybride aanpak
+<h2 id="hybride">De hybride aanpak</h2>
 
 Combineer beide tools voor het beste resultaat: gebruik Copilot dagelijks voor operationele dashboards en zet ChatGPT wekelijks in voor strategische rapportages.
 
@@ -79,7 +79,7 @@ Combineer beide tools voor het beste resultaat: gebruik Copilot dagelijks voor o
 - **Wekelijks:** ChatGPT voor trendanalyse en forecasting
 - **Maandelijks:** Gebruiken voor diepgaande rapportages
 
-## Praktische overwegingen
+<h2 id="overwegingen">Praktische overwegingen</h2>
 
 ### Kosten
 
@@ -99,7 +99,7 @@ Bekijk hier een korte demonstratie van Copilot en ChatGPT in actie voor installa
 
 [YouTube video: Power BI Copilot vs ChatGPT demo](https://www.youtube.com/embed/wr__6tM5U6I)
 
-## Conclusie
+<h2 id="conclusie">Conclusie</h2>
 
 Kies Copilot als je vooral operationele inzichten nodig hebt en al in het Microsoft-ecosysteem zit. Kies ChatGPT voor strategische analyses en geavanceerde berekeningen. Heb je beide nodig? Gebruik Copilot dagelijks en ChatGPT wekelijks voor het beste resultaat.
 

@@ -299,6 +299,10 @@ h3 {
     margin-top: 48px;
 }
 
+.features-grid-3 {
+    grid-template-columns: repeat(3, 1fr) !important;
+}
+
 .feature-card {
     padding: 32px;
     background: white;
@@ -522,9 +526,13 @@ footer {
     color: var(--text);
 }
 
-.footer-col-logo img {
-    display: block;
-    margin-bottom: 4px;
+.footer-col-logo h4 {
+    line-height: 1;
+}
+
+.footer-col-logo h4 img {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .footer-col p,
@@ -556,9 +564,14 @@ footer {
 @media (max-width: 900px) {
     .container, nav .container { padding: 0 24px; }
     .features-grid { grid-template-columns: 1fr; }
+    .features-grid-3 { grid-template-columns: repeat(3, 1fr) !important; }
     .steps-grid { grid-template-columns: 1fr; }
     .two-col { grid-template-columns: 1fr; gap: 48px; }
     .footer-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 700px) {
+    .features-grid-3 { grid-template-columns: 1fr !important; }
 }
 
 @media (max-width: 768px) {

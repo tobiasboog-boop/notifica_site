@@ -31,7 +31,7 @@ In 2026 kunnen Nederlandse MKB's met slimme dashboards diepe, realtime inzichten
 - [Kosten & Impact](#kosten-en-impact)
 - [Conclusie](#conclusie)
 
-## Wat zijn AI dashboards?
+<h2 id="wat-zijn-ai-dashboards">Wat zijn AI dashboards?</h2>
 
 Een AI-dashboard (of ML-dashboard) is veel meer dan een standaard rapportagetool. Door machine learning toe te passen, worden gegevens continu gescand op patronen, afwijkingen en trends. In plaats van alleen historische cijfers te tonen, levert dit systeem voorspellende inzichten en concrete aanbevelingen voor jouw organisatie.
 
@@ -39,7 +39,7 @@ Stel dat je omzet daalt: een traditioneel dashboard meldt simpelweg de procentue
 
 ![Voorbeeldweergave van een AI-dashboard dat realtime inzichten en voorspellingen toont]({{ "/assets/images/2025/06/fb5c57c9-e7fc-4b85-86ea-29ce610a4eed.png" | url }})
 
-## 5 krachtige functies van deze technologie
+<h2 id="vijf-krachtige-functies">5 krachtige functies van deze technologie</h2>
 
 ### 1. Automatische anomalie detectie
 
@@ -73,13 +73,13 @@ Een geavanceerd dashboard houdt rekening met branche‐ en seizoenspatronen. Voo
 
 Daarmee voorkom je dat algemene rapporten zonder context beslissingen vertragen of vertekenen. Je krijgt inzichten op maat van jouw sector.
 
-## Stapsgewijze implementatie
+<h2 id="stapsgewijze-implementatie">Stapsgewijze implementatie</h2>
 
 De implementatie van een slim dashboard hoeft niet ingewikkeld te zijn. Begin klein met een specifiek domein, zoals cashflow monitoring of projectprestaties. Platformen als Power BI en Azure Machine Learning bieden kant-en-klare AI-modules die je binnen 4–6 weken kunt activeren.
 
 Na die initiële fase voeg je geleidelijk extra datastromen toe—denk aan CRM, ERP en webanalytics. Binnen drie maanden heb je vaak een volledig voorspellend dashboardsysteem dat naadloos integreert met je bestaande workflow. Zo voorkom je lange implementatietrajecten en minimaliseer je verstoring binnen het team.
 
-## Kosten en impact
+<h2 id="kosten-en-impact">Kosten en impact</h2>
 
 Bedrijven die slimme dashboards inzetten, rapporteren gemiddeld **25–40% tijdsbesparing** op handmatige analyses en rapportage. Daarnaast worden beslissingen tot **30% eerder** genomen dankzij realtime inzichten en voorspellingen. In de praktijk betekent dat:
 
@@ -90,7 +90,7 @@ Bedrijven die slimme dashboards inzetten, rapporteren gemiddeld **25–40% tijds
 
 Voor een MKB met een gemiddeld team van vijf mensen kan dit jaarlijks tienduizenden euro's aan bespaarde arbeidstijd en verminderde risico's opleveren.
 
-## Conclusie
+<h2 id="conclusie">Conclusie</h2>
 
 In 2026 zijn slimme dashboards niet langer een toekomstmuziek maar een must-have voor elk Nederlands MKB dat data écht wil benutten. Machine learning dashboards bieden niet alleen historische overzichten, maar voorspellen trends, signaleren afwijkingen en geven concrete adviezen. Het resultaat: minder handmatig werk, snellere inzichten en betere strategische beslissingen.
 

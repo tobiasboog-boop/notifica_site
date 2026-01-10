@@ -31,7 +31,7 @@ Deze case study laat zien hoe installatiebedrijven ook in periodes van zwaar wee
 - [Resultaten](#resultaten)
 - [Conclusie](#conclusie)
 
-## De uitdaging bij zwaar weer
+<h2 id="uitdaging">De uitdaging bij zwaar weer</h2>
 
 Veel installatiebedrijven staan voor dezelfde uitdaging: zoals een recente case study van een middelgroot installatiebedrijf bleek, kunnen onverwachte weersomstandigheden leiden tot projectvertragingen en onvoorziene kosten. Zonder direct financieel inzicht in kosten versus opbrengsten, wordt het bijna onmogelijk om tijdens zwaar weer de juiste beslissingen te nemen. Dit gebrek aan inzicht remt de efficiency en leidt tot lagere marges, waardoor winstpotentieel onbenut blijft.
 
@@ -39,7 +39,7 @@ Veel installatiebedrijven staan voor dezelfde uitdaging: zoals een recente case 
 
 *Voorbeeld van een dashboard waarin financieel inzicht zorgt voor betere beslissingen tijdens zwaar weer.*
 
-## Oplossing met financieel inzicht
+<h2 id="oplossing">Oplossing met financieel inzicht</h2>
 
 Notifica ontwikkelde een specifieke Power BI-oplossing voor dit installatiebedrijf, gericht op het bieden van direct financieel inzicht, zelfs bij zwaar weer. Dankzij de integratie met Syntess en andere systemen kan het management nu:
 
@@ -47,7 +47,7 @@ Notifica ontwikkelde een specifieke Power BI-oplossing voor dit installatiebedri
 - Direct kosten versus opbrengsten vergelijken, inclusief materiaalkosten en urenregistratie.
 - Scenario's simuleren om te voorspellen hoe zwaar weer de marges beïnvloedt.
 
-## 5 onmisbare inzichten
+<h2 id="inzichten">5 onmisbare inzichten</h2>
 
 In deze case study bespreken we vijf inzichten die tijdens zwaar weer het verschil maken tussen verlies en winst. Elk inzicht is gebaseerd op data en best practices uit de installatiebranche:
 
@@ -77,14 +77,14 @@ Lees ook dit artikel over [business intelligence in de installatiebranche](https
 
 *Detail van projectwaardering: hoe zwaar weer de marge beïnvloedt.*
 
-## Resultaten: hogere winst en efficiëntie
+<h2 id="resultaten">Resultaten: hogere winst en efficiëntie</h2>
 
 - In de eerste drie maanden na livegang daalde onvoorziene extra kosten met 15 %.
 - De gemiddelde projectmarge steeg met 12 % door optimalisatie van middelen.
 - De efficiency nam toe doordat teams snel herverdeeld konden worden.
 - Snellere besluitvorming door rapportages met één klik te delen.
 
-## Conclusie
+<h2 id="conclusie">Conclusie</h2>
 
 Deze case study toont aan dat installatiebedrijven, zelfs in zwaar weer, hun marge kunnen verbeteren door direct financieel inzicht. Wil jij ook zekerheid over je rendement?
 
