@@ -371,7 +371,8 @@ h3 {
     padding: 32px;
 }
 
-.step-number {
+.step-number,
+.step-icon {
     width: 56px;
     height: 56px;
     background: var(--blue);
@@ -383,6 +384,10 @@ h3 {
     justify-content: center;
     margin: 0 auto 20px;
     border-radius: 50%;
+}
+
+.step-icon svg {
+    fill: white;
 }
 
 .step-card h3 {
@@ -527,12 +532,14 @@ footer {
 }
 
 .footer-col-logo h4 {
-    line-height: 1;
+    height: 17px;
+    display: flex;
+    align-items: center;
 }
 
 .footer-col-logo h4 img {
-    display: inline-block;
-    vertical-align: middle;
+    height: 17px;
+    width: auto;
 }
 
 .footer-col p,
