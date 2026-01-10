@@ -5,6 +5,19 @@ showContactPopup: true
 title: "Stop met terugkijken, Begin met vooruitkijken! Betere besluiten met voorspellen"
 description: "Met voorspellen maak je vandaag nog het verschil: verhoog je winst, verlaag risico's en optimaliseer je capaciteit door écht vooruitkijken in Power BI."
 featuredImage: "/assets/images/2025/06/8.-Portefeuille-management.png"
+category: "ai-technologie"
+ctaTitle: "Wil je voorspellend gaan sturen?"
+ctaText: "Ontdek hoe Notifica forecasting en scenario-analyse integreert in jouw Power BI dashboards. Binnen een week concrete resultaten."
+relatedBlogs:
+  - url: "/inspiratie/blogs/ai-dashboards-voordelen/"
+    title: "AI dashboards: Ontdek 7 gigantische voordelen"
+    description: "Ontdek hoe AI-gestuurde dashboards jouw installatiebedrijf kunnen transformeren."
+  - url: "/inspiratie/blogs/winstoptimalisatie-installatiebedrijven/"
+    title: "Winstoptimalisatie: 5 Kengetallen die het Verschil Maken"
+    description: "Ontdek hoe je met vijf essentiële kengetallen je winstgevendheid verbetert."
+  - url: "/inspiratie/blogs/grip-op-ohw-5-stappen/"
+    title: "Eenvoudig grip op OHW: 5 krachtige stappen"
+    description: "Ontdek hoe je met realtime inzicht in OHW betere beslissingen neemt."
 ---
 
 ## Stop met terugkijken, Begin met vooruitkijken! Betere besluiten met voorspellen
@@ -18,7 +31,7 @@ Met **voorspellen** maak je vandaag nog het verschil: verhoog je winst, verlaag 
 - [Resultaten](#resultaten)
 - [Start Vandaag](#start)
 
-## Waarom voorspellen in Power BI jouw spel verandert {% raw %}{#{% endraw %}waarom}
+<h2 id="waarom">Waarom voorspellen in Power BI jouw spel verandert</h2>
 
 In een wereld waar elke seconde telt, is vooruitkijken de sleutel. **Forecasting** transformeert je data tot een krachtig stuurinstrument waarmee je elke dag de koers bijstelt in plaats van achter je wagen te hollen. Door een proactieve blik combineer je historische inzichten met nieuwe kansen en neem je sneller beslissingen voor een betere toekomst.
 
@@ -35,7 +48,7 @@ Dankzij deze slimme combinatie van data en AI creëer je een vliegwiel van verbe
 
 *Portefeuille-management: overzicht van toekomstige projecten in de komende maanden*
 
-## De kracht van meervoudige toekomsten {% raw %}{#{% endraw %}kracht}
+<h2 id="kracht">De kracht van meervoudige toekomsten</h2>
 
 Traditionele dashboards laten je alleen achterom kijken. Met meervoudige perspectieven in Microsofts software ontwijk je verrassingen én benut je kansen optimaal. Gebruik "wat-als"-scenario's om alle wendbare paden te schetsen en sneller keuzes te maken voor morgen.
 
@@ -48,7 +61,7 @@ Deze flexibiliteit stelt je in staat om snel te schakelen wanneer de markt veran
 
 > "Dankzij deze manier van werken hebben we piekmomenten niet alleen overleefd, maar actief uitgebuit." – *Projectmanager bij onze klant*
 
-## Praktijkcase: Notifica's geïntegreerde scenario-model {% raw %}{#{% endraw %}praktijk}
+<h2 id="praktijk">Praktijkcase: Notifica's geïntegreerde scenario-model</h2>
 
 Onze techniek voor **voorspellen** integreert probleemloos met elk ERP-systeem. Binnen enkele minuten zie je realtime inzichten en kun je moeiteloos vooruitblikken:
 
@@ -59,7 +72,7 @@ Onze techniek voor **voorspellen** integreert probleemloos met elk ERP-systeem. 
 
 **De implementatie is zo gestroomlijnd dat je binnen een week concrete resultaten ziet en tastbare verbeteringen doorvoert in je dagelijkse operatie.**
 
-## Resultaten die je direct voelt {% raw %}{#{% endraw %}resultaten}
+<h2 id="resultaten">Resultaten die je direct voelt</h2>
 
 Klanten die statische rapporten achter zich lieten en overstapten op onze geavanceerde methodiek rapporteren:
 
@@ -68,7 +81,7 @@ Klanten die statische rapporten achter zich lieten en overstapten op onze geavan
 - **100% realtime inzicht** – één betrouwbare bron van waarheid, altijd up-to-date, voor een betere toekomst
 - **Snellere besluitvorming:** duidelijke data geeft direct vertrouwen bij stakeholders, met kortere cyclus van analyse tot actie
 
-## Start vandaag nog met onstuitbaar proactief sturen {% raw %}{#{% endraw %}start}
+<h2 id="start">Start vandaag nog met onstuitbaar proactief sturen</h2>
 
 Klaar om definitief afscheid te nemen van brandjes blussen? Bekijk onze videoguides en ontdek hoe eenvoudig dit proces in Power BI is:
 

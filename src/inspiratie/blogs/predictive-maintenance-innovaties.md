@@ -5,6 +5,19 @@ showContactPopup: true
 title: "Predictive maintenance: 5 krachtige toepassingen van data als strategisch middel"
 description: "Hoe IoT-integratie, realtime data-analyse en asset management strategieën storingen voorkomen en operationele kosten verlagen."
 featuredImage: "/assets/images/2025/06/3.-HR-Urenrapportage.png"
+category: "ai-technologie"
+ctaTitle: "Klaar voor predictive maintenance?"
+ctaText: "Ontdek hoe Notifica jouw onderhoudsdata omzet in voorspellende inzichten. Voorkom storingen en verlaag operationele kosten."
+relatedBlogs:
+  - url: "/inspiratie/blogs/ai-dashboards-voordelen/"
+    title: "AI dashboards: Ontdek 7 gigantische voordelen"
+    description: "Hoe AI-gestuurde dashboards jouw bedrijf transformeren."
+  - url: "/inspiratie/blogs/ai-servicedesk-werkbondata-installateurs/"
+    title: "AI in de Servicedesk"
+    description: "Slimmer werken met werkbondata en AI."
+  - url: "/inspiratie/blogs/betere-besluiten-voorspellen/"
+    title: "Betere besluiten met voorspellen"
+    description: "Stop met terugkijken, begin met vooruitkijken."
 ---
 
 

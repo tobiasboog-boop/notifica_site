@@ -5,6 +5,19 @@ showContactPopup: true
 title: "Dashboards voor installateurs: 24 essentiële KPI's in één overzicht"
 description: "Met een KPI's dashboard in Power BI krijgt jouw installatiebedrijf in één oogopslag realtime inzicht in alle cruciale KPI's. In deze gids vind je 24 essentiële KPI's, verdeeld over zes thema's, én praktische tips om jouw Power BI-dashboard optimaal in te richten."
 featuredImage: "/assets/images/2025/06/Schermafbeelding-2025-06-03-061935.png"
+category: "kpis-dashboards"
+ctaTitle: "Wil je deze KPI's in jouw dashboard?"
+ctaText: "Ontdek hoe Notifica binnen 1 dag een compleet KPI-dashboard voor jouw installatiebedrijf live zet. Met alle 24 KPI's uit dit artikel, afgestemd op jouw ERP-systeem."
+relatedBlogs:
+  - url: "/inspiratie/blogs/winstoptimalisatie-installatiebedrijven/"
+    title: "Winstoptimalisatie: 5 Kengetallen die het Verschil Maken"
+    description: "Ontdek hoe je met vijf essentiële kengetallen de winstgevendheid van je installatiebedrijf kunt voorspellen en verbeteren."
+  - url: "/inspiratie/blogs/stuurinformatie-bespaar-12-uur/"
+    title: "Stuurinformatie: bespaar 12 uur per week met Power BI"
+    description: "Ontdek hoe je met gestructureerde stuurinformatie tot 12 uur per week bespaart op rapportages."
+  - url: "/inspiratie/blogs/grip-op-ohw-5-stappen/"
+    title: "Eenvoudig grip op OHW: 5 krachtige stappen"
+    description: "Ontdek hoe je met Notifica's stappenplan realtime inzicht krijgt in de stand van het OHW."
 ---
 
 ## Dashboards voor installateurs: 24 essentiële KPI's in één overzicht
@@ -30,7 +43,7 @@ Hieronder vind je de 24 KPI's die wij adviseren voor installatiebedrijven, verde
 - [6. Sales](#sales)
 - [Aan de slag](#aan-de-slag)
 
-## 1. KPI's dashboard service & onderhoud – uitvoering {% raw %}{#{% endraw %}service-uitvoering}
+<h2 id="service-uitvoering">1. KPI's dashboard service & onderhoud – uitvoering</h2>
 
 Efficiëntie en kwaliteit in het veld liggen hier centraal. Deze KPI's meten hoe soepel storingen worden opgepakt en opgelost, cruciaal voor klanttevredenheid én kostenbeheersing. Zorg dat deze KPI's prominent in je dashboard zichtbaar zijn, zodat monteurs en planners direct weten welke storingen prioriteit hebben.
 
@@ -39,7 +52,7 @@ Efficiëntie en kwaliteit in het veld liggen hier centraal. Deze KPI's meten hoe
 - **Storingsgraad:** Aantal storingen per installatie of per 1.000 draaiuren. Helpt betrouwbaarheid te monitoren en voorraden te optimaliseren.
 - **Hersteltijd (MTTR):** Gemiddelde tijd om een storing definitief op te lossen. Een kortere MTTR beperkt stilstand en planningsafwijkingen.
 
-## 2. KPI's dashboard service & onderhoud – planning & rendement {% raw %}{#{% endraw %}planning-rendement}
+<h2 id="planning-rendement">2. KPI's dashboard service & onderhoud – planning & rendement</h2>
 
 Richt zich op werkvoorraad en marge. Deze KPI's helpen je voorkomen dat werkbonnen zich opstapelen en kosten onnodig oplopen. Zorg dat je real-time inzicht hebt in de financiële status per werkorder.
 
@@ -47,7 +60,7 @@ Richt zich op werkvoorraad en marge. Deze KPI's helpen je voorkomen dat werkbonn
 - **Rendement onderhoudscontracten:** Opbrengst per contractcategorie versus gemaakte kosten. Brengt verliesgevende contracten snel aan het licht.
 - **Gepland onderhoud (werkbonnen per dag):** Dagelijkse werkdruk: signaleert over- of onderbezetting, met risico op burn-out of omzetderving.
 
-## 3. KPI's dashboard finance & onderhanden werk (OHW) {% raw %}{#{% endraw %}finance-ohw}
+<h2 id="finance-ohw">3. KPI's dashboard finance & onderhanden werk (OHW)</h2>
 
 Financiële stuurinformatie gecombineerd met real-time projectstatus. Dit onderdeel van je dashboard is onmisbaar om kasstromen, marges en projectvoortgang nauwlettend te bewaken.
 
@@ -56,7 +69,7 @@ Financiële stuurinformatie gecombineerd met real-time projectstatus. Dit onderd
 - **Onderhanden werk (OHW):** Waarde van nog lopende projecten op voortgangsfacturatie. Cruciaal voor marge- en cashflow-prognoses én projectbewaking.
 - **Kostprijs per uur:** Totale (directe + indirecte) kosten gedeeld door gemaakte uren; basis voor realistische uurtarieven.
 
-## 4. KPI's dashboard HR & operations {% raw %}{#{% endraw %}hr-operations}
+<h2 id="hr-operations">4. KPI's dashboard HR & operations</h2>
 
 Het geweten van je organisatie, met focus op capaciteit, skills en kosten. Door deze KPI's in je dashboard op te nemen, houd je de menskant scherp en voorkom je onvoorziene kosten door personeelsproblemen.
 
@@ -65,7 +78,7 @@ Het geweten van je organisatie, met focus op capaciteit, skills en kosten. Door 
 - **Opleidingsuren %:** Aandeel uren besteed aan training en certificering; investering in kennisbehoud.
 - **Verloop (FTE):** Jaarlijks vertrek in verhouding tot totaal; drukt wervingskosten en kennisverlies uit.
 
-## 5. KPI's dashboard projecten {% raw %}{#{% endraw %}projecten}
+<h2 id="projecten">5. KPI's dashboard projecten</h2>
 
 Voor bedrijven met grote, langlopende projecten zijn deze KPI's onmisbaar om tijdig bij te sturen en budgetoverschrijdingen tijdig te signaleren. Je dashboard geeft direct zicht op de voortgang van elk project.
 
@@ -73,7 +86,7 @@ Voor bedrijven met grote, langlopende projecten zijn deze KPI's onmisbaar om tij
 - **Toegevoegde waarde per uur:** Gemiddelde marge per besteed uur; benchmark vaak € 30–€ 50.
 - **Portefeuille- & resource-management:** Matcht projectpijplijn met personeelsbeschikbaarheid om toekomstige capaciteit te plannen.
 
-## 6. KPI's dashboard sales {% raw %}{#{% endraw %}sales}
+<h2 id="sales">6. KPI's dashboard sales</h2>
 
 Richtinggevende KPI's om de commerciële funnel optimaal te benutten en groeikansen snel te identificeren. Met deze KPI's ziet het salesteam direct welke leads en offertes de meeste aandacht vragen.
 
@@ -81,7 +94,7 @@ Richtinggevende KPI's om de commerciële funnel optimaal te benutten en groeikan
 - **Orderintake (€):** Totaal binnengehaalde opdrachten in een periode; toetsing aan omzetforecast.
 - **Aantal leads:** Nieuwe potentiële klanten; vroeg-waarschuwingssysteem voor aanstaande omzet.
 
-## Aan de slag: focus, diepgang en automatisering {% raw %}{#{% endraw %}aan-de-slag}
+<h2 id="aan-de-slag">Aan de slag: focus, diepgang en automatisering</h2>
 
 1. **Beperk tot drie kern-KPI's per thema:** Houd je dashboard overzichtelijk en relevant. Een te vol dashboard leidt tot informatie-overload.
 2. **Diepgang met drill-through:** Koppel elke KPI-kaart in je dashboard aan detailrapportages en onderliggende dataflows in Power BI.

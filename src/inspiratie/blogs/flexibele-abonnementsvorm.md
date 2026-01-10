@@ -5,6 +5,19 @@ showContactPopup: true
 title: "5 onmiskenbare voordelen van ons alles-in-één abonnement"
 description: "In de installatiebranche zijn actuele inzichten cruciaal. Ontdek de voordelen van Notifica's alles-in-één Power BI abonnement: beheer, updates en support in één pakket."
 featuredImage: "/assets/images/2025/06/5.-SO-Planning-onderhoud.png"
+category: "implementatie"
+ctaTitle: "Zorgeloos starten met Power BI?"
+ctaText: "Met ons alles-in-één abonnement krijg je beheer, updates en support in één pakket. Maandelijks opzegbaar, geen verborgen kosten."
+relatedBlogs:
+  - url: "/inspiratie/blogs/60-tevreden-klanten/"
+    title: "Meer dan 60 tevreden klanten"
+    description: "Ontdek waarom meer dan 60 installatiebedrijven voor Notifica kiezen."
+  - url: "/inspiratie/blogs/uitbesteden-rapportage-mkb/"
+    title: "7 Redenen Waarom Uitbesteden Slim Is"
+    description: "Ontdek waarom uitbesteden van rapportages een slimme keuze is."
+  - url: "/inspiratie/blogs/direct-inzicht-betere-cijfers/"
+    title: "Van rommelige cijfers naar helder inzicht"
+    description: "Notifica's aanpak voor datagedreven werken."
 ---
 
 ## 5 onmisbare voordelen van ons alles-in-één abonnement

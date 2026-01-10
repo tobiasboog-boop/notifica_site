@@ -5,6 +5,19 @@ showContactPopup: true
 title: "AI in de Servicedesk: Hoe Installatiebedrijven Slimmer Werken met hun Werkbondata"
 description: "De serviceafdeling is het kloppend hart van elk installatiebedrijf. Dagelijks stromen werkbonnen binnen voor storingen, onderhoud en reparaties. Achter elke werkbon schuilt een schat aan informatie: wat was het probleem, hoe is het opgelost, welke materialen waren nodig, hoeveel tijd kostte het?"
 featuredImage: "/assets/images/2025/04/Schermafbeelding-2025-04-18-124550.png"
+category: "ai-technologie"
+ctaTitle: "AI inzetten voor jouw servicedesk?"
+ctaText: "Ontdek hoe Notifica AI toepast op jouw werkbondata voor slimmere contractclassificatie en snellere diagnoses."
+relatedBlogs:
+  - url: "/inspiratie/blogs/ai-dashboards-voordelen/"
+    title: "AI dashboards: Ontdek 7 gigantische voordelen"
+    description: "Ontdek hoe AI-gestuurde dashboards jouw installatiebedrijf kunnen transformeren."
+  - url: "/inspiratie/blogs/predictive-maintenance-innovaties/"
+    title: "Predictive maintenance: 5 krachtige toepassingen"
+    description: "Ontdek hoe predictive maintenance met data je onderhoudsprocessen optimaliseert."
+  - url: "/inspiratie/blogs/chatgpt-vs-copilot/"
+    title: "Copilot vs ChatGPT: de ultieme AI keuzewijzer"
+    description: "Welke AI-tool past het beste bij jouw installatiebedrijf?"
 ---
 
 ## AI in de Servicedesk: Hoe Installatiebedrijven Slimmer Werken met hun Werkbondata
@@ -22,13 +35,13 @@ Bij Notifica werken we dagelijks met de **werkbondata** van installatiebedrijven
 - [Waarde van data](#waarde-data)
 - [Aan de slag](#stappen)
 
-## Waarom AI juist nu relevant is voor de servicedesk {% raw %}{#{% endraw %}waarom-nu}
+<h2 id="waarom-nu">Waarom AI juist nu relevant is voor de servicedesk</h2>
 
 Lange tijd was kunstmatige intelligentie vooral iets voor grote techbedrijven. Dat is veranderd. De komst van toegankelijke AI-modellen maakt het mogelijk om ook voor middelgrote installatiebedrijven praktische toepassingen te bouwen. Niet als vervanging van medewerkers, maar als ondersteuning. AI neemt het saaie, repetitieve werk over zodat medewerkers zich kunnen richten op waar ze goed in zijn: klantcontact, complexe diagnoses en vakmanschap.
 
 De timing is perfect. Installatiebedrijven hebben jarenlang data verzameld in hun ERP-systemen. Die historische informatie is goud waard, mits je er iets mee doet. AI maakt het mogelijk om patronen te herkennen in duizenden werkbonnen en die kennis direct toe te passen bij nieuwe storingen. Volgens onderzoek van [McKinsey & Company](https://www.mckinsey.com/capabilities/operations/our-insights/the-digital-led-revival-of-construction) verhoogt digitale transformatie de efficiëntie in de sector aanzienlijk.
 
-## Use case 1: Automatische contract-check bij werkbonnen {% raw %}{#{% endraw %}use-case-1}
+<h2 id="use-case-1">Use case 1: Automatische contract-check bij werkbonnen</h2>
 
 Een veelvoorkomend probleem bij servicebedrijven is de vraag: valt deze werkbon binnen of buiten het servicecontract? Bij elke afgeronde werkbon moet iemand bepalen of de werkzaamheden gedekt zijn door het onderhoudscontract of apart gefactureerd moeten worden. Dit lijkt simpel, maar de praktijk is weerbarstig.
 
@@ -48,7 +61,7 @@ Bij hoge betrouwbaarheid gaat de werkbon automatisch door. Bij twijfelgevallen k
 
 *Demonstratie: Hoe AI automatisch contracten classificeert op basis van historische gegevens*
 
-## Use case 2: Slimme werkbonverrijking met historische inzichten {% raw %}{#{% endraw %}use-case-2}
+<h2 id="use-case-2">Use case 2: Slimme werkbonverrijking met historische inzichten</h2>
 
 Een ander vraagstuk speelt bij de intake van storingen. Wanneer een melding binnenkomt, moet iemand inschatten wat het probleem kan zijn, welke onderdelen mogelijk nodig zijn en hoeveel tijd de reparatie zal kosten. Die inschatting is nu grotendeels afhankelijk van ervaring. Een senior monteur weet uit zijn hoofd dat een bepaalde storing bij een specifiek merk meestal veroorzaakt wordt door een defect onderdeel. Maar wat als die monteur er niet is? Of met pensioen gaat?
 
@@ -68,19 +81,19 @@ Dit advies verschijnt direct op het scherm van de planner of in de app van de mo
 
 *Video: De kracht van RAG-technologie voor het ontsluiten van werkbondata*
 
-## De waarde van bestaande data {% raw %}{#{% endraw %}waarde-data}
+<h2 id="waarde-data">De waarde van bestaande data</h2>
 
 Wat beide use cases gemeen hebben: ze bouwen voort op data die installatiebedrijven al jarenlang verzamelen. Elke werkbon die ooit is aangemaakt, elke oplossing die is genoteerd, elk materiaal dat is geboekt. Die informatie heeft altijd al waarde gehad voor rapportages. Nu kan het ook direct operationele processen verbeteren.
 
 Het Syntess Semantisch Model dat wij bij Notifica beheren bevat meer dan duizend measures en honderden tabellen. Werkbonnen, werkbonparagrafen, oplossingen, opvolgingen, kosten, installaties. Allemaal met elkaar verbonden via relaties die we precies kennen. Dat maakt het mogelijk om AI-toepassingen te bouwen die niet in een vacuüm opereren, maar direct aangesloten zijn op de actuele [Microsoft AI-architectuur](https://learn.microsoft.com/en-us/azure/ai-services/).
 
-## Geen science fiction, maar praktische stappen {% raw %}{#{% endraw %}stappen}
+<h2 id="stappen">Geen science fiction, maar praktische stappen</h2>
 
 AI in de servicedesk hoeft geen groot IT-project te zijn. We adviseren een gefaseerde aanpak. Begin met een specifiek probleem waar nu veel handmatig werk in zit. Analyseer welke data beschikbaar is. Bouw een proof of concept op een beperkte dataset. Valideer met de mensen die het werk nu doen. En schaal pas op wanneer de waarde bewezen is.
 
 De technologie is er. De data is er. Wat rest is de stap zetten. Installatiebedrijven die nu beginnen met AI-toepassingen in hun serviceproces bouwen een voorsprong op die lastig in te halen is. Niet omdat de technologie zo complex is, maar omdat het leereffect cumulatief werkt. Hoe meer data het systeem verwerkt, hoe beter het wordt.
 
-## Aan de slag {% raw %}{#{% endraw %}conclusie}
+<h2 id="conclusie">Aan de slag</h2>
 
 De servicedesk van de toekomst is geen robot die monteurs vervangt. Het is een slimme assistent die ervoor zorgt dat de juiste kennis op het juiste moment beschikbaar is. Die het saaie werk overneemt zodat mensen kunnen doen waar ze goed in zijn. Die voorkomt dat waardevolle bedrijfskennis verloren gaat wanneer ervaren medewerkers vertrekken.
 

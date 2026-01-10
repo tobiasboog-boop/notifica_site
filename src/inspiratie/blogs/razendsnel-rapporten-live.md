@@ -5,6 +5,19 @@ showContactPopup: true
 title: "Razendsnel live: binnen 2 weken met Power BI – eenvoudig, snel, flexibel & betaalbaar"
 description: "Ontdek hoe je binnen twee weken live gaat met Power BI dashboards, zonder opstartkosten en met minimale IT-betrokkenheid."
 featuredImage: "/assets/images/2025/06/4.-Projectbeheer.png"
+category: "implementatie"
+ctaTitle: "Start binnen 2 weken met Power BI"
+ctaText: "Geen opstartkosten, slechts 30 minuten IT-betrokkenheid. Binnen 2 weken live met professionele dashboards voor jouw installatiebedrijf."
+relatedBlogs:
+  - url: "/inspiratie/blogs/mkb-implementatiegids/"
+    title: "MKB-implementatiegids: 6 essentiële stappen"
+    description: "Complete gids voor het implementeren van BI in het MKB."
+  - url: "/inspiratie/blogs/direct-inzicht-betere-cijfers/"
+    title: "Van rommelige cijfers naar helder inzicht"
+    description: "Notifica's aanpak voor datagedreven werken."
+  - url: "/inspiratie/blogs/4-power-bi-stappen-installateurs/"
+    title: "Datagedreven dashboards installatiesector"
+    description: "Meer grip met Power BI in de installatiebranche."
 ---
 
 

@@ -5,6 +5,19 @@ showContactPopup: true
 title: "Maandrapportage: 5 onmisbare tips voor tijdbesparing en automatisering"
 description: "Leer hoe je maandrapportages automatiseert en uren tijd bespaart met Power BI dashboards."
 featuredImage: "/assets/images/2025/06/2.-Pojectwaardering.png"
+category: "finance-rapportage"
+ctaTitle: "Van 72 uur naar 15 minuten rapporteren?"
+ctaText: "Met Notifica's geautomatiseerde Power BI-oplossing reduceer je rapportagetijd met 99%. Genereer maandrapportages met één druk op de knop."
+relatedBlogs:
+  - url: "/inspiratie/blogs/verbeter-datakwaliteit-erp/"
+    title: "5 tips voor verbeteren van datakwaliteit"
+    description: "Verbeter de datakwaliteit in je ERP-systeem."
+  - url: "/inspiratie/blogs/stuurinformatie-bespaar-12-uur/"
+    title: "Stuurinformatie: bespaar 12 uur per week"
+    description: "Bespaar tijd op rapportages met goede stuurinformatie."
+  - url: "/inspiratie/blogs/grip-op-ohw-5-stappen/"
+    title: "Eenvoudig grip op OHW: 5 krachtige stappen"
+    description: "Notifica's stappenplan voor realtime OHW-inzicht."
 ---
 
 

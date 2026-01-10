@@ -5,6 +5,19 @@ showContactPopup: true
 title: "5 Tips voor Onderhanden Werk: Efficiënt je cashflow en projecten besturen"
 description: "Leer hoe onderhanden werk (OHW) direct inzicht geeft in verborgen waarde binnen projecten voor betere cashflow en projectsturing."
 featuredImage: "/assets/images/2025/06/2.-Pojectwaardering.png"
+category: "ohw-projecten"
+ctaTitle: "Klaar om je OHW te optimaliseren?"
+ctaText: "Ontdek hoe Notifica jouw onderhanden werk automatisch berekent en visualiseert. Binnen 1 dag realtime inzicht in projectwaardering en cashflow."
+relatedBlogs:
+  - url: "/inspiratie/blogs/grip-op-ohw-5-stappen/"
+    title: "Eenvoudig grip op OHW: 5 krachtige stappen"
+    description: "Notifica's stappenplan voor realtime OHW-inzicht."
+  - url: "/inspiratie/blogs/case-study-storm-overwinnen/"
+    title: "Storm overwinnen: financieel inzicht als reddingsboei"
+    description: "Hoe een installateur met dashboards een financiële storm overwon."
+  - url: "/inspiratie/blogs/versnel-maandrapportage/"
+    title: "Maandrapportage: 5 tips voor tijdbesparing"
+    description: "Automatiseer je maandrapportage en bespaar tijd."
 ---
 
 

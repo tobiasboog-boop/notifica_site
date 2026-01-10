@@ -5,6 +5,19 @@ showContactPopup: true
 title: "Vastlegging: 5 onmisbare tips voor verbeteren van de datakwaliteit van je bedrijfssoftware"
 description: "Ontdek hoe je de datakwaliteit in je ERP-systeem verbetert voor betrouwbare rapportages en betere beslissingen."
 featuredImage: "/assets/images/2025/06/3aa.-HR-Urenrapportage.png"
+category: "finance-rapportage"
+ctaTitle: "Hulp nodig bij datakwaliteit?"
+ctaText: "Notifica helpt je de datakwaliteit in je ERP te verbeteren voor betrouwbare rapportages. Ook bij migraties naar Acto, 4PS of BouwInfosys."
+relatedBlogs:
+  - url: "/inspiratie/blogs/versnel-maandrapportage/"
+    title: "Maandrapportage: 5 tips voor tijdbesparing"
+    description: "Automatiseer je maandrapportage en bespaar tijd."
+  - url: "/inspiratie/blogs/direct-inzicht-betere-cijfers/"
+    title: "Van rommelige cijfers naar helder inzicht"
+    description: "Notifica's aanpak voor datagedreven werken."
+  - url: "/inspiratie/blogs/mkb-implementatiegids/"
+    title: "MKB-implementatiegids: 6 essentiële stappen"
+    description: "Complete gids voor het implementeren van BI."
 ---
 
 

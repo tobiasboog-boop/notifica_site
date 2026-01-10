@@ -5,6 +5,19 @@ showContactPopup: true
 title: "Winstoptimalisatie voor Installatiebedrijven: 5 Kengetallen die het Verschil Maken"
 description: "Ontdek hoe je met vijf essentiële kengetallen de winstgevendheid van je installatiebedrijf kunt voorspellen en verbeteren."
 featuredImage: "/assets/images/2025/12/dashboard-kengetallen.png"
+category: "kpis-dashboards"
+ctaTitle: "Ontdek jouw winstpotentieel"
+ctaText: "Wil je weten welk resultaat haalbaar is voor jouw installatiebedrijf? Vraag een vrijblijvende bedrijfsanalyse aan en bereken samen met ons je winstpotentieel."
+relatedBlogs:
+  - url: "/inspiratie/blogs/24-essentiele-kpis-installateurs/"
+    title: "24 essentiële KPI's in één overzicht"
+    description: "Alle KPI's die je nodig hebt voor je installatiebedrijf."
+  - url: "/inspiratie/blogs/stuurinformatie-bespaar-12-uur/"
+    title: "Stuurinformatie: bespaar 12 uur per week"
+    description: "Bespaar tijd met goede stuurinformatie."
+  - url: "/inspiratie/blogs/betere-besluiten-voorspellen/"
+    title: "Betere besluiten met voorspellen"
+    description: "Stop met terugkijken, begin met vooruitkijken."
 ---
 
 # Winstoptimalisatie voor Installatiebedrijven: 5 Kengetallen die het Verschil Maken

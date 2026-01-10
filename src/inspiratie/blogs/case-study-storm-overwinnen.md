@@ -5,6 +5,19 @@ showContactPopup: true
 title: "Storm overwinnen: financieel inzicht als reddingsboei voor installateurs"
 description: "In deze case study laten we zien hoe Notifica installatiebedrijven helpt met diepgaand financieel inzicht, resulterend in hogere winst en efficiëntie."
 featuredImage: "/assets/images/2025/06/9.-Accountmanagement-Cashflow.png"
+category: "case-studies"
+ctaTitle: "Ook grip op je financiën in zwaar weer?"
+ctaText: "Ontdek hoe Notifica jouw installatiebedrijf helpt met realtime financieel inzicht, zelfs bij onverwachte omstandigheden."
+relatedBlogs:
+  - url: "/inspiratie/blogs/60-tevreden-klanten/"
+    title: "Meer dan 60 tevreden klanten"
+    description: "Ontdek hoe meer dan 60 installatiebedrijven succesvol zijn met onze dashboards."
+  - url: "/inspiratie/blogs/onderhanden-werk-projectsturing/"
+    title: "5 Tips voor Onderhanden Werk"
+    description: "Efficiënt je cashflow en projecten besturen met realtime inzichten."
+  - url: "/inspiratie/blogs/grip-op-ohw-5-stappen/"
+    title: "Eenvoudig grip op OHW: 5 krachtige stappen"
+    description: "Ontdek Notifica's stappenplan voor realtime OHW-inzicht."
 ---
 
 ## Case study: 5 onmisbare inzichten voor financieel inzicht, hogere winst en efficiëntie tijdens zwaar weer

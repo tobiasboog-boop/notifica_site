@@ -5,6 +5,19 @@ showContactPopup: true
 title: "MKB-implementatiegids: ontdek 6 essentiële stappen"
 description: "Een complete gids voor het MKB om Business Intelligence succesvol te implementeren met Power BI."
 featuredImage: "/assets/images/2025/06/Schermafbeelding-2025-06-03-061935.png"
+category: "implementatie"
+ctaTitle: "Klaar om BI te implementeren in jouw MKB?"
+ctaText: "Notifica begeleidt je door alle 6 stappen van BI-implementatie. Start binnen 2 weken met Power BI dashboards."
+relatedBlogs:
+  - url: "/inspiratie/blogs/direct-inzicht-betere-cijfers/"
+    title: "Van rommelige cijfers naar helder inzicht"
+    description: "Notifica's bewezen aanpak voor datagedreven werken."
+  - url: "/inspiratie/blogs/razendsnel-rapporten-live/"
+    title: "Razendsnel live: binnen 2 weken met Power BI"
+    description: "Ontdek hoe snel je live kunt gaan met dashboards."
+  - url: "/inspiratie/blogs/uitbesteden-rapportage-mkb/"
+    title: "7 Redenen Waarom Uitbesteden Slim Is"
+    description: "Ontdek de voordelen van het uitbesteden van rapportages."
 ---
 
 

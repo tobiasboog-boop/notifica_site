@@ -5,6 +5,19 @@ showContactPopup: true
 title: "Eenvoudig grip op OHW: Ontdek Notifica's 5 krachtige stappen"
 description: "Ontdek hoe je met Notifica's stappenplan realtime inzicht in de stand van het OHW en hoe dit zorgt voor betere winstneming en gezonde groei."
 featuredImage: "/assets/images/2025/06/2.-Pojectwaardering-1024x449.png"
+category: "ohw-projecten"
+ctaTitle: "Wil je ook realtime grip op je OHW?"
+ctaText: "Ontdek hoe Notifica binnen 1 dag jouw onderhanden werk inzichtelijk maakt. Geen handmatige exports meer, maar automatische OHW-rapportages in Power BI."
+relatedBlogs:
+  - url: "/inspiratie/blogs/onderhanden-werk-projectsturing/"
+    title: "5 Tips voor Onderhanden Werk"
+    description: "Efficiënt je cashflow en projecten besturen."
+  - url: "/inspiratie/blogs/versnel-maandrapportage/"
+    title: "Maandrapportage: 5 tips voor tijdbesparing"
+    description: "Automatiseer je maandrapportage en bespaar tijd."
+  - url: "/inspiratie/blogs/24-essentiele-kpis-installateurs/"
+    title: "24 essentiële KPI's in één overzicht"
+    description: "Alle KPI's die je nodig hebt voor je installatiebedrijf."
 ---
 
 ## Onderhanden werk met realtime inzicht: ultieme automatisering in 5 stappen

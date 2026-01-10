@@ -5,6 +5,19 @@ showContactPopup: true
 title: "Ontketen onmiddellijke controle: real-time Power BI-inzichten voor de installatiebranche"
 description: "Real-time inzichten geven je de controle over elk aspect van je installatieprojecten. Minimaliseer budgetoverschrijdingen en verhoog klanttevredenheid."
 featuredImage: "/assets/images/2025/04/Schermafbeelding-2025-04-24-145309.png"
+category: "power-bi-basics"
+ctaTitle: "Wil je realtime controle over je projecten?"
+ctaText: "Ontdek hoe Notifica live Power BI dashboards koppelt aan jouw ERP voor directe projectsturing en margezichtbaarheid."
+relatedBlogs:
+  - url: "/inspiratie/blogs/4-power-bi-stappen-installateurs/"
+    title: "Datagedreven dashboards installatiesector"
+    description: "Meer grip met Power BI in de installatiebranche."
+  - url: "/inspiratie/blogs/power-bi-vs-excel/"
+    title: "Power BI versus Excel: 5 onmisbare voordelen"
+    description: "Waarom Power BI de betere keuze is voor installateurs."
+  - url: "/inspiratie/blogs/razendsnel-rapporten-live/"
+    title: "Razendsnel live: binnen 2 weken met Power BI"
+    description: "Ontdek hoe snel je live kunt gaan met professionele dashboards."
 ---
 
 ## Real-time inzichten: 5 krachtige manieren voor controle in installatieprojecten

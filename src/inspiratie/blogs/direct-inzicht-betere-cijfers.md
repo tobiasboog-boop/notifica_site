@@ -5,6 +5,19 @@ showContactPopup: true
 title: "Van rommelige cijfers naar helder inzicht: Notifica's aanpak voor installateurs"
 description: "Direct inzicht verkrijgen en realtime sturen op prestaties is essentieel in de installatiebranche. Leer hoe je datagedreven beslissingen neemt."
 featuredImage: "/assets/images/2025/06/3.-HR-Urenrapportage.png"
+category: "implementatie"
+ctaTitle: "Van chaos naar helder inzicht?"
+ctaText: "Ontdek hoe Notifica jouw versnipperde data transformeert naar centrale dashboards. 30% minder tijd aan administratieve controle."
+relatedBlogs:
+  - url: "/inspiratie/blogs/mkb-implementatiegids/"
+    title: "MKB-implementatiegids: 6 essentiële stappen"
+    description: "Een complete gids voor het implementeren van BI in het MKB."
+  - url: "/inspiratie/blogs/flexibele-abonnementsvorm/"
+    title: "5 voordelen van ons alles-in-één abonnement"
+    description: "Ontdek de voordelen van Notifica's flexibele abonnementsvorm."
+  - url: "/inspiratie/blogs/razendsnel-rapporten-live/"
+    title: "Razendsnel live: binnen 2 weken met Power BI"
+    description: "Snel aan de slag met professionele Power BI dashboards."
 ---
 
 ## Van rommelige cijfers naar helder inzicht: Notifica's aanpak voor installateurs

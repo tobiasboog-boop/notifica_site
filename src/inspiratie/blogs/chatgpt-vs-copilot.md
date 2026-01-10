@@ -5,6 +5,19 @@ showContactPopup: true
 title: "Copilot vs ChatGPT: de ultieme Power BI AI keuzewijzer voor installateurs"
 description: "Power BI Copilot vs ChatGPT: ontdek welke AI-tool het beste past bij jouw data-analyse behoeften als installateur."
 featuredImage: "/assets/images/2025/06/Schermafbeelding-2025-06-05-114828.png"
+category: "ai-technologie"
+ctaTitle: "Hulp nodig bij je AI-keuze?"
+ctaText: "Notifica helpt je de juiste AI-strategie te bepalen voor jouw installatiebedrijf. Van Copilot tot ChatGPT integraties."
+relatedBlogs:
+  - url: "/inspiratie/blogs/ai-dashboards-voordelen/"
+    title: "AI dashboards: Ontdek 7 gigantische voordelen"
+    description: "Ontdek hoe AI-gestuurde dashboards jouw bedrijf kunnen transformeren."
+  - url: "/inspiratie/blogs/ai-servicedesk-werkbondata-installateurs/"
+    title: "AI in de Servicedesk"
+    description: "Hoe installatiebedrijven slimmer werken met werkbondata en AI."
+  - url: "/inspiratie/blogs/betere-besluiten-voorspellen/"
+    title: "Betere besluiten met voorspellen"
+    description: "Stop met terugkijken, begin met vooruitkijken in Power BI."
 ---
 
 ## Power BI Copilot vs ChatGPT: de ultieme keuzewijzer voor installateurs

@@ -5,6 +5,19 @@ showContactPopup: true
 title: "Meer dan 60 tevreden klanten sturen hun succes met datagedreven Power BI dashboards"
 description: "Bij Notifica hebben meer dan 60 tevreden klanten dankzij onze datagedreven Power BI dashboards razendsnel succes geboekt. Deze tevreden klanten ervaren dagelijks verbeterde inzichten en efficiëntere processen."
 featuredImage: "/assets/images/2025/06/Forecast.png"
+category: "case-studies"
+ctaTitle: "Wil jij ook tot de tevreden klanten behoren?"
+ctaText: "Plan een vrijblijvende demo en ontdek waarom meer dan 60 installatiebedrijven voor Notifica kiezen."
+relatedBlogs:
+  - url: "/inspiratie/blogs/case-study-storm-overwinnen/"
+    title: "Storm overwinnen: financieel inzicht als reddingsboei"
+    description: "Lees hoe een installateur met Power BI dashboards een financiële storm overwon."
+  - url: "/inspiratie/blogs/flexibele-abonnementsvorm/"
+    title: "5 onmisbare voordelen van ons alles-in-één abonnement"
+    description: "Ontdek de voordelen van Notifica's flexibele abonnementsvorm voor installatiebedrijven."
+  - url: "/inspiratie/blogs/direct-inzicht-betere-cijfers/"
+    title: "Van rommelige cijfers naar helder inzicht"
+    description: "Ontdek Notifica's bewezen aanpak voor datagedreven werken in de installatiebranche."
 ---
 
 ## Meer dan 60 tevreden klanten sturen hun succes met datagedreven Power BI dashboards
@@ -17,7 +30,7 @@ Bij Notifica hebben meer dan 60 **tevreden klanten** dankzij onze datagedreven P
 - [Dashboard Overzicht](#standaarddashboards)
 - [Aan de slag](#conclusie)
 
-## Klantreacties en succesverhalen uit de praktijk {% raw %}{#{% endraw %}klantreacties}
+<h2 id="klantreacties">Klantreacties en succesverhalen uit de praktijk</h2>
 
 De feedback van onze **tevreden klanten** uit de bouw- en installatiesector laat zien hoe datagedreven sturing in de praktijk werkt. Hieronder delen vijf organisaties hun ervaringen:
 
@@ -41,7 +54,7 @@ De feedback van onze **tevreden klanten** uit de bouw- en installatiesector laat
 >
 > **— Vincent Kouer, Verkade Klimaat**
 
-## Demo en proefperiode: ervaar het zelf! {% raw %}{#{% endraw %}demo-proefperiode}
+<h2 id="demo-proefperiode">Demo en proefperiode: ervaar het zelf!</h2>
 
 Wil jij ook tot de **tevreden klanten** behoren? We nodigen je graag uit voor een live demonstratie van onze Power BI-dashboards, gevuld met representatieve demodata. Zo krijg je direct een scherp beeld van alle functionaliteiten en de gebruiksvriendelijkheid van het systeem.
 
@@ -55,7 +68,7 @@ Met één korte afspraak en 30 minuten van de IT-afdeling zorgen wij voor de vol
 
 *Bekijk in deze video hoe onze oplossingen werken bij één van onze tevreden klanten*
 
-## Onze standaarddashboards voor de installatiesector {% raw %}{#{% endraw %}standaarddashboards}
+<h2 id="standaarddashboards">Onze standaarddashboards voor de installatiesector</h2>
 
 Onze kant-en-klare dashboards bieden heldere inzichten in je belangrijkste processen. Sluit je aan bij andere **tevreden klanten** en profiteer van:
 
@@ -73,7 +86,7 @@ Onze kant-en-klare dashboards bieden heldere inzichten in je belangrijkste proce
 
 *Dashboard voor projectwaardering, favoriet onder onze tevreden klanten*
 
-## Conclusie {% raw %}{#{% endraw %}conclusie}
+<h2 id="conclusie">Conclusie</h2>
 
 Onze oplossingen helpen **tevreden klanten** groeien door data centraal te stellen. Met meer dan 60 tevreden klanten en een persoonlijke aanpak, staan we klaar om voor jouw bedrijf een tastbaar verschil te maken.
 
