@@ -400,6 +400,49 @@ h3 {
     font-size: 15px;
 }
 
+/* Pain Points Grid - Card style */
+.pain-points-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.pain-point-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px 24px;
+    text-align: center;
+}
+
+.pain-point-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(54, 54, 162, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.pain-point-icon svg {
+    color: var(--blue);
+}
+
+.pain-point-card h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+    white-space: nowrap;
+}
+
+.pain-point-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 15px;
+}
+
 /* Testimonials Grid - Always 3 columns on desktop */
 .testimonials-grid {
     display: grid;
@@ -532,13 +575,14 @@ footer {
 }
 
 .footer-col-logo h4 {
-    height: 17px;
+    height: 24px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    margin-bottom: 16px;
 }
 
 .footer-col-logo h4 img {
-    height: 17px;
+    height: 24px;
     width: auto;
 }
 
@@ -589,6 +633,7 @@ footer {
     .stats { padding: 56px 0; }
     .footer-grid { grid-template-columns: 1fr; gap: 32px; }
     .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    .pain-points-grid { grid-template-columns: 1fr; }
 }
 
 /* FAQ Tiles */

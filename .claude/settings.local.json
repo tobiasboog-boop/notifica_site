@@ -35,7 +35,12 @@
       "Bash(gh run list:*)",
       "Bash(if ! grep -q \"^featuredImage:\" \"$file\")",
       "Bash(then)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(python:*)",
+      "Bash(xcopy:*)",
+      "Bash(.venvScriptspython.exe -m streamlit run app.py)",
+      "Bash(git init:*)",
+      "Bash(gh repo create:*)"
     ]
   }
 }
