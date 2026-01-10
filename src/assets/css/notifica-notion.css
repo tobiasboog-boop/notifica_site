@@ -522,6 +522,11 @@ footer {
     color: var(--text);
 }
 
+.footer-col-logo img {
+    display: block;
+    margin-bottom: 4px;
+}
+
 .footer-col p,
 .footer-col a {
     font-size: 14px;
