@@ -6,8 +6,8 @@ title: "Storm overwinnen: financieel inzicht als reddingsboei voor installateurs
 description: "In deze case study laten we zien hoe Notifica installatiebedrijven helpt met diepgaand financieel inzicht, resulterend in hogere winst en efficiëntie."
 featuredImage: "/assets/images/2025/06/9.-Accountmanagement-Cashflow.png"
 category: "case-studies"
-ctaTitle: "Ook grip op je financiën in zwaar weer?"
-ctaText: "Ontdek hoe Notifica jouw installatiebedrijf helpt met realtime financieel inzicht, zelfs bij onverwachte omstandigheden."
+ctaTitle: "Ook grip op je financiën?"
+ctaText: "Ontdek hoe Notifica jouw installatiebedrijf helpt met realtime financieel inzicht."
 relatedBlogs:
   - url: "/inspiratie/blogs/60-tevreden-klanten/"
     title: "Meer dan 60 tevreden klanten"

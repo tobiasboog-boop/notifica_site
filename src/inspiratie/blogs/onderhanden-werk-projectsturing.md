@@ -7,7 +7,7 @@ description: "Leer hoe onderhanden werk (OHW) direct inzicht geeft in verborgen 
 featuredImage: "/assets/images/2025/06/2.-Pojectwaardering.png"
 category: "ohw-projecten"
 ctaTitle: "Klaar om je OHW te optimaliseren?"
-ctaText: "Ontdek hoe Notifica jouw onderhanden werk automatisch berekent en visualiseert. Binnen 1 dag realtime inzicht in projectwaardering en cashflow."
+ctaText: "Ontdek hoe Notifica jouw onderhanden werk automatisch berekent en visualiseert."
 relatedBlogs:
   - url: "/inspiratie/blogs/grip-op-ohw-5-stappen/"
     title: "Eenvoudig grip op OHW: 5 krachtige stappen"

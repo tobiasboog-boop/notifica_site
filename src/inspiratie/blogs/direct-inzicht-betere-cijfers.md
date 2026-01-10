@@ -7,7 +7,7 @@ description: "Direct inzicht verkrijgen en realtime sturen op prestaties is esse
 featuredImage: "/assets/images/2025/06/3.-HR-Urenrapportage.png"
 category: "implementatie"
 ctaTitle: "Van chaos naar helder inzicht?"
-ctaText: "Ontdek hoe Notifica jouw versnipperde data transformeert naar centrale dashboards. 30% minder tijd aan administratieve controle."
+ctaText: "Notifica's bewezen aanpak transformeert je data naar bruikbare dashboards."
 relatedBlogs:
   - url: "/inspiratie/blogs/mkb-implementatiegids/"
     title: "MKB-implementatiegids: 6 essentiële stappen"

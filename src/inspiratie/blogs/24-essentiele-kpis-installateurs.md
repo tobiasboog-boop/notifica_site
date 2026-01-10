@@ -7,7 +7,7 @@ description: "Met een KPI's dashboard in Power BI krijgt jouw installatiebedrijf
 featuredImage: "/assets/images/2025/06/Schermafbeelding-2025-06-03-061935.png"
 category: "kpis-dashboards"
 ctaTitle: "Wil je deze KPI's in jouw dashboard?"
-ctaText: "Ontdek hoe Notifica binnen 1 dag een compleet KPI-dashboard voor jouw installatiebedrijf live zet. Met alle 24 KPI's uit dit artikel, afgestemd op jouw ERP-systeem."
+ctaText: "Ontdek hoe Notifica binnen 1 dag een compleet KPI-dashboard voor jouw installatiebedrijf live zet, afgestemd op jouw ERP-systeem."
 relatedBlogs:
   - url: "/inspiratie/blogs/winstoptimalisatie-installatiebedrijven/"
     title: "Winstoptimalisatie: 5 Kengetallen die het Verschil Maken"

@@ -6,8 +6,8 @@ title: "Power BI versus Excel: 5 onmisbare voordelen van Power BI voor de instal
 description: "Waarom moderne tools zoals Power BI beter werken dan Excel voor het beheren van duizenden werkorders en uren."
 featuredImage: "/assets/images/2025/06/1.-Finance.png"
 category: "power-bi-basics"
-ctaTitle: "Klaar om van Excel naar Power BI te stappen?"
-ctaText: "Bespaar 78% rapportagetijd zoals onze klanten. Notifica maakt de overstap naar Power BI eenvoudig en snel."
+ctaTitle: "Klaar voor de overstap naar Power BI?"
+ctaText: "Bespaar 78% rapportagetijd zoals onze klanten. Notifica maakt de overstap eenvoudig."
 relatedBlogs:
   - url: "/inspiratie/blogs/4-power-bi-stappen-installateurs/"
     title: "Datagedreven dashboards installatiesector"

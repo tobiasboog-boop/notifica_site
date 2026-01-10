@@ -6,8 +6,8 @@ title: "Stop met terugkijken, Begin met vooruitkijken! Betere besluiten met voor
 description: "Met voorspellen maak je vandaag nog het verschil: verhoog je winst, verlaag risico's en optimaliseer je capaciteit door écht vooruitkijken in Power BI."
 featuredImage: "/assets/images/2025/06/8.-Portefeuille-management.png"
 category: "ai-technologie"
-ctaTitle: "Wil je voorspellend gaan sturen?"
-ctaText: "Ontdek hoe Notifica forecasting en scenario-analyse integreert in jouw Power BI dashboards. Binnen een week concrete resultaten."
+ctaTitle: "Van terugkijken naar vooruitkijken?"
+ctaText: "Notifica helpt je met forecasting en predictive analytics in Power BI. Neem betere beslissingen."
 relatedBlogs:
   - url: "/inspiratie/blogs/ai-dashboards-voordelen/"
     title: "AI dashboards: Ontdek 7 gigantische voordelen"

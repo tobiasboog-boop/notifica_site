@@ -6,8 +6,8 @@ title: "7 Overtuigende Redenen Waarom Uitbesteden van Rapportages voor het MKB S
 description: "Ontdek hoe uitbesteden van rapportage kleine bedrijven helpt kosten te verlagen, sneller inzichten te krijgen en resultaten te verbeteren."
 featuredImage: "/assets/images/2025/06/10.-Offerte-en-sales-proces.png"
 category: "implementatie"
-ctaTitle: "Rapportages uitbesteden aan Notifica?"
-ctaText: "Elimineer technische rompslomp en profiteer van schaalvoordelen. Binnen dagen al actuele overzichten bekijken."
+ctaTitle: "Rapportages uitbesteden?"
+ctaText: "Focus op je core business. Notifica regelt je dashboards, beheer en updates."
 relatedBlogs:
   - url: "/inspiratie/blogs/flexibele-abonnementsvorm/"
     title: "5 voordelen van ons alles-in-één abonnement"

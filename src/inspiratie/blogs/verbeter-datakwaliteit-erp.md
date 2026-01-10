@@ -7,7 +7,7 @@ description: "Ontdek hoe je de datakwaliteit in je ERP-systeem verbetert voor be
 featuredImage: "/assets/images/2025/06/3aa.-HR-Urenrapportage.png"
 category: "finance-rapportage"
 ctaTitle: "Hulp nodig bij datakwaliteit?"
-ctaText: "Notifica helpt je de datakwaliteit in je ERP te verbeteren voor betrouwbare rapportages. Ook bij migraties naar Acto, 4PS of BouwInfosys."
+ctaText: "Notifica helpt je de datakwaliteit in je ERP te verbeteren voor betrouwbare rapportages."
 relatedBlogs:
   - url: "/inspiratie/blogs/versnel-maandrapportage/"
     title: "Maandrapportage: 5 tips voor tijdbesparing"

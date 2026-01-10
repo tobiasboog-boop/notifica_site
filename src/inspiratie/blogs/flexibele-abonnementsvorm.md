@@ -7,7 +7,7 @@ description: "In de installatiebranche zijn actuele inzichten cruciaal. Ontdek d
 featuredImage: "/assets/images/2025/06/5.-SO-Planning-onderhoud.png"
 category: "implementatie"
 ctaTitle: "Zorgeloos starten met Power BI?"
-ctaText: "Met ons alles-in-één abonnement krijg je beheer, updates en support in één pakket. Maandelijks opzegbaar, geen verborgen kosten."
+ctaText: "Met ons alles-in-één abonnement krijg je beheer, updates en support. Maandelijks opzegbaar."
 relatedBlogs:
   - url: "/inspiratie/blogs/60-tevreden-klanten/"
     title: "Meer dan 60 tevreden klanten"

@@ -7,7 +7,7 @@ description: "Hoe IoT-integratie, realtime data-analyse en asset management stra
 featuredImage: "/assets/images/2025/06/3.-HR-Urenrapportage.png"
 category: "ai-technologie"
 ctaTitle: "Klaar voor predictive maintenance?"
-ctaText: "Ontdek hoe Notifica jouw onderhoudsdata omzet in voorspellende inzichten. Voorkom storingen en verlaag operationele kosten."
+ctaText: "Ontdek hoe Notifica jouw onderhoudsdata omzet in voorspellende inzichten."
 relatedBlogs:
   - url: "/inspiratie/blogs/ai-dashboards-voordelen/"
     title: "AI dashboards: Ontdek 7 gigantische voordelen"

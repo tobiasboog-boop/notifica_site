@@ -6,8 +6,8 @@ title: "Copilot vs ChatGPT: de ultieme Power BI AI keuzewijzer voor installateur
 description: "Power BI Copilot vs ChatGPT: ontdek welke AI-tool het beste past bij jouw data-analyse behoeften als installateur."
 featuredImage: "/assets/images/2025/06/Schermafbeelding-2025-06-05-114828.png"
 category: "ai-technologie"
-ctaTitle: "Hulp nodig bij je AI-keuze?"
-ctaText: "Notifica helpt je de juiste AI-strategie te bepalen voor jouw installatiebedrijf. Van Copilot tot ChatGPT integraties."
+ctaTitle: "Hulp bij AI-keuzes voor Power BI?"
+ctaText: "Notifica adviseert over de beste AI-tools voor jouw dashboard-omgeving."
 relatedBlogs:
   - url: "/inspiratie/blogs/ai-dashboards-voordelen/"
     title: "AI dashboards: Ontdek 7 gigantische voordelen"

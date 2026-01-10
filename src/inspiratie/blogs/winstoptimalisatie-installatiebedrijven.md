@@ -6,8 +6,8 @@ title: "Winstoptimalisatie voor Installatiebedrijven: 5 Kengetallen die het Vers
 description: "Ontdek hoe je met vijf essentiële kengetallen de winstgevendheid van je installatiebedrijf kunt voorspellen en verbeteren."
 featuredImage: "/assets/images/2025/12/dashboard-kengetallen.png"
 category: "kpis-dashboards"
-ctaTitle: "Ontdek jouw winstpotentieel"
-ctaText: "Wil je weten welk resultaat haalbaar is voor jouw installatiebedrijf? Vraag een vrijblijvende bedrijfsanalyse aan en bereken samen met ons je winstpotentieel."
+ctaTitle: "Winstgevendheid verbeteren?"
+ctaText: "Notifica's dashboards geven direct inzicht in je marges en kengetallen."
 relatedBlogs:
   - url: "/inspiratie/blogs/24-essentiele-kpis-installateurs/"
     title: "24 essentiële KPI's in één overzicht"
