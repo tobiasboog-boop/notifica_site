@@ -55,6 +55,10 @@
     {
       "label": "Privacy",
       "url": "/privacy/"
+    },
+    {
+      "label": "Cookies",
+      "url": "/cookies/"
     }
   ]
 }
