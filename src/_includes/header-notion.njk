@@ -54,5 +54,51 @@
             <a href="{{ '/over-ons/' | url }}">Over ons</a>
             <a href="#contact" class="btn">Contact</a>
         </div>
+        <button class="mobile-menu-btn" aria-label="Menu openen">
+            <span></span>
+        </button>
     </div>
 </nav>
+
+<!-- Mobile Navigation -->
+<div class="mobile-nav">
+    <a href="{{ '/' | url }}">Home</a>
+    <a href="{{ '/bedrijfssoftware/' | url }}">Bedrijfssoftware</a>
+    <a href="{{ '/bedrijfssoftware/syntess-atrium/' | url }}">Syntess Atrium</a>
+    <a href="{{ '/bedrijfssoftware/4ps/' | url }}">4PS</a>
+    <a href="{{ '/bedrijfssoftware/acto/' | url }}">ACTO</a>
+    <a href="{{ '/bedrijfssoftware/admicom/' | url }}">Admicom</a>
+    <a href="{{ '/bedrijfssoftware/enk-software/' | url }}">ENK Software</a>
+    <a href="{{ '/bedrijfssoftware/bouwinfosys/' | url }}">BouwInfosys</a>
+    <a href="{{ '/inspiratie/blogs/' | url }}">Blogs</a>
+    <a href="{{ '/inspiratie/whitepapers/' | url }}">Whitepapers</a>
+    <a href="{{ '/inspiratie/videos/' | url }}">Video's</a>
+    <a href="{{ '/klanten-ervaringen/' | url }}">Klanten</a>
+    <a href="{{ '/veelgestelde-vragen/' | url }}">FAQ</a>
+    <a href="{{ '/over-ons/' | url }}">Over ons</a>
+    <a href="#contact" class="btn" data-pipedrive-form="contact">Contact</a>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileNav = document.querySelector('.mobile-nav');
+
+    if (menuBtn && mobileNav) {
+        menuBtn.addEventListener('click', function() {
+            menuBtn.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking a link
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                menuBtn.classList.remove('active');
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+});
+</script>

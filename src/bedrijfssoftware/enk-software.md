@@ -1,7 +1,7 @@
 ---
 layout: base-notion.njk
-title: Notifica voor ENK Software | Power BI Dashboards
-description: Power BI dashboards gekoppeld aan ENK Software. Direct inzicht in projecten, uren en financiën voor installatiebedrijven. Live binnen 1 dag.
+title: ENK Software Dashboards | Alle data eindelijk op één plek
+description: Power BI dashboards gekoppeld aan ENK Software. Al je service- en projectdata gecombineerd in één overzicht. Van versnipperde data naar totaalinzicht.
 permalink: /bedrijfssoftware/enk-software/
 showContactPopup: true
 ---
@@ -13,13 +13,13 @@ showContactPopup: true
             <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); display: flex; align-items: center; justify-content: center; min-height: 140px; border-radius: 12px; margin-bottom: 32px;">
                 <img src="{{ '/assets/images/2025/04/enk_logo_groen-1.png' | url }}" alt="ENK Software Logo" style="max-width: 200px; max-height: 120px; object-fit: contain; filter: brightness(0) invert(1);">
             </div>
-            <h1>Power BI Dashboards voor ENK Software</h1>
+            <h1>ENK dashboards: alle data eindelijk op één plek</h1>
             <p class="subtitle">
-                Verbeter je service & onderhoud operatie met ENK Software en Power BI. Van storingsmeldingen tot preventief onderhoud: alles in één overzicht.
+                ENK Software bevat waardevolle informatie over je projecten, service en onderhoud. Maar die data zit verspreid over verschillende modules en schermen. Onze Power BI dashboards brengen alles samen in één helder overzicht - zodat je eindelijk het complete plaatje ziet.
             </p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-large">Plan een demo</a>
-                <a href="#voordelen" class="btn-outline btn-large">Bekijk voordelen</a>
+                <a href="#contact" class="btn btn-large">Vraag een demo aan</a>
+                <a href="#probleem" class="btn-outline btn-large">Herken je dit?</a>
             </div>
         </div>
     </div>
@@ -30,44 +30,95 @@ showContactPopup: true
     <div class="container">
         <div class="stats-grid">
             <div class="stat-item">
-                <div class="stat-number">✓</div>
-                <div class="stat-label">Snel live</div>
+                <div class="stat-number">1</div>
+                <div class="stat-label">Centraal dashboard</div>
             </div>
             <div class="stat-item">
                 <div class="stat-number">10+</div>
-                <div class="stat-label">Jaar ervaring</div>
+                <div class="stat-label">Jaar ENK ervaring</div>
             </div>
             <div class="stat-item">
                 <div class="stat-number">24/7</div>
-                <div class="stat-label">Real-time data</div>
+                <div class="stat-label">Automatische sync</div>
             </div>
             <div class="stat-item">
                 <div class="stat-number">100%</div>
-                <div class="stat-label">Beveiligd</div>
+                <div class="stat-label">AVG-compliant</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- How it works -->
-<section id="voordelen" class="section">
+<!-- Pain Points -->
+<section id="probleem" class="section">
     <div class="container">
         <div class="section-header">
-            <h2>Grip op service & onderhoud met ENK data</h2>
+            <h2>Herken je deze frustraties met ENK data?</h2>
             <p class="section-subtitle">
-                ENK Software registreert alle service activiteiten. Met Power BI transformeer je deze operationele data in strategisch inzicht voor betere klantenservice.
+                ENK Software is een compleet pakket voor installatiebedrijven. Maar juist omdat er zoveel in zit, is het lastig om het overzicht te bewaren.
+            </p>
+        </div>
+        <div class="features-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 900px; margin-left: auto; margin-right: auto;">
+            <div class="feature-card">
+                <div class="feature-icon" style="background: rgba(239, 68, 68, 0.1); color: #ef4444;">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+                    </svg>
+                </div>
+                <h3>Data zit overal verspreid</h3>
+                <p>Projectinformatie zit in de ene module, service-uren in de andere, financiën weer ergens anders. Om een compleet beeld te krijgen, moet je 5 schermen openen en zelf puzzelen.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: rgba(239, 68, 68, 0.1); color: #ef4444;">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
+                </div>
+                <h3>Rapportages kosten te veel tijd</h3>
+                <p>Elke week of maand dezelfde exercitie: data exporteren, in Excel plakken, formules maken, grafieken bouwen. Tegen de tijd dat je klaar bent, is de data alweer verouderd.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: rgba(239, 68, 68, 0.1); color: #ef4444;">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <h3>MT krijgt geen totaalbeeld</h3>
+                <p>De directie vraagt "hoe staan we ervoor?" Maar een eenvoudig antwoord geven is onmogelijk, want de informatie zit niet bij elkaar. Je kunt alleen losse puzzelstukjes laten zien.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: rgba(239, 68, 68, 0.1); color: #ef4444;">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <h3>Te laat reageren op problemen</h3>
+                <p>Pas achteraf ontdek je dat een project uit de hand is gelopen of dat een klant ontevreden is. Real-time signalen krijg je niet, want niemand heeft continu het overzicht.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Solution -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <h2>Eén dashboard met al je ENK data</h2>
+            <p class="section-subtitle">
+                Onze Power BI dashboards verzamelen automatisch alle data uit ENK Software en presenteren het in één overzichtelijk dashboard. Geen puzzelen meer - direct het complete plaatje.
             </p>
         </div>
         <div class="features-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 900px; margin-left: auto; margin-right: auto;">
             <div class="feature-card">
                 <div class="feature-icon">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        <path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"/>
+                        <path d="M9 12l2 2 4-4"/>
                     </svg>
                 </div>
-                <h3>Storing management</h3>
-                <p>Real-time overzicht van openstaande meldingen, responstijden en oplostijden. Overtref je service level agreements.</p>
+                <h3>Alles op één scherm</h3>
+                <p>Projecten, service, financiën, uren - alles gecombineerd in één overzicht. Open Power BI en je ziet direct hoe je bedrijf er vandaag voor staat.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
@@ -76,81 +127,223 @@ showContactPopup: true
                         <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
                     </svg>
                 </div>
-                <h3>Contract monitoring</h3>
-                <p>Inzicht in alle servicecontracten, aflopende contracten en omzetkansen. Verhoog je contract renewal rate.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/>
-                    </svg>
-                </div>
-                <h3>Technici performance</h3>
-                <p>Analyse van servicetechnici prestaties: aantal afgehandelde meldingen, klanttevredenheid en first-time fix rate.</p>
+                <h3>Automatisch bijgewerkt</h3>
+                <p>De data wordt automatisch gesynchroniseerd - meerdere keren per dag. Geen exports, geen copy-paste, geen handwerk. Altijd actuele cijfers.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
                     </svg>
                 </div>
-                <h3>Preventief onderhoud</h3>
-                <p>Plan preventieve onderhoudsbezoeken op basis van historische data en contractafspraken. Voorkom storing voordat ze ontstaan.</p>
+                <h3>Doordrillbaar tot detail</h3>
+                <p>Zie je iets opvallends? Klik door naar het detail. Van totaalcijfer naar individueel project, van monteur naar specifieke werkbon - zonder ENK te openen.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                    </svg>
+                </div>
+                <h3>Iedereen dezelfde waarheid</h3>
+                <p>Directie, projectleiders, service coördinator - allemaal kijken ze naar dezelfde data. Geen discussies meer over welk cijfer klopt.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- What you get -->
+<!-- KPI Section -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Welke KPI's volg je met ENK dashboards?</h2>
+            <p class="section-subtitle">
+                Onze dashboards combineren project-, service- en financiële data tot concrete KPI's die je helpen bij het aansturen van je bedrijf.
+            </p>
+        </div>
+        <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="feature-card" style="text-align: center; padding: 24px;">
+                <h3 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 8px;">Projectmarge %</h3>
+                <p style="font-size: 14px; margin: 0;">Real-time marge per project inclusief materiaal en uren</p>
+            </div>
+            <div class="feature-card" style="text-align: center; padding: 24px;">
+                <h3 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 8px;">First Time Fix Rate</h3>
+                <p style="font-size: 14px; margin: 0;">Percentage storingen opgelost bij eerste bezoek</p>
+            </div>
+            <div class="feature-card" style="text-align: center; padding: 24px;">
+                <h3 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 8px;">Service Response Time</h3>
+                <p style="font-size: 14px; margin: 0;">Gemiddelde tijd tussen melding en eerste actie</p>
+            </div>
+            <div class="feature-card" style="text-align: center; padding: 24px;">
+                <h3 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 8px;">Declarabiliteit</h3>
+                <p style="font-size: 14px; margin: 0;">Percentage productieve uren per monteur en team</p>
+            </div>
+            <div class="feature-card" style="text-align: center; padding: 24px;">
+                <h3 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 8px;">Onderhoudsplanning</h3>
+                <p style="font-size: 14px; margin: 0;">Gepland vs. uitgevoerd preventief onderhoud</p>
+            </div>
+            <div class="feature-card" style="text-align: center; padding: 24px;">
+                <h3 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 8px;">SLA Compliance</h3>
+                <p style="font-size: 14px; margin: 0;">Percentage meldingen binnen SLA-termijn afgehandeld</p>
+            </div>
+            <div class="feature-card" style="text-align: center; padding: 24px;">
+                <h3 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 8px;">Omzet per segment</h3>
+                <p style="font-size: 14px; margin: 0;">Verdeling over projecten, service en onderhoud</p>
+            </div>
+            <div class="feature-card" style="text-align: center; padding: 24px;">
+                <h3 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 8px;">Openstaande posten</h3>
+                <p style="font-size: 14px; margin: 0;">Debiteuren ouderdom en verwachte cashflow</p>
+            </div>
+            <div class="feature-card" style="text-align: center; padding: 24px;">
+                <h3 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 8px;">Contract waarde</h3>
+                <p style="font-size: 14px; margin: 0;">Totale waarde servicecontracten en verloopdata</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Dashboard types -->
 <section class="section section-alt">
     <div class="container">
         <div class="section-header">
-            <h2>Service & onderhoud dashboards</h2>
+            <h2>Drie dashboards, één compleet beeld</h2>
             <p class="section-subtitle">
-                Gespecialiseerde dashboards voor organisaties die ENK Software gebruiken voor service-, onderhouds- en storingsmanagement.
+                We leveren drie geïntegreerde dashboards die samen je hele bedrijfsvoering afdekken.
             </p>
         </div>
-        <div class="features-grid">
+        <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
             <div class="feature-card">
                 <div class="feature-icon">
-                    <svg fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
-                        <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
                     </svg>
                 </div>
-                <h3>Service Desk Monitor</h3>
-                <p>Live overzicht van binnenkomende meldingen, wachttijden en status updates. Reageer sneller op klantvragen.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
-                    </svg>
-                </div>
-                <h3>SLA Performance</h3>
-                <p>Track je service level agreement naleving per klant en contracttype. Identificeer verbeterpunten en toon waarde aan klanten.</p>
+                <h3>Project Dashboard</h3>
+                <p>Alle lopende en afgeronde projecten op een rij. Marge, uren, voortgang en budget per project. Ideaal voor projectleiders en directie.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                        <line x1="16" y1="2" x2="16" y2="6"/>
-                        <line x1="8" y1="2" x2="8" y2="6"/>
-                        <line x1="3" y1="10" x2="21" y2="10"/>
+                        <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                        <circle cx="12" cy="12" r="3"/>
                     </svg>
                 </div>
-                <h3>Onderhoud Planning</h3>
-                <p>Geplande onderhoudsbezoeken, capaciteit van technici en historische onderhoudstrends. Plan efficiënter met data.</p>
+                <h3>Service Dashboard</h3>
+                <p>Overzicht van alle servicemeldingen, responstijden en SLA-prestaties. First Time Fix rate, technici productiviteit en klanttevredenheid.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
-                    <svg fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                 </div>
-                <h3>Klanttevredenheid</h3>
-                <p>Feedback scores, herhaalmeldingen per klant en tevredenheidstrends. Verbeter continue je service kwaliteit.</p>
+                <h3>Financieel Dashboard</h3>
+                <p>Omzet, kosten en marge op totaalniveau. Debiteurenbeheer, cashflow prognose en vergelijking met budget. Voor controller en directie.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Who uses this -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Wie profiteert van de ENK dashboards?</h2>
+            <p class="section-subtitle">
+                Elke rol in je organisatie krijgt precies de informatie die ze nodig hebben - vanuit dezelfde databron.
+            </p>
+        </div>
+        <div class="features-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 900px; margin-left: auto; margin-right: auto;">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </div>
+                <h3>Directie / DGA</h3>
+                <p>Eén scherm met de staat van het bedrijf: omzet, marge, openstaande posten, orderportefeuille. Perfect voor de wekelijkse of maandelijkse review.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        <path d="M9 14l2 2 4-4"/>
+                    </svg>
+                </div>
+                <h3>Projectleiders</h3>
+                <p>Overzicht van alle projecten met uren, kosten en marge. Direct zien welke projecten aandacht nodig hebben en waar je kunt bijsturen.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                </div>
+                <h3>Service Coördinator</h3>
+                <p>Real-time inzicht in openstaande meldingen, technici beschikbaarheid en SLA-prestaties. Plan efficiënter en reageer sneller op klanten.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <h3>Controller / Financieel</h3>
+                <p>Debiteurenbeheer, cashflow prognose en marge-analyse. Alle financiële cijfers gevalideerd en klaar voor rapportage.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Extra features -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <h2>Meer dan alleen dashboards</h2>
+            <p class="section-subtitle">
+                Naast de visuele rapportages krijg je extra functionaliteiten om proactief te kunnen sturen.
+            </p>
+        </div>
+        <div class="features-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 900px; margin-left: auto; margin-right: auto;">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                    </svg>
+                </div>
+                <h3>Automatische alerts</h3>
+                <p>Ontvang een melding wanneer een project over budget gaat, een SLA dreigt te worden overschreden, of de marge onder een drempel zakt.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <h3>Automatische rapportages</h3>
+                <p>Ontvang wekelijks of maandelijks een PDF met de belangrijkste KPI's in je inbox. Perfect voor MT-vergaderingen of stakeholder updates.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <h3>Mobiele toegang</h3>
+                <p>Bekijk je dashboards op je telefoon of tablet via de Power BI app. Op de bouwplaats, onderweg of thuis - altijd inzicht.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"/>
+                    </svg>
+                </div>
+                <h3>Excel export</h3>
+                <p>Exporteer de data naar Excel wanneer je dieper wilt analyseren of presentaties wilt maken. De onderliggende data blijft altijd van jou.</p>
             </div>
         </div>
     </div>
@@ -160,24 +353,107 @@ showContactPopup: true
 <section class="section">
     <div class="container">
         <div class="section-header">
-            <h2>Zo werkt de implementatie</h2>
+            <h2>Van verspreide data naar één centraal dashboard</h2>
+            <p class="section-subtitle">
+                In drie stappen combineren we al je ENK data in overzichtelijke dashboards.
+            </p>
         </div>
         <div class="steps-grid">
             <div class="step-card">
                 <div class="step-number">1</div>
-                <h3>Service analyse</h3>
-                <p>We analyseren je service processen en bepalen welke metrics cruciaal zijn voor optimale klantenservice.</p>
+                <h3>Intake & inventarisatie</h3>
+                <p>We bespreken welke informatie je nodig hebt en welke modules van ENK je gebruikt. We bepalen samen welke KPI's het meest waardevol zijn voor jouw bedrijf.</p>
             </div>
             <div class="step-card">
                 <div class="step-number">2</div>
-                <h3>Data koppeling</h3>
-                <p>We koppelen ENK Software aan Power BI en stellen de dashboards in. Je servicedata wordt realtime beschikbaar.</p>
+                <h3>Koppeling & configuratie</h3>
+                <p>Onze specialisten maken de beveiligde koppeling met ENK Software. We combineren data uit alle relevante modules en configureren de automatische synchronisatie.</p>
             </div>
             <div class="step-card">
                 <div class="step-number">3</div>
-                <h3>Direct aan de slag</h3>
-                <p>Je service team krijgt toegang en instructie. Binnen één dag monitor je alle serviceprocessen via één dashboard.</p>
+                <h3>Live & training</h3>
+                <p>Je ontvangt toegang tot je dashboards inclusief een persoonlijke uitleg. We laten zien hoe je de rapportages leest en hoe je zelf kunt doordrilllen naar details.</p>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <h2>Veelgestelde vragen over ENK dashboards</h2>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <details style="margin-bottom: 16px; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                <summary style="font-weight: 600; cursor: pointer; color: var(--text);">Welke ENK modules worden ondersteund?</summary>
+                <p style="margin-top: 12px; color: var(--text-light);">We ondersteunen alle gangbare ENK modules: projecten, service, onderhoud, financieel, CRM en meer. Tijdens de intake bepalen we welke modules voor jouw dashboards relevant zijn.</p>
+            </details>
+            <details style="margin-bottom: 16px; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                <summary style="font-weight: 600; cursor: pointer; color: var(--text);">Hoe vaak wordt de data gesynchroniseerd?</summary>
+                <p style="margin-top: 12px; color: var(--text-light);">Standaard worden de dashboards meerdere keren per dag automatisch bijgewerkt. Voor real-time monitoring is een hogere verversingsfrequentie mogelijk.</p>
+            </details>
+            <details style="margin-bottom: 16px; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                <summary style="font-weight: 600; cursor: pointer; color: var(--text);">Kunnen we historische data ook meenemen?</summary>
+                <p style="margin-top: 12px; color: var(--text-light);">Ja, we laden standaard de historische data uit ENK mee. Zo kun je direct trends analyseren en vergelijkingen maken met voorgaande periodes.</p>
+            </details>
+            <details style="margin-bottom: 16px; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                <summary style="font-weight: 600; cursor: pointer; color: var(--text);">Kunnen we de dashboards zelf aanpassen?</summary>
+                <p style="margin-top: 12px; color: var(--text-light);">Ja, de dashboards zijn gebouwd in Power BI. Je kunt zelf visualisaties toevoegen of wijzigen. We bieden ook trainingen aan voor wie meer uit Power BI wil halen.</p>
+            </details>
+            <details style="margin-bottom: 16px; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                <summary style="font-weight: 600; cursor: pointer; color: var(--text);">Is de data veilig?</summary>
+                <p style="margin-top: 12px; color: var(--text-light);">Absoluut. De data wordt versleuteld verzonden en opgeslagen in de beveiligde Microsoft Azure cloud. We werken AVG-compliant en tekenen altijd een verwerkersovereenkomst.</p>
+            </details>
+            <details style="margin-bottom: 16px; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                <summary style="font-weight: 600; cursor: pointer; color: var(--text);">Wat als we ook andere systemen gebruiken naast ENK?</summary>
+                <p style="margin-top: 12px; color: var(--text-light);">Geen probleem. We kunnen data uit meerdere bronnen combineren in één dashboard. Denk aan HR-systemen, financiële pakketten of andere bedrijfsapplicaties.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Wat zeggen andere ENK gebruikers?</h2>
+        </div>
+        <div style="max-width: 700px; margin: 0 auto; background: white; padding: 32px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <blockquote style="font-size: 18px; line-height: 1.7; color: var(--text); margin: 0 0 16px 0; font-style: italic;">
+                "Vroeger moest ik voor het MT-overleg een halve dag Excel-rapporten bij elkaar puzzelen. Nu open ik Power BI en heb ik alles in één overzicht. Dat scheelt me niet alleen tijd, maar de cijfers zijn ook nog eens actueler."
+            </blockquote>
+            <cite style="display: block; font-style: normal; color: var(--text-light);">— Operations Manager bij een installatietechnisch bedrijf</cite>
+        </div>
+    </div>
+</section>
+
+<!-- Related pages -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <h2>Ook integraties met andere ERP-systemen</h2>
+            <p class="section-subtitle">
+                Naast ENK Software koppelen we ook met andere bedrijfssoftware in de installatiebranche.
+            </p>
+        </div>
+        <div class="features-grid" style="grid-template-columns: repeat(4, 1fr);">
+            <a href="{{ '/bedrijfssoftware/syntess-atrium/' | url }}" class="feature-card" style="text-decoration: none; text-align: center;">
+                <h3 style="color: var(--primary);">Syntess</h3>
+                <p style="font-size: 14px;">Voor installatiebedrijven met Syntess</p>
+            </a>
+            <a href="{{ '/bedrijfssoftware/acto/' | url }}" class="feature-card" style="text-decoration: none; text-align: center;">
+                <h3 style="color: var(--primary);">ACTO</h3>
+                <p style="font-size: 14px;">Voor ACTO gebruikers</p>
+            </a>
+            <a href="{{ '/bedrijfssoftware/admicom/' | url }}" class="feature-card" style="text-decoration: none; text-align: center;">
+                <h3 style="color: var(--primary);">Admicom</h3>
+                <p style="font-size: 14px;">Voor Admicom gebruikers</p>
+            </a>
+            <a href="{{ '/bedrijfssoftware/bouwinfosys/' | url }}" class="feature-card" style="text-decoration: none; text-align: center;">
+                <h3 style="color: var(--primary);">BouwInfosys</h3>
+                <p style="font-size: 14px;">Voor groeiende bouwbedrijven</p>
+            </a>
         </div>
     </div>
 </section>
@@ -185,9 +461,9 @@ showContactPopup: true
 <!-- CTA -->
 <section class="cta">
     <div class="container">
-        <h2>Klaar om te starten met ENK Software dashboards?</h2>
-        <p class="section-subtitle" style="max-width: 560px; margin: 16px auto 32px;">
-            Plan een vrijblijvende demo en ontdek wat Notifica voor jouw bedrijf kan betekenen.
+        <h2>Klaar voor één centraal overzicht van al je ENK data?</h2>
+        <p class="section-subtitle" style="max-width: 600px; margin: 16px auto 32px;">
+            Plan een vrijblijvende demo en ontdek hoe onze dashboards al je verspreide data samenbrengen in één helder overzicht.
         </p>
         <a href="#" class="btn btn-large" data-pipedrive-form="contact">Plan een demo</a>
     </div>

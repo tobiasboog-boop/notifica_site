@@ -43,3 +43,21 @@
 # Bedrijfsanalysetool varianten
 /bedrijfsanalyse-tool/  /verdieping/bedrijfsanalysetool/  301
 /bedrijfsanalysetool/  /verdieping/bedrijfsanalysetool/  301
+
+# Notifica Talks
+/talks_v2/  /notifica-talks/  301
+
+# SSH Tool (nu in admin)
+/ssh-verbinding-stappenplan-syntess/  /admin/tools/ssh-verbinding-uitleg/  301
+
+# Campagnes / Acties
+/december-actie/  /campaigns/december-2025-webinar/  301
+
+# Overige pagina's die al bestaan met dezelfde URL
+# /referenties/ - behouden
+# /proefperiode/ - behouden
+# /installatie-syntess/ - behouden
+# /vacatures/ - behouden
+# /disclaimer/ - behouden
+# /algemene-voorwaarden/ - behouden
+# /verwerkersovereenkomst/ - behouden
