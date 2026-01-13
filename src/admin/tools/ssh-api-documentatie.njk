@@ -283,10 +283,10 @@ td {
 
             <p>De SSH Test API draait op de webserver en wordt gebruikt om de SSH verbinding te testen voordat het formulier wordt ingediend.</p>
 
-            <div class="info-box">
-                <div class="info-box-title">Huidige Base URL</div>
-                <p><span class="inline-code">https://sugar-christmas-empty-dreams.trycloudflare.com</span></p>
-                <p style="margin-top: 8px;">Dit is een tijdelijke Quick Tunnel URL. Zie sectie "Cloudflare Tunnel Setup" voor de permanente oplossing.</p>
+            <div class="success-box">
+                <div class="success-box-title">Base URL (Permanent)</div>
+                <p><span class="inline-code">https://test.notifica.nl</span></p>
+                <p style="margin-top: 8px;">De API draait via een permanente Cloudflare Tunnel en is veilig bereikbaar via dit domein.</p>
             </div>
 
             <h3>1. SSH Test Endpoint</h3>
@@ -475,17 +475,21 @@ nssm install NotificaAPI "C:\Python3x\python.exe" "C:\notifica_api\notifica_test
 nssm start NotificaAPI</code>
             </div>
 
-            <h3>Cloudflare Tunnel (Huidig)</h3>
+            <h3>Cloudflare Tunnel (Permanent)</h3>
             <p>
-                Momenteel wordt een "Quick Tunnel" gebruikt. Dit is een tijdelijke oplossing die bij elke herstart een nieuwe URL krijgt.
+                De tunnel draait als Windows Service en start automatisch bij server herstart.
             </p>
             <div class="code-block">
-                <code># Starten van Quick Tunnel (CMD venster open houden!)
-cloudflared tunnel --url http://localhost:5000</code>
+                <code># Service status controleren
+sc query cloudflared
+
+# Service herstarten indien nodig
+net stop cloudflared
+net start cloudflared</code>
             </div>
-            <div class="warning-box">
-                <div class="warning-box-title">Let op</div>
-                <p>Bij elke herstart van de tunnel krijg je een nieuwe URL. Deze moet dan bijgewerkt worden in de SSH wizard code.</p>
+            <div class="success-box">
+                <div class="success-box-title">Tunnel ID</div>
+                <p><span class="inline-code">fcb8a40d-2608-43b6-8207-29fb6e9afbfd</span></p>
             </div>
         </div>
 
@@ -493,15 +497,9 @@ cloudflared tunnel --url http://localhost:5000</code>
         <div class="doc-section">
             <h2>Cloudflare Tunnel Setup (Permanent)</h2>
 
-            <div class="todo-box">
-                <div class="todo-box-title">Nog uit te voeren</div>
-                <p>De volgende stappen moeten uitgevoerd worden zodra DNS voor notifica.nl bij Cloudflare ligt:</p>
-                <ul>
-                    <li>Permanente named tunnel aanmaken op webserver</li>
-                    <li>DNS route configureren voor <span class="inline-code">test.notifica.nl</span></li>
-                    <li>Tunnel als Windows Service installeren</li>
-                    <li>API URL in wizard updaten</li>
-                </ul>
+            <div class="success-box">
+                <div class="success-box-title">✓ Permanent Tunnel Actief</div>
+                <p>De permanente Cloudflare Tunnel is succesvol geconfigureerd en draait als Windows Service. De API is bereikbaar via <span class="inline-code">https://test.notifica.nl</span>.</p>
             </div>
 
             <h3>Stap 1: Inloggen bij Cloudflare</h3>
@@ -550,21 +548,14 @@ net start cloudflared</code>
             </div>
             <p>De tunnel draait nu als Windows Service en start automatisch bij server herstart.</p>
 
-            <h3>Stap 6: Code Aanpassen</h3>
-            <p>Na succesvolle setup, wijzig in <span class="inline-code">src/admin/tools/ssh-verbinding-wizard.njk</span>:</p>
+            <h3>Stap 6: Verificatie</h3>
+            <p>Test of de tunnel correct werkt:</p>
             <div class="code-block">
-                <code>// Wijzig van:
-const API_URL = 'https://sugar-christmas-empty-dreams.trycloudflare.com/api/syntess';
-
-// Naar:
-const API_URL = 'https://test.notifica.nl/api/syntess';</code>
+                <code>curl https://test.notifica.nl/api/health</code>
             </div>
-            <p>Daarna rebuilden en deployen:</p>
+            <p>Verwachte output:</p>
             <div class="code-block">
-                <code>npx eleventy
-git add -A
-git commit -m "Update API URL to permanent Cloudflare tunnel"
-git push</code>
+                <code>{"status":"healthy","paramiko_available":true,"smtp_configured":true,"timestamp":"..."}</code>
             </div>
 
             <h3>Troubleshooting</h3>
@@ -736,11 +727,7 @@ git push</code>
             <table>
                 <tbody>
                     <tr>
-                        <td><strong>SSH Test API (tijdelijk)</strong></td>
-                        <td><span class="inline-code">https://sugar-christmas-empty-dreams.trycloudflare.com/api/syntess/sshtest</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>SSH Test API (toekomstig)</strong></td>
+                        <td><strong>SSH Test API</strong></td>
                         <td><span class="inline-code">https://test.notifica.nl/api/syntess/sshtest</span></td>
                     </tr>
                     <tr>
