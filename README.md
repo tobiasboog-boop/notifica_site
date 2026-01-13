@@ -50,14 +50,12 @@ notifica_site/
 
 De volgende bestanden bevatten nog verwijzingen naar de WordPress-site (www.notifica.nl) die uitgefaseerd wordt:
 
-- `src/admin/tools/ssh-verbinding-uitleg.njk` (V1) - download link PowerShell script
-- `src/admin/tools/ssh-verbinding-uitleg-v2.njk` (V2) - download link PowerShell script
 - `src/admin/index.njk` - verwijzingen naar WordPress secties
 - `src/robots.txt` - sitemap URL
 - `src/_data/site.json` - site URL
 - `src/webinars/optimalisatie-winstgevendheid-december-2025/index.njk` - afbeelding URLs
 
-**Let op:** V3 van de SSH wizard (`ssh-verbinding-uitleg-v3.njk`) is al onafhankelijk van WordPress.
+**Let op:** De SSH wizard (`ssh-verbinding-wizard.njk`) is onafhankelijk van WordPress.
 
 ## License
 

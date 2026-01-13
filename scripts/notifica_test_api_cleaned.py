@@ -2,7 +2,7 @@
 Notifica SSH Test API - Cleaned Version
 ========================================
 Dit bestand bevat alleen de SSH test functionaliteit.
-Het formulier endpoint is verwijderd omdat V3 direct naar Azure Logic App stuurt.
+Het formulier endpoint is verwijderd omdat de wizard direct naar Azure Logic App stuurt.
 
 Deployment:
 1. Kopieer dit bestand naar C:\notifica_api\ op de webserver

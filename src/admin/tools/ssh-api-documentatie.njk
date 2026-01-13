@@ -551,7 +551,7 @@ net start cloudflared</code>
             <p>De tunnel draait nu als Windows Service en start automatisch bij server herstart.</p>
 
             <h3>Stap 6: Code Aanpassen</h3>
-            <p>Na succesvolle setup, wijzig in <span class="inline-code">src/admin/tools/ssh-verbinding-uitleg-v3.njk</span>:</p>
+            <p>Na succesvolle setup, wijzig in <span class="inline-code">src/admin/tools/ssh-verbinding-wizard.njk</span>:</p>
             <div class="code-block">
                 <code>// Wijzig van:
 const API_URL = 'https://sugar-christmas-empty-dreams.trycloudflare.com/api/syntess';
@@ -593,7 +593,7 @@ git push</code>
 
             <div class="info-box">
                 <div class="info-box-title">Logic App URL</div>
-                <p>De Logic App URL staat in de V3 wizard code. Zoek naar de <span class="inline-code">fetch</span> call in de <span class="inline-code">submitForm</span> functie.</p>
+                <p>De Logic App URL staat in de wizard code. Zoek naar de <span class="inline-code">fetch</span> call in de <span class="inline-code">submitForm</span> functie.</p>
             </div>
 
             <h3>1. Pipedrive Update</h3>
@@ -679,27 +679,15 @@ git push</code>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>V3</strong></td>
+                        <td><strong>Huidig</strong></td>
                         <td><span class="inline-code">/admin/tools/ssh-verbinding/</span></td>
                         <td><span class="status-badge status-current">Actief</span></td>
-                        <td>Huidige productieversie met alle features</td>
-                    </tr>
-                    <tr>
-                        <td><strong>V2</strong></td>
-                        <td><span class="inline-code">/admin/tools/ssh-verbinding-uitleg-v2/</span></td>
-                        <td><span class="status-badge status-done">Archief</span></td>
-                        <td>Wizard versie (heeft nog WordPress afhankelijkheden)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>V1</strong></td>
-                        <td><span class="inline-code">/admin/tools/ssh-verbinding-archief/</span></td>
-                        <td><span class="status-badge status-done">Archief</span></td>
-                        <td>Originele versie met alle info op 1 pagina</td>
+                        <td>Productieversie met SSH test en Logic App integratie</td>
                     </tr>
                 </tbody>
             </table>
 
-            <h3>V3 Features</h3>
+            <h3>Features</h3>
             <ul>
                 <li>Volledig standalone (geen WordPress afhankelijkheden)</li>
                 <li>PowerShell script embedded (download als .ps1)</li>
@@ -710,7 +698,7 @@ git push</code>
                 <li>Automatische form submit naar Logic App</li>
             </ul>
 
-            <h3>URL Parameters (V3)</h3>
+            <h3>URL Parameters</h3>
             <p>De wizard accepteert de volgende URL parameters (gebruikt door Trello/SendBoard):</p>
             <table>
                 <thead>
@@ -761,7 +749,7 @@ git push</code>
                     </tr>
                     <tr>
                         <td><strong>Formulier</strong></td>
-                        <td>Azure Logic App (URL in V3 wizard code)</td>
+                        <td>Azure Logic App (URL in wizard code)</td>
                     </tr>
                 </tbody>
             </table>
@@ -798,12 +786,12 @@ git push</code>
             <table>
                 <tbody>
                     <tr>
-                        <td><strong>V3 Wizard</strong></td>
-                        <td><span class="inline-code">src/admin/tools/ssh-verbinding-uitleg-v3.njk</span></td>
+                        <td><strong>Wizard</strong></td>
+                        <td><span class="inline-code">src/admin/tools/ssh-verbinding-wizard.njk</span></td>
                     </tr>
                     <tr>
                         <td><strong>API URL config</strong></td>
-                        <td>Zoek naar <span class="inline-code">const API_URL</span> in V3 wizard</td>
+                        <td>Zoek naar <span class="inline-code">const API_URL</span> in wizard</td>
                     </tr>
                 </tbody>
             </table>
