@@ -1539,15 +1539,25 @@ Match User notifica
             const serverType = document.getElementById('server-type').value;
             if (!serverType) {
                 document.getElementById('server-type-error').style.display = 'block';
+                // Scroll to server type selector
+                document.getElementById('server-type-error').scrollIntoView({ behavior: 'smooth', block: 'center' });
                 return false;
             }
             document.getElementById('server-type-error').style.display = 'none';
 
             // Check required fields
-            const requiredFields = ['klantnaam', 'bedrijfsnaam', 'contactpersoon', 'email', 'telefoon', 'extern-ip', 'database-pad'];
+            const requiredFields = ['klantnaam', 'bedrijfsnaam', 'contactpersoon', 'email', 'telefoon', 'extern-ip', 'firebird-poort', 'database-pad'];
             for (const field of requiredFields) {
                 const el = document.getElementById(field);
-                if (!el.value.trim()) {
+                if (!el || !el.value.trim()) {
+                    if (el) {
+                        el.focus();
+                        el.reportValidity();
+                    }
+                    return false;
+                }
+                // Also check HTML5 validity (patterns, email format, etc.)
+                if (!el.checkValidity()) {
                     el.focus();
                     el.reportValidity();
                     return false;
@@ -1558,6 +1568,11 @@ Match User notifica
             if (serverType === 'jumpserver') {
                 const internIp = document.getElementById('intern-ip');
                 if (!internIp.value.trim()) {
+                    internIp.focus();
+                    internIp.reportValidity();
+                    return false;
+                }
+                if (!internIp.checkValidity()) {
                     internIp.focus();
                     internIp.reportValidity();
                     return false;
@@ -1712,13 +1727,23 @@ Match User notifica
 
             let html = `<h4>${title}</h4>`;
             if (!isValidOutput) {
-                html += `<p>Dit lijkt geen geldige testoutput te zijn.</p>`;
+                html += `<p>Dit lijkt geen geldige testoutput te zijn. Kopieer de volledige output van het script.</p>`;
             } else {
                 html += `<ul>`;
                 html += `<li class="ps-ok">✓ ${okCount} checks geslaagd</li>`;
                 if (foutCount > 0) html += `<li class="ps-fout">✗ ${foutCount} fouten</li>`;
                 if (warnCount > 0) html += `<li class="ps-warn">⚠ ${warnCount} waarschuwingen</li>`;
                 html += `</ul>`;
+
+                // Toon specifieke fouten (zoals V1)
+                if (foutCount > 0) {
+                    const fouten = output.match(/FOUT:.*$/gm) || [];
+                    html += `<p style="margin-top: 8px;"><strong>Gevonden fouten:</strong></p><ul>`;
+                    fouten.forEach(f => {
+                        html += `<li class="ps-fout">${f}</li>`;
+                    });
+                    html += `</ul>`;
+                }
             }
 
             contentDiv.innerHTML = html;
