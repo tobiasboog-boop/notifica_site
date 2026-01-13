@@ -1,0 +1,764 @@
+---
+layout: false
+title: Waarom een SSH-verbinding? - Notifica
+permalink: /admin/tools/ssh-verbinding-uitleg/
+robots: noindex, nofollow
+---
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waarom een SSH-verbinding? - Notifica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #16136F;
+            --primary-light: #3636A2;
+            --primary-pale: #e8eaff;
+            --success: #16a34a;
+            --success-pale: #dcfce7;
+            --warning: #f59e0b;
+            --warning-pale: #fef3c7;
+            --danger: #dc2626;
+            --danger-pale: #fee2e2;
+            --info: #0284c7;
+            --info-pale: #e0f2fe;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-900: #111827;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-700);
+            background: var(--gray-50);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(22, 19, 111, 0.15);
+        }
+
+        .header-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .hero h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 32px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        .content-section h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .content-section h3 .icon {
+            font-size: 1.75rem;
+        }
+
+        .content-section p {
+            margin-bottom: 16px;
+            font-size: 1rem;
+            color: var(--gray-600);
+        }
+
+        .content-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Problem/Solution Cards */
+        .problem-solution {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin: 24px 0;
+        }
+
+        @media (max-width: 640px) {
+            .problem-solution {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .problem-card, .solution-card {
+            padding: 24px;
+            border-radius: 12px;
+        }
+
+        .problem-card {
+            background: var(--danger-pale);
+            border: 1px solid #fecaca;
+        }
+
+        .problem-card h4 {
+            color: var(--danger);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .solution-card {
+            background: var(--success-pale);
+            border: 1px solid #bbf7d0;
+        }
+
+        .solution-card h4 {
+            color: var(--success);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .problem-card p, .solution-card p {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .problem-card p {
+            color: #991b1b;
+        }
+
+        .solution-card p {
+            color: #166534;
+        }
+
+        /* Benefit Cards */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .benefit-card {
+            background: var(--gray-50);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            border: 1px solid var(--gray-200);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .benefit-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .benefit-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 8px;
+        }
+
+        .benefit-card p {
+            font-size: 0.875rem;
+            color: var(--gray-500);
+            margin: 0;
+        }
+
+        /* Visual Diagram */
+        .diagram-container {
+            background: var(--primary-pale);
+            border-radius: 12px;
+            padding: 32px;
+            margin: 24px 0;
+        }
+
+        .diagram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .diagram-box {
+            background: white;
+            border-radius: 12px;
+            padding: 20px 24px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(22, 19, 111, 0.1);
+            min-width: 140px;
+        }
+
+        .diagram-box .icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .diagram-box .label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .diagram-box .sublabel {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            margin-top: 2px;
+        }
+
+        .diagram-arrow {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .diagram-tunnel {
+            background: var(--primary);
+            color: white;
+            border-radius: 8px;
+            padding: 12px 24px;
+            text-align: center;
+        }
+
+        .diagram-tunnel .icon {
+            font-size: 1.25rem;
+        }
+
+        .diagram-tunnel .label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        /* Security List */
+        .security-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .security-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .security-list li:last-child {
+            border-bottom: none;
+        }
+
+        .security-list .check {
+            color: var(--success);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .security-list .text {
+            flex: 1;
+        }
+
+        .security-list .text strong {
+            display: block;
+            color: var(--gray-900);
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .security-list .text span {
+            font-size: 0.9rem;
+            color: var(--gray-500);
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            border-bottom: 1px solid var(--gray-200);
+            padding: 20px 0;
+        }
+
+        .faq-item:first-child {
+            padding-top: 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-item h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            font-size: 0.95rem;
+            color: var(--gray-600);
+            margin: 0;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 16px;
+            padding: 48px;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-section h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: white;
+            justify-content: center;
+        }
+
+        .cta-section p {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 28px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background: var(--gray-100);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Info Box */
+        .info-box {
+            background: var(--info-pale);
+            border: 1px solid #7dd3fc;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 24px 0;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .info-box .icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .info-box .text {
+            flex: 1;
+        }
+
+        .info-box .text strong {
+            display: block;
+            color: #0369a1;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .info-box .text p {
+            font-size: 0.9rem;
+            color: #0369a1;
+            margin: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .container {
+                padding: 32px 16px 64px;
+            }
+
+            .content-section {
+                padding: 28px 20px;
+            }
+
+            .hero h2 {
+                font-size: 1.75rem;
+            }
+
+            .cta-section {
+                padding: 32px 24px;
+            }
+
+            .diagram {
+                flex-direction: column;
+            }
+
+            .diagram-arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div>
+                <a href="/admin/" class="back-link">
+                    <span>&larr;</span>
+                    <span>Terug naar Admin</span>
+                </a>
+                <h1>SSH-verbinding voor Syntess</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero -->
+        <section class="hero">
+            <h2>Waarom hebben we een SSH-verbinding nodig?</h2>
+            <p class="subtitle">
+                Om realtime inzicht te krijgen in uw bedrijfsdata, moet Notifica veilig verbinding maken met uw Syntess/Firebird database. Hier leggen we uit waarom en hoe we dit doen.
+            </p>
+        </section>
+
+        <!-- Wat willen we bereiken -->
+        <section class="content-section">
+            <h3><span class="icon">🎯</span> Wat willen we bereiken?</h3>
+            <p>
+                Notifica bouwt Power BI dashboards die u realtime inzicht geven in uw bedrijfsprestaties: omzet, projecten, voorraad, uren en meer. Deze dashboards tonen actuele data uit uw Syntess-systeem.
+            </p>
+            <p>
+                Om dit mogelijk te maken, moet ons systeem <strong>beveiligd toegang</strong> krijgen tot uw Firebird database. We halen alleen de benodigde data op - we schrijven nooit naar uw database.
+            </p>
+
+            <div class="problem-solution">
+                <div class="problem-card">
+                    <h4>Zonder veilige verbinding</h4>
+                    <p>
+                        Directe databaseverbindingen via internet zijn kwetsbaar voor afluisteren en aanvallen. Gevoelige bedrijfsdata zou onderschept kunnen worden.
+                    </p>
+                </div>
+                <div class="solution-card">
+                    <h4>Met SSH-tunnel</h4>
+                    <p>
+                        Alle data wordt versleuteld verzonden via een beveiligde tunnel. Alleen Notifica kan verbinding maken, en alleen lezen is toegestaan.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hoe werkt het -->
+        <section class="content-section">
+            <h3><span class="icon">🔐</span> Hoe werkt de SSH-tunnel?</h3>
+            <p>
+                Een SSH-tunnel is vergelijkbaar met een beveiligde, privétunnel door het internet. Stel het voor als een gepantserde corridor tussen uw server en ons systeem, waar niemand anders doorheen kan.
+            </p>
+
+            <div class="diagram-container">
+                <div class="diagram">
+                    <div class="diagram-box">
+                        <div class="icon">🏢</div>
+                        <div class="label">Notifica</div>
+                        <div class="sublabel">Power BI systeem</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-tunnel">
+                        <div class="icon">🔒</div>
+                        <div class="label">SSH-tunnel (versleuteld)</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-box">
+                        <div class="icon">🖥️</div>
+                        <div class="label">Uw server</div>
+                        <div class="sublabel">Syntess/Firebird</div>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                De SSH-verbinding zorgt ervoor dat:
+            </p>
+            <ul class="security-list">
+                <li>
+                    <span class="check">✓</span>
+                    <div class="text">
+                        <strong>Alleen Notifica kan verbinden</strong>
+                        <span>De firewall staat alleen onze specifieke IP-adressen toe</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="check">✓</span>
+                    <div class="text">
+                        <strong>Alle data is versleuteld</strong>
+                        <span>Niemand kan de data onderweg onderscheppen of lezen</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="check">✓</span>
+                    <div class="text">
+                        <strong>Geen shell-toegang</strong>
+                        <span>De SSH-gebruiker kan alleen een tunnel opzetten, geen commando's uitvoeren</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="check">✓</span>
+                    <div class="text">
+                        <strong>Alleen de database is bereikbaar</strong>
+                        <span>De tunnel geeft uitsluitend toegang tot de Firebird-poort, niets anders</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Voordelen voor u -->
+        <section class="content-section">
+            <h3><span class="icon">✨</span> Wat levert dit u op?</h3>
+            <p>
+                Met de SSH-verbinding op zijn plek, krijgt u toegang tot krachtige dashboards die direct uit uw Syntess-systeem worden gevoed:
+            </p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="icon">📊</div>
+                    <h4>Realtime inzicht</h4>
+                    <p>Dashboards tonen actuele data, geen verouderde exports</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon">⚡</div>
+                    <h4>Automatisch bijgewerkt</h4>
+                    <p>Data wordt automatisch opgehaald, geen handmatig werk</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon">🔒</div>
+                    <h4>Maximale beveiliging</h4>
+                    <p>Industriestandaard encryptie beschermt uw data</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="icon">💡</div>
+                <div class="text">
+                    <strong>Eenmalige configuratie</strong>
+                    <p>De SSH-verbinding hoeft slechts eenmaal te worden ingesteld. Daarna werkt alles automatisch en onderhouden wij de verbinding voor u.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wat moet u doen -->
+        <section class="content-section">
+            <h3><span class="icon">📋</span> Wat moet u doen?</h3>
+            <p>
+                De configuratie wordt uitgevoerd door uw systeembeheerder of IT-partner. In de meeste gevallen duurt dit <strong>30-60 minuten</strong>. De stappen zijn:
+            </p>
+
+            <ul class="security-list">
+                <li>
+                    <span class="check">1</span>
+                    <div class="text">
+                        <strong>Firewall configureren</strong>
+                        <span>Onze IP-adressen toestaan op poort 49222</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="check">2</span>
+                    <div class="text">
+                        <strong>OpenSSH installeren</strong>
+                        <span>Standaard onderdeel van Windows Server, alleen activeren</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="check">3</span>
+                    <div class="text">
+                        <strong>Gebruiker aanmaken</strong>
+                        <span>Een speciale 'notifica' gebruiker met beperkte rechten</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="check">4</span>
+                    <div class="text">
+                        <strong>Configuratie testen</strong>
+                        <span>Met ons online formulier direct controleren of alles werkt</span>
+                    </div>
+                </li>
+            </ul>
+
+            <p>
+                We hebben een uitgebreid stappenplan met duidelijke instructies. Uw IT-partner kan dit zelfstandig uitvoeren, of wij kunnen ondersteuning bieden.
+            </p>
+        </section>
+
+        <!-- Veelgestelde vragen -->
+        <section class="content-section">
+            <h3><span class="icon">❓</span> Veelgestelde vragen</h3>
+
+            <div class="faq-item">
+                <h4>Is dit veilig voor mijn bedrijfsdata?</h4>
+                <p>
+                    Ja. SSH is de industriestandaard voor beveiligde verbindingen en wordt wereldwijd gebruikt door banken, overheden en grote bedrijven. De configuratie die wij gebruiken beperkt de toegang tot alleen lezen van de database - niets meer.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Kan Notifica wijzigingen maken in mijn Syntess?</h4>
+                <p>
+                    Nee. De SSH-gebruiker heeft alleen leesrechten op de database. Bovendien zijn Firebird-logins (waarmee je daadwerkelijk data kunt wijzigen) apart beveiligd. Wij kunnen uw data alleen lezen, nooit wijzigen.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Wat als mijn server herstart?</h4>
+                <p>
+                    De SSH-service is geconfigureerd om automatisch te starten bij het opstarten van Windows. Na een herstart is de verbinding direct weer beschikbaar.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Heeft dit impact op de performance van Syntess?</h4>
+                <p>
+                    Minimaal. We halen data op in batches tijdens daluren en cachen de resultaten. De belasting op uw server is vergelijkbaar met een extra gebruiker die af en toe een rapport opvraagt.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Wie kan de verbinding maken?</h4>
+                <p>
+                    Alleen onze specifieke IP-adressen zijn toegestaan in uw firewall. Zelfs als iemand het wachtwoord zou kennen, kan er geen verbinding worden gemaakt vanaf een ander IP-adres.
+                </p>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="content-section cta-section">
+            <h3>Klaar om te beginnen?</h3>
+            <p>
+                Volg het stappenplan om de SSH-verbinding te configureren, of neem contact op als u vragen heeft.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://notifica.nl/ssh-verbinding-stappenplan-syntess" class="btn btn-primary" target="_blank">
+                    <span>📝</span>
+                    <span>Naar het stappenplan</span>
+                </a>
+                <a href="https://notifica.nl/contact" class="btn btn-secondary" target="_blank">
+                    <span>💬</span>
+                    <span>Contact opnemen</span>
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
