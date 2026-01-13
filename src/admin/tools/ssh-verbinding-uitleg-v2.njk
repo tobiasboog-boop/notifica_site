@@ -1,0 +1,1907 @@
+---
+layout: false
+title: SSH-verbinding configureren - Notifica
+permalink: /admin/tools/ssh-verbinding-uitleg-v2/
+robots: noindex, nofollow
+---
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSH-verbinding configureren - Notifica (V2)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #16136F;
+            --primary-light: #3636A2;
+            --primary-pale: #e8eaff;
+            --success: #16a34a;
+            --success-pale: #dcfce7;
+            --warning: #f59e0b;
+            --warning-pale: #fef3c7;
+            --danger: #dc2626;
+            --danger-pale: #fee2e2;
+            --info: #0284c7;
+            --info-pale: #e0f2fe;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-900: #111827;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-700);
+            background: var(--gray-50);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(22, 19, 111, 0.15);
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .header p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .header-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        /* Progress indicator */
+        .progress-bar {
+            background: white;
+            border-bottom: 1px solid var(--gray-200);
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .progress-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .progress-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .progress-steps::before {
+            content: '';
+            position: absolute;
+            top: 16px;
+            left: 40px;
+            right: 40px;
+            height: 2px;
+            background: var(--gray-200);
+        }
+
+        .progress-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .progress-step .number {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--gray-200);
+            color: var(--gray-500);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            transition: all 0.3s;
+        }
+
+        .progress-step.active .number {
+            background: var(--primary);
+            color: white;
+        }
+
+        .progress-step.completed .number {
+            background: var(--success);
+            color: white;
+        }
+
+        .progress-step .label {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            text-align: center;
+            max-width: 80px;
+        }
+
+        .progress-step.active .label {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 32px 24px 80px;
+        }
+
+        /* Sections */
+        .section {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        .section.highlight {
+            border-top: 3px solid var(--primary);
+        }
+
+        .section h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section h2 .step-num {
+            background: var(--primary);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+        }
+
+        .section h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin: 24px 0 12px 0;
+        }
+
+        .section p {
+            color: var(--gray-600);
+            margin-bottom: 12px;
+        }
+
+        /* Summary cards */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 640px) {
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .summary-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .summary-card .icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .summary-card h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 4px;
+        }
+
+        .summary-card p {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            margin: 0;
+        }
+
+        /* Collapsible info */
+        .info-collapse {
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+
+        .info-collapse summary {
+            padding: 14px 16px;
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--gray-700);
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+
+        .info-collapse summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .info-collapse summary::after {
+            content: "▼";
+            font-size: 0.7rem;
+            color: var(--gray-400);
+            transition: transform 0.2s;
+        }
+
+        .info-collapse[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        .info-collapse .collapse-content {
+            padding: 16px;
+            border-top: 1px solid var(--gray-200);
+            background: var(--gray-50);
+            font-size: 0.9rem;
+        }
+
+        /* Form elements */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--gray-700);
+            font-size: 0.9rem;
+        }
+
+        .form-group label.required::after {
+            content: " *";
+            color: var(--danger);
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="password"],
+        .form-group input[type="number"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--gray-300);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(22, 19, 111, 0.1);
+        }
+
+        .form-group .hint {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            margin-top: 6px;
+        }
+
+        .form-group textarea {
+            font-family: 'SF Mono', 'Consolas', monospace;
+            font-size: 0.85rem;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        @media (max-width: 640px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Server type selector */
+        .server-type-selector {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 16px 0;
+        }
+
+        @media (max-width: 500px) {
+            .server-type-selector {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .server-type-option {
+            border: 2px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+
+        .server-type-option:hover {
+            border-color: var(--gray-300);
+            background: var(--gray-50);
+        }
+
+        .server-type-option.selected {
+            border-color: var(--primary);
+            background: var(--primary-pale);
+        }
+
+        .server-type-option .icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .server-type-option h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 4px;
+        }
+
+        .server-type-option p {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            margin: 0;
+        }
+
+        /* Conditional fields */
+        .conditional-field {
+            display: none;
+        }
+
+        .conditional-field.visible {
+            display: block;
+        }
+
+        /* Info & Warning boxes */
+        .info-box {
+            background: var(--info-pale);
+            border: 1px solid #7dd3fc;
+            border-radius: 10px;
+            padding: 16px;
+            margin: 16px 0;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            font-size: 0.9rem;
+        }
+
+        .info-box .icon {
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .info-box .text strong {
+            display: block;
+            color: #0369a1;
+            margin-bottom: 4px;
+        }
+
+        .info-box .text p {
+            color: #0369a1;
+            margin: 0;
+            font-size: 0.85rem;
+        }
+
+        .warning-box {
+            background: var(--warning-pale);
+            border: 1px solid #fcd34d;
+            border-radius: 10px;
+            padding: 16px;
+            margin: 16px 0;
+            font-size: 0.9rem;
+        }
+
+        .warning-box strong {
+            color: #92400e;
+        }
+
+        .warning-box p {
+            color: #92400e;
+            margin: 0;
+        }
+
+        .success-box {
+            background: var(--success-pale);
+            border: 1px solid #bbf7d0;
+            border-radius: 10px;
+            padding: 16px;
+            margin: 16px 0;
+            font-size: 0.9rem;
+        }
+
+        .success-box strong {
+            color: #166534;
+        }
+
+        .success-box p {
+            color: #166534;
+            margin: 0;
+        }
+
+        /* Code blocks */
+        .code-block {
+            background: #1e293b;
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin: 12px 0;
+            overflow-x: auto;
+            font-family: 'SF Mono', 'Consolas', 'Monaco', monospace;
+            font-size: 0.85rem;
+            color: #e2e8f0;
+            line-height: 1.5;
+            white-space: pre;
+        }
+
+        code {
+            background: var(--gray-100);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'SF Mono', 'Consolas', monospace;
+            font-size: 0.85em;
+            color: var(--gray-900);
+        }
+
+        /* Step blocks in configuration */
+        .config-step {
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+
+        .config-step-header {
+            background: var(--gray-50);
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+        .config-step-header:hover {
+            background: var(--gray-100);
+        }
+
+        .config-step-num {
+            background: var(--primary);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .config-step.completed .config-step-num {
+            background: var(--success);
+        }
+
+        .config-step-title {
+            flex: 1;
+            font-weight: 600;
+            color: var(--gray-900);
+            font-size: 0.95rem;
+        }
+
+        .config-step-check {
+            color: var(--success);
+            font-size: 1.25rem;
+            display: none;
+        }
+
+        .config-step.completed .config-step-check {
+            display: block;
+        }
+
+        .config-step-content {
+            padding: 20px;
+            border-top: 1px solid var(--gray-200);
+            display: none;
+        }
+
+        .config-step.open .config-step-content {
+            display: block;
+        }
+
+        .config-step-content p {
+            margin-bottom: 12px;
+        }
+
+        .config-step-content ol {
+            margin: 12px 0;
+            padding-left: 20px;
+            color: var(--gray-600);
+        }
+
+        .config-step-content ol li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        /* Checkbox for step completion */
+        .step-complete-check {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            margin-top: 16px;
+            cursor: pointer;
+        }
+
+        .step-complete-check:hover {
+            background: var(--gray-100);
+        }
+
+        .step-complete-check input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--primary);
+            cursor: pointer;
+        }
+
+        .step-complete-check label {
+            font-size: 0.9rem;
+            color: var(--gray-700);
+            cursor: pointer;
+            flex: 1;
+        }
+
+        /* Expandable details */
+        .expand-details {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            margin: 12px 0;
+        }
+
+        .expand-details summary {
+            padding: 12px 16px;
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--gray-700);
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+
+        .expand-details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .expand-details summary::after {
+            content: "+";
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: var(--gray-400);
+        }
+
+        .expand-details[open] summary::after {
+            content: "−";
+        }
+
+        .expand-details[open] summary {
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .expand-details .details-content {
+            padding: 16px;
+            font-size: 0.9rem;
+            background: var(--gray-50);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: #0f0c4a;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: var(--gray-500);
+            color: white;
+        }
+
+        .btn-secondary:hover:not(:disabled) {
+            background: var(--gray-600);
+        }
+
+        .btn-outline {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-pale);
+        }
+
+        .btn:disabled {
+            background: var(--gray-300);
+            color: var(--gray-500);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        /* Navigation buttons */
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        /* Test results */
+        #test-results {
+            display: none;
+            margin-top: 20px;
+            background: var(--gray-50);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--gray-200);
+        }
+
+        #test-results h4 {
+            margin: 0 0 16px 0;
+            font-size: 1rem;
+            color: var(--gray-900);
+        }
+
+        .test-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 14px;
+            background: white;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            border: 1px solid var(--gray-200);
+            font-size: 0.9rem;
+        }
+
+        .test-icon {
+            font-size: 1.25rem;
+            width: 28px;
+            text-align: center;
+        }
+
+        .test-icon.success { color: var(--success); }
+        .test-icon.error { color: var(--danger); }
+        .test-icon.pending { color: var(--gray-400); }
+
+        .test-message { flex: 1; }
+
+        .test-detail {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            margin-top: 4px;
+        }
+
+        /* Spinner */
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--gray-200);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+            margin-right: 8px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* PowerShell validation */
+        .ps-validation {
+            margin: 16px 0;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .ps-validation.success {
+            background: var(--success-pale);
+            border: 1px solid #bbf7d0;
+        }
+
+        .ps-validation.warning {
+            background: var(--warning-pale);
+            border: 1px solid #fcd34d;
+        }
+
+        .ps-validation.error {
+            background: var(--danger-pale);
+            border: 1px solid #fecaca;
+        }
+
+        .ps-validation h4 {
+            margin: 0 0 8px 0;
+            font-size: 0.95rem;
+        }
+
+        .ps-validation ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .ps-ok { color: var(--success); }
+        .ps-fout { color: var(--danger); }
+        .ps-warn { color: var(--warning); }
+
+        /* Security list */
+        .security-list {
+            list-style: none;
+            margin: 16px 0;
+        }
+
+        .security-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--gray-100);
+            font-size: 0.9rem;
+        }
+
+        .security-list li:last-child {
+            border-bottom: none;
+        }
+
+        .security-list .check {
+            color: var(--success);
+            font-size: 1rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* Hidden sections for wizard */
+        .wizard-section {
+            display: none;
+        }
+
+        .wizard-section.active {
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .container {
+                padding: 24px 16px 64px;
+            }
+
+            .section {
+                padding: 24px 20px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .progress-steps::before {
+                left: 20px;
+                right: 20px;
+            }
+
+            .progress-step .label {
+                font-size: 0.65rem;
+                max-width: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <span class="header-badge">VOOR IT-BEHEERDERS</span>
+            <h1>SSH-verbinding configureren</h1>
+            <p>Beveiligde toegang tot de ERP-database van uw klant voor Notifica dashboards</p>
+        </div>
+    </header>
+
+    <!-- Progress bar -->
+    <div class="progress-bar">
+        <div class="progress-content">
+            <div class="progress-steps">
+                <div class="progress-step active" data-step="1">
+                    <div class="number">1</div>
+                    <div class="label">Voorbereiding</div>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <div class="number">2</div>
+                    <div class="label">Configuratie</div>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <div class="number">3</div>
+                    <div class="label">Test & Afronden</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <form id="ssh-config-form">
+            <!-- Hidden fields -->
+            <input type="hidden" id="klantnummer" name="klantnummer" value="">
+            <input type="hidden" id="referentie" name="referentie" value="">
+            <input type="hidden" id="kaarttitel" name="kaarttitel" value="">
+            <input type="hidden" id="cardid" name="cardid" value="">
+
+            <!-- ============================================ -->
+            <!-- STAP 1: VOORBEREIDING -->
+            <!-- ============================================ -->
+            <div class="wizard-section active" id="step-1">
+
+                <!-- Ticket info (if from URL) -->
+                <div id="ticket-info-display" class="info-box" style="display: none; margin-bottom: 24px;">
+                    <div class="icon">🎫</div>
+                    <div class="text" id="ticket-info-content"></div>
+                </div>
+
+                <!-- Samenvatting -->
+                <div class="section">
+                    <h2>Wat gaan we doen?</h2>
+                    <p>U gaat een beveiligde SSH-tunnel opzetten zodat Notifica veilig data kan ophalen uit de database van uw klant voor Power BI dashboards.</p>
+
+                    <div class="summary-grid">
+                        <div class="summary-card">
+                            <div class="icon">⏱️</div>
+                            <h4>30-60 minuten</h4>
+                            <p>Eenmalige configuratie</p>
+                        </div>
+                        <div class="summary-card">
+                            <div class="icon">🔒</div>
+                            <h4>Alleen lezen</h4>
+                            <p>Notifica kan geen data wijzigen</p>
+                        </div>
+                        <div class="summary-card">
+                            <div class="icon">🛡️</div>
+                            <h4>IP-whitelist</h4>
+                            <p>Alleen Notifica IP's toegestaan</p>
+                        </div>
+                    </div>
+
+                    <details class="info-collapse">
+                        <summary>Meer over beveiliging</summary>
+                        <div class="collapse-content">
+                            <ul class="security-list">
+                                <li>
+                                    <span class="check">✓</span>
+                                    <span>Poort 49222 alleen toegankelijk vanaf Notifica IP-adressen</span>
+                                </li>
+                                <li>
+                                    <span class="check">✓</span>
+                                    <span>SSH-gebruiker heeft alleen tunnel-toegang, geen shell</span>
+                                </li>
+                                <li>
+                                    <span class="check">✓</span>
+                                    <span>Database-poort is alleen lokaal bereikbaar</span>
+                                </li>
+                                <li>
+                                    <span class="check">✓</span>
+                                    <span>Aparte database-authenticatie vereist</span>
+                                </li>
+                                <li>
+                                    <span class="check">✓</span>
+                                    <span>Alle verbindingen worden gelogd</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Contactgegevens -->
+                <div class="section highlight">
+                    <h2><span class="step-num">1</span> Uw gegevens</h2>
+                    <p>Vul eerst uw contactgegevens in zodat we u kunnen bereiken bij vragen.</p>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="klantnaam" class="required">Naam van de eindklant</label>
+                            <input type="text" id="klantnaam" name="klantnaam" required placeholder="Bedrijf waarvoor dit wordt opgezet">
+                        </div>
+                        <div class="form-group">
+                            <label for="bedrijfsnaam" class="required">Uw bedrijfsnaam (IT-leverancier)</label>
+                            <input type="text" id="bedrijfsnaam" name="bedrijfsnaam" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactpersoon" class="required">Uw naam</label>
+                            <input type="text" id="contactpersoon" name="contactpersoon" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="required">E-mailadres</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefoon" class="required">Telefoonnummer</label>
+                        <input type="tel" id="telefoon" name="telefoon" required>
+                    </div>
+                </div>
+
+                <!-- Server type keuze -->
+                <div class="section highlight">
+                    <h2><span class="step-num">2</span> Type installatie</h2>
+                    <p>Waar wordt OpenSSH Server geïnstalleerd?</p>
+
+                    <div class="server-type-selector">
+                        <div class="server-type-option" data-value="direct" onclick="selectServerType('direct')">
+                            <div class="icon">🖥️</div>
+                            <h4>Direct op database server</h4>
+                            <p>OpenSSH draait op dezelfde server als de database</p>
+                        </div>
+                        <div class="server-type-option" data-value="jumpserver" onclick="selectServerType('jumpserver')">
+                            <div class="icon">🔀</div>
+                            <h4>Via jump server</h4>
+                            <p>OpenSSH draait op een andere server</p>
+                        </div>
+                    </div>
+                    <input type="hidden" id="server-type" name="server-type" required>
+
+                    <div id="server-type-error" class="warning-box" style="display: none;">
+                        <p>Selecteer eerst het type installatie om door te gaan.</p>
+                    </div>
+                </div>
+
+                <!-- Server gegevens -->
+                <div class="section highlight">
+                    <h2><span class="step-num">3</span> Server gegevens</h2>
+                    <p>Deze informatie heeft u nodig tijdens de configuratie.</p>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="extern-ip" class="required">Extern IP-adres</label>
+                            <input type="text" id="extern-ip" name="extern-ip" required
+                                   pattern="^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
+                                   placeholder="bijv. 203.0.113.50">
+                            <div class="hint">Het publieke IP-adres waarop wij het netwerk kunnen bereiken</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="firebird-poort" class="required">Database poort</label>
+                            <input type="number" id="firebird-poort" name="firebird-poort" value="3050" required min="1" max="65535">
+                            <div class="hint">Standaard is 3050 voor Firebird</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group conditional-field" id="intern-ip-group">
+                        <label for="intern-ip" class="required">Intern IP-adres database server</label>
+                        <input type="text" id="intern-ip" name="intern-ip"
+                               pattern="^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
+                               placeholder="bijv. 192.168.1.100">
+                        <div class="hint">Het interne IP-adres van de database server (alleen bij jump server)</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="database-pad" class="required">Volledig pad naar database</label>
+                        <input type="text" id="database-pad" name="database-pad" required
+                               placeholder="bijv. E:\data\atrium.fdb">
+                        <div class="hint">Het volledige pad inclusief bestandsnaam op de database server</div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="icon">💡</div>
+                        <div class="text">
+                            <strong>Tip</strong>
+                            <p>Noteer deze gegevens, u heeft ze nodig bij stap 6 (SSH configuratie).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <div></div>
+                    <button type="button" class="btn btn-primary" onclick="goToStep(2)">
+                        Naar configuratie →
+                    </button>
+                </div>
+            </div>
+
+            <!-- ============================================ -->
+            <!-- STAP 2: CONFIGURATIE -->
+            <!-- ============================================ -->
+            <div class="wizard-section" id="step-2">
+
+                <div class="section">
+                    <h2>Configuratiestappen</h2>
+                    <p>Volg onderstaande stappen op de server. Klik op een stap om de instructies te zien.</p>
+
+                    <!-- Referentie gegevens -->
+                    <div class="info-box" style="margin-bottom: 24px;">
+                        <div class="icon">📋</div>
+                        <div class="text">
+                            <strong>Uw configuratie</strong>
+                            <p id="config-summary">
+                                Type: <span id="sum-type">-</span> |
+                                Extern IP: <span id="sum-extern-ip">-</span> |
+                                Database poort: <span id="sum-poort">-</span>
+                                <span id="sum-intern-ip-container" style="display:none;"> | Intern IP: <span id="sum-intern-ip">-</span></span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Stap 1: Firewall -->
+                    <div class="config-step open" id="config-step-1">
+                        <div class="config-step-header" onclick="toggleConfigStep(1)">
+                            <div class="config-step-num">1</div>
+                            <div class="config-step-title">Firewall configureren</div>
+                            <div class="config-step-check">✓</div>
+                        </div>
+                        <div class="config-step-content">
+                            <p>Sta TCP-poort <strong>49222</strong> toe in de firewall, maar <strong>uitsluitend</strong> voor deze IP-adressen:</p>
+                            <div class="code-block">87.106.209.107
+85.215.150.12
+85.215.208.169
+85.215.176.135</div>
+                            <div class="step-complete-check">
+                                <input type="checkbox" id="check-firewall" onchange="updateStepStatus(1)">
+                                <label for="check-firewall">Firewall geconfigureerd met whitelist</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stap 2: Port forwarding -->
+                    <div class="config-step" id="config-step-2">
+                        <div class="config-step-header" onclick="toggleConfigStep(2)">
+                            <div class="config-step-num">2</div>
+                            <div class="config-step-title">Port forwarding instellen</div>
+                            <div class="config-step-check">✓</div>
+                        </div>
+                        <div class="config-step-content">
+                            <p>Stel op de router een port forward in:</p>
+                            <div class="code-block">Externe poort 49222 → OpenSSH server (interne poort 49222)</div>
+                            <div class="info-box">
+                                <div class="icon">ℹ️</div>
+                                <div class="text">
+                                    <p>Wij loggen extern in op poort 49222 en moeten direct uitkomen op de server waar OpenSSH draait.</p>
+                                </div>
+                            </div>
+                            <div class="step-complete-check">
+                                <input type="checkbox" id="check-portforward" onchange="updateStepStatus(2)">
+                                <label for="check-portforward">Port forwarding ingesteld</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stap 3: OpenSSH installeren -->
+                    <div class="config-step" id="config-step-3">
+                        <div class="config-step-header" onclick="toggleConfigStep(3)">
+                            <div class="config-step-num">3</div>
+                            <div class="config-step-title">OpenSSH Server installeren</div>
+                            <div class="config-step-check">✓</div>
+                        </div>
+                        <div class="config-step-content">
+                            <p>OpenSSH Server is een standaard onderdeel van Windows Server.</p>
+
+                            <details class="expand-details">
+                                <summary>Windows Server 2019+</summary>
+                                <div class="details-content">
+                                    <p><strong>Via PowerShell:</strong></p>
+                                    <div class="code-block">Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+Start-Service sshd
+Set-Service -Name sshd -StartupType Automatic</div>
+                                </div>
+                            </details>
+
+                            <details class="expand-details">
+                                <summary>Windows Server 2016 en ouder</summary>
+                                <div class="details-content">
+                                    <ol>
+                                        <li>Download van <a href="https://github.com/PowerShell/Win32-OpenSSH/releases" target="_blank">github.com/PowerShell/Win32-OpenSSH/releases</a></li>
+                                        <li>Pak uit naar <code>C:\Program Files\OpenSSH</code></li>
+                                        <li>Voer uit:</li>
+                                    </ol>
+                                    <div class="code-block">cd "C:\Program Files\OpenSSH"
+.\install-sshd.ps1
+Start-Service sshd
+Set-Service -Name sshd -StartupType Automatic</div>
+                                </div>
+                            </details>
+
+                            <div class="step-complete-check">
+                                <input type="checkbox" id="check-openssh" onchange="updateStepStatus(3)">
+                                <label for="check-openssh">OpenSSH Server geïnstalleerd en gestart</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stap 4: Gebruiker aanmaken -->
+                    <div class="config-step" id="config-step-4">
+                        <div class="config-step-header" onclick="toggleConfigStep(4)">
+                            <div class="config-step-num">4</div>
+                            <div class="config-step-title">Gebruiker 'notifica' aanmaken</div>
+                            <div class="config-step-check">✓</div>
+                        </div>
+                        <div class="config-step-content">
+                            <p>Maak een Windows-gebruiker aan met gebruikersnaam <code>notifica</code>.</p>
+
+                            <details class="expand-details">
+                                <summary>Instructies</summary>
+                                <div class="details-content">
+                                    <p><strong>Via PowerShell:</strong></p>
+                                    <div class="code-block">$password = Read-Host -AsSecureString "Voer wachtwoord in"
+New-LocalUser -Name "notifica" -Password $password -PasswordNeverExpires</div>
+                                    <p><strong>Of via GUI:</strong> <code>lusrmgr.msc</code> → Users → New User</p>
+                                    <p>Zorg dat "Password never expires" aangevinkt is.</p>
+                                </div>
+                            </details>
+
+                            <div class="warning-box">
+                                <p><strong>Onthoud het wachtwoord!</strong> Dit heeft u later nodig.</p>
+                            </div>
+
+                            <div class="step-complete-check">
+                                <input type="checkbox" id="check-user" onchange="updateStepStatus(4)">
+                                <label for="check-user">Gebruiker 'notifica' aangemaakt</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stap 5: Rechten op database map -->
+                    <div class="config-step" id="config-step-5">
+                        <div class="config-step-header" onclick="toggleConfigStep(5)">
+                            <div class="config-step-num">5</div>
+                            <div class="config-step-title">Leesrechten op database map</div>
+                            <div class="config-step-check">✓</div>
+                        </div>
+                        <div class="config-step-content">
+                            <p>Geef gebruiker <code>notifica</code> <strong>leesrechten</strong> op de map waar de database staat.</p>
+
+                            <details class="expand-details">
+                                <summary>Instructies</summary>
+                                <div class="details-content">
+                                    <ol>
+                                        <li>Navigeer naar de database map (bijv. <code>E:\data\</code>)</li>
+                                        <li>Rechtsklik → Properties → Security tab</li>
+                                        <li>Edit → Add → typ <code>notifica</code></li>
+                                        <li>Geef minimaal <strong>Read</strong> rechten</li>
+                                    </ol>
+                                </div>
+                            </details>
+
+                            <div class="step-complete-check">
+                                <input type="checkbox" id="check-rechten" onchange="updateStepStatus(5)">
+                                <label for="check-rechten">Leesrechten ingesteld</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stap 6: SSH configuratie -->
+                    <div class="config-step" id="config-step-6">
+                        <div class="config-step-header" onclick="toggleConfigStep(6)">
+                            <div class="config-step-num">6</div>
+                            <div class="config-step-title">SSH configuratie aanpassen</div>
+                            <div class="config-step-check">✓</div>
+                        </div>
+                        <div class="config-step-content">
+                            <p>Open het configuratiebestand:</p>
+                            <div class="code-block">notepad "C:\ProgramData\ssh\sshd_config"</div>
+
+                            <p><strong>Voeg deze instellingen toe/pas aan:</strong></p>
+                            <div class="code-block" id="ssh-config-block">Port 49222
+PasswordAuthentication yes
+ChallengeResponseAuthentication no
+PermitEmptyPasswords no
+TCPKeepAlive yes
+AllowTcpForwarding local
+PermitOpen localhost:3050
+
+Match User notifica
+	ForceCommand cmd /c "echo Geen shell toegang toegestaan && exit"
+	PermitTTY no
+	X11Forwarding no
+	AllowAgentForwarding no</div>
+
+                            <div class="warning-box" id="permitopen-note">
+                                <p><strong>Let op <code>PermitOpen</code>:</strong> De waarde hierboven is gebaseerd op uw invoer. Controleer of poort <span id="note-poort">3050</span> correct is.</p>
+                            </div>
+
+                            <div class="step-complete-check">
+                                <input type="checkbox" id="check-sshconfig" onchange="updateStepStatus(6)">
+                                <label for="check-sshconfig">SSH configuratie aangepast</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stap 7: Service herstarten -->
+                    <div class="config-step" id="config-step-7">
+                        <div class="config-step-header" onclick="toggleConfigStep(7)">
+                            <div class="config-step-num">7</div>
+                            <div class="config-step-title">SSH service herstarten</div>
+                            <div class="config-step-check">✓</div>
+                        </div>
+                        <div class="config-step-content">
+                            <p>Herstart de SSH service om de wijzigingen toe te passen:</p>
+                            <div class="code-block">Restart-Service sshd</div>
+
+                            <div class="step-complete-check">
+                                <input type="checkbox" id="check-restart" onchange="updateStepStatus(7)">
+                                <label for="check-restart">SSH service herstart</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stap 8: PowerShell test -->
+                    <div class="config-step" id="config-step-8">
+                        <div class="config-step-header" onclick="toggleConfigStep(8)">
+                            <div class="config-step-num">8</div>
+                            <div class="config-step-title">Configuratie testen met script</div>
+                            <div class="config-step-check">✓</div>
+                        </div>
+                        <div class="config-step-content">
+                            <p>Download en voer het testscript uit:</p>
+
+                            <div class="info-box">
+                                <div class="icon">📥</div>
+                                <div class="text">
+                                    <strong>Download</strong>
+                                    <p><a href="https://notifica.nl/wp-content/uploads/2026/01/Test-SSHConfiguratie.txt" download="Test-SSHConfiguratie.ps1" style="color: #0369a1;">Test-SSHConfiguratie.ps1</a></p>
+                                </div>
+                            </div>
+
+                            <ol>
+                                <li>Open PowerShell als Administrator</li>
+                                <li>Voer uit: <code>.\Test-SSHConfiguratie.ps1</code></li>
+                                <li>Kopieer de volledige output</li>
+                            </ol>
+
+                            <div class="step-complete-check">
+                                <input type="checkbox" id="check-test" onchange="updateStepStatus(8)">
+                                <label for="check-test">Testscript uitgevoerd en output gekopieerd</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button type="button" class="btn btn-outline" onclick="goToStep(1)">
+                        ← Terug
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="goToStep(3)" id="btn-to-step3">
+                        Naar test & afronden →
+                    </button>
+                </div>
+            </div>
+
+            <!-- ============================================ -->
+            <!-- STAP 3: TEST & AFRONDEN -->
+            <!-- ============================================ -->
+            <div class="wizard-section" id="step-3">
+
+                <div class="section highlight">
+                    <h2>PowerShell testresultaat</h2>
+                    <p>Plak hier de output van het PowerShell testscript.</p>
+
+                    <div class="form-group">
+                        <textarea id="powershell-output" name="powershell-output" rows="8" required
+                            placeholder="Plak hier de volledige output van Test-SSHConfiguratie.ps1..."></textarea>
+                    </div>
+
+                    <div id="ps-validation" class="ps-validation" style="display: none;">
+                        <div id="ps-validation-content"></div>
+                    </div>
+                </div>
+
+                <div class="section highlight">
+                    <h2>Inloggegevens</h2>
+
+                    <div class="warning-box">
+                        <p><strong>Let op:</strong> Deze gegevens worden versleuteld verzonden en niet opgeslagen. Ze worden alleen gebruikt voor de test en doorgestuurd naar Notifica.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ssh-wachtwoord" class="required">SSH wachtwoord (gebruiker: notifica)</label>
+                        <input type="password" id="ssh-wachtwoord" name="ssh-wachtwoord" required>
+                        <div class="hint">Het wachtwoord dat u in stap 4 heeft ingesteld</div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="db-gebruiker" class="required">Database gebruiker</label>
+                            <input type="text" id="db-gebruiker" name="db-gebruiker" value="atrium" required>
+                            <div class="hint">Standaard: atrium</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="db-wachtwoord" class="required">Database wachtwoord</label>
+                            <input type="password" id="db-wachtwoord" name="db-wachtwoord" required>
+                            <div class="hint">Standaard: syntess</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section highlight">
+                    <h2>Test en verstuur</h2>
+                    <p>Klik op "Test configuratie" om te controleren of alles correct is ingesteld.</p>
+
+                    <div class="button-group">
+                        <button type="button" id="btn-test" class="btn btn-secondary" onclick="runTest()">
+                            🔍 Test configuratie
+                        </button>
+                        <button type="submit" id="btn-submit" class="btn btn-primary" disabled>
+                            📤 Verstuur formulier
+                        </button>
+                    </div>
+
+                    <div id="test-required-msg" class="info-box" style="margin-top: 20px;">
+                        <div class="icon">ℹ️</div>
+                        <div class="text">
+                            <p>Voer eerst een succesvolle test uit voordat u kunt versturen.</p>
+                        </div>
+                    </div>
+
+                    <div id="test-results">
+                        <h4>Testresultaten</h4>
+                        <div id="test-items"></div>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button type="button" class="btn btn-outline" onclick="goToStep(2)">
+                        ← Terug naar configuratie
+                    </button>
+                    <div></div>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        // ============================================================
+        // CONFIGURATIE
+        // ============================================================
+        const API_URL = 'https://upc-floppy-crm-singh.trycloudflare.com/api/syntess';
+
+        // ============================================================
+        // URL PARAMETERS
+        // ============================================================
+        function parseUrlParams() {
+            let params = new URLSearchParams(window.location.search);
+            let kaarttitel = params.get('kaarttitel') || '';
+            let cardid = params.get('cardid') || '';
+            let klantnummer = '';
+            let referentie = '';
+
+            const klantnummerMatch = kaarttitel.match(/klantnummer:\s*(\d+)/i);
+            if (klantnummerMatch) klantnummer = klantnummerMatch[1];
+
+            const referentieMatch = kaarttitel.match(/REF(\d+)/i);
+            if (referentieMatch) referentie = 'REF' + referentieMatch[1];
+
+            return { klantnummer, referentie, kaarttitel, cardid };
+        }
+
+        const { klantnummer, referentie, kaarttitel, cardid } = parseUrlParams();
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('klantnummer').value = klantnummer;
+            document.getElementById('referentie').value = referentie;
+            document.getElementById('kaarttitel').value = kaarttitel;
+            document.getElementById('cardid').value = cardid;
+
+            if (klantnummer || referentie) {
+                const infoDisplay = document.getElementById('ticket-info-display');
+                const infoContent = document.getElementById('ticket-info-content');
+                let parts = [];
+                if (referentie) parts.push('<strong>Referentie:</strong> ' + referentie);
+                if (klantnummer) parts.push('<strong>Klantnummer:</strong> ' + klantnummer);
+                infoContent.innerHTML = parts.join(' &nbsp;|&nbsp; ');
+                infoDisplay.style.display = 'flex';
+            }
+        });
+
+        // ============================================================
+        // WIZARD NAVIGATION
+        // ============================================================
+        let currentStep = 1;
+
+        function goToStep(step) {
+            // Validate before moving forward
+            if (step > currentStep) {
+                if (currentStep === 1 && !validateStep1()) return;
+            }
+
+            // Update sections
+            document.querySelectorAll('.wizard-section').forEach(s => s.classList.remove('active'));
+            document.getElementById('step-' + step).classList.add('active');
+
+            // Update progress bar
+            document.querySelectorAll('.progress-step').forEach(p => {
+                const pStep = parseInt(p.dataset.step);
+                p.classList.remove('active', 'completed');
+                if (pStep < step) p.classList.add('completed');
+                if (pStep === step) p.classList.add('active');
+            });
+
+            currentStep = step;
+
+            // Update config summary when going to step 2
+            if (step === 2) {
+                updateConfigSummary();
+                updateSSHConfigBlock();
+            }
+
+            window.scrollTo(0, 0);
+        }
+
+        function validateStep1() {
+            const serverType = document.getElementById('server-type').value;
+            if (!serverType) {
+                document.getElementById('server-type-error').style.display = 'block';
+                return false;
+            }
+            document.getElementById('server-type-error').style.display = 'none';
+
+            // Check required fields
+            const requiredFields = ['klantnaam', 'bedrijfsnaam', 'contactpersoon', 'email', 'telefoon', 'extern-ip', 'database-pad'];
+            for (const field of requiredFields) {
+                const el = document.getElementById(field);
+                if (!el.value.trim()) {
+                    el.focus();
+                    el.reportValidity();
+                    return false;
+                }
+            }
+
+            // Check intern-ip if jumpserver
+            if (serverType === 'jumpserver') {
+                const internIp = document.getElementById('intern-ip');
+                if (!internIp.value.trim()) {
+                    internIp.focus();
+                    internIp.reportValidity();
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        // ============================================================
+        // SERVER TYPE SELECTOR
+        // ============================================================
+        function selectServerType(type) {
+            document.querySelectorAll('.server-type-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            document.querySelector(`.server-type-option[data-value="${type}"]`).classList.add('selected');
+            document.getElementById('server-type').value = type;
+            document.getElementById('server-type-error').style.display = 'none';
+
+            // Show/hide intern IP field
+            const internIpGroup = document.getElementById('intern-ip-group');
+            const internIpInput = document.getElementById('intern-ip');
+            if (type === 'jumpserver') {
+                internIpGroup.classList.add('visible');
+                internIpInput.required = true;
+            } else {
+                internIpGroup.classList.remove('visible');
+                internIpInput.required = false;
+                internIpInput.value = '';
+            }
+        }
+
+        // ============================================================
+        // CONFIG SUMMARY & SSH CONFIG BLOCK
+        // ============================================================
+        function updateConfigSummary() {
+            const serverType = document.getElementById('server-type').value;
+            const externIp = document.getElementById('extern-ip').value;
+            const poort = document.getElementById('firebird-poort').value;
+            const internIp = document.getElementById('intern-ip').value;
+
+            document.getElementById('sum-type').textContent = serverType === 'direct' ? 'Direct' : 'Jump server';
+            document.getElementById('sum-extern-ip').textContent = externIp || '-';
+            document.getElementById('sum-poort').textContent = poort || '3050';
+
+            if (serverType === 'jumpserver' && internIp) {
+                document.getElementById('sum-intern-ip').textContent = internIp;
+                document.getElementById('sum-intern-ip-container').style.display = 'inline';
+            } else {
+                document.getElementById('sum-intern-ip-container').style.display = 'none';
+            }
+        }
+
+        function updateSSHConfigBlock() {
+            const serverType = document.getElementById('server-type').value;
+            const poort = document.getElementById('firebird-poort').value || '3050';
+            const internIp = document.getElementById('intern-ip').value;
+
+            let permitOpen = serverType === 'jumpserver' && internIp
+                ? `PermitOpen ${internIp}:${poort}`
+                : `PermitOpen localhost:${poort}`;
+
+            const configBlock = `Port 49222
+PasswordAuthentication yes
+ChallengeResponseAuthentication no
+PermitEmptyPasswords no
+TCPKeepAlive yes
+AllowTcpForwarding local
+${permitOpen}
+
+Match User notifica
+	ForceCommand cmd /c "echo Geen shell toegang toegestaan && exit"
+	PermitTTY no
+	X11Forwarding no
+	AllowAgentForwarding no`;
+
+            document.getElementById('ssh-config-block').textContent = configBlock;
+            document.getElementById('note-poort').textContent = poort;
+        }
+
+        // ============================================================
+        // CONFIG STEPS ACCORDION
+        // ============================================================
+        function toggleConfigStep(num) {
+            const step = document.getElementById('config-step-' + num);
+            const wasOpen = step.classList.contains('open');
+
+            // Close all
+            document.querySelectorAll('.config-step').forEach(s => s.classList.remove('open'));
+
+            // Open clicked if it was closed
+            if (!wasOpen) {
+                step.classList.add('open');
+            }
+        }
+
+        function updateStepStatus(num) {
+            const checkbox = document.getElementById('check-' + getCheckboxId(num));
+            const step = document.getElementById('config-step-' + num);
+
+            if (checkbox && checkbox.checked) {
+                step.classList.add('completed');
+                // Auto-open next step
+                if (num < 8) {
+                    setTimeout(() => toggleConfigStep(num + 1), 300);
+                }
+            } else {
+                step.classList.remove('completed');
+            }
+        }
+
+        function getCheckboxId(num) {
+            const ids = ['firewall', 'portforward', 'openssh', 'user', 'rechten', 'sshconfig', 'restart', 'test'];
+            return ids[num - 1];
+        }
+
+        // ============================================================
+        // POWERSHELL VALIDATION
+        // ============================================================
+        document.getElementById('powershell-output').addEventListener('input', function() {
+            validatePowerShellOutput(this.value);
+        });
+
+        function validatePowerShellOutput(output) {
+            const validationDiv = document.getElementById('ps-validation');
+            const contentDiv = document.getElementById('ps-validation-content');
+
+            if (!output.trim()) {
+                validationDiv.style.display = 'none';
+                return;
+            }
+
+            const okCount = (output.match(/OK:/g) || []).length;
+            const foutCount = (output.match(/FOUT:/g) || []).length;
+            const warnCount = (output.match(/WAARSCHUWING:/g) || []).length;
+            const isValidOutput = output.includes('SSH Configuratie Test') && output.includes('Test voltooid');
+
+            let status = 'success';
+            let title = '✓ Test geslaagd';
+
+            if (!isValidOutput) {
+                status = 'error';
+                title = '✗ Ongeldige output';
+            } else if (foutCount > 0) {
+                status = 'error';
+                title = '✗ Test bevat fouten';
+            } else if (warnCount > 0) {
+                status = 'warning';
+                title = '⚠ Test bevat waarschuwingen';
+            }
+
+            let html = `<h4>${title}</h4>`;
+            if (!isValidOutput) {
+                html += `<p>Dit lijkt geen geldige testoutput te zijn.</p>`;
+            } else {
+                html += `<ul>`;
+                html += `<li class="ps-ok">✓ ${okCount} checks geslaagd</li>`;
+                if (foutCount > 0) html += `<li class="ps-fout">✗ ${foutCount} fouten</li>`;
+                if (warnCount > 0) html += `<li class="ps-warn">⚠ ${warnCount} waarschuwingen</li>`;
+                html += `</ul>`;
+            }
+
+            contentDiv.innerHTML = html;
+            validationDiv.className = `ps-validation ${status}`;
+            validationDiv.style.display = 'block';
+        }
+
+        // ============================================================
+        // TEST FUNCTIE
+        // ============================================================
+        async function runTest() {
+            const btnTest = document.getElementById('btn-test');
+            const btnSubmit = document.getElementById('btn-submit');
+            const resultsDiv = document.getElementById('test-results');
+            const testRequiredMsg = document.getElementById('test-required-msg');
+
+            // Validate required fields
+            const requiredFields = ['ssh-wachtwoord', 'db-gebruiker', 'db-wachtwoord', 'powershell-output'];
+            for (const field of requiredFields) {
+                const el = document.getElementById(field);
+                if (!el.value.trim()) {
+                    el.focus();
+                    el.reportValidity();
+                    return;
+                }
+            }
+
+            const serverType = document.getElementById('server-type').value;
+            const externIp = document.getElementById('extern-ip').value;
+            const internIp = document.getElementById('intern-ip').value || 'localhost';
+            const firebirdPoort = document.getElementById('firebird-poort').value;
+            const sshWachtwoord = document.getElementById('ssh-wachtwoord').value;
+            const dbGebruiker = document.getElementById('db-gebruiker').value;
+            const dbWachtwoord = document.getElementById('db-wachtwoord').value;
+            const databasePad = document.getElementById('database-pad').value;
+
+            btnTest.disabled = true;
+            btnTest.innerHTML = '<span class="spinner"></span>Testen...';
+            btnSubmit.disabled = true;
+            resultsDiv.style.display = 'block';
+
+            const tests = [
+                { id: 'port', name: 'Poort 49222 bereikbaar', status: 'pending' },
+                { id: 'ssh', name: 'SSH login (notifica)', status: 'pending' },
+                { id: 'tunnel', name: 'SSH tunnel opzetten', status: 'pending' },
+                { id: 'firebird', name: 'Database poort via tunnel', status: 'pending' }
+            ];
+
+            renderTests(tests);
+
+            try {
+                const response = await fetch(`${API_URL}/sshtest`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        extern_ip: externIp,
+                        intern_ip: internIp,
+                        firebird_poort: parseInt(firebirdPoort),
+                        ssh_wachtwoord: sshWachtwoord,
+                        db_gebruiker: dbGebruiker,
+                        db_wachtwoord: dbWachtwoord,
+                        database_pad: databasePad,
+                        server_type: serverType
+                    })
+                });
+
+                const result = await response.json();
+
+                tests[0].status = result.port_reachable ? 'success' : 'error';
+                tests[0].detail = result.port_message;
+                tests[1].status = result.ssh_login ? 'success' : 'error';
+                tests[1].detail = result.ssh_message;
+                tests[2].status = result.tunnel_works ? 'success' : 'error';
+                tests[2].detail = result.tunnel_message;
+                tests[3].status = result.firebird_reachable ? 'success' : 'error';
+                tests[3].detail = result.firebird_message;
+
+                renderTests(tests);
+
+                const allPassed = result.port_reachable && result.ssh_login && result.tunnel_works && result.firebird_reachable;
+
+                if (allPassed) {
+                    btnSubmit.disabled = false;
+                    testRequiredMsg.innerHTML = '<div class="icon">✓</div><div class="text"><strong>Alle tests geslaagd!</strong><p>U kunt nu het formulier versturen.</p></div>';
+                    testRequiredMsg.className = 'success-box';
+                } else {
+                    testRequiredMsg.innerHTML = '<div class="icon">✗</div><div class="text"><strong>Test niet geslaagd</strong><p>Los de fouten op en test opnieuw.</p></div>';
+                    testRequiredMsg.className = 'warning-box';
+                }
+            } catch (error) {
+                console.error('Test error:', error);
+                tests.forEach(t => {
+                    t.status = 'error';
+                    t.detail = 'Kon geen verbinding maken met test-API';
+                });
+                renderTests(tests);
+                testRequiredMsg.innerHTML = '<div class="icon">✗</div><div class="text"><strong>Test mislukt</strong><p>Kon geen verbinding maken met de test-server.</p></div>';
+                testRequiredMsg.className = 'warning-box';
+            }
+
+            btnTest.disabled = false;
+            btnTest.innerHTML = '🔍 Test opnieuw';
+        }
+
+        function renderTests(tests) {
+            document.getElementById('test-items').innerHTML = tests.map(test => `
+                <div class="test-item">
+                    <div class="test-icon ${test.status}">
+                        ${test.status === 'pending' ? '○' : test.status === 'success' ? '✓' : '✗'}
+                    </div>
+                    <div class="test-message">
+                        <div>${test.name}</div>
+                        ${test.detail ? `<div class="test-detail">${test.detail}</div>` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ============================================================
+        // FORM SUBMIT
+        // ============================================================
+        document.getElementById('ssh-config-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const btnSubmit = document.getElementById('btn-submit');
+            btnSubmit.disabled = true;
+            btnSubmit.innerHTML = '<span class="spinner"></span>Versturen...';
+
+            const formData = new FormData(this);
+            const data = {
+                datum: new Date().toISOString(),
+                klantnummer: document.getElementById('klantnummer').value,
+                referentie: document.getElementById('referentie').value,
+                kaarttitel: document.getElementById('kaarttitel').value,
+                cardid: document.getElementById('cardid').value,
+                klantnaam: formData.get('klantnaam'),
+                bedrijfsnaam: formData.get('bedrijfsnaam'),
+                contactpersoon: formData.get('contactpersoon'),
+                email: formData.get('email'),
+                telefoon: formData.get('telefoon'),
+                'server-type': formData.get('server-type'),
+                'extern-ip': formData.get('extern-ip'),
+                'intern-ip': formData.get('intern-ip') || 'localhost',
+                'firebird-poort': formData.get('firebird-poort'),
+                'database-pad': formData.get('database-pad'),
+                'ssh-wachtwoord': formData.get('ssh-wachtwoord'),
+                'db-gebruiker': formData.get('db-gebruiker'),
+                'db-wachtwoord': formData.get('db-wachtwoord'),
+                'powershell-output': formData.get('powershell-output')
+            };
+
+            try {
+                const response = await fetch('https://prod-204.westeurope.logic.azure.com:443/workflows/d0e099be0461471299bf95f18afd5c23/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=UQwGZbPKxjvGN61WO2YRMFa5zHLmqH0xIadDiS75JcU', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok || response.status === 202) {
+                    alert('Formulier succesvol verzonden!\n\nWij gaan de verbinding controleren en nemen contact op bij vragen.');
+                } else {
+                    alert('Er ging iets mis bij het verzenden.\n\nProbeer het opnieuw of neem contact op met Notifica.');
+                }
+            } catch (error) {
+                console.error('Submit error:', error);
+                alert('Kon formulier niet versturen.\n\nControleer uw internetverbinding.');
+            }
+
+            btnSubmit.disabled = false;
+            btnSubmit.innerHTML = '📤 Verstuur formulier';
+        });
+    </script>
+
+    <script>
+        // Iframe height for WordPress embedding
+        function sendHeight() {
+            const height = document.body.scrollHeight;
+            window.parent.postMessage({ type: 'setHeight', height: height }, '*');
+        }
+        window.addEventListener('load', sendHeight);
+        window.addEventListener('resize', sendHeight);
+        const observer = new MutationObserver(sendHeight);
+        observer.observe(document.body, { childList: true, subtree: true });
+    </script>
+</body>
+</html>
