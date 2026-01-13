@@ -1,0 +1,908 @@
+---
+layout: base-notion.njk
+title: SSH API Documentatie - Notifica
+description: Technische documentatie over de SSH-koppeling API en Cloudflare Tunnel setup.
+permalink: /admin/tools/ssh-api-documentatie/
+robots: noindex, nofollow
+---
+
+<style>
+.doc-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.doc-section {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+}
+.doc-section h2 {
+    color: var(--navy);
+    font-size: 22px;
+    margin: 0 0 16px 0;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f0f0f0;
+}
+.doc-section h3 {
+    color: var(--navy);
+    font-size: 18px;
+    margin: 24px 0 12px 0;
+}
+.doc-section h4 {
+    color: #4b5563;
+    font-size: 15px;
+    margin: 20px 0 8px 0;
+}
+.doc-section p {
+    color: #4b5563;
+    line-height: 1.7;
+    margin: 0 0 16px 0;
+}
+.doc-section ul, .doc-section ol {
+    color: #4b5563;
+    line-height: 1.7;
+    margin: 0 0 16px 0;
+    padding-left: 24px;
+}
+.doc-section li {
+    margin-bottom: 8px;
+}
+.code-block {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 16px 20px;
+    border-radius: 8px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 13px;
+    overflow-x: auto;
+    margin: 12px 0 16px 0;
+}
+.code-block code {
+    color: inherit;
+    background: none;
+}
+.inline-code {
+    background: #f1f5f9;
+    color: #0f172a;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 13px;
+}
+.info-box {
+    background: #f0f4ff;
+    border: 1px solid #c7d2fe;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+}
+.info-box-title {
+    color: #4338ca;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.info-box p {
+    color: #4338ca;
+    margin: 0;
+    font-size: 14px;
+}
+.warning-box {
+    background: #fef3c7;
+    border: 1px solid #f59e0b;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+}
+.warning-box-title {
+    color: #92400e;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.warning-box p {
+    color: #92400e;
+    margin: 0;
+    font-size: 14px;
+}
+.todo-box {
+    background: #fef2f2;
+    border: 1px solid #fca5a5;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+}
+.todo-box-title {
+    color: #991b1b;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.todo-box p, .todo-box ul {
+    color: #991b1b;
+    margin: 0;
+    font-size: 14px;
+}
+.todo-box ul {
+    margin-top: 8px;
+    padding-left: 20px;
+}
+.success-box {
+    background: #ecfdf5;
+    border: 1px solid #6ee7b7;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+}
+.success-box-title {
+    color: #065f46;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.success-box p {
+    color: #065f46;
+    margin: 0;
+    font-size: 14px;
+}
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 8px;
+}
+.status-current {
+    background: #dbeafe;
+    color: #1e40af;
+}
+.status-todo {
+    background: #fef3c7;
+    color: #92400e;
+}
+.status-done {
+    background: #d1fae5;
+    color: #065f46;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+}
+th, td {
+    border: 1px solid #e5e7eb;
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background: #f8fafc;
+    font-weight: 600;
+    color: var(--navy);
+}
+td {
+    color: #4b5563;
+}
+.architecture-diagram {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 16px 0;
+    text-align: center;
+}
+.architecture-diagram pre {
+    text-align: left;
+    font-family: 'Consolas', monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0;
+    overflow-x: auto;
+}
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
+</style>
+
+<section class="hero" style="padding: 80px 0 40px;">
+    <div class="container">
+        <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <div class="badge">Technische Documentatie</div>
+            <h1>SSH API Documentatie</h1>
+            <p class="subtitle">
+                Hoe de SSH-koppeling wizard werkt en hoe de infrastructuur is ingericht
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="padding: 40px 0 80px;">
+    <div class="container doc-container">
+
+        <a href="{{ '/admin/' | url }}" class="back-link">
+            <span>&larr;</span> Terug naar Admin Dashboard
+        </a>
+
+        <!-- Overzicht -->
+        <div class="doc-section">
+            <h2>Overzicht</h2>
+            <p>
+                De SSH-koppeling wizard helpt klanten bij het configureren van een SSH-tunnel naar hun Syntess database server.
+                Dit is nodig zodat Notifica veilig data kan ophalen voor de Power BI dashboards.
+            </p>
+
+            <h3>Componenten</h3>
+            <div class="architecture-diagram">
+                <pre>
+┌─────────────────┐     ┌──────────────────┐     ┌─────────────────┐
+│   Klant Browser │────▶│  Notifica Site   │     │  Klant Server   │
+│   (SSH Wizard)  │     │  (Eleventy/11ty) │     │  (Syntess DB)   │
+└────────┬────────┘     └──────────────────┘     └────────▲────────┘
+         │                                                │
+         │ API Requests                                   │ SSH Tunnel Test
+         ▼                                                │
+┌─────────────────┐     ┌──────────────────┐     ┌───────┴─────────┐
+│ Cloudflare      │────▶│  Webserver 1     │────▶│  Notifica       │
+│ Tunnel          │     │  (Flask API)     │     │  Data Platform  │
+└─────────────────┘     └──────────────────┘     └─────────────────┘
+                                │
+                                │ E-mail via SMTP
+                                ▼
+                        ┌──────────────────┐
+                        │  Office 365      │
+                        │  (mark@notifica) │
+                        └──────────────────┘
+                </pre>
+            </div>
+
+            <h3>Workflow</h3>
+            <ol>
+                <li><strong>Wizard doorlopen:</strong> Klant volgt de stappen in de SSH wizard op de website</li>
+                <li><strong>PowerShell script:</strong> Klant downloadt en voert het configuratiescript uit op hun server</li>
+                <li><strong>SSH Test:</strong> API test de SSH verbinding (poort, login, tunnel, Firebird bereikbaarheid)</li>
+                <li><strong>Formulier indienen:</strong> Gegevens worden naar de API gestuurd</li>
+                <li><strong>E-mail notificatie:</strong> API stuurt bevestigingsmail via Office 365 SMTP</li>
+            </ol>
+        </div>
+
+        <!-- API Specificatie -->
+        <div class="doc-section">
+            <h2>API Specificatie</h2>
+
+            <p>De API is gebouwd met <strong>Flask</strong> (Python) en biedt twee hoofdendpoints voor Syntess/Firebird koppelingen.</p>
+
+            <div class="info-box">
+                <div class="info-box-title">Huidige Base URL</div>
+                <p><span class="inline-code">https://sugar-christmas-empty-dreams.trycloudflare.com</span></p>
+                <p style="margin-top: 8px;">Dit is een tijdelijke Quick Tunnel URL. Zie sectie "Cloudflare Tunnel Setup" voor de permanente oplossing.</p>
+            </div>
+
+            <h3>1. SSH Test Endpoint</h3>
+            <div class="code-block">
+                <code>POST /api/syntess/sshtest</code>
+            </div>
+            <p>Test de SSH-verbinding in 4 stappen: poort bereikbaarheid, SSH login, tunnel setup, en Firebird bereikbaarheid.</p>
+
+            <h4>Request Body</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Veld</th>
+                        <th>Verplicht</th>
+                        <th>Beschrijving</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="inline-code">extern_ip</span></td>
+                        <td>Ja</td>
+                        <td>Extern IP-adres van de klant server</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">firebird_poort</span></td>
+                        <td>Ja</td>
+                        <td>Firebird database poort (meestal 3050 of 3051)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">ssh_wachtwoord</span></td>
+                        <td>Ja</td>
+                        <td>Wachtwoord voor SSH gebruiker 'notifica'</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">intern_ip</span></td>
+                        <td>Nee</td>
+                        <td>Intern IP voor Firebird (default: localhost)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">server_type</span></td>
+                        <td>Nee</td>
+                        <td>'direct' of 'jump' (default: direct)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>Response</h4>
+            <div class="code-block">
+                <code>{
+  "port_reachable": true,
+  "port_message": "SSH server bereikbaar: SSH-2.0-OpenSSH_8.1",
+  "ssh_login": true,
+  "ssh_message": "SSH login geslaagd",
+  "tunnel_works": true,
+  "tunnel_message": "Tunnel naar localhost:3050 opgezet",
+  "firebird_reachable": true,
+  "firebird_message": "Firebird poort 3050 bereikbaar via tunnel",
+  "timestamp": "2026-01-13T12:00:00.000000"
+}</code>
+            </div>
+
+            <div class="info-box">
+                <div class="info-box-title">Vaste SSH Configuratie</div>
+                <p>De API gebruikt altijd poort <span class="inline-code">49222</span> en gebruiker <span class="inline-code">notifica</span> voor SSH verbindingen.</p>
+            </div>
+
+            <h3>2. Formulier Endpoint</h3>
+            <div class="code-block">
+                <code>POST /api/syntess/formulier</code>
+            </div>
+            <p>Ontvangt het configuratieformulier en stuurt een e-mail notificatie.</p>
+
+            <h4>Request Body</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Veld</th>
+                        <th>Beschrijving</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="inline-code">klantnaam</span></td>
+                        <td>Naam van de klant</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">bedrijfsnaam</span></td>
+                        <td>Bedrijfsnaam</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">contactpersoon</span></td>
+                        <td>Naam contactpersoon</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">email</span></td>
+                        <td>E-mailadres (wordt Reply-To)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">telefoon</span></td>
+                        <td>Telefoonnummer</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">server-type</span></td>
+                        <td>Type server configuratie</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">extern-ip</span></td>
+                        <td>Extern IP-adres</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">intern-ip</span></td>
+                        <td>Intern IP (Firebird)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">firebird-poort</span></td>
+                        <td>Database poort</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">database-pad</span></td>
+                        <td>Pad naar database bestand</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">ssh-wachtwoord</span></td>
+                        <td>SSH wachtwoord</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">db-gebruiker</span></td>
+                        <td>Database gebruikersnaam</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">db-wachtwoord</span></td>
+                        <td>Database wachtwoord</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">check-*</span></td>
+                        <td>Checklist items (boolean)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>Response</h4>
+            <div class="code-block">
+                <code>{
+  "success": true,
+  "message": "Formulier succesvol verzonden",
+  "timestamp": "2026-01-13T12:00:00.000000"
+}</code>
+            </div>
+
+            <h3>3. Health Check</h3>
+            <div class="code-block">
+                <code>GET /api/health</code>
+            </div>
+            <div class="code-block">
+                <code>{
+  "status": "healthy",
+  "paramiko_available": true,
+  "smtp_configured": true,
+  "timestamp": "2026-01-13T12:00:00.000000"
+}</code>
+            </div>
+        </div>
+
+        <!-- Server Configuratie -->
+        <div class="doc-section">
+            <h2>Server Configuratie</h2>
+
+            <h3>Webserver 1 (API Server)</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>IP Adres</strong></td>
+                        <td><span class="inline-code">85.215.176.135</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Besturingssysteem</strong></td>
+                        <td>Windows Server</td>
+                    </tr>
+                    <tr>
+                        <td><strong>API Poort</strong></td>
+                        <td><span class="inline-code">5000</span> (lokaal)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>API Locatie</strong></td>
+                        <td><span class="inline-code">C:\notifica_api\</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tunnel Software</strong></td>
+                        <td>cloudflared</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>API Bestanden</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><span class="inline-code">notifica_test_api.py</span></td>
+                        <td>Hoofd Python/Flask applicatie (18 KB)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">NotificaAPI.exe</span></td>
+                        <td>Gecompileerde executable versie</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">requirements.txt</span></td>
+                        <td>Python dependencies</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">logs/</span></td>
+                        <td>Log bestanden</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">notifica_api.log</span></td>
+                        <td>Applicatie logbestand</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Python Dependencies (requirements.txt)</h3>
+            <div class="code-block">
+                <code>flask>=2.0.0
+flask-cors>=3.0.0
+paramiko>=2.7.0
+requests>=2.25.0
+gunicorn>=20.0.0</code>
+            </div>
+            <ul>
+                <li><strong>Flask</strong> - Web framework</li>
+                <li><strong>flask-cors</strong> - CORS ondersteuning voor cross-origin requests</li>
+                <li><strong>paramiko</strong> - SSH client library (voor SSH tunnel tests)</li>
+                <li><strong>requests</strong> - HTTP library</li>
+                <li><strong>gunicorn</strong> - WSGI HTTP server (voor productie)</li>
+            </ul>
+
+            <h3>E-mail Configuratie</h3>
+            <p>De API stuurt e-mails via Office 365 SMTP:</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>SMTP Server</strong></td>
+                        <td><span class="inline-code">smtp.office365.com:587</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Verzender</strong></td>
+                        <td><span class="inline-code">mark@notifica.nl</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ontvanger</strong></td>
+                        <td><span class="inline-code">mark@notifica.nl</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="warning-box">
+                <div class="warning-box-title">Let op</div>
+                <p>De SMTP credentials staan hardcoded in de Python code. Bij wachtwoordwijziging moet <span class="inline-code">notifica_test_api.py</span> aangepast worden.</p>
+            </div>
+
+            <h3>Timeouts</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>Connection timeout</strong></td>
+                        <td>10 seconden</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SSH timeout</strong></td>
+                        <td>15 seconden</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tunnel timeout</strong></td>
+                        <td>10 seconden</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>API Starten</h3>
+            <div class="code-block">
+                <code># Direct met Python
+python C:\notifica_api\notifica_test_api.py
+
+# Of via de executable
+C:\notifica_api\NotificaAPI.exe</code>
+            </div>
+
+            <h3>Als Windows Service (via NSSM)</h3>
+            <div class="code-block">
+                <code># Installeren
+nssm install NotificaAPI "C:\Python3x\python.exe" "C:\notifica_api\notifica_test_api.py"
+
+# Starten
+nssm start NotificaAPI</code>
+            </div>
+
+            <h3>Cloudflare Tunnel (Huidig)</h3>
+            <p>
+                Momenteel wordt een "Quick Tunnel" gebruikt. Dit is een tijdelijke oplossing die bij elke herstart een nieuwe URL krijgt.
+            </p>
+            <div class="code-block">
+                <code># Starten van Quick Tunnel (CMD venster open houden!)
+cloudflared tunnel --url http://localhost:5000</code>
+            </div>
+            <div class="warning-box">
+                <div class="warning-box-title">Let op</div>
+                <p>Bij elke herstart van de tunnel krijg je een nieuwe URL. Deze moet dan bijgewerkt worden in de SSH wizard code.</p>
+            </div>
+        </div>
+
+        <!-- Cloudflare Tunnel Setup -->
+        <div class="doc-section">
+            <h2>Cloudflare Tunnel Setup (Permanent)</h2>
+
+            <div class="todo-box">
+                <div class="todo-box-title">Nog uit te voeren</div>
+                <p>De volgende stappen moeten uitgevoerd worden zodra DNS voor notifica.nl bij Cloudflare ligt:</p>
+                <ul>
+                    <li>Permanente named tunnel aanmaken op webserver</li>
+                    <li>DNS route configureren voor <span class="inline-code">test.notifica.nl</span></li>
+                    <li>Tunnel als Windows Service installeren</li>
+                    <li>API URL in wizard updaten</li>
+                </ul>
+            </div>
+
+            <h3>Stap 1: Inloggen bij Cloudflare</h3>
+            <p>Voer dit eenmalig uit op de webserver:</p>
+            <div class="code-block">
+                <code>cloudflared login</code>
+            </div>
+            <p>Dit opent een browser. Log in met het Cloudflare account van notifica.nl en selecteer de zone <span class="inline-code">notifica.nl</span>.</p>
+
+            <h3>Stap 2: Named Tunnel Aanmaken</h3>
+            <div class="code-block">
+                <code>cloudflared tunnel create notifica-api</code>
+            </div>
+            <p>
+                Dit genereert een credentials bestand in <span class="inline-code">C:\Users\Administrator\.cloudflared\</span>
+                met een naam zoals <span class="inline-code">&lt;TUNNEL-ID&gt;.json</span>.
+            </p>
+            <p><strong>Noteer de TUNNEL-ID uit de output!</strong></p>
+
+            <h3>Stap 3: Configuratiebestand Aanmaken</h3>
+            <p>Maak bestand <span class="inline-code">C:\Users\Administrator\.cloudflared\config.yml</span>:</p>
+            <div class="code-block">
+                <code>tunnel: notifica-api
+credentials-file: C:\Users\Administrator\.cloudflared\&lt;TUNNEL-ID&gt;.json
+
+ingress:
+  - hostname: test.notifica.nl
+    service: http://localhost:5000
+  - service: http_status:404</code>
+            </div>
+            <div class="warning-box">
+                <div class="warning-box-title">Let op</div>
+                <p>Vervang <span class="inline-code">&lt;TUNNEL-ID&gt;</span> door de echte ID uit stap 2.</p>
+            </div>
+
+            <h3>Stap 4: DNS Koppelen</h3>
+            <div class="code-block">
+                <code>cloudflared tunnel route dns notifica-api test.notifica.nl</code>
+            </div>
+            <p>Dit maakt automatisch een CNAME record aan in Cloudflare DNS.</p>
+
+            <h3>Stap 5: Als Windows Service Installeren</h3>
+            <div class="code-block">
+                <code>cloudflared service install
+net start cloudflared</code>
+            </div>
+            <p>De tunnel draait nu als Windows Service en start automatisch bij server herstart.</p>
+
+            <h3>Stap 6: Code Aanpassen</h3>
+            <p>Na succesvolle setup, wijzig in <span class="inline-code">src/admin/tools/ssh-verbinding-uitleg-v3.njk</span>:</p>
+            <div class="code-block">
+                <code>// Wijzig van:
+const API_URL = 'https://sugar-christmas-empty-dreams.trycloudflare.com/api/syntess';
+
+// Naar:
+const API_URL = 'https://test.notifica.nl/api/syntess';</code>
+            </div>
+            <p>Daarna rebuilden en deployen:</p>
+            <div class="code-block">
+                <code>npx eleventy
+git add -A
+git commit -m "Update API URL to permanent Cloudflare tunnel"
+git push</code>
+            </div>
+
+            <h3>Troubleshooting</h3>
+            <h4>Tunnel start niet</h4>
+            <div class="code-block">
+                <code>cloudflared tunnel run notifica-api</code>
+            </div>
+
+            <h4>Service status controleren</h4>
+            <div class="code-block">
+                <code>Get-Service cloudflared</code>
+            </div>
+
+            <h4>Logs bekijken</h4>
+            <div class="code-block">
+                <code>cloudflared tunnel --loglevel debug run notifica-api</code>
+            </div>
+        </div>
+
+        <!-- E-mail Notificaties -->
+        <div class="doc-section">
+            <h2>E-mail Notificaties</h2>
+            <p>
+                Wanneer een formulier wordt ingediend, stuurt de API een gedetailleerde e-mail met alle configuratiegegevens.
+            </p>
+
+            <h3>E-mail Inhoud</h3>
+            <p>De e-mail bevat de volgende secties:</p>
+            <ul>
+                <li><strong>Contactgegevens:</strong> Klant, bedrijf, contactpersoon, e-mail, telefoon</li>
+                <li><strong>Server configuratie:</strong> Type, extern IP, intern IP, Firebird poort, database pad</li>
+                <li><strong>Credentials:</strong> SSH wachtwoord, database gebruiker/wachtwoord</li>
+                <li><strong>Checklist:</strong> Status van alle configuratiestappen</li>
+            </ul>
+
+            <h3>E-mail Voorbeeld</h3>
+            <div class="code-block">
+                <code>Onderwerp: [Syntess] SSH Config: Bedrijfsnaam
+
+Nieuw SSH configuratie formulier ontvangen - Syntess/Firebird
+
+Tijdstip: 2026-01-13 14:30:00
+
+=== CONTACTGEGEVENS ===
+Klant: Voorbeeld BV
+Bedrijf: Voorbeeld BV
+Contactpersoon: Jan Jansen
+E-mail: jan@voorbeeld.nl
+Telefoon: 06-12345678
+
+=== SERVER CONFIGURATIE ===
+Type: direct
+Extern IP: 203.0.113.50
+Intern IP (Firebird): localhost
+Firebird poort: 3050
+Database pad: C:\Syntess\Data\SYNTESS.FDB
+
+=== CREDENTIALS ===
+SSH wachtwoord (notifica): ********
+Database gebruiker: SYSDBA
+Database wachtwoord: ********
+
+=== CHECKLIST ===
+Firewall geconfigureerd: Ja
+Port forwarding: Ja
+OpenSSH geinstalleerd: Ja
+...</code>
+            </div>
+
+            <div class="info-box">
+                <div class="info-box-title">Reply-To</div>
+                <p>De e-mail heeft het e-mailadres van de klant als Reply-To, zodat je direct kunt antwoorden.</p>
+            </div>
+        </div>
+
+        <!-- SSH Wizard Versies -->
+        <div class="doc-section">
+            <h2>SSH Wizard Versies</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Versie</th>
+                        <th>URL</th>
+                        <th>Status</th>
+                        <th>Beschrijving</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>V3</strong></td>
+                        <td><span class="inline-code">/admin/tools/ssh-verbinding/</span></td>
+                        <td><span class="status-badge status-current">Actief</span></td>
+                        <td>Huidige productieversie met alle features</td>
+                    </tr>
+                    <tr>
+                        <td><strong>V2</strong></td>
+                        <td><span class="inline-code">/admin/tools/ssh-verbinding-uitleg-v2/</span></td>
+                        <td><span class="status-badge status-done">Archief</span></td>
+                        <td>Wizard versie (heeft nog WordPress afhankelijkheden)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>V1</strong></td>
+                        <td><span class="inline-code">/admin/tools/ssh-verbinding-archief/</span></td>
+                        <td><span class="status-badge status-done">Archief</span></td>
+                        <td>Originele versie met alle info op 1 pagina</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>V3 Features</h3>
+            <ul>
+                <li>Volledig standalone (geen WordPress afhankelijkheden)</li>
+                <li>PowerShell script embedded (download als .ps1)</li>
+                <li>URL parameter parsing voor Trello/SendBoard integratie</li>
+                <li>Wachtwoord sync tussen stap 2 en stap 4</li>
+                <li>localStorage voor formulier persistentie</li>
+                <li>API verbindingstest</li>
+                <li>Automatische form submit naar Logic App</li>
+            </ul>
+
+            <h3>URL Parameters (V3)</h3>
+            <p>De wizard accepteert de volgende URL parameters (gebruikt door Trello/SendBoard):</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Beschrijving</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="inline-code">kaarttitel</span></td>
+                        <td>Trello kaarttitel - klantnummer en referentie worden hieruit geparsed</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">cardid</span></td>
+                        <td>Trello kaart ID</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">klantnummer</span></td>
+                        <td>Direct meegegeven klantnummer (override)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline-code">referentie</span></td>
+                        <td>Direct meegegeven referentie (override)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Quick Reference -->
+        <div class="doc-section">
+            <h2>Quick Reference</h2>
+
+            <h3>API Endpoints</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>Base URL (tijdelijk)</strong></td>
+                        <td><span class="inline-code">https://sugar-christmas-empty-dreams.trycloudflare.com</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Base URL (toekomstig)</strong></td>
+                        <td><span class="inline-code">https://test.notifica.nl</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>SSH Test</strong></td>
+                        <td><span class="inline-code">POST /api/syntess/sshtest</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Formulier</strong></td>
+                        <td><span class="inline-code">POST /api/syntess/formulier</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Health Check</strong></td>
+                        <td><span class="inline-code">GET /api/health</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Belangrijke Servers</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>Webserver 1 (API)</strong></td>
+                        <td><span class="inline-code">85.215.176.135</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Bestanden op Server</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>API Code</strong></td>
+                        <td><span class="inline-code">C:\notifica_api\notifica_test_api.py</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>API Executable</strong></td>
+                        <td><span class="inline-code">C:\notifica_api\NotificaAPI.exe</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Log bestand</strong></td>
+                        <td><span class="inline-code">C:\notifica_api\notifica_api.log</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Bestanden in Codebase</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>V3 Wizard</strong></td>
+                        <td><span class="inline-code">src/admin/tools/ssh-verbinding-uitleg-v3.njk</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>API URL config</strong></td>
+                        <td>Zoek naar <span class="inline-code">const API_URL</span> in V3 wizard</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>SSH Test Configuratie (vast)</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>SSH Poort</strong></td>
+                        <td><span class="inline-code">49222</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>SSH Gebruiker</strong></td>
+                        <td><span class="inline-code">notifica</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</section>
