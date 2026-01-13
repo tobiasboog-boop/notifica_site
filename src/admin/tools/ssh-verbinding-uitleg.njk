@@ -1272,11 +1272,39 @@ Match User notifica
                 </div>
             </div>
 
-            <div class="info-box">
-                <div class="icon">📥</div>
-                <div class="text">
-                    <strong>PowerShell testscript</strong>
-                    <p>Download het <a href="https://notifica.nl/wp-content/uploads/2026/01/Test-SSHConfiguratie.txt" download="Test-SSHConfiguratie.ps1" style="color: #0369a1; font-weight: 500;">PowerShell testscript</a> en voer dit uit op de server om de lokale configuratie te controleren voordat u de gegevens hieronder invult.</p>
+            <!-- Stap 8: Configuratie testen -->
+            <div class="step-block">
+                <h4>Stap 8: Configuratie testen met PowerShell script</h4>
+                <p>Download en voer het PowerShell testscript uit om te controleren of alle instellingen correct zijn geconfigureerd.</p>
+
+                <div class="info-box">
+                    <div class="icon">📥</div>
+                    <div class="text">
+                        <strong>Download het testscript</strong>
+                        <p><a href="https://notifica.nl/wp-content/uploads/2026/01/Test-SSHConfiguratie.txt" download="Test-SSHConfiguratie.ps1" style="color: #0369a1; font-weight: 500;">Test-SSHConfiguratie.ps1</a></p>
+                    </div>
+                </div>
+
+                <p><strong>Uitvoeren:</strong></p>
+                <ol>
+                    <li>Download het bestand en hernoem naar <code>Test-SSHConfiguratie.ps1</code></li>
+                    <li>Open PowerShell als Administrator op de OpenSSH server</li>
+                    <li>Navigeer naar de downloadlocatie</li>
+                    <li>Voer uit: <code>.\Test-SSHConfiguratie.ps1</code></li>
+                    <li>Kopieer de volledige output</li>
+                </ol>
+
+                <p>Het script controleert automatisch:</p>
+                <ul style="margin: 12px 0; padding-left: 20px; color: var(--gray-600);">
+                    <li>Of OpenSSH Server draait</li>
+                    <li>Of poort 49222 geconfigureerd is</li>
+                    <li>Of de gebruiker 'notifica' bestaat</li>
+                    <li>Of de sshd_config correct is ingesteld</li>
+                </ul>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="check-test" name="check-test">
+                    <label for="check-test">PowerShell testscript uitgevoerd en output gekopieerd</label>
                 </div>
             </div>
         </section>
