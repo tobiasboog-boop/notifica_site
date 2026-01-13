@@ -1,0 +1,20 @@
+table 'Methode gemiddelde uitvoertijd onderhoud'
+	lineageTag: 025406b5-ed2a-4b0d-86e4-3fea32920750
+	sourceLineageTag: da8ff816-ccc4-4b5d-a7ee-f978ab693c0d
+
+	column Value
+		dataType: double
+		lineageTag: 4ce99cc9-db64-46d6-83aa-09b5eadc386f
+		sourceLineageTag: 05ce5d00-f270-4b92-9d29-b06d1deda88a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Value
+
+		annotation SummarizationSetBy = User
+
+	partition 'Methode gemiddelde uitvoertijd onderhoud' = entity
+		mode: directQuery
+		source
+			entityName: Methode gemiddelde uitvoertijd onderhoud
+			expressionSource: 'DirectQuery to AS - SSM'
+

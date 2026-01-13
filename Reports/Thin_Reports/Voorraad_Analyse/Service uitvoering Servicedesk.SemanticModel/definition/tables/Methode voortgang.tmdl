@@ -1,0 +1,31 @@
+table 'Methode voortgang'
+	lineageTag: 1d85cf61-a216-4796-9b55-607666f17144
+	sourceLineageTag: 2bb76015-e0bd-4ba0-a2f0-afde5ae1537f
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 53e2cfd8-1bd2-488e-9323-101d1fc7816d
+		sourceLineageTag: 18f858cd-8870-459e-a999-c71b7eeb343a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = User
+
+	column Omschrijving
+		dataType: string
+		lineageTag: 4a72cd5f-369b-4831-b8e5-4652a0a63591
+		sourceLineageTag: b81ee5e0-e5db-4af8-ad8f-9e744fc14b53
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Omschrijving
+
+		annotation SummarizationSetBy = User
+
+	partition 'Methode voortgang' = entity
+		mode: directQuery
+		source
+			entityName: Methode voortgang
+			expressionSource: 'DirectQuery to AS - SSM'
+

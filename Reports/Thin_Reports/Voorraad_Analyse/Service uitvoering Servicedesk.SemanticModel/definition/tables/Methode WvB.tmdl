@@ -1,0 +1,30 @@
+table 'Methode WvB'
+	lineageTag: 63ba8039-6e43-4987-bcb7-6982dfeca6ac
+	sourceLineageTag: fcddaa3c-d383-4b50-82bf-226168a49874
+
+	column Methode
+		dataType: string
+		lineageTag: b71d5d2e-566e-43e5-9e0f-c4689fef0680
+		sourceLineageTag: b8e96872-4131-41ff-802d-2503a1bcec39
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Methode
+
+		annotation SummarizationSetBy = User
+
+	column ID
+		dataType: string
+		lineageTag: 01d9e2f3-47f5-4818-ab26-af70cab498bb
+		sourceLineageTag: 4e2acee9-7dcf-4684-b9aa-017b2b35fb45
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = User
+
+	partition 'Methode WvB' = entity
+		mode: directQuery
+		source
+			entityName: Methode WvB
+			expressionSource: 'DirectQuery to AS - SSM'
+

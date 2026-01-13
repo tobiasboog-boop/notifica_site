@@ -1,0 +1,94 @@
+table Bedrijfsactiviteiten
+	lineageTag: 1a25e924-6ed5-464a-aeb3-3b6d62c45d67
+	sourceLineageTag: c0599c83-41e5-43c6-ae81-9d197a25b422
+
+	column BedrijfsactiviteitKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: 72fd8661-40d8-4aee-8f3f-239ed91236fc
+		sourceLineageTag: 46573a0b-ed15-4800-9783-1c729a569f0e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BedrijfsactiviteitKey
+
+		annotation SummarizationSetBy = User
+
+	column Code
+		dataType: string
+		lineageTag: a516d4b5-dde2-421e-816b-7ab913113ff2
+		sourceLineageTag: 8c6bff42-ed54-4d70-89e2-8dd95a4e9c6c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Code
+
+		annotation SummarizationSetBy = User
+
+	column Omschrijving
+		dataType: string
+		lineageTag: a69078a5-bdcd-4b48-aa9f-0359858ffe44
+		sourceLineageTag: 0ab03824-0f19-4141-8157-397887cdf793
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Omschrijving
+
+		annotation SummarizationSetBy = User
+
+	column Kenmerk
+		dataType: string
+		lineageTag: ccc2f84d-18c1-4c35-9830-4cfe07f807cf
+		sourceLineageTag: e4031f95-6c40-4ef4-ba9e-5da37047c463
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Kenmerk
+
+		annotation SummarizationSetBy = User
+
+	column Aanmaakdatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 32ea8c19-0983-4456-a67c-9079469b4c20
+		sourceLineageTag: a1dd677e-7bdf-4aa1-84d6-e99cb30dbdad
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Aanmaakdatum
+
+		annotation SummarizationSetBy = User
+
+	column Wijzigdatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 56d0f3e5-7535-45a0-a7f7-b690d9cc48ff
+		sourceLineageTag: e2877dae-1b4e-4aae-b890-10c817a7144d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Wijzigdatum
+
+		annotation SummarizationSetBy = User
+
+	column Status
+		dataType: string
+		lineageTag: 5778d0ba-adf0-432f-b118-e72b2918d20f
+		sourceLineageTag: 816a338d-90c4-4423-a5a3-c78c406423c7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = User
+
+	column Beheerder
+		dataType: string
+		lineageTag: 6774a47b-732d-4155-8629-150fa2a787ff
+		sourceLineageTag: 80477bcf-7d13-4a4e-80d5-eadca0264e66
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Beheerder
+
+		annotation SummarizationSetBy = User
+
+	partition Bedrijfsactiviteiten = entity
+		mode: directQuery
+		source
+			entityName: Bedrijfsactiviteiten
+			expressionSource: 'DirectQuery to AS - SSM'
+

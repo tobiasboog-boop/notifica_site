@@ -1,0 +1,107 @@
+table Boekjaren
+	lineageTag: 4a475988-2692-424f-8b54-f872cfd65e56
+	sourceLineageTag: 14ae144f-40e9-4443-b8db-448b87077316
+
+	column BoekjaarKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: 249008f8-bf81-4079-8e2e-54cab10fcd65
+		sourceLineageTag: aa193c17-77bc-4051-afa0-124d297a07b0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BoekjaarKey
+
+		annotation SummarizationSetBy = User
+
+	column BudgetKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 09a0665e-601e-48cd-a75d-41bbf96356fc
+		sourceLineageTag: ce010c8c-8ac8-418c-a31a-c5fa4b61f355
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BudgetKey
+
+		annotation SummarizationSetBy = User
+
+	column AdministratieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 56662f5c-147d-46db-ad61-4274bea5126e
+		sourceLineageTag: e8ab4ed6-fed8-4c90-9785-ccde7db36f66
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AdministratieKey
+
+		annotation SummarizationSetBy = User
+
+	column Boekjaar
+		dataType: string
+		lineageTag: 76ac680f-92eb-40ff-9fdc-8747dfbb5b61
+		sourceLineageTag: 88d141b3-2fd4-4691-9030-dc0544294c76
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Boekjaar
+
+		annotation SummarizationSetBy = User
+
+	column Begindatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 01c03963-6665-4a91-a71f-6742976ebb53
+		sourceLineageTag: 39e755d6-cf0c-4a5d-8035-ce09094bd477
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Begindatum
+
+		annotation SummarizationSetBy = User
+
+	column Einddatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 6bae0ccf-52bf-46ec-955d-3d3c5a5c1d36
+		sourceLineageTag: 3ecfe924-2766-4f3f-a9be-f366e1313e4a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Einddatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Aantal periodes'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4f50738f-03ff-46b1-8361-36eef037f3a8
+		sourceLineageTag: 4788f92c-a8a0-4719-acf2-8ef9a98c5ba4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Aantal periodes
+
+		annotation SummarizationSetBy = User
+
+	column Status
+		dataType: string
+		lineageTag: 1752688d-5357-4a25-9e22-e3992bcf8fc3
+		sourceLineageTag: 56de38b2-e4fb-41b5-b06b-3e55037486dd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = User
+
+	column BoekjaarStatus
+		dataType: string
+		lineageTag: 1f0ec127-d336-4ee6-aeb3-e7bb92ee5358
+		sourceLineageTag: 42fb05f4-d4bd-4dc4-a9af-93a0eac271cf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BoekjaarStatus
+
+		annotation SummarizationSetBy = User
+
+	partition Boekjaren = entity
+		mode: directQuery
+		source
+			entityName: Boekjaren
+			expressionSource: 'DirectQuery to AS - SSM'
+

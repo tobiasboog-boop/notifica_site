@@ -1,0 +1,240 @@
+table Grootboekrekeningen
+	lineageTag: 02c8b83c-0641-415c-a8e3-7e32d0bde20f
+	sourceLineageTag: f1538490-eb1c-4c52-8743-9b938de8aaa3
+
+	column GrootboekRekeningKey
+		dataType: int64
+		formatString: 0
+		lineageTag: c357770a-908e-4061-88fd-bdaab9ec321a
+		sourceLineageTag: de131e02-1443-427b-8bca-d2f365a7c6d9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: GrootboekRekeningKey
+
+		annotation SummarizationSetBy = User
+
+	column ParentGrootboekRekeningKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e0c2421-b8f5-4ae8-b7c4-31c53ece334d
+		sourceLineageTag: 598831fb-9525-4589-b917-52a6dc364e95
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ParentGrootboekRekeningKey
+
+		annotation SummarizationSetBy = User
+
+	column RekeningSchemaKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b4266ca-3b71-4abd-8891-dcef4afad101
+		sourceLineageTag: f6ea70fd-1376-4cbd-a44d-20936f51e99f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: RekeningSchemaKey
+
+		annotation SummarizationSetBy = User
+
+	column RubriekKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 76c5ccc9-b2e9-425f-a8ac-c61c16bb6dff
+		sourceLineageTag: 9d461835-a361-47d7-8565-66cdef6344ed
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: RubriekKey
+
+		annotation SummarizationSetBy = User
+
+	column Grootboekrekening
+		dataType: string
+		lineageTag: 63a6aea2-d036-43a2-9d37-e9ac5534e956
+		sourceLineageTag: cf985f78-4138-4159-b001-7000eb010bbe
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Grootboekrekening
+
+		annotation SummarizationSetBy = User
+
+	column 'Grootboekrekening code'
+		dataType: string
+		lineageTag: 484f3ea2-5483-4a63-bf8f-324de3a9ab44
+		sourceLineageTag: d19ae3ac-c722-41ab-8644-2dcd91943629
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Grootboekrekening code
+
+		annotation SummarizationSetBy = User
+
+	column 'Status grootboekrekening'
+		dataType: string
+		lineageTag: 02748d7e-3874-4ac7-afe0-62a8093740e8
+		sourceLineageTag: 15609583-d806-46c3-9c8a-7bf41987f6bb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status grootboekrekening
+
+		annotation SummarizationSetBy = User
+
+	column Type
+		dataType: string
+		lineageTag: eea1b56e-574f-4f11-990c-2dbd63e9dbb1
+		sourceLineageTag: d520c63c-85ad-40fd-aa03-553b06d89bea
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = User
+
+	column PCpath
+		dataType: string
+		isHidden
+		lineageTag: c1861098-b79f-4b16-9dc9-fab51c95be2e
+		sourceLineageTag: d6de302b-a084-4e04-8b07-a2fb3677a8ce
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: PCpath
+
+		annotation SummarizationSetBy = User
+
+	column HierarchyDepth
+		dataType: int64
+		isHidden
+		lineageTag: f5c54aa2-663c-4858-98f7-52072eb65cb5
+		sourceLineageTag: 650a82db-0420-440c-b859-c18298f234db
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: HierarchyDepth
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 1'
+		dataType: string
+		lineageTag: e4a194fe-3b07-4cd7-9c12-d6ddd1bfaa87
+		sourceLineageTag: 722cf5be-3e8d-42d4-a5ef-573c9ff56791
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 1
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 2'
+		dataType: string
+		lineageTag: c0902466-1c8a-49c1-8ce2-8d89d08e9937
+		sourceLineageTag: 49515eb5-911f-4625-bd9b-b62b0a3edc7e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 2
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 3'
+		dataType: string
+		lineageTag: 2d8bfb1a-79c7-4a74-82f7-f214ab28685f
+		sourceLineageTag: ddf90813-e4db-413c-bcc1-ccd510fe6d4a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 3
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 4'
+		dataType: string
+		lineageTag: 1436e1a1-6399-4d1c-aa95-73b49effa321
+		sourceLineageTag: 42c06b72-e9c4-42f8-b4ab-0ef616e60a81
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 4
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 5'
+		dataType: string
+		lineageTag: a2b8785a-fd62-4a65-848c-82fc1804afab
+		sourceLineageTag: b16dfd9d-c1dd-498f-b2f1-234d8e1380ab
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 5
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 6'
+		dataType: string
+		lineageTag: ebdc09c7-e730-47f8-a752-34c929b2bff7
+		sourceLineageTag: 4b3b2540-f2db-40af-97c2-4b526e377f1f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 6
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 7'
+		dataType: string
+		lineageTag: 51eaa4fa-ec3b-4393-a14f-56f7396382de
+		sourceLineageTag: 82573321-6721-4774-9239-34e6d147a7e6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 7
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 8'
+		dataType: string
+		lineageTag: 96f61c8c-f82a-422a-8c8d-5909e670afd8
+		sourceLineageTag: d63b5da3-364c-473e-b055-a656d1ea63c4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 8
+
+		annotation SummarizationSetBy = User
+
+	hierarchy 'Grootboekrekening hierarchie'
+		lineageTag: 92c4a683-93b9-4b38-926a-8772e2e504a6
+		sourceLineageTag: 5274b0fa-ef89-4534-ad74-828e77b4d0ba
+
+		level 'Niveau 1'
+			lineageTag: 49707d1e-9688-47a4-be3f-67d7b75e172e
+			sourceLineageTag: efa526e4-c53e-449d-b9b0-dc8d6daa2ef4
+			column: 'Niveau 1'
+
+		level 'Niveau 2'
+			lineageTag: 78be81cf-5577-4509-ba23-b159eabcb454
+			sourceLineageTag: 2c97fb0b-8149-4d20-97d2-d1e2022d05c6
+			column: 'Niveau 2'
+
+		level 'Niveau 3'
+			lineageTag: c3d54471-d976-4af4-b54b-87a290c245da
+			sourceLineageTag: a0efed42-6028-492d-a93f-601b11a8b560
+			column: 'Niveau 3'
+
+		level 'Niveau 4'
+			lineageTag: 90faf7ae-b786-4326-95c7-5e1df3262397
+			sourceLineageTag: 6acc41b1-4255-4168-9712-fd771bdbf183
+			column: 'Niveau 4'
+
+		level 'Niveau 5'
+			lineageTag: 2cde14f7-8338-46b7-b1d6-30f0b59d36a6
+			sourceLineageTag: 084a4c31-cadf-47e4-928d-fd42c985a935
+			column: 'Niveau 5'
+
+		level 'Niveau 6'
+			lineageTag: 5678dd8f-9f36-4e0a-9a1a-f60caa4e3c43
+			sourceLineageTag: 565868a1-5421-4be3-b845-b71952ed4088
+			column: 'Niveau 6'
+
+		level 'Niveau 7'
+			lineageTag: 6e8eda9a-385c-4714-a04e-445f8d404ff2
+			sourceLineageTag: 86e6975b-9909-4993-b21f-f4841a720c40
+			column: 'Niveau 7'
+
+		level 'Niveau 8'
+			lineageTag: aed448a5-d9d6-40f1-b283-5d171597012f
+			sourceLineageTag: 1a869a43-47de-43b9-a805-4c71d5878a9d
+			column: 'Niveau 8'
+
+	partition Grootboekrekeningen = entity
+		mode: directQuery
+		source
+			entityName: Grootboekrekeningen
+			expressionSource: 'DirectQuery to AS - SSM'
+

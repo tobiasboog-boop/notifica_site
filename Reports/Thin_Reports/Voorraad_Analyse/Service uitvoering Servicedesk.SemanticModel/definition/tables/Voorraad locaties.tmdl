@@ -1,0 +1,116 @@
+table 'Voorraad locaties'
+	lineageTag: 2857db0f-a3fb-4d66-bf07-7e70540488c4
+	sourceLineageTag: 2dcac3ae-4124-4d25-8768-1c49044b88fa
+
+	column VoorraadlocatieKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: 3622ecf8-2cbe-4af9-aca4-54e7f6a6716f
+		sourceLineageTag: 441bcc99-9f5f-4768-b80b-0bed9bd7db1d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: VoorraadlocatieKey
+
+		annotation SummarizationSetBy = User
+
+	column ParentVoorraadlocatieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: d50ec062-0bcb-40d8-a6e8-81ceca0f1591
+		sourceLineageTag: 4f6df3ee-0afd-4570-91c7-fd5d9606330b
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: ParentVoorraadlocatieKey
+
+		annotation SummarizationSetBy = User
+
+	column MagazijnKey
+		dataType: int64
+		formatString: 0
+		lineageTag: d8acf235-1f7f-46b7-8ea3-43359f2b684e
+		sourceLineageTag: 31397369-423a-4163-8a65-f3c3817b1ccc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MagazijnKey
+
+		annotation SummarizationSetBy = User
+
+	column AdministratieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: ca199091-07e8-4879-a09e-5be421a8f236
+		sourceLineageTag: e5baf839-7834-46fc-acc5-87ef966534dc
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: AdministratieKey
+
+		annotation SummarizationSetBy = User
+
+	column ProjectKey
+		dataType: int64
+		formatString: 0
+		lineageTag: cbf17014-68de-4f10-902c-bf610b63aab2
+		sourceLineageTag: 8d853954-49fe-4ff8-bd8b-ad1cfbb0499e
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: ProjectKey
+
+		annotation SummarizationSetBy = User
+
+	column Voorraadlocatie
+		dataType: string
+		lineageTag: be1c33ab-a35d-4914-913f-9d4bc184966e
+		sourceLineageTag: cef2769f-78e4-4ce9-958a-35fd6e7b5f4b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Voorraadlocatie
+
+		annotation SummarizationSetBy = User
+
+	column 'Voorraadlocatie code'
+		dataType: string
+		lineageTag: bd6ec150-8217-47e4-98fe-207c2edb5830
+		sourceLineageTag: 22211c8b-e928-4825-a998-4d2f213c26c5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Voorraadlocatie code
+
+		annotation SummarizationSetBy = User
+
+	column Retourlocatie
+		dataType: string
+		lineageTag: b959f526-0209-4a37-a777-fb647c3f382f
+		sourceLineageTag: 27651025-a6d6-4479-b169-b7a977840912
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Retourlocatie
+
+		annotation SummarizationSetBy = User
+
+	column Geblokkeerd
+		dataType: string
+		lineageTag: ae8fb172-eb59-4e65-a1aa-b5adf56c5392
+		sourceLineageTag: 57023f96-ce4a-4063-b941-bc0cf71a0283
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Geblokkeerd
+
+		annotation SummarizationSetBy = User
+
+	column Status
+		dataType: string
+		lineageTag: c4c45450-219b-476c-9bbc-0f0856df15aa
+		sourceLineageTag: 8883c629-9cdd-4e1a-9903-df08c11d0ab7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = User
+
+	partition 'Voorraad locaties' = entity
+		mode: directQuery
+		source
+			entityName: Voorraad locaties
+			expressionSource: 'DirectQuery to AS - SSM'
+

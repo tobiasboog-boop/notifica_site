@@ -1,0 +1,54 @@
+table 'Arbeidspatroon per medewerker per week'
+	lineageTag: d0f5f894-374b-4390-8d8e-163621095f6f
+	sourceLineageTag: 1a6e1091-8f3b-450f-ad04-0dbea365acc6
+
+	column MedewerkerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 5b518e6c-4536-4cb9-b75b-56962deafa45
+		sourceLineageTag: 675fd148-c8df-42e2-bc1a-a042e2c74fcf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MedewerkerKey
+
+		annotation SummarizationSetBy = User
+
+	column 'contracturen op medewerker'
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 5e3bb902-52ea-4788-85ac-1b2d9a9728c0
+		sourceLineageTag: b46dbb9d-481e-4ebc-be3c-251d37b75734
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: contracturen op medewerker
+
+		annotation SummarizationSetBy = User
+
+	column 'contracturen op arbeidspatroon'
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: aa2ca787-e3ac-4a14-883f-04ae3a2f6d16
+		sourceLineageTag: bc438804-7824-4f9c-82f3-f0beefee9723
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: contracturen op arbeidspatroon
+
+		annotation SummarizationSetBy = User
+
+	column 'Einddatum Week'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 1cbe3b0b-3536-4541-bd74-8d33fa3d8b3d
+		sourceLineageTag: e1b3f6cd-021d-4a4b-9f03-7271560fedb3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Einddatum Week
+
+		annotation SummarizationSetBy = User
+
+	partition 'Arbeidspatroon per medewerker per week' = entity
+		mode: directQuery
+		source
+			entityName: Arbeidspatroon per medewerker per week
+			expressionSource: 'DirectQuery to AS - SSM'
+

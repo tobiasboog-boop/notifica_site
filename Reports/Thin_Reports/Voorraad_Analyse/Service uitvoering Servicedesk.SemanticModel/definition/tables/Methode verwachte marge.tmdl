@@ -1,0 +1,31 @@
+table 'Methode verwachte marge'
+	lineageTag: 686a16c4-c5e7-46cd-b559-b0b744199691
+	sourceLineageTag: 467b8da1-ddff-4183-88ee-2b1ad05e8ac5
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: fc0e3315-9815-489b-93e3-491bacfcbaa4
+		sourceLineageTag: 1e5c4d6d-608b-4ade-bf20-fb67b32face7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = User
+
+	column Omschrijving
+		dataType: string
+		lineageTag: 4fbb6dfa-c460-4b98-a2e9-735048bac4e8
+		sourceLineageTag: 21a0c88e-2747-414f-b619-c38251a13cce
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Omschrijving
+
+		annotation SummarizationSetBy = User
+
+	partition 'Methode verwachte marge' = entity
+		mode: directQuery
+		source
+			entityName: Methode verwachte marge
+			expressionSource: 'DirectQuery to AS - SSM'
+

@@ -1,0 +1,31 @@
+table 'Methode datum orderintake eenmalig'
+	lineageTag: f6f4502a-53d9-491c-ad85-f249d7fb1bb7
+	sourceLineageTag: 224f534a-7834-42ab-b4c0-feef3add96c2
+
+	column DatummethodeKey
+		dataType: int64
+		formatString: 0
+		lineageTag: d0e98252-d349-44b2-83a2-f2ebbd3037df
+		sourceLineageTag: 5a8ae7a0-c707-4719-bfc7-0b5f6a09bfeb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DatummethodeKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Datum methode'
+		dataType: string
+		lineageTag: 4276b1fc-3625-4487-8466-5cdde009a9cb
+		sourceLineageTag: 53d20b23-9552-4eda-8da3-c033eb7097bc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Datum methode
+
+		annotation SummarizationSetBy = User
+
+	partition 'Methode datum orderintake eenmalig' = entity
+		mode: directQuery
+		source
+			entityName: Methode datum orderintake eenmalig
+			expressionSource: 'DirectQuery to AS - SSM'
+

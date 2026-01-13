@@ -1,0 +1,21 @@
+table 'Methode norm productiviteit monteurs'
+	lineageTag: 45bbaf3f-f52f-4420-879f-7c27429595ed
+	sourceLineageTag: 373da3e0-51d7-48c3-92d9-9c68bfb56614
+
+	column Value
+		dataType: double
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 5f779d0b-4466-4cdb-81cd-3661dee16484
+		sourceLineageTag: 8856fecf-cdc0-46c2-aaac-ce99442eeb7c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Value
+
+		annotation SummarizationSetBy = User
+
+	partition 'Methode norm productiviteit monteurs' = entity
+		mode: directQuery
+		source
+			entityName: Methode norm productiviteit monteurs
+			expressionSource: 'DirectQuery to AS - SSM'
+

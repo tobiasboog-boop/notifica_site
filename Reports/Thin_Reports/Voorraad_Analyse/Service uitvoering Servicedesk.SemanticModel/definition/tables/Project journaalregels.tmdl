@@ -1,0 +1,138 @@
+table 'Project journaalregels'
+	lineageTag: d04ca9cb-3d3d-426d-9928-ee8551786f01
+	sourceLineageTag: 4758f8ad-0f99-470a-9cb1-844ed562be5a
+
+	column RubriekKey
+		dataType: int64
+		formatString: 0
+		lineageTag: a02d8aef-e385-4b52-bf78-868f0e396a5b
+		sourceLineageTag: 9eb417e9-e127-480d-abd1-a91eb1564c22
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: RubriekKey
+
+		annotation SummarizationSetBy = User
+
+	column KostenplaatsKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e3b70c1-c0c6-47f8-b665-bf936ce1ae71
+		sourceLineageTag: 03cfd586-198a-4b42-9857-75e7cdf2c698
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: KostenplaatsKey
+
+		annotation SummarizationSetBy = User
+
+	column ProjectKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 629e8e67-a446-4b43-8df8-06e60dc41975
+		sourceLineageTag: a37bfc59-e7d8-43dc-951b-8df981f0c892
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ProjectKey
+
+		annotation SummarizationSetBy = User
+
+	column BoxNummer
+		dataType: string
+		lineageTag: b3b1506c-b288-47b4-85a4-8ab580de1ddb
+		sourceLineageTag: 0fc2cb4d-4d66-4e16-b745-d709e85d7144
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BoxNummer
+
+		annotation SummarizationSetBy = User
+
+	column Bedrag
+		dataType: double
+		lineageTag: f043fd1d-95bb-41df-968f-b37a84f5c80e
+		sourceLineageTag: 2ae3f516-8b5a-4fe2-bdf0-cfedf65ad882
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Bedrag
+
+		annotation SummarizationSetBy = User
+
+	column Debet/Credit
+		dataType: string
+		lineageTag: bef6abd7-2474-40c8-a3fc-a78efd0e1e2d
+		sourceLineageTag: cb1cc2a0-93d5-4efa-a827-1457e667220e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Debet/Credit
+
+		annotation SummarizationSetBy = User
+
+	column TypePeriode
+		dataType: string
+		lineageTag: 68a16738-95cd-4059-bfc3-537c08a4c6cd
+		sourceLineageTag: 3939eafa-f9b4-4043-adce-0d7fb6a4f202
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: TypePeriode
+
+		annotation SummarizationSetBy = User
+
+	column boekdatum
+		dataType: dateTime
+		isHidden
+		formatString: General Number
+		lineageTag: f1860518-a9df-4a43-a614-4b06eb364344
+		sourceLineageTag: e50eb744-0ace-4c3c-94f1-72f84f560351
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: boekdatum
+
+		annotation SummarizationSetBy = User
+
+	column DocumentKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 1e8e7b71-089c-48d9-a923-f0887ce889e4
+		sourceLineageTag: 9fcaf5b0-95f9-4d6b-89a0-d2badbd01932
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: DocumentKey
+
+		annotation SummarizationSetBy = User
+
+	column 'COA code'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a7ee0c4-f99a-4a02-bab8-8e5aaf35f5e5
+		sourceLineageTag: 3cfa36cc-49a9-4d8f-aafd-2a69343fa081
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: COA code
+
+		annotation SummarizationSetBy = User
+
+	column 'CoA code balans'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b08dd0b-26bf-4113-847d-e0f023099c4d
+		sourceLineageTag: e2d3992c-47f3-439a-9d70-357e06e4420f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: CoA code balans
+
+		annotation SummarizationSetBy = User
+
+	column 'tegenboeking projectwaardering bij vrijval'
+		dataType: string
+		lineageTag: 792267d9-9df4-4b0f-bbe7-a8024a4438cf
+		sourceLineageTag: f0128912-d167-4015-9837-7fd94a14711c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: tegenboeking projectwaardering bij vrijval
+
+		annotation SummarizationSetBy = User
+
+	partition 'Project journaalregels' = entity
+		mode: directQuery
+		source
+			entityName: Project journaalregels
+			expressionSource: 'DirectQuery to AS - SSM'
+

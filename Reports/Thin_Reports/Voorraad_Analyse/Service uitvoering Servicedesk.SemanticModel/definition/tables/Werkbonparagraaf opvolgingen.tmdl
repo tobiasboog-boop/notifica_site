@@ -1,0 +1,83 @@
+table 'Werkbonparagraaf opvolgingen'
+	lineageTag: 24331618-5fc0-41ea-917a-26dc0ba92f55
+	sourceLineageTag: 2a157b7b-a0e1-46b5-8810-b67388716b54
+
+	column WerkbonparagraafKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 9033709a-cec2-45b2-87ec-355d3be1b4ee
+		sourceLineageTag: 2a94d2e8-11f5-48b7-b21b-03549cba6bf1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WerkbonparagraafKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Opvolgsoort code'
+		dataType: string
+		lineageTag: cb20fe44-8400-48ef-b3d1-b52ea0692543
+		sourceLineageTag: bfac6f9b-a8ab-4aed-ab27-0686bb1ba008
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Opvolgsoort code
+
+		annotation SummarizationSetBy = User
+
+	column Opvolgsoort
+		dataType: string
+		lineageTag: c70b7fd1-a2d8-4d0c-80b1-a550d67e2fd4
+		sourceLineageTag: 2f280088-5548-4881-a68b-ee1fa4ebb326
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Opvolgsoort
+
+		annotation SummarizationSetBy = User
+
+	column Beschrijving
+		dataType: string
+		lineageTag: 8cba0eaf-a3d4-4b09-b046-3adf005eace3
+		sourceLineageTag: d9fa789d-94af-465a-a200-0b31c83c9111
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Beschrijving
+
+		annotation SummarizationSetBy = User
+
+	column Aanmaakdatum
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 66382206-e8c0-407c-bd9b-091c74365fc9
+		sourceLineageTag: d0262ebe-8128-4ad2-9f63-a9ba07b3d2b2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Aanmaakdatum
+
+		annotation SummarizationSetBy = User
+
+	column Status
+		dataType: string
+		lineageTag: 990255ea-8e5d-4d1a-affe-5524d87798ef
+		sourceLineageTag: 00cdeb95-ce87-4701-838f-f31c80ffee3c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = User
+
+	column WerkbonDocumentKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 6086640d-3e5e-418f-8cb1-5bae7a2a46d2
+		sourceLineageTag: 517a7c58-a122-4377-a411-8072a51c37de
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WerkbonDocumentKey
+
+		annotation SummarizationSetBy = User
+
+	partition 'Werkbonparagraaf opvolgingen' = entity
+		mode: directQuery
+		source
+			entityName: Werkbonparagraaf opvolgingen
+			expressionSource: 'DirectQuery to AS - SSM'
+

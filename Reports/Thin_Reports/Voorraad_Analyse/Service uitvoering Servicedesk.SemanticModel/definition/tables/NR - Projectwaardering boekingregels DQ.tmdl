@@ -1,0 +1,130 @@
+table 'NR - Projectwaardering boekingregels DQ'
+	lineageTag: 736b9289-5539-4e3e-8f70-4e3bd8fbec4b
+	sourceLineageTag: e82689cf-18cb-4086-ac32-44ff209a4829
+
+	column ProjectwaarderingKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: 893130b3-53a2-4c3a-b70d-66620695624c
+		sourceLineageTag: 4fecd088-9d24-410d-bc7f-c78e87fd890e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ProjectwaarderingKey
+
+		annotation SummarizationSetBy = User
+
+	column Rubriek
+		dataType: string
+		lineageTag: f29f0197-16a2-4df1-9146-7f1097e3ed9c
+		sourceLineageTag: d9947163-4c83-40eb-a65a-1c3ffe98b18e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Rubriek
+
+		annotation SummarizationSetBy = User
+
+	column Kostenplaats
+		dataType: string
+		isNullable: false
+		lineageTag: dc191a44-bd00-4a9b-8274-438655f6589d
+		sourceLineageTag: 205fa937-d2ff-4f88-91e8-f2ede7b2e3d1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Kostenplaats
+
+		annotation SummarizationSetBy = User
+
+	column Project
+		dataType: string
+		lineageTag: 71436af0-d031-4be8-9184-668f3099f701
+		sourceLineageTag: d4ef2b50-5157-49f3-a768-cb854501964c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Project
+
+		annotation SummarizationSetBy = User
+
+	column Datum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: c389e6b6-698e-4b34-b4bb-32c0233428cd
+		sourceLineageTag: 07682d3d-34c6-4507-9819-fbf2a9d3eb77
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Datum
+
+		annotation SummarizationSetBy = User
+
+	column Omschrijving
+		dataType: string
+		lineageTag: 67839754-70e5-4309-8b58-625934c888a8
+		sourceLineageTag: f3ca0424-2673-4e98-821e-689b74d53b82
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Omschrijving
+
+		annotation SummarizationSetBy = User
+
+	column Bedrag
+		dataType: int64
+		formatString: 0
+		lineageTag: ff98f10f-504e-40b7-8aa1-3f0919ad2e75
+		sourceLineageTag: 4af105e5-e55b-4508-8ab6-1b89ae4cd362
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bedrag
+
+		annotation SummarizationSetBy = User
+
+	column DebetCredit
+		dataType: string
+		isNullable: false
+		lineageTag: 5610d1b9-26ec-4b0a-aea2-829a52f44f4c
+		sourceLineageTag: adef05f8-e8ee-4b65-a716-9bc5a2a28110
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DebetCredit
+
+		annotation SummarizationSetBy = User
+
+	column BedragDebet
+		dataType: int64
+		formatString: 0
+		lineageTag: efdad9c8-b924-4b57-a0d4-476150c41739
+		sourceLineageTag: 47e69a73-8142-45a0-8f2d-b62ca96cea61
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BedragDebet
+
+		annotation SummarizationSetBy = User
+
+	column BedragCredit
+		dataType: int64
+		formatString: 0
+		lineageTag: a27a4dd5-6df9-4b6e-ba37-5acba20e5167
+		sourceLineageTag: 128338e7-ccfb-4eb0-95df-e249be45dc97
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BedragCredit
+
+		annotation SummarizationSetBy = User
+
+	column klantnummer
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: 56ced9b3-a575-4aac-8275-293de806c795
+		sourceLineageTag: 628b7b71-47e8-43a6-b92e-b2df1825531c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: klantnummer
+
+		annotation SummarizationSetBy = User
+
+	partition 'NR - Projectwaardering boekingregels DQ' = entity
+		mode: directQuery
+		source
+			entityName: NR - Projectwaardering boekingregels DQ
+			expressionSource: 'DirectQuery to AS - SSM'
+

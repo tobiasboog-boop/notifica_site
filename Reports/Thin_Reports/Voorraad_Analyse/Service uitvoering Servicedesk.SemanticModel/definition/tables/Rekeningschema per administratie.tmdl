@@ -1,0 +1,32 @@
+table 'Rekeningschema per administratie'
+	lineageTag: a81e3832-1921-4c90-abe6-cbf6faf385aa
+	sourceLineageTag: dc879c49-c368-495d-9b71-200d55dc49cc
+
+	column RekeningSchemaKey
+		dataType: int64
+		formatString: 0
+		lineageTag: af27f909-b180-46eb-88c6-9324bc261d9f
+		sourceLineageTag: 0ab4dca0-3610-4069-a31e-0b4516068f8d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: RekeningSchemaKey
+
+		annotation SummarizationSetBy = User
+
+	column AdministratieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 390d10fe-0129-4e8d-95e7-6c84cf2cf5ff
+		sourceLineageTag: d34e6a45-d15a-4184-b17f-dce7a22ed625
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AdministratieKey
+
+		annotation SummarizationSetBy = User
+
+	partition 'Rekeningschema per administratie' = entity
+		mode: directQuery
+		source
+			entityName: Rekeningschema per administratie
+			expressionSource: 'DirectQuery to AS - SSM'
+

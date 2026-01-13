@@ -1,0 +1,72 @@
+table 'Calculatiekosten onder offertes'
+	lineageTag: cdc7a68d-b2bf-476e-bd76-b8a2f5ff2ab3
+	sourceLineageTag: 5577097f-b6b5-4a45-b3eb-d1dd2721bc40
+
+	column CalculatieDocumentKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 8faa1a9b-34d4-4844-b46e-ed034460df4f
+		sourceLineageTag: 5173dc18-9cba-4136-818e-6daa7b4da3ea
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CalculatieDocumentKey
+
+		annotation SummarizationSetBy = User
+
+	column Calculator
+		dataType: string
+		lineageTag: 3b939065-4986-4b15-bc78-dc84755eb526
+		sourceLineageTag: f04d7c91-1eff-4448-9cb3-dfe265b71d8b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Calculator
+
+		annotation SummarizationSetBy = User
+
+	column TaakKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 132370d3-ab4b-4848-af30-302cd6655c72
+		sourceLineageTag: 34af892b-eb81-4137-9fd6-1b9b23ff3f33
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: TaakKey
+
+		annotation SummarizationSetBy = User
+
+	column 'calculatie kostprijs'
+		dataType: double
+		lineageTag: a913999b-e93c-43c8-ab1e-61cb0e26758a
+		sourceLineageTag: 7e7daf7a-27c0-4535-8441-0d7c68fc74de
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: calculatie kostprijs
+
+		annotation SummarizationSetBy = User
+
+	column 'calculatie verrekenprijs'
+		dataType: double
+		lineageTag: 44d396dd-2519-4775-90c6-2cea19e184d9
+		sourceLineageTag: 8a00d82f-a7a8-4f41-9b09-28557f7fb062
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: calculatie verrekenprijs
+
+		annotation SummarizationSetBy = User
+
+	column 'calculatie aantal'
+		dataType: double
+		lineageTag: d074fc1e-56f5-44a3-833f-c23f6184a599
+		sourceLineageTag: 0a6bb8a9-365e-4f0f-bc63-2451b2c0aaad
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: calculatie aantal
+
+		annotation SummarizationSetBy = User
+
+	partition 'Calculatiekosten onder offertes' = entity
+		mode: directQuery
+		source
+			entityName: Calculatiekosten onder offertes
+			expressionSource: 'DirectQuery to AS - SSM'
+

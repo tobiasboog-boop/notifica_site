@@ -1,0 +1,855 @@
+table Werkbonnen
+	lineageTag: 59b372ae-d04b-43b2-b019-b5aa009ba1a8
+	sourceLineageTag: 419e4bcd-0225-45b0-b8c3-5b0e83949387
+
+	column WerkbonDocumentKey
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		lineageTag: b6276884-2a3c-4275-b4b7-9b042d969186
+		sourceLineageTag: 8c0e5c62-5bd0-4d2b-a7df-252a4c91d85e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WerkbonDocumentKey
+
+		annotation SummarizationSetBy = User
+
+	column HoofdwerkbonDocumentKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 63550585-bdb4-4450-a2e9-90f940f42ee4
+		sourceLineageTag: 0bf8b3d1-1046-41e7-9884-f5e46a31441d
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: HoofdwerkbonDocumentKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon Documentstatus'
+		dataType: string
+		lineageTag: 9c3a8532-d8f1-44ca-a45a-8621531d799a
+		sourceLineageTag: 5cefc2d2-7119-4b39-926c-ddcb656175b6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon Documentstatus
+
+		annotation SummarizationSetBy = User
+
+	column Hoofdwerkbon
+		dataType: string
+		lineageTag: 5df69068-c8f3-40c9-9e62-c99893e5a37d
+		sourceLineageTag: 774cfb4a-5ea0-4215-875c-fd4f5c7619be
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon
+
+		annotation SummarizationSetBy = User
+
+	column Werkbon
+		dataType: string
+		lineageTag: 2ee2a819-1d94-4f55-a10a-68cb9ac37456
+		sourceLineageTag: 3027c060-e437-4915-9662-9266884b96ca
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Werkbon
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon uitvoeringstatus'
+		dataType: string
+		lineageTag: 8b67d3ac-1fe5-4f02-9306-edd485488b52
+		sourceLineageTag: 295c9b56-ad39-49c2-8c78-9332cf4241ea
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon uitvoeringstatus
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon aanmaakdatum'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 923d1465-850c-4d53-b24a-3589d0017552
+		sourceLineageTag: f8654e4f-e7a9-4e6f-b717-8bdfa298885e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon aanmaakdatum
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon boekdatum'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: dde13996-ce10-41f6-87d8-60602f68f379
+		sourceLineageTag: 7bf786e2-2fed-4d95-9724-70883e1b8497
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon boekdatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon dagboek'
+		dataType: string
+		lineageTag: d0c53a18-d169-4ca8-a1d1-1964aa25179f
+		sourceLineageTag: 443c50aa-ca80-4c47-b99a-6b6fe01820c3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon dagboek
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon soort'
+		dataType: string
+		lineageTag: 7011cbad-b0c4-441a-81fd-373ff5244932
+		sourceLineageTag: 0cc6e337-b59b-4a93-95bf-e8e1eab3a8ab
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon soort
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon monteur'
+		dataType: string
+		lineageTag: 5da95f5e-3a9a-4fc3-ba43-fd7675b15aaa
+		sourceLineageTag: ed0b2ad0-be53-402a-af66-0ae7cd36557a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon monteur
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon bloktijd'
+		dataType: string
+		lineageTag: f6ff353c-d98e-4d1e-9304-d7be7da4aaa3
+		sourceLineageTag: 2a6d2375-a7f8-44cf-8033-825bd4372882
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon bloktijd
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon bloktijd kenmerk'
+		dataType: string
+		lineageTag: 04d7f979-14cb-4e5d-9411-c8c680b576ab
+		sourceLineageTag: 4ac906fb-4c18-4c6f-9955-66ea19dec757
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon bloktijd kenmerk
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon prioriteit'
+		dataType: string
+		lineageTag: e097a93c-d492-4202-8c38-a76a2d0f3a27
+		sourceLineageTag: d715585d-06dc-4388-bb8d-095b1b656786
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon prioriteit
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon prioriteit kenmerk'
+		dataType: string
+		lineageTag: 1fc30fe4-d270-4f26-9160-bf1aff0d2874
+		sourceLineageTag: b91fb8ca-8e82-499e-bdff-5ac76ca5c4e1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon prioriteit kenmerk
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon administratieve fase'
+		dataType: string
+		lineageTag: 3719d483-7937-4b1a-9e4b-0b7305fb5f0c
+		sourceLineageTag: e8d2573a-646f-49d7-9bf6-35581c396443
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon administratieve fase
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon Onderaannemer'
+		dataType: string
+		lineageTag: c7fcf4f2-b0e4-438a-9c28-3411aca30eaa
+		sourceLineageTag: 0fec57f3-747d-45bb-b25c-de8abb75aae8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon Onderaannemer
+
+		annotation SummarizationSetBy = User
+
+	column 'Werkbon niveau omschrijving'
+		dataType: string
+		lineageTag: d08646a7-45f0-4752-92a4-e47238f1f5a3
+		sourceLineageTag: cfaa3e0e-e6ee-48f5-9428-253ad04641e7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Werkbon niveau omschrijving
+
+		annotation SummarizationSetBy = User
+
+	column 'Werkbon niveau'
+		dataType: int64
+		formatString: 0
+		lineageTag: 199113b3-6129-4897-bc19-73c989f0c634
+		sourceLineageTag: a8295d65-7b53-48a6-a5a9-c4ee793465c9
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Werkbon niveau
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon afspraakdatum'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 29956e14-218c-41be-9a1c-a0ba52c02fc3
+		sourceLineageTag: 4de14c3c-4706-47ef-9d6d-00e2f8d7ef3b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon afspraakdatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon type'
+		dataType: string
+		lineageTag: 3a33da81-489d-40d3-8b94-96475f959dd2
+		sourceLineageTag: 73cf1d9e-896c-4c86-9a38-92c67e448a91
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon type
+
+		annotation SummarizationSetBy = User
+
+	column 'Aantal werkbonnen incl. hoofdwerkbon'
+		dataType: int64
+		formatString: #,0
+		lineageTag: 828b57c7-083c-4a96-bdb7-40b5cfb6cdd1
+		sourceLineageTag: b0982d0e-4f82-4980-8e87-8d2a4466264c
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Aantal werkbonnen incl. hoofdwerkbon
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon betreft onderaannemer'
+		dataType: string
+		lineageTag: 3b3bdd7f-c1c3-45dd-b53d-a2cec11ba132
+		sourceLineageTag: bc41b718-53e3-4ac1-991b-48a567ac4010
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon betreft onderaannemer
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon klant'
+		dataType: string
+		lineageTag: 50284cc3-1e6b-405c-b611-6c94af7ca891
+		sourceLineageTag: db6ffef8-8ac3-4bff-b0b0-38f1421f2113
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon klant
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon debiteur'
+		dataType: string
+		lineageTag: 9cc4efab-1c6a-4334-879e-1d5df4f5c533
+		sourceLineageTag: a942ab35-5bb0-4349-a2d4-9812a72eefd7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon debiteur
+
+		annotation SummarizationSetBy = User
+
+	column Documentstatus
+		dataType: string
+		lineageTag: 058a9e0f-bcd2-486b-aec8-7f5772e5f6b1
+		sourceLineageTag: 5e08d5eb-512e-4e5e-b6e4-21c356837861
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Documentstatus
+
+		annotation SummarizationSetBy = User
+
+	column Status
+		dataType: string
+		lineageTag: bcdf1db1-e73f-4a70-af33-e3324db51cb6
+		sourceLineageTag: 901fe344-5306-434d-9aa6-d7a5ca28ba30
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = User
+
+	column AfspraakDatum
+		dataType: dateTime
+		formatString: d mmmm yyyy
+		lineageTag: 9b82146c-31f4-466e-80b0-a6139914271e
+		sourceLineageTag: 274e0540-5636-4fa9-b17e-aad317caf816
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AfspraakDatum
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Type
+		dataType: string
+		lineageTag: 9eb158a9-dac3-455c-9e60-d62efc955a3f
+		sourceLineageTag: 77bc3910-e788-4003-86fa-f110b991264d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = User
+
+	column Dagboek
+		dataType: string
+		lineageTag: c80c5057-6577-431e-b308-767bb744513a
+		sourceLineageTag: 9995f1bd-69b0-45d9-a6bb-1256177d2ed5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Dagboek
+
+		annotation SummarizationSetBy = User
+
+	column Soort
+		dataType: string
+		lineageTag: 406211ce-ab11-4dfa-9b93-7967a7cd67c8
+		sourceLineageTag: c979c972-8dcc-42fc-afd2-2d877807d43f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Soort
+
+		annotation SummarizationSetBy = User
+
+	column AfspraakTijd
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 20b6fcbe-ca89-47bd-9903-fb8f06c618fc
+		sourceLineageTag: 1031f949-7016-4f22-9a27-827534b6c1a9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AfspraakTijd
+
+		annotation SummarizationSetBy = User
+
+	column MeldDatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: fed8a297-bae8-4cf2-a7fc-9b6eef5dbd40
+		sourceLineageTag: 868dedb0-8bd3-4596-88ad-6e3e7d66833c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MeldDatum
+
+		annotation SummarizationSetBy = User
+
+	column MeldTijd
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 54f56d84-f4a6-472c-9f7b-428936f235a0
+		sourceLineageTag: 8a4a763e-2bc6-4c55-a905-9fe1f03befbb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MeldTijd
+
+		annotation SummarizationSetBy = User
+
+	column Bloktijd
+		dataType: string
+		lineageTag: d0d4137a-4071-41e9-8eca-9d7b3403a3d0
+		sourceLineageTag: cbee5622-b587-42e8-843e-b66c49d74a97
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bloktijd
+
+		annotation SummarizationSetBy = User
+
+	column 'Bloktijd kenmerk'
+		dataType: string
+		lineageTag: 4c0ad540-14b2-4df6-8549-aefc79d318d4
+		sourceLineageTag: 677d5f99-bf36-44ec-898f-2ad34f3e1025
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bloktijd kenmerk
+
+		annotation SummarizationSetBy = User
+
+	column Prioriteit
+		dataType: string
+		lineageTag: 076dd0f4-fcc9-4772-9d1c-f5b14d1fb236
+		sourceLineageTag: 42081bc3-c810-43e3-8f12-9cb653627529
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Prioriteit
+
+		annotation SummarizationSetBy = User
+
+	column 'Prioriteit kenmerk'
+		dataType: string
+		lineageTag: 3cc926f7-3ef9-428f-a848-8a8d10103582
+		sourceLineageTag: 4fdef68a-5173-4039-9805-8163d4742edd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Prioriteit kenmerk
+
+		annotation SummarizationSetBy = User
+
+	column 'Administratieve fase'
+		dataType: string
+		lineageTag: cff0c7bc-d291-41eb-882c-2baf323dbbce
+		sourceLineageTag: ab7923f7-8143-472e-9c72-0f25a4266667
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Administratieve fase
+
+		annotation SummarizationSetBy = User
+
+	column monteur
+		dataType: string
+		lineageTag: a2ef0981-40dc-4082-b606-e80dc5dac06e
+		sourceLineageTag: e46ccfb9-d26d-4f4c-9c5d-e5131e0a28a5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: monteur
+
+		annotation SummarizationSetBy = User
+
+	column Onderaannemer
+		dataType: string
+		lineageTag: ddf4a569-b78a-4772-b98f-5403cb2f8c9c
+		sourceLineageTag: fdfc038d-3efb-4975-bb5b-444546eceeb1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Onderaannemer
+
+		annotation SummarizationSetBy = User
+
+	column 'betreft onderaannemer'
+		dataType: string
+		lineageTag: 575a9b40-4601-447c-9f96-2c828a341602
+		sourceLineageTag: 3ad70802-da3a-48f1-8e4b-284437e199be
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: betreft onderaannemer
+
+		annotation SummarizationSetBy = User
+
+	column klant
+		dataType: string
+		lineageTag: f1fc8b2a-d9d3-4213-8b04-96c01f1e56ca
+		sourceLineageTag: 2d6df138-01df-4a33-a863-1b0a57ee5bae
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: klant
+
+		annotation SummarizationSetBy = User
+
+	column Debiteur
+		dataType: string
+		lineageTag: ad9562be-a72e-422a-bd1e-c1517b1d471b
+		sourceLineageTag: e4213937-d408-4442-ab77-6e7c9b33d82e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Debiteur
+
+		annotation SummarizationSetBy = User
+
+	column Aanmaakdatum
+		dataType: dateTime
+		formatString: d mmmm yyyy
+		lineageTag: 7b2328fb-8684-4025-b44b-eab49c74c7de
+		sourceLineageTag: 19a20a23-ef4c-4d95-bd40-552c152424cb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Aanmaakdatum
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column MeldDatumTijd
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 30abb41f-89df-4135-9c33-9404435998ce
+		sourceLineageTag: 64cc6b8d-e8a0-4af4-8bcb-d22259bd0e85
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MeldDatumTijd
+
+		annotation SummarizationSetBy = User
+
+	column Opleverdatum
+		dataType: dateTime
+		formatString: d mmmm yyyy
+		lineageTag: 253a5d99-1c46-47b4-8d28-b8d5d97498ac
+		sourceLineageTag: 87c315ae-79c4-4c28-9a8c-8599780884bd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Opleverdatum
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Inkoopnummer
+		dataType: string
+		lineageTag: 1de3c005-fa4d-4744-8b4d-710a6e066b49
+		sourceLineageTag: ee2f9da4-2d8f-4f0c-af61-47ff292a4bb0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Inkoopnummer
+
+		annotation SummarizationSetBy = User
+
+	column Werkorder
+		dataType: string
+		lineageTag: f045e8e0-1c1c-4b9b-b86b-da54452256e4
+		sourceLineageTag: a957cc7b-f78b-4fbd-89b8-6b07c43f8154
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Werkorder
+
+		annotation SummarizationSetBy = User
+
+	column 'Aankondigen Ja/Nee'
+		dataType: string
+		lineageTag: 6817ddd4-c559-46ca-8512-b236d1855945
+		sourceLineageTag: 3f5e9770-e688-420e-b2dc-ae604d2ee502
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Aankondigen Ja/Nee
+
+		annotation SummarizationSetBy = User
+
+	column 'Laatste aankondiging'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 75ce226e-d4ea-41cd-8abb-eb62ce590234
+		sourceLineageTag: cbb6b5c7-fbd0-4c90-ba9f-23adf543a0d9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Laatste aankondiging
+
+		annotation SummarizationSetBy = User
+
+	column 'Aantal aankondigingen'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e77a8cf-fede-46bd-98d8-6681104aee72
+		sourceLineageTag: a25c8c62-81b0-4503-b631-fb573b92dc5c
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Aantal aankondigingen
+
+		annotation SummarizationSetBy = User
+
+	column 'KS CC aanmaakdatum dag index' =
+			
+			LOOKUPVALUE(
+			    'Kalender aanmaakdatum'[Dag index]
+			    ,'Kalender aanmaakdatum'[Aanmaakdatum]
+			    ,Werkbonnen[Aanmaakdatum])
+		formatString: 0
+		lineageTag: 1e04733b-69c9-4824-97ce-15498dbbbb25
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KS Uiterste opleverdatum verstreken' = ```
+			IF(
+			    NOT(ISBLANK(Werkbonnen[Opleverdatum])) && Werkbonnen[Opleverdatum] > TODAY(),
+			    "nee",
+			    "ja"
+			)
+			
+			```
+		lineageTag: 35304906-5c31-42df-9c97-b795d0e58c65
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KS Melddatum jaar en weeknummer' =
+			
+			CONCATENATE(
+			    year(Werkbonnen[MeldDatum]), CONCATENATE("-",IF(WEEKNUM(Werkbonnen[MeldDatum],2)<10,0&WEEKNUM(Werkbonnen[MeldDatum],2),WEEKNUM(Werkbonnen[MeldDatum],2))
+			    ))
+		lineageTag: d5a57159-28d4-42fd-af70-f05c42944160
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KS Melddatum jaar' =
+			
+			YEAR(Werkbonnen[MeldDatum])
+		formatString: 0
+		lineageTag: e71f74e9-8a72-4f2f-9027-abec6f2c5d1c
+		summarizeBy: sum
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KS Hoofdwerkbon aanmaakjaar' =
+			
+			year(Werkbonnen[Hoofdwerkbon aanmaakdatum])
+		formatString: 0
+		lineageTag: fed45fe5-b706-40ff-8ccd-ee5f5fa1c0b5
+		summarizeBy: sum
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KS Hoofdwerkbon aanmaakmaand' =
+			
+			MONTH(Werkbonnen[Hoofdwerkbon aanmaakdatum])
+		formatString: 0
+		lineageTag: a227a2b3-ab98-40e2-bc9f-052054dd4bc9
+		summarizeBy: sum
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Afspraakdatumtijd
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: d7852304-b436-4825-ae1f-a0dac7546705
+		sourceLineageTag: 527c1b55-6ebb-4bcb-9d53-3515bb5227a5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Afspraakdatumtijd
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon afspraakdatumtijd'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: cfe29dca-09eb-4ad4-9eb0-cce551b15f83
+		sourceLineageTag: 1f1eecfc-0df0-4c81-a661-0691d7d6fcf4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon afspraakdatumtijd
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon melddatum'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 11f37d20-666d-4278-9256-a06ec5495efd
+		sourceLineageTag: 990e6435-64c9-4862-b767-4ae0aaa164a7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon melddatum
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon meldtijd'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: d4b6ff57-2ef5-4b0c-b4ed-f65b7385c10a
+		sourceLineageTag: 82f8f8c0-7a07-4980-85bf-216509e791ab
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon meldtijd
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon melddatumtijd'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 8d0ad926-328b-416c-9559-1a1c931f01ce
+		sourceLineageTag: 8bcb06b3-0b12-4172-a45c-b5077e2910fa
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon melddatumtijd
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon afspraaktijd'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 7dc07250-e0e2-4ee2-87ef-0ca9dd635940
+		sourceLineageTag: 6fa55759-9eaa-4648-8a5d-ed52e74bdb00
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon afspraaktijd
+
+		annotation SummarizationSetBy = User
+
+	column 'Document eigenaar'
+		dataType: string
+		lineageTag: ecdbe8cb-70bb-4e88-b829-2227fffe8b2e
+		sourceLineageTag: edcd397c-cfd5-4e8f-99c7-8e3ec245e421
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Document eigenaar
+
+		annotation SummarizationSetBy = User
+
+	column 'Document eigenaar code'
+		dataType: string
+		lineageTag: c00e60c0-c1db-4da0-b21c-48d7e4695875
+		sourceLineageTag: 0d78d930-6858-4644-a7ac-98e74d225e63
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Document eigenaar code
+
+		annotation SummarizationSetBy = User
+
+	column 'Document eigenaar afdeling'
+		dataType: string
+		lineageTag: 837eecc2-d3e1-4a1b-b877-0fb23560334e
+		sourceLineageTag: dac4ace3-dbf0-4bdf-8c84-2be225998157
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Document eigenaar afdeling
+
+		annotation SummarizationSetBy = User
+
+	column 'KS Getal werkbon' =
+			
+			VAR PositieScheiding = SEARCH(" - ", [Werkbon], 1, LEN([Werkbon]))
+			VAR GetalDeel = LEFT([Werkbon], PositieScheiding - 1)
+			VAR NaamDeel = MID([Werkbon], PositieScheiding + 3, LEN([Werkbon]) - PositieScheiding - 2)
+			RETURN
+			GetalDeel
+		lineageTag: e4ea4c13-6d51-4b41-9024-094642be7123
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KS Naam werkbon' =
+			
+			VAR PositieScheiding = SEARCH(" - ", [Werkbon], 1, LEN([Werkbon]))
+			VAR GetalDeel = LEFT([Werkbon], PositieScheiding - 1)
+			VAR NaamDeel = MID([Werkbon], PositieScheiding + 3, LEN([Werkbon]) - PositieScheiding - 2)
+			RETURN
+			NaamDeel
+		lineageTag: 705b6e11-716b-4ae8-9aba-5b66666e1e4f
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Werkboncode
+		dataType: string
+		lineageTag: 24847495-6dbe-4fe0-8af7-f9274868cab6
+		sourceLineageTag: 29d583c8-f195-4d3a-8853-f0a335ef51d6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Werkboncode
+
+		annotation SummarizationSetBy = User
+
+	column 'Werkbon titel'
+		dataType: string
+		lineageTag: 8b75e53a-43d7-4b0a-a78a-3b7274acb29b
+		sourceLineageTag: dfd7cb1a-5c8a-4dc2-9c6a-a2bc0c7a092d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Werkbon titel
+
+		annotation SummarizationSetBy = User
+
+	column Hoofdwerkboncode
+		dataType: string
+		lineageTag: b3392b72-7c49-473e-9068-9dc982c84a04
+		sourceLineageTag: 3f4f6e6d-b530-4bef-bd15-a53fb8dde6ce
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkboncode
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdwerkbon titel'
+		dataType: string
+		lineageTag: 7c400ca2-5ffd-4347-8acd-1a1618ad506b
+		sourceLineageTag: 3240660c-7822-414d-87cc-99ca874340db
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdwerkbon titel
+
+		annotation SummarizationSetBy = User
+
+	column 'KS CC Prioriteit uren' =
+			
+			SWITCH(
+			    Werkbonnen[Prioriteit kenmerk],
+			    "<24 uur", 24,
+			    "<48uur", 48,
+			    5000)
+		formatString: 0
+		lineageTag: 5a45bc8d-eb8d-45af-9cbc-3d4e3d8ed8ad
+		summarizeBy: sum
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KS CC Klantnummer' =
+			
+			LEFT(Werkbonnen[klant], 4)
+		lineageTag: 38acb5ad-13c2-415b-b2d5-baf70b620b55
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KS CC Klant' =
+			
+			MID(Werkbonnen[klant], 7, 9)
+		lineageTag: 9b17a474-f53c-41f8-a3e0-77178e479640
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Werkbon Hierarchy'
+		lineageTag: f9ccf99d-44a6-46b5-a3f0-b72b651bd807
+		sourceLineageTag: 3e7aa964-d566-4f65-938e-e2b1cef88bc4
+
+		level Hoofdwerkbon
+			lineageTag: 91944213-26a4-48b8-9052-aad88097be63
+			sourceLineageTag: 91a6ccd6-2e52-45d7-922b-aba86c0b1cb3
+			column: Hoofdwerkbon
+
+		level Werkbon
+			lineageTag: 99864589-4ab2-412a-b2bf-e3a59ae8904c
+			sourceLineageTag: 7d231a0d-5f2d-46e1-9065-1ff3938b1a65
+			column: Werkbon
+
+	partition Werkbonnen = entity
+		mode: directQuery
+		source
+			entityName: Werkbonnen
+			expressionSource: 'DirectQuery to AS - SSM'
+

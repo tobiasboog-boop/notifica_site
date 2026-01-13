@@ -1,0 +1,130 @@
+table 'SSM measures'
+	lineageTag: edc5ef6a-51cb-4307-b0cf-e3524c5432de
+	sourceLineageTag: bdda7bf7-0160-4648-9510-ff2c4f53e18c
+
+	column MEASURE_UNIQUE_NAME
+		dataType: string
+		lineageTag: 16aca2ed-5eae-433a-9146-a2d28b476b88
+		sourceLineageTag: 6730dd0b-53a6-4e8e-997e-f85c800fb6c1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MEASURE_UNIQUE_NAME
+
+		annotation SummarizationSetBy = User
+
+	column 'Folder niveau 2'
+		dataType: string
+		lineageTag: 6025a886-c26f-4a02-8f7d-dc2b8ce383fe
+		sourceLineageTag: 53e1e71a-cc58-4604-ab25-f5543d71fb29
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Folder niveau 2
+
+		annotation SummarizationSetBy = User
+
+	column 'Folder niveau 3'
+		dataType: string
+		lineageTag: 3e6aa9bc-0c1b-4df3-9838-ef0cd9883d2b
+		sourceLineageTag: 92d1be89-a8a6-408c-8a3c-1ab77fe7284a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Folder niveau 3
+
+		annotation SummarizationSetBy = User
+
+	column 'Folder niveau 4'
+		dataType: string
+		lineageTag: fad79664-c72f-4892-8885-f7a28485f58b
+		sourceLineageTag: 649fd021-89b1-428b-b008-b1f0bd27dfd5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Folder niveau 4
+
+		annotation SummarizationSetBy = User
+
+	column 'Folder niveau 5'
+		dataType: string
+		lineageTag: f4b2e91f-2f83-40e3-9227-185d99ed565a
+		sourceLineageTag: d7767dd6-185d-4364-b518-96c3075db77a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Folder niveau 5
+
+		annotation SummarizationSetBy = User
+
+	column 'Folder niveau 6'
+		dataType: string
+		lineageTag: c4e83287-248c-4f06-b58d-125b924f7a0c
+		sourceLineageTag: 0d1683d9-d18b-495b-951a-7866abb2f78c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Folder niveau 6
+
+		annotation SummarizationSetBy = User
+
+	column Measure
+		dataType: string
+		lineageTag: 6c7ba302-e41d-4ee1-b323-682165317047
+		sourceLineageTag: 4f63a3ef-53ed-4ed1-9f95-abcbccead2db
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Measure
+
+		annotation SummarizationSetBy = User
+
+	column Omschrijving
+		dataType: string
+		lineageTag: 333a2440-4c93-4d5c-88a9-8aa62966abb1
+		sourceLineageTag: 7e97b677-9cc9-4631-9d23-e2616d9418cb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Omschrijving
+
+		annotation SummarizationSetBy = User
+
+	column DAX
+		dataType: string
+		lineageTag: 0cdd4c08-1be4-49a0-86c4-6a0ac31d9909
+		sourceLineageTag: 4022318b-3426-4eb3-95d3-82a32ad56ee9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DAX
+
+		annotation SummarizationSetBy = User
+
+	column Zichtbaar
+		dataType: string
+		lineageTag: cde333de-38c8-477e-bd92-d68bbd3750c0
+		sourceLineageTag: 874f12ab-0ba5-4390-bb13-89c227e4df03
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Zichtbaar
+
+		annotation SummarizationSetBy = User
+
+	column Hoofdfolder
+		dataType: string
+		lineageTag: fcc38bed-f38e-4b62-aa5c-c1424dbe86c6
+		sourceLineageTag: 948361e2-21a9-4947-9232-1e2ac5677608
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdfolder
+
+		annotation SummarizationSetBy = User
+
+	column Folder
+		dataType: string
+		lineageTag: 8821af1b-b1ae-4d88-9bea-7c669b1594c8
+		sourceLineageTag: 42892a58-0e7c-40b9-bdff-019923847f0e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Folder
+
+		annotation SummarizationSetBy = User
+
+	partition 'SSM measures' = entity
+		mode: directQuery
+		source
+			entityName: SSM measures
+			expressionSource: 'DirectQuery to AS - SSM'
+

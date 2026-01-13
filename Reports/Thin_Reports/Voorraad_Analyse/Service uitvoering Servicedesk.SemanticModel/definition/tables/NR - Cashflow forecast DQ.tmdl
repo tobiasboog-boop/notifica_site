@@ -1,0 +1,140 @@
+table 'NR - Cashflow forecast DQ'
+	lineageTag: 78215f23-caae-40ef-aec8-f1a642166893
+	sourceLineageTag: 40d0d6aa-343c-4f76-a0a3-3d5c013a58b7
+
+	column Regelkey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: b5fef46c-553c-470d-acec-0af3ebb2d674
+		sourceLineageTag: b4e1494f-2983-4188-b02f-48fae1edd5bb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Regelkey
+
+		annotation SummarizationSetBy = User
+
+	column Aanmaakdatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 0f355e24-0679-4788-845e-2ee66bda5d11
+		sourceLineageTag: 76181f88-35b9-4d73-a6ec-b5aa703fc973
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Aanmaakdatum
+
+		annotation SummarizationSetBy = User
+
+	column Aanmaker
+		dataType: string
+		lineageTag: 51a15aa1-bf27-4ef1-9a57-87a743591c23
+		sourceLineageTag: 927f00cc-a53e-47bd-8f84-b8bfa2103503
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Aanmaker
+
+		annotation SummarizationSetBy = User
+
+	column Wijzigdatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: bf005f1c-e180-49a4-be28-0399013720fd
+		sourceLineageTag: 5b67ec2a-bfc3-4289-a2f9-f732c630f728
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Wijzigdatum
+
+		annotation SummarizationSetBy = User
+
+	column Wijziger
+		dataType: string
+		lineageTag: aa54bc66-82b2-43c3-a1dd-2368ddb6d3b5
+		sourceLineageTag: da3bb362-1cd0-4eed-b03a-694fb1b0f97e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Wijziger
+
+		annotation SummarizationSetBy = User
+
+	column Versie
+		dataType: string
+		lineageTag: 5b5a6929-bac1-4d3a-9e5a-11a7e14e0502
+		sourceLineageTag: 2468a2b9-cca1-4393-af8d-ca3b97f97ef3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Versie
+
+		annotation SummarizationSetBy = User
+
+	column Klantnummer
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: 65479358-738f-4288-a74d-e4ad0df24271
+		sourceLineageTag: dc3456b2-5a02-4910-a775-71159a3aae10
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Klantnummer
+
+		annotation SummarizationSetBy = User
+
+	column AdministratieKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: fc7675da-e967-4f0d-b01a-f93b03494e6f
+		sourceLineageTag: 8e6f69bb-db88-4e35-9923-a7533fee265f
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: AdministratieKey
+
+		annotation SummarizationSetBy = User
+
+	column BedrijfseenheidKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 42810e59-05d9-40c0-945c-c7dcae7abb87
+		sourceLineageTag: 3f397205-0938-4cf8-a884-1802b1e5ca02
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BedrijfseenheidKey
+
+		annotation SummarizationSetBy = User
+
+	column Administratie
+		dataType: string
+		lineageTag: af549dd0-4143-4f37-a2b4-40edce0f1e02
+		sourceLineageTag: e2ce6d31-c54e-41ec-8dd9-a02e56ce25d9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Administratie
+
+		annotation SummarizationSetBy = User
+
+	column Bedrijfseenheid
+		dataType: string
+		lineageTag: 5606218d-9a9a-4458-8f9f-58d04bed2bec
+		sourceLineageTag: c2a194d1-da43-41ae-9883-03a8bc71c29e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bedrijfseenheid
+
+		annotation SummarizationSetBy = User
+
+	column Jaar
+		dataType: int64
+		formatString: 0
+		lineageTag: 30196061-5605-4912-9420-6a0839e4eded
+		sourceLineageTag: 3f42c5eb-0dff-4dab-bb0a-a276146ee7fc
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Jaar
+
+		annotation SummarizationSetBy = User
+
+	partition 'NR - Cashflow forecast DQ' = entity
+		mode: directQuery
+		source
+			entityName: NR - Cashflow forecast DQ
+			expressionSource: 'DirectQuery to AS - SSM'
+

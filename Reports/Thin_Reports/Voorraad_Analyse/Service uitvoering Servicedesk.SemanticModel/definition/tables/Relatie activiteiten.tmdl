@@ -1,0 +1,116 @@
+table 'Relatie activiteiten'
+	lineageTag: 08486346-0cc4-4e1e-ade5-378007c2c4d9
+	sourceLineageTag: 813503cc-4f57-48de-aa36-91ae3824f303
+
+	column RegelKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 9c2d0bdb-fba6-434e-9c9c-5f5b3800de45
+		sourceLineageTag: df7fca41-f3ed-4018-9f1a-32a8f0bbc60e
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: RegelKey
+
+		annotation SummarizationSetBy = User
+
+	column RelatieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 210f0516-5424-4ba9-affb-3ca925275279
+		sourceLineageTag: b1581541-077a-4b35-a449-5c5c94328760
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: RelatieKey
+
+		annotation SummarizationSetBy = User
+
+	column Aanmaakdatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 0353ac14-4664-45cf-904b-55fb68160d33
+		sourceLineageTag: 6ae58380-f184-414b-9011-1e653f63181a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Aanmaakdatum
+
+		annotation SummarizationSetBy = User
+
+	column Wijzigdatum
+		dataType: dateTime
+		isHidden
+		formatString: General Number
+		lineageTag: 9962a0fc-17c5-480d-a7f6-3da28f11dc82
+		sourceLineageTag: 39294e8f-af11-4357-a400-1594fd2a20bf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Wijzigdatum
+
+		annotation SummarizationSetBy = User
+
+	column Soort
+		dataType: string
+		lineageTag: 2d25c378-aa04-4482-8015-61b43e90efa3
+		sourceLineageTag: 48a2ed3c-606e-436d-aa75-5912b5b32a01
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Soort
+
+		annotation SummarizationSetBy = User
+
+	column 'Activiteit code'
+		dataType: string
+		lineageTag: 1c4400a3-79a2-48de-a6b3-cffe608b0bed
+		sourceLineageTag: a1acfe5c-ab64-4548-bdd4-c47743a84862
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Activiteit code
+
+		annotation SummarizationSetBy = User
+
+	column 'Activiteit omschrijving'
+		dataType: string
+		lineageTag: b7634640-cf4e-4b94-b046-640f6ae1a067
+		sourceLineageTag: 65dd8918-22e7-48ba-a902-4f6c444bd4d5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Activiteit omschrijving
+
+		annotation SummarizationSetBy = User
+
+	column Activiteit
+		dataType: string
+		lineageTag: 7f9ac440-f324-483f-979e-159fa0aed3b7
+		sourceLineageTag: 56f1907a-95c2-476f-9f99-017bbfa32f79
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Activiteit
+
+		annotation SummarizationSetBy = User
+
+	column BedrijfsactiviteitKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 46e6356f-99e4-4afe-9bb5-ea011a97cccb
+		sourceLineageTag: 0495fe5f-2347-49be-ad8d-a4284294bfb0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BedrijfsactiviteitKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Activiteit status'
+		dataType: string
+		lineageTag: 54fb67cc-5f8a-4421-a4f9-872c31c23fbd
+		sourceLineageTag: d8c12e75-30da-40b9-be86-271bf0afcb46
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Activiteit status
+
+		annotation SummarizationSetBy = User
+
+	partition 'Relatie activiteiten' = entity
+		mode: directQuery
+		source
+			entityName: Relatie activiteiten
+			expressionSource: 'DirectQuery to AS - SSM'
+

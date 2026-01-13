@@ -1,0 +1,179 @@
+table Journaalregels
+	lineageTag: cad9982f-b452-4449-b759-8013920c7603
+	sourceLineageTag: 25ee482d-fa0e-40af-ad8d-1587cda7646e
+
+	column RubriekKey
+		dataType: int64
+		formatString: 0
+		lineageTag: fe9a91c8-7a3e-4e09-aaae-8a273afe9a24
+		sourceLineageTag: ba973baa-82e5-401c-84a1-8f068a6a31b1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: RubriekKey
+
+		annotation SummarizationSetBy = User
+
+	column DocumentKey
+		dataType: int64
+		formatString: 0
+		lineageTag: b170c25a-c9ed-42fa-80c9-ad562fd98815
+		sourceLineageTag: 966c49c7-fce1-4d93-bbf2-31deb15d8ccc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DocumentKey
+
+		annotation SummarizationSetBy = User
+
+	column KostenplaatsKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 2666fcf1-b7b2-499e-bc93-9900f2b64fb4
+		sourceLineageTag: 01ecde51-9c8a-4b0f-8756-fb69eb3e0d07
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: KostenplaatsKey
+
+		annotation SummarizationSetBy = User
+
+	column boekdatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: b675ec73-80da-4965-bb2c-1c9753796acd
+		sourceLineageTag: a76cbdab-955f-4084-a883-243217100f25
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: boekdatum
+
+		annotation SummarizationSetBy = User
+
+	column BoxNummer
+		dataType: string
+		lineageTag: 7972596b-298d-4fa6-9096-562a9100d65d
+		sourceLineageTag: 37cf156d-c87b-4af7-b62f-c02a7856b9f4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BoxNummer
+
+		annotation SummarizationSetBy = User
+
+	column TypePeriode
+		dataType: string
+		lineageTag: e26adf1c-2173-4a4d-aac9-f26aee94fdf4
+		sourceLineageTag: 13061c3b-bf14-4f57-baa7-c6329c953515
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: TypePeriode
+
+		annotation SummarizationSetBy = User
+
+	column projectgerelateerd
+		dataType: string
+		lineageTag: 6a7d7bc4-4497-4f6c-b4e1-861bc5edc73e
+		sourceLineageTag: c9bd4b92-16ff-40a6-b824-ce8c08fa989b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: projectgerelateerd
+
+		annotation SummarizationSetBy = User
+
+	column Debetbedrag
+		dataType: double
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 3467c799-206f-4446-a414-16577093f8ff
+		sourceLineageTag: 96055670-95fd-4be0-9896-cbf1c2603ee6
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Debetbedrag
+
+		annotation SummarizationSetBy = User
+
+	column Creditbedrag
+		dataType: double
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 9e7bce07-80dd-4f3f-9bcf-2de0ec807cfc
+		sourceLineageTag: 8e38d67c-4a6e-46d2-ac6b-efaf11081ad8
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Creditbedrag
+
+		annotation SummarizationSetBy = User
+
+	column SecundaireDocumentKey
+		dataType: int64
+		formatString: 0
+		lineageTag: eec7afe1-6e1c-4c95-b01c-201118f15a12
+		sourceLineageTag: 60c339eb-db33-44ef-afac-7c69607f4d02
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: SecundaireDocumentKey
+
+		annotation SummarizationSetBy = User
+
+	column 'tegenboeking projectwaardering bij vrijval'
+		dataType: string
+		lineageTag: b0c9a23f-acdd-4613-8a78-97a45801d8a2
+		sourceLineageTag: c6b769c7-0ede-436c-9ef3-909fb7eddff7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: tegenboeking projectwaardering bij vrijval
+
+		annotation SummarizationSetBy = User
+
+	column 'Bankafschriftboeking Ja/Nee'
+		dataType: string
+		lineageTag: f4846c44-5f9c-4811-88e4-0cba84341864
+		sourceLineageTag: 72ce2423-bca8-44fb-b77f-b4244d451bbb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bankafschriftboeking Ja/Nee
+
+		annotation SummarizationSetBy = User
+
+	column 'Bankafschriftboeking bankrekening'
+		dataType: string
+		lineageTag: 49241f04-1378-473b-80b3-96e431a7c4b5
+		sourceLineageTag: e51f7e9c-73a5-46e3-a36b-b84883b5c63c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bankafschriftboeking bankrekening
+
+		annotation SummarizationSetBy = User
+
+	column 'Bankafschriftboeking type'
+		dataType: string
+		lineageTag: 3733bb1d-e7cd-401b-a2fa-8697d310d668
+		sourceLineageTag: 5d09b338-74ed-454d-baca-979e547b806f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bankafschriftboeking type
+
+		annotation SummarizationSetBy = User
+
+	column StandaardEntiteitKey
+		dataType: int64
+		formatString: 0
+		lineageTag: c2fd7fc6-4b8c-4ebe-a2fd-62c4d1a6d332
+		sourceLineageTag: eda8f3b5-18fa-4bbb-a112-3adba2711e62
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: StandaardEntiteitKey
+
+		annotation SummarizationSetBy = User
+
+	column DagboekRubriekKey
+		dataType: int64
+		formatString: 0
+		lineageTag: b4039252-269c-4538-96f2-29ca78e6afa3
+		sourceLineageTag: 931f6a2d-a3dd-471b-9231-d4327d40e649
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: DagboekRubriekKey
+
+		annotation SummarizationSetBy = User
+
+	partition Journaalregels = entity
+		mode: directQuery
+		source
+			entityName: Journaalregels
+			expressionSource: 'DirectQuery to AS - SSM'
+

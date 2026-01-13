@@ -1,0 +1,269 @@
+/// MH 20231111; Vooralsnog niet nodig in dataset.
+table 'Werkbonparagraaf kosten en geboekte uren'
+	lineageTag: 152ce985-92dc-41a4-be3f-0a0497181888
+	sourceLineageTag: 06f0ffc7-4b75-469a-b001-ede9891a2a28
+
+	measure 'KS Test Count Arbeidstijd' =
+			
+			COUNT('Werkbonparagraaf kosten en geboekte uren'[KS CC Arbeidstijd begin])
+		formatString: 0
+		lineageTag: ea4ab813-7298-44a8-a8f8-3b97191a9b1a
+
+		changedProperty = Name
+
+	column WerkbonparagraafKey
+		dataType: int64
+		formatString: 0
+		lineageTag: a413a5d1-6bcd-41c2-bac7-e6ca5607eaf8
+		sourceLineageTag: 48e62d74-37ed-4223-865e-39202e1b3c05
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WerkbonparagraafKey
+
+		annotation SummarizationSetBy = User
+
+	column TaakKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 9681e863-823c-4b93-a111-45220bf04f12
+		sourceLineageTag: 443b4686-1a89-49b7-a095-cce6cc5d2e74
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: TaakKey
+
+		annotation SummarizationSetBy = User
+
+	column KostensoortKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f9cdc67-d564-4d18-9ab1-36c539d00563
+		sourceLineageTag: 80d1a95b-ef3e-4ea3-bfe9-92db959a5212
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: KostensoortKey
+
+		annotation SummarizationSetBy = User
+
+	column Aantal
+		dataType: double
+		lineageTag: fa30162f-704d-48e8-9326-3810ba1a3e30
+		sourceLineageTag: 77f1ea54-cd6e-4c78-b30a-6e4da0ae15e0
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Aantal
+
+		annotation SummarizationSetBy = User
+
+	column Verrekenprijs
+		dataType: double
+		lineageTag: 36166b0d-61be-4400-a2d8-97474213141e
+		sourceLineageTag: 442c59f6-0d0b-4656-91be-1d2ba6fb5794
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Verrekenprijs
+
+		annotation SummarizationSetBy = User
+
+	column Kostenbron
+		dataType: string
+		lineageTag: 310b9ab6-5771-498d-902d-6fb55d96192d
+		sourceLineageTag: 687a806b-2dc7-4e68-a813-50e39c051df6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Kostenbron
+
+		annotation SummarizationSetBy = User
+
+	column Kostprijs
+		dataType: double
+		lineageTag: dae51fc2-31c7-49ad-ae3c-5c184229c8a6
+		sourceLineageTag: 74d15c01-8b64-4d06-9550-3a5de52a35c4
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Kostprijs
+
+		annotation SummarizationSetBy = User
+
+	column Kostenstatus
+		dataType: string
+		lineageTag: 99bf509f-fdfc-4421-bd6d-b2b8be23d56b
+		sourceLineageTag: 7972c18a-8bfc-420e-a22e-354fce492a09
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Kostenstatus
+
+		annotation SummarizationSetBy = User
+
+	column 'Pakbon Status'
+		dataType: string
+		lineageTag: 1cc95b93-a873-4de1-bbb8-cdceb8b28186
+		sourceLineageTag: 209fb72e-32de-4674-bdf4-67209aa96dab
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Pakbon Status
+
+		annotation SummarizationSetBy = User
+
+	column Factureerstatus
+		dataType: string
+		lineageTag: e8513413-ab2a-4153-a643-35754184504f
+		sourceLineageTag: e93657c9-74bf-4625-990b-5b4b3b394377
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Factureerstatus
+
+		annotation SummarizationSetBy = User
+
+	column Boekdatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: c8f6706b-3519-4584-8f62-4639e20291f8
+		sourceLineageTag: 382bf395-b81b-41dd-a4dc-0f9f6f51d2ea
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Boekdatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Arbeidregel Ja/Nee'
+		dataType: string
+		lineageTag: eaf0829e-cb23-40c4-851a-0e185fdc06ac
+		sourceLineageTag: 8040027c-ef3a-405d-ac45-1c2721b235bd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Arbeidregel Ja/Nee
+
+		annotation SummarizationSetBy = User
+
+	column 'Arbeid uitvoeringsdatum'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: c535b4a2-f04d-4ad8-8727-7ab92264a6b3
+		sourceLineageTag: 7f911aed-be14-4f00-a602-5fe94cbe6347
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Arbeid uitvoeringsdatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Arbeid begintijd'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 4626e7b0-0daf-41cc-b63a-a0b43bd43953
+		sourceLineageTag: 6d50c732-ca06-4355-9efe-11b7da2e721c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Arbeid begintijd
+
+		annotation SummarizationSetBy = User
+
+	column 'Arbeid eindtijd'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: a5f9e844-4dfb-4042-a8c2-1257d3ea4c72
+		sourceLineageTag: e2e8a6ca-d896-4899-9ce9-233dc6716b7d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Arbeid eindtijd
+
+		annotation SummarizationSetBy = User
+
+	column 'Document code'
+		dataType: string
+		lineageTag: df867304-d3a7-4a09-9ab9-85191e8dcac7
+		sourceLineageTag: 165512fe-7dbc-4cdf-9d5a-1bf6e6dc39d5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Document code
+
+		annotation SummarizationSetBy = User
+
+	column WerkbonDocumentKey
+		dataType: int64
+		formatString: 0
+		lineageTag: f7f19289-66ce-4066-9f6e-e3257ac11820
+		sourceLineageTag: 416c0715-a605-439b-981c-47922aef5ccf
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: WerkbonDocumentKey
+
+		annotation SummarizationSetBy = User
+
+	column medewerkerkey
+		dataType: int64
+		formatString: 0
+		lineageTag: 3a8931a6-2e2e-4869-8100-54143e57f611
+		sourceLineageTag: ed319e70-cc0b-47ca-bcd3-40e43ac1bd37
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: medewerkerkey
+
+		annotation SummarizationSetBy = User
+
+	column TariefKey
+		dataType: int64
+		formatString: 0
+		lineageTag: ff0271c7-d960-4ec3-ad07-1634b41b0d92
+		sourceLineageTag: c0bcc3ea-eb60-48a9-8a09-d02104745d72
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: TariefKey
+
+		annotation SummarizationSetBy = User
+
+	column HandelsartikelKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 0cdbb2ad-3d15-4884-b5ad-212f417be0cb
+		sourceLineageTag: 5378f7ac-3c73-4888-af29-5f8120b1576e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: HandelsartikelKey
+
+		annotation SummarizationSetBy = User
+
+	column 'KS CC Besteksparagraaf' = ```
+			
+			LOOKUPVALUE(Werkbonparagrafen[BestekparagraafKey], 
+			Werkbonparagrafen[WerkbonparagraafKey], 'Werkbonparagraaf kosten en geboekte uren'[WerkbonparagraafKey])
+			```
+		formatString: 0
+		lineageTag: 2e64f5fd-fce5-4927-b582-39c0de18b89d
+		summarizeBy: sum
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KS CC Arbeidstijd begin' =
+			
+			SWITCH(TRUE(),
+			NOT(ISBLANK('Werkbonparagraaf kosten en geboekte uren'[Arbeid begintijd])), 'Werkbonparagraaf kosten en geboekte uren'[Arbeid begintijd],
+			LOOKUPVALUE(Werkbonparagrafen[Uitgevoerd op], Werkbonparagrafen[WerkbonparagraafKey], 'Werkbonparagraaf kosten en geboekte uren'[WerkbonparagraafKey]))
+		formatString: General Date
+		lineageTag: 7c3e050a-f816-40c1-84b3-66e21cae8587
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KS CC Arbeidstijd eind' =
+			
+			SWITCH(TRUE(),
+			NOT(ISBLANK('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd])), 'Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd],
+			LOOKUPVALUE(Werkbonparagrafen[Uitgevoerd op], Werkbonparagrafen[WerkbonparagraafKey], 'Werkbonparagraaf kosten en geboekte uren'[WerkbonparagraafKey]))
+		formatString: General Date
+		lineageTag: 316e943f-cdb8-4d82-9b4f-41409a1cc639
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Werkbonparagraaf kosten en geboekte uren' = entity
+		mode: directQuery
+		source
+			entityName: Werkbonparagraaf kosten en geboekte uren
+			expressionSource: 'DirectQuery to AS - SSM'
+

@@ -1,0 +1,55 @@
+/// MH 20231111; vooralsnog niet nodig. Installatie informatie toegevoegd aan besteksparagrafen.
+table 'Object info (administratieafhankelijk)'
+	lineageTag: b5b69824-ddbd-4466-b0d9-0836bb707184
+	sourceLineageTag: cc989bfa-6cb3-4696-aca5-732b5b68177e
+
+	column AdministratieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 37cf0329-b194-4095-84eb-8cfa80aecdc7
+		sourceLineageTag: 91fbe07c-e89f-4786-8e11-c90a58413de2
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: AdministratieKey
+
+		annotation SummarizationSetBy = User
+
+	column ObjectKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 803fe2e9-4f0b-4860-a628-3683ddb1ad28
+		sourceLineageTag: 39959e05-ec1d-4426-816c-5932d18ceb11
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ObjectKey
+
+		annotation SummarizationSetBy = User
+
+	column RegioKey
+		dataType: int64
+		formatString: 0
+		lineageTag: dd8ebc80-ca71-4a84-969e-9bf49c25883f
+		sourceLineageTag: 1c036f95-07e0-4e50-afab-5f90e512b9c6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: RegioKey
+
+		annotation SummarizationSetBy = User
+
+	column DebiteurRelatieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: d74746fe-157e-4a71-a42a-afb3047c0a76
+		sourceLineageTag: 9037b743-5753-4761-b4d8-12256c6862fe
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: DebiteurRelatieKey
+
+		annotation SummarizationSetBy = User
+
+	partition 'Object info (administratieafhankelijk)' = entity
+		mode: directQuery
+		source
+			entityName: Object info (administratieafhankelijk)
+			expressionSource: 'DirectQuery to AS - SSM'
+

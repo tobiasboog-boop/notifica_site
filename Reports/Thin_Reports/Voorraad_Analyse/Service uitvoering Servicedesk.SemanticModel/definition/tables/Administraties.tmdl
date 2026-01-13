@@ -1,0 +1,103 @@
+table Administraties
+	lineageTag: f42adbf9-86cc-4cbd-8e17-c52fe8ce87dd
+	sourceLineageTag: 99835be5-088b-4687-bc13-0f787adac657
+
+	column AdministratieKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: 49450b2b-0736-4948-b0d1-e1afdc8bc433
+		sourceLineageTag: 81e0d072-4eeb-4e05-89ae-901850476c61
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AdministratieKey
+
+		annotation SummarizationSetBy = User
+
+	column Code
+		dataType: string
+		lineageTag: dfcceb26-d0f1-4c58-829f-8f095b0862bc
+		sourceLineageTag: 193bf84d-40dc-4734-be1d-cc42a9990e6b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Code
+
+		annotation SummarizationSetBy = User
+
+	column Administratie
+		dataType: string
+		lineageTag: f76e3fe3-bdd1-46bd-8ef3-e99d821b6a6d
+		sourceLineageTag: fada2a30-1110-4152-a461-2d5467d016a2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Administratie
+
+		annotation SummarizationSetBy = User
+
+	column Status
+		dataType: string
+		lineageTag: 31830d8f-c814-4adc-b949-62899e01afe6
+		sourceLineageTag: 3ae12077-1e81-47ea-931c-86e0fa0f377e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = User
+
+	column AdministratieRelatieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c0cd96c-b866-4033-925c-6619bd6b9b0b
+		sourceLineageTag: 043813ff-f11f-4fdd-be44-c8f03d587408
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: AdministratieRelatieKey
+
+		annotation SummarizationSetBy = User
+
+	column UniekeAdministratieID
+		dataType: string
+		lineageTag: d75c9ffe-22e3-441b-9ba3-f7982e3abc2f
+		sourceLineageTag: 06127e4d-d70f-41b4-823b-7faca64f982f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: UniekeAdministratieID
+
+		annotation SummarizationSetBy = User
+
+	column 'Administratie relatie'
+		dataType: string
+		lineageTag: 17366aa6-eb3b-479b-ac59-49b9da307944
+		sourceLineageTag: c8dc9cd1-d791-4df3-95dc-5fbefd62d1ee
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Administratie relatie
+
+		annotation SummarizationSetBy = User
+
+	column 'Administratie kenmerk'
+		dataType: string
+		lineageTag: ac97bcc5-3fdb-4a2b-9f85-08cd28fb3056
+		sourceLineageTag: 01a09c0a-7560-477d-9476-02adb4c2467e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Administratie kenmerk
+
+		annotation SummarizationSetBy = User
+
+	column 'Actief via instellingen app'
+		dataType: string
+		lineageTag: cddf0b6f-0cb5-400c-ac51-acefcbf283fb
+		sourceLineageTag: 0ad2377b-acce-42ad-b193-73b23ed4abc0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Actief via instellingen app
+
+		annotation SummarizationSetBy = User
+
+	partition Administraties = entity
+		mode: directQuery
+		source
+			entityName: Administraties
+			expressionSource: 'DirectQuery to AS - SSM'
+

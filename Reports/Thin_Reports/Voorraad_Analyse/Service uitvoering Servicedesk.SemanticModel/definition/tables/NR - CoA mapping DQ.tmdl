@@ -1,0 +1,85 @@
+table 'NR - CoA mapping DQ'
+	lineageTag: 764ed913-c165-47ad-9481-49b525dcf16e
+	sourceLineageTag: b95d0bd9-2580-496d-afbd-909cd212bdf0
+
+	column CoA_code
+		dataType: int64
+		formatString: 0
+		lineageTag: e33def5c-f2ab-4eb9-9490-66a06e19b64f
+		sourceLineageTag: 3f557efb-32be-48de-ab10-63dd5eadd6ec
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CoA_code
+
+		annotation SummarizationSetBy = User
+
+	column RubriekKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: 02e5f019-a84c-4ba4-84c5-888db4b7c7e2
+		sourceLineageTag: 27aa7adc-ad68-40e0-ba62-e2415ccfea5f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: RubriekKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Rubriek Code'
+		dataType: string
+		lineageTag: a4410372-04a4-4a37-b77c-3ca850ddf1ea
+		sourceLineageTag: 5d28a10c-e5d8-4709-b8d4-062c72b1fef1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Rubriek Code
+
+		annotation SummarizationSetBy = User
+
+	column Rubriek
+		dataType: string
+		lineageTag: 858a6c80-8f9c-4fcf-a87f-88c6d00285b3
+		sourceLineageTag: ec148e67-10d6-47e1-8784-4ddbf22980a4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Rubriek
+
+		annotation SummarizationSetBy = User
+
+	column Toepassing
+		dataType: string
+		lineageTag: b16f1842-e158-45c4-8a59-7d7ed8d6b11b
+		sourceLineageTag: 2ff77817-714a-47a7-983b-fd05862dac38
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Toepassing
+
+		annotation SummarizationSetBy = User
+
+	column Tag
+		dataType: string
+		isNullable: false
+		lineageTag: fd9b509b-1be7-4c56-9d73-e196f6b91e56
+		sourceLineageTag: 3b4c737e-a8a6-4100-98a8-518764eb4246
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Tag
+
+		annotation SummarizationSetBy = User
+
+	column Klantnummer
+		dataType: int64
+		formatString: 0
+		lineageTag: 8739cd00-59ea-40a0-9385-6fb9d48d084b
+		sourceLineageTag: 59a2e596-369a-482e-a8a7-2b9e2d1587cf
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Klantnummer
+
+		annotation SummarizationSetBy = User
+
+	partition 'NR - CoA mapping DQ' = entity
+		mode: directQuery
+		source
+			entityName: NR - CoA mapping DQ
+			expressionSource: 'DirectQuery to AS - SSM'
+

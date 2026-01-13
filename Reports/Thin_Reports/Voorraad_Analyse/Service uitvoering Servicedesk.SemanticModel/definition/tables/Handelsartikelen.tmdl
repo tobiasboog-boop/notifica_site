@@ -1,0 +1,92 @@
+table Handelsartikelen
+	lineageTag: f22cbcbb-20aa-455b-96b6-073931c34deb
+	sourceLineageTag: 1d71838a-1ab0-4747-8112-c7cddf8d6989
+
+	column HandelsartikelKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: 35648524-28e7-49e3-a1f1-aa02a75e7704
+		sourceLineageTag: c829837d-a29c-46a1-807e-c0c21c8564f0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: HandelsartikelKey
+
+		annotation SummarizationSetBy = User
+
+	column Bestelnummer
+		dataType: string
+		lineageTag: 7f95b324-3201-45ee-8416-febe1b277359
+		sourceLineageTag: 81b54050-394d-46ec-98ce-f4c3d892aa99
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestelnummer
+
+		annotation SummarizationSetBy = User
+
+	column Handelsartikel
+		dataType: string
+		lineageTag: 508277c2-1bda-4400-833d-014e2f6c9502
+		sourceLineageTag: be412a5d-b00b-4824-a623-fd1710d2004d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Handelsartikel
+
+		annotation SummarizationSetBy = User
+
+	column 'Handelsartikel leverancier'
+		dataType: string
+		lineageTag: e2dee137-cff5-422b-b844-50dd78ced957
+		sourceLineageTag: e0a385c6-e58e-43a2-a259-053a05b375b6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Handelsartikel leverancier
+
+		annotation SummarizationSetBy = User
+
+	column 'Artikel merk'
+		dataType: string
+		lineageTag: 0010dd2f-1016-4eee-9b86-9469244bb74c
+		sourceLineageTag: f50130f2-a7ff-4bc5-9998-89993833a485
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Artikel merk
+
+		annotation SummarizationSetBy = User
+
+	column 'Artikel type'
+		dataType: string
+		lineageTag: 2a6a929c-2b75-4890-a972-95017b21bc33
+		sourceLineageTag: 19677cc8-7fc2-49da-86bc-96d1db4fa757
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Artikel type
+
+		annotation SummarizationSetBy = User
+
+	column 'Artikel serie'
+		dataType: string
+		lineageTag: 369f6d3f-f0b1-4623-907a-6e80b532f67a
+		sourceLineageTag: 2eed8cec-ddcd-4c49-9219-3fb0428250fc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Artikel serie
+
+		annotation SummarizationSetBy = User
+
+	column Artikelklasse
+		dataType: string
+		lineageTag: e81a6017-8322-467e-a6b9-a107c40a5c45
+		sourceLineageTag: 90d24e02-c3a3-4bf0-a0c3-ad724447c21a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Artikelklasse
+
+		annotation SummarizationSetBy = User
+
+	partition Handelsartikelen = entity
+		mode: directQuery
+		source
+			entityName: Handelsartikelen
+			expressionSource: 'DirectQuery to AS - SSM'
+

@@ -1,0 +1,43 @@
+table Bedrijfseenheden
+	lineageTag: cce3d207-2a45-4181-99ed-8bd2271fe807
+	sourceLineageTag: ac791df8-67c1-4f95-9544-ea275f09d047
+
+	column BedrijfseenheidKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: f300b4f8-aaa3-41b7-bfb7-b59315843c2e
+		sourceLineageTag: ddd90db8-b850-449d-b80e-4b28f2de5aba
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BedrijfseenheidKey
+
+		annotation SummarizationSetBy = User
+
+	column AdministratieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: a010068b-0e05-4c7d-a906-a8c8081d1432
+		sourceLineageTag: afe09d7d-8388-42e3-9284-3e5f176af30a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AdministratieKey
+
+		annotation SummarizationSetBy = User
+
+	column Bedrijfseenheid
+		dataType: string
+		lineageTag: cf9bf860-e22b-4329-93ca-028ee16433df
+		sourceLineageTag: 6b824e9a-ca04-4200-b6ff-8d6c42e7a206
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bedrijfseenheid
+
+		annotation SummarizationSetBy = User
+
+	partition Bedrijfseenheden = entity
+		mode: directQuery
+		source
+			entityName: Bedrijfseenheden
+			expressionSource: 'DirectQuery to AS - SSM'
+

@@ -1,0 +1,87 @@
+table 'NR - CoA balans schema'
+	lineageTag: 43e10d5e-e7e6-4a94-bac2-f73438a9d082
+	sourceLineageTag: 9eb80d0b-630c-4019-84e1-dceb0b3e7af5
+
+	column Code
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: 2469e1f2-0545-4bea-81e6-0565aa4ef2ae
+		sourceLineageTag: 70336ce4-27a1-4242-aeb0-2a74823bd2a1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Code
+
+		annotation SummarizationSetBy = User
+
+	column Niveau2
+		dataType: string
+		lineageTag: 1eb7893b-065e-401f-9b16-b7e08f93b22d
+		sourceLineageTag: cca1a916-c375-40ca-9a4f-c62b756c8d63
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau2
+		sortByColumn: Code
+
+		annotation SummarizationSetBy = User
+
+	column Niveau1
+		dataType: string
+		lineageTag: a60f8dc6-f990-4baf-83f9-dd1d484aedbb
+		sourceLineageTag: b6cf5a08-01ba-41d5-8bef-a2421f7efb39
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau1
+		sortByColumn: Niveau1_sortering
+
+		annotation SummarizationSetBy = User
+
+	column Niveau1_sortering
+		dataType: int64
+		formatString: 0
+		lineageTag: ac68c3f7-e5ee-4643-8dca-96f71bf5991d
+		sourceLineageTag: ba593df8-fd24-4285-9317-c7c902717c8c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau1_sortering
+
+		annotation SummarizationSetBy = User
+
+	column Niveau2_sortering
+		dataType: int64
+		formatString: 0
+		lineageTag: 6d4efe77-6545-4ced-8560-6a21bc7bcac1
+		sourceLineageTag: b51add54-db08-46f7-9aa6-5590bc1f7884
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau2_sortering
+
+		annotation SummarizationSetBy = User
+
+	column Teken
+		dataType: int64
+		formatString: 0
+		lineageTag: ebebf74d-f17a-46ba-80c2-af4c628a1457
+		sourceLineageTag: c665a76c-5fe1-49a1-823b-fd9da00111ac
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Teken
+
+		annotation SummarizationSetBy = User
+
+	column Classificatie_type
+		dataType: string
+		lineageTag: fc9dc50f-ed0a-48a9-b5ee-e70d7e8a57a3
+		sourceLineageTag: 265025ac-16c7-4268-bd91-ddf271ba72f2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Classificatie_type
+
+		annotation SummarizationSetBy = User
+
+	partition 'NR - CoA balans schema' = entity
+		mode: directQuery
+		source
+			entityName: NR - CoA balans schema
+			expressionSource: 'DirectQuery to AS - SSM'
+

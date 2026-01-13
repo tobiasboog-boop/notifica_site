@@ -1,0 +1,73 @@
+table Segmenten
+	lineageTag: b755c3f2-b018-4ba4-81d7-8d1b424cb2e7
+	sourceLineageTag: 0b21e0d7-5b5d-4bc8-8fd4-7ed92fdd8130
+
+	column SegmentKey
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		lineageTag: 69f2b071-399f-4a8f-b59b-8175fc5867d8
+		sourceLineageTag: f31ca5bd-4d4b-4a9d-9cbf-f25a391a9ff1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SegmentKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Segment code'
+		dataType: string
+		lineageTag: 14390751-6f98-43f1-ba41-1dba7c40a015
+		sourceLineageTag: 3e24d814-8d49-471c-b0a4-2c3285e94b7b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Segment code
+
+		annotation SummarizationSetBy = User
+
+	column 'Segment omschrijving'
+		dataType: string
+		lineageTag: 3853d264-51b5-445c-a751-b5b148cdb7ba
+		sourceLineageTag: 0e024e2c-073b-4c15-bf14-f3e8d8603d21
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Segment omschrijving
+
+		annotation SummarizationSetBy = User
+
+	column Segment
+		dataType: string
+		lineageTag: ffc05d50-6ca6-4c0b-a729-15603bd39c00
+		sourceLineageTag: 29eda60d-73c4-40a4-b1fd-74b3742568b7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Segment
+
+		annotation SummarizationSetBy = User
+
+	column 'Segment kenmerk'
+		dataType: string
+		lineageTag: 14569f9f-095b-4f1e-8f8b-6744aa7ce296
+		sourceLineageTag: 5f6a99ef-fe8f-4501-845f-221191836e37
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Segment kenmerk
+
+		annotation SummarizationSetBy = User
+
+	column 'Segment status'
+		dataType: string
+		lineageTag: e1fabb96-298c-4371-9378-6374e9c9a496
+		sourceLineageTag: 089de5fd-4491-4c09-8403-c9dd4144d3f8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Segment status
+
+		annotation SummarizationSetBy = User
+
+	partition Segmenten = entity
+		mode: directQuery
+		source
+			entityName: Segmenten
+			expressionSource: 'DirectQuery to AS - SSM'
+

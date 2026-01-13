@@ -1,0 +1,1354 @@
+table Projecten
+	lineageTag: d24c10d9-2b2f-4728-b546-d0fc346e55cb
+	sourceLineageTag: 868e2a8b-9e5e-4849-a4fe-ce3cf9ca3001
+
+	column HoofdProjectKey
+		dataType: int64
+		formatString: 0
+		lineageTag: a5588fbb-5ee3-4772-aff6-26b217e69bf1
+		sourceLineageTag: 7373b4b0-b280-46a7-bfdc-cc5b2ec68504
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: HoofdProjectKey
+
+		annotation SummarizationSetBy = User
+
+	column BestekKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 203b6a14-0aa2-495a-8450-9ab6211c946b
+		sourceLineageTag: b77ff1cb-9ec3-421d-b8a5-002d76890f3f
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: BestekKey
+
+		annotation SummarizationSetBy = User
+
+	column AdministratieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 1be423b1-573a-491b-a501-c92fa261dd8d
+		sourceLineageTag: be1794ce-c0ee-484b-a3e5-cb8ea4193688
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AdministratieKey
+
+		annotation SummarizationSetBy = User
+
+	column Status
+		dataType: string
+		lineageTag: c4da3f4b-99f9-4288-a857-3310456de87e
+		sourceLineageTag: 95aeef75-ca31-43a6-9ead-222f7cbdbe79
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = User
+
+	column Soort
+		dataType: string
+		lineageTag: cc01065a-8b06-471a-805e-a8540b8e2628
+		sourceLineageTag: efbac3a1-fdce-4db4-9ca2-91ca9c689c50
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Soort
+
+		annotation SummarizationSetBy = User
+
+	column Startdatum
+		dataType: dateTime
+		formatString: dd\-mm\-yyyy
+		lineageTag: 1b41fb41-3e2d-400c-8242-3cf9f6769e18
+		sourceLineageTag: 978283ff-b0dc-4a13-b862-138f0ab0c9e4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Startdatum
+
+		annotation SummarizationSetBy = User
+
+	column Einddatum
+		dataType: dateTime
+		formatString: dd\-mm\-yyyy
+		lineageTag: b282cb51-6fae-49ba-a4c9-b9481484450c
+		sourceLineageTag: ea1713c2-269a-4860-a038-1c09ed19e884
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Einddatum
+
+		annotation SummarizationSetBy = User
+
+	column Opdrachtdatum
+		dataType: dateTime
+		formatString: dd\-mm\-yyyy
+		lineageTag: 6698d4b6-c5f9-4dc3-867b-a3b2c000510b
+		sourceLineageTag: 026ee57d-b4b7-4a9e-b596-d9df4034cf8c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Opdrachtdatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Percentage Gereed'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0aa0cb4f-4ae9-4bd9-9136-e26e047aea74
+		sourceLineageTag: 3995207d-e9b4-48c3-9a67-1a0e5b670918
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Percentage Gereed
+
+		annotation SummarizationSetBy = User
+
+	column Garantiedatum
+		dataType: dateTime
+		formatString: dd\-mm\-yyyy
+		lineageTag: 539ac3fb-6dbe-46d5-9eed-2a03afdbccde
+		sourceLineageTag: 82be11c0-3699-46eb-9045-a750cabe3ee8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Garantiedatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Datum Historisch'
+		dataType: dateTime
+		formatString: dd\-mm\-yyyy
+		lineageTag: 0a7701c3-db9d-4f06-a5fc-0b40c788f9d6
+		sourceLineageTag: b552eef4-513e-4db2-8c65-81e608f8ac33
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Datum Historisch
+
+		annotation SummarizationSetBy = User
+
+	column Projectfase
+		dataType: string
+		lineageTag: 1bb31801-df7e-4be7-87f5-f7c242b2e547
+		sourceLineageTag: 68f5432d-e786-4118-81bf-7c8f084ed2d9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Projectfase
+
+		annotation SummarizationSetBy = User
+
+	column Opdrachtgever
+		dataType: string
+		lineageTag: 67919070-49f0-4139-a81b-2856e1ab341d
+		sourceLineageTag: 7ec4e9da-23f2-4418-9df7-8b54d2dbfbd1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Opdrachtgever
+
+		annotation SummarizationSetBy = User
+
+	column Principaal
+		dataType: string
+		lineageTag: b820ae1f-0b97-483e-8150-709f0d36de8f
+		sourceLineageTag: 6bc7cef6-18f9-4e17-83c7-1ba05d4d0bd0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Principaal
+
+		annotation SummarizationSetBy = User
+
+	column Postcode
+		dataType: string
+		lineageTag: 77236e93-fc17-4508-9c5e-a3f882824b24
+		sourceLineageTag: 20f38aae-17e1-4021-a305-77db184cae3f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Postcode
+
+		annotation SummarizationSetBy = User
+
+	column Plaats
+		dataType: string
+		lineageTag: 505721c0-634b-436d-bc3a-de2a6dfa391c
+		sourceLineageTag: 617bc648-48d3-49e7-bef7-dfc02667d7a2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Plaats
+
+		annotation SummarizationSetBy = User
+
+	column Werkgroep
+		dataType: string
+		lineageTag: 2f0eff76-b1d0-4c59-a13b-5fe91a554c5a
+		sourceLineageTag: e04759cf-b017-4fd3-82eb-dfd1cecc89a3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Werkgroep
+
+		annotation SummarizationSetBy = User
+
+	column Afdeling
+		dataType: string
+		lineageTag: 55859db2-9b29-46e6-8a60-566f35acebdf
+		sourceLineageTag: 42e9389a-733c-4cfb-9f9f-5b727b726977
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Afdeling
+
+		annotation SummarizationSetBy = User
+
+	column Projectleider
+		dataType: string
+		lineageTag: 1dafceea-d3f7-4a0a-8d61-81d918100287
+		sourceLineageTag: aace6cd8-e019-44e1-8d5f-bb01111021da
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Projectleider
+
+		annotation SummarizationSetBy = User
+
+	column referentie
+		dataType: string
+		lineageTag: 12e1ff8f-f439-496b-9104-7a0dd466e3a0
+		sourceLineageTag: a4c4de93-4ccd-4695-83ea-f796fcb0ae1c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: referentie
+
+		annotation SummarizationSetBy = User
+
+	column Project
+		dataType: string
+		lineageTag: 699f55ab-a19f-4956-ba7f-c91dd7929ae6
+		sourceLineageTag: 2844fab5-bd46-4df1-a8fa-b90bed8ea2d1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Project
+
+		annotation SummarizationSetBy = User
+
+	column KostenplaatsKey
+		dataType: int64
+		formatString: 0
+		lineageTag: f893968b-3902-45fa-9527-01b4e76df03d
+		sourceLineageTag: 4fbea5bd-d4c8-4771-b8b5-566dc9713517
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: KostenplaatsKey
+
+		annotation SummarizationSetBy = User
+
+	column ProjectKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: 04cb1f98-201f-4b53-b099-9f36e08c933c
+		sourceLineageTag: 2e0c2b4e-eb76-49e0-9739-e0fe61dde4aa
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ProjectKey
+
+		annotation SummarizationSetBy = User
+
+	column Hoofdproject
+		dataType: string
+		lineageTag: c2da5213-3716-4fd4-a403-9a588a951dfe
+		sourceLineageTag: a5fdcf38-5fd6-484d-95fd-744fdde23d91
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdproject
+
+		annotation SummarizationSetBy = User
+
+	column HoofdprojectWerkgroepKey
+		dataType: int64
+		formatString: 0
+		lineageTag: ad6307bf-5093-43a3-983f-e4bbb337b9ea
+		sourceLineageTag: 117daf5e-f275-4e0e-9efe-c4f4971c03ea
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: HoofdprojectWerkgroepKey
+
+		annotation SummarizationSetBy = User
+
+	column Hoofdprojectstatus
+		dataType: string
+		lineageTag: 9843449a-f008-4347-955a-5ff2d3a8b40e
+		sourceLineageTag: 67aa68db-587f-4544-b325-9c035bfe1247
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdprojectstatus
+
+		annotation SummarizationSetBy = User
+
+	column HoofdprojectFaseKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 21724f0e-88ec-477f-b7b3-73420d71362e
+		sourceLineageTag: 18d4e6cc-5692-4914-b4bf-2f8c258131f0
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: HoofdprojectFaseKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject werkgroep'
+		dataType: string
+		lineageTag: bb973951-68b4-4662-9b89-37c3127dd82f
+		sourceLineageTag: f5358625-eace-4392-9e5b-82f724030012
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdproject werkgroep
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject Soort'
+		dataType: string
+		lineageTag: 83ae5249-1c7b-43f6-a7ea-a4c51d2c2242
+		sourceLineageTag: f8b26038-a790-44fd-a9aa-5fe468bd161d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdproject Soort
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject KostenplaatsKey'
+		dataType: int64
+		formatString: 0
+		lineageTag: e5f14f65-f937-4188-ae43-b91e85fb00d1
+		sourceLineageTag: ecfd0ade-4757-4979-9ffa-800f9434e6b4
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: Hoofdproject KostenplaatsKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject Journalisering'
+		dataType: string
+		lineageTag: 8c63976f-1669-4285-b3e8-ed3850fae000
+		sourceLineageTag: a8ba3888-07ae-4895-b7bf-1cc9836c4118
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdproject Journalisering
+
+		annotation SummarizationSetBy = User
+
+	column Hoofdprojectfase
+		dataType: string
+		lineageTag: 623ce4ab-ea1a-4adb-bbf7-f259aed6d895
+		sourceLineageTag: 1f68d8fc-43eb-4db6-bf5c-fd87f5a1668e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdprojectfase
+
+		annotation SummarizationSetBy = User
+
+	column Land
+		dataType: string
+		lineageTag: 9c05ef4d-e765-41cc-80b3-c14ddbff4dda
+		sourceLineageTag: a80dc7ab-44d3-4933-86a7-6bf043e849b7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Land
+
+		annotation SummarizationSetBy = User
+
+	column 'Datum gereed'
+		dataType: dateTime
+		formatString: dd\-mm\-yyyy
+		lineageTag: 7aa4e5aa-1cb4-46c2-9654-c01b9b4684c4
+		sourceLineageTag: 95364c98-85ec-46df-bd21-a2cbe2ec85ab
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Datum gereed
+
+		annotation SummarizationSetBy = User
+
+	column Journalisering
+		dataType: string
+		lineageTag: 21aad04d-3198-45fc-a01c-0e160d199266
+		sourceLineageTag: aa483e51-d885-4e7c-bddd-43a08d65a8e9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Journalisering
+
+		annotation SummarizationSetBy = User
+
+	column Betaaltermijn
+		dataType: int64
+		formatString: 0
+		lineageTag: 62145e49-0c40-4c27-b7fa-567f2f1eb024
+		sourceLineageTag: 40e10f5e-a28b-4795-9187-4d7af4a5ea31
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Betaaltermijn
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject betaaltermijn'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c86473f-f9de-4432-b998-c13e9d647367
+		sourceLineageTag: fc7fc588-5f74-4960-a455-ccbb5096cd87
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Hoofdproject betaaltermijn
+
+		annotation SummarizationSetBy = User
+
+	column Niveau
+		dataType: int64
+		formatString: 0
+		lineageTag: 8a72908b-a131-4290-b793-781f291c1eeb
+		sourceLineageTag: 8707f615-662b-41b0-b823-f7512d95bc24
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Niveau
+
+		annotation SummarizationSetBy = User
+
+	column Niveau1AlleenGC_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 357e2571-aed6-484e-8ed8-025d2dd1a499
+		sourceLineageTag: 5887cd78-8814-489b-b293-ccea4769d871
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: Niveau1AlleenGC_ID
+
+		annotation SummarizationSetBy = User
+
+	column WerkgroepKey
+		dataType: int64
+		formatString: 0
+		lineageTag: f1d90696-2858-4df3-b27a-eccec6161e8b
+		sourceLineageTag: 6e56520f-8bc4-4843-9d10-dd6e6e546233
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: WerkgroepKey
+
+		annotation SummarizationSetBy = User
+
+	column ProjectfaseKey
+		dataType: int64
+		formatString: 0
+		lineageTag: d10c9368-c3a7-48af-9c37-c176f723a9db
+		sourceLineageTag: cdf483b5-b0bb-43f7-8d77-76b794cf2040
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: ProjectfaseKey
+
+		annotation SummarizationSetBy = User
+
+	column Niveau2AlleenGC_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 90e3b905-0879-4876-b95a-6da1c14c1799
+		sourceLineageTag: 459375e6-11a6-4981-8745-7aed58355f57
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: Niveau2AlleenGC_ID
+
+		annotation SummarizationSetBy = User
+
+	column Niveau3AlleenGC_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 77121c61-715a-465b-a621-19e58e03cc88
+		sourceLineageTag: ee7829c2-0866-4e9d-bfa1-bbc2a317de63
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: Niveau3AlleenGC_ID
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 2 projectstatus'
+		dataType: string
+		lineageTag: d1c71a25-166f-461c-a780-b92ed7badf84
+		sourceLineageTag: 9319f55f-d5b3-4bed-9478-898b82a2313e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 2 projectstatus
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 2 projectfase'
+		dataType: string
+		lineageTag: 8b94e72a-de15-4d1d-827c-9adcb3ac4936
+		sourceLineageTag: f43406e8-5907-408e-b298-e7adc050a2d9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 2 projectfase
+
+		annotation SummarizationSetBy = User
+
+	column Factureerwijze
+		dataType: string
+		lineageTag: 9be7d25d-6593-4066-97c0-c797c280d4fb
+		sourceLineageTag: 3907dab7-38f3-466b-8460-c13396cfb144
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Factureerwijze
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject factureerwijze'
+		dataType: string
+		lineageTag: c47701ee-6db1-49f2-a217-b16cd832ac1d
+		sourceLineageTag: 30dd079e-8435-4b07-a9a0-96f62ae5adea
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdproject factureerwijze
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 2 factureerwijze'
+		dataType: string
+		lineageTag: fe2f9d57-7ef8-413c-a022-4c0b9e72041b
+		sourceLineageTag: e322864b-32de-4dbf-91b6-f4d57066205c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 2 factureerwijze
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 2 opdrachtgever'
+		dataType: string
+		lineageTag: 2117956c-add0-4e1a-bd62-50332a40b647
+		sourceLineageTag: b045cc39-1da1-4755-87cd-e27a0c64651a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 2 opdrachtgever
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 2 projectleider'
+		dataType: string
+		lineageTag: 7c1827fc-8bab-4dd2-b691-2a2ff58a960f
+		sourceLineageTag: 838cbeda-2039-493d-ad8c-f094827f4891
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 2 projectleider
+
+		annotation SummarizationSetBy = User
+
+	column Archiefnummer
+		dataType: string
+		lineageTag: a9f74301-698d-464a-9d6a-a916a4fde2a6
+		sourceLineageTag: 88d3ddf6-7ce7-4d30-885f-d23d9656a726
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Archiefnummer
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 2 projectsoort'
+		dataType: string
+		lineageTag: 6b5124e0-245a-4579-80b2-5c18979c1572
+		sourceLineageTag: e7f14fdd-4faa-410e-ae47-aeaf2d39e885
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 2 projectsoort
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 3 factureerwijze'
+		dataType: string
+		lineageTag: 51aba400-ad05-4dea-a574-0caeeea1bfe4
+		sourceLineageTag: 02f331d8-4d83-497d-bb12-a96f60a6f5b7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 3 factureerwijze
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 3 opdrachtgever'
+		dataType: string
+		lineageTag: 508e8cbb-cfb5-4e23-955b-e349c2ecca6c
+		sourceLineageTag: b3ab10b3-04f9-4803-ba19-b2583dec1358
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 3 opdrachtgever
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 3 projectfase'
+		dataType: string
+		lineageTag: 5b80d764-7deb-4179-b82e-4deea74f4669
+		sourceLineageTag: 5af8d08d-5b96-4175-8fd4-8094f1d4b2f2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 3 projectfase
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 3 projectleider'
+		dataType: string
+		lineageTag: 389b415c-a895-4a75-b05c-233f7e71a777
+		sourceLineageTag: b1eba6fc-8f87-4d9c-a23d-b85b717e0bc4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 3 projectleider
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 3 projectstatus'
+		dataType: string
+		lineageTag: 7ed59c2f-b77d-466c-bb85-64ff883dc710
+		sourceLineageTag: f09c8889-7925-44c5-89ad-a14388129179
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 3 projectstatus
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 3 projectsoort'
+		dataType: string
+		lineageTag: 1ac2f9cb-5c7f-4a09-9c2c-6bef04706e8a
+		sourceLineageTag: 4d3a9a49-5378-4126-9941-50736d9bd072
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 3 projectsoort
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject kostenplaats code'
+		dataType: string
+		lineageTag: 68299d01-d26c-4d51-988c-7d749f46e268
+		sourceLineageTag: 80bb8627-6e34-439e-9ced-f62cd19af885
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdproject kostenplaats code
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject kostenplaats omschrijving'
+		dataType: string
+		lineageTag: 12146938-c368-4954-a706-83024afe3744
+		sourceLineageTag: 1683861a-37c1-4d02-8933-8db7ff306f47
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdproject kostenplaats omschrijving
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 2 Project'
+		dataType: string
+		lineageTag: 27a1d796-7c23-4ee7-81a8-1565270be299
+		sourceLineageTag: 57f7f4a1-5260-411a-ac7b-76baa4f8ddfb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 2 Project
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 3 Project'
+		dataType: string
+		lineageTag: be046ce6-1713-40ce-b207-1333612eba50
+		sourceLineageTag: 66146407-a1d6-43f5-94fc-e386f9bc13f1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 3 Project
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject totaal orderbedrag'
+		dataType: double
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 967d21a9-245d-4e20-9c41-608b1c5077c8
+		sourceLineageTag: 3c8b58d6-8813-40e7-9fa6-d6a0f6ee2040
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Hoofdproject totaal orderbedrag
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 3 percentage gereed'
+		dataType: int64
+		lineageTag: 0b9f01e7-b470-4d3a-8f59-7e9034fd9bc3
+		sourceLineageTag: ac87c190-e7f3-440d-9ec1-ebb29356c693
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Niveau 3 percentage gereed
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 2 percentage gereed'
+		dataType: int64
+		lineageTag: 18dbb763-d5d8-4ca9-81ee-cbb0a32b91c3
+		sourceLineageTag: abddddfa-9aea-4c3e-aab2-9f4aace005d5
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Niveau 2 percentage gereed
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 2 startdatum'
+		dataType: dateTime
+		formatString: dd\-mm\-yyyy
+		lineageTag: 71768e62-3943-43e4-a244-98f9bda9a36f
+		sourceLineageTag: 3e8395c4-9f58-41ff-8b07-1f49aa22449a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 2 startdatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 2 einddatum'
+		dataType: dateTime
+		formatString: dd\-mm\-yyyy
+		lineageTag: 1fcfbc4f-22ce-404f-a1b4-7a7a5e7ad17e
+		sourceLineageTag: 225e2f62-f80a-4e94-b2f9-d7c9716b2625
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 2 einddatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 3 einddatum'
+		dataType: dateTime
+		formatString: dd\-mm\-yyyy
+		lineageTag: ab0ec7c2-9841-4391-abdc-38688cd63f74
+		sourceLineageTag: e4de1060-fe2a-4afd-aef8-305989166892
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 3 einddatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 3 startdatum'
+		dataType: dateTime
+		formatString: dd\-mm\-yyyy
+		lineageTag: 59b2044f-fb63-4f93-b00b-9da489b9c394
+		sourceLineageTag: bd6906d2-e227-4f71-aef5-3cc2e560e8bf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 3 startdatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Project totaal orderbedrag'
+		dataType: double
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: e61839e5-5f9c-4af7-a86b-655e18a94607
+		sourceLineageTag: 93f3e067-ed0e-45e9-9e17-6a977627b8d6
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Project totaal orderbedrag
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject totaal calculatiekostprijs'
+		dataType: double
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 3f5f94de-8707-40f8-9238-5569606ecd96
+		sourceLineageTag: d54316e0-e75f-4a70-b036-65223a9fc273
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Hoofdproject totaal calculatiekostprijs
+
+		annotation SummarizationSetBy = User
+
+	column 'Project totaal calculatiekostprijs'
+		dataType: double
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 7eda0d50-0b36-4af4-9552-ff45b0b98c0d
+		sourceLineageTag: eb5752f5-1d4b-44cf-865b-542f336eee0c
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Project totaal calculatiekostprijs
+
+		annotation SummarizationSetBy = User
+
+	column Aanmaakdatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 68832276-cf10-470d-92c4-59d97bc0c80d
+		sourceLineageTag: 7ac09f90-fe85-4867-bf80-9a20f74a7580
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Aanmaakdatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject aanmaakdatum'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 1b7e88f6-9dd1-4e8d-b610-8757d9368f34
+		sourceLineageTag: 0980fd73-90cb-46f5-8629-999b61ab99ec
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdproject aanmaakdatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject datum historisch'
+		dataType: dateTime
+		formatString: dd\-mm\-yy
+		lineageTag: 9e98ce35-2aa8-4ad9-a530-1bceafc8d6d0
+		sourceLineageTag: a01bee0f-2207-4032-af48-f2073de3d3ef
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdproject datum historisch
+
+		annotation SummarizationSetBy = User
+
+	column 'hoofdproject met datum historisch'
+		dataType: string
+		lineageTag: 8234c51a-e0cc-4b8e-87de-52575c1be4ab
+		sourceLineageTag: 701b13a2-7f6f-4a7e-906d-40c5483547a7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: hoofdproject met datum historisch
+
+		annotation SummarizationSetBy = User
+
+	column DebiteurRelatieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 9d8e9aa8-6462-4b1f-b19e-0407c489fcbb
+		sourceLineageTag: 068ac55f-9a23-40a2-a48c-0fe29efdbd63
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: DebiteurRelatieKey
+
+		annotation SummarizationSetBy = User
+
+	column OpdrachtgeverRelatieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 0a0d62ca-c3e5-4b6e-b797-f3f9999aacdb
+		sourceLineageTag: e4df3850-e202-4c9e-9126-584288050e4f
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: OpdrachtgeverRelatieKey
+
+		annotation SummarizationSetBy = User
+
+	column ProjectleiderMedewerkerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: e0c511f0-1e2a-4068-83a4-cb19b7689373
+		sourceLineageTag: 1f4a932e-67b4-4082-97a3-1f199f46a7bb
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: ProjectleiderMedewerkerKey
+
+		annotation SummarizationSetBy = User
+
+	column UitvoerderMedewerkerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 2545e3b5-c1a7-4a83-a98b-c624e41c3ea8
+		sourceLineageTag: 3fb7c681-0ff6-4dc1-b102-7b42a72a1439
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: UitvoerderMedewerkerKey
+
+		annotation SummarizationSetBy = User
+
+	column CalculatorMedewerkerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 9ff3b706-9807-4b9c-98e1-0e61ef867af2
+		sourceLineageTag: a0a88016-74af-4163-a682-128b632c178d
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: CalculatorMedewerkerKey
+
+		annotation SummarizationSetBy = User
+
+	column WerkvoorbereiderMedewerkerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: a73195ce-0a83-426e-9907-8041d4ef1d75
+		sourceLineageTag: a7d605ce-08f0-4408-8bf8-250df0628615
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: WerkvoorbereiderMedewerkerKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject segment'
+		dataType: string
+		lineageTag: 7be1024e-14fc-433d-b29c-6b4846d7efcf
+		sourceLineageTag: 80f8d442-cc85-4f55-a1fe-882356a5798d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdproject segment
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject SegmentKey'
+		dataType: int64
+		formatString: 0
+		lineageTag: d68b5dbf-37ec-4871-b1fc-f49e72aa9aa1
+		sourceLineageTag: e899a4e8-160a-403d-9675-7f0fc731e1e6
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: Hoofdproject SegmentKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject einddatum'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 05c309e7-e120-4695-ad72-f68140029763
+		sourceLineageTag: 614b5b1a-3363-44f6-bdcd-9227a4632008
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdproject einddatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject opdrachtgever'
+		dataType: string
+		lineageTag: c6891991-925b-46f9-83f3-25a12df67506
+		sourceLineageTag: 18cf3570-9757-4c55-93a5-c4fa1b59b923
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdproject opdrachtgever
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject percentage gereed'
+		dataType: int64
+		formatString: 0
+		lineageTag: b2b4e02d-3794-4ee5-b651-a93c4f394174
+		sourceLineageTag: 19b45842-279e-46a8-85c3-d52014774136
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Hoofdproject percentage gereed
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject projectleider'
+		dataType: string
+		lineageTag: b249be44-20e1-43d2-bfdc-1a841dba2003
+		sourceLineageTag: fde396c3-2994-4d46-8ed8-3807e2e18be9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdproject projectleider
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject startdatum'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 25b8c089-0006-4e17-b320-20e5ad40f4a7
+		sourceLineageTag: a5eefa3e-fe45-49d7-a756-f476a979a869
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdproject startdatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Project SegmentKey'
+		dataType: int64
+		formatString: 0
+		lineageTag: 337ee2f2-e4cf-4380-9af4-aa5459eae755
+		sourceLineageTag: 58f061b4-2890-457a-91e2-a6a8564472b2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Project SegmentKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Project segment'
+		dataType: string
+		lineageTag: 01722046-098d-4d54-95fe-cfc0e34918c7
+		sourceLineageTag: cf06ccff-3cb7-4059-8eb2-de5c1dfcc1b5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Project segment
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject opdrachtdatum'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: ca82b6b8-79a2-4170-88fe-2f5522d44d7e
+		sourceLineageTag: 18660d7c-35a0-4718-81f2-10b761277eba
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdproject opdrachtdatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 2 totaal orderbedrag'
+		dataType: double
+		lineageTag: 16f40347-8a09-494b-88b6-3df7e9806d60
+		sourceLineageTag: 47430ecb-1dd8-40be-9417-f9da7fddb738
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Niveau 2 totaal orderbedrag
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 2 totaal calculatiekostprijs'
+		dataType: double
+		lineageTag: 995805d2-556d-4727-aee6-bf9252949e51
+		sourceLineageTag: bad5a051-e452-4e81-ba35-2f19bf61f16d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Niveau 2 totaal calculatiekostprijs
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 2 opdrachtdatum'
+		dataType: dateTime
+		formatString: dd\-mm\-yyyy
+		lineageTag: 72d5ec94-7b5e-4e8f-9c06-74048f382c6f
+		sourceLineageTag: aa241bde-faf8-4e0e-90a2-6394220b9fff
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 2 opdrachtdatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 3 opdrachtdatum'
+		dataType: dateTime
+		formatString: dd\-mm\-yyyy
+		lineageTag: 5178381b-7271-42e3-b466-94f7b50e6070
+		sourceLineageTag: 6a5a51f9-a3e6-4036-adc3-0520b8f74b60
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 3 opdrachtdatum
+
+		annotation SummarizationSetBy = User
+
+	column Debiteur
+		dataType: string
+		lineageTag: 035fa9ed-c330-4959-84b4-4192d6c33f1d
+		sourceLineageTag: 458ce610-aa7f-4752-88b0-54a83c228d7d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Debiteur
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject Debiteur'
+		dataType: string
+		lineageTag: 1f7326d0-abd5-48b6-8bcc-ae561f46a789
+		sourceLineageTag: fef3d6b9-1246-4357-944b-a208b147eefb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdproject Debiteur
+
+		annotation SummarizationSetBy = User
+
+	column VerkoperMedewerkerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: e0de8862-c422-4de3-a1c2-3e470ab9e8e8
+		sourceLineageTag: ef09fa86-2c74-4a22-a7b2-83c4ab44bbf4
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: VerkoperMedewerkerKey
+
+		annotation SummarizationSetBy = User
+
+	column PrincipaalRelatieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 8daac4c1-816a-4fce-a212-12aedc9eee36
+		sourceLineageTag: 16d1a3b4-5ffa-4c7c-96bc-1681a9ab433c
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: PrincipaalRelatieKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Debiteur relatiegroepen omschrijving'
+		dataType: string
+		lineageTag: d2a18a05-a9af-4817-a26c-a1a757a00368
+		sourceLineageTag: e2924e59-0b0a-42e9-a7ce-9d8256d632ec
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Debiteur relatiegroepen omschrijving
+
+		annotation SummarizationSetBy = User
+
+	column 'Debiteur relatiegroepen code'
+		dataType: string
+		lineageTag: 27af0504-2949-4d37-bfe8-2537f08af2ad
+		sourceLineageTag: 2855c57b-c97a-45a8-82be-510244000868
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Debiteur relatiegroepen code
+
+		annotation SummarizationSetBy = User
+
+	column 'Principaal relatiegroepen omschrijving'
+		dataType: string
+		lineageTag: 7df131dc-482a-4c7d-a445-1f5ad9ea33f3
+		sourceLineageTag: d480f186-45a3-489e-baf5-e582114e2c4c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Principaal relatiegroepen omschrijving
+
+		annotation SummarizationSetBy = User
+
+	column 'Principaal relatiegroepen code'
+		dataType: string
+		lineageTag: f48bfc75-6f3a-4ffa-a1d8-e28dc12cdfd2
+		sourceLineageTag: e52da7c2-e3c7-4638-bd84-8ac1121638b0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Principaal relatiegroepen code
+
+		annotation SummarizationSetBy = User
+
+	column 'Opdrachtgever relatiegroepen omschrijving'
+		dataType: string
+		lineageTag: 7ad6ba59-f6b0-4827-b8a5-81779e5a036f
+		sourceLineageTag: 7804c6ad-3461-4e74-bf12-4440d9db79ea
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Opdrachtgever relatiegroepen omschrijving
+
+		annotation SummarizationSetBy = User
+
+	column 'Opdrachtgever relatiegroepen code'
+		dataType: string
+		lineageTag: b24309b8-cffd-430b-bbe7-d5b1e270ad9a
+		sourceLineageTag: 9eac5947-e417-439c-a8fc-4df193a384cf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Opdrachtgever relatiegroepen code
+
+		annotation SummarizationSetBy = User
+
+	column 'Debiteur bedrijfsactiviteiten omschrijving'
+		dataType: string
+		lineageTag: 749fef1c-a158-43bd-bc5d-6c2aeb1d4e17
+		sourceLineageTag: 4a42fbbb-c07c-4503-8283-214f8db7252b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Debiteur bedrijfsactiviteiten omschrijving
+
+		annotation SummarizationSetBy = User
+
+	column 'Debiteur bedrijfsactiviteiten code'
+		dataType: string
+		lineageTag: e079079a-8fea-47fd-a85c-27b7d750baa0
+		sourceLineageTag: 6866d333-21fd-42c5-8b06-6429d83a7595
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Debiteur bedrijfsactiviteiten code
+
+		annotation SummarizationSetBy = User
+
+	column 'Principaal bedrijfsactiviteiten omschrijving'
+		dataType: string
+		lineageTag: b889263b-9412-47f0-b921-46f3bba2ae02
+		sourceLineageTag: 1bd69e24-7f08-46a4-9799-b55baa9f302e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Principaal bedrijfsactiviteiten omschrijving
+
+		annotation SummarizationSetBy = User
+
+	column 'Principaal bedrijfsactiviteiten code'
+		dataType: string
+		lineageTag: c799ae50-1fcc-4282-9760-56edc3c386c5
+		sourceLineageTag: 0874372a-3e19-4795-872c-2ea173884d2d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Principaal bedrijfsactiviteiten code
+
+		annotation SummarizationSetBy = User
+
+	column 'Opdrachtgever bedrijfsactiviteiten omschrijving'
+		dataType: string
+		lineageTag: 493f1947-a905-49e6-a8b8-2ca77fba4e2c
+		sourceLineageTag: 13b0ee34-3b5a-4b87-8604-2eb3b2642e93
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Opdrachtgever bedrijfsactiviteiten omschrijving
+
+		annotation SummarizationSetBy = User
+
+	column 'Opdrachtgever bedrijfsactiviteiten code'
+		dataType: string
+		lineageTag: 15d94259-1e67-41ab-bdf0-3f0f84eb5c2f
+		sourceLineageTag: ff242446-9221-46dc-b3c9-1eaff9664a1e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Opdrachtgever bedrijfsactiviteiten code
+
+		annotation SummarizationSetBy = User
+
+	column Projectcode
+		dataType: string
+		lineageTag: 9a3981d0-0728-41b9-bad1-7d78f1a33c5b
+		sourceLineageTag: d4d76434-b5b6-4b77-a830-d934a28caead
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Projectcode
+
+		annotation SummarizationSetBy = User
+
+	column 'Project titel'
+		dataType: string
+		lineageTag: 7769caa7-0952-4982-aaef-5fcdf22fac8f
+		sourceLineageTag: 2732ef45-e553-465e-9b2e-faba568d71bc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Project titel
+
+		annotation SummarizationSetBy = User
+
+	column Hoofdprojectcode
+		dataType: string
+		lineageTag: 45cfafaa-9f31-43a8-bd32-71969087acd4
+		sourceLineageTag: 03328d2b-36f9-4b6f-bbea-8190afce4289
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdprojectcode
+
+		annotation SummarizationSetBy = User
+
+	column 'Hoofdproject titel'
+		dataType: string
+		lineageTag: 3b746238-91be-471f-804d-8ad8e19f3eec
+		sourceLineageTag: 7738bb1a-14fd-4d09-9326-eacd9ed70954
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdproject titel
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau2 project code'
+		dataType: string
+		lineageTag: a358abc6-b51f-400f-9eb0-fea2c69eb0ac
+		sourceLineageTag: a834d0a3-7f4d-4194-9a20-8d0f83131623
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau2 project code
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau2 project titel'
+		dataType: string
+		lineageTag: 2e3c1c4f-da37-4c14-8f9c-72a07b10f6eb
+		sourceLineageTag: 8654e79e-abe5-497b-9274-53fa268807b7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau2 project titel
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau3 project code'
+		dataType: string
+		lineageTag: 87d68e3d-6413-4e71-b551-b49d3befb297
+		sourceLineageTag: 54d294fb-7de0-42f7-93f0-618a0591d934
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau3 project code
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau3 project titel'
+		dataType: string
+		lineageTag: 5abd9165-47f6-4a3f-93a7-06a87e561b42
+		sourceLineageTag: fe7ba2a0-e528-4c9b-85b8-2e6a29ab2a65
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau3 project titel
+
+		annotation SummarizationSetBy = User
+
+	column 'KS CC Relatiegroep' =
+			
+			
+			LOOKUPVALUE(Relatiegroepen[relatiegroep Omschrijving], Relatiegroepen[RelatieKey], Projecten[PrincipaalRelatieKey], Relatiegroepen[KS CC Duplicates relatiekey], 1)
+		lineageTag: ba110f5e-2530-46de-b7b1-13fec46fa567
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KS CC Opdractgever' =
+			
+			MID(Projecten[Opdrachtgever], 8, 13)
+		lineageTag: bdae1b5c-6c6c-496c-a684-4fbc626e8bdb
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KS CC Project' =
+			
+			LEFT(Projecten[Project], 1)
+		lineageTag: eef0f202-5238-4f53-80b2-f8c78a7add4f
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Uitvoerder code'
+		dataType: string
+		lineageTag: 57eec9d6-a30c-4719-be48-a0e9385f4d58
+		sourceLineageTag: aeef90b7-c6bf-4562-8f8b-f36f2a58df0c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Uitvoerder code
+
+		annotation SummarizationSetBy = User
+
+	column 'Uitvoerder omschrijving'
+		dataType: string
+		lineageTag: 2087c489-de2a-4518-89f8-bd1935a20ed5
+		sourceLineageTag: 7eff1a59-5c85-411e-ab0b-24944ae9a711
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Uitvoerder omschrijving
+
+		annotation SummarizationSetBy = User
+
+	column Opdrachtgevercode
+		dataType: string
+		lineageTag: bca0ba52-43a5-4f95-a7d8-8d051275b915
+		sourceLineageTag: d8a6d01c-dfb0-4a7c-9b48-bd46506761c2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Opdrachtgevercode
+
+		annotation SummarizationSetBy = User
+
+	column 'Opdrachtgever omschrijving'
+		dataType: string
+		lineageTag: 0c5b7ae5-f849-4d25-a726-6042d429728d
+		sourceLineageTag: d5ff8644-5dca-45c7-a6fa-8d3fee923b1e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Opdrachtgever omschrijving
+
+		annotation SummarizationSetBy = User
+
+	hierarchy 'Projecten hiërarchie'
+		lineageTag: 7ba092e7-5e52-4462-afa6-d596b2bc18e2
+		sourceLineageTag: c48df979-0e86-4962-9595-0751920ec6e2
+
+		level Hoofdproject
+			lineageTag: b66031c2-75dc-4061-8e7d-f10c0c1ea5c0
+			sourceLineageTag: 2dfd1c2c-ac07-44d1-9362-76c8719129a8
+			column: Hoofdproject
+
+		level 'Niveau 2 Project'
+			lineageTag: ac9dc913-a04f-4330-bc81-16e5795f2ca8
+			sourceLineageTag: 8d2fc8ae-4921-41ed-98c8-f981c01647aa
+			column: 'Niveau 2 Project'
+
+		level 'Niveau 3 Project'
+			lineageTag: 52eba0c1-63c4-4b45-abf5-4f022aa8a4be
+			sourceLineageTag: aced686f-ab4b-43f1-8d45-42ef9ca59942
+			column: 'Niveau 3 Project'
+
+	partition Projecten = entity
+		mode: directQuery
+		source
+			entityName: Projecten
+			expressionSource: 'DirectQuery to AS - SSM'
+

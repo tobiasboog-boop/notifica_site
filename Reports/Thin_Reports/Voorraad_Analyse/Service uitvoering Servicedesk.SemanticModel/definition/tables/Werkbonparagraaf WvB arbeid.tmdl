@@ -1,0 +1,96 @@
+table 'Werkbonparagraaf WvB arbeid'
+	lineageTag: 15817db1-ff8d-4168-8aff-7f7c2a291f5f
+	sourceLineageTag: 1f709eb0-776a-4abc-a3f0-e7161d7f7a77
+
+	column WerkbonparagraafKey
+		dataType: int64
+		formatString: 0
+		lineageTag: fc3bac29-28b2-45ce-83b2-e04a4872763b
+		sourceLineageTag: 8e0f3f99-41a0-4a54-807e-9b1d227f4ba3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WerkbonparagraafKey
+
+		annotation SummarizationSetBy = User
+
+	column TaakKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 0774ebe4-9aae-4bdc-9a41-08c4e8e92d9d
+		sourceLineageTag: 9a8878be-b105-4aee-b7f2-98c1731781a3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: TaakKey
+
+		annotation SummarizationSetBy = User
+
+	column Aantal
+		dataType: double
+		lineageTag: f77aa137-78d9-4031-8f47-4a1da17858f0
+		sourceLineageTag: 7dd49c63-765f-482d-baf1-9f7e9c47309d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Aantal
+
+		annotation SummarizationSetBy = User
+
+	column 'Uitgevoerd op'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: fddd5fe3-7789-4872-a2b7-a768d577e202
+		sourceLineageTag: a02566b4-0b97-4dbd-81f3-7202dc0c6c35
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Uitgevoerd op
+
+		annotation SummarizationSetBy = User
+
+	column 'In onderhoud'
+		dataType: string
+		lineageTag: bbd232df-bca9-4646-ad6b-e3d27252e1c2
+		sourceLineageTag: 40861d4e-8997-4236-93c8-9ba6d5342351
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: In onderhoud
+
+		annotation SummarizationSetBy = User
+
+	column Uitvoerdatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 8063316f-5a8b-4e1e-9b71-1ab12a1ca271
+		sourceLineageTag: b4ed8c24-3ce2-4ff6-b0d3-2ff9fdff7a23
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Uitvoerdatum
+
+		annotation SummarizationSetBy = User
+
+	column WerkbonDocumentKey
+		dataType: int64
+		formatString: 0
+		lineageTag: da4e7c0c-d6f1-4bf7-a54e-d286481f74e7
+		sourceLineageTag: 39f5bb30-01a8-4781-8e09-588432997833
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: WerkbonDocumentKey
+
+		annotation SummarizationSetBy = User
+
+	column KostensoortKey
+		dataType: int64
+		formatString: 0
+		lineageTag: fe65b021-c3de-4eb4-8257-692465e36782
+		sourceLineageTag: e98abc2f-202a-4fc9-957f-26e9ab292183
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: KostensoortKey
+
+		annotation SummarizationSetBy = User
+
+	partition 'Werkbonparagraaf WvB arbeid' = entity
+		mode: directQuery
+		source
+			entityName: Werkbonparagraaf WvB arbeid
+			expressionSource: 'DirectQuery to AS - SSM'
+

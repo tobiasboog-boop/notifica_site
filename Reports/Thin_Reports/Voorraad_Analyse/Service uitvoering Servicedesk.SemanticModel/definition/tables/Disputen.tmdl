@@ -1,0 +1,52 @@
+table Disputen
+	lineageTag: 6595a77a-6521-458c-ab1c-52b408ad6f8c
+	sourceLineageTag: f52b1831-8212-4fa3-b7c1-06c424e908eb
+
+	column DispuutKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: b4d24817-10a6-4ded-a891-ce4ed62c3e5b
+		sourceLineageTag: b19281ca-7709-403b-ac39-e1b850f10dcf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DispuutKey
+
+		annotation SummarizationSetBy = User
+
+	column DispuutCode
+		dataType: string
+		lineageTag: dbf4e3ad-56dc-48f0-90c0-05b853cd3e3d
+		sourceLineageTag: 73d2d5f8-741d-4e7e-8314-186114d716e8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DispuutCode
+
+		annotation SummarizationSetBy = User
+
+	column Dispuut
+		dataType: string
+		lineageTag: e908f337-1354-4f5c-aa20-37eff9260177
+		sourceLineageTag: d18f524c-c486-4b0d-999c-3b05d3cabf6f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Dispuut
+
+		annotation SummarizationSetBy = User
+
+	column Bestemming
+		dataType: string
+		lineageTag: 3edbf3f9-6f9c-4cb9-a74e-4e1837037661
+		sourceLineageTag: e6d006bb-1132-405e-8a9a-84e1b6bf3959
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestemming
+
+		annotation SummarizationSetBy = User
+
+	partition Disputen = entity
+		mode: directQuery
+		source
+			entityName: Disputen
+			expressionSource: 'DirectQuery to AS - SSM'
+

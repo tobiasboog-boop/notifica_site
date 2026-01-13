@@ -1,0 +1,104 @@
+table 'Logboek aanmeldingen'
+	lineageTag: 7870b43f-e553-4f88-8c87-23a993dcd1ab
+	sourceLineageTag: 9f626e02-d5ae-4141-a5fe-effb5b17b8f4
+
+	column RegelKey
+		dataType: int64
+		formatString: 0
+		lineageTag: e5da9305-45aa-4714-a709-1c9a7971a1b5
+		sourceLineageTag: 8e731b1a-2d2d-42d0-9705-4878f89e53c4
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: RegelKey
+
+		annotation SummarizationSetBy = User
+
+	column AdministratieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 78c36d9c-d263-46f6-9ee1-d47c965793c0
+		sourceLineageTag: c1609eff-1c89-46e5-ac1a-4af351e4ebfd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AdministratieKey
+
+		annotation SummarizationSetBy = User
+
+	column Datum/tijd
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 5ba3c163-777c-4341-9c25-308e2481e349
+		sourceLineageTag: 1f88ecf5-4d0b-4423-8b80-b2537c3b26ee
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Datum/tijd
+
+		annotation SummarizationSetBy = User
+
+	column 'Soort actie'
+		dataType: string
+		lineageTag: 38573acb-1157-4d2b-a2c1-f62b877ee307
+		sourceLineageTag: 15a8a98f-8e23-4e47-a672-731d219a38d6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Soort actie
+
+		annotation SummarizationSetBy = User
+
+	column 'Client applicatie'
+		dataType: string
+		lineageTag: 94eb0d8c-6f93-4c80-a392-3f43f811a9fe
+		sourceLineageTag: 0bd9f4c8-0364-4dd6-a56e-8012a2759a37
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Client applicatie
+
+		annotation SummarizationSetBy = User
+
+	column Gebruikerscode
+		dataType: string
+		lineageTag: db706dcf-e9b8-4260-a3e8-198a902c5f28
+		sourceLineageTag: 3fa8e7a5-5349-4bb8-a3af-89d41c2c18a1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Gebruikerscode
+
+		annotation SummarizationSetBy = User
+
+	column 'Gebruiker omschrijving'
+		dataType: string
+		lineageTag: 0ebcf890-69bd-41bb-b5e2-b156e8999f80
+		sourceLineageTag: a46a3eb3-7372-45bd-9f14-f69f72a845d6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Gebruiker omschrijving
+
+		annotation SummarizationSetBy = User
+
+	column Gebruiker
+		dataType: string
+		lineageTag: 66ded0a3-07d2-44fa-a557-d00aca607781
+		sourceLineageTag: 950cbcf8-6afe-48fb-88fb-9f7d0c6e8248
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Gebruiker
+
+		annotation SummarizationSetBy = User
+
+	column MedewerkerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: cd3b9f68-b4a6-44de-9502-040ae7190df6
+		sourceLineageTag: 661828ab-40b8-4059-931e-70db3a34553d
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: MedewerkerKey
+
+		annotation SummarizationSetBy = User
+
+	partition 'Logboek aanmeldingen' = entity
+		mode: directQuery
+		source
+			entityName: Logboek aanmeldingen
+			expressionSource: 'DirectQuery to AS - SSM'
+

@@ -1,0 +1,104 @@
+table Boekingperiodes
+	lineageTag: 391e660e-74cf-45b5-9ef6-3e36e21aa234
+	sourceLineageTag: 7eb85e87-9839-4935-b49d-c9a7dedb5c8a
+
+	column BoekingsperiodeKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 1ef59bde-37de-4ae9-abdf-36c1af27000d
+		sourceLineageTag: 985e41a3-83e5-494f-9235-2e8ecb500444
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BoekingsperiodeKey
+
+		annotation SummarizationSetBy = User
+
+	column BoekjaarKey
+		dataType: int64
+		formatString: 0
+		lineageTag: a9ba29a4-c7bc-4183-b383-c14f6dd706d5
+		sourceLineageTag: fdb4790f-53ad-4acc-8fe7-7456a9b57c74
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BoekjaarKey
+
+		annotation SummarizationSetBy = User
+
+	column Type
+		dataType: string
+		lineageTag: 89142828-c826-4bf9-a12c-da0c3af3b60b
+		sourceLineageTag: 9a329979-2171-4989-8455-74c48aedabf0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = User
+
+	column Code
+		dataType: string
+		lineageTag: c39fa26c-fd6f-418a-aed6-88e62954fc3b
+		sourceLineageTag: 1b454a8d-1d9d-452e-95dd-22f368c9b82e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Code
+
+		annotation SummarizationSetBy = User
+
+	column Begindatum
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 689ce7f1-2fb4-4401-ad88-9ce2c7cd4bfa
+		sourceLineageTag: 1f157837-1354-4a4c-92d8-4c92634ad3ef
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Begindatum
+
+		annotation SummarizationSetBy = User
+
+	column Status
+		dataType: string
+		lineageTag: 5e65d1c6-ac1e-473d-b759-6af633a545a7
+		sourceLineageTag: 4cc87737-62f6-424b-b16f-17598116044d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = User
+
+	column 'Einde van de maand'
+		dataType: dateTime
+		isHidden
+		lineageTag: 840ba8d7-4463-4687-9af8-e22b164e4ce6
+		sourceLineageTag: 5ad29e95-d9bb-4f63-9479-f7e4286ddf70
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Einde van de maand
+
+		annotation SummarizationSetBy = User
+
+	column Boekingsperiode
+		dataType: string
+		lineageTag: 66ba3119-fec8-4343-b4b8-f31622599dc2
+		sourceLineageTag: 275da67f-e99b-4ae7-a6e3-ab473f094ef4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Boekingsperiode
+
+		annotation SummarizationSetBy = User
+
+	column 'Boekingsperiode sorteerbaar'
+		dataType: string
+		lineageTag: 5d3a7f70-e47a-4bd6-92b1-034d9fd4cdd4
+		sourceLineageTag: b27408bf-41ef-4fd3-8c98-ae2270dcec48
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Boekingsperiode sorteerbaar
+
+		annotation SummarizationSetBy = User
+
+	partition Boekingperiodes = entity
+		mode: directQuery
+		source
+			entityName: Boekingperiodes
+			expressionSource: 'DirectQuery to AS - SSM'
+

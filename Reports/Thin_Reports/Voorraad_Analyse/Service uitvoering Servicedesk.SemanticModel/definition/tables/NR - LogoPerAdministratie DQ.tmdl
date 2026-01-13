@@ -1,0 +1,117 @@
+table 'NR - LogoPerAdministratie DQ'
+	lineageTag: 9b9bb45b-bd53-455a-8951-436e36facb84
+	sourceLineageTag: 76d281e9-c4c8-4142-9145-d2baf5863f87
+
+	column Regelkey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: 28af1cb3-60b0-4a58-8ca9-e43d268fb8b7
+		sourceLineageTag: b058457d-b02e-4f96-8aa8-1b83458c5d10
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Regelkey
+
+		annotation SummarizationSetBy = User
+
+	column Klantnummer
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: 190599bd-e0cc-41b6-9e5b-a0b52c2a21d8
+		sourceLineageTag: 2189a5a3-5afd-463e-bc3d-ce60f996e08e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Klantnummer
+
+		annotation SummarizationSetBy = User
+
+	column AdministratieKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: 0454a3d9-f403-4e31-9e6f-67ac368e902d
+		sourceLineageTag: 8d1ee191-c8f6-4558-b066-994cfd194627
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AdministratieKey
+
+		annotation SummarizationSetBy = User
+
+	column AdministratieCode
+		dataType: string
+		lineageTag: 3111c131-46ae-4496-bce5-ec7f3ef81673
+		sourceLineageTag: 59c6a58d-fcc2-4d4b-8300-4e6e8e8d3f7e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AdministratieCode
+
+		annotation SummarizationSetBy = User
+
+	column Administratie
+		dataType: string
+		lineageTag: 2a341bb0-c7f8-495c-ab2b-1233df7d5e2c
+		sourceLineageTag: f2410051-1d65-442b-b107-1325bdf37487
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Administratie
+
+		annotation SummarizationSetBy = User
+
+	column Logo
+		dataType: string
+		lineageTag: 83fba199-02d8-4254-9b59-d3c93f80eeb4
+		sourceLineageTag: e4e09762-1b3e-4c41-9ac5-666e1b77bc81
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Logo
+
+		annotation SummarizationSetBy = User
+
+	column 'aantal karakters'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4f7ad2f9-d1b0-4cf5-8854-9b9f2b6dfba6
+		sourceLineageTag: d969774c-e15a-457f-a22b-f71b5e7a4dfe
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: aantal karakters
+
+		annotation SummarizationSetBy = User
+
+	column 'oorspronkelijke extensie'
+		dataType: string
+		lineageTag: 55316383-7f47-48c2-94c6-fb322d05656e
+		sourceLineageTag: 2ec9874b-c068-468f-b927-526860a685f9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: oorspronkelijke extensie
+
+		annotation SummarizationSetBy = User
+
+	column UniekeAdministratieID
+		dataType: string
+		lineageTag: a5c8a3f9-320e-431d-beef-e319d54ccdc8
+		sourceLineageTag: 296402c1-bc98-4f6a-bbc2-90d811446b60
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: UniekeAdministratieID
+
+		annotation SummarizationSetBy = User
+
+	column Basislogo_JN
+		dataType: string
+		lineageTag: d501312e-cad1-4337-9d70-0fd30617edbd
+		sourceLineageTag: 252023ba-d9ff-4871-b2c2-fe8104edf1be
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Basislogo_JN
+
+		annotation SummarizationSetBy = User
+
+	partition 'NR - LogoPerAdministratie DQ' = entity
+		mode: directQuery
+		source
+			entityName: NR - LogoPerAdministratie DQ
+			expressionSource: 'DirectQuery to AS - SSM'
+

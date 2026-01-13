@@ -1,0 +1,135 @@
+table 'Werkbonparagraaf checklistregels'
+	lineageTag: 90cbdca8-3d18-4874-b152-ab6ecd8ca31b
+	sourceLineageTag: 29f02e1a-749f-47fd-865e-a13240fd4fad
+
+	column RegelKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 29aa34d8-eca1-4eff-bd93-6b238e687949
+		sourceLineageTag: 28de323f-0952-40b2-b079-5503f4d7409d
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: RegelKey
+
+		annotation SummarizationSetBy = User
+
+	column WerkbonparagraafKey
+		dataType: int64
+		formatString: 0
+		lineageTag: f428daca-a259-4c0f-a9e1-ca8558cc4198
+		sourceLineageTag: c193b65c-4379-4e40-b091-fc7268d227bd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WerkbonparagraafKey
+
+		annotation SummarizationSetBy = User
+
+	column InvoerderMedewerkerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 799d230f-4021-4587-8e23-354e3e006584
+		sourceLineageTag: f5dd9a81-7fe3-4644-bf48-6b33ab3ada13
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: InvoerderMedewerkerKey
+
+		annotation SummarizationSetBy = User
+
+	column EenheidKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 9d52b531-493f-4c90-b26f-05bec9614587
+		sourceLineageTag: e5c24ece-9f72-46b0-a213-2595f2dc4369
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: EenheidKey
+
+		annotation SummarizationSetBy = User
+
+	column Vraag
+		dataType: string
+		lineageTag: 80394070-6663-4e7d-81bf-59bd9581931e
+		sourceLineageTag: 03854a41-363f-4b12-af87-36cc62f96e24
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Vraag
+
+		annotation SummarizationSetBy = User
+
+	column 'Vraag volgorde'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f6b26e3-c8a5-471d-aca1-9e344f80a8cb
+		sourceLineageTag: ed419880-13c5-42fc-a3c1-3be10141593a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Vraag volgorde
+
+		annotation SummarizationSetBy = User
+
+	column 'Vraag gesteld'
+		dataType: string
+		lineageTag: 3ff357fe-e00b-4332-a6f6-fb498a2c8bf6
+		sourceLineageTag: 8a9e154b-aff5-4c11-b311-e529d58ef016
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Vraag gesteld
+
+		annotation SummarizationSetBy = User
+
+	column 'Referentie Checklistvraag'
+		dataType: string
+		lineageTag: e880770e-8c86-4273-9ed1-84002b14152c
+		sourceLineageTag: 5440b3bd-4d04-4ed1-b917-55756f20db9f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Referentie Checklistvraag
+
+		annotation SummarizationSetBy = User
+
+	column Antwoord
+		dataType: string
+		lineageTag: 7cd3d97d-edda-44f2-b81c-3c7afb9fe022
+		sourceLineageTag: 9f4b60a0-049b-4cca-b468-aa3784963734
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Antwoord
+
+		annotation SummarizationSetBy = User
+
+	column 'Checklist code'
+		dataType: string
+		lineageTag: 4990e1b5-68a5-4c9b-8193-085cdbe34d8a
+		sourceLineageTag: 88b7875f-2806-4345-90ae-9dca7f80a26a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Checklist code
+
+		annotation SummarizationSetBy = User
+
+	column 'Checklist omschrijving'
+		dataType: string
+		lineageTag: c7f9f300-4b05-47a7-8ffd-090823dc075f
+		sourceLineageTag: 023bd66b-2769-4547-abd6-350fc9c54dba
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Checklist omschrijving
+
+		annotation SummarizationSetBy = User
+
+	column Kenmerk
+		dataType: string
+		lineageTag: fe09546d-10c2-4151-bbde-b4c7955af4cd
+		sourceLineageTag: 1473064b-a429-4c27-bd1f-974324a732eb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Kenmerk
+
+		annotation SummarizationSetBy = User
+
+	partition 'Werkbonparagraaf checklistregels' = entity
+		mode: directQuery
+		source
+			entityName: Werkbonparagraaf checklistregels
+			expressionSource: 'DirectQuery to AS - SSM'
+

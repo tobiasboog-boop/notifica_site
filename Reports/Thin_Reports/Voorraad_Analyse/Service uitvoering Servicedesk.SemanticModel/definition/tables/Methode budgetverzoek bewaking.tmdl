@@ -1,0 +1,21 @@
+table 'Methode budgetverzoek bewaking'
+	lineageTag: eff22c3e-54c9-47a8-ad9b-fdd77653078f
+	sourceLineageTag: 9aebfa0e-370a-48cf-bcf7-6b77527ad84a
+
+	column 'minimale orderwaarde'
+		dataType: int64
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: c3234194-a097-4985-a5e4-30c2f187345b
+		sourceLineageTag: a9fb7abc-10d7-4a2f-83ac-695d8a989275
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: minimale orderwaarde
+
+		annotation SummarizationSetBy = User
+
+	partition 'Methode budgetverzoek bewaking' = entity
+		mode: directQuery
+		source
+			entityName: Methode budgetverzoek bewaking
+			expressionSource: 'DirectQuery to AS - SSM'
+

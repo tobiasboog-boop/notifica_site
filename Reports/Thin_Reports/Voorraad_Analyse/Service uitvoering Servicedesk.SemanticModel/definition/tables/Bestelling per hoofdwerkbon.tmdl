@@ -1,0 +1,73 @@
+table 'Bestelling per hoofdwerkbon'
+	lineageTag: 01aeaf6b-fb10-4249-b90a-dd8d1ca7b94f
+	sourceLineageTag: ca724f3f-913a-4052-8266-e8fde311099c
+
+	column HoofdwerkbonDocumentKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 5d6b55f1-a092-49ab-b284-31b2eba86bff
+		sourceLineageTag: 25ba1334-7dee-4099-a717-dcdb6c4ba936
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: HoofdwerkbonDocumentKey
+
+		annotation SummarizationSetBy = User
+
+	column Aantal
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 84a15ac8-8ba3-431e-a76c-801369ce7135
+		sourceLineageTag: 5ad8b481-231f-4f84-94bc-3b04899fe452
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Aantal
+
+		annotation SummarizationSetBy = User
+
+	column Artikelklasse
+		dataType: string
+		lineageTag: 7b8fed76-d75b-4b2f-bca6-e8113cad4d9a
+		sourceLineageTag: 155f059a-c881-4d51-849d-16f71c89f7f0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Artikelklasse
+
+		annotation SummarizationSetBy = User
+
+	column 'Artikel merk'
+		dataType: string
+		lineageTag: 097d26f5-9c97-4755-8dfe-36a87da3a507
+		sourceLineageTag: 3ffd0760-d8c2-4910-b573-7f34a4b118d6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Artikel merk
+
+		annotation SummarizationSetBy = User
+
+	column 'Artikel type'
+		dataType: string
+		lineageTag: fda286b6-7631-4e72-bbb1-834363ad1d78
+		sourceLineageTag: 976bdd5c-a14c-4f16-9576-03e7d8b52610
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Artikel type
+
+		annotation SummarizationSetBy = User
+
+	column 'bestelling boekdatum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f3cfc9ba-5b17-45b8-aad8-6b96264a72a4
+		sourceLineageTag: a9a720ed-9f2e-4fd3-9b72-27ea8e14c2a5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: bestelling boekdatum
+
+		annotation SummarizationSetBy = User
+
+	partition 'Bestelling per hoofdwerkbon' = entity
+		mode: directQuery
+		source
+			entityName: Bestelling per hoofdwerkbon
+			expressionSource: 'DirectQuery to AS - SSM'
+

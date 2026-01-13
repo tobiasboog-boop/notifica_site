@@ -1,0 +1,131 @@
+table Relatiegroepen
+	lineageTag: 2bba4fd5-0de8-4ceb-a349-74a5664bfaab
+	sourceLineageTag: 92f4a262-3ac5-48b8-9e54-d7a7f014022d
+
+	measure 'KS Count relatiekey' =
+			
+			COUNT(Relatiegroepen[RelatieKey])
+		formatString: 0
+		lineageTag: 4b4ecf57-f08f-431a-8307-4741a3f093d8
+
+		changedProperty = Name
+
+	measure 'KS distintount relatiekey' =
+			
+			DISTINCTCOUNT(Relatiegroepen[RelatieKey])
+		formatString: 0
+		lineageTag: b63b104c-82c8-4eb6-ae4d-d9cb4349858b
+
+		changedProperty = Name
+
+	column RelatieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: dacdb676-1e5f-4b11-8bc3-691279882041
+		sourceLineageTag: 48120936-4851-43f4-8a0f-5a69b12c7582
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: RelatieKey
+
+		annotation SummarizationSetBy = User
+
+	column RelatiegroepKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 33ea41df-f02c-465c-bd2c-8e6af35828a5
+		sourceLineageTag: f278ea67-2b41-4c49-925f-1523805920f1
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: RelatiegroepKey
+
+		annotation SummarizationSetBy = User
+
+	column AdministratieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: be9443f4-98cd-4b46-adec-e8c24cc348f4
+		sourceLineageTag: 22a02a9f-5aa1-4606-b7fa-4fe2b0f085ed
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AdministratieKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Relatiegroep Code'
+		dataType: string
+		lineageTag: ee5c65d1-252b-4e1f-936a-d03470e7d190
+		sourceLineageTag: 8d81334b-6742-4a0e-b5fe-d23798651472
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Relatiegroep Code
+
+		annotation SummarizationSetBy = User
+
+	column 'relatiegroep Omschrijving'
+		dataType: string
+		lineageTag: 09e7c72a-e8f6-4599-9dce-cefd8531ec3e
+		sourceLineageTag: f0f89858-1125-49cf-9fca-5ae4d42808e6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: relatiegroep Omschrijving
+
+		annotation SummarizationSetBy = User
+
+	column 'Relatiegroep Kenmerk'
+		dataType: string
+		lineageTag: 2e83ab65-7bf0-4d60-8c6c-0ddb1a18502d
+		sourceLineageTag: 9751a0f5-deff-40f8-901e-105693dd5b89
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Relatiegroep Kenmerk
+
+		annotation SummarizationSetBy = User
+
+	column Status
+		dataType: string
+		lineageTag: fc8aabe1-873c-445c-a879-4387e4212f9e
+		sourceLineageTag: ec8f3965-53f3-4a12-ad7d-5cca0ee8ec91
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = User
+
+	column Soort
+		dataType: string
+		lineageTag: 42ce51e9-b1a7-4066-abfe-0670b048003c
+		sourceLineageTag: b2f41b8c-1723-43fc-9064-2382abb24305
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Soort
+
+		annotation SummarizationSetBy = User
+
+	column Intercompany
+		dataType: string
+		lineageTag: da8b06ac-c8ce-4368-8af9-696b6040d543
+		sourceLineageTag: 54a114b8-07a1-41a2-ac58-acecce1e44b4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Intercompany
+
+		annotation SummarizationSetBy = User
+
+	column 'KS CC Duplicates relatiekey' =
+			
+			COUNTROWS(FILTER(Relatiegroepen, Relatiegroepen[RelatieKey] = EARLIER(Relatiegroepen[RelatieKey]))
+			)
+		formatString: 0
+		lineageTag: 89c7a5a2-5f21-455c-973c-5fdda02968b5
+		summarizeBy: sum
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Relatiegroepen = entity
+		mode: directQuery
+		source
+			entityName: Relatiegroepen
+			expressionSource: 'DirectQuery to AS - SSM'
+

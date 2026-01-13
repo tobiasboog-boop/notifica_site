@@ -1,0 +1,308 @@
+table 'Kalender factuurdatum'
+	lineageTag: 57219238-5959-4482-8afc-916288e76ae2
+	sourceLineageTag: 932d1326-1113-4d42-a8c7-b02d281a8ada
+
+	column Factuurdatum
+		dataType: dateTime
+		isNullable: false
+		formatString: dd\-mm\-yyyy
+		lineageTag: 27e5a9d9-1c6e-4b86-8376-72e3f91725c0
+		sourceLineageTag: 9b8f711b-3643-4b05-9d3e-d78bc7b7a97f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Factuurdatum
+
+		annotation SummarizationSetBy = User
+
+	column Jaar
+		dataType: int64
+		formatString: 0
+		lineageTag: bebb724a-fff0-4d2a-a473-ea39aa68b13e
+		sourceLineageTag: 46fb5f0e-c1e3-44b6-9b27-c2b6ac6b0b63
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Jaar
+
+		annotation SummarizationSetBy = User
+
+	column Maandnummer
+		dataType: int64
+		formatString: 0
+		lineageTag: 692b84f7-cc3c-4e0f-aa0e-66df3f7e876f
+		sourceLineageTag: 9ccbe740-4d4e-45ba-910f-1c9343bdc97a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Maandnummer
+
+		annotation SummarizationSetBy = User
+
+	column Maand
+		dataType: string
+		lineageTag: e28a1519-1522-4662-ab4f-12fa54fad37a
+		sourceLineageTag: 66c6c859-1dba-48fa-8fb8-5e11974d805d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Maand
+		sortByColumn: Maandnummer
+
+		annotation SummarizationSetBy = User
+
+	column Weeknummer
+		dataType: int64
+		formatString: 0
+		lineageTag: 68a87ad6-3026-4f04-b219-aeb16cb10d94
+		sourceLineageTag: 067a6d0e-70b9-47c9-8a88-f5e2cecd3237
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Weeknummer
+
+		annotation SummarizationSetBy = User
+
+	column 'Dagnummer van de week'
+		dataType: int64
+		formatString: 0
+		lineageTag: 769b1e8c-0847-4aa9-a55a-ae651bb1075c
+		sourceLineageTag: abc61919-43bc-474a-90f0-a6f49948fe06
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Dagnummer van de week
+
+		annotation SummarizationSetBy = User
+
+	column Dagnaam
+		dataType: string
+		lineageTag: b655e88b-f1b0-43cb-8e40-d5e6a7d07ed6
+		sourceLineageTag: 07c34e00-f6a1-4605-b442-f436f4e56cd8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Dagnaam
+		sortByColumn: 'Dagnummer van de week'
+
+		annotation SummarizationSetBy = User
+
+	column 'Dag van de maand'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7caecf30-ccb2-456b-8731-0ae40482e81d
+		sourceLineageTag: 0374ef06-6900-466f-a43e-31cd7d5b2617
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Dag van de maand
+
+		annotation SummarizationSetBy = User
+
+	column YYYYMM
+		dataType: string
+		lineageTag: 89f8b04f-b28b-4496-a7ac-77a9e3fccf19
+		sourceLineageTag: cab7da5a-90db-4af8-945c-4d4f85e65570
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: YYYYMM
+
+		annotation SummarizationSetBy = User
+
+	column Kwartaal
+		dataType: int64
+		formatString: 0
+		lineageTag: eedc03a9-2b93-42b8-bc43-40327396bc9c
+		sourceLineageTag: 1c9712bd-c4ca-4c2e-b948-f0dcec4669fc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Kwartaal
+
+		annotation SummarizationSetBy = User
+
+	column 'Begindatum Maand'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: c7073052-da01-4497-8d27-f58eff8cc02b
+		sourceLineageTag: a6ba24dc-d26d-4422-9921-6dc64d5940a6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Begindatum Maand
+
+		annotation SummarizationSetBy = User
+
+	column 'Begindatum Kwartaal'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 5ed5d7da-354f-4675-aeff-2991a3756104
+		sourceLineageTag: 32a3fdc0-1bf4-4fb2-9ce3-d06d3c28fb0c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Begindatum Kwartaal
+
+		annotation SummarizationSetBy = User
+
+	column 'Begindatum Jaar'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: a79fb260-b65c-44ed-8c1d-9f08943d66bf
+		sourceLineageTag: 14d51d85-d7c8-498b-a556-bfad246f67e1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Begindatum Jaar
+
+		annotation SummarizationSetBy = User
+
+	column 'Einddatum Maand'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: e5625497-bc65-4ad3-9739-59a36c022f69
+		sourceLineageTag: a0037fe3-b74f-490d-b6e6-38e009ae2b81
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Einddatum Maand
+
+		annotation SummarizationSetBy = User
+
+	column 'Einddatum Kwartaal'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 4831d3a4-88f6-4b7c-a9ec-eaaadf4e2167
+		sourceLineageTag: 1bf847e6-d586-4d9b-a00a-965d804f1d2b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Einddatum Kwartaal
+
+		annotation SummarizationSetBy = User
+
+	column 'Einddatum Jaar'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 129bc5a4-336c-4d2b-b7ad-b7b505bc4d22
+		sourceLineageTag: 43a5237d-fa05-4c74-a325-fde5859f51f1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Einddatum Jaar
+
+		annotation SummarizationSetBy = User
+
+	column 'Begindatum Week'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: b0f9d32d-a49f-4029-a870-039455bd6627
+		sourceLineageTag: 42e70d6c-02ee-4595-abac-34277287be5a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Begindatum Week
+
+		annotation SummarizationSetBy = User
+
+	column 'Einddatum Week'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 3656850b-5b81-47bc-8cfc-134ff91ba2c1
+		sourceLineageTag: 6bad6943-7d3c-4eee-9e29-fe02187e3398
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Einddatum Week
+
+		annotation SummarizationSetBy = User
+
+	column 'Jaar index'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8f849346-883f-4629-8e85-9dc13cc5dcd4
+		sourceLineageTag: d592bde7-29c3-4afe-b86e-fd73a1b4fa68
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Jaar index
+
+		annotation SummarizationSetBy = User
+
+	column 'Kwartaal index'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5e7e3b1b-1e89-4e0d-ae8d-569711f77218
+		sourceLineageTag: 54b7046f-077a-490f-bae7-c40a36cd13d5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Kwartaal index
+
+		annotation SummarizationSetBy = User
+
+	column 'Maand index'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7bc778b7-0c26-4e45-a68f-ed8478115f76
+		sourceLineageTag: 4f770101-6983-4112-bc84-1accaeb225b1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Maand index
+
+		annotation SummarizationSetBy = User
+
+	column 'Week index'
+		dataType: int64
+		formatString: 0
+		lineageTag: 21af05ec-972e-4602-bc83-cf64b93c33b4
+		sourceLineageTag: 450d2743-fea1-4775-a6c5-3e91a2c18f5c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Week index
+
+		annotation SummarizationSetBy = User
+
+	column 'Dag index'
+		dataType: int64
+		formatString: 0
+		lineageTag: a24c8f3a-b6d5-44fb-bc67-fa50b6aad637
+		sourceLineageTag: d253736e-572c-4c2f-9ba8-174a56907afc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Dag index
+
+		annotation SummarizationSetBy = User
+
+	column 'Jaar index tekst'
+		dataType: string
+		lineageTag: 1d61abf7-e20d-4c86-9d1d-21937b4cdbca
+		sourceLineageTag: 4d7bb69f-e3b4-457c-a1da-ed402ab22a24
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Jaar index tekst
+
+		annotation SummarizationSetBy = User
+
+	column Werkdag
+		dataType: int64
+		formatString: 0
+		lineageTag: f7c36013-f530-4de2-b7f0-e15fa8b62d32
+		sourceLineageTag: f1d9174b-dfef-48f1-9739-a4d51c148160
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Werkdag
+
+		annotation SummarizationSetBy = User
+
+	hierarchy 'Factuurdatum Hierarchy'
+		lineageTag: cf4a25d9-6a26-4dd4-9ca3-75129ce537ab
+		sourceLineageTag: 14fec58d-231e-4e1d-84df-f885833eec78
+
+		level Jaar
+			lineageTag: dbfa72cc-58fe-4a69-8d2d-3bc1ff000a1a
+			sourceLineageTag: 3e8caad7-d260-4e82-9240-6bb311e237ef
+			column: Jaar
+
+		level Maand
+			lineageTag: b418113a-eb26-4ea0-9e94-7ae8a078ce36
+			sourceLineageTag: fcc09669-e6a0-4bc0-b5ab-f01b171fbc02
+			column: Maand
+
+		level Weeknummer
+			lineageTag: 568f92de-cef0-441d-a882-6f8baedfb685
+			sourceLineageTag: 5e5e5f6d-ce32-47b2-84a5-1331579dff19
+			column: Weeknummer
+
+		level Factuurdatum
+			lineageTag: 00e2cfec-43f1-400a-b12b-d2703ff00447
+			sourceLineageTag: dc460c1a-ca9f-4f81-8b2f-d50d2c0cb71f
+			column: Factuurdatum
+
+	partition 'Kalender factuurdatum' = entity
+		mode: directQuery
+		source
+			entityName: Kalender factuurdatum
+			expressionSource: 'DirectQuery to AS - SSM'
+

@@ -1,0 +1,30 @@
+table 'Methode FTE'
+	lineageTag: ae6cbecd-7f6a-46e4-84c0-31a2444d031c
+	sourceLineageTag: 6da12d5b-0164-4e46-9aae-d02a2627f98d
+
+	column FTEKey
+		dataType: string
+		lineageTag: 9dde4b72-24fe-4cba-b3ee-2a57e6353f16
+		sourceLineageTag: 3bb54f8d-f491-4344-888d-7a19ce5292bd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: FTEKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Uren per week'
+		dataType: double
+		lineageTag: 483411ad-518a-4ed8-9ce8-1c4bf03f9fd2
+		sourceLineageTag: 978f275c-4a52-49cc-b1ce-552062f4f985
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Uren per week
+
+		annotation SummarizationSetBy = User
+
+	partition 'Methode FTE' = entity
+		mode: directQuery
+		source
+			entityName: Methode FTE
+			expressionSource: 'DirectQuery to AS - SSM'
+

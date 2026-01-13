@@ -1,0 +1,139 @@
+table 'Project service orders prognose'
+	lineageTag: c7178bc5-595f-4b45-bcfb-450daf5fc19c
+	sourceLineageTag: 14624cd1-ca7f-433f-b083-f9b4c5a8d0b0
+
+	column ProjectKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 438ce4f8-5d9f-4f96-bf21-22ca66e670da
+		sourceLineageTag: dfc0bcf4-d82d-4a76-a460-80d5c3ab1d24
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ProjectKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Factureerbedrag excl. BTW'
+		dataType: double
+		lineageTag: 80cd2230-d300-4dd8-8e9b-4d68df6526ea
+		sourceLineageTag: ffc1177a-964e-410e-815a-556914a832f5
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Factureerbedrag excl. BTW
+
+		annotation SummarizationSetBy = User
+
+	column Factureerdatum
+		dataType: dateTime
+		formatString: dd\-mm\-yyyy
+		lineageTag: 8d38f49b-fd62-4a5a-bbaf-dd399945ba54
+		sourceLineageTag: 7e18126c-e6f9-424d-a6dd-36f9c802c0bc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Factureerdatum
+
+		annotation SummarizationSetBy = User
+
+	column OrderDocumentKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 6234ac01-5cc7-4c33-bf0c-9275ea67c8db
+		sourceLineageTag: 9578bd50-c9fb-48eb-b086-b1acbee718b7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: OrderDocumentKey
+
+		annotation SummarizationSetBy = User
+
+	column Debiteur
+		dataType: string
+		lineageTag: 585db89e-3e03-495b-a31a-40d7988ffe4b
+		sourceLineageTag: d44a99e8-8910-4fa5-845b-177cda7a85bc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Debiteur
+
+		annotation SummarizationSetBy = User
+
+	column AdministratieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 4df10f00-8562-4ac0-97b9-8736c016b59f
+		sourceLineageTag: 3e8f489b-8117-4dba-afd0-a8b31a80a7ba
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AdministratieKey
+
+		annotation SummarizationSetBy = User
+
+	column DebiteurRelatieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: c646176f-870d-4705-9578-7aadbdfa432a
+		sourceLineageTag: 6f774f5b-481f-4444-bbcf-ba56bab3f12c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DebiteurRelatieKey
+
+		annotation SummarizationSetBy = User
+
+	column BestekparagraafKey
+		dataType: int64
+		formatString: 0
+		lineageTag: f5cd2efd-ecec-4013-9c0e-cdb36eb315a8
+		sourceLineageTag: 5b9a3502-beac-438b-9c9b-f63025e6d291
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BestekparagraafKey
+
+		annotation SummarizationSetBy = User
+
+	column KostensoortKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 5346048a-7109-43fe-a059-411593e479f4
+		sourceLineageTag: 05cadc3b-f485-43c0-be52-b0eab90f95c0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: KostensoortKey
+
+		annotation SummarizationSetBy = User
+
+	column OrderregelIndex
+		dataType: int64
+		formatString: 0
+		lineageTag: 424d7a40-58e1-45f3-8929-2462a1a29a2a
+		sourceLineageTag: ca5a576b-2d61-43be-a8ef-26b53a214a90
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: OrderregelIndex
+
+		annotation SummarizationSetBy = User
+
+	column 'Eerst volgende factuurdatum Ja/Nee'
+		dataType: string
+		lineageTag: 0ff6b0dc-cea9-4080-9d80-58797c6ff772
+		sourceLineageTag: 6f9c2396-4ef5-4991-b92d-e079f1f2d674
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Eerst volgende factuurdatum Ja/Nee
+
+		annotation SummarizationSetBy = User
+
+	column OrderregelKey
+		dataType: int64
+		formatString: 0
+		lineageTag: ac437eb1-6d33-45a4-a88d-f8c85218e896
+		sourceLineageTag: 6af7112a-a8b4-422a-977c-389fbf8200ac
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: OrderregelKey
+
+		annotation SummarizationSetBy = User
+
+	partition 'Project service orders prognose' = entity
+		mode: directQuery
+		source
+			entityName: Project service orders prognose
+			expressionSource: 'DirectQuery to AS - SSM'
+

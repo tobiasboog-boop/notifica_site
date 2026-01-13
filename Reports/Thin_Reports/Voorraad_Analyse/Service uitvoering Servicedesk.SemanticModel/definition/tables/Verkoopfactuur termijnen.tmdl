@@ -1,0 +1,148 @@
+table 'Verkoopfactuur termijnen'
+	lineageTag: 75005857-f99e-4cd9-bbd5-5d0afc0d7d97
+	sourceLineageTag: 5b31eebc-babf-4edd-b7bd-dad7713bec37
+
+	column VerkoopfactuurDocumentKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f9f9310-7e0f-42e5-ac0f-740639f68192
+		sourceLineageTag: 599060c1-913a-4712-8f79-0bafc68292e2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: VerkoopfactuurDocumentKey
+
+		annotation SummarizationSetBy = User
+
+	column DispuutKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 7892cc93-535e-4dcc-a845-0b69dafa55b9
+		sourceLineageTag: cfa8fb10-05d1-4364-af93-5487e6e287ac
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DispuutKey
+
+		annotation SummarizationSetBy = User
+
+	column DebiteurRelatieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 71e5df85-e009-4a2c-9051-fcfecbe53230
+		sourceLineageTag: 64095725-73c8-4693-a4f9-1f6a68dbca39
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DebiteurRelatieKey
+
+		annotation SummarizationSetBy = User
+
+	column Alloc_datum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: b1eeb420-9d71-45df-bd2a-edb6dcf09851
+		sourceLineageTag: 1d3d920f-c296-4a28-9d84-96a18ffe5dd3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Alloc_datum
+
+		annotation SummarizationSetBy = User
+
+	column Bedrag
+		dataType: double
+		lineageTag: de55a6a4-4ab2-48c5-8975-6e298bc939dc
+		sourceLineageTag: 4eec0144-1d11-4820-bee5-88b15f26b33d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Bedrag
+
+		annotation SummarizationSetBy = User
+
+	column 'BTW bedrag'
+		dataType: double
+		lineageTag: 2e749292-33e4-49cd-a559-ef1ef0aa0791
+		sourceLineageTag: 63cd85ee-45c5-442d-8203-c878c7ad9443
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: BTW bedrag
+
+		annotation SummarizationSetBy = User
+
+	column Boekdatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: cee06ded-d80e-4c76-9219-9e754153511e
+		sourceLineageTag: c67d8dc1-56a9-440e-be58-358133a43937
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Boekdatum
+
+		annotation SummarizationSetBy = User
+
+	column Factuurdatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 380b04f2-5b35-48ea-8911-5851deb89a03
+		sourceLineageTag: f74fa625-5dd2-4f3f-9033-31618b53219c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Factuurdatum
+
+		annotation SummarizationSetBy = User
+
+	column Betaaltermijn
+		dataType: int64
+		formatString: 0
+		lineageTag: 744b597f-888b-4ef8-878f-2be9a3c9c2e2
+		sourceLineageTag: 470b5957-2f71-4f07-bcbb-2c9c0150ab31
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Betaaltermijn
+
+		annotation SummarizationSetBy = User
+
+	column Vervaldatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: d0fdcf8b-88a1-4116-adfe-a77eef60e7a4
+		sourceLineageTag: 1774e674-b781-49d1-afb8-b4da6b9067ce
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Vervaldatum
+
+		annotation SummarizationSetBy = User
+
+	column Status
+		dataType: string
+		lineageTag: 84b0fa41-6a4d-4b70-b460-8f1231f68773
+		sourceLineageTag: f33e7753-afa3-4e5b-b91f-3f9084407c34
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = User
+
+	column Termijnstatus
+		dataType: string
+		lineageTag: 9d7af3c1-78c7-4b7f-8e12-ca29340b60b5
+		sourceLineageTag: 5751a646-41a7-445e-b0a1-56e8719c61e5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Termijnstatus
+
+		annotation SummarizationSetBy = User
+
+	column Debiteur
+		dataType: string
+		lineageTag: 16e41417-f7f5-4a48-bb64-fcd294b4e2dc
+		sourceLineageTag: ece2d150-8f51-466e-ac15-f9bdad03bb52
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Debiteur
+
+		annotation SummarizationSetBy = User
+
+	partition 'Verkoopfactuur termijnen' = entity
+		mode: directQuery
+		source
+			entityName: Verkoopfactuur termijnen
+			expressionSource: 'DirectQuery to AS - SSM'
+

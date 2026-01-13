@@ -1,0 +1,239 @@
+table 'Werkbonparagraaf WvB materiaal en overig'
+	lineageTag: 8bc3b2ba-521a-4208-b1ba-cb80a415a6d3
+	sourceLineageTag: 2bd687a4-5600-4286-bf04-70adde3711ae
+
+	column KostensoortKey
+		dataType: int64
+		formatString: 0
+		lineageTag: c5365907-399e-4dbc-b1d9-63c17f321509
+		sourceLineageTag: 47774abc-14e1-4d9c-a2dd-8e4c30eb4278
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: KostensoortKey
+
+		annotation SummarizationSetBy = User
+
+	column KostenplaatsKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 1ba8f3a7-725a-40b7-9b55-bfc2819e8b27
+		sourceLineageTag: 10076d93-473e-422d-af77-97f141827187
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: KostenplaatsKey
+
+		annotation SummarizationSetBy = User
+
+	column Code
+		dataType: string
+		lineageTag: a9ae3172-03c6-466d-a6f5-7c2e63b2f37a
+		sourceLineageTag: 2b6060f3-5525-43b5-8e6c-7cabd6335134
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Code
+
+		annotation SummarizationSetBy = User
+
+	column 'Behoefte aantal'
+		dataType: double
+		lineageTag: c8ebd933-4668-4236-bb0c-8aec9c47f644
+		sourceLineageTag: ddbcbe31-7abd-49cc-a864-ddfa447353dd
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Behoefte aantal
+
+		annotation SummarizationSetBy = User
+
+	column Plandatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: de0a1220-4813-415a-91ef-b64ffeb291e6
+		sourceLineageTag: 326b1600-41ca-4f60-a9da-dbcdad139619
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Plandatum
+
+		annotation SummarizationSetBy = User
+
+	column WerkbonparagraafKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 249201db-d2b5-450b-94d7-bc27279f5b1d
+		sourceLineageTag: 8d3078bb-11b6-480c-9d43-e04af51542b9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WerkbonparagraafKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Nettoprijs per stuk'
+		dataType: double
+		lineageTag: 9f7e94d8-46e1-4741-b98a-fcd262c7a0fd
+		sourceLineageTag: 4e7a6547-58aa-41bf-b20d-a570dacc4bb4
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Nettoprijs per stuk
+
+		annotation SummarizationSetBy = User
+
+	column 'Brutoverkoopprijs per stuk'
+		dataType: double
+		lineageTag: 0b69b838-ea9b-4196-8871-3ab67f0c7c23
+		sourceLineageTag: b5d47e8d-32e9-43eb-981b-3b66317674d6
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Brutoverkoopprijs per stuk
+
+		annotation SummarizationSetBy = User
+
+	column 'Verkoopprijs afspraak'
+		dataType: double
+		lineageTag: 8a33577d-4988-4d68-bd40-c6b0755e73ee
+		sourceLineageTag: 752db35a-6e41-4634-8b4f-f9dd0eaf6912
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Verkoopprijs afspraak
+
+		annotation SummarizationSetBy = User
+
+	column 'Tarief verrekenprijs per stuk'
+		dataType: double
+		lineageTag: 90f35617-5e00-4114-80f8-b97f9dc09f35
+		sourceLineageTag: 8d0ffb04-73ae-4817-85f4-8ce4867617ff
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Tarief verrekenprijs per stuk
+
+		annotation SummarizationSetBy = User
+
+	column 'Tarief brutoverkoopprijs per stuk'
+		dataType: double
+		lineageTag: 05e4b311-5582-47cd-b1b5-4111360990cc
+		sourceLineageTag: c06a87f2-c89f-490a-82a6-cfb98295f43d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Tarief brutoverkoopprijs per stuk
+
+		annotation SummarizationSetBy = User
+
+	column 'Handelsartikel verrekenprijs per stuk'
+		dataType: double
+		lineageTag: 11a8bd45-279c-48fa-bdc7-ec51cbcc4cf7
+		sourceLineageTag: 2a922211-fac8-4888-986d-5ecb31ba8c7b
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Handelsartikel verrekenprijs per stuk
+
+		annotation SummarizationSetBy = User
+
+	column 'Handelsartikel kostprijs per stuk'
+		dataType: double
+		lineageTag: d6e85a1b-a43c-4e17-8dee-d1a403672bcf
+		sourceLineageTag: c7bfdfb3-84a7-47be-813d-11ed000a7d33
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Handelsartikel kostprijs per stuk
+
+		annotation SummarizationSetBy = User
+
+	column 'Handelsartikel prijspeildatum'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: db25eb80-3271-4ea9-b5bb-647701556736
+		sourceLineageTag: d7a3c92d-2427-416a-9761-dd6e9c90be0c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Handelsartikel prijspeildatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Werkbon document status'
+		dataType: string
+		lineageTag: 801d9ab9-329d-43a3-b5db-978cd940798f
+		sourceLineageTag: 693ea4ba-cb2b-4d0c-a4df-85ccd42b56d4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Werkbon document status
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestelling document status'
+		dataType: string
+		lineageTag: 39e60840-c838-4c46-a214-155ea87905c6
+		sourceLineageTag: f31aa8c8-e07d-4de2-85d8-6efebefbc9db
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestelling document status
+
+		annotation SummarizationSetBy = User
+
+	column 'Pakbon document status'
+		dataType: string
+		lineageTag: 5cafe553-0ab3-444c-b163-8613d6a20833
+		sourceLineageTag: ffff8bc5-5825-4a3e-bbcb-c24c000bb837
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Pakbon document status
+
+		annotation SummarizationSetBy = User
+
+	column 'Inkoopfactuur document status'
+		dataType: string
+		lineageTag: d4d51dce-474d-41c1-851c-e89981676ee0
+		sourceLineageTag: 3bb36427-a7c4-4416-b541-b8f0e48cbdac
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Inkoopfactuur document status
+
+		annotation SummarizationSetBy = User
+
+	column TariefKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 364f8b67-7ab5-4eff-bdf9-091f8a19b303
+		sourceLineageTag: acc8ea69-cd81-4294-8b0a-bdfa5bb1f2cc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: TariefKey
+
+		annotation SummarizationSetBy = User
+
+	column HandelsartikelKey
+		dataType: int64
+		formatString: 0
+		lineageTag: f6ef7956-53a1-4569-a44c-22a39122d058
+		sourceLineageTag: d1d92904-ab14-48ab-9037-7b50cecd911d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: HandelsartikelKey
+
+		annotation SummarizationSetBy = User
+
+	column WerkvoorbereidingregelKey
+		dataType: int64
+		formatString: 0
+		lineageTag: f71e08e2-f0ed-48ca-9432-094e473c6f94
+		sourceLineageTag: a17a1a37-635e-4264-a07c-8c28bee559d8
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: WerkvoorbereidingregelKey
+
+		annotation SummarizationSetBy = User
+
+	column VerzoekregelKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 12b2bb4a-2298-463f-b289-c8be5bee3f89
+		sourceLineageTag: b48be3d0-bb09-4597-844e-3fd61e55c9e4
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: VerzoekregelKey
+
+		annotation SummarizationSetBy = User
+
+	partition 'Werkbonparagraaf WvB materiaal en overig' = entity
+		mode: directQuery
+		source
+			entityName: Werkbonparagraaf WvB materiaal en overig
+			expressionSource: 'DirectQuery to AS - SSM'
+

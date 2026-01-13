@@ -1,0 +1,345 @@
+table 'Project kosten en geboekte uren'
+	lineageTag: f6b8bbe6-1a57-4ee8-85c9-578daa32c3f7
+	sourceLineageTag: 5d3366f1-6f7d-4e67-a8bb-7aaa57fe71e7
+
+	column ProjectKey
+		dataType: int64
+		formatString: 0
+		lineageTag: ffa22958-416b-4cd5-947f-af025e13d9b5
+		sourceLineageTag: c86d47ac-4c9e-4aa3-b5fe-8d94af1806e0
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: ProjectKey
+
+		annotation SummarizationSetBy = User
+
+	column BestekparagraafKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 9c2ab114-1bc5-413b-b0b6-1be09ba948e4
+		sourceLineageTag: db7ee0ee-09ee-4584-bd67-92f04cf4e6da
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BestekparagraafKey
+
+		annotation SummarizationSetBy = User
+
+	column Aantal
+		dataType: double
+		lineageTag: a68d9fd5-6680-4a8f-8880-5338472d7ad7
+		sourceLineageTag: 2cb86e27-3414-40ca-8376-249d044201c0
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Aantal
+
+		annotation SummarizationSetBy = User
+
+	column Kostprijs
+		dataType: double
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		lineageTag: 7e52b483-906f-419d-bf71-1cc7d9ca7dca
+		sourceLineageTag: b45fdae3-f8ad-475b-9b80-3fb2d38bb45c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Kostprijs
+
+		annotation SummarizationSetBy = User
+
+	column Kostenbron
+		dataType: string
+		lineageTag: 222140e0-5470-41ab-a6f2-16d07886bbd6
+		sourceLineageTag: 1fad6600-1807-4655-a077-0ee0153817c9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Kostenbron
+
+		annotation SummarizationSetBy = User
+
+	column Kostenstatus
+		dataType: string
+		lineageTag: abca648f-bece-42fd-9750-fefd9560d82b
+		sourceLineageTag: db5fdc10-fe12-49c2-85bc-1f62357dcbd0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Kostenstatus
+
+		annotation SummarizationSetBy = User
+
+	column 'Pakbon Status'
+		dataType: string
+		lineageTag: 71fb0fea-2fc0-431b-9324-edccc5d0e564
+		sourceLineageTag: 148a5019-7c91-4b1a-b499-81eb289b318a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Pakbon Status
+
+		annotation SummarizationSetBy = User
+
+	column Factureerstatus
+		dataType: string
+		lineageTag: f89a772f-e7e1-4b1e-85ae-b0b14ec145b1
+		sourceLineageTag: d2a229a9-804a-4f54-af9d-5fb659227841
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Factureerstatus
+
+		annotation SummarizationSetBy = User
+
+	column Boekdatum
+		dataType: dateTime
+		isHidden
+		formatString: dd\-mm\-yyyy
+		lineageTag: 2e2ee51c-a94e-429b-98bc-48718a94598a
+		sourceLineageTag: 31fb9ac5-6eaf-4d2e-8c41-e9f6a4625a3a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Boekdatum
+
+		annotation SummarizationSetBy = User
+
+	column TaakKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 50d70457-0aea-45a5-8b4b-6a82bc14adb0
+		sourceLineageTag: 149e6cb1-17bc-46e3-96ac-e0dc7cc5ae5a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: TaakKey
+
+		annotation SummarizationSetBy = User
+
+	column KostensoortKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 30d42ac7-ac31-41a2-ba06-102ea08f670a
+		sourceLineageTag: a65f1049-6914-4ac8-878e-795a8767d234
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: KostensoortKey
+
+		annotation SummarizationSetBy = User
+
+	column KostenplaatsKey
+		dataType: int64
+		formatString: 0
+		lineageTag: e22184bf-0e90-4b72-843b-f21304989989
+		sourceLineageTag: d84e65e5-a560-41ae-aea4-3803e312d930
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: KostenplaatsKey
+
+		annotation SummarizationSetBy = User
+
+	column CrediteurRelatieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 91d671c1-8bd1-45c4-bde4-9af9f16fb0a6
+		sourceLineageTag: aaee4ee9-7899-4f8b-a0ea-aebd7f246ba5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CrediteurRelatieKey
+
+		annotation SummarizationSetBy = User
+
+	column Categorie
+		dataType: string
+		lineageTag: 70da6158-6761-4a09-9b65-55503284efbd
+		sourceLineageTag: 2fe9d25b-20f6-4cb0-a97f-43aec514ebbf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Categorie
+
+		annotation SummarizationSetBy = User
+
+	column Verrekenprijs
+		dataType: double
+		lineageTag: 1a429420-68db-4159-86cd-deae81f1971b
+		sourceLineageTag: dd8fc0b7-8de3-466e-b12d-3509f3f82bec
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Verrekenprijs
+
+		annotation SummarizationSetBy = User
+
+	column Eenheid
+		dataType: string
+		lineageTag: 4da202af-0d4e-46fe-bfa8-d1c028a058ff
+		sourceLineageTag: a58de08a-f359-4dec-8371-01dd8528bc3b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Eenheid
+
+		annotation SummarizationSetBy = User
+
+	column 'internationale code'
+		dataType: string
+		lineageTag: 4d0558b4-51f4-4502-a5fb-82b87a5686ff
+		sourceLineageTag: a6a0c555-827f-441e-9331-23535a8e1e39
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: internationale code
+
+		annotation SummarizationSetBy = User
+
+	column DocumentKey
+		dataType: int64
+		formatString: 0
+		lineageTag: bde03a5f-3886-4530-b5bb-0ebc0ff5e186
+		sourceLineageTag: 0d2f750f-8653-49d2-898a-23ab4e4c4120
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: DocumentKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Arbeidregel Ja/Nee'
+		dataType: string
+		lineageTag: b64ca39b-5f0e-49b0-93a2-6297ab6604d1
+		sourceLineageTag: 0d6a2412-ed66-4b05-b15a-141f67a56ef7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Arbeidregel Ja/Nee
+
+		annotation SummarizationSetBy = User
+
+	column 'Arbeid uitvoeringsdatum'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 6ed75c65-3920-4005-ae73-2aba0781ef2a
+		sourceLineageTag: 0a05066d-870c-41ce-b8be-ac0b1d631d2e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Arbeid uitvoeringsdatum
+
+		annotation SummarizationSetBy = User
+
+	column HandelsartikelKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 350ff103-b8f9-4d86-b075-fadd5138305e
+		sourceLineageTag: a8a90b20-07c3-49b6-aa07-dfab6e005460
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: HandelsartikelKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Via werkbon Ja/Nee'
+		dataType: string
+		lineageTag: 8ef46418-0353-40fd-80ce-06d55184d34a
+		sourceLineageTag: cc19ceb8-c4f1-4354-990c-d8215b3d553a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Via werkbon Ja/Nee
+
+		annotation SummarizationSetBy = User
+
+	column MedewerkerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: ebe91e25-fc2f-4e95-a9cb-89649b4d20a7
+		sourceLineageTag: 2b90a46c-4922-4ec5-8b42-4adf87599906
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MedewerkerKey
+
+		annotation SummarizationSetBy = User
+
+	column TariefKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 0483c86e-dd53-4ba7-9a5e-7fafe4a8ba3c
+		sourceLineageTag: 0b0ac89d-35cd-45a3-9ab3-abe4a94bf420
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: TariefKey
+
+		annotation SummarizationSetBy = User
+
+	column TariefsoortKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 38071158-4b9b-43b4-bf4a-1fe2c556a41e
+		sourceLineageTag: dc96ff08-365b-4aae-a077-eb21eb9e0d5a
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: TariefsoortKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Tariefsoort Code'
+		dataType: string
+		lineageTag: f8ba1844-6981-4942-8318-536bb29da6a3
+		sourceLineageTag: 0cba5a84-ed69-4c4b-bd20-2eeff0687950
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Tariefsoort Code
+
+		annotation SummarizationSetBy = User
+
+	column Tariefsoort
+		dataType: string
+		lineageTag: 85e71b43-329a-48a8-bfa6-b5a68f21a8f3
+		sourceLineageTag: ca1c2436-212e-4c1a-b214-4def55beeebb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Tariefsoort
+
+		annotation SummarizationSetBy = User
+
+	column 'Crediteur code'
+		dataType: string
+		lineageTag: 21fc6c1c-ae5d-4961-8231-42bd48a6001d
+		sourceLineageTag: d7128cfc-738d-4ed8-91f7-8fbf261e27ad
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Crediteur code
+
+		annotation SummarizationSetBy = User
+
+	column 'Crediteur omschrijving'
+		dataType: string
+		lineageTag: 326a6196-35eb-4599-9f25-a0f231a2421c
+		sourceLineageTag: e1d54d55-5429-424a-8eba-bbadeadae05f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Crediteur omschrijving
+
+		annotation SummarizationSetBy = User
+
+	column 'Document code (primair)'
+		dataType: string
+		lineageTag: b29202bd-6e73-4a70-afb9-a5d013dcd5f1
+		sourceLineageTag: a0dbd0a4-0316-421c-adcd-d770b6b39e62
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Document code (primair)
+
+		annotation SummarizationSetBy = User
+
+	column Regelomschrijving
+		dataType: string
+		lineageTag: 3db76359-7d41-4ece-8cc6-dddaade34e38
+		sourceLineageTag: 16fad537-b7f5-448d-9c70-07fb54b9b3d5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Regelomschrijving
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestelling document code'
+		dataType: string
+		lineageTag: 911f24c4-8f14-437a-a590-ded1fe0c8404
+		sourceLineageTag: bd961953-b439-447c-ba82-7e601319f912
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestelling document code
+
+		annotation SummarizationSetBy = User
+
+	partition 'Project kosten en geboekte uren' = entity
+		mode: directQuery
+		source
+			entityName: Project kosten en geboekte uren
+			expressionSource: 'DirectQuery to AS - SSM'
+

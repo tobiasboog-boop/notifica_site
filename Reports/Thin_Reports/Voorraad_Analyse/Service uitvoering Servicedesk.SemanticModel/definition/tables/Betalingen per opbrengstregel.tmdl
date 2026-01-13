@@ -1,0 +1,179 @@
+table 'Betalingen per opbrengstregel'
+	lineageTag: dcc3ec08-55b7-446d-9186-292229358ee6
+	sourceLineageTag: 2d5b305d-f329-46b7-8e97-68a56b36b73e
+
+	column VerkoopfactuurDocumentKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 5654ed4b-a985-442e-8427-f2856b738b07
+		sourceLineageTag: 6d894d2f-d07c-47a4-802c-425377fbe278
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: VerkoopfactuurDocumentKey
+
+		annotation SummarizationSetBy = User
+
+	column ProjectKey
+		dataType: int64
+		formatString: 0
+		lineageTag: ac8f64e5-802e-47f3-ba14-6da91e9ed95a
+		sourceLineageTag: 5774b684-37a3-44b2-9ade-2f1bed130f76
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ProjectKey
+
+		annotation SummarizationSetBy = User
+
+	column DispuutKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 01dc0845-cf0b-4c3c-a5e3-dc7089da7e41
+		sourceLineageTag: 77b6ba7e-ab1b-48d4-935b-3097e27c55f4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DispuutKey
+
+		annotation SummarizationSetBy = User
+
+	column OrderregelKey
+		dataType: string
+		lineageTag: 37a8f159-21b4-4baf-8a39-c1d5c5e295c5
+		sourceLineageTag: 0731bbd9-3036-4708-a7cb-8d0590fb5d6a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: OrderregelKey
+
+		annotation SummarizationSetBy = User
+
+	column Opbrengst
+		dataType: double
+		lineageTag: 2a5f8043-f396-4835-a373-7bb0087349a8
+		sourceLineageTag: e4ab68bf-38ba-4872-bb0b-e41a57c208b1
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Opbrengst
+
+		annotation SummarizationSetBy = User
+
+	column Debiteur
+		dataType: string
+		lineageTag: d34ed0cb-2655-490b-8fed-2fee2c880545
+		sourceLineageTag: 5dbec546-e045-419d-a065-7344e0718b59
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Debiteur
+
+		annotation SummarizationSetBy = User
+
+	column Factuurdatum
+		dataType: dateTime
+		formatString: dd\-mm\-yyyy
+		lineageTag: bb65a6b4-a070-41f6-8e52-20fd772414a4
+		sourceLineageTag: 3c1c3f65-0549-4032-9b41-2d40463d18c2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Factuurdatum
+
+		annotation SummarizationSetBy = User
+
+	column Betaaltermijn
+		dataType: int64
+		formatString: 0
+		lineageTag: 014fdad5-ff2b-4ded-9b83-d3d21bf26984
+		sourceLineageTag: c94595f5-b443-4305-bc41-de9763d82fb5
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Betaaltermijn
+
+		annotation SummarizationSetBy = User
+
+	column Vervaldatum
+		dataType: dateTime
+		formatString: dd\-mm\-yyyy
+		lineageTag: cefe116c-7306-427c-a4f8-a34fd4d26b4e
+		sourceLineageTag: 5404defa-7696-4da9-ad2a-10f554e16fb5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Vervaldatum
+
+		annotation SummarizationSetBy = User
+
+	column 'document status'
+		dataType: string
+		lineageTag: 74f4e2c4-6370-488f-8b7e-1ee340b985b2
+		sourceLineageTag: 7306e421-0675-4c94-836f-42557d288621
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: document status
+
+		annotation SummarizationSetBy = User
+
+	column 'Document code'
+		dataType: string
+		lineageTag: d3be9967-327a-410b-a79b-29c8c77c073f
+		sourceLineageTag: bda1ccdb-4e92-44be-84ed-ffa42afadb85
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Document code
+
+		annotation SummarizationSetBy = User
+
+	column BetaaldExclBTW
+		dataType: double
+		lineageTag: c72f9602-9e70-4ea3-a9be-53665055d026
+		sourceLineageTag: 51702dff-23b9-4072-842d-d261657d6c65
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: BetaaldExclBTW
+
+		annotation SummarizationSetBy = User
+
+	column OpenstaandExclBTW
+		dataType: double
+		lineageTag: 199fb115-4e25-4256-849e-3f88679c9db9
+		sourceLineageTag: e7e3081b-e3d2-428e-8e0c-54981aa021b2
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: OpenstaandExclBTW
+
+		annotation SummarizationSetBy = User
+
+	column DebiteurRelatieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 0d4d9dd6-6a13-40d6-8016-5b7113ad7e11
+		sourceLineageTag: 1b132cba-c781-4b26-b789-95cbcfba2219
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DebiteurRelatieKey
+
+		annotation SummarizationSetBy = User
+
+	column Betaaldatum
+		dataType: dateTime
+		formatString: dd\-mm\-yyyy
+		lineageTag: f72f309b-a3d6-4899-9444-0858867d5276
+		sourceLineageTag: 7732a74d-cd40-4a9d-9d09-be863960d2ff
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Betaaldatum
+
+		annotation SummarizationSetBy = User
+
+	column OpbrengstRegelKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 20c7733c-ae2f-4907-9ab4-aa6f880df265
+		sourceLineageTag: 5c71246b-6a23-4da6-a8aa-ee6be3944c22
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: OpbrengstRegelKey
+
+		annotation SummarizationSetBy = User
+
+	partition 'Betalingen per opbrengstregel' = entity
+		mode: directQuery
+		source
+			entityName: Betalingen per opbrengstregel
+			expressionSource: 'DirectQuery to AS - SSM'
+

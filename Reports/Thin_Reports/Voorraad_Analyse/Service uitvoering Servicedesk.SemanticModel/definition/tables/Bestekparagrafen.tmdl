@@ -1,0 +1,606 @@
+table Bestekparagrafen
+	lineageTag: 0710719a-13a9-4fe1-84e7-68f1659498b4
+	sourceLineageTag: 0d7961ca-1a98-432d-81e5-1345c4c3eee1
+
+	column ProjectKey
+		dataType: int64
+		formatString: 0
+		lineageTag: d60c5738-813c-4aef-b697-5985bb39460a
+		sourceLineageTag: b3512307-02a2-414e-916f-f7bb56b4affe
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ProjectKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestekparagraaf niveau'
+		dataType: int64
+		formatString: 0
+		lineageTag: ae1fb8da-dfbe-4fd6-bc99-2de3309c9a5e
+		sourceLineageTag: a702d3ff-92fb-467d-932d-aaa6653708d4
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Bestekparagraaf niveau
+
+		annotation SummarizationSetBy = User
+
+	column BestekParagraafKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: f9dd5052-c808-4849-b5ae-e44a5ca60179
+		sourceLineageTag: ca80159b-9e32-4f98-a7a6-6085f18f7e39
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BestekParagraafKey
+
+		annotation SummarizationSetBy = User
+
+	column InstallatieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: f1ea82bc-17bc-4f54-a2f2-3232870fae19
+		sourceLineageTag: e9ba0966-9909-4fff-a013-0de6d257d57c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: InstallatieKey
+
+		annotation SummarizationSetBy = User
+
+	column ObjectKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 664c5bb9-8d7c-4cac-b91e-39364721d5c4
+		sourceLineageTag: 11b34629-6bdb-4f6e-856a-2ff301816031
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: ObjectKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestek status'
+		dataType: string
+		lineageTag: b2c87295-7cc7-4142-a9e5-03494fbd7aa0
+		sourceLineageTag: ab8ddc5a-f6bf-4384-bb31-d90fcff43829
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestek status
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestekparagraaf niveau 1'
+		dataType: string
+		lineageTag: 8bddc5d2-f151-4bd3-97a4-306c7a6bfa49
+		sourceLineageTag: 74f2d46d-a30c-49b4-a138-d7e0cf30e80e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestekparagraaf niveau 1
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestekparagraaf niveau 2'
+		dataType: string
+		lineageTag: 0236c62a-94b5-463f-a8ee-bd8795e2bea8
+		sourceLineageTag: c87b4b65-2c67-4be0-a940-5f741bb699fc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestekparagraaf niveau 2
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestek periodiciteit'
+		dataType: string
+		lineageTag: a6619f4f-f96b-4e0f-9e24-f6204f92061d
+		sourceLineageTag: cd7f670d-254f-4eb2-993d-871c838f1a66
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestek periodiciteit
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestekparagraaf ingangsdatum'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: d3fe8822-6e98-400a-bbab-1124dc934adf
+		sourceLineageTag: e3a5b7b3-9fd0-49fe-bb1d-183656c5ff7f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestekparagraaf ingangsdatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestekparagraaf plandatum'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 5588b388-a5aa-4121-8042-88d395a49448
+		sourceLineageTag: 607cd539-6ab7-4964-9f0f-b5fc8604cfed
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestekparagraaf plandatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestekparagaaf ophoogmethode'
+		dataType: string
+		lineageTag: 5e59a5ce-b7d1-4768-97fc-54c927785825
+		sourceLineageTag: 8fc44af6-0f38-484d-8cf1-bf91b03e13d4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestekparagaaf ophoogmethode
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestekparagraaf type'
+		dataType: string
+		lineageTag: c80350ac-d199-4eaa-b11f-779a7a942b18
+		sourceLineageTag: 62497155-81f3-4c35-9e35-3f2478e522db
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestekparagraaf type
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestekparagraaf geblokkeerd Ja/Nee'
+		dataType: string
+		lineageTag: c0994371-972a-4424-92ef-63d045a68fea
+		sourceLineageTag: 5acb50b2-8a18-4aad-8ff1-2c8a027c88d5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestekparagraaf geblokkeerd Ja/Nee
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestekparagraaf einddatum'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 8938a8cd-6278-48a2-9e10-f274d67fdf8d
+		sourceLineageTag: 74d1cf8d-cfe2-4ddc-b449-29ebfe6f31a4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestekparagraaf einddatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatie code'
+		dataType: string
+		lineageTag: a635db25-94d9-420c-8905-98aabade27f7
+		sourceLineageTag: cf9b445e-6acb-4cfb-9e2d-98765f1f08b0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Installatie code
+
+		annotation SummarizationSetBy = User
+
+	column Installatie
+		dataType: string
+		lineageTag: 9fdba2bd-9689-48e7-8e80-7b0ff5cef7e4
+		sourceLineageTag: c2aa6c50-e811-423d-96b2-d550f4a23368
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Installatie
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatie status'
+		dataType: string
+		lineageTag: cb46b643-41ac-4ede-94bd-c5bd36068a98
+		sourceLineageTag: 3e4f9d7d-8439-4b98-82df-9348a581327f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Installatie status
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatie fase'
+		dataType: string
+		lineageTag: 844e4d89-ae6a-4a86-b793-45d2a69bfac1
+		sourceLineageTag: 6e865db5-bf10-49e6-8be1-db7199773364
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Installatie fase
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatie garantiedatum'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 80dd9749-0062-4dfe-820d-29ece330868b
+		sourceLineageTag: 620d0b4d-c61f-4318-a123-b803f7b5e41a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Installatie garantiedatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatie overnamedatum'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: f5295747-2bd3-4b36-b21d-f6937d76a72b
+		sourceLineageTag: e004dbda-b281-47f6-934e-ac81452e8577
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Installatie overnamedatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatie complexiteit'
+		dataType: string
+		lineageTag: dde2e8a1-8bc7-439b-b9c5-55ae95c49535
+		sourceLineageTag: e181d3ef-54c4-48d2-a75f-07bf7b329692
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Installatie complexiteit
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatie bouwjaar'
+		dataType: int64
+		formatString: 0
+		lineageTag: b610d37d-f69e-44b8-a0f2-f2582cb9a1dc
+		sourceLineageTag: a95b5ee0-c655-4eb8-8629-b1fc7e5d340f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Installatie bouwjaar
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatie leeftijd'
+		dataType: int64
+		formatString: 0
+		lineageTag: a0fd7308-d7aa-40de-8354-ab1c8180c267
+		sourceLineageTag: 5c96bef9-6749-4dd7-a368-a4260dd6c4de
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Installatie leeftijd
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatie Technische levensduur'
+		dataType: int64
+		formatString: 0
+		lineageTag: eade6ba4-b5f2-431e-b2bf-4585043bc072
+		sourceLineageTag: 71035eb1-e97f-4c90-879a-b57f08edaafd
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Installatie Technische levensduur
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatiesoort Code'
+		dataType: string
+		lineageTag: eeb555b7-ae0c-4140-affb-b747f12037ae
+		sourceLineageTag: 6070f4d3-1263-4df2-857c-565abe7dce7b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Installatiesoort Code
+
+		annotation SummarizationSetBy = User
+
+	column Installatiesoort
+		dataType: string
+		lineageTag: 384baefa-2afa-4452-ba51-473ddaf46a1f
+		sourceLineageTag: 8bf75fe8-8ccc-4c5c-b840-81c4b57c5cac
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Installatiesoort
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatiesoort Type'
+		dataType: string
+		lineageTag: 02e5858b-cc15-4b17-8b03-480cc3383ee4
+		sourceLineageTag: fc0c193d-d5ca-4295-b0af-19a3bc1d1ef6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Installatiesoort Type
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatie aanmaakdatum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: edf948ee-a286-4f7b-99c7-92c92801582d
+		sourceLineageTag: 0ba592d5-2ae7-4652-a0b1-b0a1f40796ba
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Installatie aanmaakdatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatie apparaat code'
+		dataType: string
+		lineageTag: 3cc0d2a9-eeb6-4b11-9872-08eb9c0628ba
+		sourceLineageTag: ab7ce31d-f65b-4a50-86e8-d1dc8b7969e2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Installatie apparaat code
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatie apparaat'
+		dataType: string
+		lineageTag: fc5f5f5b-00c9-4d0a-9a5d-8415eed65e07
+		sourceLineageTag: 22b96eb5-487b-4b07-9d52-48ebe3bd1db7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Installatie apparaat
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatie apparaat soort'
+		dataType: string
+		lineageTag: 7173a32c-3ee9-4ece-81da-68aa8a14481f
+		sourceLineageTag: c397338f-435c-45ac-8d1d-41bd05723b4d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Installatie apparaat soort
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatie geplaatst door'
+		dataType: string
+		lineageTag: a7c298b8-7f1c-4f27-903c-4eeddf75be7c
+		sourceLineageTag: 5702a054-7466-492d-a766-9857559e3ecc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Installatie geplaatst door
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatie merk'
+		dataType: string
+		lineageTag: cb5ec613-485d-48aa-97ab-56e8392fc304
+		sourceLineageTag: bdcec11f-8e85-4602-a629-9533989bef64
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Installatie merk
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatie merk code'
+		dataType: string
+		lineageTag: 4afc2eca-a15d-4fda-85c4-cc7f3893e8be
+		sourceLineageTag: 940ad3a1-e5e7-48d3-9a1b-0977ede368e5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Installatie merk code
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatie merktype'
+		dataType: string
+		lineageTag: e48bbe9d-b449-416b-b2ad-80db018a9620
+		sourceLineageTag: 81fe092a-b2f3-4c0b-8434-2c8bb58b57f3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Installatie merktype
+
+		annotation SummarizationSetBy = User
+
+	column 'Installatie merktype code'
+		dataType: string
+		lineageTag: bd2294d1-1c26-44f7-af0b-04d20c07a3a4
+		sourceLineageTag: e4f5d530-2773-488e-863f-1b2ee52a3d86
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Installatie merktype code
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestekparagraaf heeft einddatum Ja/Nee'
+		dataType: string
+		lineageTag: ee97bc88-74f4-405f-b9e1-96ee79a86a76
+		sourceLineageTag: 0c3e71dd-7177-4024-b9e3-af9f401c49ff
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestekparagraaf heeft einddatum Ja/Nee
+
+		annotation SummarizationSetBy = User
+
+	column 'Object op bestekparagraaf en installatie gelijk Ja/Nee'
+		dataType: string
+		lineageTag: 5b3995d8-a168-44ce-b778-87468b02ab78
+		sourceLineageTag: d33783c3-fcc5-4db0-bc72-e5493f0c3556
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Object op bestekparagraaf en installatie gelijk Ja/Nee
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestekparagraaf einddatumstatus'
+		dataType: string
+		lineageTag: 518e01c7-9337-447a-a231-1b044f30f580
+		sourceLineageTag: c8d3afb4-a781-4b78-b089-b41a803d2342
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestekparagraaf einddatumstatus
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestekparagraaf onderaannemerRelatieKey'
+		dataType: int64
+		formatString: 0
+		lineageTag: a5a2c78e-86e7-4001-8dae-17844afe560d
+		sourceLineageTag: 6b70c615-54d4-4ceb-be27-320411b07a05
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: Bestekparagraaf onderaannemerRelatieKey
+
+		annotation SummarizationSetBy = User
+
+	column Relatie
+		dataType: string
+		lineageTag: 881c4f90-bbe4-4e03-badb-68630a3d4547
+		sourceLineageTag: 34b92796-978b-4cfc-bcce-8b52cacd1a33
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Relatie
+
+		annotation SummarizationSetBy = User
+
+	column 'Eerste bestekparagraafKey hoofdproject'
+		dataType: string
+		lineageTag: f4c0aed2-9686-4138-a23a-26cc405957de
+		sourceLineageTag: 47a3543e-ec0b-4571-8cff-2ee15dfe837b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Eerste bestekparagraafKey hoofdproject
+
+		annotation SummarizationSetBy = User
+
+	column 'Eerste bestekparagraafKey project niveau 2'
+		dataType: string
+		lineageTag: f25f62c1-8985-4d2e-8cab-9c1d3c505e90
+		sourceLineageTag: 5edd9b68-5915-4710-8a48-4e8da4d278fc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Eerste bestekparagraafKey project niveau 2
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestekparagraaf niveau 3'
+		dataType: string
+		lineageTag: 03d6ed9c-b8e1-4aa4-ba89-462f70c01fe4
+		sourceLineageTag: cf74d61e-0754-4e78-ab5f-c5a699ded4f6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestekparagraaf niveau 3
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestekparagraaf niveau 4'
+		dataType: string
+		lineageTag: 336831f3-d9f4-4721-b2ff-12935f22e664
+		sourceLineageTag: 5391dbad-c39a-4f08-920a-127f901b1ea2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestekparagraaf niveau 4
+
+		annotation SummarizationSetBy = User
+
+	column BestekparagraafNiveau1Key
+		dataType: int64
+		formatString: 0
+		lineageTag: 4310f58c-8322-43d1-a965-7c2e8946dae2
+		sourceLineageTag: 021fa2b0-0e9f-479d-89cf-d067895030a5
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: BestekparagraafNiveau1Key
+
+		annotation SummarizationSetBy = User
+
+	column BestekparagraafNiveau2Key
+		dataType: int64
+		formatString: 0
+		lineageTag: 38264d5a-0237-4604-ad10-60bdc7abda3e
+		sourceLineageTag: 4e4bdc24-207b-424e-8750-ae4fb462e3c5
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: BestekparagraafNiveau2Key
+
+		annotation SummarizationSetBy = User
+
+	column BestekparagraafNiveau3Key
+		dataType: int64
+		formatString: 0
+		lineageTag: 26a9b52c-a347-4513-9423-a9a6018ebdc0
+		sourceLineageTag: 04d34386-e41f-47c2-90be-5d07d9e919b0
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: BestekparagraafNiveau3Key
+
+		annotation SummarizationSetBy = User
+
+	column BestekparagraafNiveau4Key
+		dataType: int64
+		formatString: 0
+		lineageTag: 4e80d7de-d632-411a-97da-02f2c4f64c96
+		sourceLineageTag: ccd0a9ad-9417-42af-8453-81085b1ec7e2
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: BestekparagraafNiveau4Key
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestekparagraaf kalendereenheid'
+		dataType: string
+		lineageTag: 9d7a8a61-8f6f-41cd-b8f0-62fc5c1db902
+		sourceLineageTag: 25c0a94a-3d8c-4328-b924-0f3d8278163a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestekparagraaf kalendereenheid
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestekparagraaf aantal kalendereenheden'
+		dataType: int64
+		formatString: 0
+		lineageTag: 78306bfa-cab3-4329-8517-574d3ae3684f
+		sourceLineageTag: eec8f99b-ea2d-4b75-8c5a-daec887b7045
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Bestekparagraaf aantal kalendereenheden
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestekparagraaf ophoogmethode'
+		dataType: string
+		lineageTag: 62ee708e-f189-4686-ab45-c64113ae058a
+		sourceLineageTag: f2e1a845-c71d-4a4c-a750-2ef61b80792c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestekparagraaf ophoogmethode
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestekparagraaf factureermoment'
+		dataType: string
+		lineageTag: 9f40955d-0038-4b38-914b-2702c33323cd
+		sourceLineageTag: d637d490-58b7-442d-9fe8-78f07a3d7465
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bestekparagraaf factureermoment
+
+		annotation SummarizationSetBy = User
+
+	column 'Bestekparagraaf percentage gereed'
+		dataType: int64
+		formatString: 0
+		lineageTag: e7031c81-dffa-4348-83f0-43096951db39
+		sourceLineageTag: 102e2e32-7032-4e1a-8b8e-706687de6c15
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Bestekparagraaf percentage gereed
+
+		annotation SummarizationSetBy = User
+
+	column 'KS CC Object' =
+			
+			LOOKUPVALUE(Objecten[Object], Objecten[ObjectKey], Bestekparagrafen[ObjectKey])
+		lineageTag: 35817fab-3a61-4f61-953f-086b925544cb
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Bestekparagraaf  Hierarchie'
+		lineageTag: 27bad303-1e03-46cb-8880-69eb7f0e9089
+		sourceLineageTag: b9da3411-dc8c-426c-a6e2-762108f8f128
+
+		level 'Bestekparagraaf niveau 1'
+			lineageTag: e0e8da57-65ce-4940-ab63-a2b702ca99f3
+			sourceLineageTag: 5282b5aa-414e-4434-913a-ee5134e455ec
+			column: 'Bestekparagraaf niveau 1'
+
+		level 'Bestekparagraaf niveau 2'
+			lineageTag: a1f20c9f-c358-46de-8a60-c00cd37f5091
+			sourceLineageTag: 1af5904f-25c5-4cfb-84c7-2340ed67cbc1
+			column: 'Bestekparagraaf niveau 2'
+
+	partition Bestekparagrafen = entity
+		mode: directQuery
+		source
+			entityName: Bestekparagrafen
+			expressionSource: 'DirectQuery to AS - SSM'
+

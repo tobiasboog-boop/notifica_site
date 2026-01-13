@@ -1,0 +1,1055 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "projecten.status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Projecten",
+			          "ConceptualProperty": "Status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Status": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "projecten.soort": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Projecten",
+			          "ConceptualProperty": "Soort"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Soort": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "werkbonnen.hoofdwerkbon_documentstatus": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Werkbonnen",
+			          "ConceptualProperty": "Hoofdwerkbon Documentstatus"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Hoofdwerkbon documentstatus": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Status": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "werkbonnen.hoofdwerkbon_administratieve_fase": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Werkbonnen",
+			          "ConceptualProperty": "Hoofdwerkbon administratieve fase"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Administratieve fase": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "werkbonnen.ks_getal_werkbon": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Werkbonnen",
+			          "ConceptualProperty": "KS Getal werkbon"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Werkbonnummer": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_ftf_gemiddelde": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS 5 FTF gemiddelde"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "FTF": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_ftf_is_0": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS 5 FTF is 0%"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "FTF = 0%": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_ftf_is_100": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS 5 FTF is 100%"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "FTF = 100%": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_hoofdwerkbon_laatste_uitvoerdatum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS 2 Hoofdwerkbon laatste uitvoerdatum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Uitvoerdatum": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Laatste uitvoerdatum": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Hoofdwerkbon laatste uitvoerdatum": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_aantal_werkbonnen_binnen_tijd": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS 4 Aantal werkbonnen binnen tijd"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Aantal werkbonnen binnen tijd": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_aantal_werkbonnen_op_tijd_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS 4 Aantal werkbonnen op tijd %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Aantal werkbonnen op tijd %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_aantal_werkbonnen_financieel_gereed_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS 4 Aantal werkbonnen financieel gereed %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Aantal werkbonnen financieel gereed %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_aantal_werkbonnen_financieel_gereed": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS 1 Aantal werkbonnen financieel gereed"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Aantal werkbonnen financieel gereed": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_gemiddelde_doorlooptijd_dagen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS KPI 1 DLT aanmaak - gereedmelding (dagen)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Doorlooptijd (dagen)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_eerste_melddatum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS 2.2 Eerste melddatum WB"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Eerste melddatum": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_begindatum_en_tijd_werken": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS 2 Begindatum en tijd werken"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Begindatum/tijd werken": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_einddatum_en_tijd_werken": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS 2 Einddatum en tijd werken WB (FOUT)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Einddatum/tijd werken": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_gemiddelde_responstijd_melddatum_tot_start_arbeid_uren": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS KPI 1 Gemiddelde responstijd melddatum tot start arbeid (uren)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Responstijd (uren)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "werkbonparagrafen.hoofdwerkbon_aanmaakdatum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Werkbonparagrafen",
+			          "ConceptualProperty": "Hoofdwerkbon aanmaakdatum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Aanmaakdatum": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "werkbonparagrafen.hoofdwerkbon_gereedmelddatum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Werkbonparagrafen",
+			          "ConceptualProperty": "Hoofdwerkbon gereedmelddatum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Gereedmelddatum": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "werkbonparagrafen.hoofdwerkbon_uitvoeringstatus": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Werkbonparagrafen",
+			          "ConceptualProperty": "Hoofdwerkbon uitvoeringstatus"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Uitvoeringstatus": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "werkbonparagrafen.hoofdwerkbon_boekdatum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Werkbonparagrafen",
+			          "ConceptualProperty": "Hoofdwerkbon boekdatum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Boekdatum": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules.aantal_werkbonparagrafen_onderhoud": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules",
+			          "ConceptualProperty": "Aantal werkbonparagrafen onderhoud"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# WBP onderhoud": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules.klantnummerdwh": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules",
+			          "ConceptualProperty": "KlantnummerDWH"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Klantnummer in database": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "rubrieken.rubriek": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Rubrieken",
+			          "ConceptualProperty": "Rubriek"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Rubriek": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "norm_productiviteit_monteurs.value": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Norm productiviteit monteurs",
+			          "ConceptualProperty": "Value"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "geboekte_uren.projectgerelateerd": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Geboekte Uren",
+			          "ConceptualProperty": "projectgerelateerd"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "taken.type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Taken",
+			          "ConceptualProperty": "type"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "methode_budgetverzoek_bewaking.minimale_orderwaarde": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Methode budgetverzoek bewaking",
+			          "ConceptualProperty": "minimale orderwaarde"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "werkbonnen.ks_naam_werkbon": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Werkbonnen",
+			          "ConceptualProperty": "KS Naam werkbon"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Werkbonnaam": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "werkbonnen.afspraakdatum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Werkbonnen",
+			          "ConceptualProperty": "AfspraakDatum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Afspraakdatum": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "werkbonnen.opleverdatum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Werkbonnen",
+			          "ConceptualProperty": "Opleverdatum"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "werkbonparagrafen.ks_cc_uitvoeringsmaand_werkbon": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Werkbonparagrafen",
+			          "ConceptualProperty": "KS CC Uitvoeringsmaand Werkbon"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Uitvoeringsmaand Werkbon": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "werkbonparagrafen.ks_cc_uitvoeringsjaar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Werkbonparagrafen",
+			          "ConceptualProperty": "KS CC Uitvoeringsjaar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Uitvoeringsjaar": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "werkbonparagrafen.type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Werkbonparagrafen",
+			          "ConceptualProperty": "type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Type WB": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_kpi_1_gemiddelde_doorlooptijd_dagen2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS KPI 1 Gemiddelde doorlooptijd (dagen)-2"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "formules_klantspecifiek.ks_1_aantal_unieke_hoofdbon_uitgevoerd": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS 1.1 Aantal unieke Hoofdbon uitgevoerd"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Aantal unieke Hoofdbon uitgevoerd": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_1_aantal_unieke_werkbonnen_uitgevoerd": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS 1 aantal unieke Werkbonnen uitgevoerd"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Aantal unieke Werkbonnen uitgevoerd": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_kpi_1_aantal_ftf_behaald": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS KPI 1 Aantal FTF behaald"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI Aantal FTF behaald": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_kpi_1_ftf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS KPI 1 FTF%"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI 1 FTF%": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_kpi_1_aantal_responsetijd_behaald": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS KPI 1 Aantal Responsetijd behaald"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI 1 Aantal Responsetijd behaald": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_1_aantal_unieke_besteksparagrafen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS 1 Aantal unieke besteksparagrafen"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Aantal unieke besteksparagrafen": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_1_aantal_unieke_objecten_op_besteksparagraaf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS 1 Aantal unieke objecten op besteksparagraaf"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Aantal unieke objecten op besteksparagraaf": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_1_aantal_unieke_installaties": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "Aantal unieke installaties OUD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Aantal unieke installaties": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "werkbonparagrafen.uitgevoerd_op": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Werkbonparagrafen",
+			          "ConceptualProperty": "Uitgevoerd op"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "formules_klantspecifiek.ks_kpi_1_7_dlt_eerste_aanmaakdatum_en_eerste_arbeidsdatum_dagen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS Eerste aanmaakdatum en eerste arbeidsdatum (dagen) OUD"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "formules_klantspecifiek.ks_kpi_1_8_dlt_eerste_aanmaakdatum_en_laatste_arbeidsdatum_dagen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS KPI 1.8 DLT eerste aanmaakdatum en laatste arbeidsdatum (dagen)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DLT eerste aanmaakdatum en laatste arbeidsdatum (dagen)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_kpi_1_6_dlt_laatste_uitvoerdatum_en_gereedmelding_dagen_adj": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS DLT laatste uitvoerdatum en gereedmelding (dagen) OUD-2"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "formules_klantspecifiek.ks_1_aantal_unieke_hoofdwerkbonnen_wb": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS 1 aantal unieke Hoofdwerkbonnen WB"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "formules_klantspecifiek.ks_kpi_1_7_dlt_aanmaakdatum__eerste_arbeidsdatum_dagen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS KPI 1.7 DLT aanmaakdatum - eerste arbeidsdatum (dagen)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DLT aanmaakdatum - eerste arbeidsdatum (dagen)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_kpi_1_5_dlt_eerste__laatste_arbeidsdatum_dagen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS KPI 1.5 DLT eerste - laatste arbeidsdatum (dagen)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DLT eerste - laatste arbeidsdatum (dagen)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_kpi_1_6_dlt_laatste_uitvoerdatum_en_gereedmelding_dagen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS KPI 1.6 DLT laatste uitvoerdatum en gereedmelding (dagen)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DLT laatste uitvoerdatum en gereedmelding (dagen)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "formules_klantspecifiek.ks_kpi_1_9_dlt_aanmaakdatum_en_gereedmelding_dagen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Formules klantspecifiek",
+			          "ConceptualProperty": "KS KPI 1.9 DLT aanmaakdatum en gereedmelding (dagen)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DLT aanmaakdatum en gereedmelding (dagen)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "projecten.ks_cc_opdractgever": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Projecten",
+			          "ConceptualProperty": "KS CC Opdractgever"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Opdrachtgever": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

@@ -1,0 +1,2426 @@
+table 'Formules klantspecifiek'
+	lineageTag: 47c81cf2-772f-4f6d-be36-3359b67288ea
+	sourceLineageTag: 476e0005-a6a9-402a-bff5-5fdc13a8405c
+
+	measure 'KS voorbeeld measure' = EXTERNALMEASURE("KS voorbeeld measure", INTEGER, "DirectQuery to AS - SSM")
+		displayFolder: 3. Klant Specifieke objecten
+		lineageTag: ccecef8e-4e40-4123-99a3-a4d4a67dd697
+		sourceLineageTag: 4cf179bd-71e8-4fbf-83b8-a5b61ae00d53
+		dataCategory: Uncategorized
+
+	measure 'KS 1.1 aantal Hoofdwerkbonnen uitgevoerd' = CALCULATE(COUNT(Werkbonnen[Hoofdwerkbon]), Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd")
+		formatString: 0
+		lineageTag: 8813d080-df32-48ed-9abc-7e1ec7e5c4fb
+
+		changedProperty = Name
+
+		changedProperty = DisplayFolder
+
+		changedProperty = FormatString
+
+	measure 'KS 4 Aantal werkbonnen binnen tijd' =
+			
+			CALCULATE (
+			    DISTINCTCOUNT ( Werkbonnen[Hoofdwerkbon]),
+			    FILTER ( Werkbonnen, [KS 2 Hoofdwerkbon laatste uitvoerdatum] <= Werkbonnen[Opleverdatum])
+			)
+		formatString: 0
+		lineageTag: 7bf6a8d1-7e29-4e78-8134-f9df06a8d1c7
+
+		changedProperty = DisplayFolder
+
+		changedProperty = Name
+
+	measure 'KS 1 Aantal werkbonnen financieel gereed' =
+			
+			CALCULATE (
+			    DISTINCTCOUNT ( Werkbonnen[Hoofdwerkbon]),
+			        FILTER ( Werkbonnen, [KS 2 Datum gereedmelding historisch] >= [KS 2 Hoofdwerkbon laatste uitvoerdatum])
+			)
+		formatString: #,0
+		lineageTag: 91479c54-6c04-4de1-bddc-3b2a6ec68395
+
+		changedProperty = DisplayFolder
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS 4 Aantal werkbonnen financieel gereed %' =
+			
+			divide(
+			    [KS 1 Aantal werkbonnen financieel gereed],
+			    [Aantal werkbonnen]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 7e7d6825-f74d-4375-a980-27683e961b9a
+
+		changedProperty = DisplayFolder
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS 4 Aantal werkbonnen op tijd %' =
+			
+			divide(
+			    [KS 4 Aantal werkbonnen binnen tijd],
+			    [Aantal werkbonnen]
+			    )
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 156913ac-db56-4408-9011-d605a10a0dab
+
+		changedProperty = DisplayFolder
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS 2 afspraakdatum' =
+			CALCULATE(
+			    MAX(Werkbonnen[AfspraakDatum])
+			    ,ALL(Werkbonnen[AfspraakDatum])
+			)
+		formatString: General Date
+		lineageTag: df559e29-5993-4bd9-9d46-ee41939be7ae
+
+		changedProperty = DisplayFolder
+
+		changedProperty = Name
+
+	measure 'KS 2 Begindatum en tijd werken' = ```
+			
+			
+			VAR Geboekte_uren_per_werkbon = 
+			ADDCOLUMNS(
+			SUMMARIZE(
+			    FILTER('Werkbonparagraaf kosten en geboekte uren','Werkbonparagraaf kosten en geboekte uren'[Arbeidregel Ja/Nee] = "Ja"),    
+			    Werkbonnen[HoofdwerkbonDocumentKey],
+			    Taken[type]),   
+			    "Begindatum en tijd", IF(HASONEVALUE(Werkbonnen[HoofdwerkbonDocumentKey]),CALCULATE(MIN('Werkbonparagraaf kosten en geboekte uren'[Arbeid begintijd]),Taken[type] = "Werk" || Taken[type] = "Reizen",REMOVEFILTERS(Werkbonnen[Werkbon niveau omschrijving])),BLANK())
+			    )
+			
+			 RETURN 
+			 
+			 
+			 CALCULATE(MINX(Geboekte_uren_per_werkbon,[Begindatum en tijd]))
+			 
+			
+			```
+		formatString: General Date
+		lineageTag: 58a7486d-7b65-4aa2-91cd-532946566ebd
+
+		changedProperty = Name
+
+		changedProperty = DisplayFolder
+
+	measure 'KS 2 Datum gereedmelding historisch' =
+			calculate(
+			    max(Werkbonparagrafen[Hoofdwerkbon gereedmelddatum]),
+			    filter('Werkbonparagraaf opbrengsten','Werkbonparagraaf opbrengsten'[document status]="Historisch"
+			    )
+			)
+		formatString: General Date
+		lineageTag: c7ef1d68-ed6b-4a19-83db-6d665738a33d
+
+		changedProperty = DisplayFolder
+
+		changedProperty = Name
+
+	measure 'KS 2.2 Eerste melddatum WB' = ```
+			
+			
+			VAR Y = 
+			
+			SUMMARIZE(
+			    Werkbonnen,    
+			    Werkbonnen[HoofdwerkbonDocumentKey],   
+			    "Eerste melddatum", IF(HASONEVALUE(Werkbonnen[HoofdwerkbonDocumentKey]),CALCULATE(MIN(Werkbonnen[MeldDatumTijd]),Taken[type] = "Werk"),BLANK())
+			    )
+			
+			
+			
+			 RETURN
+			IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), CALCULATE(MINX(Y,[Eerste melddatum])), BLANK()
+			)
+			```
+		formatString: General Date
+		lineageTag: aa942133-6cb4-4a4d-ae69-3d1d93cf12a8
+
+		changedProperty = Name
+
+		changedProperty = DisplayFolder
+
+	measure 'KS KPI 1 DLT aanmaak - gereedmelding (dagen)' = ```
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonparagrafen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			            CALCULATE(
+			                NETWORKDAYS(
+			                    MAX( Werkbonparagrafen[Hoofdwerkbon aanmaakdatum] ),
+			                    MAX( Werkbonparagrafen[Hoofdwerkbon gereedmelddatum]),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			            )
+			        )
+			VAR Result = AVERAGEX(Y, [Doorlooptijd] )
+			
+			RETURN
+			IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), Result, BLANK()
+			)
+			
+			```
+		lineageTag: b94d0542-33db-46eb-a220-e7e406e98c64
+
+		changedProperty = Name
+
+		changedProperty = DisplayFolder
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KS 2 datum gereedmelding' =
+			
+			Calculate(max(Werkbonparagrafen[Hoofdwerkbon gereedmelddatum]),
+			filter('Werkbonparagraaf opbrengsten','Werkbonparagraaf opbrengsten'[document status]="Historisch")
+			)
+		formatString: General Date
+		lineageTag: 18be5670-77f2-4834-b9a6-0ebc6407096e
+
+		changedProperty = DisplayFolder
+
+		changedProperty = Name
+
+	measure 'KS 2 Einddatum en tijd werken WB (FOUT)' = ```
+			
+			
+			VAR Geboekte_uren_per_werkbon = 
+			ADDCOLUMNS(
+			SUMMARIZE(
+			    FILTER('Werkbonparagraaf kosten en geboekte uren','Werkbonparagraaf kosten en geboekte uren'[Arbeidregel Ja/Nee] = "Ja"),    
+			    Werkbonnen[HoofdwerkbonDocumentKey],
+			    Taken[type]),   
+			    "Einddatum en tijd", IF(HASONEVALUE(Werkbonnen[HoofdwerkbonDocumentKey]),CALCULATE(MAX('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd]),Taken[type] = "Werk"|| Taken[type] = "Reizen",REMOVEFILTERS(Werkbonnen[Werkbon niveau omschrijving])),BLANK())
+			    )
+			
+			 RETURN 
+			 IF(ISINSCOPE(Werkbonnen[HoofdwerkbonDocumentKey]), CALCULATE(MAXX(Geboekte_uren_per_werkbon,[Einddatum en tijd])),
+			 BLANK()
+			 )
+			 //CALCULATE(MAXX(Geboekte_uren_per_werkbon,[Einddatum en tijd]))
+			
+			```
+		formatString: General Date
+		lineageTag: a16ec6ad-852b-40fd-b37f-035a748e4667
+
+		changedProperty = Name
+
+		changedProperty = DisplayFolder
+
+	measure 'KS KPI 1 Gemiddelde responstijd melddatum tot start arbeid (uren)' = ```
+			
+			
+			VAR Y = 
+			ADDCOLUMNS(
+			SUMMARIZE(
+			    FILTER('Werkbonparagraaf kosten en geboekte uren','Werkbonparagraaf kosten en geboekte uren'[Arbeidregel Ja/Nee] = "Ja"),    
+			    Werkbonnen[HoofdwerkbonDocumentKey],
+			    Taken[type]),   
+			    "X",CALCULATE(DIVIDE(DATEDIFF(MIN(Werkbonnen[MeldDatumTijd]),MIN('Werkbonparagraaf kosten en geboekte uren'[Arbeid begintijd]),MINUTE),60),Taken[type] = "Werk",
+			    REMOVEFILTERS(Werkbonnen[Werkbon niveau omschrijving]))
+			      )
+			
+			
+			RETURN 
+			IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), 
+			AVERAGEX(Y,[X]),
+			BLANK()
+			)
+			    
+			```
+		lineageTag: 518dbe4e-92e1-4abf-bc4c-fa6019f79d1a
+
+		changedProperty = Name
+
+		changedProperty = DisplayFolder
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KS 2 Hoofdwerkbon laatste uitvoerdatum' = ```
+			
+			
+			VAR Laatste_uitvoerdatum_per_hoofdwerkbon = 
+			ADDCOLUMNS(
+			    SUMMARIZE(Werkbonparagrafen,
+			    Werkbonnen[HoofdwerkbonDocumentKey]
+			    ), 
+			    "Hoofdwerkbon laatste uitvoerdatum",IF(HASONEVALUE(Werkbonnen[HoofdwerkbonDocumentKey]),CALCULATE(MAX(Werkbonparagrafen[Uitgevoerd op]),Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus]= "Uitgevoerd",REMOVEFILTERS(Werkbonnen[Werkbon niveau omschrijving])),BLANK())
+			)
+			RETURN
+			MINX(Laatste_uitvoerdatum_per_hoofdwerkbon,[Hoofdwerkbon laatste uitvoerdatum])
+			```
+		formatString: General Date
+		lineageTag: 75cf800b-e9ba-4d04-8c3a-91782ce9d105
+
+		changedProperty = Name
+
+		changedProperty = DisplayFolder
+
+	measure 'KS arbeid uitvoer' = ```
+			
+			VAR ArbeidUitvoer =
+			summarize('Werkbonparagraaf kosten en geboekte uren','Werkbonparagraaf kosten en geboekte uren'[Arbeid uitvoeringsdatum])
+			VAR Result =
+			sumx(ArbeidUitvoer,1)
+			RETURN
+			Result
+			
+			```
+		formatString: 0
+		lineageTag: 48aa7d7b-7e48-4303-8760-e37dce05fe11
+
+		changedProperty = DisplayFolder
+
+		changedProperty = Name
+
+	measure 'KS 1.1 Aantal unieke Hoofdbon uitgevoerd' = ```
+			
+			CALCULATE(DISTINCTCOUNT(Werkbonparagrafen[Hoofdwerkbon]), 
+			Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus]= "Uitgevoerd" ||
+			Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus]= "In uitvoering"
+			)
+			
+			```
+		formatString: #,0
+		lineageTag: 9e9d7622-81df-4c04-a663-58ed40059522
+
+		changedProperty = DisplayFolder
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS 3 Aantal dagen per hoofdwerkbon' = ```
+			
+			countrows(
+			    CALCULATETABLE(
+			        SUMMARIZE(
+			            'Werkbonparagraaf kosten en geboekte uren',
+			            'Werkbonparagraaf kosten en geboekte uren'[Arbeid uitvoeringsdatum]
+			            ,
+			            Werkbonnen[Hoofdwerkbon])
+			, 
+			'Werkbonparagraaf kosten en geboekte uren'[Arbeid uitvoeringsdatum] <> BLANK()
+			)
+			)
+			```
+		formatString: 0
+		lineageTag: c5d637b4-fc07-4bbb-9b54-feca9941fd1c
+
+		changedProperty = DisplayFolder
+
+		changedProperty = Name
+
+	measure 'KS 3 aantal geplande uren' =
+			CALCULATE(
+			    SUM( 'Geplande en contracturen medewerkers'[Aantal Uur] ),
+			    USERELATIONSHIP( 'Geplande en contracturen medewerkers'[WerkbonParagraafKey], Werkbonparagrafen[WerkbonparagraafKey] )
+			)
+		lineageTag: 9168958b-b664-4100-bcb5-f02006e93f7e
+
+		changedProperty = Name
+
+		changedProperty = DisplayFolder
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KS 3 aantal unieke geplande dagen' =
+			CALCULATE(
+			    DISTINCTCOUNT( 'Geplande en contracturen medewerkers'[Datum] ),
+			    USERELATIONSHIP( 'Geplande en contracturen medewerkers'[WerkbonParagraafKey], Werkbonparagrafen[WerkbonparagraafKey] )
+			)
+		formatString: 0
+		lineageTag: 84393d40-e65f-4180-b906-c085a7d934ce
+
+		changedProperty = Name
+
+		changedProperty = DisplayFolder
+
+	measure 'KS 5 FTF' = if([KS 3 aantal geplande uren]=BLANK(),blank(),if([KS 3 aantal unieke geplande dagen]>1,FALSE,TRUE))
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c28804ae-871a-48ee-b811-f3cea9696145
+
+		changedProperty = DisplayFolder
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS 5 FTF INT' = int([KS 5 FTF])
+		formatString: 0%;-0%;0%
+		lineageTag: b09ad252-aaca-4faa-9b80-b2d5eb2d766c
+
+		changedProperty = DisplayFolder
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS 5 FTF gemiddelde' =
+			
+			AVERAGEX(
+				KEEPFILTERS(VALUES('Werkbonnen'[Hoofdwerkbon])),
+				CALCULATE([KS 5 FTF INT])
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: b5ddd472-17e5-4106-85c2-1716eab1b684
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "AveragePerCategory"
+				}
+
+		changedProperty = FormatString
+
+		changedProperty = Name
+
+		changedProperty = DisplayFolder
+
+	measure 'KS 5 FTF is 0%' =
+			
+			CALCULATE (
+			    [Aantal hoofdwerkbonnen],
+			    FILTER (
+			        ALL ( Werkbonnen[Hoofdwerkbon] ),
+			        [KS 5 FTF INT] = 0
+			    )
+			)
+		formatString: #,0
+		lineageTag: 0f2d65b1-26ea-4a49-a472-89ab7e9c5c77
+
+		changedProperty = DisplayFolder
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS 5 FTF is 100%' =
+			
+			CALCULATE (
+			    [Aantal hoofdwerkbonnen],
+			    FILTER (
+			        ALL ( Werkbonnen[Hoofdwerkbon] ),
+			        [KS 5 FTF INT] = 1
+			    )
+			)
+		formatString: #,0
+		lineageTag: c9f60203-3f51-42f0-bb98-51c3d64f2a47
+
+		changedProperty = DisplayFolder
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS 1 aantal unieke Werkbonnen uitgevoerd' =
+			
+			CALCULATE(DISTINCTCOUNT(Werkbonparagrafen[WerkbonDocumentKey]), Werkbonparagrafen[Werkbon uitvoering status]="Uitgevoerd" ||
+			Werkbonparagrafen[Werkbon uitvoering status]="In uitvoering")
+		formatString: #,0
+		lineageTag: 8e452e03-e923-4936-aea6-52c759bb5d95
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS 7 Onderhoudsgraad' = DIVIDE([KS 1 aantal Werkbonnen uitgevoerd], [KS 1 aantal Werkbonnen uitgevoerd-1])
+		formatString: 0%;-0%;0%
+		lineageTag: 5a3b61a5-4d28-4c91-b30a-6ee1791800a7
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS 1 Aantal unieke objecten op besteksparagraaf' =
+			
+			CALCULATE(DISTINCTCOUNT(Bestekparagrafen[ObjectKey]), Objecten[Object status]="Actueel")
+		formatString: #,0
+		lineageTag: 277640de-3928-4d2c-bbe4-17bfaaecba02
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'Aantal unieke installaties OUD' =
+			
+			CALCULATE(DISTINCTCOUNT(Bestekparagrafen[InstallatieKey]), Installaties[InstallatieStatus]="Actueel")
+		formatString: #,0
+		lineageTag: f9249474-bcd6-4ef4-98c2-fb26a95d29fb
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS 1 aantal unieke objecten vanuit installaties' =
+			
+			DISTINCTCOUNT(Installaties[ObjectKey])
+		formatString: 0
+		lineageTag: 9809b421-c792-4a35-9720-26ecc708f2ac
+
+		changedProperty = Name
+
+	measure 'KS 1 Aantal unieke besteksparagrafen' =
+			
+			DISTINCTCOUNT(Bestekparagrafen[Bestekparagraaf niveau 1])
+		formatString: #,0
+		lineageTag: 95be4edd-4d13-403b-bd03-ea9b198bbd2b
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'Aantal Hoofdbon (fout)' =
+			
+			VAR Hoofdbon =
+			summarize(Werkbonnen,Werkbonnen[Hoofdwerkbon])
+			VAR Result =
+			sumx(Hoofdbon,1)
+			RETURN
+			Result
+		formatString: 0
+		lineageTag: 195d5a6f-461c-4f39-8617-6868334a7787
+
+		changedProperty = Name
+
+	measure 'KS 1 aantal Werkbonnen (fout)' = COUNTROWS(Werkbonnen)
+		formatString: 0
+		lineageTag: 7ee7edd2-538a-4f9a-9024-1b3d994f8757
+
+		changedProperty = Name
+
+	measure 'KS 2 Eerste arbeidsdatum (oud)' = ```
+			
+			
+			VAR Geboekte_uren_per_werkbon = 
+			
+			SUMMARIZE
+			(Werkbonnen,
+			//('Werkbonparagraaf kosten en geboekte uren',
+			
+			//'Werkbonparagraaf kosten en geboekte uren'[WerkbonparagraafKey],   
+			Werkbonnen[HoofdwerkbonDocumentKey],
+			
+			"Eerste arbeidsdatum", 
+			IF(HASONEVALUE('Werkbonparagraaf kosten en geboekte uren'[WerkbonparagraafKey]),
+			CALCULATE(MIN('Werkbonparagraaf kosten en geboekte uren'[Arbeid begintijd]), 'Werkbonparagraaf kosten en geboekte uren'[Arbeidregel Ja/Nee] = "Ja"),
+			BLANK())
+			    )
+			
+			 RETURN 
+			
+			 CALCULATE(MINX(Geboekte_uren_per_werkbon,[Eerste arbeidsdatum]))
+			```
+		formatString: General Date
+		lineageTag: ddde9fe4-f341-4cdf-950a-d5b0afb5191f
+
+		changedProperty = Name
+
+	measure 'KS 2 Eerste arbeidsdatum WBP (oud)' = ```
+			
+			VAR X = 
+			    SUMMARIZE(
+			        'Werkbonparagraaf kosten en geboekte uren',
+			        'Werkbonparagraaf kosten en geboekte uren'[KS CC Besteksparagraaf],
+			        "Eerste arbeidsdatum", 
+			        IF(
+			            HASONEVALUE('Werkbonparagraaf kosten en geboekte uren'[KS CC Besteksparagraaf]),
+			            CALCULATE(
+			                MIN('Werkbonparagraaf kosten en geboekte uren'[Arbeid begintijd]), 
+			                'Werkbonparagraaf kosten en geboekte uren'[Arbeidregel Ja/Nee] = "Ja"
+			            ),
+			            BLANK()
+			        )
+			    )
+			
+			RETURN 
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			    CALCULATE(MINX(X, [Eerste arbeidsdatum])),
+			    BLANK()
+			)
+			```
+		formatString: General Date
+		lineageTag: 17164b1c-66c3-499f-aecc-de0ba4e3940e
+
+		changedProperty = Name
+
+	measure 'KS 2 TEST' = ```
+			
+			
+			VAR X = 
+			    SUMMARIZE(
+			        Werkbonnen,
+			        Werkbonnen[Hoofdwerkbon],
+			        "Y", 
+			        IF(
+			            HASONEVALUE(Werkbonnen[HoofdwerkbonDocumentKey]),
+			            CALCULATE(
+			                MIN(Werkbonnen[monteur])
+			            ),
+			            BLANK() 
+			        )
+			    )
+			
+			RETURN 
+			
+			MINX(X, [Y])
+			// IF(
+			//    ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			//    CALCULATE(MINX(X, [Y])),
+			//    BLANK()
+			//)
+			```
+		lineageTag: d7e6882e-0af2-4bc0-9fbd-55974d4106d0
+
+		changedProperty = Name
+
+	measure 'KS 2 Laatste arbeidsdatum WBP (oud)' = ```
+			
+			VAR X = 
+			    SUMMARIZE(
+			        'Werkbonparagraaf kosten en geboekte uren',
+			        'Werkbonparagraaf kosten en geboekte uren'[KS CC Besteksparagraaf],
+			        "Laatste arbeidsdatum", 
+			        IF(
+			            HASONEVALUE('Werkbonparagraaf kosten en geboekte uren'[KS CC Besteksparagraaf]),
+			            CALCULATE(
+			                MAX('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd]), 
+			                'Werkbonparagraaf kosten en geboekte uren'[Arbeidregel Ja/Nee] = "Ja"
+			            ),
+			            BLANK()
+			        )
+			    )
+			
+			RETURN 
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			    CALCULATE(MINX(X, [Laatste arbeidsdatum])),
+			    BLANK()
+			)
+			```
+		formatString: General Date
+		lineageTag: d7ef57d6-c111-45e3-a4cd-361428698476
+
+		changedProperty = Name
+
+	measure 'KS KPI 1 Gemiddelde doorlooptijd (dagen) -2' = ```
+			
+			
+			VAR HolidaysDates = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Laatste_uitvoerdatum_per_hoofdwerkbon =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonparagrafen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			            CALCULATE(
+			                NETWORKDAYS(
+			                    MAX( Werkbonparagrafen[Hoofdwerkbon aanmaakdatum] ),
+			                    COALESCE( MAX( Werkbonparagrafen[Uitgevoerd op] ), MAX( Werkbonparagrafen[Hoofdwerkbon gereedmelddatum] ) ),
+			                    1,
+			                    HolidaysDates
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			            )
+			        )
+			VAR Result = AVERAGEX( Laatste_uitvoerdatum_per_hoofdwerkbon, [Doorlooptijd] )
+			
+			VAR Y = IF(Result<0,1,2)
+			
+			RETURN
+			Y
+			//IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), Y, BLANK()
+			//)
+			
+			```
+		formatString: 0
+		lineageTag: 026fd46a-72ac-480b-9ec1-27152b6189dc
+
+		changedProperty = Name
+
+	measure 'KS KPI 1 Norm Gemiddelde responstijd behaald' = ```
+			
+			VAR Geboekte_uren_per_werkbon = 
+			ADDCOLUMNS(
+			    SUMMARIZE(
+			        FILTER('Werkbonparagraaf kosten en geboekte uren', 'Werkbonparagraaf kosten en geboekte uren'[Arbeidregel Ja/Nee] = "Ja"),    
+			        Werkbonnen[HoofdwerkbonDocumentKey]
+			    ),   
+			    "Responstijd", 
+			    CALCULATE(
+			        DIVIDE(
+			            DATEDIFF(MIN(Werkbonnen[MeldDatumTijd]), MIN('Werkbonparagraaf kosten en geboekte uren'[Arbeid begintijd]), MINUTE), 
+			            60
+			        ),
+			        REMOVEFILTERS(Werkbonnen[Werkbon niveau omschrijving])
+			    ),
+			    "Status",
+			    IF(
+			        CALCULATE(
+			            DIVIDE(
+			                DATEDIFF(MIN(Werkbonnen[MeldDatumTijd]), MIN('Werkbonparagraaf kosten en geboekte uren'[Arbeid begintijd]), MINUTE),
+			                60
+			            )
+			        ) < MAX(Werkbonnen[KS CC Prioriteit uren]),  -- Gebruik de dynamische norm
+			        1, 
+			        0
+			    )
+			)
+			
+			-- Bepaal de status per Hoofdwerkbon, zonder gedetailleerde aggregatie
+			VAR StatusHoofdwerkbon = 
+			IF(
+			    AVERAGEX(
+			        Geboekte_uren_per_werkbon,
+			        IF([Status] = 1, 1, 0)
+			    ) >= 0.5,
+			    1,
+			    0
+			)
+			
+			RETURN 
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]), 
+			    StatusHoofdwerkbon, -- Geef alleen het resultaat op Hoofdwerkbonniveau terug
+			    BLANK()
+			)
+			```
+		formatString: 0
+		lineageTag: 03966d31-7eb3-40d8-9546-ac53693535e8
+
+		changedProperty = Name
+
+	measure 'KS 2.9 Laatste gereedmelddatum HB' = ```
+			
+			VAR X = 
+			    SUMMARIZE(
+			        'Werkbonparagrafen',
+			        'Werkbonparagrafen'[Hoofdwerkbon],
+			        "Y", 
+			        CALCULATE(
+			            MAX('Werkbonparagrafen'[Hoofdwerkbon gereedmelddatum])
+			        )
+			    )
+			
+			RETURN 
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			    MAXX(X, [Y]),  -- Gebruik MAXX om de maximale gereedmelddatum te krijgen
+			    BLANK())
+			```
+		formatString: General Date
+		lineageTag: b330fbc3-c2f0-4ead-9f80-45419b80e6c3
+
+		changedProperty = Name
+
+	measure 'KS KPI 1 Aantal Responsetijd behaald' = ```
+			
+			VAR AantalBehaald = 
+			    CALCULATE(
+			        DISTINCTCOUNT(Werkbonnen[Hoofdwerkbon]),
+			        FILTER(
+			            Werkbonnen,
+			            [KS KPI 1 Norm Gemiddelde responstijd behaald] = 1
+			        )
+			    )
+			RETURN 
+			IF(ISBLANK(AantalBehaald), 0, AantalBehaald)
+			```
+		formatString: #,0
+		lineageTag: 05a683a3-08d8-4fe7-9d73-c042f13ecec1
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure Measure
+		lineageTag: 32b8c974-543a-46ae-b7cc-b1778da327e6
+
+		annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":null}
+
+		annotation 277cc1b9-af89-4597-8e15-cacc25c0886b = To use special characters in a measure name, enclose the entire name in brackets ( [] ) and add a ] to any closing brackets in the name.
+
+	measure 'KS KPI 2 Unieke arbeidsdagen' =
+			
+			
+			IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			CALCULATE(
+			    DISTINCTCOUNT('Werkbonparagraaf kosten en geboekte uren'[Arbeid uitvoeringsdatum]),
+			    NOT(ISBLANK('Werkbonparagraaf kosten en geboekte uren'[Arbeid uitvoeringsdatum]))
+			),
+			BLANK()
+			)
+		formatString: 0
+		lineageTag: 3728ece7-8b55-478a-a76c-f1ec57543169
+
+		changedProperty = Name
+
+	measure 'KPI 1 Response op tijd %' =
+			
+			DIVIDE([KS KPI 1 Aantal Responsetijd behaald], [KS 1.1 Aantal unieke Hoofdbon uitgevoerd])
+		formatString: 0%;-0%;0%
+		lineageTag: 223a6ed1-f24d-495d-a75f-f94f1e76deb5
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS KPI 1 Aantal FTF behaald' = ```
+			
+			VAR AantalBehaald = 
+			    CALCULATE(
+			        DISTINCTCOUNT(Werkbonnen[Hoofdwerkbon]),
+			        FILTER(
+			            Werkbonnen,
+			            [KS KPI 2 Unieke arbeidsdagen] = 1
+			        )
+			    )
+			RETURN 
+			IF(ISBLANK(AantalBehaald), 0, AantalBehaald)
+			```
+		formatString: #,0
+		lineageTag: 24037660-8414-45a5-9c59-db58c9003a89
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS KPI 1 FTF%' =
+			
+			DIVIDE([KS KPI 1 Aantal FTF behaald], [KS 1.1 Aantal unieke Hoofdbon uitgevoerd])
+		formatString: 0%;-0%;0%
+		lineageTag: 0508da0f-27c2-437e-be25-e5a6f4a4973a
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS KPI 3 Storingsgraad' =
+			
+			DIVIDE([KS 1 aantal unieke Werkbonnen uitgevoerd], [Aantal unieke installaties OUD])
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 9383f334-a823-41a1-832e-67120b809c5b
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS 2 Eerste arbeidsdatum WBP_ex reizen (oud)' = ```
+			
+			VAR X = 
+			    SUMMARIZE(
+			        'Werkbonparagraaf kosten en geboekte uren',
+			        'Werkbonparagraaf kosten en geboekte uren'[KS CC Besteksparagraaf],
+			        "Eerste arbeidsdatum", 
+			        IF(
+			            HASONEVALUE('Werkbonparagraaf kosten en geboekte uren'[KS CC Besteksparagraaf]),
+			            CALCULATE(
+			                MIN('Werkbonparagraaf kosten en geboekte uren'[Arbeid begintijd]), 
+			                'Werkbonparagraaf kosten en geboekte uren'[Arbeidregel Ja/Nee] = "Ja",
+			                Taken[type]<>"Reizen"
+			            ),
+			            BLANK()
+			        )
+			    )
+			
+			RETURN 
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			    CALCULATE(MINX(X, [Eerste arbeidsdatum])),
+			    BLANK()
+			)
+			```
+		formatString: General Date
+		lineageTag: c32abaca-3e7e-4d84-873e-de5d3e0eeafc
+
+		changedProperty = Name
+
+	measure 'KS 2 Laatste arbeidsdatum WBP_ex reizen (oud)' = ```
+			
+			VAR X = 
+			    SUMMARIZE(
+			        'Werkbonparagraaf kosten en geboekte uren',
+			        'Werkbonparagraaf kosten en geboekte uren'[KS CC Besteksparagraaf],
+			        "Laatste arbeidsdatum", 
+			        IF(
+			            HASONEVALUE('Werkbonparagraaf kosten en geboekte uren'[KS CC Besteksparagraaf]),
+			            CALCULATE(
+			                MAX('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd]), 
+			                'Werkbonparagraaf kosten en geboekte uren'[Arbeidregel Ja/Nee] = "Ja",
+			                Taken[Taak Code]<>"03"
+			            ),
+			            BLANK()
+			        )
+			    )
+			
+			RETURN 
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			    CALCULATE(MINX(X, [Laatste arbeidsdatum])),
+			    BLANK()
+			)
+			```
+		formatString: General Date
+		lineageTag: 887d8e69-d01d-46b2-84a9-a45d63b8a4a2
+
+		changedProperty = Name
+
+	measure 'KS KPI 2 Unieke arbeidsdagen_v2' = ```
+			
+			
+			IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			CALCULATE(
+			    DISTINCTCOUNT('Werkbonparagraaf kosten en geboekte uren'[Arbeid uitvoeringsdatum]),
+			    NOT(ISBLANK('Werkbonparagraaf kosten en geboekte uren'[Arbeid uitvoeringsdatum])),
+			    ALL(Werkbonnen[Werkbon])),
+			
+			BLANK()
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 96183c92-007d-4451-aef1-e0fc588bb3a0
+
+		changedProperty = Name
+
+	measure 'KS KPI 1 Gemiddelde doorlooptijd (dagen)_ALGEMEEN' = ```
+			
+			
+			VAR HolidaysDates = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Laatste_uitvoerdatum_per_hoofdwerkbon =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonparagrafen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			            CALCULATE(
+			                NETWORKDAYS(
+			                    MAX( Werkbonparagrafen[Hoofdwerkbon aanmaakdatum] ),
+			                    COALESCE( MAX( Werkbonparagrafen[Uitgevoerd op] ), MAX( Werkbonparagrafen[Hoofdwerkbon gereedmelddatum] ) ),
+			                    1,
+			                    HolidaysDates
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			            )
+			        )
+			VAR Result = AVERAGEX( Laatste_uitvoerdatum_per_hoofdwerkbon, [Doorlooptijd] )
+			
+			RETURN
+			Result
+			//IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), Result, BLANK())
+			
+			
+			```
+		lineageTag: 57f0709f-687f-400b-9520-f3ddbf518ab9
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KS KPI 2 Unieke arbeidsdagen_v3' = ```
+			
+			
+			// IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			CALCULATE(
+			    DISTINCTCOUNT('Werkbonparagraaf kosten en geboekte uren'[Arbeid uitvoeringsdatum]),
+			    NOT(ISBLANK('Werkbonparagraaf kosten en geboekte uren'[Arbeid uitvoeringsdatum])),
+			    ALL(Werkbonnen[Werkbon]))
+			//,
+			//BLANK()
+			//)
+			
+			```
+		formatString: 0.0
+		lineageTag: ede635b3-a8dc-4a7a-8c7a-51b6da943670
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS 2.3 Laatste Plandatum HB' = ```
+			
+			VAR X = 
+			    SUMMARIZE(
+			        'Werkbonparagrafen',
+			        'Werkbonparagrafen'[Hoofdwerkbon],
+			        "Y", 
+			        CALCULATE(
+			            MAX('Werkbonparagrafen'[Plandatum])
+			        )
+			    )
+			
+			RETURN 
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			    MAXX(X, [Y]),  -- Gebruik MAXX om de maximale gereedmelddatum te krijgen
+			    BLANK())
+			```
+		formatString: General Date
+		lineageTag: a39d3bbe-c581-4f3b-975a-1507d8c224b9
+
+		changedProperty = Name
+
+	measure 'KS 2.4 Eerste afspraakdatum WB' = ```
+			
+			
+			VAR Y = 
+			
+			SUMMARIZE(
+			    Werkbonnen,    
+			    Werkbonnen[HoofdwerkbonDocumentKey],   
+			    "X", IF(HASONEVALUE(Werkbonnen[HoofdwerkbonDocumentKey]),CALCULATE(MIN(Werkbonnen[AfspraakDatum]),Taken[type] = "Werk"),BLANK())
+			    )
+			
+			
+			
+			 RETURN
+			IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), CALCULATE(MINX(Y,[X])), BLANK()
+			)
+			```
+		formatString: General Date
+		lineageTag: a788dd5c-5404-4586-9192-e25921d40245
+
+		changedProperty = Name
+
+	measure 'KS KPI 1 Uitvoertijd start arbeid tot einde arbeid (uren)' = ```
+			
+			
+			VAR Y = 
+			ADDCOLUMNS(
+			SUMMARIZE(
+			    FILTER('Werkbonparagraaf kosten en geboekte uren','Werkbonparagraaf kosten en geboekte uren'[Arbeidregel Ja/Nee] = "Ja"),    
+			    Werkbonnen[HoofdwerkbonDocumentKey],
+			    Taken[type]),   
+			    "X",CALCULATE(DIVIDE(DATEDIFF(MIN('Werkbonparagraaf kosten en geboekte uren'[Arbeid begintijd]),MAX('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd]),MINUTE),60),Taken[type] = "Werk",
+			    REMOVEFILTERS(Werkbonnen[Werkbon niveau omschrijving]))
+			      )
+			
+			
+			RETURN 
+			IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), 
+			AVERAGEX(Y,[X]),
+			BLANK()
+			)
+			    
+			```
+		lineageTag: 4e2fda5d-62eb-43c7-822d-9b62551f4f44
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KS KPI 1  einde arbeid tot gereedmelding HB (uren)' = ```
+			
+			
+			VAR Y = 
+			ADDCOLUMNS(
+			SUMMARIZE(
+			    FILTER('Werkbonparagraaf kosten en geboekte uren','Werkbonparagraaf kosten en geboekte uren'[Arbeidregel Ja/Nee] = "Ja"),    
+			    Werkbonnen[HoofdwerkbonDocumentKey],
+			    Taken[type]),   
+			    "X",CALCULATE(DIVIDE(DATEDIFF(MAX('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd]),MAX('Werkbonparagrafen'[Hoofdwerkbon gereedmelddatum]),MINUTE),60),Taken[type] = "Werk",
+			    REMOVEFILTERS(Werkbonnen[Werkbon niveau omschrijving]))
+			      )
+			
+			
+			RETURN 
+			IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), 
+			AVERAGEX(Y,[X]),
+			BLANK()
+			)
+			    
+			```
+		lineageTag: 1125a815-b710-4903-9646-27de515e18f1
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KS KPI 1  einde arbeid tot gereedmelding HB (dagen)' = ```
+			
+			
+			VAR Y = 
+			ADDCOLUMNS(
+			SUMMARIZE(
+			    FILTER('Werkbonparagraaf kosten en geboekte uren','Werkbonparagraaf kosten en geboekte uren'[Arbeidregel Ja/Nee] = "Ja"),    
+			    Werkbonnen[HoofdwerkbonDocumentKey],
+			    Taken[type]),   
+			    "X",CALCULATE(DATEDIFF(MAX('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd]),MAX('Werkbonparagrafen'[Hoofdwerkbon gereedmelddatum]),DAY)
+			    )
+			      )
+			
+			
+			RETURN 
+			IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), 
+			AVERAGEX(Y,[X]),
+			BLANK()
+			)
+			    
+			```
+		formatString: #,0.00
+		lineageTag: ca2364f9-6158-4b32-9ea1-6a82d60cf272
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS 2.1 Eerste aanmaakdatum WB' = ```
+			
+			
+			VAR Y = 
+			
+			SUMMARIZE(
+			    Werkbonnen,    
+			    Werkbonnen[HoofdwerkbonDocumentKey],   
+			    "X", IF(HASONEVALUE(Werkbonnen[HoofdwerkbonDocumentKey]),CALCULATE(MIN(Werkbonnen[Aanmaakdatum]),Taken[type] = "Werk"),BLANK())
+			    )
+			
+			
+			
+			 RETURN
+			IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), CALCULATE(MINX(Y,[X])), BLANK()
+			)
+			```
+		formatString: General Date
+		lineageTag: dce68cc3-08c4-4d90-a9f1-6bc7ef5607a7
+
+		changedProperty = Name
+
+	measure 'KS KPI 1 DLT aanmaak - uitvoer (dagen)' = ```
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonparagrafen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			            CALCULATE(
+			                NETWORKDAYS(
+			                    MAX( Werkbonparagrafen[Hoofdwerkbon aanmaakdatum] ),
+			                    MAX( Werkbonparagrafen[Uitgevoerd op] ),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			            )
+			        )
+			VAR Result = AVERAGEX(Y, [Doorlooptijd] )
+			
+			RETURN
+			IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), Result, BLANK()
+			)
+			
+			```
+		lineageTag: 5de14a32-58d1-4f2b-85f8-2681ebd74784
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KS KPI 1 DLT aanmaak - laatste arbeidsdatum (dagen)' = ```
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonparagrafen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			            CALCULATE(
+			                NETWORKDAYS(
+			                    MAX( Werkbonparagrafen[Hoofdwerkbon aanmaakdatum] ),
+			                    COALESCE(MAX( 'Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd] ), MAX(Werkbonparagrafen[Hoofdwerkbon gereedmelddatum])),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			            )
+			        )
+			VAR Result = AVERAGEX(Y, [Doorlooptijd] )
+			
+			RETURN
+			IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), Result, BLANK()
+			)
+			
+			```
+		lineageTag: b3f1dd63-2424-43dc-9a90-b721ff9b6082
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KS KPI 1.5 DLT eerste - laatste arbeidsdatum (dagen) OUD-3' = ```
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonparagrafen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			            CALCULATE(
+			                NETWORKDAYS(
+			                    COALESCE(MIN( 'Werkbonparagraaf kosten en geboekte uren'[Arbeid begintijd]), MIN(Werkbonparagrafen[Uitgevoerd op])),
+			                    COALESCE(MAX( 'Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd] ), MAX(Werkbonparagrafen[Hoofdwerkbon gereedmelddatum])),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			            )
+			        )
+			VAR Result = AVERAGEX(Y, [Doorlooptijd] )
+			
+			RETURN
+			IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), Result, BLANK()
+			)
+			
+			```
+		lineageTag: b8409feb-72a6-48e1-b3d9-54b26f60e017
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KS OUD DLT aanmaak - melddatum (dagen)' = ```
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonparagrafen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			            CALCULATE(
+			                NETWORKDAYS(
+			                    MAX( Werkbonnen[Aanmaakdatum]),
+			                    MAX( Werkbonnen[MeldDatum]),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			            )
+			        )
+			VAR Result = AVERAGEX(Y, [Doorlooptijd] )
+			
+			RETURN
+			IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), Result, BLANK()
+			)
+			
+			```
+		lineageTag: 2c81b0b4-9f63-4f2a-a05a-2ec767b7aded
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KS oud DLT melddatum -plandatum (dagen)' =
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonparagrafen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			            IF(ISBLANK([KS 2.1 Eerste aanmaakdatum WB]) || ISBLANK([KS 2.3 Laatste Plandatum HB]), BLANK(),
+			                CALCULATE(
+			                NETWORKDAYS(
+			                    MAX( Werkbonnen[MeldDatum]),
+			                    COALESCE(MAX( Werkbonparagrafen[Plandatum]), MAX(Werkbonnen[MeldDatum])),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			            ))
+			        )
+			VAR Result = AVERAGEX(Y, [Doorlooptijd] )
+			
+			RETURN
+			IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), Result, BLANK()
+			)
+		lineageTag: c35e4e1a-0261-44be-9b0f-ededf62bb1e4
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KS KPI 1.3 DLT plandatum - afspraakdatum (dagen)' =
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonparagrafen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			            IF(ISBLANK(MAX(Werkbonparagrafen[Plandatum])) || ISBLANK(MAX(Werkbonnen[AfspraakDatum])), BLANK(),
+			                CALCULATE(
+			                NETWORKDAYS(
+			                    MAX(Werkbonparagrafen[Plandatum]),
+			                    MAX(Werkbonnen[AfspraakDatum]),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			            ))
+			        )
+			VAR Result = AVERAGEX(Y, [Doorlooptijd] )
+			
+			RETURN
+			Result
+			//IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), Result, BLANK()
+			//)
+		lineageTag: 58115c31-48df-428a-b8a6-c24f0aa7b4bb
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'WB Uitgevoerd (OUD)' = ```
+			
+			VAR X = 
+			    SUMMARIZE(
+			        'Werkbonparagrafen',
+			        'Werkbonparagrafen'[Hoofdwerkbon],
+			        "Y", 
+			        CALCULATE(
+			            MAX('Werkbonparagrafen'[Uitgevoerd op])
+			        )
+			    )
+			
+			RETURN 
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			    MAXX(X, [Y]),  -- Gebruik MAXX om de maximale gereedmelddatum te krijgen
+			    BLANK())
+			```
+		formatString: General Date
+		lineageTag: 2b7e1c36-e936-4101-8570-0b3282096c3c
+
+		changedProperty = Name
+
+	measure 'Laatste arbeidsdatum WBP (oud-2)' = ```
+			
+			VAR X = 
+			    SUMMARIZE(
+			        Werkbonnen,
+			        'Werkbonnen'[Hoofdwerkbon],
+			        "Y", 
+			        IF(
+			            HASONEVALUE('Werkbonparagrafen'[WerkbonDocumentKey]),
+			            IF(HASONEVALUE('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd]), 
+			            CALCULATE(
+			                MAX('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd]), 
+			                Taken[type] = "Werk"
+			                 
+			            ), MAX(Werkbonparagrafen[Uitgevoerd op])),
+			            BLANK()
+			        )
+			    )
+			
+			RETURN 
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			    CALCULATE(MINX(X, [Y])),
+			    BLANK()
+			)
+			```
+		formatString: General Date
+		lineageTag: 5ad26183-b4fe-47fa-bb14-3ff60f1dbe3c
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'Eerste arbeidsdatum WBP (OUD)' = ```
+			
+			VAR X = 
+			    SUMMARIZE(
+			        'Werkbonparagraaf kosten en geboekte uren',
+			        'Werkbonparagraaf kosten en geboekte uren'[WerkbonparagraafKey],
+			        "Eerste arbeidsdatum", 
+			        IF(
+			            HASONEVALUE('Werkbonparagraaf kosten en geboekte uren'[WerkbonparagraafKey]),
+			            CALCULATE(
+			                MAX('Werkbonparagraaf kosten en geboekte uren'[Arbeid begintijd]), 
+			                Taken[type] = "Werk"
+			            ),
+			            BLANK()
+			        )
+			    )
+			
+			RETURN 
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			    CALCULATE(MINX(X, [Eerste arbeidsdatum])),
+			    BLANK()
+			)
+			```
+		formatString: General Date
+		lineageTag: df20da5f-e9e2-4a02-997f-079778615045
+
+		changedProperty = Name
+
+	measure 'KS 2.8 Laatste opleverdatum WB' = ```
+			
+			VAR X = 
+			    SUMMARIZE(
+			        'Werkbonnen',
+			        'Werkbonnen'[Hoofdwerkbon],
+			        "Y", 
+			        CALCULATE(
+			            MAX('Werkbonnen'[Opleverdatum])
+			        )
+			    )
+			
+			RETURN 
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			    MAXX(X, [Y]),  -- Gebruik MAXX om de maximale gereedmelddatum te krijgen
+			    BLANK())
+			```
+		formatString: General Date
+		lineageTag: e4eda12a-cc23-40ea-90f8-e9568e04c72e
+
+		changedProperty = Name
+
+	measure 'KS KPI 1.1 DLT aanmaak -melddatum (dagen)' = ```
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			
+			 
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( 'Werkbonparagraaf kosten en geboekte uren', 'Werkbonparagraaf kosten en geboekte uren'[WerkbonparagraafKey] ),
+			            "X",
+			            IF(ISBLANK(MAX(Werkbonnen[Aanmaakdatum])) || ISBLANK(MAX(Werkbonnen[MeldDatum])), BLANK(),
+			             CALCULATE(
+			                NETWORKDAYS(
+			                    MAX(Werkbonnen[Aanmaakdatum]),
+			                    MAX(Werkbonnen[MeldDatum]),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			                )
+			            ))
+			        
+			        
+			VAR Result = AVERAGEX(Y, [X] )
+			
+			RETURN
+			// Result
+			IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), Result, BLANK()
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 4317cb23-adda-43e1-9864-b64bc69af18c
+
+		changedProperty = Name
+
+	measure 'KS KPI 1.2 DLT melddatum - plandatum (dagen)' = ```
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			
+			 
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( 'Werkbonparagraaf kosten en geboekte uren', 'Werkbonparagraaf kosten en geboekte uren'[WerkbonparagraafKey] ),
+			            "X",
+			            IF(ISBLANK(MAX(Werkbonnen[MeldDatum])) || ISBLANK(MAX(Werkbonparagrafen[Plandatum])), BLANK(),
+			             CALCULATE(
+			                NETWORKDAYS(
+			                    MAX(Werkbonnen[MeldDatum]),
+			                    MAX(Werkbonparagrafen[Plandatum]),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			                )
+			            ))
+			        
+			        
+			VAR Result = AVERAGEX(Y, [X] )
+			
+			RETURN
+			Result
+			//IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), Result, BLANK()
+			//)
+			
+			```
+		lineageTag: 4594e772-8283-41b0-bb50-682db169307f
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KS KPI 1.4 DLT afspraakdatum - uitvoerdatum (dagen)' =
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonparagrafen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			            IF(ISBLANK(MAX(Werkbonnen[AfspraakDatum])) || ISBLANK(MAX(Werkbonparagrafen[Uitgevoerd op])), BLANK(),
+			                CALCULATE(
+			                NETWORKDAYS(
+			                    MAX(Werkbonnen[AfspraakDatum]),
+			                    MAX(Werkbonparagrafen[Uitgevoerd op]),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			            ))
+			        )
+			VAR Result = AVERAGEX(Y, [Doorlooptijd] )
+			
+			RETURN
+			// Result
+			IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), Result, BLANK()
+			)
+		lineageTag: ac6eb7ff-1945-478c-9d91-b0c74d64b508
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KS KPI 2.4 DLT afspraakdatum - uitvoerdatum (dagen)_enkel' =
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( 'Werkbonparagraaf kosten en geboekte uren', 'Werkbonparagraaf kosten en geboekte uren'[WerkbonparagraafKey] ),
+			            "Doorlooptijd",
+			            IF(ISBLANK(MAX(Werkbonnen[AfspraakDatum])) || ISBLANK(MAX(Werkbonparagrafen[Uitgevoerd op])), BLANK(),
+			                CALCULATE(
+			                NETWORKDAYS(
+			                    MAX(Werkbonnen[AfspraakDatum]),
+			                    MAX(Werkbonparagrafen[Uitgevoerd op]),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			            ))
+			        )
+			VAR Result = AVERAGEX(Y, [Doorlooptijd] )
+			
+			RETURN
+			Result
+			// CALCULATE(Result, ALL(Werkbonnen))
+			//IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), Result, BLANK()
+			//)
+		lineageTag: 06bdfe04-029e-403a-8971-c4bfa5ec68fd
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KS KPI 2.1 DLT aanmaak -melddatum (dagen)' = ```
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			
+			 
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonnen, Werkbonnen[Hoofdwerkbon]), 
+			            "X",
+			            IF(ISBLANK(MAX(Werkbonnen[Aanmaakdatum])) || ISBLANK(MAX(Werkbonnen[MeldDatum])), BLANK(),
+			             CALCULATE(
+			                NETWORKDAYS(
+			                    Min(Werkbonnen[Aanmaakdatum]),
+			                    MAX(Werkbonnen[MeldDatum]),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			                )
+			            ))
+			        
+			        
+			VAR Result = CALCULATE(AVERAGEX(Y, [X] ), ALL(Werkbonnen[Hoofdwerkbon]))
+			
+			
+			RETURN
+			
+			// CALCULATE(Result, ALL('Werkbonparagraaf kosten en geboekte uren'))
+			Result
+			// IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), Result, BLANK()
+			//)
+			
+			```
+		lineageTag: a1d775c1-78be-43ad-8fcf-015193f67b08
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KS KPI 1.5 DLT eerste en laatste uitvoerdatum (dagen) (OUD)' =
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonparagrafen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			            IF(ISBLANK(Min('Werkbonparagraaf kosten en geboekte uren'[Arbeid begintijd])) || ISBLANK(MAX('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd])), BLANK(),
+			                CALCULATE(
+			                NETWORKDAYS(
+			                    MAX('Werkbonparagraaf kosten en geboekte uren'[Arbeid begintijd]),
+			                    MAX('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd]),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			            ))
+			        )
+			VAR Result = AVERAGEX(Y, [Doorlooptijd] )
+			
+			RETURN
+			Result
+			//IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), Result, BLANK()
+			//)
+		lineageTag: 5f55690f-ced1-4039-bf8e-9a00c0b0560a
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'DLT laatste uitvoerdatum en gereedmelding (dagen) (oud)' = ```
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonnen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			            IF(ISBLANK(MAX('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd])) || ISBLANK(MAX('Werkbonparagrafen'[Hoofdwerkbon gereedmelddatum])), BLANK(),
+			                CALCULATE(
+			                NETWORKDAYS(
+			                    Min('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd]),
+			                    MAX('Werkbonparagrafen'[Hoofdwerkbon gereedmelddatum]),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			            ))
+			        )
+			VAR Result = AVERAGEX(Y, [Doorlooptijd] )
+			RETURN
+			Result
+			
+			```
+		lineageTag: dea71710-8965-4b50-a0d9-f25053638f16
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KS KPI 2.6 DLT laatste uitvoerdatum en gereedmelding (dagen)' = ```
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonparagrafen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			            IF(ISBLANK(MAX('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd])) || ISBLANK(MAX('Werkbonparagrafen'[Hoofdwerkbon gereedmelddatum])), BLANK(),
+			                CALCULATE(
+			                NETWORKDAYS(
+			                    MAX('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd]),
+			                    MAX('Werkbonparagrafen'[Hoofdwerkbon gereedmelddatum]),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			            ))
+			        )
+			
+			VAR Result = AVERAGEX(Y, [Doorlooptijd] )
+			
+			RETURN
+			Result
+			
+			
+			// IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), Result, BLANK()
+			//)
+			
+			
+			```
+		lineageTag: 9019e807-247a-436e-a948-d2a7faf5bd57
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KS KPI 2.6 DLT laatste uitvoerdatum en gereedmelding (dagen)_v2' =
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			             SUMMARIZE( Werkbonparagrafen, Werkbonparagrafen[Hoofdwerkbon]),
+			            "X",
+			            IF(ISBLANK(MAX('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd])) || ISBLANK(MAX('Werkbonparagrafen'[Hoofdwerkbon gereedmelddatum])), BLANK(),
+			                CALCULATE(
+			                NETWORKDAYS(
+			                    MAX('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd]),
+			                    MAX('Werkbonparagrafen'[Hoofdwerkbon gereedmelddatum]),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			            ))
+			        )
+			
+			VAR Z = AVERAGEX(Y, [X])
+			
+			RETURN
+			Z
+			// IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), Z, BLANK())
+		lineageTag: a0bf144c-1ad8-40df-9b59-1d224fd5c727
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure TEST = DIVIDE([KS KPI 2.6 DLT laatste uitvoerdatum en gereedmelding (dagen)_v2], [KS 1.1 aantal Hoofdwerkbonnen uitgevoerd])
+		lineageTag: 2839076a-1391-4a6e-b6d1-6928009fb1b7
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KS DLT laatste uitvoerdatum en gereedmelding (dagen) oud' = ```
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonparagrafen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			            IF(ISBLANK(MAX('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd])) || ISBLANK(MAX('Werkbonparagrafen'[Hoofdwerkbon gereedmelddatum])), BLANK(),
+			                CALCULATE(
+			                NETWORKDAYS(
+			                    MAX('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd]),
+			                    MAX('Werkbonparagrafen'[Hoofdwerkbon gereedmelddatum]),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			            ))
+			        )
+			VAR ValidDoorlooptijden = 
+			    FILTER(Y, NOT(ISBLANK([Doorlooptijd])))
+			
+			-- Bereken het gemiddelde doorlooptijd, maar alleen als er geldige waarden zijn
+			VAR Result = IF(
+			    COUNTROWS(ValidDoorlooptijden) > 0,  -- Controleer of er geldige doorlooptijden zijn
+			    AVERAGEX(ValidDoorlooptijden, [Doorlooptijd]),  -- Bereken het gemiddelde van de geldige doorlooptijden
+			    BLANK()  -- Geef BLANK() terug als er geen geldige doorlooptijden zijn
+			)
+			
+			RETURN
+			Result
+			```
+		lineageTag: 253effab-93c0-4ba8-ae29-424ddb9f9847
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Laatste arbeidsdatum WBP (Oud)' = ```
+			
+			VAR X = 
+			    SUMMARIZE(
+			        'Werkbonparagraaf kosten en geboekte uren',
+			        'Werkbonparagraaf kosten en geboekte uren'[WerkbonparagraafKey],
+			        "Y", 
+			        IF(
+			            HASONEVALUE('Werkbonparagraaf kosten en geboekte uren'[WerkbonparagraafKey]),
+			            CALCULATE(
+			                MAX('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd]), 
+			                Taken[type] = "Werk"
+			                 
+			            ),
+			            BLANK()
+			        )
+			    )
+			
+			RETURN 
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			    CALCULATE(MINX(X, [Y])),
+			    BLANK()
+			)
+			```
+		formatString: General Date
+		lineageTag: bac83f72-8053-4060-872e-3b7ddc2ab665
+
+		changedProperty = Name
+
+	measure 'Laatste arbeidsdatum WBP ADJ (fout)' = ```
+			
+			VAR X = 
+			    SUMMARIZE(
+			        Werkbonnen,
+			        'Werkbonnen'[Hoofdwerkbon],
+			        "Y", 
+			        IF(
+			            HASONEVALUE('Werkbonparagrafen'[WerkbonDocumentKey]), 
+			            CALCULATE(
+			                MAX('Werkbonparagraaf kosten en geboekte uren'[KS CC Arbeidstijd eind]), 
+			                Taken[type] = "Werk"
+			                 
+			            ), 
+			            BLANK()
+			        )
+			    )
+			
+			RETURN 
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			    CALCULATE(AVERAGEX(X, [Y])),
+			    BLANK()
+			)
+			```
+		formatString: *14-03-2001 13:30:55 (General Date)
+		lineageTag: 88cc7e46-fcca-46f4-a6fd-0d14b98e75ae
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'KS 2.7 Laatste arbeidsdatum WBP' = ```
+			
+			VAR X = 
+			    SUMMARIZE(
+			        'Werkbonparagraaf kosten en geboekte uren',
+			        'Werkbonparagraaf kosten en geboekte uren'[WerkbonparagraafKey],
+			        "Y", 
+			        IF(
+			            HASONEVALUE('Werkbonparagraaf kosten en geboekte uren'[WerkbonparagraafKey]),
+			            CALCULATE(
+			                MAX('Werkbonparagraaf kosten en geboekte uren'[KS CC Arbeidstijd eind])
+			                //, Taken[type] = "Werk"
+			                 
+			            ),
+			            BLANK()
+			        )
+			    )
+			
+			RETURN 
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			    CALCULATE(MAXX(X, [Y])),
+			    BLANK()
+			)
+			```
+		formatString: General Date
+		lineageTag: fef6e446-da6c-4a0d-b156-d4161828e136
+
+		changedProperty = Name
+
+	measure 'Eerste arbeidsdatum WBP' = ```
+			
+			VAR X = 
+			    SUMMARIZE(
+			        'Werkbonparagraaf kosten en geboekte uren',
+			        'Werkbonparagraaf kosten en geboekte uren'[WerkbonparagraafKey],
+			        "Eerste arbeidsdatum", 
+			        IF(
+			            HASONEVALUE('Werkbonparagraaf kosten en geboekte uren'[WerkbonparagraafKey]),
+			            CALCULATE(
+			                MAX('Werkbonparagraaf kosten en geboekte uren'[KS CC Arbeidstijd begin])
+			                //, Taken[type] = "Werk"
+			            ),
+			            BLANK()
+			        )
+			    )
+			
+			RETURN 
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			    CALCULATE(MINX(X, [Eerste arbeidsdatum])),
+			    BLANK()
+			)
+			```
+		formatString: General Date
+		lineageTag: c86ccd80-74f6-4d89-8e7b-a203935eaf61
+
+		changedProperty = Name
+
+	measure 'KS KPI 1.5 DLT eerste en laatste uitvoerdatum (dagen) OUD-2' = ```
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonparagrafen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			                CALCULATE(
+			                NETWORKDAYS(
+			                    Min('Werkbonparagraaf kosten en geboekte uren'[KS CC Arbeidstijd begin]),
+			                    MAX('Werkbonparagraaf kosten en geboekte uren'[KS CC Arbeidstijd eind]),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			            ))
+			        
+			VAR Result = AVERAGEX(Y, [Doorlooptijd] )
+			
+			RETURN
+			Result
+			//IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), Result, BLANK()
+			//)
+			```
+		lineageTag: 41cb4ecf-85f2-4abf-abcb-8df5c13d3894
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'WB Uitgevoerd (fout-2)' = ```
+			
+			VAR X = 
+			    SUMMARIZE(
+			        'Werkbonparagrafen',
+			        'Werkbonparagrafen'[Hoofdwerkbon],
+			        "Y", 
+			        IF(HASONEVALUE('Werkbonparagrafen'[Hoofdwerkbon]),
+			        CALCULATE(
+			            MAX('Werkbonparagrafen'[Uitgevoerd op]), 
+			        BLANK()
+			        )
+			    ))
+			
+			RETURN 
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			    MAXX(X, [Y]),  -- Gebruik MAXX om de maximale gereedmelddatum te krijgen
+			    BLANK())
+			```
+		lineageTag: 61c2bc50-8448-4464-bccc-d3283354f51c
+
+		changedProperty = Name
+
+	measure 'KS 2.5 WB Uitgevoerd' = ```
+			
+			VAR X = 
+			    SUMMARIZE(
+			        'Werkbonparagrafen',
+			        'Werkbonparagrafen'[Hoofdwerkbon],
+			        "Y", 
+			        MAX('Werkbonparagrafen'[Uitgevoerd op])  -- Gebruik direct MAX zonder IF
+			    )
+			
+			RETURN 
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			    MAXX(X, [Y]),  -- Gebruik MAXX om de maximale waarde van Y te krijgen
+			    BLANK()
+			)
+			```
+		formatString: General Date
+		lineageTag: f6c62121-fed3-41b9-8147-7755ecbbde5c
+
+		changedProperty = Name
+
+	measure 'KS DLT laatste uitvoerdatum en gereedmelding (dagen) OUD-2' = ```
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonnen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			                CALCULATE(
+			                NETWORKDAYS(
+			                    COALESCE(MAx( 'Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd]), MIN(Werkbonparagrafen[Uitgevoerd op])),
+			                    MAX('Werkbonparagrafen'[Hoofdwerkbon gereedmelddatum]),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd"
+			                
+			                //,REMOVEFILTERS( Werkbonnen )
+			            ))
+			        
+			VAR Result = AVERAGEX(Y, [Doorlooptijd] )
+			RETURN
+			Result
+			
+			```
+		formatString: 0.0
+		lineageTag: cf9ee06e-6ee3-4c7a-a50f-1e7247833760
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'Eerste arbeidsdatum WBP (oud-3)' = ```
+			
+			VAR X = 
+			    SUMMARIZE(
+			        'Werkbonparagraaf kosten en geboekte uren',
+			        'Werkbonparagraaf kosten en geboekte uren'[WerkbonparagraafKey],
+			        "Eerste arbeidsdatum", 
+			            CALCULATE(
+			                MAX('Werkbonparagraaf kosten en geboekte uren'[KS CC Arbeidstijd begin]), 
+			                Taken[type] = "Werk"
+			            )
+			        )
+			    
+			
+			RETURN 
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			    CALCULATE(MINX(X, [Eerste arbeidsdatum])),
+			    BLANK()
+			)
+			```
+		formatString: General Date
+		lineageTag: 96fd69ec-d697-46ca-8a15-2765c54ebf40
+
+		changedProperty = Name
+
+	measure 'KS 2.0 Count' =
+			
+			CALCULATE(COUNT(Werkbonnen[Werkbon]), ALL(Werkbonnen))
+		formatString: 0
+		lineageTag: d22c0a8b-281c-409e-98a3-2bf7456a630e
+
+		changedProperty = Name
+
+	measure 'KS Eerste aanmaakdatum en eerste arbeidsdatum (dagen) OUD' = ```
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonnen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			                CALCULATE(
+			                NETWORKDAYS(
+			                    Min('Werkbonnen'[Aanmaakdatum]),
+			                    Min('Werkbonparagraaf kosten en geboekte uren'[KS CC Arbeidstijd begin]),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd"
+			                //,REMOVEFILTERS( Werkbonnen )
+			            ))
+			        
+			VAR Result = AVERAGEX(Y, [Doorlooptijd] )
+			RETURN
+			Result
+			
+			```
+		lineageTag: 1dfd675e-025a-4096-9513-93c39ef438e8
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KS KPI 1.8 DLT eerste aanmaakdatum en laatste arbeidsdatum (dagen)' = ```
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonnen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			                CALCULATE(
+			                NETWORKDAYS(
+			                    Min('Werkbonnen'[Aanmaakdatum]),
+			                    COALESCE(MAX( 'Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd] ), MAX(Werkbonparagrafen[Uitgevoerd op])),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd"
+			                //,REMOVEFILTERS( Werkbonnen )
+			            ))
+			        
+			VAR Result = AVERAGEX(Y, [Doorlooptijd] )
+			RETURN
+			Result
+			
+			```
+		formatString: #,0.0
+		lineageTag: 08346d2f-4889-480b-b5fc-6f616fe2b775
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS 1 aantal unieke Hoofdwerkbonnen WB' = CALCULATE(DISTINCTCOUNT(Werkbonnen[Hoofdwerkbon]), Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd")
+		formatString: 0
+		lineageTag: 9722db4f-ea37-49ae-ad10-4ff946bfefc0
+
+		changedProperty = Name
+
+	measure 'KS 2.6 Eerste arbeidsdatum WBP' = ```
+			
+			VAR X = 
+			    SUMMARIZE(
+			        'Werkbonparagraaf kosten en geboekte uren',
+			        'Werkbonparagraaf kosten en geboekte uren'[WerkbonparagraafKey],
+			        "Y", 
+			        IF(
+			            HASONEVALUE('Werkbonparagraaf kosten en geboekte uren'[WerkbonparagraafKey]),
+			            CALCULATE(
+			                Min('Werkbonparagraaf kosten en geboekte uren'[KS CC Arbeidstijd begin])
+			                //, Taken[type] = "Werk"
+			                 
+			            ),
+			            BLANK()
+			        )
+			    )
+			
+			RETURN 
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]),
+			    CALCULATE(MINX(X, [Y])),
+			    BLANK()
+			)
+			```
+		formatString: General Date
+		lineageTag: c790f643-bd64-4740-be31-b8e0ba1e2234
+
+		changedProperty = Name
+
+	measure 'KS 1 Aantal unieke HWB' =
+			
+			CALCULATE(DISTINCTCOUNT(Werkbonnen[Hoofdwerkbon]), Werkbonparagrafen[type] = "Storing")
+		formatString: 0
+		lineageTag: c392723a-8a14-4b6c-ae5d-6c69c6bf06db
+
+		changedProperty = Name
+
+	measure 'KS 1 Aantal unieke WB' =
+			
+			CALCULATE(DISTINCTCOUNT(Werkbonnen[Werkbon]), Werkbonparagrafen[type] = "Storing")
+		formatString: 0
+		lineageTag: 7eb5b206-a413-462b-8eaa-b2894e02183c
+
+		changedProperty = Name
+
+	measure 'KS KPI 1.5 DLT eerste - laatste arbeidsdatum (dagen)' =
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonparagrafen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			            CALCULATE(
+			                NETWORKDAYS(
+			                    COALESCE(MIN( 'Werkbonparagraaf kosten en geboekte uren'[Arbeid begintijd]), MIN(Werkbonparagrafen[Uitgevoerd op])),
+			                    COALESCE(MAX( 'Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd] ), MAX(Werkbonparagrafen[Hoofdwerkbon gereedmelddatum])),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			            )
+			        )
+			VAR Result = AVERAGEX(Y, [Doorlooptijd] )
+			
+			RETURN
+			Result
+		formatString: #,0.0
+		lineageTag: 79051c04-5ed5-40ee-9202-174800a79b3f
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS KPI 1.7 DLT aanmaakdatum - eerste arbeidsdatum (dagen)' = ```
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonparagrafen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			            CALCULATE(
+			                NETWORKDAYS(
+			                    Min('Werkbonnen'[Aanmaakdatum]),
+			                    COALESCE(Min( 'Werkbonparagraaf kosten en geboekte uren'[Arbeid begintijd] ), MAX(Werkbonparagrafen[Uitgevoerd op])),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd",
+			                REMOVEFILTERS( Werkbonnen[Werkbon niveau omschrijving] )
+			                
+			            )
+			        )
+			VAR Result = AVERAGEX(Y, [Doorlooptijd] )
+			
+			RETURN
+			Result
+			```
+		formatString: 0.0
+		lineageTag: 8e915c7c-5e77-4e06-b4a2-709a3c4e6a53
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS DLT aanmaakdatum en gereedmelding (dagen) OUD' = ```
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			        ADDCOLUMNS(
+			            SUMMARIZE( Werkbonnen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			            "Doorlooptijd",
+			                CALCULATE(
+			                NETWORKDAYS(
+			                    MIN(Werkbonnen[Aanmaakdatum]),
+			                    MAX('Werkbonparagrafen'[Hoofdwerkbon gereedmelddatum]),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd"
+			                //,REMOVEFILTERS( Werkbonnen )
+			            ))
+			        
+			VAR Result = AVERAGEX(Y, [Doorlooptijd] )
+			RETURN
+			Result
+			
+			```
+		formatString: #,0.0
+		lineageTag: 1e69126b-0941-421b-9e36-8b03fe09ad75
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS 0 Aantal unieke Apparaten' =
+			
+			DISTINCTCOUNT(Bestekparagrafen[Installatie apparaat])
+		formatString: 0
+		lineageTag: 9f06d9de-34ef-48a8-94c1-8ede28f11195
+
+		changedProperty = Name
+
+	measure 'KS 0 Gereedmelding' = ```
+			
+			 IF([KS 2.9 Laatste gereedmelddatum HB]=BLANK(), TRUE(), FALSE())
+			```
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: ad5ccdc1-932b-4468-8f8c-e8e8866408c9
+
+		changedProperty = Name
+
+	measure 'KS 2.9 Laatste gereedmelddatum HB (2)' = ```
+			
+			
+			VAR Y = MINX(FILTER(Werkbonparagrafen, [KS 0 Gereedmelding]=FALSE()), [KS 2.9 Laatste gereedmelddatum HB])
+			
+			RETURN
+			IF(
+			    ISINSCOPE(Werkbonnen[Hoofdwerkbon]), 
+			    Y, BLANK()
+			)
+			
+			
+			```
+		formatString: General Date
+		lineageTag: 87b02aeb-e70f-4132-bc72-cc18bd26dd89
+
+		changedProperty = Name
+
+	measure 'KS 0 Aantal unieke installaties' = ```
+			
+			VAR Y = 
+			IF(DISTINCTCOUNT(Bestekparagrafen[Installatie merk])>0, 1,0 )
+			
+			RETURN
+			SUMX(Bestekparagrafen, Y)
+			
+			```
+		formatString: #,0
+		lineageTag: 4d737432-5ddd-4ac5-9cf4-34db79fdfa21
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS 0 Gereedmelding non blanks' =
+			
+			VAR Y = INT([KS 0 Gereedmelding])
+			
+			RETURN
+			IF(ISINSCOPE(Werkbonnen[Hoofdwerkbon]), Y, BLANK())
+		formatString: 0
+		lineageTag: abe23fcc-63ed-44c6-a983-e69c69b30496
+
+		changedProperty = Name
+
+	measure 'KS KPI 1.6 DLT laatste uitvoerdatum en gereedmelding (dagen)' =
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			    ADDCOLUMNS(
+			        SUMMARIZE( Werkbonnen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			        "Doorlooptijd",
+			            CALCULATE(
+			                NETWORKDAYS(
+			                    COALESCE(Min('Werkbonparagraaf kosten en geboekte uren'[Arbeid eindtijd]), MIN(Werkbonparagrafen[Uitgevoerd op])),
+			                    COALESCE(Min('Werkbonparagrafen'[Hoofdwerkbon gereedmelddatum]), TODAY()),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd"
+			            )
+			    )
+			
+			VAR Result = AVERAGEX(Y, [Doorlooptijd])
+			RETURN Result
+		formatString: #,0.0
+		lineageTag: 48768c9c-cee0-47c5-8943-b9e1ec4f45dc
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'KS KPI 1.9 DLT aanmaakdatum en gereedmelding (dagen)' =
+			
+			
+			VAR Weekends = CALCULATETABLE( DISTINCT(Kalender[Datum]), Kalender[Werkdag] = 0 )
+			
+			VAR Y =
+			    ADDCOLUMNS(
+			        SUMMARIZE( Werkbonnen, Werkbonnen[HoofdwerkbonDocumentKey] ),
+			        "Doorlooptijd",
+			            CALCULATE(
+			                NETWORKDAYS(
+			                    MIN(Werkbonnen[Aanmaakdatum]),
+			                    COALESCE(min('Werkbonparagrafen'[Hoofdwerkbon gereedmelddatum]), TODAY()),
+			                    1,
+			                    Weekends
+			                ),
+			                Werkbonparagrafen[Hoofdwerkbon uitvoeringstatus] = "Uitgevoerd"
+			            )
+			    )
+			
+			VAR Result = AVERAGEX(Y, [Doorlooptijd])
+			RETURN Result
+		formatString: 0.0
+		lineageTag: 5f49721d-00df-485d-9b5b-b0be65f6ad1b
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'Measure 2'
+		lineageTag: 9196cc86-7bc5-4dc4-b72f-c74d5e920e86
+
+		annotation 43dbc3e8-3a1c-4b6f-9923-b49ff7d6691c = True
+
+	measure 'KS 1.1 Aantal unieke installaties-1' = ```
+			
+			VAR Y = 
+			IF(DISTINCTCOUNT(Bestekparagrafen[Installatie merk])>0, 1,0 )
+			
+			RETURN
+			CALCULATE(SUMX(Bestekparagrafen, Y), ALL(Werkbonnen), Projecten[KS CC Project]="C")
+			
+			```
+		formatString: 0
+		lineageTag: 7de508f1-87b3-43c9-82a3-5b347edd0c32
+
+		changedProperty = Name
+
+	measure 'KS 2.1 First Time Fix' =
+			
+			DIVIDE([KS 1 Aantal unieke HWB], [KS 1 Aantal unieke WB] )
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 5854c16e-2381-45a8-9ba1-612f07fb7ed7
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	column NietGebruiken
+		dataType: string
+		isHidden
+		lineageTag: 600db170-ab06-40fd-99b3-7e332f7c283c
+		sourceLineageTag: 77daf940-966f-4a11-992b-e986d1d1e302
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: NietGebruiken
+
+		annotation SummarizationSetBy = User
+
+	partition 'Formules klantspecifiek' = entity
+		mode: directQuery
+		source
+			entityName: Formules klantspecifiek
+			expressionSource: 'DirectQuery to AS - SSM'
+

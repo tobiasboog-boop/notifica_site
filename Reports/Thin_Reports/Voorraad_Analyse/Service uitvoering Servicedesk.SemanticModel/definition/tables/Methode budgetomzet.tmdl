@@ -1,0 +1,31 @@
+table 'Methode budgetomzet'
+	lineageTag: 4153b18c-f37e-4337-948f-3f237f764112
+	sourceLineageTag: 1d7f5083-c3e3-4b33-be1d-89bafa057d73
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 73de6405-09e0-49d2-977c-bf8a03751082
+		sourceLineageTag: ad2b8dd5-feb8-4e64-9a3c-5302cc991bb5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = User
+
+	column Omschrijving
+		dataType: string
+		lineageTag: 7ec9556e-bd70-4e49-88a0-eda81e922f62
+		sourceLineageTag: b5a23c73-b480-4800-8389-016009bff4b8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Omschrijving
+
+		annotation SummarizationSetBy = User
+
+	partition 'Methode budgetomzet' = entity
+		mode: directQuery
+		source
+			entityName: Methode budgetomzet
+			expressionSource: 'DirectQuery to AS - SSM'
+

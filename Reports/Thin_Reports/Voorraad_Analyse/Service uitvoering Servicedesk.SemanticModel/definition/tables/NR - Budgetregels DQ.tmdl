@@ -1,0 +1,86 @@
+table 'NR - Budgetregels DQ'
+	lineageTag: 875310b9-0ede-4dce-944a-d16dde83d248
+	sourceLineageTag: 760acb25-e3f0-401e-bf04-0d7b41db4ea3
+
+	column Regelkey_Pivot
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		lineageTag: c99c4aba-8c3f-415d-af8b-f2aef7def2f8
+		sourceLineageTag: ac4e7eba-be1e-4759-aa47-4e87b04a8708
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Regelkey_Pivot
+
+		annotation SummarizationSetBy = User
+
+	column Datum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 8748d450-5484-4306-88ac-8ff048b17383
+		sourceLineageTag: d29a9733-13f5-4c3d-9595-d4b330f61949
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Datum
+
+		annotation SummarizationSetBy = User
+
+	column waarde
+		dataType: double
+		lineageTag: 8197d48c-fb6f-4dea-bdd9-135770070cf3
+		sourceLineageTag: 36754764-6f43-48d8-996d-d403e7c7c988
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: waarde
+
+		annotation SummarizationSetBy = User
+
+	column 'CoA Code'
+		dataType: string
+		lineageTag: 50db63a1-6c5a-4063-ab0a-a9fbb782289f
+		sourceLineageTag: 62fc4e2b-ae1e-486d-b028-a4aa7b51eea1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CoA Code
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 1'
+		dataType: string
+		lineageTag: 56fea509-da24-483f-bb5f-9512dcf940f1
+		sourceLineageTag: 4827bdb0-e8dd-494d-8a5a-13c849f1f5eb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 1
+
+		annotation SummarizationSetBy = User
+
+	column 'Niveau 2'
+		dataType: string
+		lineageTag: b5e4a806-161e-4e10-9fc9-b70d61429cfc
+		sourceLineageTag: 8c553acb-e2f4-46b8-b52a-8cea468ff8ff
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Niveau 2
+
+		annotation SummarizationSetBy = User
+
+	column BudgetKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: 38bf8e16-0bcc-4e4c-a0ae-19c5f73103c0
+		sourceLineageTag: f800c6fa-cb94-4326-b7c6-42bc23f2f793
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BudgetKey
+
+		annotation SummarizationSetBy = User
+
+	partition 'NR - Budgetregels DQ' = entity
+		mode: directQuery
+		source
+			entityName: NR - Budgetregels DQ
+			expressionSource: 'DirectQuery to AS - SSM'
+

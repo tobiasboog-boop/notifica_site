@@ -1,0 +1,220 @@
+table 'Calculaties met verkoopprijzen'
+	lineageTag: 3f43db23-4ce7-4bde-b7f7-69f3bb7cd3b4
+	sourceLineageTag: 5af5cc9a-f26f-483b-bbfc-fa549d4b64b4
+
+	column CalculatieDocumentKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: d48d3eb2-e20a-41a5-a595-c3ef3a9a42c3
+		sourceLineageTag: 77a2bfdf-9ac1-464f-9ee0-082cd13c1857
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CalculatieDocumentKey
+
+		annotation SummarizationSetBy = User
+
+	column ProjectKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 40e23cd5-aefb-4256-9ee5-8908c23d5723
+		sourceLineageTag: 6df5a53d-bd9f-4b7c-af8b-4cd2e66ce51b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ProjectKey
+
+		annotation SummarizationSetBy = User
+
+	column Calculatiestatus
+		dataType: string
+		lineageTag: 72752b56-650c-45f0-aece-98c2d576f263
+		sourceLineageTag: c9c765c9-a3c5-4f12-a318-b03cabf399e5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Calculatiestatus
+
+		annotation SummarizationSetBy = User
+
+	column 'Laatste wijzigdatum'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 5f9021a1-522f-4354-90f0-c5800583934c
+		sourceLineageTag: e8217525-a278-42fe-bcab-fc11524054fb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Laatste wijzigdatum
+
+		annotation SummarizationSetBy = User
+
+	column Aanmaakdatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 23bda777-2fe1-4779-8ae2-16b7b907df96
+		sourceLineageTag: 9227c63a-6ccb-4844-a198-27fe4db4cf40
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Aanmaakdatum
+
+		annotation SummarizationSetBy = User
+
+	column 'document status'
+		dataType: string
+		lineageTag: 5a0355c6-28fb-4579-906c-c0b1ac965303
+		sourceLineageTag: a48af95a-4c09-4b8a-8a64-746036f4af1b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: document status
+
+		annotation SummarizationSetBy = User
+
+	column Verkoopprijs
+		dataType: double
+		lineageTag: c00b6bbf-c4e3-4eca-b53f-ddd041b51f2b
+		sourceLineageTag: 5b37916c-1d0c-44cb-8fce-db780fa94717
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Verkoopprijs
+
+		annotation SummarizationSetBy = User
+
+	column Calculatiewaarde
+		dataType: double
+		lineageTag: 1c3ec7d3-e2f3-4d2e-abbe-56968ba11781
+		sourceLineageTag: 0de0a1ba-9907-408c-85d8-8994e14203ab
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Calculatiewaarde
+
+		annotation SummarizationSetBy = User
+
+	column 'Staartbedrag per calculatie'
+		dataType: double
+		lineageTag: 956a34ea-f5b6-44ea-a53f-80354ad3fc54
+		sourceLineageTag: 6a5c397e-9a83-437c-bee5-d03afc301008
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Staartbedrag per calculatie
+
+		annotation SummarizationSetBy = User
+
+	column 'Verkoopprijs incl. staart'
+		dataType: double
+		lineageTag: 84b9d6c4-f479-4b9b-acbb-bdf88835d8c4
+		sourceLineageTag: d0848b8e-f105-4437-96cf-eeca9b58dbb2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Verkoopprijs incl. staart
+
+		annotation SummarizationSetBy = User
+
+	column 'Calculatiewaarde incl. staart'
+		dataType: double
+		lineageTag: fda0cf2f-f2a2-4f2a-a7fc-1ba15f81ff67
+		sourceLineageTag: 84489146-7d4e-449f-8342-8e536b967bea
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Calculatiewaarde incl. staart
+
+		annotation SummarizationSetBy = User
+
+	column Calculatie
+		dataType: string
+		lineageTag: 730267e9-990b-4275-bd30-28fc24cd0e35
+		sourceLineageTag: dbbfd3ae-b49c-4850-a48d-a35784648633
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Calculatie
+
+		annotation SummarizationSetBy = User
+
+	column Status
+		dataType: string
+		lineageTag: 64ba43c3-26ad-4791-8469-98ff18d7986f
+		sourceLineageTag: 1fae85bd-28a0-4e6f-b0be-b4ee3a9dc09a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = User
+
+	column DocumentstatusSortering
+		dataType: int64
+		formatString: 0
+		lineageTag: e8d35876-d035-4f98-8e5a-7155e8acdf93
+		sourceLineageTag: e94d0dce-500d-4e04-afdd-92d6ee075dcb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DocumentstatusSortering
+
+		annotation SummarizationSetBy = User
+
+	column projectniveau
+		dataType: string
+		lineageTag: 0808f8d6-9aed-449a-abc2-fdb157ef7a6e
+		sourceLineageTag: 7f0de847-0921-4710-9f9d-a7a7af25d7f5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: projectniveau
+
+		annotation SummarizationSetBy = User
+
+	column Hoofdproject_JN
+		dataType: string
+		lineageTag: 4cc7fcbe-b69c-4323-857a-d739dddbc8de
+		sourceLineageTag: 8aa5430e-9921-4c95-b997-549e4ef22b26
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hoofdproject_JN
+
+		annotation SummarizationSetBy = User
+
+	column 'Aantal dagen sinds aanmaak'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4d9e8c16-7ef6-4b1e-ac96-3e76e69b669f
+		sourceLineageTag: 001d5367-6ba8-4120-beeb-de5560280ed2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Aantal dagen sinds aanmaak
+
+		annotation SummarizationSetBy = User
+
+	column 'Project startdatum'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 92c529fc-c803-46b0-90f9-9519ac5738e9
+		sourceLineageTag: e3037831-390c-44f1-ad79-39cddf40036d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Project startdatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Project einddatum'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: a4c2655d-e485-47ac-9d0b-39568d8c39c3
+		sourceLineageTag: 4b4a5493-a671-4cbd-9edd-e3546dd7ace9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Project einddatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Project niveau'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7d59b412-b71f-4db5-b301-5d672f91cede
+		sourceLineageTag: fda1bbae-14e5-4423-af44-aadfcc644c78
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Project niveau
+
+		annotation SummarizationSetBy = User
+
+	partition 'Calculaties met verkoopprijzen' = entity
+		mode: directQuery
+		source
+			entityName: Calculaties met verkoopprijzen
+			expressionSource: 'DirectQuery to AS - SSM'
+

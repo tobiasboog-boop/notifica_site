@@ -1,0 +1,98 @@
+table 'arbeidspatroon per medewerker'
+	lineageTag: 64911b9c-6ec8-454f-8bf9-d598cf75f52c
+	sourceLineageTag: 0a005d40-3176-4be7-8063-86994c6b6f8d
+
+	column MedewerkerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 73974ea8-4cbc-46d5-8057-6d55b7173151
+		sourceLineageTag: d4a5e117-5ad6-4d1f-bdc4-43ae92e606f3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MedewerkerKey
+
+		annotation SummarizationSetBy = User
+
+	column ArbeidspatroonKey
+		dataType: int64
+		formatString: 0
+		lineageTag: d4236d18-9dc7-4062-bd69-7becf6bc9257
+		sourceLineageTag: 572135a1-d062-49cf-9d1c-e98eb3d25511
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ArbeidspatroonKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Datum in dienst'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 78b69ee0-f091-4707-974b-3b13bc9c8f5b
+		sourceLineageTag: 7c77b56e-66d4-4ac1-b56d-a8bb8d7924b6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Datum in dienst
+
+		annotation SummarizationSetBy = User
+
+	column 'Datum uit dienst'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: e80e2559-a065-460a-96f4-6ba1a14c4b62
+		sourceLineageTag: c5a302cc-6c9a-4750-889b-6b0ce6f29ffd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Datum uit dienst
+
+		annotation SummarizationSetBy = User
+
+	column Ingangsdatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: d89d2371-0826-4027-b368-997a0a2df545
+		sourceLineageTag: 3863ded9-4584-4a85-bfe4-120edfb5f58d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Ingangsdatum
+
+		annotation SummarizationSetBy = User
+
+	column Einddatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: c44b00a9-ea54-4037-ba13-1dae0b3fd74c
+		sourceLineageTag: b129af75-1c3f-46ed-9ebf-7499d36979f0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Einddatum
+
+		annotation SummarizationSetBy = User
+
+	column 'contracturen op medewerker'
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: c8614f67-d6d9-47fb-9c6e-c33116640987
+		sourceLineageTag: ead10a3e-2348-4194-9b33-895e55130790
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: contracturen op medewerker
+
+		annotation SummarizationSetBy = User
+
+	column 'contracturen op arbeidspatroon'
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 611ef37e-e6f2-416f-b57f-7edc7b03d82a
+		sourceLineageTag: 19a455ce-3845-401b-bca4-dee739b53e3b
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: contracturen op arbeidspatroon
+
+		annotation SummarizationSetBy = User
+
+	partition 'arbeidspatroon per medewerker' = entity
+		mode: directQuery
+		source
+			entityName: arbeidspatroon per medewerker
+			expressionSource: 'DirectQuery to AS - SSM'
+

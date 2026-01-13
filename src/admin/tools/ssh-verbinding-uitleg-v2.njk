@@ -1507,9 +1507,16 @@ Match User notifica
         let currentStep = 1;
 
         function goToStep(step) {
+            console.log('goToStep called with step:', step, 'currentStep:', currentStep);
+
             // Validate before moving forward
             if (step > currentStep) {
-                if (currentStep === 1 && !validateStep1()) return;
+                console.log('Validating step 1...');
+                if (currentStep === 1 && !validateStep1()) {
+                    console.log('Validation failed');
+                    return;
+                }
+                console.log('Validation passed');
             }
 
             // Update sections
@@ -1536,8 +1543,13 @@ Match User notifica
         }
 
         function validateStep1() {
+            console.log('validateStep1 called');
+
             const serverType = document.getElementById('server-type').value;
+            console.log('serverType:', serverType);
+
             if (!serverType) {
+                console.log('No server type selected');
                 document.getElementById('server-type-error').style.display = 'block';
                 // Scroll to server type selector
                 document.getElementById('server-type-error').scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -1549,7 +1561,9 @@ Match User notifica
             const requiredFields = ['klantnaam', 'bedrijfsnaam', 'contactpersoon', 'email', 'telefoon', 'extern-ip', 'firebird-poort', 'database-pad'];
             for (const field of requiredFields) {
                 const el = document.getElementById(field);
+                console.log('Checking field:', field, 'value:', el ? el.value : 'NOT FOUND');
                 if (!el || !el.value.trim()) {
+                    console.log('Field empty or not found:', field);
                     if (el) {
                         el.focus();
                         el.reportValidity();
@@ -1558,6 +1572,7 @@ Match User notifica
                 }
                 // Also check HTML5 validity (patterns, email format, etc.)
                 if (!el.checkValidity()) {
+                    console.log('Field invalid:', field);
                     el.focus();
                     el.reportValidity();
                     return false;
@@ -1568,17 +1583,20 @@ Match User notifica
             if (serverType === 'jumpserver') {
                 const internIp = document.getElementById('intern-ip');
                 if (!internIp.value.trim()) {
+                    console.log('intern-ip empty');
                     internIp.focus();
                     internIp.reportValidity();
                     return false;
                 }
                 if (!internIp.checkValidity()) {
+                    console.log('intern-ip invalid');
                     internIp.focus();
                     internIp.reportValidity();
                     return false;
                 }
             }
 
+            console.log('All validations passed');
             return true;
         }
 

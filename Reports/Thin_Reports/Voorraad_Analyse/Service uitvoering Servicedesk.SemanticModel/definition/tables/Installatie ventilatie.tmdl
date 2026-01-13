@@ -1,0 +1,54 @@
+table 'Installatie ventilatie'
+	lineageTag: 7a8bf8b7-004a-41d1-b3d9-65f028420607
+	sourceLineageTag: a1379855-aa62-4a92-90d8-83fd6b0e71ca
+
+	column RegelKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 3db68a63-42fe-440a-b261-f0621d8078ea
+		sourceLineageTag: ede65b52-0898-4e59-8891-4c28aec2de93
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: RegelKey
+
+		annotation SummarizationSetBy = User
+
+	column ApparaatKey
+		dataType: int64
+		formatString: 0
+		lineageTag: d1d12c6a-2a83-4f0e-913d-630a108d6fb2
+		sourceLineageTag: 32f96ddb-508f-4c4f-9595-5d1a2e01b805
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: ApparaatKey
+
+		annotation SummarizationSetBy = User
+
+	column InstallatieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: db18ef8b-d8a2-424e-82b0-cec6e0803516
+		sourceLineageTag: e6366dd0-66d0-47c0-b21e-dd5206b6114a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: InstallatieKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Aantal CO2 sensoren'
+		dataType: int64
+		formatString: 0
+		lineageTag: d775f856-cb6e-496e-978f-409a3d4c98fe
+		sourceLineageTag: dd7e1566-e365-4589-b5be-18cd2e044215
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Aantal CO2 sensoren
+
+		annotation SummarizationSetBy = User
+
+	partition 'Installatie ventilatie' = entity
+		mode: directQuery
+		source
+			entityName: Installatie ventilatie
+			expressionSource: 'DirectQuery to AS - SSM'
+

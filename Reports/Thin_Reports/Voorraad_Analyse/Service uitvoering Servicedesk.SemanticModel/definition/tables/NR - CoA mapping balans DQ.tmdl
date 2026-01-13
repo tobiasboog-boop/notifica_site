@@ -1,0 +1,86 @@
+table 'NR - CoA mapping balans DQ'
+	lineageTag: 7ac511ca-1fe2-408b-926f-1d1c34ed49aa
+	sourceLineageTag: 821ec444-c7ef-4df9-8476-d6add48b11f2
+
+	column CoA_code_balans
+		dataType: int64
+		formatString: 0
+		lineageTag: e87a93ac-df49-4dea-82fc-dd9636069d14
+		sourceLineageTag: ebbd4885-58e1-4fcc-908c-1dadb3aafccd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CoA_code_balans
+
+		annotation SummarizationSetBy = User
+
+	column RubriekKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: b11c7948-e306-418f-a981-28d8fa8ea630
+		sourceLineageTag: f1f0a3f3-98f5-421a-a9c4-f1fe430fb9f0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: RubriekKey
+
+		annotation SummarizationSetBy = User
+
+	column 'Rubriek Code'
+		dataType: string
+		isNullable: false
+		lineageTag: 2e09225d-e8a4-4776-9c85-6022637ece7d
+		sourceLineageTag: de10ae0d-1a17-4bc7-9cc4-2f29562b4605
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Rubriek Code
+
+		annotation SummarizationSetBy = User
+
+	column Rubriek
+		dataType: string
+		lineageTag: da3a5fc1-5bbb-4845-978a-949306a13a34
+		sourceLineageTag: 93bfd698-d0b7-4c0b-9189-6909ef9fa730
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Rubriek
+
+		annotation SummarizationSetBy = User
+
+	column Toepassing
+		dataType: string
+		lineageTag: b8228268-a1eb-403b-88d5-a1facd542b85
+		sourceLineageTag: 232fbcc7-7b1d-49b7-9d45-1668763eccfa
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Toepassing
+
+		annotation SummarizationSetBy = User
+
+	column Tag
+		dataType: string
+		isNullable: false
+		lineageTag: d1a7919a-bc67-43a3-890a-66cc4cf84cdd
+		sourceLineageTag: f65ba2f2-6d49-4cf7-9285-9595922a6032
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Tag
+
+		annotation SummarizationSetBy = User
+
+	column Klantnummer
+		dataType: int64
+		formatString: 0
+		lineageTag: a3150cbb-0a9b-4e73-b767-b85ca3b3b5b2
+		sourceLineageTag: a13c2965-eddd-45f0-9f96-d257205f2593
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Klantnummer
+
+		annotation SummarizationSetBy = User
+
+	partition 'NR - CoA mapping balans DQ' = entity
+		mode: directQuery
+		source
+			entityName: NR - CoA mapping balans DQ
+			expressionSource: 'DirectQuery to AS - SSM'
+

@@ -1,0 +1,11 @@
+expression 'DirectQuery to AS - SSM' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/1210SM", "SSM"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: fa6481d6-3dc8-4a4b-8287-39fed881162f
+
+	annotation PBI_IncludeFutureArtifacts = True
+

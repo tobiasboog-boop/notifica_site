@@ -1,0 +1,120 @@
+table 'Bankregels openstaand'
+	lineageTag: ddf41e7c-a570-4a13-8e4e-61ab742e2082
+	sourceLineageTag: dc8be958-e098-4ab0-9a77-ae373bda2151
+
+	column BankregelKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 383a947b-2f9f-45ad-b5dd-90d6b068d5a8
+		sourceLineageTag: e3f8a4d3-e518-48ef-afbd-cb4f3d295d3f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BankregelKey
+
+		annotation SummarizationSetBy = User
+
+	column BankafschriftDocumentKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 6ab2486e-a5ae-4a2f-a1a9-896ac0ff8c1e
+		sourceLineageTag: 4e70ef44-dc7a-46d6-913c-eef617808329
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BankafschriftDocumentKey
+
+		annotation SummarizationSetBy = User
+
+	column DagboekKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b53ccc1-6800-4979-9279-4ea44bf4626e
+		sourceLineageTag: e3e12b78-1911-439d-816c-af8a9505b34f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DagboekKey
+
+		annotation SummarizationSetBy = User
+
+	column AdministratieKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 2ce80fb5-4290-4f6c-82ef-fe9d7e38ff7d
+		sourceLineageTag: 08e7e048-58ab-468a-88b2-c77466ccf42f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AdministratieKey
+
+		annotation SummarizationSetBy = User
+
+	column Boekdatum
+		dataType: dateTime
+		isHidden
+		formatString: General Number
+		lineageTag: 9569fb3c-51f3-451c-a1e0-e5cf4dda02e7
+		sourceLineageTag: b80879ee-4078-47bb-8ed7-1d00872e5d96
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Boekdatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Aanmaakdatum bankafschrift'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 387ab1a8-1aeb-4e21-af8e-0d57c03f6375
+		sourceLineageTag: 9ad2a99b-6a71-4319-9cd2-084e982c0d26
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Aanmaakdatum bankafschrift
+
+		annotation SummarizationSetBy = User
+
+	column Gereedmelddatum
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: b621dde5-4318-4ad2-91e9-3d1e1f076c59
+		sourceLineageTag: 410464d8-1073-414a-ae9c-4df983a08871
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Gereedmelddatum
+
+		annotation SummarizationSetBy = User
+
+	column 'Status Bankafschrift'
+		dataType: string
+		lineageTag: 41e584d4-19e9-498f-800d-560dc6554c0b
+		sourceLineageTag: eee3eab3-49e2-4dab-ae7e-11c7d5dccb62
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status Bankafschrift
+
+		annotation SummarizationSetBy = User
+
+	column Debetbedrag
+		dataType: double
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 4029b3ac-50e2-444f-a602-13c7be454d6b
+		sourceLineageTag: c22575a3-9580-4b0a-ba6e-767383900a3f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Debetbedrag
+
+		annotation SummarizationSetBy = User
+
+	column Creditbedrag
+		dataType: double
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 8025097f-e639-485d-adf6-b621775b9d18
+		sourceLineageTag: ce23cc7b-f4f3-4283-8ec5-dc0e334dc11d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Creditbedrag
+
+		annotation SummarizationSetBy = User
+
+	partition 'Bankregels openstaand' = entity
+		mode: directQuery
+		source
+			entityName: Bankregels openstaand
+			expressionSource: 'DirectQuery to AS - SSM'
+
