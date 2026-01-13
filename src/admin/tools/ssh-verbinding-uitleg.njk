@@ -1318,6 +1318,12 @@ Match User notifica
                 <input type="hidden" id="kaarttitel" name="kaarttitel" value="">
                 <input type="hidden" id="cardid" name="cardid" value="">
 
+                <!-- Ticket info display (indien aanwezig in URL) -->
+                <div id="ticket-info-display" class="info-box" style="display: none; margin-bottom: 24px;">
+                    <div class="icon">🎫</div>
+                    <div class="text" id="ticket-info-content"></div>
+                </div>
+
                 <!-- Contactgegevens -->
                 <div class="form-section">
                     <h3>Contactgegevens</h3>
@@ -1405,6 +1411,11 @@ Match User notifica
 
                     <div id="ps-validation" class="ps-validation" style="display: none;">
                         <div id="ps-validation-content"></div>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="check-powershell" name="check-powershell" required disabled>
+                        <label for="check-powershell">PowerShell testscript uitgevoerd en resultaat gevalideerd</label>
                     </div>
                 </div>
 
@@ -1541,6 +1552,21 @@ Match User notifica
             document.getElementById('referentie').value = referentie;
             document.getElementById('kaarttitel').value = kaarttitel;
             document.getElementById('cardid').value = cardid;
+
+            // Toon ticket info als er data is uit URL
+            if (klantnummer || referentie) {
+                const infoDisplay = document.getElementById('ticket-info-display');
+                const infoContent = document.getElementById('ticket-info-content');
+                let displayParts = [];
+                if (referentie) {
+                    displayParts.push('<strong>Referentie:</strong> ' + referentie);
+                }
+                if (klantnummer) {
+                    displayParts.push('<strong>Klantnummer:</strong> ' + klantnummer);
+                }
+                infoContent.innerHTML = displayParts.join(' &nbsp;|&nbsp; ');
+                infoDisplay.style.display = 'flex';
+            }
         });
 
         // PowerShell output validatie
@@ -1551,9 +1577,12 @@ Match User notifica
         function validatePowerShellOutput(output) {
             const validationDiv = document.getElementById('ps-validation');
             const contentDiv = document.getElementById('ps-validation-content');
+            const checkbox = document.getElementById('check-powershell');
 
             if (!output.trim()) {
                 validationDiv.style.display = 'none';
+                checkbox.disabled = true;
+                checkbox.checked = false;
                 return;
             }
 
@@ -1606,6 +1635,14 @@ Match User notifica
             contentDiv.innerHTML = html;
             validationDiv.className = `ps-validation ${status}`;
             validationDiv.style.display = 'block';
+
+            // Activeer checkbox alleen bij success of warning (geen fouten)
+            if (isValidOutput && foutCount === 0) {
+                checkbox.disabled = false;
+            } else {
+                checkbox.disabled = true;
+                checkbox.checked = false;
+            }
         }
 
         // Toon/verberg intern IP veld bij jump server
@@ -1803,6 +1840,20 @@ Match User notifica
             btnSubmit.disabled = false;
             btnSubmit.innerHTML = '📤 Verstuur formulier';
         });
+    </script>
+
+    <script>
+        // Stuur hoogte naar parent voor iframe resize (WordPress integratie)
+        function sendHeight() {
+            const height = document.body.scrollHeight;
+            window.parent.postMessage({ type: 'setHeight', height: height }, '*');
+        }
+
+        window.addEventListener('load', sendHeight);
+        window.addEventListener('resize', sendHeight);
+
+        const observer = new MutationObserver(sendHeight);
+        observer.observe(document.body, { childList: true, subtree: true });
     </script>
 </body>
 </html>
