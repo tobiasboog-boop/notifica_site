@@ -1398,6 +1398,11 @@ Match User notifica
                     <div id="ps-validation" class="ps-validation" style="display: none;">
                         <div id="ps-validation-content"></div>
                     </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="check-powershell" name="check-powershell" required disabled>
+                        <label for="check-powershell">PowerShell testscript uitgevoerd en resultaat gevalideerd</label>
+                    </div>
                 </div>
 
                 <div class="section highlight">
@@ -1470,12 +1475,29 @@ Match User notifica
         const API_URL = 'https://upc-floppy-crm-singh.trycloudflare.com/api/syntess';
 
         // ============================================================
-        // URL PARAMETERS
+        // URL PARAMETERS (met fallback voor iframe embedding)
         // ============================================================
         function parseUrlParams() {
-            let params = new URLSearchParams(window.location.search);
-            let kaarttitel = params.get('kaarttitel') || '';
-            let cardid = params.get('cardid') || '';
+            let params;
+            let kaarttitel = '';
+            let cardid = '';
+
+            // Probeer eerst eigen URL
+            params = new URLSearchParams(window.location.search);
+            kaarttitel = params.get('kaarttitel') || '';
+            cardid = params.get('cardid') || '';
+
+            // Als leeg, probeer parent URL (voor iframe)
+            if (!kaarttitel && !cardid) {
+                try {
+                    params = new URLSearchParams(window.parent.location.search);
+                    kaarttitel = params.get('kaarttitel') || '';
+                    cardid = params.get('cardid') || '';
+                } catch (e) {
+                    console.log('Kan parent URL niet lezen (cross-origin)');
+                }
+            }
+
             let klantnummer = '';
             let referentie = '';
 
@@ -1726,9 +1748,12 @@ Match User notifica
         function validatePowerShellOutput(output) {
             const validationDiv = document.getElementById('ps-validation');
             const contentDiv = document.getElementById('ps-validation-content');
+            const checkbox = document.getElementById('check-powershell');
 
             if (!output.trim()) {
                 validationDiv.style.display = 'none';
+                checkbox.disabled = true;
+                checkbox.checked = false;
                 return;
             }
 
@@ -1775,6 +1800,14 @@ Match User notifica
             contentDiv.innerHTML = html;
             validationDiv.className = `ps-validation ${status}`;
             validationDiv.style.display = 'block';
+
+            // Activeer checkbox alleen bij success of warning (geen fouten)
+            if (isValidOutput && foutCount === 0) {
+                checkbox.disabled = false;
+            } else {
+                checkbox.disabled = true;
+                checkbox.checked = false;
+            }
         }
 
         // ============================================================

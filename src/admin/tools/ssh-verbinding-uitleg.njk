@@ -1523,11 +1523,27 @@ Match User notifica
         // ============================================================
         const API_URL = 'https://upc-floppy-crm-singh.trycloudflare.com/api/syntess';
 
-        // Lees parameters uit URL
+        // Lees parameters uit URL (met fallback voor iframe embedding)
         function parseUrlParams() {
-            let params = new URLSearchParams(window.location.search);
-            let kaarttitel = params.get('kaarttitel') || '';
-            let cardid = params.get('cardid') || '';
+            let params;
+            let kaarttitel = '';
+            let cardid = '';
+
+            // Probeer eerst eigen URL
+            params = new URLSearchParams(window.location.search);
+            kaarttitel = params.get('kaarttitel') || '';
+            cardid = params.get('cardid') || '';
+
+            // Als leeg, probeer parent URL (voor iframe)
+            if (!kaarttitel && !cardid) {
+                try {
+                    params = new URLSearchParams(window.parent.location.search);
+                    kaarttitel = params.get('kaarttitel') || '';
+                    cardid = params.get('cardid') || '';
+                } catch (e) {
+                    console.log('Kan parent URL niet lezen (cross-origin)');
+                }
+            }
 
             let klantnummer = '';
             let referentie = '';
