@@ -893,8 +893,8 @@ robots: noindex, nofollow
 <body>
     <header class="header">
         <div class="header-content">
-            <h1>SSH-verbinding configureren voor Syntess</h1>
-            <p>Beveiligde toegang tot uw Firebird database voor realtime dashboards</p>
+            <h1>SSH-verbinding configureren</h1>
+            <p>Beveiligde toegang tot uw ERP-database voor realtime dashboards</p>
         </div>
     </header>
 
@@ -913,10 +913,10 @@ robots: noindex, nofollow
         <section id="waarom" class="content-section">
             <h3><span class="icon">🎯</span> Waarom hebben we een SSH-verbinding nodig?</h3>
             <p>
-                Notifica bouwt Power BI dashboards die u realtime inzicht geven in uw bedrijfsprestaties: omzet, projecten, voorraad, uren en meer. Deze dashboards tonen actuele data uit uw Syntess-systeem.
+                Notifica bouwt Power BI dashboards die u realtime inzicht geven in uw bedrijfsprestaties: omzet, projecten, voorraad, uren en meer. Deze dashboards tonen actuele data uit uw ERP-systeem (zoals Syntess).
             </p>
             <p>
-                Om dit mogelijk te maken, moet ons systeem <strong>beveiligd toegang</strong> krijgen tot uw Firebird database. We halen alleen de benodigde data op - we schrijven nooit naar uw database.
+                Om dit mogelijk te maken, moet ons systeem <strong>beveiligd toegang</strong> krijgen tot uw database. We halen alleen de benodigde data op - we schrijven nooit naar uw database.
             </p>
 
             <div class="problem-solution">
@@ -950,7 +950,7 @@ robots: noindex, nofollow
                     <div class="diagram-box">
                         <div class="icon">🖥️</div>
                         <div class="label">Uw server</div>
-                        <div class="sublabel">Syntess/Firebird</div>
+                        <div class="sublabel">ERP/Database</div>
                     </div>
                 </div>
             </div>
@@ -1141,7 +1141,7 @@ Set-Service -Name sshd -StartupType Automatic</div>
                     <div class="icon">💡</div>
                     <div class="text">
                         <strong>Aanbeveling</strong>
-                        <p>Installeer OpenSSH bij voorkeur op de server waarop Syntess/Firebird actief is, zodat u direct op de juiste server bent. Dit is echter niet verplicht (zie "jump server").</p>
+                        <p>Installeer OpenSSH bij voorkeur op de server waarop uw ERP/database actief is, zodat u direct op de juiste server bent. Dit is echter niet verplicht (zie "jump server").</p>
                     </div>
                 </div>
                 <div class="checkbox-group">
@@ -1183,7 +1183,7 @@ New-LocalUser -Name "notifica" -Password $password -PasswordNeverExpires</div>
             <!-- Stap 5: Rechten op database map -->
             <div class="step-block">
                 <h4>Stap 5: Rechten op database map (Firebird server)</h4>
-                <p>Geef de gebruiker <code>notifica</code> <strong>leesrechten</strong> op de map op de Firebird server waarin de operationele Syntess Firebird-database staat (meestal <code>atrium.fdb</code>).</p>
+                <p>Geef de gebruiker <code>notifica</code> <strong>leesrechten</strong> op de map waarin de operationele database staat (bijv. <code>atrium.fdb</code> bij Syntess).</p>
 
                 <details class="install-details">
                     <summary>Instructies rechten instellen</summary>
@@ -1197,7 +1197,7 @@ New-LocalUser -Name "notifica" -Password $password -PasswordNeverExpires</div>
                             <li>Geef minimaal <strong>Read</strong> rechten</li>
                             <li>Klik OK om op te slaan</li>
                         </ol>
-                        <p><strong>Let op:</strong> Als OpenSSH op een jump server draait, moet de gebruiker <code>notifica</code> ook op de Firebird server bestaan met dezelfde credentials, óf u moet een domeingebruiker gebruiken.</p>
+                        <p><strong>Let op:</strong> Als OpenSSH op een jump server draait, moet de gebruiker <code>notifica</code> ook op de database server bestaan met dezelfde credentials, óf u moet een domeingebruiker gebruiken.</p>
                     </div>
                 </details>
 
@@ -1328,10 +1328,10 @@ Match User notifica
                         <label for="server-type" class="required">Type installatie</label>
                         <select id="server-type" name="server-type" required>
                             <option value="">Selecteer...</option>
-                            <option value="direct">OpenSSH op de Firebird/Syntess server</option>
+                            <option value="direct">OpenSSH op de ERP/database server</option>
                             <option value="jumpserver">OpenSSH op een jump server</option>
                         </select>
-                        <div class="hint">Bij een jump server draait OpenSSH op een andere server dan de Firebird database.</div>
+                        <div class="hint">Bij een jump server draait OpenSSH op een andere server dan de database.</div>
                     </div>
 
                     <div class="form-group">
@@ -1343,24 +1343,24 @@ Match User notifica
                     </div>
 
                     <div class="form-group conditional-field" id="intern-ip-group">
-                        <label for="intern-ip" class="required">Intern IP-adres Firebird server</label>
+                        <label for="intern-ip" class="required">Intern IP-adres database server</label>
                         <input type="text" id="intern-ip" name="intern-ip"
                                pattern="^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
                                placeholder="bijv. 192.168.1.100">
-                        <div class="hint">Het interne IP-adres van de Firebird server (alleen bij jump server).</div>
+                        <div class="hint">Het interne IP-adres van de database server (alleen bij jump server).</div>
                     </div>
 
                     <div class="form-group">
-                        <label for="firebird-poort" class="required">Firebird poort</label>
+                        <label for="firebird-poort" class="required">Database poort</label>
                         <input type="number" id="firebird-poort" name="firebird-poort" value="3050" required min="1" max="65535">
-                        <div class="hint">Standaard is 3050. Controleer firebird.conf bij afwijkende poort.</div>
+                        <div class="hint">Standaard is 3050 voor Firebird. Controleer bij afwijkende configuratie.</div>
                     </div>
 
                     <div class="form-group">
                         <label for="database-pad" class="required">Database pad</label>
                         <input type="text" id="database-pad" name="database-pad" required
                                placeholder="bijv. E:\data\atrium.fdb">
-                        <div class="hint">Het volledige pad naar de Firebird database op de server.</div>
+                        <div class="hint">Het volledige pad naar de database op de server.</div>
                     </div>
                 </div>
 
@@ -1449,9 +1449,9 @@ Match User notifica
             </div>
 
             <div class="faq-item">
-                <h4>Kan Notifica wijzigingen maken in mijn Syntess?</h4>
+                <h4>Kan Notifica wijzigingen maken in mijn ERP-systeem?</h4>
                 <p>
-                    Nee. De SSH-gebruiker heeft alleen leesrechten op de database. Bovendien zijn Firebird-logins (waarmee je daadwerkelijk data kunt wijzigen) apart beveiligd. Wij kunnen uw data alleen lezen, nooit wijzigen.
+                    Nee. De SSH-gebruiker heeft alleen leesrechten op de database. Bovendien zijn database-logins (waarmee je daadwerkelijk data kunt wijzigen) apart beveiligd. Wij kunnen uw data alleen lezen, nooit wijzigen.
                 </p>
             </div>
 
@@ -1463,7 +1463,7 @@ Match User notifica
             </div>
 
             <div class="faq-item">
-                <h4>Heeft dit impact op de performance van Syntess?</h4>
+                <h4>Heeft dit impact op de performance van mijn ERP?</h4>
                 <p>
                     Minimaal. We halen data op in batches tijdens daluren en cachen de resultaten. De belasting op uw server is vergelijkbaar met een extra gebruiker die af en toe een rapport opvraagt.
                 </p>
