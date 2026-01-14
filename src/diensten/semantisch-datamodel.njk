@@ -1,24 +1,60 @@
 ---
 layout: base-notion.njk
-title: Uniform semantisch datamodel - Notifica
-description: Bundel data uit verschillende ERP-systemen in één uniform datamodel. Eén datataal voor de hele organisatie.
+title: "Uniform Semantisch Datamodel - Eén Datataal voor je Organisatie | Notifica"
+description: "Bundel data uit verschillende ERP-systemen in één uniform datamodel. Ideaal voor holdings en bedrijven met meerdere vestigingen of overnames."
 permalink: /diensten/semantisch-datamodel/
 ---
 
 <style>
 .service-content { max-width: 900px; margin: 0 auto; }
-.challenge-box { background: #fef3c7; border: 1px solid #f59e0b; border-radius: 12px; padding: 32px; margin-bottom: 32px; }
-.challenge-box h2 { color: #92400e; font-size: 20px; margin-bottom: 12px; }
-.challenge-box p { color: #78350f; line-height: 1.7; margin: 0; }
-.solution-box { background: #d1fae5; border: 1px solid #10b981; border-radius: 12px; padding: 32px; margin-bottom: 48px; }
+.pain-section { margin: 48px 0; }
+.pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px; }
+@media (max-width: 768px) { .pain-grid { grid-template-columns: 1fr; } }
+.pain-card { background: #fef3c7; border-radius: 12px; padding: 24px; }
+.pain-card h4 { color: #92400e; font-size: 16px; margin-bottom: 8px; }
+.pain-card p { color: #78350f; font-size: 14px; line-height: 1.6; margin: 0; }
+.solution-box { background: #d1fae5; border: 1px solid #10b981; border-radius: 12px; padding: 32px; margin: 32px 0; }
 .solution-box h2 { color: #065f46; font-size: 20px; margin-bottom: 12px; }
 .solution-box p { color: #064e3b; line-height: 1.7; margin: 0; }
+.visual-section { background: #f8f9fc; border-radius: 12px; padding: 40px; margin: 48px 0; text-align: center; }
+.visual-section h3 { color: var(--navy); margin-bottom: 32px; }
+.erp-flow { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.erp-sources { display: flex; flex-direction: column; gap: 8px; }
+.erp-tag { background: white; border: 1px solid #e5e7eb; padding: 10px 16px; border-radius: 8px; font-size: 14px; color: var(--navy); font-weight: 500; }
+.flow-arrow { font-size: 32px; color: var(--blue); }
+.unified-model { background: var(--navy); color: white; padding: 24px 32px; border-radius: 12px; }
+.unified-model h4 { margin: 0 0 8px 0; font-size: 18px; }
+.unified-model p { margin: 0; font-size: 14px; opacity: 0.9; }
 .benefits-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin: 48px 0; }
 @media (max-width: 700px) { .benefits-grid { grid-template-columns: 1fr; } }
 .benefit-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 28px; }
 .benefit-card h3 { color: var(--navy); font-size: 18px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
 .benefit-card h3 svg { width: 24px; height: 24px; color: var(--blue); flex-shrink: 0; }
 .benefit-card p { color: #666; line-height: 1.7; margin: 0; font-size: 15px; }
+.use-cases { margin: 64px 0; }
+.use-cases h2 { color: var(--navy); text-align: center; margin-bottom: 32px; }
+.use-case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 768px) { .use-case-grid { grid-template-columns: 1fr; } }
+.use-case-card { background: #f0f4ff; border-radius: 12px; padding: 24px; text-align: center; }
+.use-case-card h4 { color: var(--navy); margin-bottom: 8px; }
+.use-case-card p { color: #444; font-size: 14px; line-height: 1.6; margin: 0; }
+.testimonial-box { background: white; border-left: 4px solid var(--navy); border-radius: 0 12px 12px 0; padding: 32px; margin: 48px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.testimonial-box p { color: #444; font-style: italic; font-size: 17px; line-height: 1.7; margin: 0 0 16px 0; }
+.testimonial-box .author { font-weight: 600; color: var(--navy); font-style: normal; }
+.faq-section { margin: 64px 0; }
+.faq-section h2 { color: var(--navy); text-align: center; margin-bottom: 32px; }
+.faq-item { margin-bottom: 16px; }
+.faq-item details { background: white; border: 1px solid #e5e7eb; border-radius: 8px; }
+.faq-item summary { padding: 20px; font-weight: 600; cursor: pointer; color: var(--navy); }
+.faq-item p { padding: 0 20px 20px; color: #444; line-height: 1.7; margin: 0; }
+.related-services { margin: 64px 0; }
+.related-services h3 { color: var(--navy); text-align: center; margin-bottom: 24px; }
+.related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 768px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+.related-card { background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; text-align: center; text-decoration: none; transition: all 0.2s; }
+.related-card:hover { border-color: var(--navy); transform: translateY(-2px); }
+.related-card h4 { color: var(--navy); font-size: 15px; margin: 0 0 4px 0; }
+.related-card p { color: #666; font-size: 13px; margin: 0; }
 .service-cta { text-align: center; padding: 48px; background: var(--navy); border-radius: 12px; margin-top: 48px; }
 .service-cta h3 { color: white; margin-bottom: 16px; }
 .service-cta p { color: rgba(255,255,255,0.8); margin-bottom: 24px; }
@@ -30,7 +66,7 @@ permalink: /diensten/semantisch-datamodel/
         <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
             <div class="badge">Technologie</div>
             <h1>Uniform semantisch datamodel</h1>
-            <p class="subtitle">Eén datataal voor de hele organisatie</p>
+            <p class="subtitle">Eén datataal voor je hele organisatie, ongeacht welke systemen je gebruikt</p>
         </div>
     </div>
 </section>
@@ -39,50 +75,180 @@ permalink: /diensten/semantisch-datamodel/
     <div class="container">
         <div class="service-content">
 
-            <div class="challenge-box">
-                <h2>De uitdaging</h2>
-                <p>Bij overnames ontstaan vaak allerlei databronnen, verschillende formats en tegenstrijdige definities doordat bedrijven werken met verschillende ERP-systemen. Dit zorgt voor tijdrovend handwerk, foutgevoelige rapportages en weinig overzicht in de prestaties van de groep. Ook audits en besluitvorming worden onnodig ingewikkeld.</p>
+            <!-- Pain points -->
+            <div class="pain-section">
+                <h2 style="color: var(--navy); text-align: center;">Herken je dit?</h2>
+                <div class="pain-grid">
+                    <div class="pain-card">
+                        <h4>Verschillende systemen, andere definities</h4>
+                        <p>Na een overname werkt elk bedrijf met een ander ERP. 'Omzet' betekent in het ene systeem iets anders dan in het andere. Vergelijken is onmogelijk.</p>
+                    </div>
+                    <div class="pain-card">
+                        <h4>Eindeloos handwerk bij consolidatie</h4>
+                        <p>Maandelijkse groepsrapportages kosten dagen werk. Data kopiëren, formats aanpassen, intercompany elimineren - en dan nog kloppen de cijfers niet.</p>
+                    </div>
+                    <div class="pain-card">
+                        <h4>Geen groepsoverzicht</h4>
+                        <p>Je hebt geen idee hoe de groep als geheel presteert. Elke vestiging rapporteert op z'n eigen manier en tijdstip. Een totaalbeeld ontbreekt.</p>
+                    </div>
+                </div>
             </div>
 
+            <!-- Solution -->
             <div class="solution-box">
-                <h2>De oplossing van Notifica</h2>
-                <p>Notifica bundelt al je data uit uiteenlopende ERP- en financiële systemen (zoals Syntess, ENK, Exact, AFAS en meer) in één uniform datamodel. Alle gegevens worden automatisch gecategoriseerd volgens dezelfde logica, waardoor je direct een betrouwbare basis hebt voor rapportages en analyses.</p>
+                <h2>De oplossing: één universeel datamodel</h2>
+                <p>Notifica bundelt al je data uit uiteenlopende ERP- en financiële systemen (Syntess, ACTO, Admicom, ENK, Exact, AFAS, 4PS en meer) in één uniform datamodel. Alle gegevens worden automatisch gecategoriseerd volgens dezelfde logica, waardoor je direct een betrouwbare basis hebt voor groepsrapportages en analyses.</p>
             </div>
 
+            <!-- Visual -->
+            <div class="visual-section">
+                <h3>Van chaos naar eenheid</h3>
+                <div class="erp-flow">
+                    <div class="erp-sources">
+                        <span class="erp-tag">Syntess</span>
+                        <span class="erp-tag">ACTO</span>
+                        <span class="erp-tag">Admicom</span>
+                        <span class="erp-tag">ENK</span>
+                        <span class="erp-tag">Exact</span>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="unified-model">
+                        <h4>Notifica Datamodel</h4>
+                        <p>Eén bron van waarheid</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="erp-sources">
+                        <span class="erp-tag">Groepsrapportage</span>
+                        <span class="erp-tag">Consolidatie</span>
+                        <span class="erp-tag">Benchmarking</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefits -->
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <h3>
                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                         Eén heldere datataal
                     </h3>
-                    <p>Met Notifica spreek je binnen het hele bedrijf één 'datataal'. Geen verwarring meer door verschillende benamingen: iedereen weet precies waar de cijfers over gaan en interne communicatie verloopt een stuk makkelijker.</p>
+                    <p>Met Notifica spreek je binnen het hele bedrijf één 'datataal'. Geen verwarring meer door verschillende benamingen: iedereen weet precies waar de cijfers over gaan.</p>
                 </div>
 
                 <div class="benefit-card">
                     <h3>
                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                        Flexibel & toekomstbestendig
+                        Toekomstbestendig
                     </h3>
-                    <p>Of je nu werkt met één of twintig systemen: dankzij onze semantische laag sluit je eenvoudig nieuwe bedrijfssoftware aan zonder je rapportagestructuur te wijzigen. Zo blijft je data-infrastructuur flexibel en klaar voor de toekomst.</p>
+                    <p>Nieuwe overname? Ander ERP-systeem? Geen probleem. Dankzij onze semantische laag sluit je eenvoudig nieuwe bronnen aan zonder je rapportagestructuur te wijzigen.</p>
                 </div>
 
                 <div class="benefit-card">
                     <h3>
                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                        Altijd kloppende consolidatie
+                        Automatische consolidatie
                     </h3>
-                    <p>Alle entiteiten komen samen in één overzichtelijk dashboard. Interne leveringen en verrekeningen worden automatisch geëlimineerd, dus je groepsresultaat is direct foutloos en volledig up-to-date.</p>
+                    <p>Alle entiteiten komen samen in één overzichtelijk dashboard. Interne leveringen en intercompany-verrekeningen worden automatisch geëlimineerd.</p>
                 </div>
 
                 <div class="benefit-card">
                     <h3>
                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                        Continu inzicht & schaalbaarheid
+                        Altijd actueel
                     </h3>
-                    <p>Je hoeft nooit meer handmatig data te importeren of exporteren. Notifica verwerkt alle mutaties automatisch, zodat je dashboards altijd actueel zijn. Groei je van tien naar honderd bedrijven? Geen probleem – het platform schaalt moeiteloos mee.</p>
+                    <p>Geen handmatige imports of exports. Notifica verwerkt alle mutaties automatisch. Je groepsrapportage is elke ochtend up-to-date, zonder dat iemand er iets voor hoeft te doen.</p>
                 </div>
             </div>
 
+            <!-- Use cases -->
+            <div class="use-cases">
+                <h2>Ideaal voor</h2>
+                <div class="use-case-grid">
+                    <div class="use-case-card">
+                        <h4>Holdings & Private Equity</h4>
+                        <p>Meerdere portfolio-bedrijven met verschillende systemen? Krijg grip op de hele groep vanuit één dashboard.</p>
+                    </div>
+                    <div class="use-case-card">
+                        <h4>Overnames & Fusies</h4>
+                        <p>Nieuwe acquisitie snel integreren? Ons datamodel sluit aan op elk ERP-systeem, zonder migratie.</p>
+                    </div>
+                    <div class="use-case-card">
+                        <h4>Multi-vestiging bedrijven</h4>
+                        <p>Vestigingen die historisch met andere software werken? Vergelijk ze alsof ze allemaal hetzelfde systeem gebruiken.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial -->
+            <div class="testimonial-box">
+                <p>"Na drie overnames hadden we vier verschillende ERP-systemen. Dankzij het Notifica datamodel hebben we nu eindelijk één groepsrapportage. De CFO ziet in één oogopslag hoe elke vestiging presteert - zonder Excel-acrobatiek."</p>
+                <span class="author">— Controller bij een installatieholding met 4 werkmaatschappijen</span>
+            </div>
+
+            <!-- FAQ -->
+            <div class="faq-section">
+                <h2>Veelgestelde vragen</h2>
+
+                <div class="faq-item">
+                    <details>
+                        <summary>Met welke ERP-systemen kan het datamodel koppelen?</summary>
+                        <p>We hebben standaard koppelingen voor Syntess, ACTO, Admicom, ENK, BouwInfosys, 4PS, Exact, AFAS en meer. Staat jouw systeem er niet bij? Neem contact op - we bouwen regelmatig nieuwe koppelingen.</p>
+                    </details>
+                </div>
+
+                <div class="faq-item">
+                    <details>
+                        <summary>Moeten we overstappen naar één ERP-systeem?</summary>
+                        <p>Nee, dat is juist het mooie. Elke vestiging kan blijven werken met het systeem dat ze kennen. Ons datamodel haalt de data op en vertaalt het naar een uniforme structuur.</p>
+                    </details>
+                </div>
+
+                <div class="faq-item">
+                    <details>
+                        <summary>Hoe lang duurt het om een nieuw systeem aan te sluiten?</summary>
+                        <p>Voor standaard koppelingen is dat vaak binnen 1-2 weken geregeld. Voor maatwerk-koppelingen hangt het af van de complexiteit van het bronsysteem.</p>
+                    </details>
+                </div>
+
+                <div class="faq-item">
+                    <details>
+                        <summary>Hoe zit het met intercompany-eliminaties?</summary>
+                        <p>Die worden automatisch verwerkt. Je geeft aan welke entiteiten intercompany-relaties hebben, en het datamodel elimineert de onderlinge transacties bij de groepsconsolidatie.</p>
+                    </details>
+                </div>
+
+                <div class="faq-item">
+                    <details>
+                        <summary>Kunnen we eigen definities toevoegen aan het datamodel?</summary>
+                        <p>Ja. Het standaard datamodel bevat de meest voorkomende KPI's en definities voor de installatiebranche. Daarnaast kun je eigen measures en berekeningen toevoegen die specifiek zijn voor jouw organisatie.</p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Related services -->
+            <div class="related-services">
+                <h3>Gerelateerde diensten</h3>
+                <div class="related-grid">
+                    <a href="{{ '/diensten/datagedreven-werken/' | url }}" class="related-card">
+                        <h4>Datagedreven werken</h4>
+                        <p>Van gevoel naar feiten</p>
+                    </a>
+                    <a href="{{ '/diensten/databeheer/' | url }}" class="related-card">
+                        <h4>Databeheer</h4>
+                        <p>Volledig ontzorgd</p>
+                    </a>
+                    <a href="{{ '/diensten/datamigratie/' | url }}" class="related-card">
+                        <h4>Datamigratie</h4>
+                        <p>Zorgeloos overstappen</p>
+                    </a>
+                    <a href="{{ '/prijzen/' | url }}" class="related-card">
+                        <h4>Prijzen</h4>
+                        <p>Transparante tarieven</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- CTA -->
             <div class="service-cta">
                 <h3>Interesse in de technische details?</h3>
                 <p>Onze experts leggen graag uit hoe ons datamodel werkt en wat het voor jouw organisatie kan betekenen.</p>

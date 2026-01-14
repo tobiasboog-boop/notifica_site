@@ -1,21 +1,35 @@
 ---
 layout: base-notion.njk
-title: Volledig ontzorgd databeheer - de alles-in-1 oplossing - Notifica
-description: Kies voor ons abonnement voor databeheer en krijg volledige support, monitoring en actuele inzichten zonder zorgen.
+title: "Volledig Ontzorgd Databeheer - BI als Service voor Installatiebedrijven | Notifica"
+description: "Kies voor ons alles-in-1 databeheer abonnement. Monitoring, support, updates en backups inbegrepen. Geen verrassingen, geen gedoe."
 permalink: /diensten/databeheer/
 ---
 
 <style>
 .service-content { max-width: 900px; margin: 0 auto; }
-.service-intro { margin-bottom: 48px; }
-.service-intro p { color: #444; font-size: 17px; line-height: 1.8; }
+.pain-section { margin: 48px 0; }
+.pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px; }
+@media (max-width: 768px) { .pain-grid { grid-template-columns: 1fr; } }
+.pain-card { background: #fef3c7; border-radius: 12px; padding: 24px; }
+.pain-card h4 { color: #92400e; font-size: 16px; margin-bottom: 8px; }
+.pain-card p { color: #78350f; font-size: 14px; line-height: 1.6; margin: 0; }
+.solution-intro { text-align: center; padding: 32px; background: #f0fdf4; border-radius: 12px; margin: 32px 0; }
+.solution-intro p { font-size: 18px; color: #065f46; max-width: 700px; margin: 0 auto; line-height: 1.7; }
 .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin: 48px 0; }
 .benefit-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 28px; }
 .benefit-card h3 { color: var(--navy); font-size: 18px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
 .benefit-card h3 svg { width: 24px; height: 24px; color: var(--blue); }
 .benefit-card p { color: #666; line-height: 1.6; margin: 0; font-size: 15px; }
-.testimonial-box { background: #f8f9fc; border-left: 4px solid var(--navy); border-radius: 0 12px 12px 0; padding: 32px; margin: 48px 0; }
-.testimonial-box p { color: #444; font-style: italic; font-size: 18px; line-height: 1.7; margin: 0; }
+.included-section { background: #f8f9fc; border-radius: 12px; padding: 40px; margin: 48px 0; }
+.included-section h3 { color: var(--navy); text-align: center; margin-bottom: 32px; }
+.included-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 700px; margin: 0 auto; }
+@media (max-width: 600px) { .included-grid { grid-template-columns: 1fr; } }
+.included-item { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: white; border-radius: 8px; }
+.included-item svg { width: 20px; height: 20px; color: #059669; flex-shrink: 0; }
+.included-item span { color: #444; font-size: 15px; }
+.testimonial-box { background: white; border-left: 4px solid var(--navy); border-radius: 0 12px 12px 0; padding: 32px; margin: 48px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.testimonial-box p { color: #444; font-style: italic; font-size: 17px; line-height: 1.7; margin: 0 0 16px 0; }
+.testimonial-box .author { font-weight: 600; color: var(--navy); font-style: normal; }
 .migration-section { margin: 64px 0; }
 .migration-section h2 { color: var(--navy); text-align: center; margin-bottom: 40px; }
 .migration-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
@@ -24,6 +38,20 @@ permalink: /diensten/databeheer/
 .migration-step .number { width: 48px; height: 48px; background: var(--navy); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 600; margin: 0 auto 16px; }
 .migration-step h4 { color: var(--navy); margin-bottom: 8px; font-size: 16px; }
 .migration-step p { color: #666; font-size: 14px; line-height: 1.5; }
+.faq-section { margin: 64px 0; }
+.faq-section h2 { color: var(--navy); text-align: center; margin-bottom: 32px; }
+.faq-item { margin-bottom: 16px; }
+.faq-item details { background: white; border: 1px solid #e5e7eb; border-radius: 8px; }
+.faq-item summary { padding: 20px; font-weight: 600; cursor: pointer; color: var(--navy); }
+.faq-item p { padding: 0 20px 20px; color: #444; line-height: 1.7; margin: 0; }
+.related-services { margin: 64px 0; }
+.related-services h3 { color: var(--navy); text-align: center; margin-bottom: 24px; }
+.related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 768px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+.related-card { background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; text-align: center; text-decoration: none; transition: all 0.2s; }
+.related-card:hover { border-color: var(--navy); transform: translateY(-2px); }
+.related-card h4 { color: var(--navy); font-size: 15px; margin: 0 0 4px 0; }
+.related-card p { color: #666; font-size: 13px; margin: 0; }
 .conclusion-box { background: linear-gradient(135deg, var(--navy), var(--blue)); border-radius: 12px; padding: 48px; margin-top: 48px; text-align: center; }
 .conclusion-box h3 { color: white; margin-bottom: 16px; font-size: 24px; }
 .conclusion-box p { color: rgba(255,255,255,0.9); margin-bottom: 24px; line-height: 1.7; max-width: 600px; margin-left: auto; margin-right: auto; }
@@ -35,7 +63,7 @@ permalink: /diensten/databeheer/
         <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
             <div class="badge">Diensten</div>
             <h1>Volledig ontzorgd databeheer</h1>
-            <p class="subtitle">De alles-in-1 oplossing voor zorgeloos inzicht</p>
+            <p class="subtitle">BI als service: wij regelen alles, jij focust op je bedrijf</p>
         </div>
     </div>
 </section>
@@ -44,59 +72,124 @@ permalink: /diensten/databeheer/
     <div class="container">
         <div class="service-content">
 
-            <div class="service-intro">
-                <p>
-                    Onze aanpak combineert proactieve monitoring, deskundige support en automatische optimalisaties, zodat je bedrijfsdata altijd up-to-date, veilig en betrouwbaar blijft. Bovendien zijn storingen en performance-issues verleden tijd dankzij real-time signalering en snelle interventies door ons supportteam.
-                </p>
-                <p style="margin-top: 16px;">
-                    Met volledig ontzorgd databeheer ben je verzekerd van een stabiel, schaalbaar en toekomstbestendig platform dat met je organisatie meegroeit.
-                </p>
+            <!-- Pain points -->
+            <div class="pain-section">
+                <h2 style="color: var(--navy); text-align: center;">Herken je dit?</h2>
+                <div class="pain-grid">
+                    <div class="pain-card">
+                        <h4>Geen tijd voor onderhoud</h4>
+                        <p>Je hebt dashboards, maar niemand die ze bijhoudt. Updates, foutmeldingen, nieuwe wensen - het blijft liggen.</p>
+                    </div>
+                    <div class="pain-card">
+                        <h4>Storingen op het verkeerde moment</h4>
+                        <p>Net als je de cijfers nodig hebt voor een belangrijk overleg, werkt de koppeling niet. En dan is er niemand die het kan fixen.</p>
+                    </div>
+                    <div class="pain-card">
+                        <h4>Onvoorspelbare kosten</h4>
+                        <p>Elke aanpassing of uitbreiding betekent een nieuwe factuur. Je weet nooit wat het uiteindelijk gaat kosten.</p>
+                    </div>
+                </div>
             </div>
 
+            <!-- Solution intro -->
+            <div class="solution-intro">
+                <p><strong>Met volledig ontzorgd databeheer is dat verleden tijd.</strong> Wij nemen het complete beheer van je BI-omgeving uit handen, inclusief monitoring, support en doorontwikkeling. Eén vast bedrag per maand, geen verrassingen.</p>
+            </div>
+
+            <!-- Benefits -->
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <h3>
                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
-                        Altijd actueel, altijd zorgeloos
+                        Altijd actuele data
                     </h3>
-                    <p>Je data wordt continu gesynchroniseerd. Geen handmatig werk, geen verouderde cijfers.</p>
+                    <p>Je data wordt elke nacht automatisch gesynchroniseerd. Geen handmatig werk, geen verouderde cijfers. Elke ochtend verse inzichten.</p>
                 </div>
                 <div class="benefit-card">
                     <h3>
                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                        Alles geregeld in één abonnement
+                        Alles-in-1 abonnement
                     </h3>
-                    <p>Beheer, monitoring en support zijn volledig inbegrepen. Geen verrassingen, geen extra kosten.</p>
+                    <p>Beheer, monitoring, support en updates zijn volledig inbegrepen. Geen verrassingen op de factuur, geen extra kosten voor kleine aanpassingen.</p>
                 </div>
                 <div class="benefit-card">
                     <h3>
                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                        Flexibel, betrouwbaar en schaalbaar
+                        Schaalbaar platform
                     </h3>
-                    <p>Het platform groeit mee met je organisatie. Van 10 tot 200 gebruikers zonder performance-verlies.</p>
+                    <p>Van 10 tot 200 gebruikers zonder performance-verlies. Het platform groeit mee met je organisatie zonder dat je iets hoeft te doen.</p>
                 </div>
                 <div class="benefit-card">
                     <h3>
                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        Snel schakelen bij incidenten
+                        Proactieve monitoring
                     </h3>
-                    <p>Real-time signalering en snelle interventies door ons supportteam. Problemen worden opgelost voordat je ze merkt.</p>
+                    <p>We signaleren en lossen problemen op voordat je ze merkt. Real-time alerts zorgen ervoor dat storingen binnen minuten worden aangepakt.</p>
                 </div>
                 <div class="benefit-card">
                     <h3>
                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                        Eén aanspreekpunt voor alles
+                        Direct contact met experts
                     </h3>
-                    <p>Geen callcenter, maar echte experts. Direct contact met ons team bij vragen of problemen.</p>
+                    <p>Geen callcenter of ticketsysteem waar je weken op moet wachten. Direct contact met ons team dat je omgeving door en door kent.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        Veilig en AVG-compliant
+                    </h3>
+                    <p>Je data staat veilig in de Microsoft Azure cloud. Versleutelde verbindingen, dagelijkse backups en een getekende verwerkersovereenkomst.</p>
                 </div>
             </div>
 
-            <div class="testimonial-box">
-                <p>"Sinds de overstap werkt onze dataflow vlekkeloos en hebben we altijd direct inzicht."</p>
+            <!-- What's included -->
+            <div class="included-section">
+                <h3>Wat zit er in het abonnement?</h3>
+                <div class="included-grid">
+                    <div class="included-item">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Dagelijkse datasynchronisatie</span>
+                    </div>
+                    <div class="included-item">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>24/7 monitoring</span>
+                    </div>
+                    <div class="included-item">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Support via mail en telefoon</span>
+                    </div>
+                    <div class="included-item">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Alle updates inbegrepen</span>
+                    </div>
+                    <div class="included-item">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Dagelijkse backups</span>
+                    </div>
+                    <div class="included-item">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Kleine aanpassingen</span>
+                    </div>
+                    <div class="included-item">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>ERP-updates verwerkt</span>
+                    </div>
+                    <div class="included-item">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Kwartaalreview met consultant</span>
+                    </div>
+                </div>
             </div>
 
+            <!-- Testimonial -->
+            <div class="testimonial-box">
+                <p>"Sinds we zijn overgestapt naar Notifica werkt onze dataflow vlekkeloos. Vroeger waren we uren kwijt aan storingen oplossen - nu hoeven we nergens meer over na te denken. Het werkt gewoon."</p>
+                <span class="author">— Directeur van een installatiebedrijf met 120 medewerkers</span>
+            </div>
+
+            <!-- Migration steps -->
             <div class="migration-section">
-                <h2>Eenvoudige migratie in vier stappen</h2>
+                <h2>Van start in 4 stappen</h2>
                 <div class="migration-steps">
                     <div class="migration-step">
                         <div class="number">1</div>
@@ -106,7 +199,7 @@ permalink: /diensten/databeheer/
                     <div class="migration-step">
                         <div class="number">2</div>
                         <h4>Koppeling</h4>
-                        <p>We maken een beveiligde verbinding met je bedrijfssoftware.</p>
+                        <p>We maken een beveiligde verbinding met je ERP-systeem.</p>
                     </div>
                     <div class="migration-step">
                         <div class="number">3</div>
@@ -121,9 +214,73 @@ permalink: /diensten/databeheer/
                 </div>
             </div>
 
+            <!-- FAQ -->
+            <div class="faq-section">
+                <h2>Veelgestelde vragen</h2>
+
+                <div class="faq-item">
+                    <details>
+                        <summary>Wat kost het databeheer abonnement?</summary>
+                        <p>De kosten hangen af van het aantal gebruikers en de complexiteit van je omgeving. Bekijk onze <a href="{{ '/prijzen/' | url }}">prijzenpagina</a> voor een indicatie, of vraag een offerte aan voor exacte tarieven.</p>
+                    </details>
+                </div>
+
+                <div class="faq-item">
+                    <details>
+                        <summary>Wat als ik een grotere aanpassing nodig heb?</summary>
+                        <p>Kleine aanpassingen (nieuwe filter, extra kolom, aangepaste berekening) zijn inbegrepen. Voor grotere projecten zoals een compleet nieuw dashboard maken we een aparte offerte. Maar je weet altijd vooraf wat het kost.</p>
+                    </details>
+                </div>
+
+                <div class="faq-item">
+                    <details>
+                        <summary>Hoe snel reageren jullie bij storingen?</summary>
+                        <p>We monitoren 24/7 en pakken kritieke storingen direct op. In de meeste gevallen is een probleem opgelost voordat je het zelf merkt. Voor vragen kun je tijdens kantooruren bellen of mailen - we reageren binnen 4 uur.</p>
+                    </details>
+                </div>
+
+                <div class="faq-item">
+                    <details>
+                        <summary>Kan ik het abonnement maandelijks opzeggen?</summary>
+                        <p>We werken met een minimale looptijd van 12 maanden. Daarna kun je maandelijks opzeggen met een opzegtermijn van 1 maand. Je data en rapporten blijven van jou.</p>
+                    </details>
+                </div>
+
+                <div class="faq-item">
+                    <details>
+                        <summary>Werkt dit ook als ik al Power BI heb?</summary>
+                        <p>Zeker. We kunnen je bestaande Power BI omgeving overnemen en verbeteren, of je kunt overstappen naar onze beheerde omgeving. We bekijken samen wat het beste past bij jouw situatie.</p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Related services -->
+            <div class="related-services">
+                <h3>Gerelateerde diensten</h3>
+                <div class="related-grid">
+                    <a href="{{ '/diensten/datagedreven-werken/' | url }}" class="related-card">
+                        <h4>Datagedreven werken</h4>
+                        <p>Van gevoel naar feiten</p>
+                    </a>
+                    <a href="{{ '/diensten/semantisch-datamodel/' | url }}" class="related-card">
+                        <h4>Datamodel</h4>
+                        <p>Eén datataal</p>
+                    </a>
+                    <a href="{{ '/diensten/zelf-rapporten-bouwen/' | url }}" class="related-card">
+                        <h4>Training</h4>
+                        <p>Zelf rapporten bouwen</p>
+                    </a>
+                    <a href="{{ '/prijzen/' | url }}" class="related-card">
+                        <h4>Prijzen</h4>
+                        <p>Transparante tarieven</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- CTA -->
             <div class="conclusion-box">
-                <h3>Jouw zorgeloze BI-ervaring</h3>
-                <p>Met één BI-abonnement ben je klaar voor de toekomst. Beheer, monitoring en support zijn volledig geregeld, zodat jij je kunt richten op wat echt belangrijk is: het halen van inzichten uit je data. Geen gedoe meer met storingen, updates of extra kosten. Gewoon zorgeloos inzicht, altijd.</p>
+                <h3>Klaar voor zorgeloos databeheer?</h3>
+                <p>Met één BI-abonnement ben je klaar voor de toekomst. Beheer, monitoring en support zijn volledig geregeld, zodat jij je kunt richten op wat echt belangrijk is.</p>
                 <a href="#contact" class="btn" data-pipedrive-form="demo">Plan een demo</a>
             </div>
 

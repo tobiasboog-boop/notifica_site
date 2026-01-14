@@ -1,12 +1,18 @@
 ---
 layout: base-notion.njk
-title: "Datagedreven Werken: in 4 Stappen naar datagedreven groei - Notifica"
-description: Ontdek hoe datagedreven werken uw installatiebedrijf sneller inzicht en meer groei brengt. Van rapportage tot continue verbetering.
+title: "Datagedreven Werken voor Installatiebedrijven - Van Gevoel naar Feiten | Notifica"
+description: "Ontdek hoe datagedreven werken jouw installatiebedrijf transformeert. Van Excel-chaos naar real-time inzicht. Bespaar 12+ uur per week op rapportages."
 permalink: /diensten/datagedreven-werken/
 ---
 
 <style>
 .service-content { max-width: 900px; margin: 0 auto; }
+.pain-section { margin: 48px 0; }
+.pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px; }
+@media (max-width: 768px) { .pain-grid { grid-template-columns: 1fr; } }
+.pain-card { background: #fef3c7; border-radius: 12px; padding: 24px; }
+.pain-card h4 { color: #92400e; font-size: 16px; margin-bottom: 8px; }
+.pain-card p { color: #78350f; font-size: 14px; line-height: 1.6; margin: 0; }
 .steps-timeline { margin: 64px 0; }
 .step-item { display: grid; grid-template-columns: 80px 1fr; gap: 24px; margin-bottom: 48px; position: relative; }
 .step-item:not(:last-child)::after { content: ''; position: absolute; left: 40px; top: 80px; bottom: -24px; width: 2px; background: linear-gradient(to bottom, var(--navy), var(--blue)); }
@@ -14,6 +20,31 @@ permalink: /diensten/datagedreven-werken/
 .step-content { padding-top: 8px; }
 .step-content h3 { color: var(--navy); font-size: 24px; margin-bottom: 16px; }
 .step-content p { color: #444; line-height: 1.8; font-size: 16px; }
+.step-content ul { margin-top: 12px; padding-left: 20px; }
+.step-content li { color: #444; line-height: 1.7; margin-bottom: 8px; }
+.results-section { background: #f0fdf4; border-radius: 12px; padding: 40px; margin: 48px 0; }
+.results-section h3 { color: #065f46; text-align: center; margin-bottom: 32px; }
+.results-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+@media (max-width: 768px) { .results-grid { grid-template-columns: repeat(2, 1fr); } }
+.result-item .number { font-size: 36px; font-weight: 700; color: #059669; }
+.result-item .label { font-size: 14px; color: #065f46; margin-top: 4px; }
+.testimonial-box { background: #f8f9fc; border-left: 4px solid var(--navy); border-radius: 0 12px 12px 0; padding: 32px; margin: 48px 0; }
+.testimonial-box p { color: #444; font-style: italic; font-size: 17px; line-height: 1.7; margin: 0 0 16px 0; }
+.testimonial-box .author { font-weight: 600; color: var(--navy); font-style: normal; }
+.faq-section { margin: 64px 0; }
+.faq-section h2 { color: var(--navy); text-align: center; margin-bottom: 32px; }
+.faq-item { margin-bottom: 16px; }
+.faq-item details { background: white; border: 1px solid #e5e7eb; border-radius: 8px; }
+.faq-item summary { padding: 20px; font-weight: 600; cursor: pointer; color: var(--navy); }
+.faq-item p { padding: 0 20px 20px; color: #444; line-height: 1.7; margin: 0; }
+.related-services { margin: 64px 0; }
+.related-services h3 { color: var(--navy); text-align: center; margin-bottom: 24px; }
+.related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 768px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+.related-card { background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; text-align: center; text-decoration: none; transition: all 0.2s; }
+.related-card:hover { border-color: var(--navy); transform: translateY(-2px); }
+.related-card h4 { color: var(--navy); font-size: 15px; margin: 0 0 4px 0; }
+.related-card p { color: #666; font-size: 13px; margin: 0; }
 .service-cta { text-align: center; padding: 48px; background: var(--navy); border-radius: 12px; margin-top: 48px; }
 .service-cta h3 { color: white; margin-bottom: 16px; }
 .service-cta p { color: rgba(255,255,255,0.8); margin-bottom: 24px; }
@@ -29,8 +60,8 @@ permalink: /diensten/datagedreven-werken/
     <div class="container">
         <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
             <div class="badge">Diensten</div>
-            <h1>In vier stappen naar datagedreven succes</h1>
-            <p class="subtitle">Van inzicht naar actie, van meten naar verbeteren</p>
+            <h1>Datagedreven werken voor installatiebedrijven</h1>
+            <p class="subtitle">Van onderbuikgevoel naar beslissen op feiten</p>
         </div>
     </div>
 </section>
@@ -39,12 +70,69 @@ permalink: /diensten/datagedreven-werken/
     <div class="container">
         <div class="service-content">
 
+            <!-- Pain points -->
+            <div class="pain-section">
+                <h2 style="color: var(--navy); text-align: center;">Herken je dit?</h2>
+                <div class="pain-grid">
+                    <div class="pain-card">
+                        <h4>Eindeloos Excel-werk</h4>
+                        <p>Uren bezig met data uit verschillende systemen kopiëren en plakken. Tegen de tijd dat je rapport af is, zijn de cijfers al verouderd.</p>
+                    </div>
+                    <div class="pain-card">
+                        <h4>Discussies over cijfers</h4>
+                        <p>"Mijn Excel zegt iets anders." Iedereen heeft eigen spreadsheets met verschillende uitkomsten. Wie heeft er gelijk?</p>
+                    </div>
+                    <div class="pain-card">
+                        <h4>Pas achteraf inzicht</h4>
+                        <p>Je weet pas na maanden of een project winstgevend was. Bijsturen is dan niet meer mogelijk - het geld is al uitgegeven.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Intro text -->
+            <div style="text-align: center; padding: 32px; background: #f0f4ff; border-radius: 12px; margin: 32px 0;">
+                <p style="font-size: 18px; color: var(--navy); max-width: 700px; margin: 0 auto; line-height: 1.7;">
+                    <strong>Datagedreven werken is geen luxe meer, het is noodzaak.</strong> Installatiebedrijven die beslissen op basis van actuele data groeien sneller, maken minder fouten en hebben lagere kosten.
+                </p>
+            </div>
+
+            <!-- Results -->
+            <div class="results-section">
+                <h3>Wat datagedreven werken oplevert</h3>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="number">12+</div>
+                        <div class="label">uur per week bespaard</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="number">1</div>
+                        <div class="label">versie van de waarheid</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="number">Real-time</div>
+                        <div class="label">inzicht in KPI's</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="number">100%</div>
+                        <div class="label">vertrouwen in cijfers</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Steps -->
+            <h2 style="color: var(--navy); text-align: center; margin: 64px 0 32px;">Onze aanpak in 4 stappen</h2>
+
             <div class="steps-timeline">
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>Inzicht & Rapportage</h3>
-                        <p>We starten met een intake om je informatiebehoefte en strategische doelstellingen scherp te krijgen. Met best-practice rapportages ontwikkelen we dashboards die direct antwoord geven op je belangrijkste vragen. Dit levert snel inzicht in KPI's, knelpunten en groeikansen, zodat je team meteen weet waar de prioriteiten liggen.</p>
+                        <p>We starten met een intake om je informatiebehoefte en strategische doelstellingen scherp te krijgen. Met best-practice rapportages ontwikkelen we dashboards die direct antwoord geven op je belangrijkste vragen.</p>
+                        <ul>
+                            <li>Intake gesprek met directie en key-users</li>
+                            <li>Koppeling met je ERP-systeem (Syntess, ACTO, Admicom, etc.)</li>
+                            <li>Standaard dashboards live binnen 1 dag</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -52,7 +140,12 @@ permalink: /diensten/datagedreven-werken/
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h3>Implementatie & Verankering</h3>
-                        <p>Na de eerste inzichten zorgen we ervoor dat datagedreven werken wordt verankerd in je organisatie. We trainen je team, implementeren processen en zorgen dat iedereen met dezelfde cijfers werkt. Zo wordt data geen eenmalige exercitie, maar een vast onderdeel van de dagelijkse bedrijfsvoering.</p>
+                        <p>Na de eerste inzichten zorgen we ervoor dat datagedreven werken wordt verankerd in je organisatie. We trainen je team, implementeren processen en zorgen dat iedereen met dezelfde cijfers werkt.</p>
+                        <ul>
+                            <li>Training voor alle gebruikers</li>
+                            <li>Werkafspraken rondom data en rapportages</li>
+                            <li>Dashboards geïntegreerd in weekoverleg</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -60,7 +153,12 @@ permalink: /diensten/datagedreven-werken/
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h3>Meten & Sturen</h3>
-                        <p>Continue monitoring is essentieel om de effectiviteit van je datagedreven werkwijze te waarborgen. Met onze volwassenheidsscan meten we periodiek de ontwikkeling van je data-maturiteit. Real-time KPI-dashboards laten zien hoe verbeteringen scoren en waar bijsturing nodig is. Zo behoud je de regie en kun je altijd besluiten op feiten baseren.</p>
+                        <p>Continue monitoring is essentieel om de effectiviteit van je datagedreven werkwijze te waarborgen. Real-time KPI-dashboards laten zien hoe verbeteringen scoren en waar bijsturing nodig is.</p>
+                        <ul>
+                            <li>Automatische alerts bij afwijkingen</li>
+                            <li>Wekelijkse performance-reviews</li>
+                            <li>Data-maturiteit periodiek gemeten</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -68,11 +166,86 @@ permalink: /diensten/datagedreven-werken/
                     <div class="step-number">4</div>
                     <div class="step-content">
                         <h3>Analyseren & Verbeteren</h3>
-                        <p>Na elke meetronde duiken we dieper in de resultaten: wat is de oorzaak van successen en waar blijven groeiambities achter? Op basis van die inzichten definiëren we gerichte verbeterslagen en concrete acties per aandachtsgebied. Door deze cyclus van meten, analyseren en bijsturen te herhalen, bouw je stap voor stap aan een wendbare organisatie die blijft leren en excelleren.</p>
+                        <p>Na elke meetronde duiken we dieper in de resultaten: wat is de oorzaak van successen en waar blijven groeiambities achter? Door deze cyclus te herhalen, bouw je aan een organisatie die blijft leren.</p>
+                        <ul>
+                            <li>Kwartaalanalyses met verbetervoorstellen</li>
+                            <li>Benchmarking met branchegenoten</li>
+                            <li>Continue optimalisatie van dashboards</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
+            <!-- Testimonial -->
+            <div class="testimonial-box">
+                <p>"Vroeger waren we dagen bezig met het verzamelen van cijfers voor het MT-overleg. Nu openen we het dashboard en hebben we alles direct paraat. Dat scheelt niet alleen tijd, maar we nemen ook betere beslissingen."</p>
+                <span class="author">— Controller bij een installatiebedrijf met 85 medewerkers</span>
+            </div>
+
+            <!-- FAQ -->
+            <div class="faq-section">
+                <h2>Veelgestelde vragen</h2>
+
+                <div class="faq-item">
+                    <details>
+                        <summary>Hoe lang duurt het voordat we datagedreven kunnen werken?</summary>
+                        <p>De eerste dashboards staan binnen 1 dag live. De verankering in je organisatie - dat iedereen ermee werkt en erop vertrouwt - duurt doorgaans 2-3 maanden. We begeleiden je gedurende het hele traject.</p>
+                    </details>
+                </div>
+
+                <div class="faq-item">
+                    <details>
+                        <summary>Moet ons team technisch onderlegd zijn?</summary>
+                        <p>Nee. Onze dashboards zijn ontworpen voor gebruikers zonder technische achtergrond. Als je kunt klikken en filteren, kun je met onze dashboards werken. Voor wie meer wil, bieden we trainingen aan.</p>
+                    </details>
+                </div>
+
+                <div class="faq-item">
+                    <details>
+                        <summary>Wat als onze data niet op orde is?</summary>
+                        <p>Dat is eerder regel dan uitzondering. Onze dashboards maken zichtbaar waar de datakwaliteit beter kan. Vaak is dat al een eerste stap naar verbetering - je ziet direct waar de problemen zitten.</p>
+                    </details>
+                </div>
+
+                <div class="faq-item">
+                    <details>
+                        <summary>Werkt dit ook voor kleinere installatiebedrijven?</summary>
+                        <p>Zeker. We werken met bedrijven vanaf 10 medewerkers. Juist kleinere bedrijven hebben vaak geen dedicated controller - dan is datagedreven werken met geautomatiseerde dashboards extra waardevol.</p>
+                    </details>
+                </div>
+
+                <div class="faq-item">
+                    <details>
+                        <summary>Hoe verhoudt dit zich tot Excel?</summary>
+                        <p>Excel verdwijnt niet, maar krijgt een andere rol. Onze dashboards nemen het repetitieve verzamelwerk over. Excel blijf je gebruiken voor ad-hoc analyses en what-if scenario's - waarvoor het ook bedoeld is.</p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Related services -->
+            <div class="related-services">
+                <h3>Gerelateerde diensten</h3>
+                <div class="related-grid">
+                    <a href="{{ '/diensten/databeheer/' | url }}" class="related-card">
+                        <h4>Databeheer</h4>
+                        <p>Volledig ontzorgd</p>
+                    </a>
+                    <a href="{{ '/diensten/semantisch-datamodel/' | url }}" class="related-card">
+                        <h4>Datamodel</h4>
+                        <p>Eén datataal</p>
+                    </a>
+                    <a href="{{ '/diensten/zelf-rapporten-bouwen/' | url }}" class="related-card">
+                        <h4>Training</h4>
+                        <p>Zelf rapporten bouwen</p>
+                    </a>
+                    <a href="{{ '/prijzen/' | url }}" class="related-card">
+                        <h4>Prijzen</h4>
+                        <p>Transparante tarieven</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- CTA -->
             <div class="service-cta">
                 <h3>Klaar om datagedreven te werken?</h3>
                 <p>Ontdek wat data voor jouw installatiebedrijf kan betekenen.</p>

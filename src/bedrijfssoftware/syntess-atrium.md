@@ -1,7 +1,7 @@
 ---
 layout: base-notion.njk
-title: Notifica voor Syntess Atrium | Power BI Dashboards
-description: Van Syntess naar Power BI - realtime dashboards voor installateurs. Automatische data-synchronisatie, 30+ KPI's, live binnen 1 dag.
+title: Syntess Atrium Power BI Dashboards | Automatische Koppeling
+description: Power BI koppeling met Syntess Atrium. Automatische data-sync, 30+ KPI's voor installateurs, live binnen 1 dag. 60+ bedrijven gebruiken onze dashboards.
 permalink: /bedrijfssoftware/syntess-atrium/
 showContactPopup: true
 ---
@@ -11,7 +11,7 @@ showContactPopup: true
     <div class="container">
         <div class="hero-content">
             <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); display: flex; align-items: center; justify-content: center; min-height: 140px; border-radius: 12px; margin-bottom: 32px;">
-                <img src="{{ '/assets/images/2024/04/atrium-productlogo-srgb.png' | url }}" alt="Syntess Atrium Logo" style="max-width: 200px; max-height: 120px; object-fit: contain; filter: brightness(0) invert(1);">
+                <img src="{{ '/assets/images/2024/04/atrium-productlogo-srgb.png' | url }}" alt="Syntess Atrium ERP Power BI Koppeling voor Installatiebedrijven" style="max-width: 200px; max-height: 120px; object-fit: contain; filter: brightness(0) invert(1);">
             </div>
             <h1>Van Syntess naar Power BI: realtime dashboards voor installateurs</h1>
             <p class="subtitle">
@@ -257,7 +257,7 @@ showContactPopup: true
                 </div>
                 <div class="testimonial-author" style="margin-top: 16px; display: flex; align-items: center; gap: 16px;">
                     <a href="https://www.nikkelen.nl" target="_blank" rel="noopener noreferrer" style="flex-shrink: 0;">
-                        <img src="{{ '/assets/images/Nikkelen_Logo_converted.png' | url }}" alt="Nikkelen Elektrotechniek" style="width: 60px; height: 60px; object-fit: contain;">
+                        <img src="{{ '/assets/images/Nikkelen_Logo_converted.png' | url }}" alt="Nikkelen Elektrotechniek Syntess Power BI Dashboard Klant" style="width: 60px; height: 60px; object-fit: contain;">
                     </a>
                     <div>
                         <div class="author-name">Jon Wijers</div>
@@ -284,7 +284,7 @@ showContactPopup: true
                 </div>
                 <div class="testimonial-author" style="margin-top: 16px; display: flex; align-items: center; gap: 16px;">
                     <a href="https://www.denned.nl" target="_blank" rel="noopener noreferrer" style="flex-shrink: 0;">
-                        <img src="{{ '/assets/images/denned_logo_converted.png' | url }}" alt="Denned Installatietechniek" style="width: 60px; height: 60px; object-fit: contain;">
+                        <img src="{{ '/assets/images/denned_logo_converted.png' | url }}" alt="Denned Installatietechniek Syntess Atrium Dashboard Klant" style="width: 60px; height: 60px; object-fit: contain;">
                     </a>
                     <div>
                         <div class="author-name">Rob de Kort</div>
@@ -311,7 +311,7 @@ showContactPopup: true
                 </div>
                 <div class="testimonial-author" style="margin-top: 16px; display: flex; align-items: center; gap: 16px;">
                     <a href="https://www.verkadeklimaattechniek.nl" target="_blank" rel="noopener noreferrer" style="flex-shrink: 0;">
-                        <img src="{{ '/assets/images/verkade_converted.png' | url }}" alt="Verkade Klimaat" style="width: 60px; height: 60px; object-fit: contain;">
+                        <img src="{{ '/assets/images/verkade_converted.png' | url }}" alt="Verkade Klimaat Syntess Power BI Integratie" style="width: 60px; height: 60px; object-fit: contain;">
                     </a>
                     <div>
                         <div class="author-name">Vincent Kouer</div>
