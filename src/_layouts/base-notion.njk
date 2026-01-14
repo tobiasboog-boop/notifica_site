@@ -28,8 +28,22 @@
   <meta property="og:description" content="{{ description or site.description }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:site_name" content="Notifica">
+  <meta property="og:locale" content="nl_NL">
   {% if og_image %}
   <meta property="og:image" content="{{ site.url }}{{ og_image }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Notifica Power BI Dashboards voor Installatiebedrijven">
+  {% endif %}
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title or 'Notifica | Power BI Dashboards voor Installatiebedrijven' }}">
+  <meta name="twitter:description" content="{{ description or site.description }}">
+  {% if og_image %}
+  <meta name="twitter:image" content="{{ site.url }}{{ og_image }}">
+  <meta name="twitter:image:alt" content="Notifica Power BI Dashboards voor Installatiebedrijven">
   {% endif %}
 
   <!-- Schema.org JSON-LD for SEO -->
