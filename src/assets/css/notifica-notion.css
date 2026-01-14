@@ -158,15 +158,15 @@ nav .nav-links a:hover {
 }
 
 .btn-outline {
-    background: var(--blue);
-    color: white;
+    background: white;
+    color: var(--blue) !important;
     border: 1.5px solid var(--blue);
 }
 
 .btn-outline:hover {
-    background: var(--navy);
-    color: white;
-    border-color: var(--navy);
+    background: var(--blue);
+    color: white !important;
+    border-color: var(--blue);
 }
 
 /* Container */
