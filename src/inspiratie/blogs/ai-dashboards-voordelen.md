@@ -12,7 +12,7 @@ relatedBlogs:
   - url: "/inspiratie/blogs/chatgpt-vs-copilot/"
     title: "Copilot vs ChatGPT: de ultieme Power BI AI keuzewijzer"
     description: "Welke AI-tool past het beste bij jouw installatiebedrijf? Een complete vergelijking."
-  - url: "/inspiratie/blogs/ai-servicedesk-werkbondata-installateurs/"
+  - url: "/inspiratie/blogs/ai-servicedesk-werkbondata-installatiebedrijven/"
     title: "AI in de Servicedesk: slimmer werken met werkbondata"
     description: "Ontdek hoe AI jouw servicedesk kan versterken met slimme werkbonanalyse."
   - url: "/inspiratie/blogs/betere-besluiten-voorspellen/"

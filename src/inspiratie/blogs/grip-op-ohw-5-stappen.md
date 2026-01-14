@@ -15,7 +15,7 @@ relatedBlogs:
   - url: "/inspiratie/blogs/versnel-maandrapportage/"
     title: "Maandrapportage: 5 tips voor tijdbesparing"
     description: "Automatiseer je maandrapportage en bespaar tijd."
-  - url: "/inspiratie/blogs/24-essentiele-kpis-installateurs/"
+  - url: "/inspiratie/blogs/24-essentiele-kpis-installatiebedrijven/"
     title: "24 essentiële KPI's in één overzicht"
     description: "Alle KPI's die je nodig hebt voor je installatiebedrijf."
 ---
@@ -36,7 +36,7 @@ OHW en Onderhanden werk zijn cruciaal voor elk installatiebedrijf. Door te sture
 - [Casestudy](#casestudy)
 
 
-Voor installatiebedrijven die willen groeien, is een overstap naar geautomatiseerde processen noodzakelijk. Onze [Power BI dashboards voor installateurs](/diensten/power-bi-dashboards-voor-installateurs/) bieden hierin de perfecte ondersteuning door data uit diverse bronnen realtime te visualiseren.
+Voor installatiebedrijven die willen groeien, is een overstap naar geautomatiseerde processen noodzakelijk. Onze [Power BI dashboards voor installatiebedrijven](/diensten/power-bi-dashboards-voor-installatiebedrijven/) bieden hierin de perfecte ondersteuning door data uit diverse bronnen realtime te visualiseren.
 
 <h2 id="stappenplan">Het 5-stappenplan voor onderhanden werk met realtime inzicht</h2>
 

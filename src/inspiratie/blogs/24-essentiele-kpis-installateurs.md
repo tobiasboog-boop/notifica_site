@@ -1,8 +1,8 @@
 ---
 layout: blog-post.njk
-permalink: /inspiratie/blogs/24-essentiele-kpis-installateurs/
+permalink: /inspiratie/blogs/24-essentiele-kpis-installatiebedrijven/
 showContactPopup: true
-title: "Dashboards voor installateurs: 24 essentiële KPI's in één overzicht"
+title: "Dashboards voor installatiebedrijven: 24 essentiële KPI's in één overzicht"
 description: "Met een KPI's dashboard in Power BI krijgt jouw installatiebedrijf in één oogopslag realtime inzicht in alle cruciale KPI's. In deze gids vind je 24 essentiële KPI's, verdeeld over zes thema's, én praktische tips om jouw Power BI-dashboard optimaal in te richten."
 featuredImage: "/assets/images/2025/06/Schermafbeelding-2025-06-03-061935.png"
 category: "kpis-dashboards"
@@ -20,11 +20,11 @@ relatedBlogs:
     description: "Ontdek hoe je met Notifica's stappenplan realtime inzicht krijgt in de stand van het OHW."
 ---
 
-## Dashboards voor installateurs: 24 essentiële KPI's in één overzicht
+## Dashboards voor installatiebedrijven: 24 essentiële KPI's in één overzicht
 
 Met een KPI's dashboard in Power BI krijgt jouw installatiebedrijf in één oogopslag realtime inzicht in alle cruciale KPI's. In deze gids vind je 24 essentiële KPI's, verdeeld over zes thema's, én praktische tips om jouw Power BI-dashboard optimaal in te richten.
 
-![Dashboards voor installateurs 24 essentiële KPI's Power BI]({{ "/assets/images/2025/06/Schermafbeelding-2025-06-03-061935.png" | url }})
+![Dashboards voor installatiebedrijven 24 essentiële KPI's Power BI]({{ "/assets/images/2025/06/Schermafbeelding-2025-06-03-061935.png" | url }})
 
 *Voorbeeld van een financieel overzicht binnen het KPI's dashboard in Power BI*
 
@@ -116,4 +116,4 @@ Richtinggevende KPI's om de commerciële funnel optimaal te benutten en groeikan
 
 ## Meer weten?
 
-Wil je direct aan de slag met een KPI's dashboard voor jouw installatiebedrijf? **Neem vrijblijvend [contact op](#contact)** en plan een gratis demo. Bekijk ook onze andere blogs of lees de [Veelgestelde vragen](/veelgestelde-vragen/) voor meer informatie over Power BI dashboards voor installateurs.
+Wil je direct aan de slag met een KPI's dashboard voor jouw installatiebedrijf? **Neem vrijblijvend [contact op](#contact)** en plan een gratis demo. Bekijk ook onze andere blogs of lees de [Veelgestelde vragen](/veelgestelde-vragen/) voor meer informatie over Power BI dashboards voor installatiebedrijven.

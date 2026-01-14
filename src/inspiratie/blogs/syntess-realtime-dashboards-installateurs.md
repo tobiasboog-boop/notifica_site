@@ -1,8 +1,8 @@
 ---
 layout: blog-post.njk
-permalink: /inspiratie/blogs/syntess-realtime-dashboards-installateurs/
+permalink: /inspiratie/blogs/syntess-realtime-dashboards-installatiebedrijven/
 showContactPopup: true
-title: "Van Syntess Data naar Real-time Dashboards: Gids voor Installateurs"
+title: "Van Syntess data naar real-time dashboards: gids voor installatiebedrijven"
 description: "Leer hoe je Syntess Atrium data transformeert naar actionable Power BI dashboards. Inclusief best practices voor 30+ KPI's."
 featuredImage: "/assets/images/dashboard-productiviteit.png"
 category: "power-bi-basics"
@@ -11,7 +11,7 @@ ctaText: "Krijg realtime inzicht in je projecten, marges en capaciteit. Implemen
 relatedBlogs:
   - url: "/inspiratie/blogs/syntess-power-bi-voordelen/"
     title: "5 Voordelen van Syntess Power BI Koppeling"
-    description: "Waarom 60+ installateurs kozen voor Power BI dashboards."
+    description: "Waarom 60+ installatiebedrijven kozen voor Power BI dashboards."
   - url: "/bedrijfssoftware/syntess-atrium/"
     title: "Syntess Atrium Automatische Koppeling"
     description: "Technische details van onze Syntess integratie."
@@ -59,7 +59,7 @@ Power BI verbindt direct met je Syntess database en transformeert data naar acti
 - Planning & capaciteit
 - Offerten & acquisitie
 
-### Stap 2: Data-Transformatie voor Installateurs
+### Stap 2: Data-Transformatie voor Installatiebedrijven
 
 Ruwe Syntess data moet getransformeerd worden naar bruikbare metrics:
 

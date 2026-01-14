@@ -2,7 +2,7 @@
 layout: blog-post.njk
 permalink: /inspiratie/blogs/case-study-storm-overwinnen/
 showContactPopup: true
-title: "Storm overwinnen: financieel inzicht als reddingsboei voor installateurs"
+title: "Storm overwinnen: financieel inzicht als reddingsboei voor installatiebedrijven"
 description: "In deze case study laten we zien hoe Notifica installatiebedrijven helpt met diepgaand financieel inzicht, resulterend in hogere winst en efficiëntie."
 featuredImage: "/assets/images/2025/06/9.-Accountmanagement-Cashflow.png"
 category: "case-studies"
@@ -71,7 +71,7 @@ Het dashboard bevat scenario-tools waarmee je kunt voorspellen hoe zwaar weer de
 
 Dankzij realtime inzicht in projectstatussen kon het installatiebedrijf tijdens de stormperiode teams herverdelen naar projecten die wél doorgang vonden. Dit zorgde voor een betere capaciteitstoewijzing en een significant hogere efficiëntie.
 
-Lees ook dit artikel over [business intelligence in de installatiebranche](https://nl.wikipedia.org/wiki/Business_Intelligence) voor meer achtergrond. Wil je meer weten over onze oplossingen, bekijk dan onze [Power BI-oplossingen voor installatiebedrijven](/diensten/power-bi-dashboards-voor-installateurs/).
+Lees ook dit artikel over [business intelligence in de installatiebranche](https://nl.wikipedia.org/wiki/Business_Intelligence) voor meer achtergrond. Wil je meer weten over onze oplossingen, bekijk dan onze [Power BI-oplossingen voor installatiebedrijven](/diensten/power-bi-dashboards-voor-installatiebedrijven/).
 
 ![Financieel inzicht in projectwaardering en efficiëntie]({{ "/assets/images/2025/06/2.-Pojectwaardering.png" | url }})
 

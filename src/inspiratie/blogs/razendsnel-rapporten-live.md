@@ -15,7 +15,7 @@ relatedBlogs:
   - url: "/inspiratie/blogs/direct-inzicht-betere-cijfers/"
     title: "Van rommelige cijfers naar helder inzicht"
     description: "Notifica's aanpak voor datagedreven werken."
-  - url: "/inspiratie/blogs/4-power-bi-stappen-installateurs/"
+  - url: "/inspiratie/blogs/4-power-bi-stappen-installatiebedrijven/"
     title: "Datagedreven dashboards installatiesector"
     description: "Meer grip met Power BI in de installatiebranche."
 ---

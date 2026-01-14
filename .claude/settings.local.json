@@ -40,7 +40,14 @@
       "Bash(xcopy:*)",
       "Bash(.venvScriptspython.exe -m streamlit run app.py)",
       "Bash(git init:*)",
-      "Bash(gh repo create:*)"
+      "Bash(gh repo create:*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"G:\\\\Mijn Drive\\\\3.0_Design\\\\Website werkversie\\\\remove-ga.ps1\")",
+      "Bash(git remote:*)",
+      "Bash(git fetch:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(pip install:*)",
+      "Bash(nslookup:*)",
+      "Bash(start \"\" \"G:\\\\Mijn Drive\\\\6.0_Beeldbank\\\\optimized\\\\image_catalog.html\")"
     ]
   }
 }

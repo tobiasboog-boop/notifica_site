@@ -2,7 +2,7 @@
 layout: blog-post.njk
 permalink: /inspiratie/blogs/betere-besluiten-voorspellen/
 showContactPopup: true
-title: "Stop met terugkijken, Begin met vooruitkijken! Betere besluiten met voorspellen"
+title: "Stop met terugkijken, begin met vooruitkijken! Betere besluiten met voorspellen"
 description: "Met voorspellen maak je vandaag nog het verschil: verhoog je winst, verlaag risico's en optimaliseer je capaciteit door écht vooruitkijken in Power BI."
 featuredImage: "/assets/images/2025/06/8.-Portefeuille-management.png"
 category: "ai-technologie"
@@ -40,7 +40,7 @@ In een wereld waar elke seconde telt, is vooruitkijken de sleutel. **Forecasting
 - **Optimaliseer monteurscapaciteit:** krijg direct zicht op over- en onderbezetting en grijp in vóórdat projecten vertragen of monteurs stilzitten, zodat je resources optimaal worden ingezet.
 - **Verhoog klanttevredenheid:** lever altijd op tijd en gebruik deze inzichten om verwachtingen proactief te managen, waardoor vertrouwen in jouw organisatie groeit.
 
-Dankzij deze slimme combinatie van data en AI creëer je een vliegwiel van verbetering: elke uitkomst voedt de volgende planning, waardoor je organisatie continu leert en groeit. Hiermee zet je de eerste stap naar een solide toekomst. Ontdek ook hoe onze Power BI dashboards voor installateurs dit proces ondersteunen.
+Dankzij deze slimme combinatie van data en AI creëer je een vliegwiel van verbetering: elke uitkomst voedt de volgende planning, waardoor je organisatie continu leert en groeit. Hiermee zet je de eerste stap naar een solide toekomst. Ontdek ook hoe onze Power BI dashboards voor installatiebedrijven dit proces ondersteunen.
 
 *Van Excel naar Power BI: transformeer je dagelijkse sturing tot een strategisch wapen.*
 

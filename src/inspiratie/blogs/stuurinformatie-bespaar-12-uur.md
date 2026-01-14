@@ -9,7 +9,7 @@ category: "kpis-dashboards"
 ctaTitle: "Bespaar ook 12 uur per week"
 ctaText: "Ontdek hoe Notifica jouw handmatige rapportages vervangt door geautomatiseerde dashboards."
 relatedBlogs:
-  - url: "/inspiratie/blogs/24-essentiele-kpis-installateurs/"
+  - url: "/inspiratie/blogs/24-essentiele-kpis-installatiebedrijven/"
     title: "24 essentiële KPI's in één overzicht"
     description: "Alle KPI's die je nodig hebt voor je installatiebedrijf."
   - url: "/inspiratie/blogs/winstoptimalisatie-installatiebedrijven/"

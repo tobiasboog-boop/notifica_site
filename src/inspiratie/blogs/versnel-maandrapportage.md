@@ -40,7 +40,7 @@ Veel installatiebedrijven ervaren knelpunten bij hun maandrapportage, zoals:
 2. Foutengevoelige bewerkingenFormules worden met de hand ingevoerd en een enkele typefout kan leiden tot een onjuiste maandrapportage. Daardoor zijn rapportages minder betrouwbaar en ontstaat onduidelijkheid over de daadwerkelijke projectstatus.
 3. Tijdrovende distributieRapportages worden geëxporteerd naar PDF, geprint en handmatig gemaild. Dit vertraagt besluitvorming en veroorzaakt frustratie. Zonder centrale opslag kunnen versies door elkaar lopen.
 
-Dit handmatige proces kost vaak dagen aan werkuren. Installateurs verliezen hierdoor kostbare uren die beter gebruikt kunnen worden voor projectsturing en klantcontact.
+Dit handmatige proces kost vaak dagen aan werkuren. Installatiebedrijven verliezen hierdoor kostbare uren die beter gebruikt kunnen worden voor projectsturing en klantcontact.
 
 ## 2. De oplossing: volledige automatisering met Power BI
 
@@ -56,7 +56,7 @@ Notifica’s innovatieve Power BI-oplossing voor installatiebedrijven biedt een 
 
 Figuur: voorbeeld van een geautomatiseerde dashboardweergave voor maandrapportage.
 
-![procesoptimalisatie maandrapportage installateurs met Power BI]({{ "/assets/images/2025/06/1.-Finance.png" | url }})
+![procesoptimalisatie maandrapportage installatiebedrijven met Power BI]({{ "/assets/images/2025/06/1.-Finance.png" | url }})
 
 Figuur: inzichten in financiële resultaten per project met realtime data.
 

@@ -9,7 +9,7 @@ category: "power-bi-basics"
 ctaTitle: "Klaar voor de overstap naar Power BI?"
 ctaText: "Bespaar 78% rapportagetijd zoals onze klanten. Notifica maakt de overstap eenvoudig."
 relatedBlogs:
-  - url: "/inspiratie/blogs/4-power-bi-stappen-installateurs/"
+  - url: "/inspiratie/blogs/4-power-bi-stappen-installatiebedrijven/"
     title: "Datagedreven dashboards installatiesector"
     description: "Meer grip met Power BI in de installatiebranche."
   - url: "/inspiratie/blogs/controle-realtime-power-bi/"

@@ -1,0 +1,545 @@
+# Intellectueel Eigendom Receptuur - Data Performance Group
+
+**Document versie:** 2.0
+**Datum:** Januari 2026
+**Status:** Concept voor juridische vastlegging
+**Doel:** Beschrijving van de unieke "receptuur" t.b.v. bescherming IP, voorbereiding due diligence/verkoop
+**Bronnen:** Aandeelhoudersovereenkomst DPG d.d. 17-12-2025, Syntess Knowledge Base
+
+---
+
+## 1. Managementsamenvatting
+
+Dit document beschrijft de intellectuele eigendommen en unieke "receptuur" van de Data Performance Group naar analogie van het **Coca-Cola model**: een geheime formule die waarde vertegenwoordigt en juridisch beschermd dient te worden.
+
+De receptuur bestaat uit de **unieke combinatie en integratie** van:
+1. **GRIP-platform** (eeuwigdurende licentie via Dolf Jansonius)
+2. **ETL-transformatielogica** (GRIP-scripts specifiek voor installatiebranche)
+3. **Domeinspecifieke datamodellen** (SSM - Syntess Semantic Model)
+4. **Branche-specifieke business intelligence** (DAX measures)
+5. **Gestandaardiseerde rapportage-templates** (Thin & Custom Reports)
+6. **Methodologie** voor multi-versie en multi-klant ondersteuning
+
+### Doelen van dit document:
+- **Bescherming tegen faillissementsrisico** - IP veiligstellen in holding
+- **Voorbereiding op eventuele verkoop** - due diligence gereed
+- **Vastlegging van de "receptuur"** - juridische bescherming
+- **Basis voor leveringsovereenkomst** - holding → werkmaatschappij
+
+---
+
+## 2. Huidige Juridische Structuur
+
+### 2.1 Vennootschapsstructuur (per 1 september 2025)
+
+*Bron: Aandeelhoudersovereenkomst DPG, Bijlage 1*
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    AANDEELHOUDERS (elk 25%)                      │
+├─────────────────────────────────────────────────────────────────┤
+│  GMC Holding B.V.        │ Arthur Gartz    │ KvK: 65500881      │
+│  Macjofi B.V.            │ Mark Haring     │ KvK: 81770065      │
+│  Fornix Holding B.V.     │ Tobias Boog     │ KvK: [...]         │
+│  Jansonius Holding B.V.  │ Dolf Jansonius  │ KvK: [...]         │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
+│              DATA PERFORMANCE GROUP B.V. (Holding)               │
+│                        KvK: 85392405                             │
+│              Kerkhofstraat 21, 5554 HG Valkenswaard              │
+│                                                                  │
+│  Bezit:                                                          │
+│  ├─ Eeuwigdurende gratis GRIP-licentie (ingebracht door Dolf)   │
+│  └─ 100% aandelen in dochtermaatschappijen                      │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                 DOCHTERMAATSCHAPPIJEN (100% DPG)                 │
+├─────────────────────────────────────────────────────────────────┤
+│  Notifica B.V.           │ KvK: 81772645   │ BI Installatiebranche│
+│  BisQQ B.V.              │ KvK: 81776217   │                     │
+│  Boostin Consultancy B.V.│ KvK: 73318310   │                     │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### 2.2 Taakverdeling Bestuur (Artikel 3.2)
+
+| Bestuurder | Holding | Verantwoordelijkheid |
+|------------|---------|---------------------|
+| Arthur Gartz (GMC) | GMC Holding B.V. | Consultancy, Marketing, Sales |
+| Tobias Boog (Fornix) | Fornix Holding B.V. | Consultancy, Marketing, Sales |
+| Mark Haring (Macjofi) | Macjofi B.V. | Techniek |
+| Dolf Jansonius | Jansonius Holding B.V. | Techniek, verdere uitbouw GRIP |
+
+---
+
+## 3. GRIP-licentie: De Kern van de Receptuur
+
+### 3.1 Definitie (Artikel 1.2 Aandeelhoudersovereenkomst)
+
+> *"GRIP: De ETL-tool zoals ontwikkeld door Dolf Jansonius, waarvan de eeuwigdurende, gratis licentie voor alle activiteiten onder DPG Groep en haar dochtermaatschappijen wordt ingebracht door Jansonius Holding."*
+
+### 3.2 Intellectueel Eigendom GRIP (Artikel 12.4)
+
+**Kernpunten:**
+
+| Aspect | Status |
+|--------|--------|
+| **Eigendom GRIP-software** | Blijft bij Dolf Jansonius (persoonlijk) |
+| **Licentie voor DPG** | Eeuwigdurend en gratis |
+| **Scope licentie** | Alle activiteiten DPG Groep + dochtermaatschappijen |
+| **Tegenprestatie** | 25% aandelenbelang DPG (via Jansonius Holding) |
+| **Escrow** | Broncode bij Enshore B.V. (onafhankelijk) |
+
+### 3.3 Exit-scenario's Dolf Jansonius
+
+**Good Leaver (vertrek in goed overleg):**
+- Managementvergoeding eindigt conform Artikel 4
+- Jansonius Holding ontvangt **vaste licentievergoeding van €4.000/maand** zolang Notifica B.V. GRIP gebruikt
+- Notifica behoudt recht om op ieder moment naar GRIP-alternatief te migreren
+
+**Bad Leaver (vertrek na conflict):**
+- Jansonius Holding behoudt recht op dezelfde vaste licentievergoeding (€4.000/maand)
+- Zelfde voorwaarden als good leaver
+
+### 3.4 Continuïteitswaarborgen
+
+1. **Escrow-regeling**: Broncode GRIP wordt opgeslagen in centraal repository bij Enshore B.V.
+2. **Toegang DPG-ontwikkelaars**: Gewaarborgd voor continuïteit en doorontwikkeling
+3. **Toekomstige openstelling**: Onderzoek naar mogelijkheid van (gedeeltelijke) MIT-licentie voor community-opbouw, onafhankelijkheid en AI-toepassing
+
+---
+
+## 4. Overzicht IP-Assets en Eigendom
+
+### 4.1 Asset-matrix
+
+| # | Asset | Juridisch Eigenaar | Licentie/Recht | Waarde-indicatie |
+|---|-------|-------------------|----------------|------------------|
+| 1 | **GRIP Software** | Dolf Jansonius | Eeuwigdurende gratis licentie aan DPG | 25% aandelenbelang DPG |
+| 2 | **GRIP ETL-scripts Syntess** | DPG/Notifica | Volledig eigendom | Zelfgebouwd |
+| 3 | **SSM (Semantic Model)** | DPG/Notifica | Volledig eigendom | Zelfgebouwd |
+| 4 | **DAX Measures bibliotheek** | DPG/Notifica | Volledig eigendom | Zelfgebouwd |
+| 5 | **Thin/Custom Reports** | DPG/Notifica | Volledig eigendom | Zelfgebouwd |
+| 6 | **Methodologie & Domeinkennis** | DPG/Notifica | Volledig eigendom | Opgebouwd |
+
+### 4.2 Onderscheid GRIP vs. Notifica-IP
+
+**Belangrijk onderscheid:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    GRIP SOFTWARE (Platform)                      │
+│                                                                  │
+│  Eigendom: Dolf Jansonius                                       │
+│  Licentie: Eeuwigdurend + gratis voor DPG                       │
+│  Functie: ETL-engine (extractie, transformatie, laden)          │
+│                                                                  │
+│  = Het "voertuig"                                                │
+└─────────────────────────────────────────────────────────────────┘
+                              +
+┌─────────────────────────────────────────────────────────────────┐
+│              NOTIFICA IP (Scripts, Models, Reports)              │
+│                                                                  │
+│  Eigendom: DPG/Notifica (volledig)                              │
+│  Functie: Branche-specifieke implementatie                      │
+│                                                                  │
+│  Onderdelen:                                                     │
+│  ├─ ETL-scripts (SQL-transformaties voor Syntess)               │
+│  ├─ SSM datamodel (100+ tabellen, relaties)                     │
+│  ├─ DAX measures (200+ business KPI's)                          │
+│  ├─ Reports (Thin + Custom)                                     │
+│  └─ Methodologie en documentatie                                │
+│                                                                  │
+│  = De "route" en "bestemming"                                   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Analogie:** GRIP is de auto, de Notifica-scripts zijn de routekaart en de chauffeur met lokale kennis. Zonder de routekaart is de auto nutteloos voor deze specifieke bestemming.
+
+---
+
+## 5. Gedetailleerde Beschrijving van de Receptuur
+
+### 5.1 Component 1: ETL-Transformatielogica (GRIP-scripts)
+
+#### Wat is het?
+Een verzameling van **8 sequentiële ETL-scripts** (5 Prepare + 3 Endview) die data uit Syntess ERP (Firebird database) transformeren naar een gestandaardiseerd Data Warehouse (PostgreSQL).
+
+#### Waarom is dit uniek/waardevol?
+
+1. **Versie-onafhankelijke extractie**: De scripts detecteren automatisch de Syntess-versie (8.x, 9.x, etc.) en passen de SQL-queries aan. Dit vereist diepgaande kennis van de evolutie van het Syntess datamodel over meerdere jaren.
+
+2. **Klant-specifieke varianten**: Binnen de scripts zijn A/B-varianten ingebouwd voor klanten met afwijkende bedrijfsprocessen, terwijl de output gestandaardiseerd blijft.
+
+3. **Branche-specifieke transformaties**: De logica is specifiek ontwikkeld voor de installatiebranche (klimaat, elektrotechniek, service & onderhoud) met begrip van:
+   - Werkbonstructuren en -paragrafen
+   - Service-orders en onderhoudsplanning
+   - Projectmagazijnen vs. standaardmagazijnen
+   - Kostencategorieën (Arbeid/Materiaal/Materieel/Overig)
+   - Calculaties en offertes
+
+4. **Standaardisatie-principe**: Ongeacht bronversie of klantvariant levert het ETL-proces **altijd dezelfde outputstructuur** op. Dit is essentieel voor schaalbaarheid.
+
+#### Concrete assets:
+- `syntess_prepare_1.grp` t/m `syntess_prepare_5.grp`
+- `syntess_endviews_1.grp` t/m `syntess_endviews_3.grp`
+- Maatwerk-scripts met klant-specifieke routines
+
+#### Geschatte omvang:
+- 100+ SQL-transformaties
+- 50+ versie-specifieke query-varianten
+- Jarenlange opgebouwde domeinkennis gecodificeerd
+
+---
+
+### 5.2 Component 2: Syntess Semantic Model (SSM)
+
+#### Wat is het?
+Een uitgebreid **Power BI Semantic Model** (de "kubus") dat als centrale databron dient voor alle rapportages. Het model bevat:
+- 100+ tabeldefinities
+- Complexe relatiestructuren
+- Business logic in DAX
+
+#### Waarom is dit uniek/waardevol?
+
+1. **Branche-specifiek stermodel**: Het datamodel is specifiek ontworpen voor de installatiebranche met:
+   - Projecthiërarchieën (Project → Werkbon → Paragraaf)
+   - Service-dimensies (Installaties, Installatiesoorten, Objecten)
+   - Financiële dimensies (Kostensoorten, Kostenplaatsen, Rubrieken)
+   - Voorraaddimensies (Magazijnen → Locaties → Posities)
+
+2. **Multi-administratie ondersteuning**: Ondersteuning voor holdings met meerdere administraties/bedrijven.
+
+3. **Kalender-intelligentie**: Meerdere kalender-implementaties voor verschillende datumcontexten:
+   - Boekdatum, Factuurdatum, Opdrachtdatum, Vervaldatum
+   - Historische analyse vs. actuele standen
+
+4. **Actieve/Inactieve relaties**: Geavanceerde relatiestructuur met bewuste keuzes voor actieve vs. inactieve relaties om flexibele analyse mogelijk te maken.
+
+#### Concrete assets:
+- `SSM_Postgres/` - 100+ TMDL-bestanden
+- `relationships.tmdl` - Relatiedefinities
+- `model.tmdl` - Modelconfiguratie
+
+#### Geschatte omvang:
+- 100+ tabellen/dimensies
+- 200+ relaties
+- 1000+ uren ontwikkeling en verfijning
+
+---
+
+### 5.3 Component 3: DAX Measures Bibliotheek
+
+#### Wat is het?
+Een verzameling van **gestandaardiseerde DAX-formules** (measures) die business logic implementeren voor de installatiebranche.
+
+#### Waarom is dit uniek/waardevol?
+
+1. **Branche-specifieke KPI's**:
+   - Voorraad: Stand, Omloopsnelheid, Min/Max-bewaking, Dagen voorraad
+   - Service: Uitvoertijd, Productiviteit, SLA-bewaking
+   - Projecten: Voortgang, Marge, WvB (Werk van Bijzondere aard)
+   - Financieel: Resultaatbepaling, Cashflow, Debiteuren/Crediteuren
+
+2. **Technische complexiteit**:
+   - `USERELATIONSHIP()` voor inactieve relaties
+   - Time-intelligence functies (YTD, MoM, YoY)
+   - Iteratieve berekeningen (SUMX, AVERAGEX)
+   - Dynamische aggregatie op verschillende granulariteitsniveaus
+
+3. **Gestandaardiseerde naamgevingsconventies**: Consistent en voorspelbaar voor eindgebruikers.
+
+#### Concrete assets:
+- `DAX_Measures_Voorraad.dax` - Voorraad measures
+- Measures in SSM tabeldefinities
+- Documentatie per measure
+
+#### Geschatte omvang:
+- 200+ measures
+- 50+ helper-measures
+- Gedocumenteerde use-cases per measure
+
+---
+
+### 5.4 Component 4: Rapportage-templates (Thin & Custom Reports)
+
+#### Wat is het?
+Kant-en-klare Power BI rapportages die direct inzetbaar zijn bij klanten.
+
+#### Waarom is dit uniek/waardevol?
+
+1. **Thin Reports**: Lichte rapportages die de SSM als databron gebruiken:
+   - Voorraad Analyse
+   - Service Uitvoering
+   - Project Dashboard
+   - Financieel Overzicht
+
+2. **Custom Reports**: Maatwerk rapportages voor specifieke klantbehoeften met eigen semantic models.
+
+3. **Bewezen best practices**: Visualisaties, layouts en interacties geoptimaliseerd op basis van klantfeedback.
+
+#### Concrete assets:
+- `Reports/Thin_Reports/` - Standaard rapportages
+- `Reports/Custom_Reports/` - Maatwerk rapportages
+- Rapport-documentatie (`.md` bestanden)
+
+---
+
+### 5.5 Component 5: Methodologie en Domeinkennis
+
+#### Wat is het?
+De opgebouwde kennis en methodologie voor implementatie, onderhoud en doorontwikkeling.
+
+#### Waarom is dit uniek/waardevol?
+
+1. **Implementatiemethodologie**: Bewezen aanpak voor:
+   - Initiële data-extractie en validatie
+   - Klant-onboarding
+   - Performance-optimalisatie
+   - Foutafhandeling en monitoring
+
+2. **Onderhoudsprocessen**:
+   - Versie-updates bij nieuwe Syntess releases
+   - Maatwerk-aanvraag triage
+   - Quality assurance
+
+3. **Knowledge Base**: Gedocumenteerde kennis over:
+   - Syntess datamodel per versie
+   - Bekende issues en workarounds
+   - Best practices
+
+#### Concrete assets:
+- `README.md` - Architectuur documentatie
+- `RAPPORT_*.md` - Analyse rapporten
+- Interne kennisdatabase
+
+---
+
+## 6. Waardebepaling
+
+### 6.1 GRIP-licentie Waarde
+
+**Transactie:**
+- Dolf Jansonius (via Jansonius Holding) bracht eeuwigdurende GRIP-licentie in
+- In ruil voor **25% aandelenbelang in DPG**
+- Dit was een **transactie met gesloten beurs** (geen cash)
+
+**Waarde-indicatie:**
+- De waarde van de GRIP-licentie = waarde van 25% DPG-aandelen op transactiemoment
+- Dit impliceert dat de licentie een significante waarde vertegenwoordigt
+- Bij eventuele verkoop of due diligence is dit een meetbaar referentiepunt
+
+### 6.2 Notifica-ontwikkelde IP Waarde
+
+**Unieke waardepropositie:**
+Het geheel is meer dan de som der delen. De **combinatie** van:
+- Platform (GRIP)
+- Transformatielogica (ETL-scripts)
+- Datamodel (SSM)
+- Business logic (DAX)
+- Rapportages
+
+...creëert een **end-to-end oplossing** voor Business Intelligence in de installatiebranche die niet eenvoudig te repliceren is.
+
+**Waarom is dit geen "bij elkaar geklikte functionaliteit"?**
+
+1. **Domeinkennis**: Jarenlange ervaring met Syntess en de installatiebranche gecodificeerd
+2. **Versie-compatibiliteit**: Ondersteuning voor meerdere Syntess-versies vereist continue onderhoud en expertise
+3. **Standaardisatie**: Het principe van gestandaardiseerde output ondanks variabele input is een architecturele keuze die waarde toevoegt
+4. **Integratie**: De naadloze koppeling van alle componenten is niet triviaal
+
+---
+
+## 7. Gewenste Structuur voor IP-bescherming
+
+### 7.1 Huidige situatie
+
+IP zit verspreid:
+- GRIP-licentie: formeel bij DPG (via aandeelhoudersovereenkomst)
+- Notifica-scripts/models: impliciet bij Notifica B.V.
+
+### 7.2 Gewenste situatie
+
+Alle IP expliciet bij DPG Groep:
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│              DATA PERFORMANCE GROUP B.V. (Holding)               │
+│                                                                  │
+│  Eigenaar van:                                                   │
+│  ├─ Eeuwigdurende GRIP-licentie (✓ reeds vastgelegd)            │
+│  ├─ ETL-scripts Syntess (→ over te dragen van Notifica)         │
+│  ├─ SSM Datamodel (→ over te dragen van Notifica)               │
+│  ├─ DAX Measures bibliotheek (→ over te dragen van Notifica)    │
+│  ├─ Rapportage-templates (→ over te dragen van Notifica)        │
+│  └─ Methodologie-documentatie (→ over te dragen van Notifica)   │
+│                                                                  │
+│                    ↓ Licentieovereenkomst ↓                      │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                      NOTIFICA B.V. (Werkmaatschappij)            │
+│                                                                  │
+│  Gebruiksrecht op:                                               │
+│  ├─ GRIP-licentie (via DPG)                                     │
+│  ├─ Alle DPG-IP (gelicentieerd van DPG)                         │
+│                                                                  │
+│  Uitvoering van:                                                 │
+│  ├─ Klantenservice en implementatie                             │
+│  ├─ Doorontwikkeling (nieuwe IP → automatisch naar DPG)         │
+│  └─ Operationele dienstverlening                                │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### 7.3 Bescherming tegen risico's
+
+**Bij faillissement Notifica B.V.:**
+- IP blijft eigendom van DPG Groep (holding)
+- Curator kan geen beslag leggen op IP
+- DPG kan doorondernemen (nieuwe werkmaatschappij oprichten, of verkoop aan derde)
+
+**Bij verkoop Notifica B.V.:**
+- **Optie A**: IP blijft bij DPG; koper krijgt licentie via Notifica
+- **Optie B**: IP wordt meeverkocht (tegen meerprijs)
+- Due diligence is voorbereid: alle IP gedocumenteerd
+
+---
+
+## 8. Benodigde Juridische Documenten
+
+### 8.1 Leveringsakte IP (Notifica → DPG)
+
+**Doel:** Formele overdracht van Notifica-ontwikkelde IP naar DPG
+
+**Inhoud:**
+- Beschrijving van over te dragen IP (scripts, models, measures, reports, documentatie)
+- Verklaring dat IP vrij is van rechten derden
+- Eventuele vergoeding (kan €0 zijn bij interne overdracht)
+
+### 8.2 Licentieovereenkomst (DPG → Notifica)
+
+**Doel:** Formeel gebruiksrecht voor Notifica op DPG-IP
+
+**Inhoud:**
+- Eeuwigdurend (of langdurig) gebruiksrecht
+- Recht op doorontwikkeling (met IP-rechten automatisch naar DPG)
+- Eventuele exclusiviteitsclausule
+- Royalty/licentievergoeding structuur (optioneel, voor arm's length pricing)
+
+### 8.3 Aanvulling op Aandeelhoudersovereenkomst (optioneel)
+
+**Doel:** Expliciteren dat alle Notifica-IP bij DPG hoort
+
+---
+
+## 9. Aanbevelingen
+
+### 9.1 Korte termijn (1-3 maanden)
+1. ✓ **GRIP-licentie reeds vastgelegd** in Aandeelhoudersovereenkomst Art. 12.4
+2. **Inventariseer alle broncode** - Complete lijst van alle scripts, models, measures
+3. **Documenteer de receptuur** - Dit document uitbreiden met exacte bestandslijsten
+
+### 9.2 Middellange termijn (3-6 maanden)
+4. **Leveringsakte opstellen** - Juridische overdracht IP Notifica → DPG
+5. **Licentieovereenkomst opstellen** - DPG → Notifica
+6. **Waardebepaling** - Eventueel externe waardering voor fiscale optimalisatie
+
+### 9.3 Juridische overwegingen
+- **Auteursrecht**: Broncode en documentatie vallen automatisch onder auteursrecht
+- **Databankrecht**: De gestructureerde verzameling van scripts/queries kan mogelijk als databank worden beschermd
+- **Know-how bescherming**: Methodologie en domeinkennis als bedrijfsgeheim (geheimhoudingsclausules reeds in aandeelhoudersovereenkomst Art. 11)
+
+---
+
+## 10. Bijlagen
+
+### Bijlage A: Inventarislijst IP-assets
+
+| # | Asset | Type | Locatie | Status |
+|---|-------|------|---------|--------|
+| 1 | GRIP Licentierecht | Licentie | Aandeelhoudersovereenkomst Art. 12.4 | ✓ Vastgelegd |
+| 2 | syntess_prepare_1-5.grp | ETL Script | GRIP/Scripts | Eigendom Notifica |
+| 3 | syntess_endviews_1-3.grp | ETL Script | GRIP/Scripts | Eigendom Notifica |
+| 4 | SSM_Postgres | Semantic Model | syntess_analyse/ | Eigendom Notifica |
+| 5 | DAX_Measures_*.dax | DAX Library | syntess_analyse/ | Eigendom Notifica |
+| 6 | Thin_Reports | Power BI | syntess_analyse/Reports/ | Eigendom Notifica |
+| 7 | Custom_Reports | Power BI | syntess_analyse/Reports/ | Eigendom Notifica |
+| 8 | README.md | Documentatie | syntess_analyse/ | Eigendom Notifica |
+| 9 | RAPPORT_*.md | Documentatie | syntess_analyse/ | Eigendom Notifica |
+
+### Bijlage B: Architectuurdiagram
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│ BRON: Syntess ERP (Firebird Database)                           │
+│ [Eigendom klant - buiten scope IP]                              │
+└─────────────────────────────────────────────────────────────────┘
+                            │
+                            ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ ETL LAAG: GRIP Platform + Notifica Scripts                      │
+│ ┌─────────────────────┐  ┌─────────────────────────────────────┐│
+│ │ GRIP Software       │  │ Notifica ETL Scripts (IP!)          ││
+│ │ [Eigendom Dolf]     │  │ - Prepare 1-5                       ││
+│ │ [Licentie → DPG]    │  │ - Endview 1-3                       ││
+│ │                     │  │ - Maatwerk scripts                  ││
+│ └─────────────────────┘  └─────────────────────────────────────┘│
+└─────────────────────────────────────────────────────────────────┘
+                            │
+                            ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ DATA WAREHOUSE: PostgreSQL                                       │
+│ [Schema: gestandaardiseerd door Notifica IP]                    │
+│ - Prepare schema (tussentabellen)                               │
+│ - Endview schemas (output views)                                │
+└─────────────────────────────────────────────────────────────────┘
+                            │
+                            ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ SEMANTIC LAAG: SSM (Notifica IP!)                               │
+│ - 100+ tabeldefinities                                          │
+│ - Relatiestructuur                                              │
+│ - DAX Measures bibliotheek                                      │
+└─────────────────────────────────────────────────────────────────┘
+                            │
+                            ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ PRESENTATIE LAAG: Power BI Reports (Notifica IP!)               │
+│ - Thin Reports (standaard)                                      │
+│ - Custom Reports (maatwerk)                                     │
+└─────────────────────────────────────────────────────────────────┘
+                            │
+                            ▼
+                    Eindgebruikers (Klanten)
+```
+
+### Bijlage C: Relevante Artikelen Aandeelhoudersovereenkomst
+
+**Artikel 1.2 - Definitie GRIP:**
+> "GRIP: De ETL-tool zoals ontwikkeld door Dolf Jansonius, waarvan de eeuwigdurende, gratis licentie voor alle activiteiten onder DPG Groep en haar dochtermaatschappijen wordt ingebracht door Jansonius Holding."
+
+**Artikel 12.4 - Intellectueel Eigendom GRIP-technologie:**
+- Eeuwigdurende, gratis licentie voor DPG + dochtermaatschappijen
+- Intellectueel eigendom blijft bij Dolf Jansonius
+- Good/bad leaver: €4.000/maand licentievergoeding
+- Escrow bij Enshore B.V.
+- Onderzoek naar MIT-licentie voor openstelling
+
+**Artikel 11 - Geheimhouding:**
+- Volledige geheimhouding vertrouwelijke informatie
+- Geldt ook na beëindiging betrokkenheid
+
+---
+
+*Dit document dient als basis voor juridische vastlegging. Raadpleeg een jurist voor definitieve overeenkomsten.*
+
+**Documenthistorie:**
+- v1.0 (jan 2026): Initiële versie
+- v2.0 (jan 2026): Aangevuld met exacte informatie uit Aandeelhoudersovereenkomst DPG d.d. 17-12-2025

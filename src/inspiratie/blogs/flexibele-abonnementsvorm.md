@@ -55,9 +55,9 @@ Om data-integriteit te waarborgen, implementeren we automatische validatiescript
 
 <h2 id="kostenefficiëntie">Kostenefficiëntie en flexibiliteit van het abonnement</h2>
 
-Onze licentiekosten zijn helder en modulair opgebouwd. Met ons maandelijks opzegbare alles-in-één abonnement zit je nergens aan vast. Wil je op- of afschalen? Dan passen we je plan op eenvoudige wijze aan zonder extra licentiekosten voor nieuwe gebruikers of extra databronnen. Dit maakt het abonnement vooral aantrekkelijk voor groeiende installateurs die flexibiliteit nodig hebben.
+Onze licentiekosten zijn helder en modulair opgebouwd. Met ons maandelijks opzegbare alles-in-één abonnement zit je nergens aan vast. Wil je op- of afschalen? Dan passen we je plan op eenvoudige wijze aan zonder extra licentiekosten voor nieuwe gebruikers of extra databronnen. Dit maakt het abonnement vooral aantrekkelijk voor groeiende installatiebedrijven die flexibiliteit nodig hebben.
 
-Alle updates, support en doorontwikkeling zijn inbegrepen in de vaste maandprijs. Daardoor kom je niet voor onverwachte kosten te staan. Wil je weten hoe zo'n structuur eruitziet? Bekijk dan de algemene voorwaarden en prijsvoorbeelden op onze [dienstenpagina](/diensten/power-bi-dashboards-voor-installateurs/).
+Alle updates, support en doorontwikkeling zijn inbegrepen in de vaste maandprijs. Daardoor kom je niet voor onverwachte kosten te staan. Wil je weten hoe zo'n structuur eruitziet? Bekijk dan de algemene voorwaarden en prijsvoorbeelden op onze [dienstenpagina](/diensten/power-bi-dashboards-voor-installatiebedrijven/).
 
 ## Klantverhaal: praktijkvoorbeeld binnen ons abonnement
 

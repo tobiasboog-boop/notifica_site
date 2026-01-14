@@ -2,7 +2,7 @@
 layout: blog-post.njk
 permalink: /inspiratie/blogs/syntess-power-bi-voordelen/
 showContactPopup: true
-title: "5 Voordelen van Power BI Koppeling met Syntess Atrium voor Installateurs"
+title: "5 voordelen van Power BI koppeling met Syntess Atrium voor installatiebedrijven"
 description: "Ontdek waarom 60+ installatiebedrijven kiezen voor Power BI dashboards met Syntess Atrium. Van automatische data-sync tot 30+ KPI's."
 featuredImage: "/assets/images/dashboard-kengetallen.png"
 category: "erp-koppelingen"
@@ -12,7 +12,7 @@ relatedBlogs:
   - url: "/bedrijfssoftware/syntess-atrium/"
     title: "Syntess Atrium Power BI Koppeling"
     description: "Alles over onze automatische Syntess integratie."
-  - url: "/inspiratie/blogs/4-power-bi-stappen-installateurs/"
+  - url: "/inspiratie/blogs/4-power-bi-stappen-installatiebedrijven/"
     title: "Datagedreven dashboards installatiesector"
     description: "Meer grip met Power BI in de installatiebranche."
   - url: "/inspiratie/blogs/razendsnel-rapporten-live/"
@@ -34,7 +34,7 @@ De grootste frustratie met Syntess? Handmatige exports naar Excel. Elke week exp
 
 Een Notifica-klant met 45 medewerkers bespaarde 20 uur per maand aan rapportagetijd na implementatie.
 
-## 2. 30+ KPI's Specifiek voor Syntess Installateurs
+## 2. 30+ KPI's Specifiek voor Syntess Installatiebedrijven
 
 Standaard Syntess rapporten geven basisinformatie, maar missen vaak context. Power BI dashboards tonen:
 

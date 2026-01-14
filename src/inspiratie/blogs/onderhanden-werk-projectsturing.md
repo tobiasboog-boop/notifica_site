@@ -2,7 +2,7 @@
 layout: blog-post.njk
 permalink: /inspiratie/blogs/onderhanden-werk-projectsturing/
 showContactPopup: true
-title: "5 Tips voor Onderhanden Werk: Efficiënt je cashflow en projecten besturen"
+title: "5 tips voor onderhanden werk: efficiënt je cashflow en projecten besturen"
 description: "Leer hoe onderhanden werk (OHW) direct inzicht geeft in verborgen waarde binnen projecten voor betere cashflow en projectsturing."
 featuredImage: "/assets/images/2025/06/2.-Pojectwaardering.png"
 category: "ohw-projecten"

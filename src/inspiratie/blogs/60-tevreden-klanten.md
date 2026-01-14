@@ -6,7 +6,7 @@ title: "Meer dan 60 tevreden klanten sturen hun succes met datagedreven Power BI
 description: "Bij Notifica hebben meer dan 60 tevreden klanten dankzij onze datagedreven Power BI dashboards razendsnel succes geboekt. Deze tevreden klanten ervaren dagelijks verbeterde inzichten en efficiëntere processen."
 featuredImage: "/assets/images/2025/06/Forecast.png"
 category: "case-studies"
-ctaTitle: "Sluit je aan bij 60+ tevreden installateurs"
+ctaTitle: "Sluit je aan bij 60+ tevreden installatiebedrijven"
 ctaText: "Ontdek waarom meer dan 60 installatiebedrijven kiezen voor Notifica's dashboards. Bekijk onze klantverhalen."
 relatedBlogs:
   - url: "/inspiratie/blogs/case-study-storm-overwinnen/"

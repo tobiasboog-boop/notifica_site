@@ -12,7 +12,7 @@ relatedBlogs:
   - url: "/inspiratie/blogs/ai-dashboards-voordelen/"
     title: "AI dashboards: Ontdek 7 gigantische voordelen"
     description: "Hoe AI-gestuurde dashboards jouw bedrijf transformeren."
-  - url: "/inspiratie/blogs/ai-servicedesk-werkbondata-installateurs/"
+  - url: "/inspiratie/blogs/ai-servicedesk-werkbondata-installatiebedrijven/"
     title: "AI in de Servicedesk"
     description: "Slimmer werken met werkbondata en AI."
   - url: "/inspiratie/blogs/betere-besluiten-voorspellen/"
@@ -44,7 +44,7 @@ Door IoT-oplossingen te integreren in gebouwen en installaties, krijgen engineer
 
 Illustratie van IoT-sensoren die realtime data aanleveren voor predictive maintenance.
 
-Door een centraal platform te gebruiken voor IoT-data, kunnen installateurs op afstand prestaties monitoren en trends analyseren. Hiermee worden niet alleen storingen voorkomen, maar ook de efficiëntie van processen verhoogd.
+Door een centraal platform te gebruiken voor IoT-data, kunnen installatiebedrijven op afstand prestaties monitoren en trends analyseren. Hiermee worden niet alleen storingen voorkomen, maar ook de efficiëntie van processen verhoogd.
 
 ## 3. Digitalisering en realtime data
 

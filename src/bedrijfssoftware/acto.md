@@ -42,7 +42,7 @@ showContactPopup: true
                 <div class="stat-label" style="font-weight: 600; color: var(--text);">Plug & play oplossing</div>
             </div>
             <div class="stat-item">
-                <div class="stat-label" style="font-weight: 600; color: var(--text);">Speciaal voor installateurs</div>
+                <div class="stat-label" style="font-weight: 600; color: var(--text);">Speciaal voor installatiebedrijven</div>
             </div>
         </div>
     </div>

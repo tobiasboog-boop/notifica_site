@@ -2,14 +2,14 @@
 layout: blog-post.njk
 permalink: /inspiratie/blogs/winstoptimalisatie-installatiebedrijven/
 showContactPopup: true
-title: "Winstoptimalisatie voor Installatiebedrijven: 5 Kengetallen die het Verschil Maken"
+title: "Winstoptimalisatie voor installatiebedrijven: 5 kengetallen die het verschil maken"
 description: "Ontdek hoe je met vijf essentiële kengetallen de winstgevendheid van je installatiebedrijf kunt voorspellen en verbeteren."
 featuredImage: "/assets/images/2025/12/dashboard-kengetallen.png"
 category: "kpis-dashboards"
 ctaTitle: "Winstgevendheid verbeteren?"
 ctaText: "Notifica's dashboards geven direct inzicht in je marges en kengetallen."
 relatedBlogs:
-  - url: "/inspiratie/blogs/24-essentiele-kpis-installateurs/"
+  - url: "/inspiratie/blogs/24-essentiele-kpis-installatiebedrijven/"
     title: "24 essentiële KPI's in één overzicht"
     description: "Alle KPI's die je nodig hebt voor je installatiebedrijf."
   - url: "/inspiratie/blogs/stuurinformatie-bespaar-12-uur/"
@@ -22,7 +22,7 @@ relatedBlogs:
 
 # Winstoptimalisatie voor Installatiebedrijven: 5 Kengetallen die het Verschil Maken
 
-Bij Notifica zien we dagelijks dat installateurs vastlopen in complexe begrotingen. Ze sturen op omzet, terwijl die door wisselende materiaalprijzen enorm fluctueert. Door terug te gaan naar de basis – capaciteit, productiviteit en toegevoegde waarde – kun je via doelgerichte sturing het resultaat niet alleen voorspellen, maar ook direct beïnvloeden.
+Bij Notifica zien we dagelijks dat installatiebedrijven vastlopen in complexe begrotingen. Ze sturen op omzet, terwijl die door wisselende materiaalprijzen enorm fluctueert. Door terug te gaan naar de basis – capaciteit, productiviteit en toegevoegde waarde – kun je via doelgerichte sturing het resultaat niet alleen voorspellen, maar ook direct beïnvloeden.
 
 ![Dashboard met 5 kengetallen voor winstoptimalisatie in installatiebedrijf]({{ "/assets/images/2025/12/dashboard-kengetallen.png" | url }})
 

@@ -2,7 +2,7 @@
 layout: blog-post.njk
 permalink: /inspiratie/blogs/direct-inzicht-betere-cijfers/
 showContactPopup: true
-title: "Van rommelige cijfers naar helder inzicht: Notifica's aanpak voor installateurs"
+title: "Van rommelige cijfers naar helder inzicht: Notifica's aanpak voor installatiebedrijven"
 description: "Direct inzicht verkrijgen en realtime sturen op prestaties is essentieel in de installatiebranche. Leer hoe je datagedreven beslissingen neemt."
 featuredImage: "/assets/images/2025/06/3.-HR-Urenrapportage.png"
 category: "implementatie"
@@ -20,7 +20,7 @@ relatedBlogs:
     description: "Snel aan de slag met professionele Power BI dashboards."
 ---
 
-## Van rommelige cijfers naar helder inzicht: Notifica's aanpak voor installateurs
+## Van rommelige cijfers naar helder inzicht: Notifica's aanpak voor installatiebedrijven
 
 **Direct inzicht** verkrijgen en realtime sturen op prestaties is essentieel in de installatiebranche. Met een datagedreven aanpak kunnen managers sneller beslissingen nemen, processen optimaliseren en kosten verlagen.
 

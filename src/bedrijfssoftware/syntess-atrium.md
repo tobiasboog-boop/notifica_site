@@ -1,7 +1,7 @@
 ---
 layout: base-notion.njk
 title: Syntess Atrium Power BI Dashboards | Automatische Koppeling
-description: Power BI koppeling met Syntess Atrium. Automatische data-sync, 30+ KPI's voor installateurs, live binnen 1 dag. 60+ bedrijven gebruiken onze dashboards.
+description: Power BI koppeling met Syntess Atrium. Automatische data-sync, 30+ KPI's voor installatiebedrijven, live binnen 1 dag. 60+ bedrijven gebruiken onze dashboards.
 permalink: /bedrijfssoftware/syntess-atrium/
 showContactPopup: true
 ---
@@ -13,7 +13,7 @@ showContactPopup: true
             <div style="background: linear-gradient(135deg, #16136F 0%, #3636A2 100%); display: flex; align-items: center; justify-content: center; min-height: 140px; border-radius: 12px; margin-bottom: 32px;">
                 <img src="{{ '/assets/images/2024/04/atrium-productlogo-srgb.png' | url }}" alt="Syntess Atrium ERP Power BI Koppeling voor Installatiebedrijven" style="max-width: 200px; max-height: 120px; object-fit: contain; filter: brightness(0) invert(1);">
             </div>
-            <h1>Van Syntess naar Power BI: realtime dashboards voor installateurs</h1>
+            <h1>Van Syntess naar Power BI: realtime dashboards voor installatiebedrijven</h1>
             <p class="subtitle">
                 Rapportages uit Syntess kosten je uren per week aan handmatige Excel-exports. Onze dashboards halen elke nacht automatisch je data op uit Atrium. Elke ochtend verse inzichten, zonder gedoe.
             </p>
@@ -36,7 +36,7 @@ showContactPopup: true
                 <div class="stat-label" style="font-weight: 600; color: var(--text);">Syntess updates inbegrepen</div>
             </div>
             <div class="stat-item">
-                <div class="stat-label" style="font-weight: 600; color: var(--text);">30+ KPI's voor installateurs</div>
+                <div class="stat-label" style="font-weight: 600; color: var(--text);">30+ KPI's voor installatiebedrijven</div>
             </div>
             <div class="stat-item">
                 <div class="stat-label" style="font-weight: 600; color: var(--text);">Geen IT-kennis nodig</div>
