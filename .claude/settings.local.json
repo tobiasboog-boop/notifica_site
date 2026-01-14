@@ -47,7 +47,11 @@
       "Bash(git ls-tree:*)",
       "Bash(pip install:*)",
       "Bash(nslookup:*)",
-      "Bash(start \"\" \"G:\\\\Mijn Drive\\\\6.0_Beeldbank\\\\optimized\\\\image_catalog.html\")"
+      "Bash(start \"\" \"G:\\\\Mijn Drive\\\\6.0_Beeldbank\\\\optimized\\\\image_catalog.html\")",
+      "Read(//c/projects/notifica_site/**)"
+    ],
+    "additionalDirectories": [
+      "C:\\projects\\syntess_analyse\\ERP_Documentation"
     ]
   }
 }
