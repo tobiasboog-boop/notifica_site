@@ -18,6 +18,7 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/Notifica_Favicon.png' | url }}">
 
   <!-- Canonical URL -->
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
@@ -30,6 +31,26 @@
   {% if og_image %}
   <meta property="og:image" content="{{ site.url }}{{ og_image }}">
   {% endif %}
+
+  <!-- Schema.org JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Notifica",
+    "description": "Power BI dashboards voor installatiebedrijven met directe Syntess koppeling",
+    "url": "https://www.notifica.nl",
+    "logo": "https://www.notifica.nl/assets/images/notifica-logo-kleur.svg",
+    "sameAs": [
+      "https://www.linkedin.com/company/notifica"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "availableLanguage": "Dutch"
+    }
+  }
+  </script>
 
   {% block head %}{% endblock %}
 </head>
@@ -53,6 +74,20 @@
 
   <!-- Cookie Consent -->
   <script src="{{ '/assets/js/cookie-consent.js' | url }}"></script>
+
+  <!-- Social Sharing Script -->
+  <script>
+    // Simple social sharing functionality
+    function shareOnLinkedIn() {
+      const url = encodeURIComponent(window.location.href);
+      window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url, '_blank');
+    }
+    function shareOnTwitter() {
+      const url = encodeURIComponent(window.location.href);
+      const text = encodeURIComponent(document.title);
+      window.open('https://twitter.com/intent/tweet?url=' + url + '&text=' + text, '_blank');
+    }
+  </script>
 
   {% block scripts %}{% endblock %}
 </body>
