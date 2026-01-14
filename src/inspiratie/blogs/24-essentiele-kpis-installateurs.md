@@ -116,4 +116,10 @@ Richtinggevende KPI's om de commerciële funnel optimaal te benutten en groeikan
 
 ## Meer weten?
 
-Wil je direct aan de slag met een KPI's dashboard voor jouw installatiebedrijf? **Neem vrijblijvend [contact op](#contact)** en plan een gratis demo. Bekijk ook onze andere blogs of lees de [Veelgestelde vragen](/veelgestelde-vragen/) voor meer informatie over Power BI dashboards voor installatiebedrijven.
+Wil je direct aan de slag met een KPI's dashboard voor jouw installatiebedrijf? **Neem vrijblijvend [contact op](#contact)** en plan een gratis demo.
+
+**Gerelateerde resources:**
+- Download onze [gratis KPI Calculator](/verdieping/bedrijfsanalysetool/) om je kengetallen direct te berekenen
+- Bekijk alle [gratis tools en gidsen op onze resources pagina](/resources/)
+- Lees meer over [winstoptimalisatie voor installatiebedrijven](/inspiratie/blogs/winstoptimalisatie-installatiebedrijven/)
+- Ontdek de [Veelgestelde vragen](/veelgestelde-vragen/) over Power BI dashboards

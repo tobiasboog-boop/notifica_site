@@ -185,9 +185,14 @@ Syntess data bevat alle antwoorden, maar zonder visualisatie blijft het opgeslot
 - **Schaalbaarheid**: Groei zonder extra administratieve last
 
 **Volgende stappen:**
-1. Bepaal je top 10 KPI's
-2. Bekijk een demo van Syntess dashboards
+1. Bepaal je top 10 KPI's met onze [24 essentiële KPI's checklist](/inspiratie/blogs/24-essentiele-kpis-installateurs/)
+2. [Bekijk een demo](#contact) van Syntess dashboards
 3. Start met pilot project (1 maand)
 4. Schaal uit naar heel je organisatie
+
+**Gerelateerde resources:**
+- Lees meer op onze [Syntess Atrium Power BI pagina](/bedrijfssoftware/syntess-atrium/)
+- Bekijk [5 voordelen van Power BI koppeling met Syntess](/inspiratie/blogs/syntess-power-bi-voordelen/)
+- Download [gratis KPI tools en gidsen](/resources/)
 
 60+ installatiebedrijven gingen je voor. Tijd om data-driven te gaan sturen?

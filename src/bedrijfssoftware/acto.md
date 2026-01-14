@@ -18,7 +18,7 @@ showContactPopup: true
                 Hoeveel uur ben je deze maand al kwijt aan het verzamelen van cijfers uit ACTO? Onze dashboards verzamelen automatisch alle data uit je ACTO omgeving. Elke ochtend actuele inzichten klaar – meer tijd voor wat écht telt.
             </p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-large" data-pipedrive-form="demo">Bekijk demo dashboard</a>
+                <a href="#contact" class="btn btn-large" data-pipedrive-form="demo">Vraag Acto demo aan</a>
                 <a href="#probleem" class="btn-outline btn-large">Herken je dit?</a>
             </div>
         </div>

@@ -18,7 +18,7 @@ showContactPopup: true
                 Rapportages uit Syntess kosten je uren per week aan handmatige Excel-exports. Onze dashboards halen elke nacht automatisch je data op uit Atrium. Elke ochtend verse inzichten, zonder gedoe.
             </p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-large" data-pipedrive-form="demo">Bekijk demo dashboard</a>
+                <a href="#contact" class="btn btn-large" data-pipedrive-form="demo">Vraag Syntess demo aan</a>
                 <a href="#voordelen" class="btn-outline btn-large">Bekijk voordelen</a>
             </div>
         </div>
