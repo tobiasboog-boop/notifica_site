@@ -2097,6 +2097,34 @@ details.faq-accordion[open] summary.faq-question:after {
   padding: var(--spacing-10);
 }
 
+/* Pipedrive Form Success Message Styling */
+.popup-body .pipedriveWebForms [data-success="true"],
+.popup-body .pipedriveWebForms .success-message,
+.popup-body .pipedriveWebForms [class*="success"] {
+  text-align: center;
+  padding: var(--spacing-8);
+}
+
+.popup-body .pipedriveWebForms [data-success="true"] h2,
+.popup-body .pipedriveWebForms [data-success="true"] h3,
+.popup-body .pipedriveWebForms .success-message h2,
+.popup-body .pipedriveWebForms .success-message h3 {
+  color: var(--color-primary);
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-4);
+}
+
+.popup-body .pipedriveWebForms [data-success="true"] p,
+.popup-body .pipedriveWebForms .success-message p {
+  color: var(--color-gray-600);
+  font-size: var(--font-size-base);
+}
+
+/* Override Pipedrive iframe success styling */
+.pipedriveWebForms iframe {
+  min-height: 400px;
+}
+
 /* --------------------------------------------------------------------------
    Legal Content Pages
    -------------------------------------------------------------------------- */
