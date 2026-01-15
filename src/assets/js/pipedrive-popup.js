@@ -158,4 +158,80 @@
     open: openPopup,
     close: closePopup
   };
+
+  // ==========================================================================
+  // SUCCESS MESSAGE OVERLAY
+  // Monitors Pipedrive forms and shows a styled success message
+  // ==========================================================================
+
+  function createSuccessOverlay(container) {
+    const overlay = document.createElement("div");
+    overlay.className = "pipedrive-success-overlay";
+    overlay.innerHTML = `
+      <div class="pipedrive-success-content">
+        <div class="pipedrive-success-icon">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <h3>Je bericht is verzonden!</h3>
+        <p>Bedankt voor je bericht. We nemen binnen 24 uur contact met je op.</p>
+      </div>
+    `;
+    container.appendChild(overlay);
+    return overlay;
+  }
+
+  function showSuccessOverlay(container) {
+    let overlay = container.querySelector(".pipedrive-success-overlay");
+    if (!overlay) {
+      overlay = createSuccessOverlay(container);
+    }
+    // Small delay for smooth appearance
+    requestAnimationFrame(() => {
+      overlay.classList.add("active");
+    });
+  }
+
+  // Monitor for Pipedrive success state
+  function monitorPipedriveSuccess() {
+    // Use MutationObserver to detect when Pipedrive shows success message
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        // Check for text content changes that indicate success
+        if (mutation.type === "childList" || mutation.type === "characterData") {
+          const target = mutation.target;
+
+          // Look for success indicators in the DOM
+          const containers = document.querySelectorAll(".pipedriveWebForms");
+          containers.forEach((container) => {
+            // Check if container or its children contain success text
+            const text = container.textContent || "";
+            if (text.includes("verzonden") || text.includes("Thank you") || text.includes("Bedankt")) {
+              // Find the parent form-container or use the container itself
+              const formContainer = container.closest(".form-container") || container.parentElement;
+              if (formContainer && !formContainer.querySelector(".pipedrive-success-overlay.active")) {
+                showSuccessOverlay(formContainer);
+              }
+            }
+          });
+        }
+      });
+    });
+
+    // Start observing the document for changes
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      characterData: true
+    });
+  }
+
+  // Start monitoring when DOM is ready
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", monitorPipedriveSuccess);
+  } else {
+    monitorPipedriveSuccess();
+  }
 })();

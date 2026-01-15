@@ -2125,6 +2125,89 @@ details.faq-accordion[open] summary.faq-question:after {
   min-height: 400px;
 }
 
+/* ==========================================================================
+   Pipedrive Success Overlay
+   Custom styled success message that overlays the Pipedrive form
+   ========================================================================== */
+.pipedrive-success-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  z-index: 10;
+  border-radius: var(--border-radius-lg);
+}
+
+.pipedrive-success-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pipedrive-success-content {
+  text-align: center;
+  padding: var(--spacing-12);
+  max-width: 400px;
+}
+
+.pipedrive-success-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--spacing-6);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #4338ca 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: successPop 0.5s ease-out;
+}
+
+.pipedrive-success-icon svg {
+  stroke: white;
+  width: 40px;
+  height: 40px;
+}
+
+.pipedrive-success-content h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-3);
+}
+
+.pipedrive-success-content p {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+@keyframes successPop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Ensure form-container has relative positioning for overlay */
+.form-container {
+  position: relative;
+  min-height: 400px;
+}
+
 /* --------------------------------------------------------------------------
    Legal Content Pages
    -------------------------------------------------------------------------- */
