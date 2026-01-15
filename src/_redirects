@@ -1,63 +1,192 @@
-# URL Redirects - Oude notifica.nl URLs naar nieuwe structuur
-# Formaat: /oude-url /nieuwe-url 301
-# Dit bestand werkt direct op Netlify en Cloudflare Pages
-# Voor andere hosting (Apache/Nginx) moet dit geconverteerd worden
+# =============================================================================
+# Notifica.nl URL Redirects
+# =============================================================================
+# Dit bestand werkt direct op Cloudflare Pages en Netlify
+# Formaat: /oude-url /nieuwe-url [status-code]
+#
+# Status codes:
+# - 301 = Permanent redirect (beste voor SEO)
+# - 302 = Tijdelijke redirect
+# - 200 = Rewrite (URL blijft zichtbaar)
+#
+# Laatste update: 15 januari 2026
+# =============================================================================
 
-# Hoofdpagina's
+# -----------------------------------------------------------------------------
+# HOMEPAGE VARIANTEN
+# -----------------------------------------------------------------------------
+/home-power-bi-voor-installatiebedrijven/  /  301
+/home/  /  301
+/index.php  /  301
+/index.html  /  301
+
+# -----------------------------------------------------------------------------
+# HOOFDPAGINA'S
+# -----------------------------------------------------------------------------
 /klanten-ervaringen-met-notifica-waardevolle-inzichten/  /klanten-ervaringen/  301
 /over-ons-ontmoet-het-team-van-notifica/  /over-ons/  301
 /faq-antwoord-op-de-30-meest-veelgestelde-vragen/  /veelgestelde-vragen/  301
 /privacy-verklaring/  /privacy/  301
+/faq/  /veelgestelde-vragen/  301
 
-# Inspiratie sectie
-/videohub/  /inspiratie/videos/  301
-/krachtige-dashboards-artikelen-en-trends-op-de-blog/  /inspiratie/blogs/  301
-/whitepapers-leergidsen-voor-installatiebedragen/  /inspiratie/whitepapers/  301
-
-# Bedrijfssoftware pagina's
+# -----------------------------------------------------------------------------
+# BEDRIJFSSOFTWARE / ERP KOPPELINGEN
+# -----------------------------------------------------------------------------
 /syntess-dashboards-en-rapportages-live-in-1-dag/  /bedrijfssoftware/syntess-atrium/  301
+/syntess/  /bedrijfssoftware/syntess-atrium/  301
+/syntess-atrium/  /bedrijfssoftware/syntess-atrium/  301
 /enk-software-razendsnel-ontsloten-met-dashboards/  /bedrijfssoftware/enk-software/  301
+/enk/  /bedrijfssoftware/enk-software/  301
 /bouwinfosys-inzicht-met-krachtige-dashboards-notifica/  /bedrijfssoftware/bouwinfosys/  301
+/bouwinfosys/  /bedrijfssoftware/bouwinfosys/  301
 /4ps-inzicht-met-krachtige-dashboards-notifica/  /bedrijfssoftware/4ps/  301
 /acto-inzicht-met-krachtige-dashboards-notifica/  /bedrijfssoftware/acto/  301
+/acto/  /bedrijfssoftware/acto/  301
 /admicom-inzicht-met-krachtige-dashboards-notifica/  /bedrijfssoftware/admicom/  301
+/admicom/  /bedrijfssoftware/admicom/  301
+/erp-koppelingen/  /bedrijfssoftware/  301
+/software/  /bedrijfssoftware/  301
 
-# Oude homepage variant
-/home-power-bi-voor-installatiebedrijven/  /  301
+# -----------------------------------------------------------------------------
+# INSPIRATIE SECTIE (Blogs, Videos, Whitepapers)
+# -----------------------------------------------------------------------------
+/videohub/  /inspiratie/videos/  301
+/videos/  /inspiratie/videos/  301
+/krachtige-dashboards-artikelen-en-trends-op-de-blog/  /inspiratie/blogs/  301
+/blog/  /inspiratie/blogs/  301
+/blogs/  /inspiratie/blogs/  301
+/whitepapers-leergidsen-voor-installatiebedragen/  /inspiratie/whitepapers/  301
+/whitepapers/  /inspiratie/whitepapers/  301
+/whitepaper/  /inspiratie/whitepapers/  301
+/kennisbank/  /inspiratie/  301
 
-# Prijzen pagina
-/prijzen-syntess-powerbi/  /prijzen/  301
+# -----------------------------------------------------------------------------
+# INDIVIDUELE BLOG POSTS (KRITIEK VOOR SEO!)
+# Oude WordPress URLs → Nieuwe Eleventy URLs
+# -----------------------------------------------------------------------------
+/blog/winstoptimalisatie-installatiebedrijven/  /inspiratie/blogs/winstoptimalisatie-installatiebedrijven/  301
+/blog/ai-servicedesk-werkbondata-installateurs/  /inspiratie/blogs/ai-servicedesk-werkbondata-installatiebedrijven/  301
+/blog/onze-flexibele-abonnementsvorm-alles-in-een/  /inspiratie/blogs/flexibele-abonnementsvorm/  301
+/blog/60-tevreden-klanten-kiezen-voor-onze-oplossingen/  /inspiratie/blogs/60-tevreden-klanten/  301
+/blog/razendsnel-rapporten-live-met-power-bi/  /inspiratie/blogs/razendsnel-rapporten-live/  301
+/blog/verbeter-datakwaliteit-in-je-erp-met-power-bi/  /inspiratie/blogs/verbeter-datakwaliteit-erp/  301
+/blog/versnel-je-maandrapportage-met-power-bi/  /inspiratie/blogs/versnel-maandrapportage/  301
+/blog/controle-real-time-power-bi-installatiebranche/  /inspiratie/blogs/controle-realtime-power-bi/  301
+/blog/case-study-storm-overwinnen-financieel-inzicht/  /inspiratie/blogs/case-study-storm-overwinnen/  301
+/blog/van-rommelige-cijfers-naar-direct-inzicht/  /inspiratie/blogs/direct-inzicht-betere-cijfers/  301
+/blog/uitbesteden-van-rapportage-voor-mkb-is-slim/  /inspiratie/blogs/uitbesteden-rapportage-mkb/  301
+/blog/stuurinformatie-bespaar-12-uur-pw/  /inspiratie/blogs/stuurinformatie-bespaar-12-uur/  301
+/blog/betere-besluiten-met-voorspellen/  /inspiratie/blogs/betere-besluiten-voorspellen/  301
+/blog/onderhanden-werk-installatiesector-projectsturing/  /inspiratie/blogs/onderhanden-werk-projectsturing/  301
+/blog/dashboards-voor-installateurs-24-essentiele-kpis/  /inspiratie/blogs/24-essentiele-kpis-installatiebedrijven/  301
+/blog/eenvoudig-grip-op-ohw-in-5-krachtige-stappen/  /inspiratie/blogs/grip-op-ohw-5-stappen/  301
+/blog/power-bi-5-onmisbare-voordelen-van-power-bi/  /inspiratie/blogs/syntess-power-bi-voordelen/  301
+/blog/4-essentiele-power-bi-stappen-voor-installateurs/  /inspiratie/blogs/4-power-bi-stappen-installatiebedrijven/  301
+/blog/predictive-maintenance-5-belangrijke-innovaties/  /inspiratie/blogs/predictive-maintenance-innovaties/  301
+/blog/mkb-implementatiegids-2025-6-essentiele-stappen/  /inspiratie/blogs/mkb-implementatiegids/  301
+/blog/ai-dashboards-ontdek-7-gigantische-voordelen/  /inspiratie/blogs/ai-dashboards-voordelen/  301
+/blog/chatgpt-vs-copilot-de-beste-power-bi-ai-tool/  /inspiratie/blogs/chatgpt-vs-copilot/  301
 
-# Diensten pagina's
+# -----------------------------------------------------------------------------
+# DIENSTEN PAGINA'S
+# -----------------------------------------------------------------------------
 /datagedreven-werken-sneller-inzicht-meer-groei/  /diensten/datagedreven-werken/  301
+/datagedreven-werken/  /diensten/datagedreven-werken/  301
 /volledig-ontzorgd-data-beheer-alles-in-1-oplossing/  /diensten/databeheer/  301
+/databeheer/  /diensten/databeheer/  301
+/data-beheer/  /diensten/databeheer/  301
 /uniform-semantisch-datamodel/  /diensten/semantisch-datamodel/  301
+/semantisch-datamodel/  /diensten/semantisch-datamodel/  301
+/datamodel/  /diensten/semantisch-datamodel/  301
 /bouw-zelf-rapporten-in-1-dag/  /diensten/zelf-rapporten-bouwen/  301
+/zelf-rapporten-bouwen/  /diensten/zelf-rapporten-bouwen/  301
 /datamigratie/  /diensten/datamigratie/  301
+/diensten/  /  301
 
-# Training & Webinars
+# -----------------------------------------------------------------------------
+# PRIJZEN
+# -----------------------------------------------------------------------------
+/prijzen-syntess-powerbi/  /prijzen/  301
+/pricing/  /prijzen/  301
+/tarieven/  /prijzen/  301
+/kosten/  /prijzen/  301
+
+# -----------------------------------------------------------------------------
+# TRAINING & WEBINARS
+# -----------------------------------------------------------------------------
 /optimaliseer-bedrijfsresultaten-met-power-bi-training/  /training/power-bi/  301
+/power-bi-training/  /training/power-bi/  301
+/training/  /training/power-bi/  301
 /syntess-webinar/  /verdieping/webinars/  301
 /syntess-webinar/presentatie-webinar/  /verdieping/webinars/optimalisatie-winstgevendheid-december-2025/  301
+/webinar/  /verdieping/webinars/  301
+/webinars/  /verdieping/webinars/  301
 
-# Bedrijfsanalysetool varianten
+# -----------------------------------------------------------------------------
+# BEDRIJFSANALYSETOOL
+# -----------------------------------------------------------------------------
 /bedrijfsanalyse-tool/  /verdieping/bedrijfsanalysetool/  301
 /bedrijfsanalysetool/  /verdieping/bedrijfsanalysetool/  301
+/analysetool/  /verdieping/bedrijfsanalysetool/  301
+/benchmark/  /verdieping/bedrijfsanalysetool/  301
 
-# Notifica Talks
+# -----------------------------------------------------------------------------
+# NOTIFICA TALKS & SPECIALE PAGINA'S
+# -----------------------------------------------------------------------------
 /talks_v2/  /notifica-talks/  301
+/talks/  /notifica-talks/  301
 
-# SSH Tool (nu in admin)
-/ssh-verbinding-stappenplan-syntess/  /admin/tools/ssh-verbinding-uitleg/  301
+# -----------------------------------------------------------------------------
+# CAMPAGNES / ACTIES
+# -----------------------------------------------------------------------------
+/december-actie/  /archive/december-actie/  301
+/actie/  /  301
 
-# Campagnes / Acties
-/december-actie/  /campaigns/december-2025-webinar/  301
+# -----------------------------------------------------------------------------
+# ADMIN / TOOLS (Interne redirects)
+# -----------------------------------------------------------------------------
+/ssh-verbinding-stappenplan-syntess/  /admin/tools/ssh-verbinding/  301
+/ssh-verbinding/  /admin/tools/ssh-verbinding/  301
 
-# Overige pagina's die al bestaan met dezelfde URL
-# /referenties/ - behouden
-# /proefperiode/ - behouden
-# /installatie-syntess/ - behouden
-# /vacatures/ - behouden
-# /disclaimer/ - behouden
-# /algemene-voorwaarden/ - behouden
-# /verwerkersovereenkomst/ - behouden
+# -----------------------------------------------------------------------------
+# JURIDISCH (Bestaande URLs - redirects voor varianten)
+# -----------------------------------------------------------------------------
+/privacy-policy/  /privacy/  301
+/privacybeleid/  /privacy/  301
+/cookie-beleid/  /cookies/  301
+/cookiebeleid/  /cookies/  301
+/terms/  /algemene-voorwaarden/  301
+/voorwaarden/  /algemene-voorwaarden/  301
+/sla-agreement/  /sla/  301
+
+# -----------------------------------------------------------------------------
+# OVERIGE HANDIGE REDIRECTS
+# -----------------------------------------------------------------------------
+/contact/  /#contact  301
+/demo/  /proefperiode/  301
+/trial/  /proefperiode/  301
+/proberen/  /proefperiode/  301
+/aanvragen/  /#contact  301
+/offerte/  /#contact  301
+
+# -----------------------------------------------------------------------------
+# WORDPRESS SPECIFIEKE URLs (niet meer nodig)
+# -----------------------------------------------------------------------------
+/logout/  /  301
+/navigatie-branche-naar-software/  /bedrijfssoftware/  301
+/kennisbank-voorbeeld/  /inspiratie/  301
+
+# -----------------------------------------------------------------------------
+# WWW NAAR NON-WWW (Cloudflare Page Rule aanbevolen)
+# Dit wordt beter afgehandeld via Cloudflare DNS/Page Rules
+# -----------------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------
+# 404 FALLBACK - Stuur onbekende URLs naar homepage
+# Uitgecommenteerd - Cloudflare handelt dit automatisch af
+# -----------------------------------------------------------------------------
+# /*  /  404
+
+# =============================================================================
+# EINDE REDIRECTS
+# =============================================================================

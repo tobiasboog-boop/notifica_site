@@ -376,4 +376,103 @@ _Ruimte voor eigen notities tijdens het bespreken:_
 
 ---
 
-*Laatste update: 9 januari 2025*
+*Laatste update: 15 januari 2026*
+
+---
+
+## 8. Pre-Livegang Checklist (NIEUW)
+
+### Kritieke stappen voor vanavond
+
+#### A. Code & Build
+- [x] Alle SEO optimalisaties doorgevoerd (aria-hidden mobile nav, unieke anchor teksten)
+- [x] Site bouwt zonder errors (`npm run build`)
+- [x] Alle templates correct (header-notion.njk, footer-notion.njk, base layouts)
+- [ ] Finale build maken en testen
+
+#### B. Redirects (KRITIEK - doe dit eerst!)
+⚠️ **Zonder redirects verlies je SEO waarde van bestaande pagina's!**
+
+**Waar redirects instellen:**
+- Als hosting bij Cloudflare: Page Rules of Bulk Redirects
+- Als hosting bij Vercel/Netlify: `_redirects` bestand of `vercel.json`
+- Als eigen server: `.htaccess` (Apache) of nginx config
+
+**Minimaal nodig (hoogste prioriteit):**
+```
+/home-power-bi-voor-installatiebedrijven/ → / (301)
+/syntess-dashboards-en-rapportages-live-in-1-dag/ → /bedrijfssoftware/syntess-atrium/ (301)
+/over-ons-ontmoet-het-team-van-notifica/ → /over-ons/ (301)
+/faq-antwoord-op-de-30-meest-veelgestelde-vragen/ → /veelgestelde-vragen/ (301)
+/klanten-ervaringen-met-notifica-waardevolle-inzichten/ → /klanten-ervaringen/ (301)
+/privacy-verklaring/ → /privacy/ (301)
+```
+
+#### C. DNS & Domein
+- [ ] Huidige hosting provider identificeren
+- [ ] DNS records voorbereiden (A record of CNAME)
+- [ ] SSL certificaat geregeld (vaak automatisch bij Cloudflare/Vercel)
+- [ ] WWW vs non-WWW: kies één en redirect de ander
+
+#### D. Google Analytics & Search Console
+- [x] GA4 tracking ID: `G-X93YGT3NLM` (behouden)
+- [x] Tracking code in templates (via cookie consent)
+- [ ] Na livegang: Search Console eigenaarschap verifiëren
+- [ ] Na livegang: Sitemap.xml indienen (https://www.notifica.nl/sitemap.xml)
+
+#### E. Formulieren & Integraties
+- [x] Pipedrive popup script aanwezig
+- [ ] Contact formulier testen na livegang
+- [ ] Vimeo embeds testen (video sectie)
+- [ ] TeamViewer link testen
+- [ ] Social media links testen
+
+#### F. Laatste controles
+- [ ] Homepage laadt correct
+- [ ] Alle menu links werken
+- [ ] Mobile navigatie werkt
+- [ ] Footer links werken
+- [ ] Contact/CTA buttons werken
+
+---
+
+## 9. Directe Acties Na Livegang
+
+### Dag 1 (direct na livegang)
+- [ ] Alle belangrijke pagina's handmatig checken
+- [ ] Google Search Console: URL-inspectie op homepage
+- [ ] Google Analytics: Real-time check of tracking werkt
+- [ ] Test contactformulier (stuur testbericht)
+- [ ] Check op console errors (F12 in browser)
+
+### Week 1
+- [ ] Search Console: Sitemap indienen
+- [ ] Search Console: Indexeringsstatus monitoren
+- [ ] Check 404 errors in Search Console
+- [ ] Redirects verifiëren (test oude URLs)
+
+### Maand 1
+- [ ] SEO score opnieuw meten (Seobility)
+- [ ] Rankings monitoren in Search Console
+- [ ] Google Reviews blijven verzamelen
+- [ ] Backlink strategie voortzetten
+
+---
+
+## 10. Bekende Beperkingen & Acceptatie
+
+### Niet te fixen (accepteren):
+| Issue | Reden | Impact |
+|-------|-------|--------|
+| Server config 0% | GitHub Pages/hosting specifiek | Laag - lost op na DNS wijziging |
+| External factors 3% | Backlinks vereisen tijd | Medium - langetermijn werk |
+| Canonical naar ander domein | Bewust - wijst naar productie | Geen - is correct gedrag |
+
+### Huidige SEO Score (Seobility):
+- **On-page score: 77%** (was ~70%, nu ~77%)
+- Meta data: 91%
+- Page quality: 100%
+- Page structure: 100%
+- Links: 88%
+- Server: 0% (lost op na livegang)
+- External factors: 3% (backlink werk nodig)

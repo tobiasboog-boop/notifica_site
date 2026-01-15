@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy",
+    "build:prod": "eleventy --config=eleventy.config.prod.js",
+    "build:github": "eleventy --config=eleventy.config.github.js",
     "clean": "rimraf _site",
     "test": "npm run build",
     "host": "eleventy && http-server _site -a 10.3.152.3 -p 8080",

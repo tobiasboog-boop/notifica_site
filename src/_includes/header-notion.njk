@@ -60,8 +60,8 @@
     </div>
 </nav>
 
-<!-- Mobile Navigation -->
-<div class="mobile-nav">
+<!-- Mobile Navigation (aria-hidden to prevent duplicate anchor text issues for SEO) -->
+<div class="mobile-nav" aria-hidden="true">
     <a href="{{ '/' | url }}">Home</a>
     <a href="{{ '/bedrijfssoftware/' | url }}">Bedrijfssoftware</a>
     <a href="{{ '/bedrijfssoftware/syntess-atrium/' | url }}">Syntess Atrium</a>
@@ -88,7 +88,10 @@ document.addEventListener('DOMContentLoaded', function() {
         menuBtn.addEventListener('click', function() {
             menuBtn.classList.toggle('active');
             mobileNav.classList.toggle('active');
-            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+            const isActive = mobileNav.classList.contains('active');
+            document.body.style.overflow = isActive ? 'hidden' : '';
+            // Toggle aria-hidden for accessibility when menu is open
+            mobileNav.setAttribute('aria-hidden', !isActive);
         });
 
         // Close menu when clicking a link
@@ -97,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 menuBtn.classList.remove('active');
                 mobileNav.classList.remove('active');
                 document.body.style.overflow = '';
+                mobileNav.setAttribute('aria-hidden', 'true');
             });
         });
     }
