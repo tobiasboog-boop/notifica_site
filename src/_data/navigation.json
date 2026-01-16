@@ -9,6 +9,10 @@
       "url": "/klanten-ervaringen/"
     },
     {
+      "label": "Webinars",
+      "url": "/webinars/"
+    },
+    {
       "label": "Inspiratie",
       "url": "/inspiratie/",
       "children": [
