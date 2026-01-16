@@ -2249,7 +2249,7 @@ details.faq-accordion[open] summary.faq-question:after {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .features-grid,
   .stats-grid {
     grid-template-columns: 1fr !important;
