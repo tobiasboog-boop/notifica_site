@@ -109,22 +109,101 @@ permalink: /webinar-stuurinformatie/
 
             <!-- Right: Booking Form -->
             <div class="webinar-booking">
-                <div class="booking-card">
-                    <h2>Schrijf je in</h2>
-                    <p class="booking-subtitle">Kies een datum en reserveer direct je plek.</p>
+                <div class="booking-card" id="registration-card">
+                    <!-- Registration Form -->
+                    <div id="registration-form-container">
+                        <h2>Schrijf je in</h2>
+                        <p class="booking-subtitle">Vul je gegevens in en kies een datum.</p>
 
-                    <!-- Booking Buttons -->
-                    <div class="booking-buttons">
-                        <a href="https://events.teams.microsoft.com/event/b3afe374-5d48-435c-883e-b5a894a13ec7@9fdd6828-019a-4f33-906f-6544a22b02db" target="_blank" rel="noopener" class="booking-btn">
-                            <span class="booking-btn-date">Donderdag 29 januari</span>
-                            <span class="booking-btn-time">12:00 - 12:30 uur</span>
-                        </a>
-                        <a href="https://events.teams.microsoft.com/event/1c32a2e6-7dc5-4544-8bc2-d9221fee4637@9fdd6828-019a-4f33-906f-6544a22b02db" target="_blank" rel="noopener" class="booking-btn booking-btn-secondary">
-                            <span class="booking-btn-date">Vrijdag 30 januari</span>
-                            <span class="booking-btn-time">12:00 - 12:30 uur</span>
-                        </a>
+                        <form id="webinar-form" class="webinar-form">
+                            <div class="form-group">
+                                <label for="name">Naam *</label>
+                                <input type="text" id="name" name="name" required placeholder="Je volledige naam">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">E-mailadres *</label>
+                                <input type="email" id="email" name="email" required placeholder="je@bedrijf.nl">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bedrijf">Bedrijf</label>
+                                <input type="text" id="bedrijf" name="bedrijf" placeholder="Bedrijfsnaam (optioneel)">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Kies je datum *</label>
+                                <div class="date-options">
+                                    <label class="date-option">
+                                        <input type="radio" name="date" value="donderdag-29" required>
+                                        <span class="date-option-content">
+                                            <strong>Donderdag 29 januari</strong>
+                                            <span>12:00 - 12:30 uur</span>
+                                        </span>
+                                    </label>
+                                    <label class="date-option">
+                                        <input type="radio" name="date" value="vrijdag-30">
+                                        <span class="date-option-content">
+                                            <strong>Vrijdag 30 januari</strong>
+                                            <span>12:00 - 12:30 uur</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="submit-btn" id="submit-btn">
+                                <span class="submit-text">Aanmelden</span>
+                                <span class="submit-loading" style="display: none;">Even geduld...</span>
+                            </button>
+
+                            <p class="form-note">Je ontvangt direct een bevestiging met de Teams-link.</p>
+                        </form>
                     </div>
-                    <p class="booking-note">Na inschrijving ontvang je een Teams-uitnodiging per e-mail.</p>
+
+                    <!-- Success Screen (hidden by default) -->
+                    <div id="registration-success" style="display: none;">
+                        <div class="success-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <h2>Je bent aangemeld!</h2>
+                        <p class="success-message">We hebben je inschrijving ontvangen voor <strong id="selected-date-text"></strong>.</p>
+
+                        <div class="teams-link-box">
+                            <p><strong>Teams-link:</strong></p>
+                            <a href="#" id="teams-link" target="_blank" rel="noopener" class="teams-link"></a>
+                        </div>
+
+                        <div class="calendar-section">
+                            <p class="calendar-title">Voeg toe aan je agenda:</p>
+                            <div class="calendar-buttons">
+                                <a href="#" id="google-calendar" target="_blank" rel="noopener" class="calendar-btn google">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19.5 3h-15A1.5 1.5 0 003 4.5v15A1.5 1.5 0 004.5 21h15a1.5 1.5 0 001.5-1.5v-15A1.5 1.5 0 0019.5 3zm-9 15h-3v-9h3v9zm4.5 0h-3v-9h3v9zm4.5 0h-3v-9h3v9z"/>
+                                    </svg>
+                                    Google Calendar
+                                </a>
+                                <a href="#" id="outlook-calendar" target="_blank" rel="noopener" class="calendar-btn outlook">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M21 3H3a1 1 0 00-1 1v16a1 1 0 001 1h18a1 1 0 001-1V4a1 1 0 00-1-1zm-1 16H4V8h16v11z"/>
+                                    </svg>
+                                    Outlook
+                                </a>
+                                <a href="#" id="ics-download" download="webinar-stuurinformatie.ics" class="calendar-btn ics">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                        <polyline points="7 10 12 15 17 10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                    Download .ics
+                                </a>
+                            </div>
+                        </div>
+
+                        <p class="success-note">Tip: Bewaar de Teams-link, je hebt deze nodig om deel te nemen.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -135,15 +214,26 @@ permalink: /webinar-stuurinformatie/
 <section class="section section-alt">
     <div class="container">
         <div class="section-header">
-            <h2>Je host</h2>
+            <h2>Je hosts</h2>
         </div>
-        <div class="speaker-card">
-            <div class="speaker-info">
-                <h3>Tobias Boog</h3>
-                <p class="speaker-title">Oprichter Notifica</p>
-                <p class="speaker-bio">
-                    Met jarenlange ervaring in de installatiebranche helpt Tobias bedrijven om meer grip te krijgen op hun prestaties. In deze sessie deelt hij praktische inzichten over het sturen op de juiste kengetallen.
-                </p>
+        <div class="speakers-grid">
+            <div class="speaker-card">
+                <div class="speaker-info">
+                    <h3>Tobias Boog</h3>
+                    <p class="speaker-title">Partner bij Notifica</p>
+                    <p class="speaker-bio">
+                        Met jarenlange ervaring in de installatiebranche helpt Tobias bedrijven om meer grip te krijgen op hun prestaties. In deze sessie deelt hij praktische inzichten over het sturen op de juiste kengetallen.
+                    </p>
+                </div>
+            </div>
+            <div class="speaker-card">
+                <div class="speaker-info">
+                    <h3>Arthur Gartz</h3>
+                    <p class="speaker-title">Partner bij Notifica</p>
+                    <p class="speaker-bio">
+                        Arthur combineert financiële expertise met praktijkervaring in de installatiebranche. Hij vertaalt complexe cijfers naar heldere inzichten en concrete verbeteracties.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -333,10 +423,23 @@ permalink: /webinar-stuurinformatie/
     text-align: center;
 }
 
+/* Speakers Grid */
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+    .speakers-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Speaker Card */
 .speaker-card {
-    max-width: 600px;
-    margin: 0 auto;
     text-align: center;
 }
 
@@ -390,4 +493,376 @@ permalink: /webinar-stuurinformatie/
     line-height: 1.6;
     margin: 0;
 }
+
+/* Webinar Form Styles */
+.webinar-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--navy);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(22, 19, 111, 0.1);
+}
+
+.date-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.date-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.date-option:hover {
+    border-color: var(--navy);
+    background: rgba(22, 19, 111, 0.02);
+}
+
+.date-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--navy);
+}
+
+.date-option input[type="radio"]:checked + .date-option-content {
+    color: var(--navy);
+}
+
+.date-option:has(input:checked) {
+    border-color: var(--navy);
+    background: rgba(22, 19, 111, 0.05);
+}
+
+.date-option-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.date-option-content strong {
+    font-size: 15px;
+    color: var(--navy);
+}
+
+.date-option-content span {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px 24px;
+    background: var(--navy);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 8px;
+}
+
+.submit-btn:hover {
+    background: var(--blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(22, 19, 111, 0.3);
+}
+
+.submit-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.form-note {
+    font-size: 13px;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* Success Screen Styles */
+#registration-success {
+    text-align: center;
+}
+
+.success-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.success-icon svg {
+    color: #22c55e;
+}
+
+#registration-success h2 {
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.success-message {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.teams-link-box {
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.teams-link-box p {
+    font-size: 13px;
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.teams-link {
+    font-size: 14px;
+    color: var(--navy);
+    word-break: break-all;
+    text-decoration: underline;
+}
+
+.teams-link:hover {
+    color: var(--blue);
+}
+
+.calendar-section {
+    margin-bottom: 20px;
+}
+
+.calendar-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.calendar-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.calendar-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.calendar-btn.google {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    color: #1f2937;
+}
+
+.calendar-btn.google:hover {
+    background: #f9fafb;
+    border-color: #d1d5db;
+}
+
+.calendar-btn.outlook {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    color: #1f2937;
+}
+
+.calendar-btn.outlook:hover {
+    background: #f9fafb;
+    border-color: #d1d5db;
+}
+
+.calendar-btn.ics {
+    background: var(--navy);
+    color: white;
+}
+
+.calendar-btn.ics:hover {
+    background: var(--blue);
+}
+
+.success-note {
+    font-size: 13px;
+    color: var(--text-secondary);
+    background: #fef3c7;
+    border-radius: 8px;
+    padding: 12px;
+}
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('webinar-form');
+    const formContainer = document.getElementById('registration-form-container');
+    const successScreen = document.getElementById('registration-success');
+    const submitBtn = document.getElementById('submit-btn');
+    const submitText = submitBtn.querySelector('.submit-text');
+    const submitLoading = submitBtn.querySelector('.submit-loading');
+
+    // Teams links
+    const teamsLinks = {
+        'donderdag-29': 'https://teams.microsoft.com/meet/38037240929084?p=nK0H0o6bwdiJrvL238',
+        'vrijdag-30': 'https://teams.microsoft.com/meet/31157454727564?p=bjcOmrv089ThfowSWs'
+    };
+
+    // Calendar data
+    const calendarData = {
+        'donderdag-29': {
+            title: 'Webinar: Stuurinformatie in de praktijk',
+            date: '20260129',
+            startTime: '110000Z',
+            endTime: '113000Z',
+            description: 'Van analyse naar actie: leer hoe je inzichten uit je bedrijfsdata vertaalt naar concrete sturing.\\n\\nTeams-link: ' + teamsLinks['donderdag-29'],
+            location: teamsLinks['donderdag-29'],
+            dateText: 'donderdag 29 januari'
+        },
+        'vrijdag-30': {
+            title: 'Webinar: Stuurinformatie in de praktijk',
+            date: '20260130',
+            startTime: '110000Z',
+            endTime: '113000Z',
+            description: 'Van analyse naar actie: leer hoe je inzichten uit je bedrijfsdata vertaalt naar concrete sturing.\\n\\nTeams-link: ' + teamsLinks['vrijdag-30'],
+            location: teamsLinks['vrijdag-30'],
+            dateText: 'vrijdag 30 januari'
+        }
+    };
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            bedrijf: formData.get('bedrijf') || '',
+            date: formData.get('date')
+        };
+
+        // Validate
+        if (!data.name || !data.email || !data.date) {
+            alert('Vul alle verplichte velden in.');
+            return;
+        }
+
+        // Show loading
+        submitBtn.disabled = true;
+        submitText.style.display = 'none';
+        submitLoading.style.display = 'inline';
+
+        try {
+            // Submit to API
+            const response = await fetch('/api/webinar-register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                showSuccess(data.date);
+            } else {
+                alert(result.error || 'Er ging iets mis. Probeer het opnieuw.');
+                submitBtn.disabled = false;
+                submitText.style.display = 'inline';
+                submitLoading.style.display = 'none';
+            }
+        } catch (error) {
+            console.error('Registration error:', error);
+            // Still show success (graceful degradation)
+            showSuccess(data.date);
+        }
+    });
+
+    function showSuccess(selectedDate) {
+        const cal = calendarData[selectedDate];
+        const teamsLink = teamsLinks[selectedDate];
+
+        // Update success screen
+        document.getElementById('selected-date-text').textContent = cal.dateText;
+        document.getElementById('teams-link').href = teamsLink;
+        document.getElementById('teams-link').textContent = teamsLink;
+
+        // Google Calendar link
+        const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(cal.title)}&dates=${cal.date}T${cal.startTime}/${cal.date}T${cal.endTime}&details=${encodeURIComponent(cal.description)}&location=${encodeURIComponent(cal.location)}`;
+        document.getElementById('google-calendar').href = googleUrl;
+
+        // Outlook web link
+        const outlookUrl = `https://outlook.live.com/calendar/0/deeplink/compose?subject=${encodeURIComponent(cal.title)}&startdt=2026-${selectedDate === 'donderdag-29' ? '01-29' : '01-30'}T12:00:00&enddt=2026-${selectedDate === 'donderdag-29' ? '01-29' : '01-30'}T12:30:00&body=${encodeURIComponent(cal.description)}&location=${encodeURIComponent(cal.location)}`;
+        document.getElementById('outlook-calendar').href = outlookUrl;
+
+        // ICS file
+        const icsContent = generateICS(cal, teamsLink);
+        const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+        document.getElementById('ics-download').href = URL.createObjectURL(blob);
+
+        // Show success, hide form
+        formContainer.style.display = 'none';
+        successScreen.style.display = 'block';
+    }
+
+    function generateICS(cal, teamsLink) {
+        return `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Notifica//Webinar//NL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:${cal.date}T110000Z
+DTEND:${cal.date}T113000Z
+SUMMARY:${cal.title}
+DESCRIPTION:${cal.description.replace(/\\n/g, '\\n')}
+LOCATION:${teamsLink}
+URL:${teamsLink}
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR`;
+    }
+});
+</script>

@@ -3,5 +3,11 @@
   "compatibility_date": "2026-01-15",
   "assets": {
     "directory": "./_site"
-  }
+  },
+  "kv_namespaces": [
+    {
+      "binding": "WEBINAR_REGISTRATIONS",
+      "id": "PLACEHOLDER_CREATE_IN_CLOUDFLARE_DASHBOARD"
+    }
+  ]
 }
