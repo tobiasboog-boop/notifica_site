@@ -117,14 +117,14 @@ De receptuur bestaat uit de **unieke combinatie en integratie** van:
 
 ### 4.1 Asset-matrix
 
-| # | Asset | Juridisch Eigenaar | Licentie/Recht | Waarde-indicatie |
-|---|-------|-------------------|----------------|------------------|
-| 1 | **GRIP Software** | Dolf Jansonius | Eeuwigdurende gratis licentie aan DPG | 25% aandelenbelang DPG |
-| 2 | **GRIP ETL-scripts Syntess** | DPG/Notifica | Volledig eigendom | Zelfgebouwd |
-| 3 | **SSM (Semantic Model)** | DPG/Notifica | Volledig eigendom | Zelfgebouwd |
-| 4 | **DAX Measures bibliotheek** | DPG/Notifica | Volledig eigendom | Zelfgebouwd |
-| 5 | **Thin/Custom Reports** | DPG/Notifica | Volledig eigendom | Zelfgebouwd |
-| 6 | **Methodologie & Domeinkennis** | DPG/Notifica | Volledig eigendom | Opgebouwd |
+| # | Asset | Juridisch Eigenaar | Beschermingsvorm | Waarde-indicatie |
+|---|-------|-------------------|------------------|------------------|
+| 1 | **GRIP Software** | Dolf Jansonius | Licentie aan DPG | 25% aandelenbelang DPG |
+| 2 | **GRIP ETL-scripts Syntess** | DPG/Notifica | **Know-how** + auteursrecht op code | Gecodificeerde domeinkennis |
+| 3 | **SSM (Semantic Model)** | DPG/Notifica | **Know-how** + auteursrecht op code | Branche-specifiek datamodel |
+| 4 | **DAX Measures bibliotheek** | DPG/Notifica | **Know-how** (formules = methodologie) | Business logic |
+| 5 | **Thin/Custom Reports** | DPG/Notifica | **Know-how** + auteursrecht op ontwerp | Bewezen best practices |
+| 6 | **Methodologie & Domeinkennis** | DPG/Notifica | **Bedrijfsgeheim** (Art. 11 AHO) | Jarenlange opbouw |
 
 ### 4.2 Onderscheid GRIP vs. Notifica-IP
 
@@ -479,10 +479,34 @@ Alle IP expliciet bij DPG Groep:
 5. **Licentieovereenkomst opstellen** - DPG → Notifica
 6. **Waardebepaling** - Eventueel externe waardering voor fiscale optimalisatie
 
-### 9.3 Juridische overwegingen
-- **Auteursrecht**: Broncode en documentatie vallen automatisch onder auteursrecht
-- **Databankrecht**: De gestructureerde verzameling van scripts/queries kan mogelijk als databank worden beschermd
-- **Know-how bescherming**: Methodologie en domeinkennis als bedrijfsgeheim (geheimhoudingsclausules reeds in aandeelhoudersovereenkomst Art. 11)
+### 9.3 Juridische overwegingen: Beschermingsvormen
+
+**Belangrijk:** De receptuur is primair te beschermen als **know-how/bedrijfsgeheim**, niet als auteursrechtelijk beschermd werk. Dit onderscheid is juridisch relevant:
+
+| Beschermingsvorm | Wat het beschermt | Wat het NIET beschermt | Toepassing op Notifica |
+|------------------|-------------------|------------------------|------------------------|
+| **Know-how / Bedrijfsgeheim** | De kennis, methodologie, inzichten | Niets (zolang geheim gehouden) | **Primaire bescherming** - de "receptuur" |
+| **Auteursrecht** | De specifieke code-uitdrukking | Onderliggende ideeën, methodologie | **Aanvullend** - op broncode zelf |
+| **Databankrecht** | Gestructureerde verzameling | De losse elementen | **Mogelijk** - op schema-definities |
+
+**Waarom know-how de juiste beschermingsvorm is:**
+
+1. **De waarde zit in de kennis, niet in de code**
+   - De kennis dat kolom X in Syntess 8.x anders gejoind moet worden dan in 9.x
+   - De inzichten over hoe de installatiebranche projecten structureert
+   - De ervaring welke KPI's relevant zijn voor service-afdelingen
+
+2. **Auteursrecht beschermt alleen de uitdrukking**
+   - Iemand kan dezelfde functionaliteit nabouwen met andere code
+   - De methodologie is dan niet beschermd
+   - Alleen de letterlijke kopie is verboden
+
+3. **Know-how vereist actieve geheimhouding**
+   - Reeds geregeld in Art. 11 Aandeelhoudersovereenkomst
+   - Geheimhoudingsclausules in arbeidsovereenkomsten
+   - Toegangsbeperking tot broncode
+
+**Aanbeveling:** Positioneer de receptuur als **bedrijfsgeheim/know-how** met auteursrecht als aanvullende bescherming op de specifieke broncode.
 
 ---
 

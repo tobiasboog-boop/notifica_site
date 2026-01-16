@@ -42,19 +42,41 @@ NOTIFICA B.V. (Werkmaatschappij) - KvK 81772645
 
 ## 3. IP-componenten en Eigendom
 
-| Component | Eigenaar | Bescherming | Geauditeerde Omvang |
-|-----------|----------|-------------|---------------------|
+| Component | Eigenaar | Beschermingsvorm | Geauditeerde Omvang |
+|-----------|----------|------------------|---------------------|
 | **GRIP Software** | Dolf Jansonius (persoonlijk) | Licentie aan DPG | Eeuwigdurend + gratis |
-| **ETL-scripts Syntess** | DPG/Notifica | Auteursrecht | 9 scripts, 599 KB |
-| **Data Warehouse Schema** | DPG/Notifica | Auteursrecht | 241 views, 534 KB SQL |
-| **Semantic Model (SSM)** | DPG/Notifica | Auteursrecht | 148 tabellen, 257 TMDL-bestanden |
-| **DAX Measures** | DPG/Notifica | Auteursrecht | 1.031+ formules |
-| **Rapportage-templates** | DPG/Notifica | Auteursrecht | 15 productie-rapportages |
-| **Methodologie** | DPG/Notifica | Bedrijfsgeheim | ~1.900 pag. documentatie |
+| **ETL-scripts Syntess** | DPG/Notifica | Know-how + auteursrecht op code | 9 scripts, 599 KB |
+| **Data Warehouse Schema** | DPG/Notifica | Know-how + databankrecht | 241 views, 534 KB SQL |
+| **Semantic Model (SSM)** | DPG/Notifica | Know-how + auteursrecht op code | 148 tabellen, 257 TMDL-bestanden |
+| **DAX Measures** | DPG/Notifica | Know-how (formules = methodologie) | 1.031+ formules |
+| **Rapportage-templates** | DPG/Notifica | Know-how + auteursrecht op ontwerp | 15 productie-rapportages |
+| **Methodologie** | DPG/Notifica | Bedrijfsgeheim (Art. 11 AHO) | ~1.900 pag. documentatie |
 
 ---
 
-## 4. Unieke Waardepropositie
+## 4. Beschermingsvormen: Receptuur vs. Auteursrecht
+
+**Kernvraag:** Is dit intellectueel eigendom of een receptuur?
+
+**Antwoord:** Het is primair een **receptuur/know-how**, met auteursrecht als aanvullende bescherming.
+
+| Beschermingsvorm | Wat het beschermt | Wat het NIET beschermt |
+|------------------|-------------------|------------------------|
+| **Know-how / Bedrijfsgeheim** | De kennis, methodologie, inzichten | Niets (zolang geheim) |
+| **Auteursrecht** | De letterlijke code | Ideeën, methodologie |
+
+**Waarom know-how de juiste beschermingsvorm is:**
+
+De waarde zit niet in de code zelf, maar in de **gecodificeerde kennis**:
+- *Welke* kolom in Syntess 8.x anders gejoind moet worden dan in 9.x
+- *Hoe* de installatiebranche haar projecten structureert
+- *Welke* KPI's relevant zijn voor service-afdelingen
+
+Iemand kan dezelfde functionaliteit nabouwen met andere code - auteursrecht beschermt daar niet tegen. Know-how/bedrijfsgeheim beschermt de onderliggende kennis **zolang deze geheim blijft** (reeds geregeld in Art. 11 Aandeelhoudersovereenkomst).
+
+---
+
+## 5. Unieke Waardepropositie
 
 ### Waarom is dit meer dan "bij elkaar geklikte functionaliteit"?
 
@@ -72,7 +94,7 @@ NOTIFICA B.V. (Werkmaatschappij) - KvK 81772645
 
 ---
 
-## 5. Risicobescherming
+## 6. Risicobescherming
 
 ### Huidige situatie (aandachtspunt):
 IP zit verspreid: GRIP-licentie bij DPG, overige IP impliciet bij Notifica B.V.
@@ -91,7 +113,7 @@ Alle IP expliciet bij DPG Groep (holding), met licentie naar Notifica.
 
 ---
 
-## 6. Benodigde Juridische Acties
+## 7. Benodigde Juridische Acties
 
 | Prioriteit | Actie | Doel |
 |------------|-------|------|
@@ -101,7 +123,7 @@ Alle IP expliciet bij DPG Groep (holding), met licentie naar Notifica.
 
 ---
 
-## 7. Complexiteitsindicatoren (waarde-onderbouwing)
+## 8. Complexiteitsindicatoren (waarde-onderbouwing)
 
 | Metriek | Waarde | Betekenis |
 |---------|--------|-----------|
@@ -114,14 +136,17 @@ Alle IP expliciet bij DPG Groep (holding), met licentie naar Notifica.
 
 ---
 
-## 8. Conclusie
+## 9. Conclusie
 
-De Notifica-receptuur vertegenwoordigt significante intellectuele waarde door de unieke combinatie van:
-- Gecodificeerde branche-specifieke domeinkennis
-- Technische complexiteit (1.031+ measures, 241 views, multi-versie support)
-- Schaalbare architectuur (60+ klanten op dezelfde codebase)
+De Notifica-receptuur vertegenwoordigt significante waarde door de unieke combinatie van:
+- **Gecodificeerde domeinkennis** (de "receptuur" - primair te beschermen als know-how/bedrijfsgeheim)
+- **Technische complexiteit** (1.031+ measures, 241 views, multi-versie support)
+- **Schaalbare architectuur** (60+ klanten op dezelfde codebase)
 
-**Aanbeveling:** Formaliseer de IP-overdracht naar DPG Groep om bescherming te bieden tegen operationele risico's in de werkmaatschappij.
+**Aanbevelingen:**
+1. Positioneer de receptuur als **bedrijfsgeheim/know-how**, niet primair als auteursrechtelijk werk
+2. Formaliseer de IP-overdracht naar DPG Groep (bescherming tegen operationele risico's)
+3. Versterk geheimhoudingsmaatregelen (Art. 11 AHO is een goede basis)
 
 ---
 
