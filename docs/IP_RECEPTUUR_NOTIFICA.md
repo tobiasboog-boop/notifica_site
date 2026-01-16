@@ -570,8 +570,24 @@ Alle IP expliciet bij DPG Groep:
 
 ---
 
+### Bijlage D: Complexiteitsindicatoren (IP-waarde onderbouwing)
+
+| Dimensie | Metriek | Betekenis |
+|----------|---------|-----------|
+| Data Model Complexiteit | 1.031+ DAX measures | Enterprise-grade analytics platform |
+| Schema Complexiteit | 241 endviews over 9 domeinen | Complete business dekking |
+| Multi-versie Ondersteuning | 8+ Syntess versies | Unieke concurrentiepositie |
+| Relatie Complexiteit | 239 relaties in SSM | Geavanceerd dimensioneel ontwerp |
+| ETL Complexiteit | 599 KB versie-bewuste scripts | Intelligente datatransformatie |
+| Documentatie Diepte | 1.900+ pagina's + DDL schemas | Complete transparantie |
+| Transformatielagen | 5 prepare + 3 endview fases | Progressieve verrijking |
+| Repository Omvang | 301 MB, 2.845 bestanden | Substantiële codebase |
+
+---
+
 *Dit document dient als basis voor juridische vastlegging. Raadpleeg een jurist voor definitieve overeenkomsten.*
 
 **Documenthistorie:**
 - v1.0 (jan 2026): Initiële versie
 - v2.0 (jan 2026): Aangevuld met exacte informatie uit Aandeelhoudersovereenkomst DPG d.d. 17-12-2025
+- v3.0 (16 jan 2026): Geauditeerd met exacte cijfers uit syntess_analyse repository; ETL-scripts, SSM, measures en rapportages geïnventariseerd

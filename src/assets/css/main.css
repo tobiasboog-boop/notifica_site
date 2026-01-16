@@ -2239,14 +2239,11 @@ details.faq-accordion[open] summary.faq-question:after {
 .features-grid,
 .stats-grid {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-}
-
-@media (max-width: 1024px) {
-  .features-grid,
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 768px) {
