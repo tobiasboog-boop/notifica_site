@@ -795,8 +795,20 @@ document.addEventListener('DOMContentLoaded', function() {
         submitText.style.display = 'none';
         submitLoading.style.display = 'inline';
 
-        // Show success - user gets Teams link and calendar buttons
-        // Registrations tracked via Teams meeting attendance
+        // Send to Google Forms
+        const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdlETOlZKinjj_-EOuu0rQ5SjCqtIu6bU5O4fKIBiMb6Vun1w/formResponse';
+        const formBody = new URLSearchParams();
+        formBody.append('entry.1799338299', data.name);
+        formBody.append('entry.170209940', data.email);
+        formBody.append('entry.2016152210', data.bedrijf);
+        formBody.append('entry.1314469737', data.date === 'donderdag-29' ? 'Donderdag 29 januari' : 'Vrijdag 30 januari');
+
+        fetch(googleFormUrl, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: formBody
+        });
+
         showSuccess(data.date);
     });
 
