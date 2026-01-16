@@ -795,20 +795,8 @@ document.addEventListener('DOMContentLoaded', function() {
         submitText.style.display = 'none';
         submitLoading.style.display = 'inline';
 
-        // Send to Formspree (registraties komen in je inbox)
-        fetch('https://formspree.io/f/xpwzgvkn', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                name: data.name,
-                email: data.email,
-                bedrijf: data.bedrijf,
-                datum: data.date === 'donderdag-29' ? 'Donderdag 29 januari 2026' : 'Vrijdag 30 januari 2026',
-                webinar: 'Stuurinformatie in de praktijk'
-            })
-        });
-
-        // Show success immediately (don't wait for Formspree)
+        // Show success - user gets Teams link and calendar buttons
+        // Registrations tracked via Teams meeting attendance
         showSuccess(data.date);
     });
 
