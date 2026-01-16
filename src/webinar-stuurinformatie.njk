@@ -795,18 +795,20 @@ document.addEventListener('DOMContentLoaded', function() {
         submitText.style.display = 'none';
         submitLoading.style.display = 'inline';
 
-        // Send to Google Forms
-        const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdlETOlZKinjj_-EOuu0rQ5SjCqtIu6bU5O4fKIBiMb6Vun1w/formResponse';
-        const formBody = new URLSearchParams();
-        formBody.append('entry.1799338299', data.name);
-        formBody.append('entry.170209940', data.email);
-        formBody.append('entry.2016152210', data.bedrijf);
-        formBody.append('entry.1314469737', data.date === 'donderdag-29' ? 'Donderdag 29 januari' : 'Vrijdag 30 januari');
+        // Send to Formspree (registrations come to your email)
+        const formspreeUrl = 'https://formspree.io/f/mojjjjpj';
 
-        fetch(googleFormUrl, {
+        fetch(formspreeUrl, {
             method: 'POST',
-            mode: 'no-cors',
-            body: formBody
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: data.name,
+                email: data.email,
+                bedrijf: data.bedrijf || '-',
+                datum: data.date === 'donderdag-29' ? 'Donderdag 29 januari' : 'Vrijdag 30 januari',
+                webinar: 'Stuurinformatie in de praktijk',
+                _subject: 'Webinar aanmelding: ' + data.name
+            })
         });
 
         showSuccess(data.date);
