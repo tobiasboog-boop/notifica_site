@@ -1,10 +1,10 @@
 # Intellectueel Eigendom Receptuur - Data Performance Group
 
-**Document versie:** 2.0
-**Datum:** Januari 2026
+**Document versie:** 3.0
+**Datum:** 16 januari 2026
 **Status:** Concept voor juridische vastlegging
 **Doel:** Beschrijving van de unieke "receptuur" t.b.v. bescherming IP, voorbereiding due diligence/verkoop
-**Bronnen:** Aandeelhoudersovereenkomst DPG d.d. 17-12-2025, Syntess Knowledge Base
+**Bronnen:** Aandeelhoudersovereenkomst DPG d.d. 17-12-2025, Syntess Knowledge Base, syntess_analyse repository audit januari 2026
 
 ---
 
@@ -184,14 +184,23 @@ Een verzameling van **8 sequentiële ETL-scripts** (5 Prepare + 3 Endview) die d
 
 4. **Standaardisatie-principe**: Ongeacht bronversie of klantvariant levert het ETL-proces **altijd dezelfde outputstructuur** op. Dit is essentieel voor schaalbaarheid.
 
-#### Concrete assets:
-- `syntess_prepare_1.grp` t/m `syntess_prepare_5.grp`
-- `syntess_endviews_1.grp` t/m `syntess_endviews_3.grp`
-- Maatwerk-scripts met klant-specifieke routines
+#### Concrete assets (geauditeerd januari 2026):
+- `syntess_prepare_fase1.grp` (210 KB) - Initiële Firebird data import
+- `syntess_prepare_fase2.grp` (34 KB) - Eerste transformaties
+- `syntess_prepare_fase3.grp` (15 KB) - Data verrijking
+- `syntess_prepare_fase4.grp` (40 KB) - Complexe berekeningen
+- `syntess_prepare_fase5.grp` (7.5 KB) - Finale views
+- `syntess_endviews_fase1.grp` (139 KB) - Basis endviews
+- `syntess_endviews_fase2.grp` (111 KB) - Complexe endviews
+- `syntess_endviews_fase3.grp` (14 KB) - SSM integratie (notifica schema)
+- `syntess_maatwerk.grp` (28 KB) - Klant-specifieke ETL logica
 
-#### Geschatte omvang:
-- 100+ SQL-transformaties
-- 50+ versie-specifieke query-varianten
+#### Geauditeerde omvang:
+- **9 GRIP-scripts** met totaal **599 KB** aan broncode (~60.000 regels)
+- **188 prepare tabellen** (140 KB SQL definitie, ~4.024 regels)
+- **26 prepare views** (135 KB SQL definitie, ~2.584 regels)
+- **241 endviews** verdeeld over 9 functionele schema's (259 KB, ~6.178 regels)
+- Ondersteuning voor **8+ Syntess ERP versies** binnen dezelfde script-set
 - Jarenlange opgebouwde domeinkennis gecodificeerd
 
 ---
@@ -220,14 +229,17 @@ Een uitgebreid **Power BI Semantic Model** (de "kubus") dat als centrale databro
 
 4. **Actieve/Inactieve relaties**: Geavanceerde relatiestructuur met bewuste keuzes voor actieve vs. inactieve relaties om flexibele analyse mogelijk te maken.
 
-#### Concrete assets:
-- `SSM_Postgres/` - 100+ TMDL-bestanden
-- `relationships.tmdl` - Relatiedefinities
+#### Concrete assets (geauditeerd januari 2026):
+- `SSM_Postgres/` - **257 TMDL-bestanden** (Power BI Tabular Model Definition Language)
+- `relationships.tmdl` - **239 relatiedefinities**
 - `model.tmdl` - Modelconfiguratie
+- `SSM_ADF_Legacy/` - Verouderde Azure Data Factory variant (bewaard voor referentie)
 
-#### Geschatte omvang:
-- 100+ tabellen/dimensies
-- 200+ relaties
+#### Geauditeerde omvang:
+- **148 tabellen/dimensies** volledig gedocumenteerd
+- **239 relaties** met geavanceerde actief/inactief patronen
+- **5 Business Perspectives**: Financieel, HR, Projecten, Service, Commercieel
+- **1.031+ DAX measures** verdeeld over alle tabellen
 - 1000+ uren ontwikkeling en verfijning
 
 ---
@@ -253,15 +265,16 @@ Een verzameling van **gestandaardiseerde DAX-formules** (measures) die business 
 
 3. **Gestandaardiseerde naamgevingsconventies**: Consistent en voorspelbaar voor eindgebruikers.
 
-#### Concrete assets:
-- `DAX_Measures_Voorraad.dax` - Voorraad measures
-- Measures in SSM tabeldefinities
-- Documentatie per measure
+#### Concrete assets (geauditeerd januari 2026):
+- **SSM measures tabel** met metadata voor alle measures inclusief hiërarchische folderstructuur (6 nesting levels)
+- Measures in SSM tabeldefinities per domein
+- Documentatie per measure met visibility controls
 
-#### Geschatte omvang:
-- 200+ measures
-- 50+ helper-measures
-- Gedocumenteerde use-cases per measure
+#### Geauditeerde omvang:
+- **1.031+ measures** (geen schatting, exact geteld uit TMDL-bestanden)
+- Verdeeld over **148 tabellen** met gestructureerde folderindeling
+- Categorieën: Voorraad, Service, Projecten, Financieel, HR, Commercieel
+- Time-intelligence functies (YTD, MoM, YoY) standaard geïmplementeerd
 
 ---
 
@@ -272,19 +285,31 @@ Kant-en-klare Power BI rapportages die direct inzetbaar zijn bij klanten.
 
 #### Waarom is dit uniek/waardevol?
 
-1. **Thin Reports**: Lichte rapportages die de SSM als databron gebruiken:
-   - Voorraad Analyse
-   - Service Uitvoering
-   - Project Dashboard
-   - Financieel Overzicht
+1. **Thin Reports** (15 productie-rapportages die de SSM als databron gebruiken):
+   - Finance - Forecast Resultaatrekening
+   - Projectwaardering - Project control valuation
+   - Urenrapportage - Urenregistratie overzicht
+   - Projectbeheer - Project management dashboards
+   - S&O - Openstaande werkbonnen
+   - S&O - Onderhoudsplanning
+   - S&O - Rendement (Service performance)
+   - S&O - Uitvoering (Servicedesk)
+   - Openstaande posten - Debiteuren/Crediteuren
+   - Kasstroomoverzicht - Cash flow reporting
+   - Sales & Offerte - Verkoopkansen en offertes
+   - Portefeuille management - Forecast project costs/revenue
+   - Voorraad - Inventory reporting
+   - Inkoop - Procurement reporting
+   - Omzet - Revenue reporting
 
-2. **Custom Reports**: Maatwerk rapportages voor specifieke klantbehoeften met eigen semantic models.
+2. **Custom Reports**: Maatwerk framework voor klant-specifieke rapportages met eigen semantic models.
 
 3. **Bewezen best practices**: Visualisaties, layouts en interacties geoptimaliseerd op basis van klantfeedback.
 
-#### Concrete assets:
-- `Reports/Thin_Reports/` - Standaard rapportages
-- `Reports/Custom_Reports/` - Maatwerk rapportages
+#### Concrete assets (geauditeerd januari 2026):
+- `Reports/Thin_Reports/` - **15 standaard rapportages** (TMDL-format)
+- `Reports/Custom_Reports/` - Maatwerk framework (template-structuur)
+- **17 rapport-definitiebestanden** in TMDL-format
 - Rapport-documentatie (`.md` bestanden)
 
 ---
@@ -312,10 +337,13 @@ De opgebouwde kennis en methodologie voor implementatie, onderhoud en doorontwik
    - Bekende issues en workarounds
    - Best practices
 
-#### Concrete assets:
-- `README.md` - Architectuur documentatie
+#### Concrete assets (geauditeerd januari 2026):
+- `README.md` (26 KB) - Architectuur documentatie
+- `USAGE_GUIDE.md` (9.5 KB) - LLM/AI usage instructies
+- `ETL_Scripts/README.md` - ETL structuur uitleg
 - `RAPPORT_*.md` - Analyse rapporten
-- Interne kennisdatabase
+- **~1.900 pagina's** Syntess ERP documentatie (v6.6 + v7.3)
+- Interne kennisdatabase geoptimaliseerd voor AI/LLM consumptie
 
 ---
 
@@ -460,19 +488,23 @@ Alle IP expliciet bij DPG Groep:
 
 ## 10. Bijlagen
 
-### Bijlage A: Inventarislijst IP-assets
+### Bijlage A: Inventarislijst IP-assets (Geauditeerd januari 2026)
 
-| # | Asset | Type | Locatie | Status |
-|---|-------|------|---------|--------|
-| 1 | GRIP Licentierecht | Licentie | Aandeelhoudersovereenkomst Art. 12.4 | ✓ Vastgelegd |
-| 2 | syntess_prepare_1-5.grp | ETL Script | GRIP/Scripts | Eigendom Notifica |
-| 3 | syntess_endviews_1-3.grp | ETL Script | GRIP/Scripts | Eigendom Notifica |
-| 4 | SSM_Postgres | Semantic Model | syntess_analyse/ | Eigendom Notifica |
-| 5 | DAX_Measures_*.dax | DAX Library | syntess_analyse/ | Eigendom Notifica |
-| 6 | Thin_Reports | Power BI | syntess_analyse/Reports/ | Eigendom Notifica |
-| 7 | Custom_Reports | Power BI | syntess_analyse/Reports/ | Eigendom Notifica |
-| 8 | README.md | Documentatie | syntess_analyse/ | Eigendom Notifica |
-| 9 | RAPPORT_*.md | Documentatie | syntess_analyse/ | Eigendom Notifica |
+| # | Asset | Type | Omvang | Locatie | Status |
+|---|-------|------|--------|---------|--------|
+| 1 | GRIP Licentierecht | Licentie | Eeuwigdurend | Aandeelhoudersovereenkomst Art. 12.4 | ✓ Vastgelegd |
+| 2 | syntess_prepare_fase1-5.grp | ETL Script | 306 KB (5 scripts) | ETL_Scripts/ | Eigendom Notifica |
+| 3 | syntess_endviews_fase1-3.grp | ETL Script | 264 KB (3 scripts) | ETL_Scripts/ | Eigendom Notifica |
+| 4 | syntess_maatwerk.grp | ETL Script | 28 KB | ETL_Scripts/ | Eigendom Notifica |
+| 5 | SSM_Postgres | Semantic Model | 257 TMDL-bestanden | Standard_Semantic_Models/ | Eigendom Notifica |
+| 6 | DAX Measures | DAX Library | 1.031+ measures | In SSM tabeldefinities | Eigendom Notifica |
+| 7 | DWH Schema definities | SQL | 534 KB (3 bestanden) | DWH_Schema/ | Eigendom Notifica |
+| 8 | Thin_Reports | Power BI | 15 rapportages | Reports/Thin_Reports/ | Eigendom Notifica |
+| 9 | Custom_Reports Framework | Power BI | Template-structuur | Reports/Custom_Reports/ | Eigendom Notifica |
+| 10 | ERP Documentatie | Knowledge Base | ~1.900 pagina's | ERP_Documentation/ | Eigendom Notifica |
+| 11 | Repository Documentatie | Markdown | 35+ KB | README.md, USAGE_GUIDE.md | Eigendom Notifica |
+
+**Totale omvang repository:** 301 MB, 2.845 bestanden
 
 ### Bijlage B: Architectuurdiagram
 
