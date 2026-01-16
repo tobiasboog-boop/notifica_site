@@ -77,7 +77,7 @@ permalink: /webinars/
                             <p>
                                 De 5 belangrijkste kengetallen voor rendement bij installatiebedrijven. Ontdek hoe je met de juiste KPI's en dashboards de winstgevendheid van je projecten optimaliseert.
                             </p>
-                            <a href="{{ '/verdieping/webinars/optimalisatie-winstgevendheid-december-2025/' | url }}" class="btn btn-secondary">Bekijk opname</a>
+                            <a href="{{ '/verdieping/webinars/optimalisatie-winstgevendheid-december-2025/' | url }}" class="btn">Bekijk opname</a>
                         </div>
                     </div>
                 </div>
@@ -192,14 +192,27 @@ permalink: /webinars/
 }
 
 .play-icon {
-    width: 64px;
-    height: 64px;
-    background: rgba(255, 255, 255, 0.9);
+    width: 80px;
+    height: 80px;
+    background: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--navy);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.play-icon svg {
+    width: 32px;
+    height: 32px;
+    margin-left: 4px;
+}
+
+.webinar-card:hover .play-icon {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 .webinar-content {
@@ -260,17 +273,6 @@ permalink: /webinars/
 
 .webinar-content .btn {
     align-self: flex-start;
-}
-
-.btn-secondary {
-    background: white;
-    color: var(--navy);
-    border: 2px solid var(--navy);
-}
-
-.btn-secondary:hover {
-    background: var(--navy);
-    color: white;
 }
 
 .subscribe-section {
