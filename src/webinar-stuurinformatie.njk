@@ -800,7 +800,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         fetch(formspreeUrl, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
             body: JSON.stringify({
                 name: data.name,
                 email: data.email,
