@@ -795,29 +795,21 @@ document.addEventListener('DOMContentLoaded', function() {
         submitText.style.display = 'none';
         submitLoading.style.display = 'inline';
 
-        try {
-            // Submit to API
-            const response = await fetch('/api/webinar-register', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            });
+        // Send to Formspree (registraties komen in je inbox)
+        fetch('https://formspree.io/f/xpwzgvkn', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: data.name,
+                email: data.email,
+                bedrijf: data.bedrijf,
+                datum: data.date === 'donderdag-29' ? 'Donderdag 29 januari 2026' : 'Vrijdag 30 januari 2026',
+                webinar: 'Stuurinformatie in de praktijk'
+            })
+        });
 
-            const result = await response.json();
-
-            if (result.success) {
-                showSuccess(data.date);
-            } else {
-                alert(result.error || 'Er ging iets mis. Probeer het opnieuw.');
-                submitBtn.disabled = false;
-                submitText.style.display = 'inline';
-                submitLoading.style.display = 'none';
-            }
-        } catch (error) {
-            console.error('Registration error:', error);
-            // Still show success (graceful degradation)
-            showSuccess(data.date);
-        }
+        // Show success immediately (don't wait for Formspree)
+        showSuccess(data.date);
     });
 
     function showSuccess(selectedDate) {

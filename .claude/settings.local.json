@@ -52,7 +52,12 @@
       "Bash(npm run build:github:*)",
       "Bash(git clean:*)",
       "Bash(Remove-Item \"G:\\\\Mijn Drive\\\\3.0_Design\\\\Website werkversie\\\\img\\\\test-*.jpg\" -Force -ErrorAction SilentlyContinue)",
-      "Bash(Write-Host \"Test fotos verwijderd\")"
+      "Bash(Write-Host \"Test fotos verwijderd\")",
+      "Bash(CLOUDFLARE_API_TOKEN=xbcWwHW6Nue_Rpxo4sr-ouCCfnh5LFbYsiQE90Vs CLOUDFLARE_ACCOUNT_ID=ba147d49a38a703dba01c019046eb2b8 npx wrangler pages project list:*)",
+      "Bash(CLOUDFLARE_API_TOKEN=xbcWwHW6Nue_Rpxo4sr-ouCCfnh5LFbYsiQE90Vs CLOUDFLARE_ACCOUNT_ID=ba147d49a38a703dba01c019046eb2b8 npx wrangler pages deployment list:*)",
+      "Bash(CLOUDFLARE_API_TOKEN=xbcWwHW6Nue_Rpxo4sr-ouCCfnh5LFbYsiQE90Vs CLOUDFLARE_ACCOUNT_ID=56a79647ffa1976291d58dbf2a735ee4 npx wrangler:*)",
+      "Bash(CLOUDFLARE_API_TOKEN=xtSI0s80nO5H5XHcJF1VFDH_8PJqCFt9p8uNDUsb npx wrangler pages deploy:*)",
+      "Bash(CLOUDFLARE_API_TOKEN=xtSI0s80nO5H5XHcJF1VFDH_8PJqCFt9p8uNDUsb CLOUDFLARE_ACCOUNT_ID=56a79647ffa1976291d58dbf2a735ee4 npx wrangler:*)"
     ],
     "additionalDirectories": [
       "C:\\projects\\syntess_analyse\\ERP_Documentation"
