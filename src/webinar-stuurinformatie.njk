@@ -179,20 +179,25 @@ permalink: /webinar-stuurinformatie/
                         <div class="calendar-section">
                             <p class="calendar-title">Zet in je agenda:</p>
                             <div class="calendar-buttons">
-                                <a href="#" id="ics-download" download="webinar-stuurinformatie.ics" class="calendar-btn ics">
+                                <a href="#" id="outlook-calendar" target="_blank" rel="noopener" class="calendar-btn outlook">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M21 3H3a1 1 0 00-1 1v16a1 1 0 001 1h18a1 1 0 001-1V4a1 1 0 00-1-1zm-1 16H4V8h16v11z"/>
                                     </svg>
-                                    Toevoegen aan Outlook
+                                    Outlook
                                 </a>
                                 <a href="#" id="google-calendar" target="_blank" rel="noopener" class="calendar-btn google">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M19.5 3h-15A1.5 1.5 0 003 4.5v15A1.5 1.5 0 004.5 21h15a1.5 1.5 0 001.5-1.5v-15A1.5 1.5 0 0019.5 3zm-9 15h-3v-9h3v9zm4.5 0h-3v-9h3v9zm4.5 0h-3v-9h3v9z"/>
                                     </svg>
-                                    Google Agenda
+                                    Google
+                                </a>
+                                <a href="#" id="apple-calendar" target="_blank" rel="noopener" class="calendar-btn apple">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                                    </svg>
+                                    Apple
                                 </a>
                             </div>
-                            <p class="calendar-hint">Klik op "Toevoegen aan Outlook" om het bestand te downloaden. Open het daarna om de afspraak in je agenda te zetten.</p>
                         </div>
 
                         <p class="success-note">Tip: Bewaar de Teams-link, je hebt deze nodig om deel te nemen.</p>
@@ -672,16 +677,19 @@ permalink: /webinar-stuurinformatie/
 
 .calendar-buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .calendar-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 12px 16px;
+    gap: 6px;
+    padding: 10px 14px;
+    flex: 1;
+    min-width: 90px;
     border-radius: 8px;
     font-size: 14px;
     font-weight: 500;
@@ -689,42 +697,34 @@ permalink: /webinar-stuurinformatie/
     transition: all 0.2s ease;
 }
 
-.calendar-btn.google {
-    background: #fff;
-    border: 1px solid #e5e7eb;
-    color: #1f2937;
-}
-
-.calendar-btn.google:hover {
-    background: #f9fafb;
-    border-color: #d1d5db;
-}
-
 .calendar-btn.outlook {
-    background: #fff;
-    border: 1px solid #e5e7eb;
-    color: #1f2937;
+    background: #0078d4;
+    color: white;
+    border: none;
 }
 
 .calendar-btn.outlook:hover {
-    background: #f9fafb;
-    border-color: #d1d5db;
+    background: #106ebe;
 }
 
-.calendar-btn.ics {
-    background: var(--navy);
+.calendar-btn.google {
+    background: #4285f4;
     color: white;
+    border: none;
 }
 
-.calendar-btn.ics:hover {
-    background: var(--blue);
+.calendar-btn.google:hover {
+    background: #3367d6;
 }
 
-.calendar-hint {
-    font-size: 12px;
-    color: var(--text-secondary);
-    margin-top: 12px;
-    line-height: 1.5;
+.calendar-btn.apple {
+    background: #1d1d1f;
+    color: white;
+    border: none;
+}
+
+.calendar-btn.apple:hover {
+    background: #333;
 }
 
 .success-note {
@@ -830,51 +830,51 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('teams-link').href = teamsLink;
         document.getElementById('teams-link').textContent = teamsLink;
 
+        // Description for calendar
+        const calDescription = `Van analyse naar actie: leer hoe je inzichten uit je bedrijfsdata vertaalt naar concrete sturing.\n\nTeams-link: ${teamsLink}`;
+
         // Google Calendar link
-        const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(cal.title)}&dates=${cal.date}T${cal.startTime}/${cal.date}T${cal.endTime}&details=${encodeURIComponent(cal.description)}&location=${encodeURIComponent(cal.location)}`;
+        const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(cal.title)}&dates=${cal.date}T${cal.startTime}/${cal.date}T${cal.endTime}&details=${encodeURIComponent(calDescription)}&location=${encodeURIComponent(teamsLink)}`;
         document.getElementById('google-calendar').href = googleUrl;
 
-        // ICS file - generate and set up download
-        const icsContent = generateICS(cal, teamsLink, dateISO);
-        const icsLink = document.getElementById('ics-download');
+        // Outlook Web (Office 365) - works for most business users
+        const outlookUrl = `https://outlook.office.com/calendar/0/action/compose?subject=${encodeURIComponent(cal.title)}&startdt=${dateISO}T12:00:00&enddt=${dateISO}T12:30:00&body=${encodeURIComponent(calDescription)}&location=${encodeURIComponent(teamsLink)}`;
+        document.getElementById('outlook-calendar').href = outlookUrl;
 
-        // Use data URL for better compatibility
-        const dataUrl = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(icsContent);
-        icsLink.href = dataUrl;
-        icsLink.download = `webinar-stuurinformatie-${dateISO}.ics`;
+        // Apple Calendar - webcal link to hosted ICS file
+        // Since webcal requires a hosted file, we use a workaround via ics file
+        const appleUrl = generateAppleCalendarUrl(cal, teamsLink, dateISO);
+        document.getElementById('apple-calendar').href = appleUrl;
 
         // Show success, hide form
         formContainer.style.display = 'none';
         successScreen.style.display = 'block';
     }
 
-    function generateICS(cal, teamsLink, dateISO) {
+    function generateAppleCalendarUrl(cal, teamsLink, dateISO) {
+        // Apple Calendar works best with a data: URL that triggers the webcal handler
+        // We'll use a Google Calendar fallback since Apple doesn't have a web interface
+        // For Apple users on macOS/iOS, the Google link will prompt to add to their calendar
         const dateCompact = dateISO.replace(/-/g, '');
-        const uid = `webinar-${dateCompact}@notifica.nl`;
-        const now = new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+        const calDescription = `Van analyse naar actie: leer hoe je inzichten uit je bedrijfsdata vertaalt naar concrete sturing. Teams-link: ${teamsLink}`;
 
-        // ICS format: use literal \n for newlines in DESCRIPTION
-        const lines = [
+        // Apple Calendar URL scheme (works on macOS and iOS)
+        // Format: webcal:// or data: with text/calendar
+        const icsContent = [
             'BEGIN:VCALENDAR',
             'VERSION:2.0',
             'PRODID:-//Notifica//Webinar//NL',
-            'CALSCALE:GREGORIAN',
-            'METHOD:PUBLISH',
             'BEGIN:VEVENT',
-            'UID:' + uid,
-            'DTSTAMP:' + now,
             'DTSTART:' + dateCompact + 'T110000Z',
             'DTEND:' + dateCompact + 'T113000Z',
             'SUMMARY:' + cal.title,
-            'DESCRIPTION:Van analyse naar actie: leer hoe je inzichten uit je bedrijfsdata vertaalt naar concrete sturing.\\nTeams-link: ' + teamsLink,
+            'DESCRIPTION:' + calDescription.replace(/\n/g, '\\n'),
             'LOCATION:' + teamsLink,
-            'URL:' + teamsLink,
-            'STATUS:CONFIRMED',
             'END:VEVENT',
             'END:VCALENDAR'
-        ];
+        ].join('\r\n');
 
-        return lines.join('\r\n');
+        return 'data:text/calendar;charset=utf-8,' + encodeURIComponent(icsContent);
     }
 });
 </script>
