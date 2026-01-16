@@ -50,7 +50,9 @@
       "Bash(start \"\" \"G:\\\\Mijn Drive\\\\6.0_Beeldbank\\\\optimized\\\\image_catalog.html\")",
       "Read(//c/projects/notifica_site/**)",
       "Bash(npm run build:github:*)",
-      "Bash(git clean:*)"
+      "Bash(git clean:*)",
+      "Bash(Remove-Item \"G:\\\\Mijn Drive\\\\3.0_Design\\\\Website werkversie\\\\img\\\\test-*.jpg\" -Force -ErrorAction SilentlyContinue)",
+      "Bash(Write-Host \"Test fotos verwijderd\")"
     ],
     "additionalDirectories": [
       "C:\\projects\\syntess_analyse\\ERP_Documentation"

@@ -177,29 +177,22 @@ permalink: /webinar-stuurinformatie/
                         </div>
 
                         <div class="calendar-section">
-                            <p class="calendar-title">Voeg toe aan je agenda:</p>
+                            <p class="calendar-title">Zet in je agenda:</p>
                             <div class="calendar-buttons">
+                                <a href="#" id="ics-download" download="webinar-stuurinformatie.ics" class="calendar-btn ics">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M21 3H3a1 1 0 00-1 1v16a1 1 0 001 1h18a1 1 0 001-1V4a1 1 0 00-1-1zm-1 16H4V8h16v11z"/>
+                                    </svg>
+                                    Toevoegen aan Outlook
+                                </a>
                                 <a href="#" id="google-calendar" target="_blank" rel="noopener" class="calendar-btn google">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M19.5 3h-15A1.5 1.5 0 003 4.5v15A1.5 1.5 0 004.5 21h15a1.5 1.5 0 001.5-1.5v-15A1.5 1.5 0 0019.5 3zm-9 15h-3v-9h3v9zm4.5 0h-3v-9h3v9zm4.5 0h-3v-9h3v9z"/>
                                     </svg>
-                                    Google Calendar
-                                </a>
-                                <a href="#" id="outlook-calendar" target="_blank" rel="noopener" class="calendar-btn outlook">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M21 3H3a1 1 0 00-1 1v16a1 1 0 001 1h18a1 1 0 001-1V4a1 1 0 00-1-1zm-1 16H4V8h16v11z"/>
-                                    </svg>
-                                    Outlook
-                                </a>
-                                <a href="#" id="ics-download" download="webinar-stuurinformatie.ics" class="calendar-btn ics">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-                                        <polyline points="7 10 12 15 17 10"/>
-                                        <line x1="12" y1="15" x2="12" y2="3"/>
-                                    </svg>
-                                    Download .ics
+                                    Google Agenda
                                 </a>
                             </div>
+                            <p class="calendar-hint">Klik op "Toevoegen aan Outlook" om het bestand te downloaden. Open het daarna om de afspraak in je agenda te zetten.</p>
                         </div>
 
                         <p class="success-note">Tip: Bewaar de Teams-link, je hebt deze nodig om deel te nemen.</p>
@@ -727,6 +720,13 @@ permalink: /webinar-stuurinformatie/
     background: var(--blue);
 }
 
+.calendar-hint {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 12px;
+    line-height: 1.5;
+}
+
 .success-note {
     font-size: 13px;
     color: var(--text-secondary);
@@ -823,6 +823,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function showSuccess(selectedDate) {
         const cal = calendarData[selectedDate];
         const teamsLink = teamsLinks[selectedDate];
+        const dateISO = selectedDate === 'donderdag-29' ? '2026-01-29' : '2026-01-30';
 
         // Update success screen
         document.getElementById('selected-date-text').textContent = cal.dateText;
@@ -833,36 +834,47 @@ document.addEventListener('DOMContentLoaded', function() {
         const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(cal.title)}&dates=${cal.date}T${cal.startTime}/${cal.date}T${cal.endTime}&details=${encodeURIComponent(cal.description)}&location=${encodeURIComponent(cal.location)}`;
         document.getElementById('google-calendar').href = googleUrl;
 
-        // Outlook web link
-        const outlookUrl = `https://outlook.live.com/calendar/0/deeplink/compose?subject=${encodeURIComponent(cal.title)}&startdt=2026-${selectedDate === 'donderdag-29' ? '01-29' : '01-30'}T12:00:00&enddt=2026-${selectedDate === 'donderdag-29' ? '01-29' : '01-30'}T12:30:00&body=${encodeURIComponent(cal.description)}&location=${encodeURIComponent(cal.location)}`;
-        document.getElementById('outlook-calendar').href = outlookUrl;
+        // ICS file - generate and set up download
+        const icsContent = generateICS(cal, teamsLink, dateISO);
+        const icsLink = document.getElementById('ics-download');
 
-        // ICS file
-        const icsContent = generateICS(cal, teamsLink);
-        const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
-        document.getElementById('ics-download').href = URL.createObjectURL(blob);
+        // Use data URL for better compatibility
+        const dataUrl = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(icsContent);
+        icsLink.href = dataUrl;
+        icsLink.download = `webinar-stuurinformatie-${dateISO}.ics`;
 
         // Show success, hide form
         formContainer.style.display = 'none';
         successScreen.style.display = 'block';
     }
 
-    function generateICS(cal, teamsLink) {
-        return `BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Notifica//Webinar//NL
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-BEGIN:VEVENT
-DTSTART:${cal.date}T110000Z
-DTEND:${cal.date}T113000Z
-SUMMARY:${cal.title}
-DESCRIPTION:${cal.description.replace(/\\n/g, '\\n')}
-LOCATION:${teamsLink}
-URL:${teamsLink}
-STATUS:CONFIRMED
-END:VEVENT
-END:VCALENDAR`;
+    function generateICS(cal, teamsLink, dateISO) {
+        const dateCompact = dateISO.replace(/-/g, '');
+        const uid = `webinar-${dateCompact}@notifica.nl`;
+        const now = new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+
+        // ICS format: use literal \n for newlines in DESCRIPTION
+        const lines = [
+            'BEGIN:VCALENDAR',
+            'VERSION:2.0',
+            'PRODID:-//Notifica//Webinar//NL',
+            'CALSCALE:GREGORIAN',
+            'METHOD:PUBLISH',
+            'BEGIN:VEVENT',
+            'UID:' + uid,
+            'DTSTAMP:' + now,
+            'DTSTART:' + dateCompact + 'T110000Z',
+            'DTEND:' + dateCompact + 'T113000Z',
+            'SUMMARY:' + cal.title,
+            'DESCRIPTION:Van analyse naar actie: leer hoe je inzichten uit je bedrijfsdata vertaalt naar concrete sturing.\\nTeams-link: ' + teamsLink,
+            'LOCATION:' + teamsLink,
+            'URL:' + teamsLink,
+            'STATUS:CONFIRMED',
+            'END:VEVENT',
+            'END:VCALENDAR'
+        ];
+
+        return lines.join('\r\n');
     }
 });
 </script>
