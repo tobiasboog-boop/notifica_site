@@ -2234,7 +2234,7 @@ details.faq-accordion[open] summary.faq-question:after {
 
 /* --------------------------------------------------------------------------
    Responsive Grid Overrides
-   Forces all grids with inline columns to stack on mobile
+   Forces all grids to stack on mobile for better readability
    -------------------------------------------------------------------------- */
 .features-grid,
 .stats-grid {
@@ -2243,18 +2243,17 @@ details.faq-accordion[open] summary.faq-question:after {
 }
 
 @media (max-width: 1024px) {
-  .features-grid[style*="repeat(4"],
-  .features-grid[style*="repeat(3"],
-  .stats-grid[style*="repeat(5"],
-  .stats-grid[style*="repeat(4"] {
+  .features-grid,
+  .stats-grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
-@media (max-width: 768px) {
-  .features-grid[style*="grid-template-columns"],
-  .stats-grid[style*="grid-template-columns"] {
+@media (max-width: 640px) {
+  .features-grid,
+  .stats-grid {
     grid-template-columns: 1fr !important;
+    gap: 16px;
   }
 }
 
