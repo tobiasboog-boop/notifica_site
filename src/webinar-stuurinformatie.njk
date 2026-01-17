@@ -798,20 +798,21 @@ document.addEventListener('DOMContentLoaded', function() {
         // Send to Formspree (registrations come to your email)
         const formspreeUrl = 'https://formspree.io/f/mojjjjpj';
 
+        // Use FormData instead of JSON - more reliable with Formspree
+        const submitData = new FormData();
+        submitData.append('name', data.name);
+        submitData.append('email', data.email);
+        submitData.append('bedrijf', data.bedrijf || '-');
+        submitData.append('datum', data.date === 'donderdag-29' ? 'Donderdag 29 januari' : 'Vrijdag 30 januari');
+        submitData.append('webinar', 'Stuurinformatie in de praktijk');
+        submitData.append('_subject', 'Webinar aanmelding: ' + data.name);
+
         fetch(formspreeUrl, {
             method: 'POST',
+            body: submitData,
             headers: {
-                'Content-Type': 'application/json',
                 'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                name: data.name,
-                email: data.email,
-                bedrijf: data.bedrijf || '-',
-                datum: data.date === 'donderdag-29' ? 'Donderdag 29 januari' : 'Vrijdag 30 januari',
-                webinar: 'Stuurinformatie in de praktijk',
-                _subject: 'Webinar aanmelding: ' + data.name
-            })
+            }
         });
 
         showSuccess(data.date);
