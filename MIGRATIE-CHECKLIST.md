@@ -131,6 +131,7 @@ Bij de migratie moeten redirects worden ingesteld voor URL's die veranderen. Dit
 ### Te implementeren
 - [x] Google Analytics 4 (GA4) property ID: `G-X93YGT3NLM`
 - [x] Tracking code toevoegen aan base template (beide layouts)
+- [x] Pipedrive LeadFeeder tracking (website bezoekers identificeren)
 - [ ] Event tracking instellen (formulieren, CTA clicks, etc.)
 - [ ] Doelen/conversies instellen
 - [ ] E-commerce tracking indien nodig
@@ -417,6 +418,7 @@ _Ruimte voor eigen notities tijdens het bespreken:_
 #### D. Google Analytics & Search Console
 - [x] GA4 tracking ID: `G-X93YGT3NLM` (behouden)
 - [x] Tracking code in templates (via cookie consent)
+- [x] Pipedrive LeadFeeder tracking (via cookie consent)
 - [ ] Na livegang: Search Console eigenaarschap verifiëren
 - [ ] Na livegang: Sitemap.xml indienen (https://www.notifica.nl/sitemap.xml)
 
