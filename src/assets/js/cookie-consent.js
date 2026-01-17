@@ -52,6 +52,26 @@
     gtag('config', 'G-X93YGT3NLM');
   }
 
+  // Load Pipedrive LeadFeeder
+  function loadLeadFeeder() {
+    if (window.leadFeederLoaded) return;
+    window.leadFeederLoaded = true;
+
+    (function(ss,ex){
+      window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));};
+      (function(d,s){
+        fs=d.getElementsByTagName(s)[0];
+        function ce(src){
+          var cs=d.createElement(s);
+          cs.src=src;
+          cs.async=1;
+          fs.parentNode.insertBefore(cs,fs);
+        };
+        ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js');
+      })(document,'script');
+    })('p1e024BOKE0aGB6d');
+  }
+
   // Create and show cookie banner
   function showBanner() {
     const banner = document.createElement('div');
@@ -74,6 +94,7 @@
     document.getElementById('cookie-accept').addEventListener('click', function() {
       setConsent(true);
       loadAnalytics();
+      loadLeadFeeder();
       hideBanner();
     });
 
@@ -119,6 +140,7 @@
     } else if (consent.analytics) {
       // Consent given, load analytics
       loadAnalytics();
+      loadLeadFeeder();
     }
     // If consent.analytics is false, do nothing (user rejected)
   }
